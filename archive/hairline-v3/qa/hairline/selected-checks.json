@@ -1,0 +1,39 @@
+{
+  "duration": 7,
+  "results": [
+    {
+      "id": "105198",
+      "title": true,
+      "description": true,
+      "viewBox": "0 0 400 300",
+      "paths": 56,
+      "nativeOnly": true,
+      "duplicateIDs": [],
+      "animations": 1,
+      "durationOK": true,
+      "staticHasNoAnimation": true,
+      "loopCloses": false,
+      "deterministicSeek": true,
+      "visibleMotion": true,
+      "errors": [],
+      "pass": false
+    },
+    {
+      "id": "105200",
+      "title": true,
+      "description": true,
+      "viewBox": "0 0 400 300",
+      "paths": 61,
+      "nativeOnly": true,
+      "duplicateIDs": [],
+      "animations": 1,
+      "durationOK": true,
+      "staticHasNoAnimation": true,
+      "loopCloses": false,
+      "deterministicSeek": true,
+      "visibleMotion": true,
+      "errors": [],
+      "pass": false
+    }
+  ]
+}

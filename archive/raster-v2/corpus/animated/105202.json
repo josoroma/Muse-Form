@@ -1,0 +1,92 @@
+{
+  "id": "105202",
+  "title": "Laughter in profile",
+  "duration": 7,
+  "imageUrl": "../plates/105202.png",
+  "regions": [
+    {
+      "name": "coherent head intention",
+      "center": [
+        0.45,
+        0.42
+      ],
+      "radius": [
+        0.6,
+        0.88
+      ],
+      "translate": [
+        0.5,
+        -1.7
+      ],
+      "rotate": -0.18,
+      "pivot": [
+        0.52,
+        0.72
+      ],
+      "phase": "action"
+    },
+    {
+      "name": "quiet shoulder breath",
+      "center": [
+        0.51,
+        0.84
+      ],
+      "radius": [
+        0.33,
+        0.15
+      ],
+      "translate": [
+        0,
+        -2.3
+      ],
+      "rotate": 0,
+      "pivot": [
+        0.51,
+        0.84
+      ],
+      "phase": "breath"
+    }
+  ],
+  "pins": [
+    {
+      "center": [
+        0.5,
+        0
+      ],
+      "radius": [
+        0.75,
+        0.07
+      ]
+    },
+    {
+      "center": [
+        0.5,
+        1
+      ],
+      "radius": [
+        0.75,
+        0.07
+      ]
+    },
+    {
+      "center": [
+        0,
+        0.5
+      ],
+      "radius": [
+        0.06,
+        0.75
+      ]
+    },
+    {
+      "center": [
+        1,
+        0.5
+      ],
+      "radius": [
+        0.06,
+        0.75
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "seven-second-storytelling",
+  "version": "4.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Native SVG drawing corpus with visible five-second character and anatomical motion.",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "catalog": "node scripts/catalog.mjs",
+    "check": "node scripts/check.mjs",
+    "verify": "node scripts/verify.mjs",
+    "install-skill": "node scripts/install-skill.mjs",
+    "compose": "node scripts/compose.mjs",
+    "bundle": "python3 scripts/bundle.py"
+  },
+  "devDependencies": {
+    "playwright-core": "1.64.1"
+  }
+}

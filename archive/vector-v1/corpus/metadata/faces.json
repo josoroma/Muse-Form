@@ -1,0 +1,112 @@
+[
+  {
+    "id": "105193",
+    "title": "Architecture beneath the face",
+    "category": "skull-and-orbit",
+    "source": "105193.jpg",
+    "observation": "The reference isolates the bony orbit, nasal aperture and zygomatic arches. Deep occlusion is nearly black, while thin rim lights make the thickness of bone readable.",
+    "prompt": "Create a museum-quality original native SVG drawing of an original human skull in a slight three-quarter view, domed frontal cranium, irregular sutures, unequal deep orbital cavities, a delicate nasal bridge, curved zygomatic arches and articulated upper and lower dental arcades. Use the visual lesson of reference 105193.jpg as anatomical study material; do not trace its photograph, page, lettering or composition. Compose on a 1200 × 900 warm ivory (#f3eee2) field with generous breathing room. Draw explicit editable cubic Bézier contours, a 2–3 px indigo graphite (#24343b) silhouette, broken 0.8–1.5 px interior lines, restrained contour hatching, pale upper-left light, olive gray shadow planes, muted ochre and russet accents. Make the subject feel sculptural through overlap, occlusion, perspective, curved cross-contours and reflected light. Preserve natural asymmetry and avoid icon geometry, plastic gradients, raster embeds and decorative UI. Name structural SVG groups and provide accessible title/description. Animate a seven-second looping study with anticipation, anatomically motivated independent parts and a soft settle; keep the artwork fully readable at time zero and make the ending identical.",
+    "motion": "0–1 s: hold the full drawing; 1–2 s: warm rim light gathers along the orbital arch; 2–3.4 s: the mandible rotates three degrees at the hinge; 3.4–4.8 s: the light crosses the zygomatic contour; 4.8–6 s: jaw and light settle; 6–7 s: return exactly to the initial pose.",
+    "animated": "corpus/animated/105193.svg",
+    "svg": "corpus/svg/105193.svg"
+  },
+  {
+    "id": "105194",
+    "title": "The globe beneath the lid",
+    "category": "eye-anatomy",
+    "source": "105194.jpg",
+    "observation": "The eyeball and both lids wrap around a sphere. The brow ridge, tear lake, lid crease and lower orbital plane must turn in depth rather than become flat graphic outlines.",
+    "prompt": "Create a museum-quality original native SVG drawing of a large isolated anatomical eye, eyelids wrapping around the spherical cornea, layered upper crease, detailed olive iris and dark pupil, wet tear lake at the medial corner, directional eyebrow hairs and a sculpted lower orbital plane. Use the visual lesson of reference 105194.jpg as anatomical study material; do not trace its photograph, page, lettering or composition. Compose on a 1200 × 900 warm ivory (#f3eee2) field with generous breathing room. Draw explicit editable cubic Bézier contours, a 2–3 px indigo graphite (#24343b) silhouette, broken 0.8–1.5 px interior lines, restrained contour hatching, pale upper-left light, olive gray shadow planes, muted ochre and russet accents. Make the subject feel sculptural through overlap, occlusion, perspective, curved cross-contours and reflected light. Preserve natural asymmetry and avoid icon geometry, plastic gradients, raster embeds and decorative UI. Name structural SVG groups and provide accessible title/description. Animate a seven-second looping study with anticipation, anatomically motivated independent parts and a soft settle; keep the artwork fully readable at time zero and make the ending identical.",
+    "motion": "0–1 s: quiet open gaze; 1–2 s: brow anticipates a glance; 2–2.17 s: the upper lid closes; 2.17–2.45 s: the eye reopens; 2.45–4.8 s: iris looks laterally while the brow holds; 4.8–6 s: gaze returns; 6–7 s: initial pose is restored.",
+    "animated": "corpus/animated/105194.svg",
+    "svg": "corpus/svg/105194.svg"
+  },
+  {
+    "id": "105195",
+    "title": "Cartilage catching the light",
+    "category": "ear-anatomy",
+    "source": "105195.jpg",
+    "observation": "The ear has a continuous helix, a bifurcated antihelix, triangular fossa, deep concha, projecting tragus and soft lobule. Its back surface and overlapping folds are volumes, not a flat symbol.",
+    "prompt": "Create a museum-quality original native SVG drawing of a greatly enlarged three-quarter human ear, continuous outer helix, Y-shaped antihelix branches, triangular fossa, deep conchal bowl, small projecting tragus and antitragus, soft asymmetric lobule and finely hatched turning planes. Use the visual lesson of reference 105195.jpg as anatomical study material; do not trace its photograph, page, lettering or composition. Compose on a 1200 × 900 warm ivory (#f3eee2) field with generous breathing room. Draw explicit editable cubic Bézier contours, a 2–3 px indigo graphite (#24343b) silhouette, broken 0.8–1.5 px interior lines, restrained contour hatching, pale upper-left light, olive gray shadow planes, muted ochre and russet accents. Make the subject feel sculptural through overlap, occlusion, perspective, curved cross-contours and reflected light. Preserve natural asymmetry and avoid icon geometry, plastic gradients, raster embeds and decorative UI. Name structural SVG groups and provide accessible title/description. Animate a seven-second looping study with anticipation, anatomically motivated independent parts and a soft settle; keep the artwork fully readable at time zero and make the ending identical.",
+    "motion": "0–1 s: full anatomical drawing holds; 1–2 s: a subtle cartilage highlight builds; 2–3.4 s: light follows the helix and antihelix while small sound arcs appear; 3.4–4.8 s: the highlights soften; 4.8–6 s: sound arcs and light settle; 6–7 s: match the opening drawing.",
+    "animated": "corpus/animated/105195.svg",
+    "svg": "corpus/svg/105195.svg"
+  },
+  {
+    "id": "105196",
+    "title": "A smile finding its way",
+    "category": "happiness",
+    "source": "105196.jpg",
+    "observation": "Relaxed brow, cheek lifting and the outward pull of the closed smiling mouth.",
+    "prompt": "Create a museum-quality original native SVG drawing of an original coherent male portrait expressing happiness, asymmetrical natural proportions, sculpted cranial and cheek planes, detailed olive irises, directional swept hair, true ear folds, modeled nose cartilage, expressive lips and tendons of the neck. Use the visual lesson of reference 105196.jpg as anatomical study material; do not trace its photograph, page, lettering or composition. Compose on a 1200 × 900 warm ivory (#f3eee2) field with generous breathing room. Draw explicit editable cubic Bézier contours, a 2–3 px indigo graphite (#24343b) silhouette, broken 0.8–1.5 px interior lines, restrained contour hatching, pale upper-left light, olive gray shadow planes, muted ochre and russet accents. Make the subject feel sculptural through overlap, occlusion, perspective, curved cross-contours and reflected light. Preserve natural asymmetry and avoid icon geometry, plastic gradients, raster embeds and decorative UI. Name structural SVG groups and provide accessible title/description. Animate a seven-second looping study with anticipation, anatomically motivated independent parts and a soft settle; keep the artwork fully readable at time zero and make the ending identical.",
+    "motion": "0–1 s: readable resting expression; 1–2 s: small anticipation; 2–3.4 s: A small closed-mouth smile grows through raised cheeks; a gentle blink lands before the mouth settles. 3.4–4.8 s: sustain the emotional peak; 4.8–6 s: secondary features ease back; 6–7 s: exact return to the initial pose. The coordinated blink closes at 2.17 s and reopens at 2.45 s.",
+    "animated": "corpus/animated/105196.svg",
+    "svg": "corpus/svg/105196.svg"
+  },
+  {
+    "id": "105197",
+    "title": "The weight of a quiet thought",
+    "category": "sadness",
+    "source": "105197.jpg",
+    "observation": "The inner brows draw upward and together while the lip corners and gaze fall.",
+    "prompt": "Create a museum-quality original native SVG drawing of an original coherent male portrait expressing sadness, asymmetrical natural proportions, sculpted cranial and cheek planes, detailed olive irises, directional swept hair, true ear folds, modeled nose cartilage, expressive lips and tendons of the neck. Use the visual lesson of reference 105197.jpg as anatomical study material; do not trace its photograph, page, lettering or composition. Compose on a 1200 × 900 warm ivory (#f3eee2) field with generous breathing room. Draw explicit editable cubic Bézier contours, a 2–3 px indigo graphite (#24343b) silhouette, broken 0.8–1.5 px interior lines, restrained contour hatching, pale upper-left light, olive gray shadow planes, muted ochre and russet accents. Make the subject feel sculptural through overlap, occlusion, perspective, curved cross-contours and reflected light. Preserve natural asymmetry and avoid icon geometry, plastic gradients, raster embeds and decorative UI. Name structural SVG groups and provide accessible title/description. Animate a seven-second looping study with anticipation, anatomically motivated independent parts and a soft settle; keep the artwork fully readable at time zero and make the ending identical.",
+    "motion": "0–1 s: readable resting expression; 1–2 s: small anticipation; 2–3.4 s: The gaze drops, the inner brow lifts, and the lower lip trembles once before easing. 3.4–4.8 s: sustain the emotional peak; 4.8–6 s: secondary features ease back; 6–7 s: exact return to the initial pose. The coordinated blink closes at 2.17 s and reopens at 2.45 s.",
+    "animated": "corpus/animated/105197.svg",
+    "svg": "corpus/svg/105197.svg"
+  },
+  {
+    "id": "105198",
+    "title": "A storm held behind the eyes",
+    "category": "anger",
+    "source": "105198.jpg",
+    "observation": "Compressed eyebrows, narrowed lids, flared nostrils and a tense, narrow mouth.",
+    "prompt": "Create a museum-quality original native SVG drawing of an original coherent male portrait expressing anger, asymmetrical natural proportions, sculpted cranial and cheek planes, detailed olive irises, directional swept hair, true ear folds, modeled nose cartilage, expressive lips and tendons of the neck. Use the visual lesson of reference 105198.jpg as anatomical study material; do not trace its photograph, page, lettering or composition. Compose on a 1200 × 900 warm ivory (#f3eee2) field with generous breathing room. Draw explicit editable cubic Bézier contours, a 2–3 px indigo graphite (#24343b) silhouette, broken 0.8–1.5 px interior lines, restrained contour hatching, pale upper-left light, olive gray shadow planes, muted ochre and russet accents. Make the subject feel sculptural through overlap, occlusion, perspective, curved cross-contours and reflected light. Preserve natural asymmetry and avoid icon geometry, plastic gradients, raster embeds and decorative UI. Name structural SVG groups and provide accessible title/description. Animate a seven-second looping study with anticipation, anatomically motivated independent parts and a soft settle; keep the artwork fully readable at time zero and make the ending identical.",
+    "motion": "0–1 s: readable resting expression; 1–2 s: small anticipation; 2–3.4 s: Brows squeeze inward, the eyelids narrow and the nostrils tighten, followed by a controlled release. 3.4–4.8 s: sustain the emotional peak; 4.8–6 s: secondary features ease back; 6–7 s: exact return to the initial pose. The coordinated blink closes at 2.17 s and reopens at 2.45 s.",
+    "animated": "corpus/animated/105198.svg",
+    "svg": "corpus/svg/105198.svg"
+  },
+  {
+    "id": "105199",
+    "title": "The moment before the courage",
+    "category": "fear",
+    "source": "105199.jpg",
+    "observation": "Wide visible irises, lifted brows and retracted lips revealing a tense strip of teeth.",
+    "prompt": "Create a museum-quality original native SVG drawing of an original coherent male portrait expressing fear, asymmetrical natural proportions, sculpted cranial and cheek planes, detailed olive irises, directional swept hair, true ear folds, modeled nose cartilage, expressive lips and tendons of the neck. Use the visual lesson of reference 105199.jpg as anatomical study material; do not trace its photograph, page, lettering or composition. Compose on a 1200 × 900 warm ivory (#f3eee2) field with generous breathing room. Draw explicit editable cubic Bézier contours, a 2–3 px indigo graphite (#24343b) silhouette, broken 0.8–1.5 px interior lines, restrained contour hatching, pale upper-left light, olive gray shadow planes, muted ochre and russet accents. Make the subject feel sculptural through overlap, occlusion, perspective, curved cross-contours and reflected light. Preserve natural asymmetry and avoid icon geometry, plastic gradients, raster embeds and decorative UI. Name structural SVG groups and provide accessible title/description. Animate a seven-second looping study with anticipation, anatomically motivated independent parts and a soft settle; keep the artwork fully readable at time zero and make the ending identical.",
+    "motion": "0–1 s: readable resting expression; 1–2 s: small anticipation; 2–3.4 s: A quick upward glance leads the brow lift; lips stretch, the jaw catches, then the face exhales. 3.4–4.8 s: sustain the emotional peak; 4.8–6 s: secondary features ease back; 6–7 s: exact return to the initial pose. The coordinated blink closes at 2.17 s and reopens at 2.45 s.",
+    "animated": "corpus/animated/105199.svg",
+    "svg": "corpus/svg/105199.svg"
+  },
+  {
+    "id": "105200",
+    "title": "An astonishment in warm light",
+    "category": "surprise",
+    "source": "105200.jpg",
+    "observation": "Raised orbital arches, round open eyes and a lowered jaw create surprise.",
+    "prompt": "Create a museum-quality original native SVG drawing of an original coherent male portrait expressing surprise, asymmetrical natural proportions, sculpted cranial and cheek planes, detailed olive irises, directional swept hair, true ear folds, modeled nose cartilage, expressive lips and tendons of the neck. Use the visual lesson of reference 105200.jpg as anatomical study material; do not trace its photograph, page, lettering or composition. Compose on a 1200 × 900 warm ivory (#f3eee2) field with generous breathing room. Draw explicit editable cubic Bézier contours, a 2–3 px indigo graphite (#24343b) silhouette, broken 0.8–1.5 px interior lines, restrained contour hatching, pale upper-left light, olive gray shadow planes, muted ochre and russet accents. Make the subject feel sculptural through overlap, occlusion, perspective, curved cross-contours and reflected light. Preserve natural asymmetry and avoid icon geometry, plastic gradients, raster embeds and decorative UI. Name structural SVG groups and provide accessible title/description. Animate a seven-second looping study with anticipation, anatomically motivated independent parts and a soft settle; keep the artwork fully readable at time zero and make the ending identical.",
+    "motion": "0–1 s: readable resting expression; 1–2 s: small anticipation; 2–3.4 s: The eyes open first, brows rise in delayed response, and the jaw opens into a soft gasp before recovery. 3.4–4.8 s: sustain the emotional peak; 4.8–6 s: secondary features ease back; 6–7 s: exact return to the initial pose. The coordinated blink closes at 2.17 s and reopens at 2.45 s.",
+    "animated": "corpus/animated/105200.svg",
+    "svg": "corpus/svg/105200.svg"
+  },
+  {
+    "id": "105202",
+    "title": "Laughter in profile",
+    "category": "laughter-profile",
+    "source": "105202.jpg",
+    "observation": "The profile laugh combines a rising cheek, compressed eyelid, deepened nasolabial fold and lowered mandible. The teeth wrap in perspective and the neck responds to the jaw.",
+    "prompt": "Create a museum-quality original native SVG drawing of a warmly lit expressive male head in right-facing profile laughing openly, swept-back engraved hair, anatomically folded ear, compressed crescent eyelid, raised zygomatic cheek, perspective dental arcade, descending mandible and taut neck tendons. Use the visual lesson of reference 105202.jpg as anatomical study material; do not trace its photograph, page, lettering or composition. Compose on a 1200 × 900 warm ivory (#f3eee2) field with generous breathing room. Draw explicit editable cubic Bézier contours, a 2–3 px indigo graphite (#24343b) silhouette, broken 0.8–1.5 px interior lines, restrained contour hatching, pale upper-left light, olive gray shadow planes, muted ochre and russet accents. Make the subject feel sculptural through overlap, occlusion, perspective, curved cross-contours and reflected light. Preserve natural asymmetry and avoid icon geometry, plastic gradients, raster embeds and decorative UI. Name structural SVG groups and provide accessible title/description. Animate a seven-second looping study with anticipation, anatomically motivated independent parts and a soft settle; keep the artwork fully readable at time zero and make the ending identical.",
+    "motion": "0–1 s: hold the open laugh; 1–2 s: cheek and eye anticipate; 2–3.4 s: the jaw rotates down and the cheek rises; 3.4–4.8 s: laugh peaks with a soft jaw follow-through; 4.8–6 s: jaw and eyelid settle; 6–7 s: identical opening pose.",
+    "animated": "corpus/animated/105202.svg",
+    "svg": "corpus/svg/105202.svg"
+  },
+  {
+    "id": "105203",
+    "title": "A conspiratorial wink",
+    "category": "asymmetric-expression",
+    "source": "105203.jpg",
+    "observation": "A unilateral eyelid squeeze, one raised eyebrow and one tight mouth corner make an asymmetric expression.",
+    "prompt": "Create a museum-quality original native SVG drawing of an original coherent male portrait expressing asymmetric-expression, asymmetrical natural proportions, sculpted cranial and cheek planes, detailed olive irises, directional swept hair, true ear folds, modeled nose cartilage, expressive lips and tendons of the neck. Use the visual lesson of reference 105203.jpg as anatomical study material; do not trace its photograph, page, lettering or composition. Compose on a 1200 × 900 warm ivory (#f3eee2) field with generous breathing room. Draw explicit editable cubic Bézier contours, a 2–3 px indigo graphite (#24343b) silhouette, broken 0.8–1.5 px interior lines, restrained contour hatching, pale upper-left light, olive gray shadow planes, muted ochre and russet accents. Make the subject feel sculptural through overlap, occlusion, perspective, curved cross-contours and reflected light. Preserve natural asymmetry and avoid icon geometry, plastic gradients, raster embeds and decorative UI. Name structural SVG groups and provide accessible title/description. Animate a seven-second looping study with anticipation, anatomically motivated independent parts and a soft settle; keep the artwork fully readable at time zero and make the ending identical.",
+    "motion": "0–1 s: readable resting expression; 1–2 s: small anticipation; 2–3.4 s: One brow lifts, the opposite eye winks, then one mouth corner curls with a delayed cheek response. 3.4–4.8 s: sustain the emotional peak; 4.8–6 s: secondary features ease back; 6–7 s: exact return to the initial pose. The coordinated blink closes at 2.17 s and reopens at 2.45 s.",
+    "animated": "corpus/animated/105203.svg",
+    "svg": "corpus/svg/105203.svg"
+  }
+]

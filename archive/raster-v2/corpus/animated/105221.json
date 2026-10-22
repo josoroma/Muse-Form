@@ -1,0 +1,124 @@
+{
+  "id": "105221",
+  "title": "Five Toes, One Foundation",
+  "duration": 7,
+  "imageUrl": "../plates/105221.png",
+  "regions": [
+    {
+      "name": "metatarsal relief softens",
+      "center": [
+        0.6,
+        0.69
+      ],
+      "radius": [
+        0.18,
+        0.1
+      ],
+      "translate": [
+        0.4,
+        -1.1
+      ],
+      "phase": "action",
+      "delay": 0,
+      "rotate": 0,
+      "pivot": [
+        0.6,
+        0.69
+      ]
+    },
+    {
+      "name": "proximal toe joints settle",
+      "center": [
+        0.72,
+        0.78
+      ],
+      "radius": [
+        0.18,
+        0.07
+      ],
+      "translate": [
+        0.6,
+        0.65
+      ],
+      "phase": "action",
+      "delay": 0.16,
+      "rotate": 0,
+      "pivot": [
+        0.72,
+        0.78
+      ]
+    }
+  ],
+  "pins": [
+    {
+      "center": [
+        0.29,
+        0.3
+      ],
+      "radius": [
+        0.14,
+        0.2
+      ]
+    },
+    {
+      "center": [
+        0.17,
+        0.57
+      ],
+      "radius": [
+        0.12,
+        0.1
+      ]
+    },
+    {
+      "center": [
+        0.51,
+        0.85
+      ],
+      "radius": [
+        0.07,
+        0.045
+      ]
+    },
+    {
+      "center": [
+        0.61,
+        0.88
+      ],
+      "radius": [
+        0.065,
+        0.045
+      ]
+    },
+    {
+      "center": [
+        0.69,
+        0.88
+      ],
+      "radius": [
+        0.065,
+        0.045
+      ]
+    },
+    {
+      "center": [
+        0.77,
+        0.86
+      ],
+      "radius": [
+        0.065,
+        0.045
+      ]
+    },
+    {
+      "center": [
+        0.86,
+        0.81
+      ],
+      "radius": [
+        0.075,
+        0.055
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "seven-second-storytelling",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Realistic illustrated seven-second cinemagraphs and a reusable Codex art skill.",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "catalog": "node scripts/catalog.mjs",
+    "check": "node scripts/check.mjs",
+    "render": "node scripts/render.mjs",
+    "verify": "node scripts/verify.mjs",
+    "install-skill": "node scripts/install-skill.mjs",
+    "compose": "node scripts/compose.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "1.64.1"
+  }
+}

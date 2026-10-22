@@ -1,0 +1,3610 @@
+[
+  {
+    "id": "105193",
+    "title": "Three-quarter skull",
+    "svg": "corpus/svg/105193.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. A complete adult skull in three-quarter view facing left. Preserve the continuous cranial vault, unequal receding orbital cavities, nasal aperture, open zygomatic arch and attached mandible. A compact natural dental arcade has distinct incisor, canine and molar forms and a quieter lower row. Reserve the focal line for the near orbital rim. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Deliver STATIC and ANIMATED native SVG only. Animate this unmistakable action in a seamless FIVE-SECOND loop: The mandible opens at its hinge, pauses, closes, then makes a smaller second opening and returns in five seconds. Use coordinated matching-topology local poses, anatomically meaningful pivots and actual moving eyelid clips. Keep iris circles rigid, preserve attachment to the neck, and match the first and final pose. A whole-head wobble or color pulse alone is insufficient.",
+    "duration": 5,
+    "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
+    "review": {
+      "notes": "The accepted native still is retained.  Motion has been rebuilt as an actual five-second local action: The mandible opens at its hinge, pauses, closes, then makes a smaller second opening and returns in five seconds.",
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+    },
+    "motionCaption": "The mandible opens at its hinge, pauses, closes, then makes a smaller second opening and returns in five seconds.",
+    "animations": [
+      {
+        "target": "mandible",
+        "type": "rotate",
+        "values": [
+          "0 267 174",
+          "-1 267 174",
+          "-6.5 267 174",
+          "-6.5 267 174",
+          "0 267 174",
+          "-3 267 174",
+          "0 267 174"
+        ],
+        "keyTimes": [
+          0,
+          0.12,
+          0.32,
+          0.48,
+          0.68,
+          0.82,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105194",
+    "title": "Eye and eyelid structure",
+    "svg": "corpus/svg/105194.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. An enlarged human eye viewed obliquely. The upper lid wraps the globe, the lower rim has a shallow asymmetric curve, and the tear duct joins the inner corner. Clip the circular iris and pupil beneath the actual lid aperture. Suggest brow and nose bridge with a few continuous contours; no eyelash texture or radiating iris decoration. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Deliver STATIC and ANIMATED native SVG only. Animate this unmistakable action in a seamless FIVE-SECOND loop: The eye glances right, fully blinks, glances left, blinks again and returns; the pupil stays behind the moving eyelid aperture. Use coordinated matching-topology local poses, anatomically meaningful pivots and actual moving eyelid clips. Keep iris circles rigid, preserve attachment to the neck, and match the first and final pose. A whole-head wobble or color pulse alone is insufficient.",
+    "duration": 5,
+    "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
+    "review": {
+      "notes": "The accepted native still is retained.  Independent review identified an overly narrow pupil; it was broadened to a near-circular foreshortened form and re-rendered. Motion has been rebuilt as an actual five-second local action: The eye glances right, fully blinks, glances left, blinks again and returns; the pupil stays behind the moving eyelid aperture.",
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+    },
+    "motionCaption": "The eye glances right, fully blinks, glances left, blinks again and returns; the pupil stays behind the moving eyelid aperture.",
+    "animations": [
+      {
+        "target": "upper-lid",
+        "attribute": "d",
+        "values": [
+          "M110 164 C139 141 162 138 192 148 C219 155 242 167 266 181",
+          "M110 164 C139 141 162 138 192 148 C219 155 242 167 266 181",
+          "M110 164 C132 179 155 188 180 187 C210 188 243 186 266 181",
+          "M110 164 C139 141 162 138 192 148 C219 155 242 167 266 181",
+          "M110 164 C139 141 162 138 192 148 C219 155 242 167 266 181",
+          "M110 164 C132 179 155 188 180 187 C210 188 243 186 266 181",
+          "M110 164 C139 141 162 138 192 148 C219 155 242 167 266 181",
+          "M110 164 C139 141 162 138 192 148 C219 155 242 167 266 181",
+          "M110 164 C139 141 162 138 192 148 C219 155 242 167 266 181"
+        ],
+        "keyTimes": [
+          0,
+          0.22,
+          0.29,
+          0.35,
+          0.68,
+          0.75,
+          0.81,
+          0.92,
+          1
+        ]
+      },
+      {
+        "target": "lower-lid",
+        "attribute": "d",
+        "values": [
+          "M110 164 C122 183 151 193 180 195 C214 196 245 190 266 181",
+          "M110 164 C122 183 151 193 180 195 C214 196 245 190 266 181",
+          "M110 164 C132 179 155 188 180 187 C210 188 243 186 266 181",
+          "M110 164 C122 183 151 193 180 195 C214 196 245 190 266 181",
+          "M110 164 C122 183 151 193 180 195 C214 196 245 190 266 181",
+          "M110 164 C132 179 155 188 180 187 C210 188 243 186 266 181",
+          "M110 164 C122 183 151 193 180 195 C214 196 245 190 266 181",
+          "M110 164 C122 183 151 193 180 195 C214 196 245 190 266 181",
+          "M110 164 C122 183 151 193 180 195 C214 196 245 190 266 181"
+        ],
+        "keyTimes": [
+          0,
+          0.22,
+          0.29,
+          0.35,
+          0.68,
+          0.75,
+          0.81,
+          0.92,
+          1
+        ]
+      },
+      {
+        "target": "upper-lid-thickness",
+        "attribute": "d",
+        "values": [
+          "M111 168 C140 145 162 143 191 152 C221 159 242 169 260 180",
+          "M111 168 C140 145 162 143 191 152 C221 159 242 169 260 180",
+          "M111 167 C134 180 157 189 180 188 C211 189 242 186 265 181",
+          "M111 168 C140 145 162 143 191 152 C221 159 242 169 260 180",
+          "M111 168 C140 145 162 143 191 152 C221 159 242 169 260 180",
+          "M111 167 C134 180 157 189 180 188 C211 189 242 186 265 181",
+          "M111 168 C140 145 162 143 191 152 C221 159 242 169 260 180",
+          "M111 168 C140 145 162 143 191 152 C221 159 242 169 260 180",
+          "M111 168 C140 145 162 143 191 152 C221 159 242 169 260 180"
+        ],
+        "keyTimes": [
+          0,
+          0.22,
+          0.29,
+          0.35,
+          0.68,
+          0.75,
+          0.81,
+          0.92,
+          1
+        ]
+      },
+      {
+        "target": "eye-aperture-shape",
+        "attribute": "d",
+        "values": [
+          "M111 168 C140 145 162 143 191 152 C221 159 242 169 260 180 C245 190 214 196 180 195 C151 193 122 183 111 168Z",
+          "M111 168 C140 145 162 143 191 152 C221 159 242 169 260 180 C245 190 214 196 180 195 C151 193 122 183 111 168Z",
+          "M111 168 C134 179 157 188 180 187 C210 188 240 185 260 180 C240 185 210 188 180 187 C157 188 134 179 111 168Z",
+          "M111 168 C140 145 162 143 191 152 C221 159 242 169 260 180 C245 190 214 196 180 195 C151 193 122 183 111 168Z",
+          "M111 168 C140 145 162 143 191 152 C221 159 242 169 260 180 C245 190 214 196 180 195 C151 193 122 183 111 168Z",
+          "M111 168 C134 179 157 188 180 187 C210 188 240 185 260 180 C240 185 210 188 180 187 C157 188 134 179 111 168Z",
+          "M111 168 C140 145 162 143 191 152 C221 159 242 169 260 180 C245 190 214 196 180 195 C151 193 122 183 111 168Z",
+          "M111 168 C140 145 162 143 191 152 C221 159 242 169 260 180 C245 190 214 196 180 195 C151 193 122 183 111 168Z",
+          "M111 168 C140 145 162 143 191 152 C221 159 242 169 260 180 C245 190 214 196 180 195 C151 193 122 183 111 168Z"
+        ],
+        "keyTimes": [
+          0,
+          0.22,
+          0.29,
+          0.35,
+          0.68,
+          0.75,
+          0.81,
+          0.92,
+          1
+        ]
+      },
+      {
+        "target": "upper-orbit",
+        "attribute": "d",
+        "values": [
+          "M102 134 C127 119 152 117 179 125 C222 137 251 152 281 172",
+          "M102 134 C127 119 152 117 179 125 C222 137 251 152 281 172",
+          "M102 137 C127 122 152 120 179 128 C222 140 251 155 281 175",
+          "M102 134 C127 119 152 117 179 125 C222 137 251 152 281 172",
+          "M102 134 C127 119 152 117 179 125 C222 137 251 152 281 172",
+          "M102 137 C127 122 152 120 179 128 C222 140 251 155 281 175",
+          "M102 134 C127 119 152 117 179 125 C222 137 251 152 281 172",
+          "M102 134 C127 119 152 117 179 125 C222 137 251 152 281 172",
+          "M102 134 C127 119 152 117 179 125 C222 137 251 152 281 172"
+        ],
+        "keyTimes": [
+          0,
+          0.22,
+          0.29,
+          0.35,
+          0.68,
+          0.75,
+          0.81,
+          0.92,
+          1
+        ]
+      },
+      {
+        "target": "lower-lid-rim",
+        "attribute": "d",
+        "values": [
+          "M115 183 C144 203 180 206 210 200 C236 196 252 188 264 182",
+          "M115 183 C144 203 180 206 210 200 C236 196 252 188 264 182",
+          "M115 181 C144 201 180 204 210 198 C236 194 252 186 264 180",
+          "M115 183 C144 203 180 206 210 200 C236 196 252 188 264 182",
+          "M115 183 C144 203 180 206 210 200 C236 196 252 188 264 182",
+          "M115 181 C144 201 180 204 210 198 C236 194 252 186 264 180",
+          "M115 183 C144 203 180 206 210 200 C236 196 252 188 264 182",
+          "M115 183 C144 203 180 206 210 200 C236 196 252 188 264 182",
+          "M115 183 C144 203 180 206 210 200 C236 196 252 188 264 182"
+        ],
+        "keyTimes": [
+          0,
+          0.22,
+          0.29,
+          0.35,
+          0.68,
+          0.75,
+          0.81,
+          0.92,
+          1
+        ]
+      },
+      {
+        "target": "orbital-bag",
+        "attribute": "d",
+        "values": [
+          "M115 198 C144 216 179 219 215 211 C235 207 251 199 265 190",
+          "M115 198 C144 216 179 219 215 211 C235 207 251 199 265 190",
+          "M115 196 C144 214 179 217 215 209 C235 205 251 197 265 188",
+          "M115 198 C144 216 179 219 215 211 C235 207 251 199 265 190",
+          "M115 198 C144 216 179 219 215 211 C235 207 251 199 265 190",
+          "M115 196 C144 214 179 217 215 209 C235 205 251 197 265 188",
+          "M115 198 C144 216 179 219 215 211 C235 207 251 199 265 190",
+          "M115 198 C144 216 179 219 215 211 C235 207 251 199 265 190",
+          "M115 198 C144 216 179 219 215 211 C235 207 251 199 265 190"
+        ],
+        "keyTimes": [
+          0,
+          0.22,
+          0.29,
+          0.35,
+          0.68,
+          0.75,
+          0.81,
+          0.92,
+          1
+        ]
+      },
+      {
+        "target": "iris-gaze",
+        "type": "translate",
+        "values": [
+          "0 0",
+          "13 0",
+          "13 0",
+          "-9 0",
+          "-9 0",
+          "0 0",
+          "0 0"
+        ],
+        "keyTimes": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.79,
+          0.94,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105195",
+    "title": "Auricle and concha",
+    "svg": "corpus/svg/105195.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. One upright dimensional human ear, with a continuous helix, a branching antihelix, concha, tragus, antitragus and fleshy lobe. Show the connections between folds and preserve clean negative spaces. A short temporal attachment places the ear on a head without drawing the entire head. Focus the upper helix. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Deliver STATIC and ANIMATED native SVG only. Animate this unmistakable action in a seamless FIVE-SECOND loop: A pinna-flex demonstration folds the outer ear toward its fixed attachment, rebounds and returns over five seconds; it does not imply voluntary ear articulation. Use coordinated matching-topology local poses, anatomically meaningful pivots and actual moving eyelid clips. Keep iris circles rigid, preserve attachment to the neck, and match the first and final pose. A whole-head wobble or color pulse alone is insufficient.",
+    "duration": 5,
+    "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
+    "review": {
+      "notes": "The accepted native still is retained.  Motion has been rebuilt as an actual five-second local action: A pinna-flex demonstration folds the outer ear toward its fixed attachment, rebounds and returns over five seconds; it does not imply voluntary ear articulation.",
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+    },
+    "motionCaption": "A pinna-flex demonstration folds the outer ear toward its fixed attachment, rebounds and returns over five seconds; it does not imply voluntary ear articulation.",
+    "animations": [
+      {
+        "target": "ear-outline",
+        "attribute": "d",
+        "values": [
+          "M156 93 C153 73 160 51 181 40 C203 28 229 34 246 49 C268 70 273 97 266 123 C260 147 249 167 237 187 C229 202 224 222 212 238 C201 251 184 262 169 256 C154 250 149 234 151 219",
+          "M155.6663 93.1304 C152.9031 73.0522 159.2621 51.2348 177.2511 40.7826 C195.1225 29.3565 215.382 36.0348 228.229 51.4783 C244.4584 73.0522 248.0901 100.1826 243 126 C238.605 149.8435 230.4672 169.5565 221.4633 189.2435 C215.382 204.0348 211.5471 223.9043 202.2281 239.5913 C193.5287 252.3043 179.7364 262.8609 167.1189 256.4696 C153.8325 250.0783 149 234 151 219",
+          "M155.6663 93.1304 C152.9031 73.0522 159.2621 51.2348 177.2511 40.7826 C195.1225 29.3565 215.382 36.0348 228.229 51.4783 C244.4584 73.0522 248.0901 100.1826 243 126 C238.605 149.8435 230.4672 169.5565 221.4633 189.2435 C215.382 204.0348 211.5471 223.9043 202.2281 239.5913 C193.5287 252.3043 179.7364 262.8609 167.1189 256.4696 C153.8325 250.0783 149 234 151 219",
+          "M156.2609 93 C153.1043 73 160.4696 51 182.5652 40 C205.713 28 233.0696 34 250.9565 49 C274.1043 70 279.3652 97 272 123 C265.687 147 254.113 167 241.487 187 C233.0696 202 227.8087 222 215.1826 238 C203.6087 251 185.7217 262 169.9391 256 C154.1565 250 149 234 151 219",
+          "M156.2609 93 C153.1043 73 160.4696 51 182.5652 40 C205.713 28 233.0696 34 250.9565 49 C274.1043 70 279.3652 97 272 123 C265.687 147 254.113 167 241.487 187 C233.0696 202 227.8087 222 215.1826 238 C203.6087 251 185.7217 262 169.9391 256 C154.1565 250 149 234 151 219",
+          "M156 93 C153 73 160 51 181 40 C203 28 229 34 246 49 C268 70 273 97 266 123 C260 147 249 167 237 187 C229 202 224 222 212 238 C201 251 184 262 169 256 C154 250 149 234 151 219",
+          "M156 93 C153 73 160 51 181 40 C203 28 229 34 246 49 C268 70 273 97 266 123 C260 147 249 167 237 187 C229 202 224 222 212 238 C201 251 184 262 169 256 C154 250 149 234 151 219"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "ear-helix",
+        "attribute": "d",
+        "values": [
+          "M164 98 C161 81 168 60 186 51 C202 42 219 47 233 58 C251 73 256 94 251 116 C245 140 238 152 232 172",
+          "M162.7877 98.3391 C160.1493 81.2609 166.2586 60.4435 181.3839 51.913 C194.3263 43.3304 207.6845 48.7739 218.4308 60.1391 C231.9548 75.6087 235.6581 96.7391 231.9548 118.6087 C227.481 142.4522 222.2189 154.2696 217.6702 174.113",
+          "M162.7877 98.3391 C160.1493 81.2609 166.2586 60.4435 181.3839 51.913 C194.3263 43.3304 207.6845 48.7739 218.4308 60.1391 C231.9548 75.6087 235.6581 96.7391 231.9548 118.6087 C227.481 142.4522 222.2189 154.2696 217.6702 174.113",
+          "M164.6783 98 C161.5217 81 168.887 60 187.8261 51 C204.6609 42 222.5478 47 237.2783 58 C256.2174 73 261.4783 94 256.2174 116 C249.9043 140 242.5391 152 236.2261 172",
+          "M164.6783 98 C161.5217 81 168.887 60 187.8261 51 C204.6609 42 222.5478 47 237.2783 58 C256.2174 73 261.4783 94 256.2174 116 C249.9043 140 242.5391 152 236.2261 172",
+          "M164 98 C161 81 168 60 186 51 C202 42 219 47 233 58 C251 73 256 94 251 116 C245 140 238 152 232 172",
+          "M164 98 C161 81 168 60 186 51 C202 42 219 47 233 58 C251 73 256 94 251 116 C245 140 238 152 232 172"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "helix-return",
+        "attribute": "d",
+        "values": [
+          "M232 172 C224 188 215 201 209 220 C202 236 188 247 175 245",
+          "M217.6702 174.113 C211.5471 189.9043 204.5737 202.6696 199.8712 221.513 C194.3263 237.3304 183.0243 247.9652 172.2262 245.6261",
+          "M217.6702 174.113 C211.5471 189.9043 204.5737 202.6696 199.8712 221.513 C194.3263 237.3304 183.0243 247.9652 172.2262 245.6261",
+          "M236.2261 172 C227.8087 188 218.3391 201 212.0261 220 C204.6609 236 189.9304 247 176.2522 245",
+          "M236.2261 172 C227.8087 188 218.3391 201 212.0261 220 C204.6609 236 189.9304 247 176.2522 245",
+          "M232 172 C224 188 215 201 209 220 C202 236 188 247 175 245",
+          "M232 172 C224 188 215 201 209 220 C202 236 188 247 175 245"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "helix-ridge",
+        "attribute": "d",
+        "values": [
+          "M169 100 C176 112 189 113 197 123 C211 139 213 152 203 170 C198 180 188 188 178 190",
+          "M167.1189 100.4696 C173.0691 112.6522 183.8419 113.9913 190.3241 124.2 C201.4437 140.5652 203.0112 153.6174 195.1225 171.3565 C191.1275 181.2261 183.0243 188.9652 174.7482 190.7043",
+          "M167.1189 100.4696 C173.0691 112.6522 183.8419 113.9913 190.3241 124.2 C201.4437 140.5652 203.0112 153.6174 195.1225 171.3565 C191.1275 181.2261 183.0243 188.9652 174.7482 190.7043",
+          "M169.9391 100 C177.3043 112 190.9826 113 199.4 123 C214.1304 139 216.2348 152 205.713 170 C200.4522 180 189.9304 188 179.4087 190",
+          "M169.9391 100 C177.3043 112 190.9826 113 199.4 123 C214.1304 139 216.2348 152 205.713 170 C200.4522 180 189.9304 188 179.4087 190",
+          "M169 100 C176 112 189 113 197 123 C211 139 213 152 203 170 C198 180 188 188 178 190",
+          "M169 100 C176 112 189 113 197 123 C211 139 213 152 203 170 C198 180 188 188 178 190"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "superior-crus",
+        "attribute": "d",
+        "values": [
+          "M178 105 C180 87 190 71 205 66 C220 65 232 79 234 94",
+          "M174.7482 105.7043 C176.4188 87.7565 184.6578 72.0174 196.7107 67.4087 C208.4593 66.8 217.6702 81.113 219.1905 96.1652",
+          "M174.7482 105.7043 C176.4188 87.7565 184.6578 72.0174 196.7107 67.4087 C208.4593 66.8 217.6702 81.113 219.1905 96.1652",
+          "M179.4087 105 C181.513 87 192.0348 71 207.8174 66 C223.6 65 236.2261 79 238.3304 94",
+          "M179.4087 105 C181.513 87 192.0348 71 207.8174 66 C223.6 65 236.2261 79 238.3304 94",
+          "M178 105 C180 87 190 71 205 66 C220 65 232 79 234 94",
+          "M178 105 C180 87 190 71 205 66 C220 65 232 79 234 94"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "antihelix",
+        "attribute": "d",
+        "values": [
+          "M206 73 C203 90 213 105 221 119 C230 136 227 158 216 173 C209 182 205 188 201 196",
+          "M197.5028 74.4348 C195.1225 91.3565 203.0112 106.6174 209.2329 120.8261 C216.1458 138.0609 213.8513 159.9826 205.3532 174.6957 C199.8712 183.513 196.7107 189.4087 193.5287 197.3043",
+          "M197.5028 74.4348 C195.1225 91.3565 203.0112 106.6174 209.2329 120.8261 C216.1458 138.0609 213.8513 159.9826 205.3532 174.6957 C199.8712 183.513 196.7107 189.4087 193.5287 197.3043",
+          "M208.8696 73 C205.713 90 216.2348 105 224.6522 119 C234.1217 136 230.9652 158 219.3913 173 C212.0261 182 207.8174 188 203.6087 196",
+          "M208.8696 73 C205.713 90 216.2348 105 224.6522 119 C234.1217 136 230.9652 158 219.3913 173 C212.0261 182 207.8174 188 203.6087 196",
+          "M206 73 C203 90 213 105 221 119 C230 136 227 158 216 173 C209 182 205 188 201 196",
+          "M206 73 C203 90 213 105 221 119 C230 136 227 158 216 173 C209 182 205 188 201 196"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "antihelix-branch",
+        "attribute": "d",
+        "values": [
+          "M182 111 C194 114 203 122 208 135",
+          "M178.0815 111.8087 C187.9051 115.1217 195.1225 123.3565 199.083 136.487",
+          "M178.0815 111.8087 C187.9051 115.1217 195.1225 123.3565 199.083 136.487",
+          "M183.6174 111 C196.2435 114 205.713 122 210.9739 135",
+          "M183.6174 111 C196.2435 114 205.713 122 210.9739 135",
+          "M182 111 C194 114 203 122 208 135",
+          "M182 111 C194 114 203 122 208 135"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "concha-rim",
+        "attribute": "d",
+        "values": [
+          "M170 133 C183 125 193 135 198 147 C204 159 197 174 186 180 C179 184 172 186 166 184",
+          "M167.9765 133.4957 C178.9099 125.8348 187.0956 136.0957 191.1275 148.2261 C195.9173 160.3826 190.3241 175.2 181.3839 180.913 C175.5845 184.7304 169.6838 186.5478 164.5294 184.3913",
+          "M167.9765 133.4957 C178.9099 125.8348 187.0956 136.0957 191.1275 148.2261 C195.9173 160.3826 190.3241 175.2 181.3839 180.913 C175.5845 184.7304 169.6838 186.5478 164.5294 184.3913",
+          "M170.9913 133 C184.6696 125 195.1913 135 200.4522 147 C206.7652 159 199.4 174 187.8261 180 C180.4609 184 173.0957 186 166.7826 184",
+          "M170.9913 133 C184.6696 125 195.1913 135 200.4522 147 C206.7652 159 199.4 174 187.8261 180 C180.4609 184 173.0957 186 166.7826 184",
+          "M170 133 C183 125 193 135 198 147 C204 159 197 174 186 180 C179 184 172 186 166 184",
+          "M170 133 C183 125 193 135 198 147 C204 159 197 174 186 180 C179 184 172 186 166 184"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "tragus",
+        "attribute": "d",
+        "values": [
+          "M152 148 C160 143 164 148 165 158 C168 168 163 172 158 174 C154 176 153 184 155 192",
+          "M151.962 148.0261 C159.2621 143.2348 162.7877 148.3391 163.6601 158.3652 C166.2586 168.4435 161.9119 172.313 157.4744 174.1826 C153.8325 176.0783 152.9031 184.0522 154.7531 192.1043",
+          "M151.962 148.0261 C159.2621 143.2348 162.7877 148.3391 163.6601 158.3652 C166.2586 168.4435 161.9119 172.313 157.4744 174.1826 C153.8325 176.0783 152.9031 184.0522 154.7531 192.1043",
+          "M152.0522 148 C160.4696 143 164.6783 148 165.7304 158 C168.887 168 163.6261 172 158.3652 174 C154.1565 176 153.1043 184 155.2087 192",
+          "M152.0522 148 C160.4696 143 164.6783 148 165.7304 158 C168.887 168 163.6261 172 158.3652 174 C154.1565 176 153.1043 184 155.2087 192",
+          "M152 148 C160 143 164 148 165 158 C168 168 163 172 158 174 C154 176 153 184 155 192",
+          "M152 148 C160 143 164 148 165 158 C168 168 163 172 158 174 C154 176 153 184 155 192"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "antitragus",
+        "attribute": "d",
+        "values": [
+          "M157 199 C166 195 171 191 177 192 C182 195 178 202 173 207",
+          "M156.5731 199.1565 C164.5294 195.3913 168.8314 191.5217 173.9097 192.6783 C178.0815 195.8087 174.7482 202.7043 170.5336 207.5739",
+          "M156.5731 199.1565 C164.5294 195.3913 168.8314 191.5217 173.9097 192.6783 C178.0815 195.8087 174.7482 202.7043 170.5336 207.5739",
+          "M157.313 199 C166.7826 195 172.0435 191 178.3565 192 C183.6174 195 179.4087 202 174.1478 207",
+          "M157.313 199 C166.7826 195 172.0435 191 178.3565 192 C183.6174 195 179.4087 202 174.1478 207",
+          "M157 199 C166 195 171 191 177 192 C182 195 178 202 173 207",
+          "M157 199 C166 195 171 191 177 192 C182 195 178 202 173 207"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "lobe-fold",
+        "attribute": "d",
+        "values": [
+          "M156 212 C161 223 173 226 184 220 C190 216 194 209 196 204",
+          "M155.6663 212.1304 C160.1493 223.2609 170.5336 226.5739 179.7364 220.8609 C184.6578 217.0174 187.9051 210.1217 189.5193 205.1739",
+          "M155.6663 212.1304 C160.1493 223.2609 170.5336 226.5739 179.7364 220.8609 C184.6578 217.0174 187.9051 210.1217 189.5193 205.1739",
+          "M156.2609 212 C161.5217 223 174.1478 226 185.7217 220 C192.0348 216 196.2435 209 198.3478 204",
+          "M156.2609 212 C161.5217 223 174.1478 226 185.7217 220 C192.0348 216 196.2435 209 198.3478 204",
+          "M156 212 C161 223 173 226 184 220 C190 216 194 209 196 204",
+          "M156 212 C161 223 173 226 184 220 C190 216 194 209 196 204"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "ear-attachment",
+        "attribute": "d",
+        "values": [
+          "M152 115 C148 126 150 136 152 142 M151 202 C147 209 148 217 151 222",
+          "M151.962 115.0261 C148 126 150 136 151.962 142.0261 M151 202 C147 209 148 217 151 222",
+          "M151.962 115.0261 C148 126 150 136 151.962 142.0261 M151 202 C147 209 148 217 151 222",
+          "M152.0522 115 C148 126 150 136 152.0522 142 M151 202 C147 209 148 217 151 222",
+          "M152.0522 115 C148 126 150 136 152.0522 142 M151 202 C147 209 148 217 151 222",
+          "M152 115 C148 126 150 136 152 142 M151 202 C147 209 148 217 151 222",
+          "M152 115 C148 126 150 136 152 142 M151 202 C147 209 148 217 151 222"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "concha-depth",
+        "attribute": "d",
+        "values": [
+          "M177 142 C186 141 191 150 190 159 C189 166 184 171 178 173",
+          "M173.9097 142.6783 C181.3839 141.913 185.472 151.0435 184.6578 160.0174 C183.8419 166.9913 179.7364 171.8609 174.7482 173.7043",
+          "M173.9097 142.6783 C181.3839 141.913 185.472 151.0435 184.6578 160.0174 C183.8419 166.9913 179.7364 171.8609 174.7482 173.7043",
+          "M178.3565 142 C187.8261 141 193.087 150 192.0348 159 C190.9826 166 185.7217 171 179.4087 173",
+          "M178.3565 142 C187.8261 141 193.087 150 192.0348 159 C190.9826 166 185.7217 171 179.4087 173",
+          "M177 142 C186 141 191 150 190 159 C189 166 184 171 178 173",
+          "M177 142 C186 141 191 150 190 159 C189 166 184 171 178 173"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105196",
+    "title": "A quiet smile",
+    "svg": "corpus/svg/105196.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. A three-quarter adult male portrait with a relaxed smile and a slight head tilt. Lift the cheeks, soften the lower eyelids and curve the lips upward asymmetrically. Preserve adult cranial proportions, a dimensional ear, a believable nose and an open shirt collar. Clip both irises under reduced eyelid apertures; focus only the near upper eyelid. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Deliver STATIC and ANIMATED native SVG only. Animate this unmistakable action in a seamless FIVE-SECOND loop: The quiet smile releases, then broadens with lifted cheeks and an opening mouth; both eyes blink and the face returns to its original smile in five seconds. Use coordinated matching-topology local poses, anatomically meaningful pivots and actual moving eyelid clips. Keep iris circles rigid, preserve attachment to the neck, and match the first and final pose. A whole-head wobble or color pulse alone is insufficient.",
+    "duration": 5,
+    "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
+    "review": {
+      "notes": "The accepted native still is retained.  Motion has been rebuilt as an actual five-second local action: The quiet smile releases, then broadens with lifted cheeks and an opening mouth; both eyes blink and the face returns to its original smile in five seconds.",
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+    },
+    "motionCaption": "The quiet smile releases, then broadens with lifted cheeks and an opening mouth; both eyes blink and the face returns to its original smile in five seconds.",
+    "animations": [
+      {
+        "target": "mouth-seam",
+        "attribute": "d",
+        "values": [
+          "M188 165 C198 170 211 175 223 175 C228 176 232 175 234 173",
+          "M189.2 170.28 C198.7 170.88 211.05 171.48 222.45 171.48 C227.2 171.6 231 171.48 232.9 171.24",
+          "M189.2 170.28 C198.7 170.88 211.05 171.48 222.45 171.48 C227.2 171.6 231 171.48 232.9 171.24",
+          "M185 161 C197 167 211 172 224 172 C230 172 235 171 238 168",
+          "M185 161 C197 167 211 172 224 172 C230 172 235 171 238 168",
+          "M188 165 C198 170 211 175 223 175 C228 176 232 175 234 173",
+          "M188 165 C198 170 211 175 223 175 C228 176 232 175 234 173"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "upper-lip",
+        "attribute": "d",
+        "values": [
+          "M192 165 C200 164 205 168 210 168 C215 168 222 173 229 173",
+          "M193 170.28 C200.6 170.16 205.35 170.64 210.1 170.64 C214.85 170.64 221.5 171.24 228.15 171.24",
+          "M193 170.28 C200.6 170.16 205.35 170.64 210.1 170.64 C214.85 170.64 221.5 171.24 228.15 171.24",
+          "M189 162 C199 161 205 166 210 165 C218 165 226 171 233 170",
+          "M189 162 C199 161 205 166 210 165 C218 165 226 171 233 170",
+          "M192 165 C200 164 205 168 210 168 C215 168 222 173 229 173",
+          "M192 165 C200 164 205 168 210 168 C215 168 222 173 229 173"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "lower-lip",
+        "attribute": "d",
+        "values": [
+          "M193 170 C205 178 219 181 230 177",
+          "M193.95 170.88 C205.35 171.84 218.65 172.2 229.1 171.72",
+          "M193.95 170.88 C205.35 171.84 218.65 172.2 229.1 171.72",
+          "M190 173 C204 186 222 190 235 177",
+          "M190 173 C204 186 222 190 235 177",
+          "M193 170 C205 178 219 181 230 177",
+          "M193 170 C205 178 219 181 230 177"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "smile-corner",
+        "attribute": "d",
+        "values": [
+          "M186 163 C187 166 189 166 192 166",
+          "M187.3 170.04 C188.25 170.4 190.15 170.4 193 170.4",
+          "M187.3 170.04 C188.25 170.4 190.15 170.4 193 170.4",
+          "M183 160 C184 164 186 164 189 164",
+          "M183 160 C184 164 186 164 189 164",
+          "M186 163 C187 166 189 166 192 166",
+          "M186 163 C187 166 189 166 192 166"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "smile-aperture",
+        "attribute": "opacity",
+        "values": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "smile-aperture",
+        "attribute": "d",
+        "values": [
+          "M188 165 C198 170 211 175 223 175 C228 176 232 175 234 173 C232 175 228 176 223 175 C211 175 198 170 188 165Z",
+          "M189.2 170.28 C198.7 170.88 211.05 171.48 222.45 171.48 C227.2 171.6 231 171.48 232.9 171.24 C231 171.48 227.2 171.6 222.45 171.48 C211.05 171.48 198.7 170.88 189.2 170.28Z",
+          "M189.2 170.28 C198.7 170.88 211.05 171.48 222.45 171.48 C227.2 171.6 231 171.48 232.9 171.24 C231 171.48 227.2 171.6 222.45 171.48 C211.05 171.48 198.7 170.88 189.2 170.28Z",
+          "M185 161 C197 167 211 172 224 172 C230 172 235 171 238 168 C235 178 228 184 216 183 C204 181 193 173 185 161Z",
+          "M185 161 C197 167 211 172 224 172 C230 172 235 171 238 168 C235 178 228 184 216 183 C204 181 193 173 185 161Z",
+          "M188 165 C198 170 211 175 223 175 C228 176 232 175 234 173 C232 175 228 176 223 175 C211 175 198 170 188 165Z",
+          "M188 165 C198 170 211 175 223 175 C228 176 232 175 234 173 C232 175 228 176 223 175 C211 175 198 170 188 165Z"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "cheek-left",
+        "attribute": "d",
+        "values": [
+          "M183 130 C189 135 197 137 205 135",
+          "M183 132 C189 137 197 139 205 137",
+          "M183 132 C189 137 197 139 205 137",
+          "M183 127 C189 132 197 134 205 132",
+          "M183 127 C189 132 197 134 205 132",
+          "M183 130 C189 135 197 137 205 135",
+          "M183 130 C189 135 197 137 205 135"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "smile-eye-fold",
+        "attribute": "d",
+        "values": [
+          "M183 125 C179 123 177 122 174 120 M183 130 C179 130 176 130 173 128",
+          "M183 127 C179 125 177 124 174 122 M183 132 C179 132 176 132 173 130",
+          "M183 127 C179 125 177 124 174 122 M183 132 C179 132 176 132 173 130",
+          "M183 122 C179 120 177 119 174 117 M183 127 C179 127 176 127 173 125",
+          "M183 122 C179 120 177 119 174 117 M183 127 C179 127 176 127 173 125",
+          "M183 125 C179 123 177 122 174 120 M183 130 C179 130 176 130 173 128",
+          "M183 125 C179 123 177 122 174 120 M183 130 C179 130 176 130 173 128"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "eye-fold-right",
+        "attribute": "d",
+        "values": [
+          "M235 139 C242 143 247 144 250 144",
+          "M235 141 C242 145 247 146 250 146",
+          "M235 141 C242 145 247 146 250 146",
+          "M235 136 C242 140 247 141 250 141",
+          "M235 136 C242 140 247 141 250 141",
+          "M235 139 C242 143 247 144 250 144",
+          "M235 139 C242 143 247 144 250 144"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "nasal-cheek-left",
+        "attribute": "d",
+        "values": [
+          "M200 148 C193 153 190 158 188 164",
+          "M200 150 C193 155 190 160 188 166",
+          "M200 150 C193 155 190 160 188 166",
+          "M200 145 C193 150 190 155 188 161",
+          "M200 145 C193 150 190 155 188 161",
+          "M200 148 C193 153 190 158 188 164",
+          "M200 148 C193 153 190 158 188 164"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "nasal-cheek-right",
+        "attribute": "d",
+        "values": [
+          "M234 156 C238 163 238 171 235 177",
+          "M234 158 C238 165 238 173 235 179",
+          "M234 158 C238 165 238 173 235 179",
+          "M234 153 C238 160 238 168 235 174",
+          "M234 153 C238 160 238 168 235 174",
+          "M234 156 C238 163 238 171 235 177",
+          "M234 156 C238 163 238 171 235 177"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "chin",
+        "attribute": "d",
+        "values": [
+          "M197 191 C205 194 216 194 223 190",
+          "M197 190 C205 193 216 193 223 189",
+          "M197 190 C205 193 216 193 223 189",
+          "M197 193 C205 196 216 196 223 192",
+          "M197 193 C205 196 216 196 223 192",
+          "M197 191 C205 194 216 194 223 190",
+          "M197 191 C205 194 216 194 223 190"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "eye-left-upper",
+        "attribute": "d",
+        "values": [
+          "M187 125 C192 121 200 120 205 123 C208 124 210 125 212 126",
+          "M187 125 C192 121 200 120 205 123 C208 124 210 125 212 126",
+          "M187 125 C193 125.3 199 125.5 205 125.7 C208 125.8 210 125.9 212 126",
+          "M187 125 C192 121 200 120 205 123 C208 124 210 125 212 126",
+          "M187 125 C192 121 200 120 205 123 C208 124 210 125 212 126",
+          "M187 125 C193 125.3 199 125.5 205 125.7 C208 125.8 210 125.9 212 126",
+          "M187 125 C192 121 200 120 205 123 C208 124 210 125 212 126",
+          "M187 125 C192 121 200 120 205 123 C208 124 210 125 212 126"
+        ],
+        "keyTimes": [
+          0,
+          0.33,
+          0.4,
+          0.47,
+          0.77,
+          0.84,
+          0.91,
+          1
+        ]
+      },
+      {
+        "target": "eye-left-lower",
+        "attribute": "d",
+        "values": [
+          "M187 125 C194 129 203 131 212 126",
+          "M187 125 C194 129 203 131 212 126",
+          "M187 125 C195 125.3 203 125.7 212 126",
+          "M187 125 C194 129 203 131 212 126",
+          "M187 125 C194 129 203 131 212 126",
+          "M187 125 C195 125.3 203 125.7 212 126",
+          "M187 125 C194 129 203 131 212 126",
+          "M187 125 C194 129 203 131 212 126"
+        ],
+        "keyTimes": [
+          0,
+          0.33,
+          0.4,
+          0.47,
+          0.77,
+          0.84,
+          0.91,
+          1
+        ]
+      },
+      {
+        "target": "eye-right-upper",
+        "attribute": "d",
+        "values": [
+          "M233 131 C239 126 246 128 251 134",
+          "M233 131 C239 126 246 128 251 134",
+          "M233 131 C239 132 245 133 251 134",
+          "M233 131 C239 126 246 128 251 134",
+          "M233 131 C239 126 246 128 251 134",
+          "M233 131 C239 132 245 133 251 134",
+          "M233 131 C239 126 246 128 251 134",
+          "M233 131 C239 126 246 128 251 134"
+        ],
+        "keyTimes": [
+          0,
+          0.33,
+          0.4,
+          0.47,
+          0.77,
+          0.84,
+          0.91,
+          1
+        ]
+      },
+      {
+        "target": "eye-right-lower",
+        "attribute": "d",
+        "values": [
+          "M233 131 C239 136 246 138 251 134",
+          "M233 131 C239 136 246 138 251 134",
+          "M233 131 C239 132 245 133 251 134",
+          "M233 131 C239 136 246 138 251 134",
+          "M233 131 C239 136 246 138 251 134",
+          "M233 131 C239 132 245 133 251 134",
+          "M233 131 C239 136 246 138 251 134",
+          "M233 131 C239 136 246 138 251 134"
+        ],
+        "keyTimes": [
+          0,
+          0.33,
+          0.4,
+          0.47,
+          0.77,
+          0.84,
+          0.91,
+          1
+        ]
+      },
+      {
+        "target": "near-eye-aperture",
+        "attribute": "d",
+        "values": [
+          "M187 125 C192 121 200 120 205 123 C208 124 210 125 212 126 C203 131 194 129 187 125Z",
+          "M187 125 C192 121 200 120 205 123 C208 124 210 125 212 126 C203 131 194 129 187 125Z",
+          "M187 125 C193 125.3 199 125.5 205 125.7 C208 125.8 210 125.9 212 126 C203 125.7 194 125.3 187 125Z",
+          "M187 125 C192 121 200 120 205 123 C208 124 210 125 212 126 C203 131 194 129 187 125Z",
+          "M187 125 C192 121 200 120 205 123 C208 124 210 125 212 126 C203 131 194 129 187 125Z",
+          "M187 125 C193 125.3 199 125.5 205 125.7 C208 125.8 210 125.9 212 126 C203 125.7 194 125.3 187 125Z",
+          "M187 125 C192 121 200 120 205 123 C208 124 210 125 212 126 C203 131 194 129 187 125Z",
+          "M187 125 C192 121 200 120 205 123 C208 124 210 125 212 126 C203 131 194 129 187 125Z"
+        ],
+        "keyTimes": [
+          0,
+          0.33,
+          0.4,
+          0.47,
+          0.77,
+          0.84,
+          0.91,
+          1
+        ]
+      },
+      {
+        "target": "far-eye-aperture",
+        "attribute": "d",
+        "values": [
+          "M233 131 C239 126 246 128 251 134 C246 138 239 136 233 131Z",
+          "M233 131 C239 126 246 128 251 134 C246 138 239 136 233 131Z",
+          "M233 131 C239 132 245 133 251 134 C245 133 239 132 233 131Z",
+          "M233 131 C239 126 246 128 251 134 C246 138 239 136 233 131Z",
+          "M233 131 C239 126 246 128 251 134 C246 138 239 136 233 131Z",
+          "M233 131 C239 132 245 133 251 134 C245 133 239 132 233 131Z",
+          "M233 131 C239 126 246 128 251 134 C246 138 239 136 233 131Z",
+          "M233 131 C239 126 246 128 251 134 C246 138 239 136 233 131Z"
+        ],
+        "keyTimes": [
+          0,
+          0.33,
+          0.4,
+          0.47,
+          0.77,
+          0.84,
+          0.91,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105197",
+    "title": "Quiet sadness",
+    "svg": "corpus/svg/105197.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. An older adult male with an elongated face, receding swept hair and a lowered gaze. Raise and draw together the inner brows; keep the eyelids heavy and the mouth corners quietly lowered. Use nasolabial and chin contours to explain the expression instead of a generic frown. Preserve an attached long neck and open collar. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Deliver STATIC and ANIMATED native SVG only. Animate this unmistakable action in a seamless FIVE-SECOND loop: The sad face relaxes toward neutral, then the inner brows lift, the lids droop and the mouth corners lower together before returning in five seconds. Use coordinated matching-topology local poses, anatomically meaningful pivots and actual moving eyelid clips. Keep iris circles rigid, preserve attachment to the neck, and match the first and final pose. A whole-head wobble or color pulse alone is insufficient.",
+    "duration": 5,
+    "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
+    "review": {
+      "notes": "The accepted native still is retained.  Motion has been rebuilt as an actual five-second local action: The sad face relaxes toward neutral, then the inner brows lift, the lids droop and the mouth corners lower together before returning in five seconds.",
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+    },
+    "motionCaption": "The sad face relaxes toward neutral, then the inner brows lift, the lids droop and the mouth corners lower together before returning in five seconds.",
+    "animations": [
+      {
+        "target": "mouth-seam",
+        "attribute": "d",
+        "values": [
+          "M193 190 C202 185 210 183 216 185 C224 184 229 188 233 193",
+          "M195.76 187.27 C203.68 186.82 210.72 186.64 216 186.82 C223.04 186.73 227.44 187.09 230.96 187.54",
+          "M195.76 187.27 C203.68 186.82 210.72 186.64 216 186.82 C223.04 186.73 227.44 187.09 230.96 187.54",
+          "M193 190 C202 185 210 183 216 185 C224 184 229 188 233 193",
+          "M193 190 C202 185 210 183 216 185 C224 184 229 188 233 193",
+          "M193 190 C202 185 210 183 216 185 C224 184 229 188 233 193",
+          "M193 190 C202 185 210 183 216 185 C224 184 229 188 233 193"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "upper-lip",
+        "attribute": "d",
+        "values": [
+          "M196 186 C205 180 211 181 217 181 C224 181 228 186 230 190",
+          "M198.4 186.91 C206.32 186.37 211.6 186.46 216.88 186.46 C223.04 186.46 226.56 186.91 228.32 187.27",
+          "M198.4 186.91 C206.32 186.37 211.6 186.46 216.88 186.46 C223.04 186.46 226.56 186.91 228.32 187.27",
+          "M196 186 C205 180 211 181 217 181 C224 181 228 186 230 190",
+          "M196 186 C205 180 211 181 217 181 C224 181 228 186 230 190",
+          "M196 186 C205 180 211 181 217 181 C224 181 228 186 230 190",
+          "M196 186 C205 180 211 181 217 181 C224 181 228 186 230 190"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "lower-lip",
+        "attribute": "d",
+        "values": [
+          "M199 193 C210 190 220 192 228 195",
+          "M201.04 187.54 C210.72 187.27 219.52 187.45 226.56 187.72",
+          "M201.04 187.54 C210.72 187.27 219.52 187.45 226.56 187.72",
+          "M199 193 C210 190 220 192 228 195",
+          "M199 193 C210 190 220 192 228 195",
+          "M199 193 C210 190 220 192 228 195",
+          "M199 193 C210 190 220 192 228 195"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "mouth-corners",
+        "attribute": "d",
+        "values": [
+          "M190 188 Q190 193 193 196 M234 190 Q237 194 236 198",
+          "M193.12 187.09 Q193.12 187.54 195.76 187.81 M231.84 187.27 Q234.48 187.63 233.6 187.99",
+          "M193.12 187.09 Q193.12 187.54 195.76 187.81 M231.84 187.27 Q234.48 187.63 233.6 187.99",
+          "M190 188 Q190 193 193 196 M234 190 Q237 194 236 198",
+          "M190 188 Q190 193 193 196 M234 190 Q237 194 236 198",
+          "M190 188 Q190 193 193 196 M234 190 Q237 194 236 198",
+          "M190 188 Q190 193 193 196 M234 190 Q237 194 236 198"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-eye-upper",
+        "attribute": "d",
+        "values": [
+          "M0 0 C7.5 -3.1 18.6 -3.875 30 0",
+          "M0 0 C7.5 -5.27 18.6 -6.5875 30 0",
+          "M0 0 C7.5 -5.27 18.6 -6.5875 30 0",
+          "M0 0 C7.5 -2.79 18.6 -3.4875 30 0",
+          "M0 0 C7.5 -2.79 18.6 -3.4875 30 0",
+          "M0 0 C7.5 -3.1 18.6 -3.875 30 0",
+          "M0 0 C7.5 -3.1 18.6 -3.875 30 0"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-eye-aperture",
+        "attribute": "d",
+        "values": [
+          "M0 0 C7.5 -3.1 18.6 -3.875 30 0C21.599999999999998 2.2319999999999998 9.6 2.635 0 0Z",
+          "M0 0 C7.5 -5.27 18.6 -6.5875 30 0C21.599999999999998 2.2319999999999998 9.6 2.635 0.0 0.0Z",
+          "M0 0 C7.5 -5.27 18.6 -6.5875 30 0C21.599999999999998 2.2319999999999998 9.6 2.635 0.0 0.0Z",
+          "M0 0 C7.5 -2.79 18.6 -3.4875 30 0C21.599999999999998 2.2319999999999998 9.6 2.635 0.0 0.0Z",
+          "M0 0 C7.5 -2.79 18.6 -3.4875 30 0C21.599999999999998 2.2319999999999998 9.6 2.635 0.0 0.0Z",
+          "M0 0 C7.5 -3.1 18.6 -3.875 30 0C21.599999999999998 2.2319999999999998 9.6 2.635 0 0Z",
+          "M0 0 C7.5 -3.1 18.6 -3.875 30 0C21.599999999999998 2.2319999999999998 9.6 2.635 0 0Z"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-eye-crease",
+        "attribute": "d",
+        "values": [
+          "M1 -4.17 C9.0 -7.425 20.400000000000002 -7.89 29 -4.17",
+          "M1 -7.089 C9 -12.6225 20.4 -13.413 29 -7.089",
+          "M1 -7.089 C9 -12.6225 20.4 -13.413 29 -7.089",
+          "M1 -3.753 C9 -6.6825 20.4 -7.101 29 -3.753",
+          "M1 -3.753 C9 -6.6825 20.4 -7.101 29 -3.753",
+          "M1 -4.17 C9.0 -7.425 20.400000000000002 -7.89 29 -4.17",
+          "M1 -4.17 C9.0 -7.425 20.400000000000002 -7.89 29 -4.17"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "far-eye-upper",
+        "attribute": "d",
+        "values": [
+          "M0 0 C4.75 -2.8 11.78 -3.5 19 0",
+          "M0 0 C4.75 -4.76 11.78 -5.95 19 0",
+          "M0 0 C4.75 -4.76 11.78 -5.95 19 0",
+          "M0 0 C4.75 -2.52 11.78 -3.15 19 0",
+          "M0 0 C4.75 -2.52 11.78 -3.15 19 0",
+          "M0 0 C4.75 -2.8 11.78 -3.5 19 0",
+          "M0 0 C4.75 -2.8 11.78 -3.5 19 0"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "far-eye-aperture",
+        "attribute": "d",
+        "values": [
+          "M0 0 C4.75 -2.8 11.78 -3.5 19 0C13.68 2.016 6.08 2.38 0 0Z",
+          "M0 0 C4.75 -4.76 11.78 -5.95 19 0C13.68 2.016 6.08 2.38 0.0 0.0Z",
+          "M0 0 C4.75 -4.76 11.78 -5.95 19 0C13.68 2.016 6.08 2.38 0.0 0.0Z",
+          "M0 0 C4.75 -2.52 11.78 -3.15 19 0C13.68 2.016 6.08 2.38 0.0 0.0Z",
+          "M0 0 C4.75 -2.52 11.78 -3.15 19 0C13.68 2.016 6.08 2.38 0.0 0.0Z",
+          "M0 0 C4.75 -2.8 11.78 -3.5 19 0C13.68 2.016 6.08 2.38 0 0Z",
+          "M0 0 C4.75 -2.8 11.78 -3.5 19 0C13.68 2.016 6.08 2.38 0 0Z"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "far-eye-crease",
+        "attribute": "d",
+        "values": [
+          "M1 -3.96 C5.7 -6.8999999999999995 12.920000000000002 -7.319999999999999 18 -3.96",
+          "M1 -6.732 C5.7 -11.73 12.92 -12.444 18 -6.732",
+          "M1 -6.732 C5.7 -11.73 12.92 -12.444 18 -6.732",
+          "M1 -3.564 C5.7 -6.21 12.92 -6.588 18 -3.564",
+          "M1 -3.564 C5.7 -6.21 12.92 -6.588 18 -3.564",
+          "M1 -3.96 C5.7 -6.8999999999999995 12.920000000000002 -7.319999999999999 18 -3.96",
+          "M1 -3.96 C5.7 -6.8999999999999995 12.920000000000002 -7.319999999999999 18 -3.96"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-brow",
+        "attribute": "d",
+        "values": [
+          "M178 123 C189 120 199 120 209 115 L214 115",
+          "M178 123 C189 123.0556 199 125.8333 209 123.6111 L214 125",
+          "M178 123 C189 123.0556 199 125.8333 209 123.6111 L214 125",
+          "M178 123 C189 120 199 120 209 115 L214 115",
+          "M178 123 C189 120 199 120 209 115 L214 115",
+          "M178 123 C189 120 199 120 209 115 L214 115",
+          "M178 123 C189 120 199 120 209 115 L214 115"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-brow-edge",
+        "attribute": "d",
+        "values": [
+          "M179 125 C192 123 203 122 211 118",
+          "M179 125.2778 C192 126.8889 203 128.9444 211 127.1667",
+          "M179 125.2778 C192 126.8889 203 128.9444 211 127.1667",
+          "M179 125 C192 123 203 122 211 118",
+          "M179 125 C192 123 203 122 211 118",
+          "M179 125 C192 123 203 122 211 118",
+          "M179 125 C192 123 203 122 211 118"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "far-brow",
+        "attribute": "d",
+        "values": [
+          "M235 123 C243 126 249 132 253 137",
+          "M235 130 C243 129.8889 249 133.5556 253 137",
+          "M235 130 C243 129.8889 249 133.5556 253 137",
+          "M235 123 C243 126 249 132 253 137",
+          "M235 123 C243 126 249 132 253 137",
+          "M235 123 C243 126 249 132 253 137",
+          "M235 123 C243 126 249 132 253 137"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "inner-brow-fold",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          ".15",
+          ".15",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "forehead",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          ".15",
+          ".15",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "under-eye",
+        "attribute": "d",
+        "values": [
+          "M177 140 C186 146 198 148 207 145 M233 147 C239 152 245 153 249 151",
+          "M177 138 C186 144 198 146 207 143 M233 145 C239 150 245 151 249 149",
+          "M177 138 C186 144 198 146 207 143 M233 145 C239 150 245 151 249 149",
+          "M177 140 C186 146 198 148 207 145 M233 147 C239 152 245 153 249 151",
+          "M177 140 C186 146 198 148 207 145 M233 147 C239 152 245 153 249 151",
+          "M177 140 C186 146 198 148 207 145 M233 147 C239 152 245 153 249 151",
+          "M177 140 C186 146 198 148 207 145 M233 147 C239 152 245 153 249 151"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "left-nasolabial",
+        "attribute": "d",
+        "values": [
+          "M201 163 C193 168 191 178 190 185",
+          "M201 161 C193 166 191 176 190 183",
+          "M201 161 C193 166 191 176 190 183",
+          "M201 163 C193 168 191 178 190 185",
+          "M201 163 C193 168 191 178 190 185",
+          "M201 163 C193 168 191 178 190 185",
+          "M201 163 C193 168 191 178 190 185"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "right-nasolabial",
+        "attribute": "d",
+        "values": [
+          "M238 171 C241 180 240 187 237 194",
+          "M238 169 C241 178 240 185 237 192",
+          "M238 169 C241 178 240 185 237 192",
+          "M238 171 C241 180 240 187 237 194",
+          "M238 171 C241 180 240 187 237 194",
+          "M238 171 C241 180 240 187 237 194",
+          "M238 171 C241 180 240 187 237 194"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105198",
+    "title": "Contained anger",
+    "svg": "corpus/svg/105198.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. A broad-jawed adult male turned slightly left. Compress the inner brows, narrow the eyes, tighten the nostril wings and press the lips. Show a square mandibular angle, short swept hair and neck tension with a few restrained curves. Focus one near upper eyelid; avoid decorative forehead hatch marks. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Deliver STATIC and ANIMATED native SVG only. Animate this unmistakable action in a seamless FIVE-SECOND loop: The brows and lips release, then the brows draw inward, eyes narrow, nostrils tense and lips press into anger; all return within five seconds. Use coordinated matching-topology local poses, anatomically meaningful pivots and actual moving eyelid clips. Keep iris circles rigid, preserve attachment to the neck, and match the first and final pose. A whole-head wobble or color pulse alone is insufficient.",
+    "duration": 5,
+    "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
+    "review": {
+      "notes": "The accepted native still is retained.  Motion has been rebuilt as an actual five-second local action: The brows and lips release, then the brows draw inward, eyes narrow, nostrils tense and lips press into anger; all return within five seconds.",
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+    },
+    "motionCaption": "The brows and lips release, then the brows draw inward, eyes narrow, nostrils tense and lips press into anger; all return within five seconds.",
+    "animations": [
+      {
+        "target": "mouth-seam",
+        "attribute": "d",
+        "values": [
+          "M147 181 C157 178 168 176 178 178 C184 179 189 182 193 184",
+          "M149.64 180.09 C158.44 179.82 168.12 179.64 176.92 179.82 C182.2 179.91 186.6 180.18 190.12 180.36",
+          "M149.64 180.09 C158.44 179.82 168.12 179.64 176.92 179.82 C182.2 179.91 186.6 180.18 190.12 180.36",
+          "M147 181 C157 178 168 176 178 178 C184 179 189 182 193 184",
+          "M147 181 C157 178 168 176 178 178 C184 179 189 182 193 184",
+          "M147 181 C157 178 168 176 178 178 C184 179 189 182 193 184",
+          "M147 181 C157 178 168 176 178 178 C184 179 189 182 193 184"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "upper-lip",
+        "attribute": "d",
+        "values": [
+          "M151 177 C158 173 164 175 168 174 C175 172 182 176 188 179",
+          "M153.16 179.73 C159.32 179.37 164.6 179.55 168.12 179.46 C174.28 179.28 180.44 179.64 185.72 179.91",
+          "M153.16 179.73 C159.32 179.37 164.6 179.55 168.12 179.46 C174.28 179.28 180.44 179.64 185.72 179.91",
+          "M151 177 C158 173 164 175 168 174 C175 172 182 176 188 179",
+          "M151 177 C158 173 164 175 168 174 C175 172 182 176 188 179",
+          "M151 177 C158 173 164 175 168 174 C175 172 182 176 188 179",
+          "M151 177 C158 173 164 175 168 174 C175 172 182 176 188 179"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "lower-lip",
+        "attribute": "d",
+        "values": [
+          "M151 184 C162 188 177 186 187 184",
+          "M153.16 180.36 C162.84 180.72 176.04 180.54 184.84 180.36",
+          "M153.16 180.36 C162.84 180.72 176.04 180.54 184.84 180.36",
+          "M151 184 C162 188 177 186 187 184",
+          "M151 184 C162 188 177 186 187 184",
+          "M151 184 C162 188 177 186 187 184",
+          "M151 184 C162 188 177 186 187 184"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-eye-upper",
+        "attribute": "d",
+        "values": [
+          "M0 0 C7.5 -3.1 18.6 -3.875 30 0",
+          "M0 0 C7.5 -5.115 18.6 -6.3937 30 0",
+          "M0 0 C7.5 -5.115 18.6 -6.3937 30 0",
+          "M0 0 C7.5 -2.325 18.6 -2.9062 30 0",
+          "M0 0 C7.5 -2.325 18.6 -2.9062 30 0",
+          "M0 0 C7.5 -3.1 18.6 -3.875 30 0",
+          "M0 0 C7.5 -3.1 18.6 -3.875 30 0"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-eye-aperture",
+        "attribute": "d",
+        "values": [
+          "M0 0 C7.5 -3.1 18.6 -3.875 30 0C21.599999999999998 2.2319999999999998 9.6 2.635 0 0Z",
+          "M0 0 C7.5 -5.115 18.6 -6.3937 30 0C21.599999999999998 2.2319999999999998 9.6 2.635 0.0 0.0Z",
+          "M0 0 C7.5 -5.115 18.6 -6.3937 30 0C21.599999999999998 2.2319999999999998 9.6 2.635 0.0 0.0Z",
+          "M0 0 C7.5 -2.325 18.6 -2.9062 30 0C21.599999999999998 2.2319999999999998 9.6 2.635 0.0 0.0Z",
+          "M0 0 C7.5 -2.325 18.6 -2.9062 30 0C21.599999999999998 2.2319999999999998 9.6 2.635 0.0 0.0Z",
+          "M0 0 C7.5 -3.1 18.6 -3.875 30 0C21.599999999999998 2.2319999999999998 9.6 2.635 0 0Z",
+          "M0 0 C7.5 -3.1 18.6 -3.875 30 0C21.599999999999998 2.2319999999999998 9.6 2.635 0 0Z"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-eye-crease",
+        "attribute": "d",
+        "values": [
+          "M1 -4.17 C9.0 -7.425 20.400000000000002 -7.89 29 -4.17",
+          "M1 -6.8805 C9 -12.2512 20.4 -13.0185 29 -6.8805",
+          "M1 -6.8805 C9 -12.2512 20.4 -13.0185 29 -6.8805",
+          "M1 -3.1275 C9 -5.5687 20.4 -5.9175 29 -3.1275",
+          "M1 -3.1275 C9 -5.5687 20.4 -5.9175 29 -3.1275",
+          "M1 -4.17 C9.0 -7.425 20.400000000000002 -7.89 29 -4.17",
+          "M1 -4.17 C9.0 -7.425 20.400000000000002 -7.89 29 -4.17"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "far-eye-upper",
+        "attribute": "d",
+        "values": [
+          "M0 0 C5.25 -2.6 13.02 -3.25 21 0",
+          "M0 0 C5.25 -4.29 13.02 -5.3625 21 0",
+          "M0 0 C5.25 -4.29 13.02 -5.3625 21 0",
+          "M0 0 C5.25 -1.95 13.02 -2.4375 21 0",
+          "M0 0 C5.25 -1.95 13.02 -2.4375 21 0",
+          "M0 0 C5.25 -2.6 13.02 -3.25 21 0",
+          "M0 0 C5.25 -2.6 13.02 -3.25 21 0"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "far-eye-aperture",
+        "attribute": "d",
+        "values": [
+          "M0 0 C5.25 -2.6 13.02 -3.25 21 0C15.12 1.8719999999999999 6.72 2.21 0 0Z",
+          "M0 0 C5.25 -4.29 13.02 -5.3625 21 0C15.12 1.8719999999999999 6.72 2.21 0.0 0.0Z",
+          "M0 0 C5.25 -4.29 13.02 -5.3625 21 0C15.12 1.8719999999999999 6.72 2.21 0.0 0.0Z",
+          "M0 0 C5.25 -1.95 13.02 -2.4375 21 0C15.12 1.8719999999999999 6.72 2.21 0.0 0.0Z",
+          "M0 0 C5.25 -1.95 13.02 -2.4375 21 0C15.12 1.8719999999999999 6.72 2.21 0.0 0.0Z",
+          "M0 0 C5.25 -2.6 13.02 -3.25 21 0C15.12 1.8719999999999999 6.72 2.21 0 0Z",
+          "M0 0 C5.25 -2.6 13.02 -3.25 21 0C15.12 1.8719999999999999 6.72 2.21 0 0Z"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "far-eye-crease",
+        "attribute": "d",
+        "values": [
+          "M1 -3.82 C6.3 -6.55 14.280000000000001 -6.9399999999999995 20 -3.82",
+          "M1 -6.303 C6.3 -10.8075 14.28 -11.451 20 -6.303",
+          "M1 -6.303 C6.3 -10.8075 14.28 -11.451 20 -6.303",
+          "M1 -2.865 C6.3 -4.9125 14.28 -5.205 20 -2.865",
+          "M1 -2.865 C6.3 -4.9125 14.28 -5.205 20 -2.865",
+          "M1 -3.82 C6.3 -6.55 14.280000000000001 -6.9399999999999995 20 -3.82",
+          "M1 -3.82 C6.3 -6.55 14.280000000000001 -6.9399999999999995 20 -3.82"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "brow-near",
+        "attribute": "d",
+        "values": [
+          "M175 121 C185 115 198 111 210 114",
+          "M175 114 C185 110.5714 198 109.9143 210 116",
+          "M175 114 C185 110.5714 198 109.9143 210 116",
+          "M175 121 C185 115 198 111 210 114",
+          "M175 121 C185 115 198 111 210 114",
+          "M175 121 C185 115 198 111 210 114",
+          "M175 121 C185 115 198 111 210 114"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "brow-far",
+        "attribute": "d",
+        "values": [
+          "M133 122 C141 116 151 117 159 123",
+          "M133 122 C141 113.8462 151 112.1538 159 116",
+          "M133 122 C141 113.8462 151 112.1538 159 116",
+          "M133 122 C141 116 151 117 159 123",
+          "M133 122 C141 116 151 117 159 123",
+          "M133 122 C141 116 151 117 159 123",
+          "M133 122 C141 116 151 117 159 123"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "brow-pressure",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          ".12",
+          ".12",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "glabellar-fold",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          ".12",
+          ".12",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "forehead",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          ".12",
+          ".12",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "nose-base",
+        "attribute": "d",
+        "values": [
+          "M148 157 C149 162 154 165 159 163 C164 167 171 165 175 162",
+          "M149.92 157 C150.8 162 155.2 165 159.6 163 C164 167 170.16 165 173.68 162",
+          "M149.92 157 C150.8 162 155.2 165 159.6 163 C164 167 170.16 165 173.68 162",
+          "M148 157 C149 162 154 165 159 163 C164 167 171 165 175 162",
+          "M148 157 C149 162 154 165 159 163 C164 167 171 165 175 162",
+          "M148 157 C149 162 154 165 159 163 C164 167 171 165 175 162",
+          "M148 157 C149 162 154 165 159 163 C164 167 171 165 175 162"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-ala",
+        "attribute": "d",
+        "values": [
+          "M170 155 C177 151 182 156 181 162",
+          "M169.28 155 C175.44 151 179.84 156 178.96 162",
+          "M169.28 155 C175.44 151 179.84 156 178.96 162",
+          "M170 155 C177 151 182 156 181 162",
+          "M170 155 C177 151 182 156 181 162",
+          "M170 155 C177 151 182 156 181 162",
+          "M170 155 C177 151 182 156 181 162"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "nostrils",
+        "attribute": "d",
+        "values": [
+          "M152 160 Q155 157 160 160 M171 161 Q175 157 179 160",
+          "M153.44 160 Q156.08 157 160.48 160 M170.16 161 Q173.68 157 177.2 160",
+          "M153.44 160 Q156.08 157 160.48 160 M170.16 161 Q173.68 157 177.2 160",
+          "M152 160 Q155 157 160 160 M171 161 Q175 157 179 160",
+          "M152 160 Q155 157 160 160 M171 161 Q175 157 179 160",
+          "M152 160 Q155 157 160 160 M171 161 Q175 157 179 160",
+          "M152 160 Q155 157 160 160 M171 161 Q175 157 179 160"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "nasolabial-near",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          ".4",
+          ".4",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "nasolabial-far",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          ".4",
+          ".4",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105199",
+    "title": "A moment of fear",
+    "svg": "corpus/svg/105199.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. An adult male looking upward to the right, with raised knitted inner brows, tense wide eyes, a retracted slightly parted mouth and taut neck tendons. The lower lids remain supportive and the upper teeth are a short quiet strip. Use a slim asymmetrical jaw and swept hair. Keep the fear readable through coordinated facial muscles, not bulging eyeballs. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Deliver STATIC and ANIMATED native SVG only. Animate this unmistakable action in a seamless FIVE-SECOND loop: A calmer face snaps into fear: eyes widen, inner brows lift, the mouth retracts and the lower jaw drops; the coordinated facial action returns in five seconds. Use coordinated matching-topology local poses, anatomically meaningful pivots and actual moving eyelid clips. Keep iris circles rigid, preserve attachment to the neck, and match the first and final pose. A whole-head wobble or color pulse alone is insufficient.",
+    "duration": 5,
+    "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
+    "review": {
+      "notes": "The accepted native still is retained.  Independent review identified an upper eyelid too narrow for the expression; both upper lids were lifted while the lower rims stayed fixed, then re-rendered. Motion has been rebuilt as an actual five-second local action: A calmer face snaps into fear: eyes widen, inner brows lift, the mouth retracts and the lower jaw drops; the coordinated facial action returns in five seconds.",
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+    },
+    "motionCaption": "A calmer face snaps into fear: eyes widen, inner brows lift, the mouth retracts and the lower jaw drops; the coordinated facial action returns in five seconds.",
+    "animations": [
+      {
+        "target": "mouth-aperture",
+        "attribute": "d",
+        "values": [
+          "M169 188 C181 178 192 176 204 180 C211 182 216 186 217 192 C208 190 201 189 193 189 C183 189 176 192 169 192Z",
+          "M171.88 188 C182.44 187.1 192.12 186.92 202.68 187.28 C208.84 187.46 213.24 187.82 214.12 188.36 C206.2 188.18 200.04 188.09 193 188.09 C184.2 188.09 178.04 188.36 171.88 188.36Z",
+          "M171.88 188 C182.44 187.1 192.12 186.92 202.68 187.28 C208.84 187.46 213.24 187.82 214.12 188.36 C206.2 188.18 200.04 188.09 193 188.09 C184.2 188.09 178.04 188.36 171.88 188.36Z",
+          "M169 188 C181 178 192 176 204 180 C211 182 216 186 217 192 C208 190 201 189 193 189 C183 189 176 192 169 192Z",
+          "M169 188 C181 178 192 176 204 180 C211 182 216 186 217 192 C208 190 201 189 193 189 C183 189 176 192 169 192Z",
+          "M169 188 C181 178 192 176 204 180 C211 182 216 186 217 192 C208 190 201 189 193 189 C183 189 176 192 169 192Z",
+          "M169 188 C181 178 192 176 204 180 C211 182 216 186 217 192 C208 190 201 189 193 189 C183 189 176 192 169 192Z"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "upper-lip",
+        "attribute": "d",
+        "values": [
+          "M170 184 C179 175 188 173 196 176 C205 175 212 181 215 185",
+          "M172.76 187.64 C180.68 186.83 188.6 186.65 195.64 186.92 C203.56 186.83 209.72 187.37 212.36 187.73",
+          "M172.76 187.64 C180.68 186.83 188.6 186.65 195.64 186.92 C203.56 186.83 209.72 187.37 212.36 187.73",
+          "M170 184 C179 175 188 173 196 176 C205 175 212 181 215 185",
+          "M170 184 C179 175 188 173 196 176 C205 175 212 181 215 185",
+          "M170 184 C179 175 188 173 196 176 C205 175 212 181 215 185",
+          "M170 184 C179 175 188 173 196 176 C205 175 212 181 215 185"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "lower-lip",
+        "attribute": "d",
+        "values": [
+          "M173 197 C187 192 202 194 212 197",
+          "M175.4 188.81 C187.72 188.36 200.92 188.54 209.72 188.81",
+          "M175.4 188.81 C187.72 188.36 200.92 188.54 209.72 188.81",
+          "M173 197 C187 192 202 194 212 197",
+          "M173 197 C187 192 202 194 212 197",
+          "M173 197 C187 192 202 194 212 197",
+          "M173 197 C187 192 202 194 212 197"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "mouth-corners",
+        "attribute": "d",
+        "values": [
+          "M166 186 Q165 192 168 197 M218 190 L219 197",
+          "M169.24 187.82 Q168.36 188.36 171 188.81 M215 188.18 L215.88 188.81",
+          "M169.24 187.82 Q168.36 188.36 171 188.81 M215 188.18 L215.88 188.81",
+          "M166 186 Q165 192 168 197 M218 190 L219 197",
+          "M166 186 Q165 192 168 197 M218 190 L219 197",
+          "M166 186 Q165 192 168 197 M218 190 L219 197",
+          "M166 186 Q165 192 168 197 M218 190 L219 197"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-eye-upper",
+        "attribute": "d",
+        "values": [
+          "M0 0 C7.75 -9.0 19.22 -11.25 31 0",
+          "M0 0 C7.75 -4.95 19.22 -6.1875 31 0",
+          "M0 0 C7.75 -4.95 19.22 -6.1875 31 0",
+          "M0 0 C7.75 -10.08 19.22 -12.6 31 0",
+          "M0 0 C7.75 -10.08 19.22 -12.6 31 0",
+          "M0 0 C7.75 -9.0 19.22 -11.25 31 0",
+          "M0 0 C7.75 -9.0 19.22 -11.25 31 0"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-eye-aperture",
+        "attribute": "d",
+        "values": [
+          "M0 0 C7.75 -9.0 19.22 -11.25 31 0C22.32 3.5999999999999996 9.92 4.25 0 0Z",
+          "M0 0 C7.75 -4.95 19.22 -6.1875 31 0C22.32 3.5999999999999996 9.92 4.25 0.0 0.0Z",
+          "M0 0 C7.75 -4.95 19.22 -6.1875 31 0C22.32 3.5999999999999996 9.92 4.25 0.0 0.0Z",
+          "M0 0 C7.75 -10.08 19.22 -12.6 31 0C22.32 3.5999999999999996 9.92 4.25 0.0 0.0Z",
+          "M0 0 C7.75 -10.08 19.22 -12.6 31 0C22.32 3.5999999999999996 9.92 4.25 0.0 0.0Z",
+          "M0 0 C7.75 -9.0 19.22 -11.25 31 0C22.32 3.5999999999999996 9.92 4.25 0 0Z",
+          "M0 0 C7.75 -9.0 19.22 -11.25 31 0C22.32 3.5999999999999996 9.92 4.25 0 0Z"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-eye-crease",
+        "attribute": "d",
+        "values": [
+          "M1 -8.3 C9.299999999999999 -17.75 21.080000000000002 -19.099999999999998 30 -8.3",
+          "M1 -4.565 C9.3 -9.7625 21.08 -10.505 30 -4.565",
+          "M1 -4.565 C9.3 -9.7625 21.08 -10.505 30 -4.565",
+          "M1 -9.296 C9.3 -19.88 21.08 -21.392 30 -9.296",
+          "M1 -9.296 C9.3 -19.88 21.08 -21.392 30 -9.296",
+          "M1 -8.3 C9.299999999999999 -17.75 21.080000000000002 -19.099999999999998 30 -8.3",
+          "M1 -8.3 C9.299999999999999 -17.75 21.080000000000002 -19.099999999999998 30 -8.3"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "far-eye-upper",
+        "attribute": "d",
+        "values": [
+          "M0 0 C6.0 -8.28 14.879999999999999 -10.35 24 0",
+          "M0 0 C6 -4.554 14.88 -5.6925 24 0",
+          "M0 0 C6 -4.554 14.88 -5.6925 24 0",
+          "M0 0 C6 -9.2736 14.88 -11.592 24 0",
+          "M0 0 C6 -9.2736 14.88 -11.592 24 0",
+          "M0 0 C6.0 -8.28 14.879999999999999 -10.35 24 0",
+          "M0 0 C6.0 -8.28 14.879999999999999 -10.35 24 0"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "far-eye-aperture",
+        "attribute": "d",
+        "values": [
+          "M0 0 C6.0 -8.28 14.879999999999999 -10.35 24 0C17.28 3.312 7.68 3.9099999999999997 0 0Z",
+          "M0 0 C6 -4.554 14.88 -5.6925 24 0C17.28 3.312 7.68 3.9099999999999997 0.0 0.0Z",
+          "M0 0 C6 -4.554 14.88 -5.6925 24 0C17.28 3.312 7.68 3.9099999999999997 0.0 0.0Z",
+          "M0 0 C6 -9.2736 14.88 -11.592 24 0C17.28 3.312 7.68 3.9099999999999997 0.0 0.0Z",
+          "M0 0 C6 -9.2736 14.88 -11.592 24 0C17.28 3.312 7.68 3.9099999999999997 0.0 0.0Z",
+          "M0 0 C6.0 -8.28 14.879999999999999 -10.35 24 0C17.28 3.312 7.68 3.9099999999999997 0 0Z",
+          "M0 0 C6.0 -8.28 14.879999999999999 -10.35 24 0C17.28 3.312 7.68 3.9099999999999997 0 0Z"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "far-eye-crease",
+        "attribute": "d",
+        "values": [
+          "M1 -7.795999999999999 C7.199999999999999 -16.49 16.32 -17.732 23 -7.795999999999999",
+          "M1 -4.2878 C7.2 -9.0695 16.32 -9.7526 23 -4.2878",
+          "M1 -4.2878 C7.2 -9.0695 16.32 -9.7526 23 -4.2878",
+          "M1 -8.7315 C7.2 -18.4688 16.32 -19.8598 23 -8.7315",
+          "M1 -8.7315 C7.2 -18.4688 16.32 -19.8598 23 -8.7315",
+          "M1 -7.795999999999999 C7.199999999999999 -16.49 16.32 -17.732 23 -7.795999999999999",
+          "M1 -7.795999999999999 C7.199999999999999 -16.49 16.32 -17.732 23 -7.795999999999999"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-brow",
+        "attribute": "d",
+        "values": [
+          "M151 123 C160 115 171 111 181 109 C185 109 188 112 189 115",
+          "M151 129 C160 122.4211 171 120.1579 181 119.7368 C185 120.3684 188 123.8421 189 127",
+          "M151 129 C160 122.4211 171 120.1579 181 119.7368 C185 120.3684 188 123.8421 189 127",
+          "M151 123 C160 115 171 111 181 109 C185 109 188 112 189 115",
+          "M151 123 C160 115 171 111 181 109 C185 109 188 112 189 115",
+          "M151 123 C160 115 171 111 181 109 C185 109 188 112 189 115",
+          "M151 123 C160 115 171 111 181 109 C185 109 188 112 189 115"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "far-brow",
+        "attribute": "d",
+        "values": [
+          "M204 111 C214 103 223 104 230 110",
+          "M204 121 C214 113 223 114 230 120",
+          "M204 121 C214 113 223 114 230 120",
+          "M204 111 C214 103 223 104 230 110",
+          "M204 111 C214 103 223 104 230 110",
+          "M204 111 C214 103 223 104 230 110",
+          "M204 111 C214 103 223 104 230 110"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "glabella",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          ".25",
+          ".25",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "forehead",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          ".25",
+          ".25",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "neck-tension",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          ".25",
+          ".25",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "upper-teeth",
+        "attribute": "d",
+        "values": [
+          "M176 184 C188 180 199 180 208 185 L207 188 C196 186 185 187 178 188Z",
+          "M178.04 187.64 C188.6 187.28 198.28 187.28 206.2 187.73 L205.32 188 C195.64 187.82 185.96 187.91 179.8 188Z",
+          "M178.04 187.64 C188.6 187.28 198.28 187.28 206.2 187.73 L205.32 188 C195.64 187.82 185.96 187.91 179.8 188Z",
+          "M176 184 C188 180 199 180 208 185 L207 188 C196 186 185 187 178 188Z",
+          "M176 184 C188 180 199 180 208 185 L207 188 C196 186 185 187 178 188Z",
+          "M176 184 C188 180 199 180 208 185 L207 188 C196 186 185 187 178 188Z",
+          "M176 184 C188 180 199 180 208 185 L207 188 C196 186 185 187 178 188Z"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "upper-teeth",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "face-outline",
+        "attribute": "d",
+        "values": [
+          "M121 169 C125 190 139 207 157 220 C170 232 183 238 194 234 C208 229 218 217 224 205 C229 191 230 177 231 163 L237 141 C240 132 239 120 239 108",
+          "M121 169 C125 188.0345 139 201.9943 157 212.9535 C170 224.0223 183 230 194 226 C208 221.1347 218 210.3554 224 200.3563 C229 188.871 230 176.6663 231 163 L237 141 C240 132 239 120 239 108",
+          "M121 169 C125 188.0345 139 201.9943 157 212.9535 C170 224.0223 183 230 194 226 C208 221.1347 218 210.3554 224 200.3563 C229 188.871 230 176.6663 231 163 L237 141 C240 132 239 120 239 108",
+          "M121 169 C125 190 139 207 157 220 C170 232 183 238 194 234 C208 229 218 217 224 205 C229 191 230 177 231 163 L237 141 C240 132 239 120 239 108",
+          "M121 169 C125 190 139 207 157 220 C170 232 183 238 194 234 C208 229 218 217 224 205 C229 191 230 177 231 163 L237 141 C240 132 239 120 239 108",
+          "M121 169 C125 190 139 207 157 220 C170 232 183 238 194 234 C208 229 218 217 224 205 C229 191 230 177 231 163 L237 141 C240 132 239 120 239 108",
+          "M121 169 C125 190 139 207 157 220 C170 232 183 238 194 234 C208 229 218 217 224 205 C229 191 230 177 231 163 L237 141 C240 132 239 120 239 108"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "chin",
+        "attribute": "d",
+        "values": [
+          "M178 214 C187 209 201 211 207 214",
+          "M178 207.8061 C187 203.64 201 205.2961 207 207.8061",
+          "M178 207.8061 C187 203.64 201 205.2961 207 207.8061",
+          "M178 214 C187 209 201 211 207 214",
+          "M178 214 C187 209 201 211 207 214",
+          "M178 214 C187 209 201 211 207 214",
+          "M178 214 C187 209 201 211 207 214"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "jaw-plane",
+        "attribute": "d",
+        "values": [
+          "M136 179 C140 195 150 205 160 211",
+          "M136 178.4902 C140 192.184 150 200.3563 160 205.2961",
+          "M136 178.4902 C140 192.184 150 200.3563 160 205.2961",
+          "M136 179 C140 195 150 205 160 211",
+          "M136 179 C140 195 150 205 160 211",
+          "M136 179 C140 195 150 205 160 211",
+          "M136 179 C140 195 150 205 160 211"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "neck-left",
+        "attribute": "d",
+        "values": [
+          "M141 207 C145 222 143 236 139 246",
+          "M141 201.5 C145 218.6154 143 234.5897 139 246",
+          "M141 201.5 C145 218.6154 143 234.5897 139 246",
+          "M141 207 C145 222 143 236 139 246",
+          "M141 207 C145 222 143 236 139 246",
+          "M141 207 C145 222 143 236 139 246",
+          "M141 207 C145 222 143 236 139 246"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "neck-right",
+        "attribute": "d",
+        "values": [
+          "M221 211 C217 229 218 244 222 255",
+          "M221 205 C217 225.4545 218 242.5 222 255",
+          "M221 205 C217 225.4545 218 242.5 222 255",
+          "M221 211 C217 229 218 244 222 255",
+          "M221 211 C217 229 218 244 222 255",
+          "M221 211 C217 229 218 244 222 255",
+          "M221 211 C217 229 218 244 222 255"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "neck-tension",
+        "attribute": "d",
+        "values": [
+          "M164 227 C168 241 173 251 180 260 M211 226 C202 241 197 252 194 265",
+          "M164 222.25 C168 238 173 249.25 180 259.375 M211 221.125 C202 238 197 250.375 194 265",
+          "M164 222.25 C168 238 173 249.25 180 259.375 M211 221.125 C202 238 197 250.375 194 265",
+          "M164 227 C168 241 173 251 180 260 M211 226 C202 241 197 252 194 265",
+          "M164 227 C168 241 173 251 180 260 M211 226 C202 241 197 252 194 265",
+          "M164 227 C168 241 173 251 180 260 M211 226 C202 241 197 252 194 265",
+          "M164 227 C168 241 173 251 180 260 M211 226 C202 241 197 252 194 265"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "nasolabial",
+        "attribute": "d",
+        "values": [
+          "M175 162 C169 171 167 180 168 187 M211 168 C217 175 219 185 217 192",
+          "M176.44 160 C170.92 169 169.08 178 170 185 M209.56 166 C215.08 173 216.92 183 215.08 190",
+          "M176.44 160 C170.92 169 169.08 178 170 185 M209.56 166 C215.08 173 216.92 183 215.08 190",
+          "M175 162 C169 171 167 180 168 187 M211 168 C217 175 219 185 217 192",
+          "M175 162 C169 171 167 180 168 187 M211 168 C217 175 219 185 217 192",
+          "M175 162 C169 171 167 180 168 187 M211 168 C217 175 219 185 217 192",
+          "M175 162 C169 171 167 180 168 187 M211 168 C217 175 219 185 217 192"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105200",
+    "title": "Open surprise",
+    "svg": "corpus/svg/105200.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. An adult male with a rounder cranial shape and loose swept curls. Raise both inner and outer brows, show naturally wide eyes and drop the lower jaw for a soft vertically open mouth. Keep eyelids wrapped around clipped irises and the upper dental edge in perspective. Avoid a circular emoji mouth or symmetric graphic eyes. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Deliver STATIC and ANIMATED native SVG only. Animate this unmistakable action in a seamless FIVE-SECOND loop: The open mouth closes and brows settle, then a visible gasp lifts both brows, opens the eyes and drops the jaw; the face returns within five seconds. Use coordinated matching-topology local poses, anatomically meaningful pivots and actual moving eyelid clips. Keep iris circles rigid, preserve attachment to the neck, and match the first and final pose. A whole-head wobble or color pulse alone is insufficient.",
+    "duration": 5,
+    "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
+    "review": {
+      "notes": "The accepted native still is retained.  Independent review identified normal-width eyes beneath strongly raised brows; the upper lids were lifted without moving the lower rims, then re-rendered. The mouth was also widened and made less circular. Motion has been rebuilt as an actual five-second local action: The open mouth closes and brows settle, then a visible gasp lifts both brows, opens the eyes and drops the jaw; the face returns within five seconds.",
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+    },
+    "motionCaption": "The open mouth closes and brows settle, then a visible gasp lifts both brows, opens the eyes and drops the jaw; the face returns within five seconds.",
+    "animations": [
+      {
+        "target": "mouth-outline",
+        "attribute": "d",
+        "values": [
+          "M177 185 C180 177 187 174 195 176 C205 174 214 179 217 186 C217 193 211 199 202 202 C193 204 183 200 179 195 C177 191 176 188 177 185Z",
+          "M179.4 185.91 C182.04 185.19 188.2 184.92 195.24 185.1 C204.04 184.92 211.96 185.37 214.6 186 C214.6 186.63 209.32 187.17 201.4 187.44 C193.48 187.62 184.68 187.26 181.16 186.81 C179.4 186.45 178.52 186.18 179.4 185.91Z",
+          "M179.4 185.91 C182.04 185.19 188.2 184.92 195.24 185.1 C204.04 184.92 211.96 185.37 214.6 186 C214.6 186.63 209.32 187.17 201.4 187.44 C193.48 187.62 184.68 187.26 181.16 186.81 C179.4 186.45 178.52 186.18 179.4 185.91Z",
+          "M177 185 C180 177 187 174 195 176 C205 174 214 179 217 186 C217 193 211 199 202 202 C193 204 183 200 179 195 C177 191 176 188 177 185Z",
+          "M177 185 C180 177 187 174 195 176 C205 174 214 179 217 186 C217 193 211 199 202 202 C193 204 183 200 179 195 C177 191 176 188 177 185Z",
+          "M177 185 C180 177 187 174 195 176 C205 174 214 179 217 186 C217 193 211 199 202 202 C193 204 183 200 179 195 C177 191 176 188 177 185Z",
+          "M177 185 C180 177 187 174 195 176 C205 174 214 179 217 186 C217 193 211 199 202 202 C193 204 183 200 179 195 C177 191 176 188 177 185Z"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "upper-lip",
+        "attribute": "d",
+        "values": [
+          "M179 180 C185 171 192 171 197 172 C205 170 213 176 216 181",
+          "M181.16 185.46 C186.44 184.65 192.6 184.65 197 184.74 C204.04 184.56 211.08 185.1 213.72 185.55",
+          "M181.16 185.46 C186.44 184.65 192.6 184.65 197 184.74 C204.04 184.56 211.08 185.1 213.72 185.55",
+          "M179 180 C185 171 192 171 197 172 C205 170 213 176 216 181",
+          "M179 180 C185 171 192 171 197 172 C205 170 213 176 216 181",
+          "M179 180 C185 171 192 171 197 172 C205 170 213 176 216 181",
+          "M179 180 C185 171 192 171 197 172 C205 170 213 176 216 181"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "lower-lip",
+        "attribute": "d",
+        "values": [
+          "M182 205 C192 211 208 210 214 202",
+          "M183.8 187.71 C192.6 188.25 206.68 188.16 211.96 187.44",
+          "M183.8 187.71 C192.6 188.25 206.68 188.16 211.96 187.44",
+          "M182 205 C192 211 208 210 214 202",
+          "M182 205 C192 211 208 210 214 202",
+          "M182 205 C192 211 208 210 214 202",
+          "M182 205 C192 211 208 210 214 202"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "tongue-plane",
+        "attribute": "d",
+        "values": [
+          "M186 198 C192 194 201 195 208 198",
+          "M187.32 187.08 C192.6 186.72 200.52 186.81 206.68 187.08",
+          "M187.32 187.08 C192.6 186.72 200.52 186.81 206.68 187.08",
+          "M186 198 C192 194 201 195 208 198",
+          "M186 198 C192 194 201 195 208 198",
+          "M186 198 C192 194 201 195 208 198",
+          "M186 198 C192 194 201 195 208 198"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-eye-upper",
+        "attribute": "d",
+        "values": [
+          "M0 0 C8.0 -11.16 19.84 -13.95 32 0",
+          "M0 0 C8 -5.8032 19.84 -7.254 32 0",
+          "M0 0 C8 -5.8032 19.84 -7.254 32 0",
+          "M0 0 C8 -12.0528 19.84 -15.066 32 0",
+          "M0 0 C8 -12.0528 19.84 -15.066 32 0",
+          "M0 0 C8.0 -11.16 19.84 -13.95 32 0",
+          "M0 0 C8.0 -11.16 19.84 -13.95 32 0"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-eye-aperture",
+        "attribute": "d",
+        "values": [
+          "M0 0 C8.0 -11.16 19.84 -13.95 32 0C23.04 4.4639999999999995 10.24 5.27 0 0Z",
+          "M0 0 C8 -5.8032 19.84 -7.254 32 0C23.04 4.4639999999999995 10.24 5.27 0.0 0.0Z",
+          "M0 0 C8 -5.8032 19.84 -7.254 32 0C23.04 4.4639999999999995 10.24 5.27 0.0 0.0Z",
+          "M0 0 C8 -12.0528 19.84 -15.066 32 0C23.04 4.4639999999999995 10.24 5.27 0.0 0.0Z",
+          "M0 0 C8 -12.0528 19.84 -15.066 32 0C23.04 4.4639999999999995 10.24 5.27 0.0 0.0Z",
+          "M0 0 C8.0 -11.16 19.84 -13.95 32 0C23.04 4.4639999999999995 10.24 5.27 0 0Z",
+          "M0 0 C8.0 -11.16 19.84 -13.95 32 0C23.04 4.4639999999999995 10.24 5.27 0 0Z"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-eye-crease",
+        "attribute": "d",
+        "values": [
+          "M1 -9.812 C9.6 -21.53 21.76 -23.204 31 -9.812",
+          "M1 -5.1022 C9.6 -11.1956 21.76 -12.0661 31 -5.1022",
+          "M1 -5.1022 C9.6 -11.1956 21.76 -12.0661 31 -5.1022",
+          "M1 -10.597 C9.6 -23.2524 21.76 -25.0603 31 -10.597",
+          "M1 -10.597 C9.6 -23.2524 21.76 -25.0603 31 -10.597",
+          "M1 -9.812 C9.6 -21.53 21.76 -23.204 31 -9.812",
+          "M1 -9.812 C9.6 -21.53 21.76 -23.204 31 -9.812"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "far-eye-upper",
+        "attribute": "d",
+        "values": [
+          "M0 0 C6.25 -10.08 15.5 -12.6 25 0",
+          "M0 0 C6.25 -5.2416 15.5 -6.552 25 0",
+          "M0 0 C6.25 -5.2416 15.5 -6.552 25 0",
+          "M0 0 C6.25 -10.8864 15.5 -13.608 25 0",
+          "M0 0 C6.25 -10.8864 15.5 -13.608 25 0",
+          "M0 0 C6.25 -10.08 15.5 -12.6 25 0",
+          "M0 0 C6.25 -10.08 15.5 -12.6 25 0"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "far-eye-aperture",
+        "attribute": "d",
+        "values": [
+          "M0 0 C6.25 -10.08 15.5 -12.6 25 0C18.0 4.032 8.0 4.76 0 0Z",
+          "M0 0 C6.25 -5.2416 15.5 -6.552 25 0C18.0 4.032 8.0 4.76 0.0 0.0Z",
+          "M0 0 C6.25 -5.2416 15.5 -6.552 25 0C18.0 4.032 8.0 4.76 0.0 0.0Z",
+          "M0 0 C6.25 -10.8864 15.5 -13.608 25 0C18.0 4.032 8.0 4.76 0.0 0.0Z",
+          "M0 0 C6.25 -10.8864 15.5 -13.608 25 0C18.0 4.032 8.0 4.76 0.0 0.0Z",
+          "M0 0 C6.25 -10.08 15.5 -12.6 25 0C18.0 4.032 8.0 4.76 0 0Z",
+          "M0 0 C6.25 -10.08 15.5 -12.6 25 0C18.0 4.032 8.0 4.76 0 0Z"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "far-eye-crease",
+        "attribute": "d",
+        "values": [
+          "M1 -9.056 C7.5 -19.64 17.0 -21.151999999999997 24 -9.056",
+          "M1 -4.7091 C7.5 -10.2128 17 -10.999 24 -4.7091",
+          "M1 -4.7091 C7.5 -10.2128 17 -10.999 24 -4.7091",
+          "M1 -9.7805 C7.5 -21.2112 17 -22.8442 24 -9.7805",
+          "M1 -9.7805 C7.5 -21.2112 17 -22.8442 24 -9.7805",
+          "M1 -9.056 C7.5 -19.64 17.0 -21.151999999999997 24 -9.056",
+          "M1 -9.056 C7.5 -19.64 17.0 -21.151999999999997 24 -9.056"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-brow",
+        "attribute": "d",
+        "values": [
+          "M149 117 C159 105 174 101 185 107",
+          "M149 129 C159 117 174 113 185 119",
+          "M149 129 C159 117 174 113 185 119",
+          "M149 117 C159 105 174 101 185 107",
+          "M149 117 C159 105 174 101 185 107",
+          "M149 117 C159 105 174 101 185 107",
+          "M149 117 C159 105 174 101 185 107"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "far-brow",
+        "attribute": "d",
+        "values": [
+          "M208 106 C217 100 229 104 236 113",
+          "M208 118 C217 112 229 116 236 125",
+          "M208 118 C217 112 229 116 236 125",
+          "M208 106 C217 100 229 104 236 113",
+          "M208 106 C217 100 229 104 236 113",
+          "M208 106 C217 100 229 104 236 113",
+          "M208 106 C217 100 229 104 236 113"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "forehead-first",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          ".12",
+          ".12",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "forehead-second",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          ".12",
+          ".12",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "inner-brow-plane",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          ".12",
+          ".12",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "upper-dental-edge",
+        "attribute": "d",
+        "values": [
+          "M182 182 C191 178 202 179 212 185 L210 189 C200 185 191 184 182 187",
+          "M183.8 185.64 C191.72 185.28 201.4 185.37 210.2 185.91 L208.44 186.27 C199.64 185.91 191.72 185.82 183.8 186.09",
+          "M183.8 185.64 C191.72 185.28 201.4 185.37 210.2 185.91 L208.44 186.27 C199.64 185.91 191.72 185.82 183.8 186.09",
+          "M182 182 C191 178 202 179 212 185 L210 189 C200 185 191 184 182 187",
+          "M182 182 C191 178 202 179 212 185 L210 189 C200 185 191 184 182 187",
+          "M182 182 C191 178 202 179 212 185 L210 189 C200 185 191 184 182 187",
+          "M182 182 C191 178 202 179 212 185 L210 189 C200 185 191 184 182 187"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "upper-dental-edge",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "face-outline",
+        "attribute": "d",
+        "values": [
+          "M127 165 C131 184 142 200 153 212 C167 227 182 236 196 236 C210 237 222 228 228 214 C237 196 240 178 240 164 L246 133",
+          "M127 165 C131 182.0277 142 194.2571 153 203.2646 C167 215.5441 182 224 196 224 C210 225 222 216.4344 228 204.8109 C237 191.277 240 177.063 240 164 L246 133",
+          "M127 165 C131 182.0277 142 194.2571 153 203.2646 C167 215.5441 182 224 196 224 C210 225 222 216.4344 228 204.8109 C237 191.277 240 177.063 240 164 L246 133",
+          "M127 165 C131 184 142 200 153 212 C167 227 182 236 196 236 C210 237 222 228 228 214 C237 196 240 178 240 164 L246 133",
+          "M127 165 C131 184 142 200 153 212 C167 227 182 236 196 236 C210 237 222 228 228 214 C237 196 240 178 240 164 L246 133",
+          "M127 165 C131 184 142 200 153 212 C167 227 182 236 196 236 C210 237 222 228 228 214 C237 196 240 178 240 164 L246 133",
+          "M127 165 C131 184 142 200 153 212 C167 227 182 236 196 236 C210 237 222 228 228 214 C237 196 240 178 240 164 L246 133"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "chin",
+        "attribute": "d",
+        "values": [
+          "M189 226 C197 229 206 228 212 224",
+          "M189 214.6647 C197 217.336 206 216.4344 212 212.937",
+          "M189 214.6647 C197 217.336 206 216.4344 212 212.937",
+          "M189 226 C197 229 206 228 212 224",
+          "M189 226 C197 229 206 228 212 224",
+          "M189 226 C197 229 206 228 212 224",
+          "M189 226 C197 229 206 228 212 224"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "neck-left",
+        "attribute": "d",
+        "values": [
+          "M145 202 C146 222 142 235 139 244",
+          "M145 196 C146 218.8571 142 233.7143 139 244",
+          "M145 196 C146 218.8571 142 233.7143 139 244",
+          "M145 202 C146 222 142 235 139 244",
+          "M145 202 C146 222 142 235 139 244",
+          "M145 202 C146 222 142 235 139 244",
+          "M145 202 C146 222 142 235 139 244"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "neck-right",
+        "attribute": "d",
+        "values": [
+          "M229 212 C225 230 227 243 231 251",
+          "M229 203 C225 225.1538 227 241.1538 231 251",
+          "M229 203 C225 225.1538 227 241.1538 231 251",
+          "M229 212 C225 230 227 243 231 251",
+          "M229 212 C225 230 227 243 231 251",
+          "M229 212 C225 230 227 243 231 251",
+          "M229 212 C225 230 227 243 231 251"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "neck-tendons",
+        "attribute": "d",
+        "values": [
+          "M168 226 C171 242 179 254 187 263 M218 228 C208 243 204 255 202 265",
+          "M168 218 C171 237.2821 179 251.7436 187 262.5897 M218 220.4103 C208 238.4872 204 252.9487 202 265",
+          "M168 218 C171 237.2821 179 251.7436 187 262.5897 M218 220.4103 C208 238.4872 204 252.9487 202 265",
+          "M168 226 C171 242 179 254 187 263 M218 228 C208 243 204 255 202 265",
+          "M168 226 C171 242 179 254 187 263 M218 228 C208 243 204 255 202 265",
+          "M168 226 C171 242 179 254 187 263 M218 228 C208 243 204 255 202 265",
+          "M168 226 C171 242 179 254 187 263 M218 228 C208 243 204 255 202 265"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "nasolabial",
+        "attribute": "d",
+        "values": [
+          "M178 164 C171 174 171 183 173 191 M216 165 C223 176 223 187 221 195",
+          "M179.14 159 C172.56 169 172.56 178 174.44 186 M214.86 160 C221.44 171 221.44 182 219.56 190",
+          "M179.14 159 C172.56 169 172.56 178 174.44 186 M214.86 160 C221.44 171 221.44 182 219.56 190",
+          "M178 164 C171 174 171 183 173 191 M216 165 C223 176 223 187 221 195",
+          "M178 164 C171 174 171 183 173 191 M216 165 C223 176 223 187 221 195",
+          "M178 164 C171 174 171 183 173 191 M216 165 C223 176 223 187 221 195",
+          "M178 164 C171 174 171 183 173 191 M216 165 C223 176 223 187 221 195"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105202",
+    "title": "Laughter in profile",
+    "svg": "corpus/svg/105202.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. A right-facing adult male profile in laughter. Draw one eye only, compressed by a raised cheek. Connect forehead, nasal bridge, nose tip, upper lip, receding open mouth, lower lip and chin as a continuous profile silhouette. A small perspective dental edge sits beneath the upper lip. Show the near ear and the neck leading naturally into an open collar. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Deliver STATIC and ANIMATED native SVG only. Animate this unmistakable action in a seamless FIVE-SECOND loop: The profile laugh releases to a closed mouth and open eye, then the jaw opens, cheek rises and eye squeezes shut again in a five-second acting loop. Use coordinated matching-topology local poses, anatomically meaningful pivots and actual moving eyelid clips. Keep iris circles rigid, preserve attachment to the neck, and match the first and final pose. A whole-head wobble or color pulse alone is insufficient.",
+    "duration": 5,
+    "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
+    "review": {
+      "notes": "The accepted native still is retained.  Motion has been rebuilt as an actual five-second local action: The profile laugh releases to a closed mouth and open eye, then the jaw opens, cheek rises and eye squeezes shut again in a five-second acting loop.",
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+    },
+    "motionCaption": "The profile laugh releases to a closed mouth and open eye, then the jaw opens, cheek rises and eye squeezes shut again in a five-second acting loop.",
+    "animations": [
+      {
+        "target": "laughing-profile",
+        "attribute": "d",
+        "values": [
+          "M257 142 C252 144 246 146 241 148 C245 152 250 155 255 157 C260 160 259 163 256 166 C261 171 262 177 258 182 C251 189 243 191 233 194 C219 200 207 202 195 200",
+          "M257 142 C252 143 246 144 241 144 C245 145 250 145 255 145 C260 146 259 149 256 151 C261 156 262 162 258 167 C251 174 243 180 233 185 C219 191 207 198 195 200",
+          "M257 142 C252 143 246 144 241 144 C245 145 250 145 255 145 C260 146 259 149 256 151 C261 156 262 162 258 167 C251 174 243 180 233 185 C219 191 207 198 195 200",
+          "M257 142 C252 144 246 146 241 148 C245 152 250 155 255 157 C260 160 259 163 256 166 C261 171 262 177 258 182 C251 189 243 191 233 194 C219 200 207 202 195 200",
+          "M257 142 C252 144 246 146 241 148 C245 152 250 155 255 157 C260 160 259 163 256 166 C261 171 262 177 258 182 C251 189 243 191 233 194 C219 200 207 202 195 200",
+          "M257 142 C252 144 246 146 241 148 C245 152 250 155 255 157 C260 160 259 163 256 166 C261 171 262 177 258 182 C251 189 243 191 233 194 C219 200 207 202 195 200",
+          "M257 142 C252 144 246 146 241 148 C245 152 250 155 255 157 C260 160 259 163 256 166 C261 171 262 177 258 182 C251 189 243 191 233 194 C219 200 207 202 195 200"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "lower-lip",
+        "attribute": "d",
+        "values": [
+          "M244 159 C248 162 252 164 256 164",
+          "M244 146 C248 149 252 151 256 151",
+          "M244 146 C248 149 252 151 256 151",
+          "M244 159 C248 162 252 164 256 164",
+          "M244 159 C248 162 252 164 256 164",
+          "M244 159 C248 162 252 164 256 164",
+          "M244 159 C248 162 252 164 256 164"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "chin-plane",
+        "attribute": "d",
+        "values": [
+          "M246 178 C250 176 254 176 257 177",
+          "M246 165 C250 163 254 163 257 164",
+          "M246 165 C250 163 254 163 257 164",
+          "M246 178 C250 176 254 176 257 177",
+          "M246 178 C250 176 254 176 257 177",
+          "M246 178 C250 176 254 176 257 177",
+          "M246 178 C250 176 254 176 257 177"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "mouth-corner",
+        "attribute": "d",
+        "values": [
+          "M237 145 C238 148 240 150 242 150",
+          "M237 141 C238 144 240 146 242 146",
+          "M237 141 C238 144 240 146 242 146",
+          "M237 145 C238 148 240 150 242 150",
+          "M237 145 C238 148 240 150 242 150",
+          "M237 145 C238 148 240 150 242 150",
+          "M237 145 C238 148 240 150 242 150"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "upper-dental-edge",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "tooth-separations",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "near-cheek",
+        "attribute": "d",
+        "values": [
+          "M218 131 C225 126 234 126 239 129",
+          "M218 135 C225 130 234 130 239 133",
+          "M218 135 C225 130 234 130 239 133",
+          "M218 131 C225 126 234 126 239 129",
+          "M218 131 C225 126 234 126 239 129",
+          "M218 131 C225 126 234 126 239 129",
+          "M218 131 C225 126 234 126 239 129"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "smile-cheek",
+        "attribute": "d",
+        "values": [
+          "M202 136 C211 141 219 146 225 153",
+          "M202 140 C211 145 219 150 225 157",
+          "M202 140 C211 145 219 150 225 157",
+          "M202 136 C211 141 219 146 225 153",
+          "M202 136 C211 141 219 146 225 153",
+          "M202 136 C211 141 219 146 225 153",
+          "M202 136 C211 141 219 146 225 153"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "crow-feet",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          ".2",
+          ".2",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "nasolabial",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          ".2",
+          ".2",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "eye-lower-fold",
+        "attribute": "opacity",
+        "values": [
+          "1",
+          ".2",
+          ".2",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "neck-front",
+        "attribute": "d",
+        "values": [
+          "M233 197 C221 212 218 224 219 239",
+          "M233 188 C221 206.2143 218 220.7857 219 239",
+          "M233 188 C221 206.2143 218 220.7857 219 239",
+          "M233 197 C221 212 218 224 219 239",
+          "M233 197 C221 212 218 224 219 239",
+          "M233 197 C221 212 218 224 219 239",
+          "M233 197 C221 212 218 224 219 239"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "eye-closed",
+        "attribute": "d",
+        "values": [
+          "M214 115 C220 116 227 113 233 110",
+          "M214 115 C220 109 227 106 233 110",
+          "M214 115 C220 109 227 106 233 110",
+          "M214 115 C220 116 227 113 233 110",
+          "M214 115 C220 116 227 113 233 110",
+          "M214 115 C220 116 227 113 233 110",
+          "M214 115 C220 116 227 113 233 110"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "profile-eye-lower",
+        "attribute": "opacity",
+        "values": [
+          "0",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "profile-eye-lower",
+        "attribute": "d",
+        "values": [
+          "M214 115 C220 116 227 113 233 110",
+          "M214 115 C220 119 227 117 233 110",
+          "M214 115 C220 119 227 117 233 110",
+          "M214 115 C220 116 227 113 233 110",
+          "M214 115 C220 116 227 113 233 110",
+          "M214 115 C220 116 227 113 233 110",
+          "M214 115 C220 116 227 113 233 110"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "profile-eye-aperture",
+        "attribute": "d",
+        "values": [
+          "M214 115 C220 116 227 113 233 110C227 113 220 116 214 115Z",
+          "M214 115 C220 109 227 106 233 110C227 117 220 119 214 115Z",
+          "M214 115 C220 109 227 106 233 110C227 117 220 119 214 115Z",
+          "M214 115 C220 116 227 113 233 110C227 113 220 116 214 115Z",
+          "M214 115 C220 116 227 113 233 110C227 113 220 116 214 115Z",
+          "M214 115 C220 116 227 113 233 110C227 113 220 116 214 115Z",
+          "M214 115 C220 116 227 113 233 110C227 113 220 116 214 115Z"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.32,
+          0.56,
+          0.72,
+          0.9,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105203",
+    "title": "A knowing wink",
+    "svg": "corpus/svg/105203.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. An adult male portrait with one eye closed, the same-side cheek lifted, the other eye gently open, and an asymmetric closed-mouth smile. Coordinate the closed lid, crow-feet and compressed cheek rather than deleting the eye. Draw distinct swept hair, a tapered jaw and a crew-neck shirt. Reserve the focal accent for the closed eyelid. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Deliver STATIC and ANIMATED native SVG only. Animate this unmistakable action in a seamless FIVE-SECOND loop: The closed eye opens, then makes two clear winks as the same-side cheek lifts and the smile returns; the clipped iris disappears completely on each closure. Use coordinated matching-topology local poses, anatomically meaningful pivots and actual moving eyelid clips. Keep iris circles rigid, preserve attachment to the neck, and match the first and final pose. A whole-head wobble or color pulse alone is insufficient.",
+    "duration": 5,
+    "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
+    "review": {
+      "notes": "The accepted native still is retained.  Motion has been rebuilt as an actual five-second local action: The closed eye opens, then makes two clear winks as the same-side cheek lifts and the smile returns; the clipped iris disappears completely on each closure.",
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+    },
+    "motionCaption": "The closed eye opens, then makes two clear winks as the same-side cheek lifts and the smile returns; the clipped iris disappears completely on each closure.",
+    "animations": [
+      {
+        "target": "wink-lower-lid",
+        "attribute": "opacity",
+        "values": [
+          "0",
+          "1",
+          "1",
+          "0",
+          "0",
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.34,
+          0.43,
+          0.58,
+          0.72,
+          0.8,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "closed-lid",
+        "attribute": "d",
+        "values": [
+          "M166 134 C177 140 190 139 202 132",
+          "M166 134 C177 125 190 124 202 132",
+          "M166 134 C177 125 190 124 202 132",
+          "M166 134 C177 140 190 139 202 132",
+          "M166 134 C177 140 190 139 202 132",
+          "M166 134 C177 125 190 124 202 132",
+          "M166 134 C177 125 190 124 202 132",
+          "M166 134 C177 140 190 139 202 132",
+          "M166 134 C177 140 190 139 202 132"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.34,
+          0.43,
+          0.58,
+          0.72,
+          0.8,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "wink-lower-lid",
+        "attribute": "d",
+        "values": [
+          "M166 134 C177 140 190 139 202 132",
+          "M166 134 C177 142 190 140 202 132",
+          "M166 134 C177 142 190 140 202 132",
+          "M166 134 C177 140 190 139 202 132",
+          "M166 134 C177 140 190 139 202 132",
+          "M166 134 C177 142 190 140 202 132",
+          "M166 134 C177 142 190 140 202 132",
+          "M166 134 C177 140 190 139 202 132",
+          "M166 134 C177 140 190 139 202 132"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.34,
+          0.43,
+          0.58,
+          0.72,
+          0.8,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "wink-eye-aperture",
+        "attribute": "d",
+        "values": [
+          "M166 134 C177 140 190 139 202 132C190 139 177 140 166 134Z",
+          "M166 134 C177 125 190 124 202 132C190 140 177 142 166 134Z",
+          "M166 134 C177 125 190 124 202 132C190 140 177 142 166 134Z",
+          "M166 134 C177 140 190 139 202 132C190 139 177 140 166 134Z",
+          "M166 134 C177 140 190 139 202 132C190 139 177 140 166 134Z",
+          "M166 134 C177 125 190 124 202 132C190 140 177 142 166 134Z",
+          "M166 134 C177 125 190 124 202 132C190 140 177 142 166 134Z",
+          "M166 134 C177 140 190 139 202 132C190 139 177 140 166 134Z",
+          "M166 134 C177 140 190 139 202 132C190 139 177 140 166 134Z"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.34,
+          0.43,
+          0.58,
+          0.72,
+          0.8,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "closed-upper-lid",
+        "attribute": "d",
+        "values": [
+          "M168 131 C180 134 191 133 199 130",
+          "M168 125 C180 128 191 127 199 124",
+          "M168 125 C180 128 191 127 199 124",
+          "M168 131 C180 134 191 133 199 130",
+          "M168 131 C180 134 191 133 199 130",
+          "M168 125 C180 128 191 127 199 124",
+          "M168 125 C180 128 191 127 199 124",
+          "M168 131 C180 134 191 133 199 130",
+          "M168 131 C180 134 191 133 199 130"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.34,
+          0.43,
+          0.58,
+          0.72,
+          0.8,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "closed-lower-lid",
+        "attribute": "d",
+        "values": [
+          "M171 143 C182 146 193 144 201 139",
+          "M171 147 C182 150 193 148 201 143",
+          "M171 147 C182 150 193 148 201 143",
+          "M171 143 C182 146 193 144 201 139",
+          "M171 143 C182 146 193 144 201 139",
+          "M171 147 C182 150 193 148 201 143",
+          "M171 147 C182 150 193 148 201 143",
+          "M171 143 C182 146 193 144 201 139",
+          "M171 143 C182 146 193 144 201 139"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.34,
+          0.43,
+          0.58,
+          0.72,
+          0.8,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "wink-crow-feet",
+        "attribute": "d",
+        "values": [
+          "M165 133 L157 129 M165 137 L156 138 M166 141 L160 145",
+          "M165 137 L157 133 M165 141 L156 142 M166 145 L160 149",
+          "M165 137 L157 133 M165 141 L156 142 M166 145 L160 149",
+          "M165 133 L157 129 M165 137 L156 138 M166 141 L160 145",
+          "M165 133 L157 129 M165 137 L156 138 M166 141 L160 145",
+          "M165 137 L157 133 M165 141 L156 142 M166 145 L160 149",
+          "M165 137 L157 133 M165 141 L156 142 M166 145 L160 149",
+          "M165 133 L157 129 M165 137 L156 138 M166 141 L160 145",
+          "M165 133 L157 129 M165 137 L156 138 M166 141 L160 145"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.34,
+          0.43,
+          0.58,
+          0.72,
+          0.8,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "wink-cheek",
+        "attribute": "d",
+        "values": [
+          "M168 150 C178 147 189 149 197 154",
+          "M168 154 C178 151 189 153 197 158",
+          "M168 154 C178 151 189 153 197 158",
+          "M168 150 C178 147 189 149 197 154",
+          "M168 150 C178 147 189 149 197 154",
+          "M168 154 C178 151 189 153 197 158",
+          "M168 154 C178 151 189 153 197 158",
+          "M168 150 C178 147 189 149 197 154",
+          "M168 150 C178 147 189 149 197 154"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.34,
+          0.43,
+          0.58,
+          0.72,
+          0.8,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "mouth-seam",
+        "attribute": "d",
+        "values": [
+          "M184 180 C196 186 208 187 218 185 C223 184 227 181 229 179",
+          "M184 182.25 C196 183.75 208 184 218 183.5 C223 183.25 227 182.5 229 182",
+          "M184 182.25 C196 183.75 208 184 218 183.5 C223 183.25 227 182.5 229 182",
+          "M184 180 C196 186 208 187 218 185 C223 184 227 181 229 179",
+          "M184 180 C196 186 208 187 218 185 C223 184 227 181 229 179",
+          "M184 182.25 C196 183.75 208 184 218 183.5 C223 183.25 227 182.5 229 182",
+          "M184 182.25 C196 183.75 208 184 218 183.5 C223 183.25 227 182.5 229 182",
+          "M184 180 C196 186 208 187 218 185 C223 184 227 181 229 179",
+          "M184 180 C196 186 208 187 218 185 C223 184 227 181 229 179"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.34,
+          0.43,
+          0.58,
+          0.72,
+          0.8,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "upper-lip",
+        "attribute": "d",
+        "values": [
+          "M188 179 C197 178 203 181 209 180 C216 182 223 181 226 179",
+          "M188 182 C197 181.75 203 182.5 209 182.25 C216 182.75 223 182.5 226 182",
+          "M188 182 C197 181.75 203 182.5 209 182.25 C216 182.75 223 182.5 226 182",
+          "M188 179 C197 178 203 181 209 180 C216 182 223 181 226 179",
+          "M188 179 C197 178 203 181 209 180 C216 182 223 181 226 179",
+          "M188 182 C197 181.75 203 182.5 209 182.25 C216 182.75 223 182.5 226 182",
+          "M188 182 C197 181.75 203 182.5 209 182.25 C216 182.75 223 182.5 226 182",
+          "M188 179 C197 178 203 181 209 180 C216 182 223 181 226 179",
+          "M188 179 C197 178 203 181 209 180 C216 182 223 181 226 179"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.34,
+          0.43,
+          0.58,
+          0.72,
+          0.8,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "lower-lip",
+        "attribute": "d",
+        "values": [
+          "M191 186 C202 192 217 192 225 186",
+          "M191 183.75 C202 185.25 217 185.25 225 183.75",
+          "M191 183.75 C202 185.25 217 185.25 225 183.75",
+          "M191 186 C202 192 217 192 225 186",
+          "M191 186 C202 192 217 192 225 186",
+          "M191 183.75 C202 185.25 217 185.25 225 183.75",
+          "M191 183.75 C202 185.25 217 185.25 225 183.75",
+          "M191 186 C202 192 217 192 225 186",
+          "M191 186 C202 192 217 192 225 186"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.34,
+          0.43,
+          0.58,
+          0.72,
+          0.8,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "smile-corner",
+        "attribute": "d",
+        "values": [
+          "M181 177 C181 180 182 183 185 185",
+          "M181 181.5 C181 182.25 182 183 185 183.5",
+          "M181 181.5 C181 182.25 182 183 185 183.5",
+          "M181 177 C181 180 182 183 185 185",
+          "M181 177 C181 180 182 183 185 185",
+          "M181 181.5 C181 182.25 182 183 185 183.5",
+          "M181 181.5 C181 182.25 182 183 185 183.5",
+          "M181 177 C181 180 182 183 185 185",
+          "M181 177 C181 180 182 183 185 185"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.34,
+          0.43,
+          0.58,
+          0.72,
+          0.8,
+          0.9,
+          1
+        ]
+      },
+      {
+        "target": "closed-side-brow",
+        "attribute": "d",
+        "values": [
+          "M165 124 C177 119 192 120 204 125",
+          "M165 121 C177 116 192 117 204 122",
+          "M165 121 C177 116 192 117 204 122",
+          "M165 124 C177 119 192 120 204 125",
+          "M165 124 C177 119 192 120 204 125",
+          "M165 121 C177 116 192 117 204 122",
+          "M165 121 C177 116 192 117 204 122",
+          "M165 124 C177 119 192 120 204 125",
+          "M165 124 C177 119 192 120 204 125"
+        ],
+        "keyTimes": [
+          0,
+          0.18,
+          0.34,
+          0.43,
+          0.58,
+          0.72,
+          0.8,
+          0.9,
+          1
+        ]
+      }
+    ]
+  }
+]

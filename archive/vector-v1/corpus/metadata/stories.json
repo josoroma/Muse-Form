@@ -1,0 +1,46 @@
+[
+  {
+    "id": "105232",
+    "title": "The Captain Who Charted the Moon",
+    "category": "pirate",
+    "source": "105232.jpg",
+    "observation": "A book photograph of two swashbucklers: convincing counterweighted poses, layered costume, foreshortened hands, broad hat silhouettes, curved cloth folds and dense directional crosshatching. The new scene studies these principles without tracing either figure.",
+    "prompt": "Draw an original fine-ink and translucent-wash storybook illustration as editable native SVG, 1200×900 on warm ivory #f3eee2. A thoughtful bearded pirate astronomer in a weathered tricorn with a long feather, russet cutaway coat, gathered linen shirt, buckled belt, articulated trousers and tall indigo boots stands on a perspective wooden harbor dock. One hand steadies an unfolded star chart; the other bends at shoulder and elbow to lift a brass telescope toward a pale crescent moon. Give him an asymmetrical kind expression, sculpted cheeks, carefully drawn fingers and a believable center of gravity. Use custom cubic contours, flowing coat folds, tapering feather barbs, directional crosshatching, separate warm-lit and cool-shadow planes, fine brass highlights, and a clear silhouette. Compose a distant sailing ship, subdued sage sea, etched dock grain and coiled rope behind him; a small crab guards a compass in the foreground. One upper-left key light, restrained ochre/russet/sage accents, layered atmospheric depth, plenty of luminous negative space. Preserve named anatomical groups and telescope/chart props. Do not copy a photographed composition or embed raster art.",
+    "motion": "Exactly 7.000 s, continuous loop: 0–0.84 s settle and glance; 0.84–1.68 s telescope arm dips 5° in anticipation; 1.68–3.78 s lift and observe with a −5° shoulder pose; 3.78–5.04 s hold while head and chart follow subtly; 5.04–7.00 s return to the initial pose. The specific shoulder/arm/telescope group moves, with independently delayed head and chart-hand motion. All SMIL clocks are seven seconds.",
+    "svg": "corpus/svg/105232.svg",
+    "animated": "corpus/animated/105232.svg"
+  },
+  {
+    "id": "105233",
+    "title": "The Lantern Keeper of Willow Marsh",
+    "category": "creature",
+    "source": "105233.jpg",
+    "observation": "A fantasy-illustration page combines long curling tentacles, dramatic thin-versus-heavy silhouettes, layered organic surfaces and a theatrical figure high above elaborate creatures. The new dragon uses the serpentine construction and etched surface rhythm, with an original gentle story.",
+    "prompt": "Create an original sophisticated native SVG storybook plate, 1200×900, graphite/indigo #24343b on warm ivory #f3eee2, translucent sage, muted ochre and russet washes. A gentle marsh dragon with an elegantly coiled serpentine body, weighted belly, plated cross-contours, webbed hind feet, delicate sail-like wings, branching antlers, long curled whiskers and a narrow expressive muzzle carefully carries a seed lantern over lily water. Sculpt the anatomy from a strong line of action; the head, neck, shoulder, elbow and claw must connect convincingly. Draw bespoke cubic silhouettes and overlapping leaf-shaped scales, fine curved hatching, light-catching edges and distinct cool shadow planes. Its near wing opens with translucent ribs; its foreclaw supports a slender lantern handle. Surround it with atmospheric willow arches, layered reeds, elliptical lily pads, one pale flower, quiet reflections and only three tiny fireflies. Compose a single readable focal relationship between the eye and the warm lantern. Preserve separated, named head, wing, foreleg and hanging lantern groups. No traced source shapes, raster embeds or external assets.",
+    "motion": "Exactly 7.000 s, continuous loop: 0–0.84 s poised breath; 0.84–1.68 s foreleg lowers 3° and sails compress; 1.68–3.78 s lantern foreleg lifts −7°, near sail opens −12°, head bows 5°; 3.78–5.04 s warm presentation hold, lantern swings back with delayed follow-through; 5.04–7.00 s wing, head and claw recover continuously. Lantern and fireflies have seven-second subsidiary tracks with matching endpoints.",
+    "svg": "corpus/svg/105233.svg",
+    "animated": "corpus/animated/105233.svg"
+  },
+  {
+    "id": "105234",
+    "title": "A Small Worm and a Borrowed Star",
+    "category": "worm",
+    "source": "105234.jpg",
+    "observation": "A fantastical worm drawing emphasizes broad compressed body masses, folded neck anatomy, strong cross-contour shading and curling horn silhouettes around a skull-like head. This original child-friendly scene keeps the weight, segmentation and curling silhouette while replacing the horror face with curiosity.",
+    "prompt": "Draw an original richly observed native SVG woodland story illustration, 1200×900 with a warm ivory #f3eee2 paper ground and fine graphite-indigo #24343b contours. A large soft earthworm with a heavy segmented coil, compressed contact folds and a rising curved neck discovers one luminous firefly. Give the worm gently aged expressive eyelids, an asymmetrical smile, soft cheek planes, delicate freckles, two elaborately curled feelers and a leaf bonnet tied below its chin. Build the body from continuous custom cubic paths rather than stacked ellipses. Curve each cross-contour stripe around the local surface, tighten folds at compression and leave lit planes spacious. Use translucent ochre and warm clay shading, cool sage reflected light, subtle hatching and believable grounded shadows. Frame the exchange with russet mushrooms showing radial gills, deep fern fans, a hollow seed-shell home, overlapping pebbles, dew and atmospheric tree trunks. The firefly remains tiny and precious against luminous negative space. Separate the head and each feeler into named pivot groups for expressive motion. Original composition, no traced skull or copied creature, no raster art.",
+    "motion": "Exactly 7.000 s, continuous loop: 0–0.84 s curious pause; 0.84–1.68 s head inclines −3° while feelers coil inward; 1.68–3.78 s head tilts 6° toward the approaching firefly, the two feelers open with different amplitudes; 3.78–5.04 s gaze and smile hold while feelers settle later; 5.04–7.00 s firefly, head and feelers return along smooth closed tracks. The grounded body stays weight-bearing.",
+    "svg": "corpus/svg/105234.svg",
+    "animated": "corpus/animated/105234.svg"
+  },
+  {
+    "id": "105235",
+    "title": "The Gardener Who Grew Another Morning",
+    "category": "zombie",
+    "source": "105235.jpg",
+    "observation": "The reference shows an expressive undead head with pronounced facial planes, irregular teeth, tousled hair, torn cloth, articulated fingers and a decorated mug. This original gently comic gardener carries over the expressive structure, sewn repairs and handled vessel, without exposed tissue or gore.",
+    "prompt": "Create an original high-quality native SVG storybook plate, 1200×900 on ivory #f3eee2, with graphite-indigo #24343b linework and muted sage, rust and ochre washes. A kindly elderly zombie kneels in an old walled garden and carefully pours water from a bird-painted tea jug onto a small terracotta seedling. His dry skull-like face has asymmetrical living eyelids, a reassuring crooked smile, one missing tooth, sewn doll-like scars, tousled hair and a tiny daisy tucked behind his ear; no gore or exposed tissue. Draw angular cheek and neck anatomy with soft lit planes, believable elbows, slender articulated fingers wrapped around a real handle, weighted kneeling legs and worn boots. Give his patched sage jacket a russet apron, seamed pocket, repair stitches, frayed edges and specific curved cloth folds. Use hand-shaped cubic silhouettes, directional crosshatching, restrained gradients and grounded contact shadows. Compose atmospheric old masonry, a vine-covered trellis, receding garden path, cabbage, fork, trowel and a tiny earthworm helper. The lifted leaves are the emotional focal point. Separate head, upper arm, rotating forearm/jug, water and sapling into named native SVG groups; no raster assets, tracing or external dependencies.",
+    "motion": "Exactly 7.000 s, continuous loop: 0–0.84 s quiet attention; 0.84–1.68 s pouring forearm lifts back −4° in anticipation; 1.68–3.78 s forearm tips 12°, head bows kindly and the water fades in; 3.78–5.04 s pour hold, sapling responds with a delayed −3° lift and settling; 5.04–7.00 s water ceases and jug, head and leaves return smoothly to their starting poses. Native SMIL only; every duration is seven seconds.",
+    "svg": "corpus/svg/105235.svg",
+    "animated": "corpus/animated/105235.svg"
+  }
+]

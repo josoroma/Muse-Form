@@ -1,0 +1,25 @@
+{
+  "case": "Create a gentle garden worm noticing a fallen leaf as an original seven-second SVG loop, editable still, and README prompt.",
+  "isolatedWorkspace": "/tmp/seven-storytelling-forward-test",
+  "checks": {
+    "browser": "Local headless Google Chrome via playwright-core",
+    "times": [
+      0,
+      1.47,
+      3.22,
+      4.41,
+      5.81,
+      7
+    ],
+    "endpointPixelsEqual": true,
+    "reverseSeekRepeatable": true,
+    "openingAndClosingHoldsMatch": true,
+    "stillMatchesOpening": true,
+    "visibleChange": true,
+    "browserErrors": []
+  },
+  "visualReview": "Independent agent inspected six poses and the strongest lean. Root reviewed the contact sheet.",
+  "issueFound": "linter --help treated as input filename",
+  "resolution": "Added argparse help to the portable linter.",
+  "mp4Tested": false
+}

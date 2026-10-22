@@ -1,0 +1,92 @@
+{
+  "id": "105200",
+  "title": "An astonishment in warm light",
+  "duration": 7,
+  "imageUrl": "../plates/105200.png",
+  "regions": [
+    {
+      "name": "coherent head intention",
+      "center": [
+        0.46,
+        0.39
+      ],
+      "radius": [
+        0.6,
+        0.88
+      ],
+      "translate": [
+        0,
+        -1.6
+      ],
+      "rotate": -0.15,
+      "pivot": [
+        0.47,
+        0.73
+      ],
+      "phase": "action"
+    },
+    {
+      "name": "quiet shoulder breath",
+      "center": [
+        0.5,
+        0.83
+      ],
+      "radius": [
+        0.33,
+        0.15
+      ],
+      "translate": [
+        0,
+        -1.7
+      ],
+      "rotate": 0,
+      "pivot": [
+        0.5,
+        0.83
+      ],
+      "phase": "breath"
+    }
+  ],
+  "pins": [
+    {
+      "center": [
+        0.5,
+        0
+      ],
+      "radius": [
+        0.75,
+        0.07
+      ]
+    },
+    {
+      "center": [
+        0.5,
+        1
+      ],
+      "radius": [
+        0.75,
+        0.07
+      ]
+    },
+    {
+      "center": [
+        0,
+        0.5
+      ],
+      "radius": [
+        0.06,
+        0.75
+      ]
+    },
+    {
+      "center": [
+        1,
+        0.5
+      ],
+      "radius": [
+        0.06,
+        0.75
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "105203",
+  "title": "A conspiratorial wink",
+  "duration": 7,
+  "imageUrl": "../plates/105203.png",
+  "regions": [
+    {
+      "name": "coherent head intention",
+      "center": [
+        0.5,
+        0.43
+      ],
+      "radius": [
+        0.6,
+        0.88
+      ],
+      "translate": [
+        0.8,
+        -0.7
+      ],
+      "rotate": 0.2,
+      "pivot": [
+        0.496,
+        0.78
+      ],
+      "phase": "action"
+    },
+    {
+      "name": "quiet shoulder breath",
+      "center": [
+        0.5,
+        0.85
+      ],
+      "radius": [
+        0.33,
+        0.15
+      ],
+      "translate": [
+        0,
+        -1.7
+      ],
+      "rotate": 0,
+      "pivot": [
+        0.5,
+        0.85
+      ],
+      "phase": "breath"
+    }
+  ],
+  "pins": [
+    {
+      "center": [
+        0.5,
+        0
+      ],
+      "radius": [
+        0.75,
+        0.07
+      ]
+    },
+    {
+      "center": [
+        0.5,
+        1
+      ],
+      "radius": [
+        0.75,
+        0.07
+      ]
+    },
+    {
+      "center": [
+        0,
+        0.5
+      ],
+      "radius": [
+        0.06,
+        0.75
+      ]
+    },
+    {
+      "center": [
+        1,
+        0.5
+      ],
+      "radius": [
+        0.06,
+        0.75
+      ]
+    }
+  ]
+}

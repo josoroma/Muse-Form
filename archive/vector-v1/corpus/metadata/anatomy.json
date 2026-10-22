@@ -1,0 +1,112 @@
+[
+  {
+    "id": "105214",
+    "title": "Contrapposto · the lifted ribcage",
+    "category": "torso",
+    "source": "105214.jpg",
+    "observation": "The photographed page contrasts a twisting, upward-stretched ribcage with simplified torso volumes. I used the rib cage, pectoral fans, rectus rhythm and oblique counter-twist; no page text or original composition is reproduced.",
+    "prompt": "Create an original 1200 × 900 native SVG anatomical art plate, with all important geometry within x=80–1120 and y=70–820. A cropped classical male torso turning toward high left light; ribcage lifted and pelvis counterturned. Pectorals wrap the chest, serratus slips interlock with obliques, asymmetrical abdominal intervals follow the twist. Strong ivory highlights, cool graphite occlusion beneath the pectorals, fine curved crosshatching and lost edges. Use hand-authored cubic Bézier contours, named editable anatomical groups, warm ivory #f3eee2 paper, graphite/indigo #24343b, restrained ochre and russet, continuous light direction, fine secondary contours and crosshatching. No embedded raster, page reproduction or copied text. Treat this as an artistic form study, not a clinical reference.",
+    "motion": "0–1 s settle and slight opposing anticipation; 1–3 s ribcage rotates 1.1° over planted pelvis while oblique flow lines emerge; 3–4.3 s hold the stretch; 4.3–6 s soften and return; 6–7 s regain the exact initial pose.",
+    "svg": "corpus/svg/105214.svg",
+    "animated": "corpus/animated/105214.svg"
+  },
+  {
+    "id": "105215",
+    "title": "The gathering arm",
+    "category": "arm",
+    "source": "105215.jpg",
+    "observation": "The reference studies biceps/triceps masses around a flexed elbow and the changing forearm direction. The original plate emphasizes connected shoulder, upper arm and forearm volumes.",
+    "prompt": "Create an original 1200 × 900 native SVG anatomical art plate, with all important geometry within x=80–1120 and y=70–820. A muscular arm in a purposeful curled pose, deltoid to flexed elbow to compact clenched fist. The biceps is a tapered contracting belly, forearm extensor planes run toward the wrist, four folded fingers and one crossing thumb form the hand. Left light rakes the arm; warm ivory highlights, indigo underside, fine muscle-following graphite hatching. Use hand-authored cubic Bézier contours, named editable anatomical groups, warm ivory #f3eee2 paper, graphite/indigo #24343b, restrained ochre and russet, continuous light direction, fine secondary contours and crosshatching. No embedded raster, page reproduction or copied text. Treat this as an artistic form study, not a clinical reference.",
+    "motion": "0–1 s forearm anticipates 1.5° away; 1–3 s rotate at the actual elbow by −5°; 3–4.3 s ease into the held contraction; 4.3–6 s extend with small follow-through; 6–7 s settle exactly to frame zero.",
+    "svg": "corpus/svg/105215.svg",
+    "animated": "corpus/animated/105215.svg"
+  },
+  {
+    "id": "105216",
+    "title": "An open invitation",
+    "category": "hand",
+    "source": "105216.jpg",
+    "observation": "The source pairs a palm drawing with geometric construction, contrasting the thenar mound, palm creases, finger phalanges and the distinct thumb.",
+    "prompt": "Create an original 1200 × 900 native SVG anatomical art plate, with all important geometry within x=80–1120 and y=70–820. A large open palm seen at three-quarter depth, five digits total: four independently tapered long fingers and one opposable thumb. Reveal the warm thenar mound, cupped central palm, curved transverse creases and gently unequal finger lengths. Anatomically considered joint folds, soft graphite hatching only on shadow planes, ivory grazing light and restrained ochre motion accents. Use hand-authored cubic Bézier contours, named editable anatomical groups, warm ivory #f3eee2 paper, graphite/indigo #24343b, restrained ochre and russet, continuous light direction, fine secondary contours and crosshatching. No embedded raster, page reproduction or copied text. Treat this as an artistic form study, not a clinical reference.",
+    "motion": "0–1 s tiny finger anticipation; 1–3 s index, ring and little fingers fan at their bases by −3°, 2° and 4°; 3–4.3 s the open gesture holds and palmar flow appears; 4.3–6 s digits relax in a gentle cascade; 6–7 s return to the initial open hand.",
+    "svg": "corpus/svg/105216.svg",
+    "animated": "corpus/animated/105216.svg"
+  },
+  {
+    "id": "105217",
+    "title": "The reaching hand",
+    "category": "hand",
+    "source": "105217.jpg",
+    "observation": "The photographed back-of-hand studies emphasize the extensor tendons, stepped knuckles, nail perspective and the unequal phalanges.",
+    "prompt": "Create an original 1200 × 900 native SVG anatomical art plate, with all important geometry within x=80–1120 and y=70–820. An expressive dorsal hand reaches upward, index and little finger slightly splayed. Exactly five digits; four visible nail plates and a lateral thumb. Trace the extensor tendons from wrist to their corresponding knuckles, use small broken contour accents at joints and substantial cool shadows on the far edge. The hand must read as flesh under raking studio light, not a mechanical diagram. Use hand-authored cubic Bézier contours, named editable anatomical groups, warm ivory #f3eee2 paper, graphite/indigo #24343b, restrained ochre and russet, continuous light direction, fine secondary contours and crosshatching. No embedded raster, page reproduction or copied text. Treat this as an artistic form study, not a clinical reference.",
+    "motion": "0–1 s small opposing finger rotations; 1–3 s fingers fan through a restrained 2–4° gesture while four extensor paths become visible; 3–4.3 s poised reach; 4.3–6 s relaxed follow-through; 6–7 s exact return.",
+    "svg": "corpus/svg/105217.svg",
+    "animated": "corpus/animated/105217.svg"
+  },
+  {
+    "id": "105218",
+    "title": "Weight through the outer leg",
+    "category": "leg",
+    "source": "105218.jpg",
+    "observation": "The reference presents the outside lower leg, thigh-to-knee transition and the opposing rhythms of calf and tibial edge.",
+    "prompt": "Create an original 1200 × 900 native SVG anatomical art plate, with all important geometry within x=80–1120 and y=70–820. A full sculptural outer leg in a relaxed load-bearing stance, cropped at the upper thigh. Vastus lateralis flows into a distinct patella, calf bulge lies high and tapers toward ankle, foot rests on an elliptical shadow. Graceful alternating convex and concave contours, a long lit tibial plane, cool muscle recesses, restrained russet line study. Use hand-authored cubic Bézier contours, named editable anatomical groups, warm ivory #f3eee2 paper, graphite/indigo #24343b, restrained ochre and russet, continuous light direction, fine secondary contours and crosshatching. No embedded raster, page reproduction or copied text. Treat this as an artistic form study, not a clinical reference.",
+    "motion": "0–1 s counterweight anticipation; 1–3 s a subtle 0.65° weight shift pivots at the grounded ankle and the knee-to-shin flow appears; 3–4.3 s hold; 4.3–6 s ease out with a slight overshoot; 6–7 s settle at the original position.",
+    "svg": "corpus/svg/105218.svg",
+    "animated": "corpus/animated/105218.svg"
+  },
+  {
+    "id": "105219",
+    "title": "The descending tendon",
+    "category": "leg",
+    "source": "105219.jpg",
+    "observation": "The page examines the rear leg and knee, paired calf heads and their convergence toward the Achilles region.",
+    "prompt": "Create an original 1200 × 900 native SVG anatomical art plate, with all important geometry within x=80–1120 and y=70–820. Rear three-quarter leg as a single sculptural study. Two unequal gastrocnemius heads narrow toward a long Achilles tendon; hamstring paths frame the popliteal hollow; upper thigh and heel keep a coherent turning axis. Raking upper-left light, continuous warm highlights interrupted by cool overlap shadows and delicate curved crosshatching. Use hand-authored cubic Bézier contours, named editable anatomical groups, warm ivory #f3eee2 paper, graphite/indigo #24343b, restrained ochre and russet, continuous light direction, fine secondary contours and crosshatching. No embedded raster, page reproduction or copied text. Treat this as an artistic form study, not a clinical reference.",
+    "motion": "0–1 s quiet observation; 1–2.7 s an ochre anatomical overlay progressively clarifies the separate calf heads; 2.7–4 s tendon convergence remains visible; 4–5.8 s overlay fades as tonal drawing resumes priority; 5.8–7 s original static pose, completing an exact loop.",
+    "svg": "corpus/svg/105219.svg",
+    "animated": "corpus/animated/105219.svg"
+  },
+  {
+    "id": "105220",
+    "title": "A gesture from the shoulder",
+    "category": "arm",
+    "source": "105220.jpg",
+    "observation": "The photographed studies show the deltoid cap, upper-arm muscle groups, elbow and forearm as connected forms.",
+    "prompt": "Create an original 1200 × 900 native SVG anatomical art plate, with all important geometry within x=80–1120 and y=70–820. An original arm descends diagonally from a rounded deltoid and opens into a relaxed, extended hand. Deltoid fibers fan over the shoulder cap, biceps and triceps taper at elbow, forearm planes converge through wrist into five distinct digits with believable overlap. Use broad luminous upper planes, cool crosshatched undersides, small warm accents and generous ivory negative space. Use hand-authored cubic Bézier contours, named editable anatomical groups, warm ivory #f3eee2 paper, graphite/indigo #24343b, restrained ochre and russet, continuous light direction, fine secondary contours and crosshatching. No embedded raster, page reproduction or copied text. Treat this as an artistic form study, not a clinical reference.",
+    "motion": "0–1 s observe the pose; 1–2.7 s shoulder fibers, upper-arm curve and forearm tendon flow become visible; 2.7–4 s hold the connected anatomical sweep; 4–5.8 s overlay recedes; 5.8–7 s exact initial plate. The anatomy stays grounded while the study overlay articulates its form.",
+    "svg": "corpus/svg/105220.svg",
+    "animated": "corpus/animated/105220.svg"
+  },
+  {
+    "id": "105221",
+    "title": "Five notes of balance",
+    "category": "foot",
+    "source": "105221.jpg",
+    "observation": "The reference combines block construction and a tonal forefoot, showing the broad great toe and diminishing smaller toes on a receding arc.",
+    "prompt": "Create an original 1200 × 900 native SVG anatomical art plate, with all important geometry within x=80–1120 and y=70–820. A dramatic three-quarter view of the forefoot, five toes on a spatially curved arc, broad great toe separated from four successively smaller toes. Convincing nail plates and joint folds; metatarsal mounds merge into the arch and ankle. Graphite crosshatching follows curved shadow planes, warm ivory glints define volume, cool indigo occlusion gives the foot weight. Use hand-authored cubic Bézier contours, named editable anatomical groups, warm ivory #f3eee2 paper, graphite/indigo #24343b, restrained ochre and russet, continuous light direction, fine secondary contours and crosshatching. No embedded raster, page reproduction or copied text. Treat this as an artistic form study, not a clinical reference.",
+    "motion": "0–1 s slight opposing anticipation; 1–3 s each toe gently fans 1–3° at its own base with the great toe counterturning; 3–4.3 s hold and show the tendon sweep; 4.3–6 s toes relax; 6–7 s return exactly to the starting arrangement.",
+    "svg": "corpus/svg/105221.svg",
+    "animated": "corpus/animated/105221.svg"
+  },
+  {
+    "id": "105222",
+    "title": "The foot approaches",
+    "category": "foot",
+    "source": "105222.jpg",
+    "observation": "The page explores front and dorsal foot views, toe lengths, the ankle transition and tendon lines across the top of the foot.",
+    "prompt": "Create an original 1200 × 900 native SVG anatomical art plate, with all important geometry within x=80–1120 and y=70–820. A foreshortened dorsal foot approaching the viewer, ankle receding upward. Exactly five individually drawn toes, the great toe broad and medial, remaining toes stepping away in perspective. Light follows the tibial plane and branching tendons; cool shadows turn around both malleoli. Ground the front of the foot with a soft contact shadow, fine crosshatching and broken graphite contours. Use hand-authored cubic Bézier contours, named editable anatomical groups, warm ivory #f3eee2 paper, graphite/indigo #24343b, restrained ochre and russet, continuous light direction, fine secondary contours and crosshatching. No embedded raster, page reproduction or copied text. Treat this as an artistic form study, not a clinical reference.",
+    "motion": "0–1 s toe anticipation; 1–3 s five articulated toes fan gently with maximum 3° rotation while the ankle-to-forefoot tendon study emerges; 3–4.3 s hold; 4.3–6 s release; 6–7 s recover the precise initial pose.",
+    "svg": "corpus/svg/105222.svg",
+    "animated": "corpus/animated/105222.svg"
+  },
+  {
+    "id": "105223",
+    "title": "The architecture of an arch",
+    "category": "foot",
+    "source": "105223.jpg",
+    "observation": "The source contrasts inner and outer ankle heights, the heel pad and sole. The original composition selects an inner-side view to make the plantar arch readable.",
+    "prompt": "Create an original 1200 × 900 native SVG anatomical art plate, with all important geometry within x=80–1120 and y=70–820. An inner-side foot with heel to the left and great toe to the right, ankle rising from the rear. High medial arch, soft heel pad, correct inner ankle prominence, and four partly occluded smaller toes behind the great toe. Carve form with upper-left ivory light, deep cool shadow within the arch and delicate crosshatching that follows fascia. Avoid diagram labels; let contour and light explain the structure. Use hand-authored cubic Bézier contours, named editable anatomical groups, warm ivory #f3eee2 paper, graphite/indigo #24343b, restrained ochre and russet, continuous light direction, fine secondary contours and crosshatching. No embedded raster, page reproduction or copied text. Treat this as an artistic form study, not a clinical reference.",
+    "motion": "0–1 s stillness establishes the arch; 1–2.7 s a warm contour study traces Achilles-to-heel and the plantar sweep; 2.7–4 s hold the structural relationship; 4–5.8 s fade overlay; 5.8–7 s exact original drawing, closing the seven-second study loop.",
+    "svg": "corpus/svg/105223.svg",
+    "animated": "corpus/animated/105223.svg"
+  }
+]

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seven-second Storytelling"
+  short_description: "Realistic drawings and seven-second illustrated motion"
+  default_prompt: "Use $seven-second-storytelling to turn my references into a polished drawing and seven-second motion, choose the right medium, inspect and repair each asset, and deliver the prompts and source files."

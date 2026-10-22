@@ -1,0 +1,587 @@
+{
+  "version": 1,
+  "reviewer": "realism_review agent",
+  "reviewType": "Visual judgment separate from automated rendering checks",
+  "count": 24,
+  "method": [
+    "Inspected the full-size current master PNG for every ID.",
+    "Inspected each 1200 by 900 browser render at 3.5 seconds, near the main action peak.",
+    "Inspected each six-pose sheet at 0, 0.8, 1.4, 3.5, 5.5 and 6.8 seconds for silhouette, contacts, seams and clipping.",
+    "Inspected each decoded 1200 by 900 H.264 frame at 3.5 seconds after the complete 24-film export.",
+    "Automated verification results were read separately and were not used as proof of artistic quality."
+  ],
+  "reviewerInvolvement": "This reviewer did not author the anatomy/portrait plates or runtime. This reviewer generated and calibrated the four story plates 105232–105235; their review is self-review rather than blind independent review.",
+  "overallJudgment": "Accepted for the documented restrained cinemagraph scope. The revised plates have continuous modeled volume, clearer anatomy and more coherent light than the earlier flat vector corpus. No additional blocking art repair was identified in the inspected evidence.",
+  "globalLimits": [
+    "Acceptance is a subjective visual judgment, not a professional-quality certification or medical validation.",
+    "The clips are held illustrations with small local deformation and light changes. They do not provide full articulated actions, expression transitions or frame-by-frame character acting.",
+    "The six browser samples and one decoded movie frame per ID do not equal continuous playback inspection of every encoded frame. Timing, loop smoothness and artifacts between those sampled frames are outside this visual review.",
+    "Story plates are cinematic painted realism; anatomy and portraits are graphite-style raster illustrations. Neither is native vector geometry.",
+    "Generated fine texture and athletic muscle emphasis are illustrative choices; they should not be described as traced or medically validated reference."
+  ],
+  "iterationEvidence": [
+    "All 24 flat vector plates were replaced with continuous-tone raster masters.",
+    "The pirate telescope/eye relationship received a targeted image edit before the final master.",
+    "Story motion regions were relocated to the actual painted landmarks and rigid contacts pinned before rendering.",
+    "Review identified that 105223 showed a lateral/dorsal foot rather than the previous medial-arch description; the parent corrected its title and notes."
+  ],
+  "requiredArtRepairs": [],
+  "items": [
+    {
+      "id": "105193",
+      "evidence": {
+        "plate": "corpus/plates/105193.png",
+        "browserPeak": "qa/realism/105193-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105193-motion.jpg",
+        "encodedMidpoint": "qa/realism/105193-decoded.png"
+      },
+      "anatomy": "Three-quarter cranial vault, receding orbits, zygomatic bridge and dental arcade read as connected volumes; teeth vary in width and overlap.",
+      "lighting": "Matte bone turns through continuous halftones into the orbit and lower jaw shadows.",
+      "cleanliness": "Sutures and pores remain subordinate to the broad skull planes; no detached jaw edge or visible mesh seam in the sampled poses.",
+      "composition": "The skull has enough paper margin and its jaw shadow makes the isolated study feel grounded.",
+      "contact": "Mandible and rear skull retain their ground shadow; tooth alignment stays stable at the peak.",
+      "encodedFrameJudgment": "Encoded orbit boundaries, tooth gaps and the lower jaw contour remain readable without visible blocks.",
+      "limits": [
+        "Dense generated microtexture is decorative rather than anatomical evidence.",
+        "This is a held skull study with very small movement, not an opening-and-closing jaw demonstration."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105194",
+      "evidence": {
+        "plate": "corpus/plates/105194.png",
+        "browserPeak": "qa/realism/105194-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105194-motion.jpg",
+        "encodedMidpoint": "qa/realism/105194-decoded.png"
+      },
+      "anatomy": "Upper lid overlaps the iris, the lower lid turns around a rounded globe, and the asymmetric corners include a small tear lake.",
+      "lighting": "The wet catchlight and lid margin are distinct from matte skin; the brow ridge has a coherent underside shadow.",
+      "cleanliness": "Individual lashes and brow hairs are readable without a detached outline or stretched pupil at the peak.",
+      "composition": "The tight crop gives the eye a clear focal hierarchy and enough surrounding facial planes to explain its position.",
+      "contact": "Lids remain attached to the globe and the iris remains inside the same eyelid opening.",
+      "encodedFrameJudgment": "Encoded lashes, iris rim and catchlight remain intact; no obvious ringing around the eye.",
+      "limits": [
+        "The eye stays open; this loop does not perform a blink.",
+        "The visible action is a minute brow/illumination change."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105195",
+      "evidence": {
+        "plate": "corpus/plates/105195.png",
+        "browserPeak": "qa/realism/105195-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105195-motion.jpg",
+        "encodedMidpoint": "qa/realism/105195-decoded.png"
+      },
+      "anatomy": "The helix, antihelix, conchal bowl, tragus and lobule merge into the skin rather than appearing as separate pasted shapes.",
+      "lighting": "The recessed concha and underside of the lobe have soft, continuous shadows.",
+      "cleanliness": "The ear contour stays clean across the sampled poses, with no flat black cutout or contour split.",
+      "composition": "A close study with sufficient surrounding skin and quiet paper; no accidental clipping of the ear.",
+      "contact": "The lobe and root remain attached to the head throughout the sampled frames.",
+      "encodedFrameJudgment": "Encoded conchal shading and the outer helix retain smooth gradients without visible blocking.",
+      "limits": [
+        "This is a light/volume study; the ear does not anatomically articulate.",
+        "Fine skin texture is generated illustration detail."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105196",
+      "evidence": {
+        "plate": "corpus/plates/105196.png",
+        "browserPeak": "qa/realism/105196-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105196-motion.jpg",
+        "encodedMidpoint": "qa/realism/105196-decoded.png"
+      },
+      "anatomy": "Raised cheek, crowfeet, softened lower eyelid and an asymmetric closed-mouth smile agree; ear, neck and shoulders connect naturally.",
+      "lighting": "Continuous cheek and neck modeling avoids the earlier sticker-like face planes.",
+      "cleanliness": "Hair, stubble and shirt edges remain distinct; no identity shift or melted features at the sampled peak.",
+      "composition": "The tilted head and soft shirt fade make an uncluttered portrait.",
+      "contact": "Neck-to-jaw and neck-to-collar attachments remain stable.",
+      "encodedFrameJudgment": "Encoded lip corners, eyelids and stubble retain the browser appearance without a visible seam.",
+      "limits": [
+        "The smile is already present at the start; the animation holds it with tiny local motion.",
+        "This is not a smile-forming facial performance."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105197",
+      "evidence": {
+        "plate": "corpus/plates/105197.png",
+        "browserPeak": "qa/realism/105197-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105197-motion.jpg",
+        "encodedMidpoint": "qa/realism/105197-decoded.png"
+      },
+      "anatomy": "Dropped gaze, raised and pinched inner brows, mouth-corner tension and downward head tilt communicate sadness together.",
+      "lighting": "Light models the brow, cheek and neck as one face rather than separately shaded parts.",
+      "cleanliness": "Forehead folds are pronounced but follow the expression; the beard does not break at the moving regions.",
+      "composition": "Downward gaze has space into the lower-right area and the shoulders fade quietly.",
+      "contact": "Jaw, neck and collar retain coherent attachment at the sampled peak.",
+      "encodedFrameJudgment": "Encoded brow folds, downturned mouth and beard stay legible; no new compression artifact distracts from the face.",
+      "limits": [
+        "This is an emotional hold with subtle breathing, not crying or a transition into sadness.",
+        "Strong forehead furrows are an expressive choice."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105198",
+      "evidence": {
+        "plate": "corpus/plates/105198.png",
+        "browserPeak": "qa/realism/105198-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105198-motion.jpg",
+        "encodedMidpoint": "qa/realism/105198-decoded.png"
+      },
+      "anatomy": "Compressed brows, narrowed eyes, tense mouth and squared jaw give a consistent anger expression with adult head proportions.",
+      "lighting": "Directional shading joins the forehead, nose, cheek and neck; stubble follows the planes.",
+      "cleanliness": "No loose eye edge, doubled brow or disconnected shirt boundary is visible in the sampled poses.",
+      "composition": "The slightly turned head and dark shirt concentrate attention on the eyes.",
+      "contact": "Nose-to-cheek, jaw-to-neck and collar contacts remain coherent.",
+      "encodedFrameJudgment": "Encoded eye openings and lip edge remain clean; skin halftones do not show obvious blocks.",
+      "limits": [
+        "Anger is held throughout the loop; there is no large expression transformation.",
+        "The portrait is a generated graphite-style interpretation, not a traced reference."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105199",
+      "evidence": {
+        "plate": "corpus/plates/105199.png",
+        "browserPeak": "qa/realism/105199-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105199-motion.jpg",
+        "encodedMidpoint": "qa/realism/105199-decoded.png"
+      },
+      "anatomy": "Eyes look up and right together; lifted, pinched brows and a horizontally tense mouth distinguish fear from the surprise study.",
+      "lighting": "The nose, cheek and twisted neck share a coherent light direction, with small tooth highlights rather than a white graphic strip.",
+      "cleanliness": "Globe, lips and visible teeth remain stable at the peak, without obvious stretching or duplicated contours.",
+      "composition": "Space above and to the right supports the character gaze while the shoulders remain quiet.",
+      "contact": "The head turn remains connected to the neck and the mouth interior stays inside the lips.",
+      "encodedFrameJudgment": "Encoded eye whites and small tooth shapes preserve their separation and direction.",
+      "limits": [
+        "This holds a fearful reaction; it does not show a full startle or blink cycle.",
+        "Tiny local movement is easy to miss in thumbnail contact sheets."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105200",
+      "evidence": {
+        "plate": "corpus/plates/105200.png",
+        "browserPeak": "qa/realism/105200-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105200-motion.jpg",
+        "encodedMidpoint": "qa/realism/105200-decoded.png"
+      },
+      "anatomy": "Raised brows, wide eyes and a dropped jaw combine with lip thickness and a modeled mouth interior; the mouth is not a flat black oval.",
+      "lighting": "Face and neck volumes turn continuously under the same key light.",
+      "cleanliness": "Sampled motion preserves pupil size, eye alignment and the lip rim.",
+      "composition": "The open mouth is a clear focal accent within a balanced portrait and quiet shirt fade.",
+      "contact": "Jaw and neck stay connected without a cutout gap at the sampled peak.",
+      "encodedFrameJudgment": "Encoded lip highlights, mouth darkness and iris details remain distinct without obvious banding.",
+      "limits": [
+        "The surprised mouth starts open and stays open; this is not a jaw-opening sequence.",
+        "The deliberately widened eyes are an expressive exaggeration."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105202",
+      "evidence": {
+        "plate": "corpus/plates/105202.png",
+        "browserPeak": "qa/realism/105202-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105202-motion.jpg",
+        "encodedMidpoint": "qa/realism/105202-decoded.png"
+      },
+      "anatomy": "Forehead, nose, lips and chin form a credible profile; upper teeth recede around the mouth, the cheek compresses and the eye squeezes with laughter.",
+      "lighting": "The lifted chin and stretched neck share soft directional shading.",
+      "cleanliness": "No doubled teeth or detached jaw edge is visible in the sampled poses.",
+      "composition": "Open space in front of the profile and the rising head gesture make the laughter legible.",
+      "contact": "Neck attachment below the ear and the jaw opening remain coherent.",
+      "encodedFrameJudgment": "Encoded profile edge, tooth gaps and crowfeet retain detail without a distracting halo.",
+      "limits": [
+        "This is a held laughing pose with minute motion, not a full laugh cycle.",
+        "The tooth arrangement is illustrative, not a dental reference."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105203",
+      "evidence": {
+        "plate": "corpus/plates/105203.png",
+        "browserPeak": "qa/realism/105203-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105203-motion.jpg",
+        "encodedMidpoint": "qa/realism/105203-decoded.png"
+      },
+      "anatomy": "Closed-side cheek lift, crowfeet and brow compression agree with a wink; the opposite eye and asymmetric mouth stay readable.",
+      "lighting": "Light joins both sides of the face despite their different expressions.",
+      "cleanliness": "The closed eyelid stays a continuous fold, without a second eye edge or smeared eyebrow.",
+      "composition": "The frontal portrait provides a clear comparison between the two facial sides.",
+      "contact": "Cheek-to-lid and jaw-to-neck relationships remain attached at the peak.",
+      "encodedFrameJudgment": "Encoded closed lid, open-eye iris and smile crease retain clean separation.",
+      "limits": [
+        "The wink is held from the start; the eyelid does not close and reopen during this loop.",
+        "Small breathing or head shifts are the actual animated content."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105214",
+      "evidence": {
+        "plate": "corpus/plates/105214.png",
+        "browserPeak": "qa/realism/105214-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105214-motion.jpg",
+        "encodedMidpoint": "qa/realism/105214-decoded.png"
+      },
+      "anatomy": "Abdominal masses follow the torso twist; clavicles, sternum, pectorals, obliques and serratus connect through continuous planes instead of isolated ovals.",
+      "lighting": "A coherent upper key describes ribcage and abdominal volume with restrained warm pigment.",
+      "cleanliness": "The peak retains the navel and rib attachments without a mesh boundary or detached muscle island.",
+      "composition": "The intentional neck, arm and hip crop focuses attention on the torso gesture.",
+      "contact": "The raised shoulder and abdominal midline stay connected as the tiny breath changes the torso.",
+      "encodedFrameJudgment": "Encoded chest and abdominal halftones remain smooth and the navel does not break into blocks.",
+      "limits": [
+        "Musculature is highly athletic and idealized.",
+        "This is breathing in a held torso pose, not a full stretch or medically validated plate."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105215",
+      "evidence": {
+        "plate": "corpus/plates/105215.png",
+        "browserPeak": "qa/realism/105215-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105215-motion.jpg",
+        "encodedMidpoint": "qa/realism/105215-decoded.png"
+      },
+      "anatomy": "Deltoid wraps into the upper arm, biceps and triceps meet the elbow, and the forearm tapers into a plausible closed fist.",
+      "lighting": "Continuous underside shadow gives the arm volume rather than separate inflatable muscle shapes.",
+      "cleanliness": "No elbow gap or wrist detachment appears at the peak; occluded fingers remain plausible.",
+      "composition": "The arm arc fills the frame decisively; the fist is close to the upper edge but stays inside it.",
+      "contact": "Shoulder, elbow and wrist transitions remain continuous in all sampled poses.",
+      "encodedFrameJudgment": "Encoded elbow fold, fist silhouette and muscle gradients remain stable and clean.",
+      "limits": [
+        "Muscle definition is idealized and stronger than an average arm.",
+        "The action is a tiny tension change, not repeated elbow flexion."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105216",
+      "evidence": {
+        "plate": "corpus/plates/105216.png",
+        "browserPeak": "qa/realism/105216-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105216-motion.jpg",
+        "encodedMidpoint": "qa/realism/105216-decoded.png"
+      },
+      "anatomy": "Five distinct digits have natural spacing and length hierarchy; webbing, thenar mass and wrist form one continuous hand.",
+      "lighting": "Palm halftones explain cupping and thumb volume; major creases support the structure.",
+      "cleanliness": "The earlier tubular finger seams and pasted palm pads are absent; no webbing tear appears at the peak.",
+      "composition": "The diagonal wrist and splayed digits make the open-hand gesture clear with sufficient fingertip margin.",
+      "contact": "Digits remain joined through webbing and the palm remains attached to the wrist.",
+      "encodedFrameJudgment": "Encoded finger gaps, thumb outline and palm creases retain clean separation.",
+      "limits": [
+        "The splayed hand holds its pose with a minute release; it does not open and close fully.",
+        "Palm lines and texture are illustrative rather than a validated anatomical map."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105217",
+      "evidence": {
+        "plate": "corpus/plates/105217.png",
+        "browserPeak": "qa/realism/105217-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105217-motion.jpg",
+        "encodedMidpoint": "qa/realism/105217-decoded.png"
+      },
+      "anatomy": "Five digits, stepped knuckles, angled nails and a slightly bent little finger provide a credible dorsal hand; tendons converge toward the wrist.",
+      "lighting": "The lower-edge shadow and smooth dorsal shading describe thickness and finger planes.",
+      "cleanliness": "No extra digit, abrupt tendon seam or detached wrist is visible in the sampled poses.",
+      "composition": "The diagonal hand fills the frame without crowding its major fingertips.",
+      "contact": "Knuckles and tendon paths remain connected while the local mesh shifts minutely.",
+      "encodedFrameJudgment": "Encoded nails, tendon ridges and interdigital spaces remain readable without visible blocking.",
+      "limits": [
+        "Tendon and vein relief is deliberately pronounced.",
+        "This is a near-static tendon study, not independent full finger articulation."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105218",
+      "evidence": {
+        "plate": "corpus/plates/105218.png",
+        "browserPeak": "qa/realism/105218-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105218-motion.jpg",
+        "encodedMidpoint": "qa/realism/105218-decoded.png"
+      },
+      "anatomy": "Thigh, knee, shin, ankle and foot connect continuously; asymmetric calf volume and receding toes make the leg more credible than the original separated shapes.",
+      "lighting": "The upper-left light and cast shadow are consistent with a planted foot.",
+      "cleanliness": "The ankle prominence is integrated into the surrounding skin, and no knee or toe seam appears at the peak.",
+      "composition": "The intentional thigh crop leaves quiet space around the long lower-leg silhouette.",
+      "contact": "Heel and forefoot remain on the same ground plane with their shadows attached.",
+      "encodedFrameJudgment": "Encoded ankle, toe contours and contact shadow stay intact without apparent sliding.",
+      "limits": [
+        "Muscle relief is athletic and idealized.",
+        "Only a small load change is shown; this is not a step or a large knee bend."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105219",
+      "evidence": {
+        "plate": "corpus/plates/105219.png",
+        "browserPeak": "qa/realism/105219-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105219-motion.jpg",
+        "encodedMidpoint": "qa/realism/105219-decoded.png"
+      },
+      "anatomy": "Unequal calf heads taper into the Achilles; the hamstring/posterior-knee transition and oblique far forefoot form a continuous rear leg.",
+      "lighting": "The calf turns into a soft center shadow and the heel has a clear grounded contact shadow.",
+      "cleanliness": "No detached Achilles, heel edge split or contour jump is visible at the sampled peak.",
+      "composition": "The narrow rear silhouette is centered with enough lateral paper margin.",
+      "contact": "Heel stays planted and the Achilles remains attached to it.",
+      "encodedFrameJudgment": "Encoded Achilles taper, heel perimeter and ground shadow retain smooth continuity.",
+      "limits": [
+        "Pronounced musculature is a study choice.",
+        "The motion does not perform a heel raise or walking action."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105220",
+      "evidence": {
+        "plate": "corpus/plates/105220.png",
+        "browserPeak": "qa/realism/105220-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105220-motion.jpg",
+        "encodedMidpoint": "qa/realism/105220-decoded.png"
+      },
+      "anatomy": "The bent thigh folds into knee, calf, ankle and foot coherently; the kneecap structure describes the turn and five toes remain readable.",
+      "lighting": "The upper-left illumination carries from thigh to shin and foot without isolated shading islands.",
+      "cleanliness": "Knee and ankle remain continuous at the sampled peak, with no displaced skin seam.",
+      "composition": "The cropped thigh and right-angle leg pose focus attention on the knee connection.",
+      "contact": "Heel and forefoot remain grounded while the knee makes a tiny settling motion.",
+      "encodedFrameJudgment": "Encoded knee fold, shin contour and toe spacing match the browser peak without new artifacts.",
+      "limits": [
+        "This is a bent knee/leg study, consistent with the corrected title, not an arm.",
+        "It is a held pose rather than a walking or full flexion cycle."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105221",
+      "evidence": {
+        "plate": "corpus/plates/105221.png",
+        "browserPeak": "qa/realism/105221-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105221-motion.jpg",
+        "encodedMidpoint": "qa/realism/105221-decoded.png"
+      },
+      "anatomy": "Five toes include a broader great toe and individually shaped nails; metatarsal heads merge into the instep and ankle rather than becoming a row of beads.",
+      "lighting": "Directional shading and a continuous lower contact shadow give the forefoot thickness.",
+      "cleanliness": "Toe web gaps and nail planes stay intact at the peak, without detached pads or sharp segmentation seams.",
+      "composition": "The close dorsal/front view gives the broad forefoot useful prominence while retaining the heel.",
+      "contact": "Heel and ball stay attached to the ground shadow throughout the sampled poses.",
+      "encodedFrameJudgment": "Encoded toe gaps and nail edges preserve separation; the contact shadow remains continuous.",
+      "limits": [
+        "Vein relief is strongly emphasized.",
+        "The loop has a tiny local tension change, not independent full toe splay."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105222",
+      "evidence": {
+        "plate": "corpus/plates/105222.png",
+        "browserPeak": "qa/realism/105222-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105222-motion.jpg",
+        "encodedMidpoint": "qa/realism/105222-decoded.png"
+      },
+      "anatomy": "Five toes have differentiated lengths and nail planes; the broad great toe, unequal ankle landmarks and converging tendons read clearly from above.",
+      "lighting": "Soft light models the dorsal surface and the left-side shadow separates the foot from the paper.",
+      "cleanliness": "No extra toe, stretched nail or sharp mesh seam appears at the sampled peak.",
+      "composition": "The centered downward view leaves balanced paper margins around the toe fan.",
+      "contact": "Toe bases and ankle-to-instep connection remain continuous.",
+      "encodedFrameJudgment": "Encoded toenails, web spaces and dorsal gradients retain the plate structure cleanly.",
+      "limits": [
+        "The actual view is predominantly top-down, rather than a dramatic approach toward the camera.",
+        "The motion is a tiny instep tension change, not a complete foot movement."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105223",
+      "evidence": {
+        "plate": "corpus/plates/105223.png",
+        "browserPeak": "qa/realism/105223-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105223-motion.jpg",
+        "encodedMidpoint": "qa/realism/105223-decoded.png"
+      },
+      "anatomy": "Heel, ankle, arch, ball and five receding toes form one continuous foot; the actual view is lateral/dorsal three-quarter with the great toe on the far side.",
+      "lighting": "Broad graphite halftones describe volume and a dark contact shadow anchors heel and forefoot.",
+      "cleanliness": "The ankle is integrated rather than a separate oval; no ball collapse or toe-edge split appears at the peak.",
+      "composition": "The large oblique foot shape uses the frame clearly and retains room around the toes.",
+      "contact": "Heel and forefoot stay planted and their shadow remains attached in the sampled poses.",
+      "encodedFrameJudgment": "Encoded heel shadow, instep shading and receding toe boundaries remain clean.",
+      "limits": [
+        "The corrected Weight Across the Foot title fits the actual view; this should not be called a medically accurate medial-arch plate.",
+        "Motion is a tiny local load change, not a step."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105232",
+      "evidence": {
+        "plate": "corpus/plates/105232.png",
+        "browserPeak": "qa/realism/105232-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105232-motion.jpg",
+        "encodedMidpoint": "qa/realism/105232-decoded.png"
+      },
+      "anatomy": "Adult proportions, weighted boots, layered clothing and hands holding the chart and straight telescope read plausibly; an edit improved eyepiece alignment with the viewing eye.",
+      "lighting": "Cool dusk and warm harbor lights distinguish cloth, brass, wood and water while distant land recedes.",
+      "cleanliness": "The peak keeps telescope barrel, fingers, chart and boot contacts rigid; no coat-edge seam or clipping is visible.",
+      "composition": "The standing figure on the left balances ship, moon and open harbor on the right; pier boards provide depth.",
+      "contact": "Both boots remain attached to the pier; gripping hand and eyepiece remain in their held relationship.",
+      "encodedFrameJudgment": "Encoded rigging, brass barrel and pier texture retain clear edges; no visible block breakup in the dark coat.",
+      "limits": [
+        "This is cinematic painted realism rather than a predominantly graphite drawing.",
+        "The telescope is already raised; only feather, coat hems, water and local light move minutely.",
+        "The eyepiece is close to the eye in a plausible illustrated pose, not a mechanically validated optical alignment."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105233",
+      "evidence": {
+        "plate": "corpus/plates/105233.png",
+        "browserPeak": "qa/realism/105233-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105233-motion.jpg",
+        "encodedMidpoint": "qa/realism/105233-decoded.png"
+      },
+      "anatomy": "A heavy coiled body, continuous neck, grounded forepaw and a claw supporting the lantern ring give the fantasy creature plausible weight; wing bones organize the aged membranes.",
+      "lighting": "Lantern warmth falls onto chest, forearm, moss and nearby water against cool mist and dusk depth.",
+      "cleanliness": "Ring and lantern remain rigid, the chest stays continuous and no spike or wing contour tears at the peak.",
+      "composition": "The head-to-lantern arc creates a clear focal path despite richly detailed scales and marsh plants.",
+      "contact": "Grounded paw and belly retain contact with the bank; lantern ring remains attached to the holding claw.",
+      "encodedFrameJudgment": "Encoded scales and lantern lattice remain legible; the warm light gradient does not show obvious banding.",
+      "limits": [
+        "The creature is invented fantasy anatomy, not zoological evidence.",
+        "Scale and moss detail is dense, but the head and lantern remain readable.",
+        "Only chest breathing, a willow tip and light change; there is no wingbeat or lantern lift."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105234",
+      "evidence": {
+        "plate": "corpus/plates/105234.png",
+        "browserPeak": "qa/realism/105234-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105234-motion.jpg",
+        "encodedMidpoint": "qa/realism/105234-decoded.png"
+      },
+      "anatomy": "A continuous segmented soft body rises from a broad weighted coil; small animal-like eyes and feelers avoid the previous human face pasted onto a worm.",
+      "lighting": "Warm forest light models moist skin and mushroom gills while the cooler distance separates the raised head.",
+      "cleanliness": "Body segmentation follows the bend and remains connected at the peak; no neck cutout or feeler root split is visible.",
+      "composition": "The low coil, raised head and firefly form a clear triangular story gesture, framed by mushrooms and fern shapes.",
+      "contact": "The coil stays pressed into the soil and the raised neck remains connected to its base.",
+      "encodedFrameJudgment": "Encoded feelers, firefly wings and body rings remain continuous; no new blocks distract in the foliage.",
+      "limits": [
+        "The eye-bearing, feelered creature is gentle fantasy rather than a literal earthworm.",
+        "The plate reads as cinematic macro realism with a glossy organic surface.",
+        "Head and feelers shift slightly and the firefly makes a tiny returning hover; this is not locomotion or an orbiting flight."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    },
+    {
+      "id": "105235",
+      "evidence": {
+        "plate": "corpus/plates/105235.png",
+        "browserPeak": "qa/realism/105235-3.5.png",
+        "browserSixPoseSheet": "qa/realism/105235-motion.jpg",
+        "encodedMidpoint": "qa/realism/105235-decoded.png"
+      },
+      "anatomy": "Believable adult proportions support one grounded knee and one planted foot; the near hand wraps the jug handle and the far hand rests naturally on the raised knee.",
+      "lighting": "Morning side/back light separates hair, jacket, ceramic and garden depth; the pale face remains readable without gore.",
+      "cleanliness": "Jug, fingers, water stream and pot stay coherent at the peak, with no visible handle warp or detached plant stem.",
+      "composition": "The bowed head, jug and sapling form a clear caring gesture; the distant village adds depth without competing with the hands.",
+      "contact": "Knee, boot and pot stay grounded; handle grip, spout and stream-to-soil relationship remain fixed.",
+      "encodedFrameJudgment": "Encoded fingers, stream, pot rim and leaf edges stay readable without visible mesh or compression breakup.",
+      "limits": [
+        "The undead theme is conveyed by pale aged skin and stitches, not medically plausible anatomy.",
+        "The jug is held in a pouring pose throughout; droplets are largely frozen within the plate.",
+        "Only breathing, hair and sapling make tiny motions; this is not a complete pour-and-return action."
+      ],
+      "accepted": true,
+      "acceptanceScope": "Current still illustration, six sampled browser poses, and the decoded 3.5-second movie frame.",
+      "continuousEncodedPlaybackReviewed": false,
+      "requiredArtRepair": null
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seven-second Storytelling"
+  short_description: "Artistic SVG drawings and seven-second character films"
+  default_prompt: "Use $seven-second-storytelling to turn my drawing references into an expressive SVG illustration and a seven-second character story, with the prompt and editable files."

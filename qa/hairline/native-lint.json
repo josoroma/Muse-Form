@@ -1,0 +1,338 @@
+[
+  {
+    "file": "corpus/svg/105193.svg",
+    "pass": true,
+    "paths": 34,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105194.svg",
+    "pass": true,
+    "paths": 19,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105195.svg",
+    "pass": true,
+    "paths": 14,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105196.svg",
+    "pass": true,
+    "paths": 67,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105197.svg",
+    "pass": true,
+    "paths": 57,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105198.svg",
+    "pass": true,
+    "paths": 56,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105199.svg",
+    "pass": true,
+    "paths": 55,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105200.svg",
+    "pass": true,
+    "paths": 61,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105202.svg",
+    "pass": true,
+    "paths": 45,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105203.svg",
+    "pass": true,
+    "paths": 51,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105214.svg",
+    "pass": true,
+    "paths": 47,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105215.svg",
+    "pass": true,
+    "paths": 34,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105216.svg",
+    "pass": true,
+    "paths": 45,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105217.svg",
+    "pass": true,
+    "paths": 70,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105218.svg",
+    "pass": true,
+    "paths": 41,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105219.svg",
+    "pass": true,
+    "paths": 29,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105220.svg",
+    "pass": true,
+    "paths": 37,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105221.svg",
+    "pass": true,
+    "paths": 53,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105222.svg",
+    "pass": true,
+    "paths": 43,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105223.svg",
+    "pass": true,
+    "paths": 42,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105232.svg",
+    "pass": true,
+    "paths": 43,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105233.svg",
+    "pass": true,
+    "paths": 28,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105234.svg",
+    "pass": true,
+    "paths": 45,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105235.svg",
+    "pass": true,
+    "paths": 43,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105193.svg",
+    "pass": true,
+    "paths": 34,
+    "animations": 1,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105194.svg",
+    "pass": true,
+    "paths": 19,
+    "animations": 1,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105195.svg",
+    "pass": true,
+    "paths": 14,
+    "animations": 1,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105196.svg",
+    "pass": true,
+    "paths": 67,
+    "animations": 1,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105197.svg",
+    "pass": true,
+    "paths": 57,
+    "animations": 1,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105198.svg",
+    "pass": true,
+    "paths": 56,
+    "animations": 1,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105199.svg",
+    "pass": true,
+    "paths": 55,
+    "animations": 1,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105200.svg",
+    "pass": true,
+    "paths": 61,
+    "animations": 1,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105202.svg",
+    "pass": true,
+    "paths": 45,
+    "animations": 1,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105203.svg",
+    "pass": true,
+    "paths": 51,
+    "animations": 1,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105214.svg",
+    "pass": true,
+    "paths": 47,
+    "animations": 19,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105215.svg",
+    "pass": true,
+    "paths": 34,
+    "animations": 12,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105216.svg",
+    "pass": true,
+    "paths": 45,
+    "animations": 26,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105217.svg",
+    "pass": true,
+    "paths": 70,
+    "animations": 34,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105218.svg",
+    "pass": true,
+    "paths": 41,
+    "animations": 14,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105219.svg",
+    "pass": true,
+    "paths": 29,
+    "animations": 17,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105220.svg",
+    "pass": true,
+    "paths": 37,
+    "animations": 14,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105221.svg",
+    "pass": true,
+    "paths": 53,
+    "animations": 21,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105222.svg",
+    "pass": true,
+    "paths": 43,
+    "animations": 26,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105223.svg",
+    "pass": true,
+    "paths": 42,
+    "animations": 25,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105232.svg",
+    "pass": true,
+    "paths": 43,
+    "animations": 1,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105233.svg",
+    "pass": true,
+    "paths": 28,
+    "animations": 1,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105234.svg",
+    "pass": true,
+    "paths": 45,
+    "animations": 3,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105235.svg",
+    "pass": true,
+    "paths": 43,
+    "animations": 1,
+    "errors": []
+  }
+]

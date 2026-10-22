@@ -1,0 +1,92 @@
+{
+  "id": "105198",
+  "title": "A storm held behind the eyes",
+  "duration": 7,
+  "imageUrl": "../plates/105198.png",
+  "regions": [
+    {
+      "name": "coherent head intention",
+      "center": [
+        0.48,
+        0.43
+      ],
+      "radius": [
+        0.6,
+        0.88
+      ],
+      "translate": [
+        0,
+        -1.1
+      ],
+      "rotate": 0.13,
+      "pivot": [
+        0.52,
+        0.76
+      ],
+      "phase": "action"
+    },
+    {
+      "name": "quiet shoulder breath",
+      "center": [
+        0.54,
+        0.86
+      ],
+      "radius": [
+        0.33,
+        0.15
+      ],
+      "translate": [
+        0,
+        -1.7
+      ],
+      "rotate": 0,
+      "pivot": [
+        0.54,
+        0.86
+      ],
+      "phase": "breath"
+    }
+  ],
+  "pins": [
+    {
+      "center": [
+        0.5,
+        0
+      ],
+      "radius": [
+        0.75,
+        0.07
+      ]
+    },
+    {
+      "center": [
+        0.5,
+        1
+      ],
+      "radius": [
+        0.75,
+        0.07
+      ]
+    },
+    {
+      "center": [
+        0,
+        0.5
+      ],
+      "radius": [
+        0.06,
+        0.75
+      ]
+    },
+    {
+      "center": [
+        1,
+        0.5
+      ],
+      "radius": [
+        0.06,
+        0.75
+      ]
+    }
+  ]
+}

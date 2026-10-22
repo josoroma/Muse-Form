@@ -1,0 +1,92 @@
+{
+  "id": "105196",
+  "title": "A smile finding its way",
+  "duration": 7,
+  "imageUrl": "../plates/105196.png",
+  "regions": [
+    {
+      "name": "coherent head intention",
+      "center": [
+        0.52,
+        0.43
+      ],
+      "radius": [
+        0.6,
+        0.88
+      ],
+      "translate": [
+        1,
+        -1
+      ],
+      "rotate": 0.2,
+      "pivot": [
+        0.49,
+        0.74
+      ],
+      "phase": "action"
+    },
+    {
+      "name": "quiet shoulder breath",
+      "center": [
+        0.51,
+        0.86
+      ],
+      "radius": [
+        0.33,
+        0.15
+      ],
+      "translate": [
+        0,
+        -1.7
+      ],
+      "rotate": 0,
+      "pivot": [
+        0.51,
+        0.86
+      ],
+      "phase": "breath"
+    }
+  ],
+  "pins": [
+    {
+      "center": [
+        0.5,
+        0
+      ],
+      "radius": [
+        0.75,
+        0.07
+      ]
+    },
+    {
+      "center": [
+        0.5,
+        1
+      ],
+      "radius": [
+        0.75,
+        0.07
+      ]
+    },
+    {
+      "center": [
+        0,
+        0.5
+      ],
+      "radius": [
+        0.06,
+        0.75
+      ]
+    },
+    {
+      "center": [
+        1,
+        0.5
+      ],
+      "radius": [
+        0.06,
+        0.75
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1423 @@
+[
+  {
+    "id": "105214",
+    "title": "A Breath Through the Spiral",
+    "observation": "The reference studies ribcage and pelvis counter-rotation, a raised shoulder and compression/stretch along the abdominal wall.",
+    "review": {
+      "anatomy": 4,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 4,
+      "notes": "Clavicles, pectorals, obliques and navel belong to one continuous torso; soft skin modeling avoids the previous separate vector patches. The torso is idealized and muscular, with intentional shoulder/neck crops. Waist and chest require restrained deformation."
+    },
+    "landmarks": {
+      "neck": [
+        0.47,
+        0.08
+      ],
+      "shoulderLeft": [
+        0.2,
+        0.28
+      ],
+      "shoulderRight": [
+        0.75,
+        0.12
+      ],
+      "sternum": [
+        0.48,
+        0.33
+      ],
+      "ribcage": [
+        0.5,
+        0.49
+      ],
+      "navel": [
+        0.58,
+        0.72
+      ],
+      "waist": [
+        0.55,
+        0.88
+      ]
+    },
+    "motion": "Seven-second breathing cycle: minute ribcage expansion and gentle raised-shoulder release, lower waist pinned. Keep chest displacement below 0.8 percent canvas and preserve clavicle attachment.",
+    "image": "corpus/plates/105214.png",
+    "prompt": "Use case: scientific-educational. Asset type: a finished original atelier anatomy drawing for a professional art-study corpus. Input image 1 is subject anatomy guidance from a photographed book page: extract anatomy and gesture only; do not reproduce the book, typography, diagrams, page layout, or exact drawing. Input image 2 is the definitive style reference: match its museum-quality realistic graphite and charcoal drawing, warm ivory paper, continuous tonal modeling, refined purposeful marks, subtle skin texture, controlled sharp and lost edges. A single adult male torso anatomical drawing in a gentle spiral stretch, three-quarter frontal view. Frame from the base of the neck, shoulders and upper arms fading into the paper, through the waist ending just above the pelvis; no genitals, no head. One shoulder raised so the clavicles and ribcage turn subtly against the abdominal plane. Natural athletic build rather than bodybuilder hypertrophy; pectorals merge organically into the deltoids, serratus only subtly indicated, correctly spaced abs interrupted by navel and obliques, skin remains skin. Beautiful ribcage volume, coherent contrapposto, long relaxed silhouette. Place torso in central 55 percent of the image with negative space either side. Lighting: single soft upper-left studio light; detailed halftones, dark occlusion only where anatomically appropriate, gentle reflected light; no harsh outlines. Landscape 4:3 composition, clean warm ivory paper extending to all edges, no border. The result must look like a master observational drawing, realistic and beautifully resolved, not a photograph or cartoon. Avoid flat vector shapes, cel shading, uniform repetitive hatching, heavy dark contour, overly swollen muscles, tubes, extra digits, floating anatomy stickers, muddy smudges, annotations, text, signatures and watermarks.",
+    "generation": "built-in image_gen",
+    "reviewedOutput": true,
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "upper chest inhalation",
+          "center": [
+            0.49,
+            0.35
+          ],
+          "radius": [
+            0.26,
+            0.2
+          ],
+          "translate": [
+            0,
+            -2.2
+          ],
+          "phase": "breath",
+          "delay": 0,
+          "rotate": 0,
+          "pivot": [
+            0.49,
+            0.35
+          ]
+        },
+        {
+          "name": "right ribcage opens",
+          "center": [
+            0.59,
+            0.51
+          ],
+          "radius": [
+            0.13,
+            0.19
+          ],
+          "translate": [
+            1.3,
+            -0.5
+          ],
+          "phase": "breath",
+          "delay": 0,
+          "rotate": 0,
+          "pivot": [
+            0.59,
+            0.51
+          ]
+        },
+        {
+          "name": "left ribcage opens",
+          "center": [
+            0.39,
+            0.49
+          ],
+          "radius": [
+            0.1,
+            0.15
+          ],
+          "translate": [
+            -1.1,
+            -0.5
+          ],
+          "phase": "breath",
+          "delay": 0,
+          "rotate": 0,
+          "pivot": [
+            0.39,
+            0.49
+          ]
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.55,
+            0.86
+          ],
+          "radius": [
+            0.21,
+            0.14
+          ]
+        },
+        {
+          "center": [
+            0.47,
+            0.05
+          ],
+          "radius": [
+            0.12,
+            0.09
+          ]
+        },
+        {
+          "center": [
+            0.2,
+            0.34
+          ],
+          "radius": [
+            0.07,
+            0.18
+          ]
+        },
+        {
+          "center": [
+            0.8,
+            0.11
+          ],
+          "radius": [
+            0.13,
+            0.1
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "105215",
+    "title": "Tension in the Turn",
+    "observation": "The reference shows a flexed elbow, biceps/triceps interaction and the twisting forearm masses. The final study retains living skin rather than colored muscle diagrams.",
+    "review": {
+      "anatomy": 4,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 4,
+      "notes": "Regenerated once to reduce spherical shoulder and biceps bulges. Final arm has a more elongated biceps, connected elbow/forearm and plausible closed fist; still deliberately athletic and idealized. Fist and elbow remain fully in frame."
+    },
+    "landmarks": {
+      "shoulder": [
+        0.25,
+        0.54
+      ],
+      "biceps": [
+        0.53,
+        0.68
+      ],
+      "elbow": [
+        0.87,
+        0.82
+      ],
+      "wrist": [
+        0.68,
+        0.25
+      ],
+      "fist": [
+        0.56,
+        0.14
+      ]
+    },
+    "motion": "Small flex-and-release, emphasizing a restrained biceps contraction and one-degree wrist settle; shoulder, elbow and arm length pinned. Avoid translating the entire arm or deforming the fist.",
+    "image": "corpus/plates/105215.png",
+    "prompt": "Use case: scientific-educational. Asset type: a finished original atelier anatomy drawing for a professional art-study corpus. Input image 1 is subject anatomy guidance from a photographed book page: extract anatomy and gesture only; do not reproduce the book, typography, diagrams, page layout, or exact drawing. Input image 2 is the definitive style reference: match its museum-quality realistic graphite and charcoal drawing, warm ivory paper, continuous tonal modeling, refined purposeful marks, subtle skin texture, controlled sharp and lost edges. A single natural adult arm flexed at the elbow, shoulder on the left, elbow near lower right and loosely closed hand above. Show a convincing biceps contraction and triceps underside, forearm pronated slightly inward, correct wrist narrowing, tendons, soft knuckles and one believable thumb over loosely curled fingers. Include all of the softly closed fist and enough shoulder attachment; no severed stump effect. Muscles integrated under living skin, moderate athletic physique, not bodybuilder, not separate oval lobes. Compose the bent arm as a beautiful open triangle in central 75 percent of the horizontal canvas. Lighting: single soft upper-left studio light; detailed halftones, dark occlusion only where anatomically appropriate, gentle reflected light; no harsh outlines. Landscape 4:3 composition, clean warm ivory paper extending to all edges, no border. The result must look like a master observational drawing, realistic and beautifully resolved, not a photograph or cartoon. Avoid flat vector shapes, cel shading, uniform repetitive hatching, heavy dark contour, overly swollen muscles, tubes, extra digits, floating anatomy stickers, muddy smudges, annotations, text, signatures and watermarks.",
+    "generation": "built-in image_gen",
+    "reviewedOutput": true,
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "biceps contracts beneath skin",
+          "center": [
+            0.55,
+            0.67
+          ],
+          "radius": [
+            0.23,
+            0.12
+          ],
+          "translate": [
+            0,
+            -2.4
+          ],
+          "phase": "action",
+          "delay": 0,
+          "rotate": 0,
+          "pivot": [
+            0.55,
+            0.67
+          ]
+        },
+        {
+          "name": "forearm tendon settles",
+          "center": [
+            0.8,
+            0.48
+          ],
+          "radius": [
+            0.095,
+            0.24
+          ],
+          "translate": [
+            -0.5,
+            -0.7
+          ],
+          "phase": "action",
+          "delay": 0.18,
+          "rotate": 0,
+          "pivot": [
+            0.8,
+            0.48
+          ]
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.25,
+            0.54
+          ],
+          "radius": [
+            0.16,
+            0.18
+          ]
+        },
+        {
+          "center": [
+            0.87,
+            0.82
+          ],
+          "radius": [
+            0.08,
+            0.08
+          ]
+        },
+        {
+          "center": [
+            0.68,
+            0.25
+          ],
+          "radius": [
+            0.08,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0.56,
+            0.14
+          ],
+          "radius": [
+            0.14,
+            0.12
+          ]
+        }
+      ]
+    },
+    "refinementPrompt": "Use case: precise-object-edit. This is an art-direction revision to the attached graphite arm drawing. Keep its warm ivory paper, single upper-left light, fine continuous graphite rendering, bent-arm pose and plausible closed fist, but correct its excessive bodybuilder anatomy. Reduce the huge round shoulder cap and spherical biceps by about 25 percent. Draw a naturally lean adult man's arm with subtle tapered muscle contours and continuous skin, like an observational anatomical drawing of a fit everyday adult. Retain true biceps/triceps relationships, brachioradialis spiral into wrist, elbow and forearm coherent. The deltoid should merge gracefully into humerus, not a round ball sitting on it. Bicep should be an elongated subtle raised mass, not a sphere. Keep realistic creases, gentle tendons, skin texture. Open the composition out to leave at least 6 percent blank margin above the fist and below elbow and right of elbow. Softly fade shoulder base into paper at left. Landscape 4:3 professional atelier plate. No text, no labels, no watermark, no repetitive hatch pattern, no cel shading, no swollen isolated muscle lobes."
+  },
+  {
+    "id": "105216",
+    "title": "The Palm Opens",
+    "observation": "The reference explains finger segment lengths, thumb opposition, the thenar pad and the cupped palm in perspective.",
+    "review": {
+      "anatomy": 5,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 5,
+      "notes": "Five digits with differentiated lengths, believable thumb webbing, palmar pads and continuous wrist tendons. Finger creases follow joint planes. Clean silhouette and uninterrupted value transitions; blank space separates all fingertips."
+    },
+    "landmarks": {
+      "wrist": [
+        0.26,
+        0.76
+      ],
+      "palm": [
+        0.49,
+        0.57
+      ],
+      "thumbTip": [
+        0.4,
+        0.07
+      ],
+      "indexTip": [
+        0.76,
+        0.19
+      ],
+      "middleTip": [
+        0.87,
+        0.36
+      ],
+      "ringTip": [
+        0.91,
+        0.51
+      ],
+      "littleTip": [
+        0.86,
+        0.66
+      ]
+    },
+    "motion": "A gentle palm cup and release with 0.3–0.5 percent canvas displacement around the finger bases; wrist remains pinned, finger lengths preserved, no independent detached fingertip movement.",
+    "image": "corpus/plates/105216.png",
+    "prompt": "Use case: scientific-educational. Asset type: a finished original atelier anatomy drawing for a professional art-study corpus. Input image 1 is subject anatomy guidance from a photographed book page: extract anatomy and gesture only; do not reproduce the book, typography, diagrams, page layout, or exact drawing. Input image 2 is the definitive style reference: match its museum-quality realistic graphite and charcoal drawing, warm ivory paper, continuous tonal modeling, refined purposeful marks, subtle skin texture, controlled sharp and lost edges. A single adult open hand, palmar side toward viewer, wrist entering from lower left, fingertips angled gently toward upper right, fingers comfortably spread with slight natural flexion. Exactly five digits: one opposable thumb correctly arising from the thenar side, four graduated fingers with middle finger longest, ring slightly shorter and little finger distinctly shortest. The palm is a sculpted cupped volume with thenar and hypothenar pads, flexion creases, fine skin texture, natural finger pads and joints. Beautiful believable proportions, thumb-web hollow, subtle foreshortening, fully visible fingertips with generous blank margins. No accessories. Lighting: single soft upper-left studio light; detailed halftones, dark occlusion only where anatomically appropriate, gentle reflected light; no harsh outlines. Landscape 4:3 composition, clean warm ivory paper extending to all edges, no border. The result must look like a master observational drawing, realistic and beautifully resolved, not a photograph or cartoon. Avoid flat vector shapes, cel shading, uniform repetitive hatching, heavy dark contour, overly swollen muscles, tubes, extra digits, floating anatomy stickers, muddy smudges, annotations, text, signatures and watermarks.",
+    "generation": "built-in image_gen",
+    "reviewedOutput": true,
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "palm softly cups",
+          "center": [
+            0.49,
+            0.57
+          ],
+          "radius": [
+            0.2,
+            0.21
+          ],
+          "translate": [
+            -0.7,
+            -1.3
+          ],
+          "phase": "action",
+          "delay": 0,
+          "rotate": 0,
+          "pivot": [
+            0.49,
+            0.57
+          ]
+        },
+        {
+          "name": "index base releases",
+          "center": [
+            0.64,
+            0.29
+          ],
+          "radius": [
+            0.13,
+            0.085
+          ],
+          "translate": [
+            1.2,
+            -0.7
+          ],
+          "phase": "action",
+          "delay": 0.12,
+          "rotate": 0,
+          "pivot": [
+            0.64,
+            0.29
+          ]
+        },
+        {
+          "name": "ring base follows",
+          "center": [
+            0.77,
+            0.55
+          ],
+          "radius": [
+            0.12,
+            0.08
+          ],
+          "translate": [
+            0.9,
+            -0.5
+          ],
+          "phase": "action",
+          "delay": 0.22,
+          "rotate": 0,
+          "pivot": [
+            0.77,
+            0.55
+          ]
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.26,
+            0.76
+          ],
+          "radius": [
+            0.16,
+            0.12
+          ]
+        },
+        {
+          "center": [
+            0.4,
+            0.07
+          ],
+          "radius": [
+            0.07,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0.76,
+            0.19
+          ],
+          "radius": [
+            0.07,
+            0.06
+          ]
+        },
+        {
+          "center": [
+            0.87,
+            0.36
+          ],
+          "radius": [
+            0.06,
+            0.06
+          ]
+        },
+        {
+          "center": [
+            0.91,
+            0.51
+          ],
+          "radius": [
+            0.06,
+            0.06
+          ]
+        },
+        {
+          "center": [
+            0.86,
+            0.66
+          ],
+          "radius": [
+            0.06,
+            0.06
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "105217",
+    "title": "Tendons Beneath the Gesture",
+    "observation": "The source emphasizes dorsal tendons flowing into knuckles and finger centerlines receding in perspective.",
+    "review": {
+      "anatomy": 4,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 5,
+      "notes": "Five fingers are readable with natural nails, graduated lengths and a coherent thumb position. Extensor tendons emerge from a continuous wrist rather than parallel ropes. Slightly flexed little finger is foreshortened; it must not be stretched independently in motion."
+    },
+    "landmarks": {
+      "wrist": [
+        0.22,
+        0.78
+      ],
+      "hand": [
+        0.52,
+        0.56
+      ],
+      "thumbTip": [
+        0.85,
+        0.67
+      ],
+      "indexTip": [
+        0.95,
+        0.29
+      ],
+      "middleTip": [
+        0.88,
+        0.12
+      ],
+      "ringTip": [
+        0.76,
+        0.065
+      ],
+      "littleTip": [
+        0.61,
+        0.15
+      ]
+    },
+    "motion": "Subtle knuckle lift followed by relaxation, wrist anchored and thumb contact stable. Keep deformation local to dorsal hand and proximal fingers; avoid wiggling individual fingertips.",
+    "image": "corpus/plates/105217.png",
+    "prompt": "Use case: scientific-educational. Asset type: original finished atelier anatomy drawing. Input image 1 is subject guidance from a photographed book page: extract anatomical relationships only, not the layout, labels or exact drawing. Input image 2 is definitive graphite rendering style: realistic living skin, beautifully resolved continuous tonal transitions, tissue and tendon detail, subtle paper grain, no heavy outline, warm ivory ground. A beautiful single adult dorsal hand, back of hand facing viewer, naturally reaching diagonally from lower left wrist toward upper right fingers. Four slightly bent and gently spaced fingers with middle longest, and a single thumb naturally angled to the side. Exactly five digits. Entire hand and fingers visible. Extensor tendons flow continuously from wrist toward each knuckle, disappearing beneath skin; realistic subtle veins, individual knuckles, skin wrinkles and short nails that follow curved fingertip planes. Natural soft taper, realistic webbing, no claws. Fingers relaxed rather than stiff or skeletal. Wrist and forearm base fade into paper at lower left. Composition fills central 75 percent of canvas. Single soft upper-left studio light, credible reflected light and narrow occlusion shadows. Warm ivory paper backdrop, restrained graphite and charcoal drawing with delicate purposeful marks, natural form shading and coherent perspective. One coherent limb study only. Landscape 4:3 canvas. Plenty of clear negative space, preserve complete extremities with at least 5 percent image margin. No diagrams, labels, arrows, text, signature, border or watermark. Not a photograph, not cartoon art, no vector patches, no repetitive hatch pattern, no muscular lobes or oversized swollen muscles, no detached-looking anatomy stickers, no muddy smudges.",
+    "generation": "built-in image_gen",
+    "reviewedOutput": true,
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "knuckles take light tension",
+          "center": [
+            0.63,
+            0.42
+          ],
+          "radius": [
+            0.2,
+            0.16
+          ],
+          "translate": [
+            0.2,
+            -1.3
+          ],
+          "phase": "action",
+          "delay": 0,
+          "rotate": 0,
+          "pivot": [
+            0.63,
+            0.42
+          ]
+        },
+        {
+          "name": "extensor tendons settle",
+          "center": [
+            0.47,
+            0.59
+          ],
+          "radius": [
+            0.16,
+            0.18
+          ],
+          "translate": [
+            0.5,
+            -0.8
+          ],
+          "phase": "action",
+          "delay": 0.18,
+          "rotate": 0,
+          "pivot": [
+            0.47,
+            0.59
+          ]
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.22,
+            0.78
+          ],
+          "radius": [
+            0.15,
+            0.12
+          ]
+        },
+        {
+          "center": [
+            0.85,
+            0.67
+          ],
+          "radius": [
+            0.07,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0.95,
+            0.29
+          ],
+          "radius": [
+            0.06,
+            0.06
+          ]
+        },
+        {
+          "center": [
+            0.88,
+            0.12
+          ],
+          "radius": [
+            0.06,
+            0.06
+          ]
+        },
+        {
+          "center": [
+            0.76,
+            0.065
+          ],
+          "radius": [
+            0.06,
+            0.06
+          ]
+        },
+        {
+          "center": [
+            0.61,
+            0.15
+          ],
+          "radius": [
+            0.06,
+            0.06
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "105218",
+    "title": "Weight Through the Outer Leg",
+    "observation": "The source examines lateral thigh and calf planes, knee transition and the long taper toward the ankle.",
+    "review": {
+      "anatomy": 4,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 5,
+      "notes": "Clear asymmetry of calf and tibial planes with continuous ankle insertion and a planted five-toed foot. The long negative space strengthens the standing gesture. Quadriceps are intentionally cropped; contact shadow is tight under heel and forefoot."
+    },
+    "landmarks": {
+      "knee": [
+        0.43,
+        0.22
+      ],
+      "calf": [
+        0.44,
+        0.45
+      ],
+      "ankle": [
+        0.49,
+        0.77
+      ],
+      "heel": [
+        0.46,
+        0.86
+      ],
+      "ball": [
+        0.68,
+        0.9
+      ],
+      "toeTips": [
+        0.76,
+        0.93
+      ],
+      "ground": [
+        0.62,
+        0.95
+      ]
+    },
+    "motion": "A restrained weight transfer through knee and calf while ankle, heel, forefoot and contact shadow remain pinned. Less than 0.8 percent lateral knee shift; no whole-leg floating.",
+    "image": "corpus/plates/105218.png",
+    "prompt": "Use case: scientific-educational. Asset type: original finished atelier anatomy drawing. Input image 1 is subject guidance from a photographed book page: extract anatomical relationships only, not the layout, labels or exact drawing. Input image 2 is definitive graphite rendering style: realistic living skin, beautifully resolved continuous tonal transitions, tissue and tendon detail, subtle paper grain, no heavy outline, warm ivory ground. One adult lower limb in three-quarter OUTER SIDE view, standing with knee almost straight, cropped softly at upper thigh and showing complete ankle and foot grounded below. Strong but naturally proportioned anatomy: offset thigh and calf masses, subtle lateral quadriceps, clear knee/patella transition, slender tibial plane, realistic lateral ankle, Achilles insertion, and five toes foreshortened in a plausible lateral foot. The leg runs diagonally from upper left toward a foot at lower right, foot points right. No exposed bones or flayed muscle, no bodybuilder. Soft contact shadow under sole. Elegant taper, visible skin rather than muscles drawn as separate objects. Single soft upper-left studio light, credible reflected light and narrow occlusion shadows. Warm ivory paper backdrop, restrained graphite and charcoal drawing with delicate purposeful marks, natural form shading and coherent perspective. One coherent limb study only. Landscape 4:3 canvas. Plenty of clear negative space, preserve complete extremities with at least 5 percent image margin. No diagrams, labels, arrows, text, signature, border or watermark. Not a photograph, not cartoon art, no vector patches, no repetitive hatch pattern, no muscular lobes or oversized swollen muscles, no detached-looking anatomy stickers, no muddy smudges.",
+    "generation": "built-in image_gen",
+    "reviewedOutput": true,
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "calf accepts weight",
+          "center": [
+            0.44,
+            0.45
+          ],
+          "radius": [
+            0.075,
+            0.18
+          ],
+          "translate": [
+            1.4,
+            -0.7
+          ],
+          "phase": "action",
+          "delay": 0,
+          "rotate": 0,
+          "pivot": [
+            0.44,
+            0.45
+          ]
+        },
+        {
+          "name": "lateral knee settles",
+          "center": [
+            0.43,
+            0.23
+          ],
+          "radius": [
+            0.065,
+            0.1
+          ],
+          "translate": [
+            0.5,
+            -0.9
+          ],
+          "phase": "action",
+          "delay": 0.13,
+          "rotate": 0,
+          "pivot": [
+            0.43,
+            0.23
+          ]
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.49,
+            0.77
+          ],
+          "radius": [
+            0.09,
+            0.12
+          ]
+        },
+        {
+          "center": [
+            0.46,
+            0.86
+          ],
+          "radius": [
+            0.1,
+            0.08
+          ]
+        },
+        {
+          "center": [
+            0.68,
+            0.91
+          ],
+          "radius": [
+            0.16,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0.34,
+            0.025
+          ],
+          "radius": [
+            0.13,
+            0.07
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "105219",
+    "title": "The Calf Holds the Weight",
+    "observation": "The photo studies the posterior thigh, knee hollow, two calf heads and Achilles tendon, including the interlocking forms around the rear knee.",
+    "review": {
+      "anatomy": 4,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 5,
+      "notes": "Rear camera view reads clearly: calf heads differ in height, Achilles narrows into heel, toes are naturally occluded beyond the planted foot. Knee hollow is soft rather than a black diagram mark. Upper thigh is intentionally cropped to keep the study nonexplicit."
+    },
+    "landmarks": {
+      "knee": [
+        0.54,
+        0.27
+      ],
+      "calf": [
+        0.57,
+        0.48
+      ],
+      "achilles": [
+        0.59,
+        0.73
+      ],
+      "heel": [
+        0.57,
+        0.87
+      ],
+      "forefoot": [
+        0.66,
+        0.86
+      ],
+      "ground": [
+        0.6,
+        0.92
+      ]
+    },
+    "motion": "A subtle calf contraction traveling into a gentle knee release; keep Achilles length credible and heel/forefoot planted. Do not lift heel or move its contact shadow.",
+    "image": "corpus/plates/105219.png",
+    "prompt": "Use case: scientific-educational. Asset type: original finished atelier anatomy drawing. Input image 1 is subject guidance from a photographed book page: extract anatomical relationships only, not the layout, labels or exact drawing. Input image 2 is definitive graphite rendering style: realistic living skin, beautifully resolved continuous tonal transitions, tissue and tendon detail, subtle paper grain, no heavy outline, warm ivory ground. One adult leg viewed from BEHIND in a relaxed standing posture, cropped softly below the buttock so upper thigh, hamstrings, knee hollow, both calf heads, Achilles tendon, heel and short suggestion of foot are visible. No buttocks, no genitals. The medial calf sits lower than lateral calf; the back of knee has a soft diamond hollow and tendon edges without dark outlined patches. Achilles narrows naturally into heel. The foot is planted and turned very slightly outward, its toes mostly naturally hidden beyond the heel from this rear camera view. Pose has a slight diagonal from upper right toward heel at lower center. Natural athletic build, leg subtly tapered and softly asymmetrical, credible weight bearing and contact shadow. Use a wide horizontal composition with calm negative space on both sides. Single soft upper-left studio light, credible reflected light and narrow occlusion shadows. Warm ivory paper backdrop, restrained graphite and charcoal drawing with delicate purposeful marks, natural form shading and coherent perspective. One coherent limb study only. Landscape 4:3 canvas. Plenty of clear negative space, preserve complete extremities with at least 5 percent image margin. No diagrams, labels, arrows, text, signature, border or watermark. Not a photograph, not cartoon art, no vector patches, no repetitive hatch pattern, no muscular lobes or oversized swollen muscles, no detached-looking anatomy stickers, no muddy smudges.",
+    "generation": "built-in image_gen",
+    "reviewedOutput": true,
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "calf contracts toward Achilles",
+          "center": [
+            0.57,
+            0.48
+          ],
+          "radius": [
+            0.075,
+            0.18
+          ],
+          "translate": [
+            1.3,
+            -0.8
+          ],
+          "phase": "action",
+          "delay": 0,
+          "rotate": 0,
+          "pivot": [
+            0.57,
+            0.48
+          ]
+        },
+        {
+          "name": "hamstrings release",
+          "center": [
+            0.52,
+            0.16
+          ],
+          "radius": [
+            0.075,
+            0.13
+          ],
+          "translate": [
+            0.4,
+            -0.6
+          ],
+          "phase": "action",
+          "delay": 0.17,
+          "rotate": 0,
+          "pivot": [
+            0.52,
+            0.16
+          ]
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.59,
+            0.73
+          ],
+          "radius": [
+            0.07,
+            0.1
+          ]
+        },
+        {
+          "center": [
+            0.57,
+            0.87
+          ],
+          "radius": [
+            0.09,
+            0.08
+          ]
+        },
+        {
+          "center": [
+            0.66,
+            0.86
+          ],
+          "radius": [
+            0.1,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0.49,
+            0.025
+          ],
+          "radius": [
+            0.13,
+            0.07
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "105220",
+    "title": "The Knee Connects the Gesture",
+    "observation": "Corrected source mapping: 105220.jpg depicts the outer leg and a bent knee, not an arm. This study uses the seated bend to show thigh/calf connection across the knee.",
+    "review": {
+      "anatomy": 4,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 5,
+      "notes": "The kneecap and lateral tendon bridge connect thigh to lower leg; calf and ankle have a continuous taper. Five foreshortened toes and a narrow contact shadow ground the foot. Cropped thigh is intentional; the final pose differs from the standing-leg studies."
+    },
+    "landmarks": {
+      "thigh": [
+        0.26,
+        0.14
+      ],
+      "knee": [
+        0.53,
+        0.21
+      ],
+      "calf": [
+        0.46,
+        0.46
+      ],
+      "ankle": [
+        0.49,
+        0.75
+      ],
+      "heel": [
+        0.45,
+        0.86
+      ],
+      "forefoot": [
+        0.65,
+        0.91
+      ],
+      "ground": [
+        0.57,
+        0.94
+      ]
+    },
+    "motion": "Tiny controlled knee release and return, knee maximum displacement below 0.6 percent canvas. Pin heel, ball, toes and lower ankle, preserve thigh/calf attachment, retain contact shadow.",
+    "image": "corpus/plates/105220.png",
+    "prompt": "Use case: scientific-educational. Asset type: original finished atelier anatomy drawing. Input image 1 is subject guidance from a photographed book page: extract anatomical relationships only, not the layout, labels or exact drawing. Input image 2 is definitive graphite rendering style: realistic living skin, beautifully resolved continuous tonal transitions, tissue and tendon detail, subtle paper grain, no heavy outline, warm ivory ground. A single adult bent leg observed from the OUTER SIDE, a study of the knee connection and quadriceps, based on the bent leg anatomy in input1. Seated pose, no furniture shown. Upper thigh slopes from upper left to knee at right-center; knee bent about 90 degrees; calf slopes down-left to a relaxed ankle and complete foot near lower center. Crop upper thigh softly without showing pelvis or genitals. Skin-covered anatomy: softly modeled quadriceps meet the patella, hamstring tendon transitions around the side of knee, tapered calf and Achilles, coherent ankle joint and foot with five toes seen in lateral perspective. No disconnected muscle bubbles. Render the limb as living natural form, beautiful foreshortening, no overbuilt bodybuilding. Keep complete foot well inside the frame. Single soft upper-left studio light, credible reflected light and narrow occlusion shadows. Warm ivory paper backdrop, restrained graphite and charcoal drawing with delicate purposeful marks, natural form shading and coherent perspective. One coherent limb study only. Landscape 4:3 canvas. Plenty of clear negative space, preserve complete extremities with at least 5 percent image margin. No diagrams, labels, arrows, text, signature, border or watermark. Not a photograph, not cartoon art, no vector patches, no repetitive hatch pattern, no muscular lobes or oversized swollen muscles, no detached-looking anatomy stickers, no muddy smudges.",
+    "generation": "built-in image_gen",
+    "reviewedOutput": true,
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "quadriceps ease across bent knee",
+          "center": [
+            0.36,
+            0.13
+          ],
+          "radius": [
+            0.2,
+            0.085
+          ],
+          "translate": [
+            0,
+            -0.8
+          ],
+          "phase": "action",
+          "delay": 0,
+          "rotate": 0,
+          "pivot": [
+            0.36,
+            0.13
+          ]
+        },
+        {
+          "name": "lateral knee yields",
+          "center": [
+            0.52,
+            0.24
+          ],
+          "radius": [
+            0.065,
+            0.1
+          ],
+          "translate": [
+            0.8,
+            -0.4
+          ],
+          "phase": "action",
+          "delay": 0.12,
+          "rotate": 0,
+          "pivot": [
+            0.52,
+            0.24
+          ]
+        },
+        {
+          "name": "calf follows pressure",
+          "center": [
+            0.46,
+            0.44
+          ],
+          "radius": [
+            0.065,
+            0.15
+          ],
+          "translate": [
+            1,
+            -0.8
+          ],
+          "phase": "action",
+          "delay": 0.24,
+          "rotate": 0,
+          "pivot": [
+            0.46,
+            0.44
+          ]
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.49,
+            0.75
+          ],
+          "radius": [
+            0.08,
+            0.12
+          ]
+        },
+        {
+          "center": [
+            0.45,
+            0.86
+          ],
+          "radius": [
+            0.1,
+            0.08
+          ]
+        },
+        {
+          "center": [
+            0.65,
+            0.91
+          ],
+          "radius": [
+            0.15,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0.15,
+            0.055
+          ],
+          "radius": [
+            0.14,
+            0.08
+          ]
+        }
+      ]
+    },
+    "category": "leg"
+  },
+  {
+    "id": "105221",
+    "title": "Five Toes, One Foundation",
+    "observation": "The source distinguishes broad padded toes from fingers and shows their stepped joint arc and the sloping forefoot.",
+    "review": {
+      "anatomy": 5,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 5,
+      "notes": "Five toes have broad differentiated pads and correctly oriented nails; big toe and smaller toes share a coherent forefoot. Shadows under the toe pads establish contact. Tendon relief and bone landmarks are legible without isolated ovals or repetitive hatching."
+    },
+    "landmarks": {
+      "ankle": [
+        0.29,
+        0.3
+      ],
+      "heel": [
+        0.17,
+        0.57
+      ],
+      "dorsum": [
+        0.48,
+        0.57
+      ],
+      "ball": [
+        0.62,
+        0.74
+      ],
+      "littleToe": [
+        0.51,
+        0.82
+      ],
+      "fourthToe": [
+        0.61,
+        0.85
+      ],
+      "thirdToe": [
+        0.69,
+        0.84
+      ],
+      "secondToe": [
+        0.77,
+        0.82
+      ],
+      "bigToe": [
+        0.86,
+        0.77
+      ],
+      "ground": [
+        0.65,
+        0.9
+      ]
+    },
+    "motion": "A small toe-settle gesture: minimal proximal flexion while toe pads and heel contact stay pinned. Move ball/forefoot less than 0.4 percent canvas; no bead-like individual toe translation.",
+    "image": "corpus/plates/105221.png",
+    "prompt": "Use case: scientific-educational. Asset type: original finished atelier anatomy drawing. Input image 1 is subject guidance from a photographed book page: extract anatomical relationships only, not the layout, labels or exact drawing. Input image 2 is definitive graphite rendering style: realistic living skin, beautifully resolved continuous tonal transitions, tissue and tendon detail, subtle paper grain, no heavy outline, warm ivory ground. One adult forefoot and toes in a close three-quarter view from slightly above. Forefoot enters naturally from upper left, toes point lower right. Focus on realistic metatarsal arch, five toes in a stepped natural arc, big toe clearly broader with two phalanges, second toe slightly shorter, third/fourth/fifth decreasing; toes are attached continuously to the foot, slightly flexed and resting on paper ground, with varied joints, soft pads, credible nails, and subtle skin folds. Show the front two thirds of the foot with ankle fading gently above-left. Soft contact shadow firmly beneath ball and toe pads. Subtle tendon relief without exaggerated rope-like veins. Avoid bead toes, fingers posing as toes or uniform cylindrical digits. Make the toes beautiful and anatomically believable, very clear in three-quarter perspective. Single soft upper-left studio light, credible reflected light and narrow occlusion shadows. Warm ivory paper backdrop, restrained graphite and charcoal drawing with delicate purposeful marks, natural form shading and coherent perspective. One coherent limb study only. Landscape 4:3 canvas. Plenty of clear negative space, preserve complete extremities with at least 5 percent image margin. No diagrams, labels, arrows, text, signature, border or watermark. Not a photograph, not cartoon art, no vector patches, no repetitive hatch pattern, no muscular lobes or oversized swollen muscles, no detached-looking anatomy stickers, no muddy smudges.",
+    "generation": "built-in image_gen",
+    "reviewedOutput": true,
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "metatarsal relief softens",
+          "center": [
+            0.6,
+            0.69
+          ],
+          "radius": [
+            0.18,
+            0.1
+          ],
+          "translate": [
+            0.4,
+            -1.1
+          ],
+          "phase": "action",
+          "delay": 0,
+          "rotate": 0,
+          "pivot": [
+            0.6,
+            0.69
+          ]
+        },
+        {
+          "name": "proximal toe joints settle",
+          "center": [
+            0.72,
+            0.78
+          ],
+          "radius": [
+            0.18,
+            0.07
+          ],
+          "translate": [
+            0.6,
+            0.65
+          ],
+          "phase": "action",
+          "delay": 0.16,
+          "rotate": 0,
+          "pivot": [
+            0.72,
+            0.78
+          ]
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.29,
+            0.3
+          ],
+          "radius": [
+            0.14,
+            0.2
+          ]
+        },
+        {
+          "center": [
+            0.17,
+            0.57
+          ],
+          "radius": [
+            0.12,
+            0.1
+          ]
+        },
+        {
+          "center": [
+            0.51,
+            0.85
+          ],
+          "radius": [
+            0.07,
+            0.045
+          ]
+        },
+        {
+          "center": [
+            0.61,
+            0.88
+          ],
+          "radius": [
+            0.065,
+            0.045
+          ]
+        },
+        {
+          "center": [
+            0.69,
+            0.88
+          ],
+          "radius": [
+            0.065,
+            0.045
+          ]
+        },
+        {
+          "center": [
+            0.77,
+            0.86
+          ],
+          "radius": [
+            0.065,
+            0.045
+          ]
+        },
+        {
+          "center": [
+            0.86,
+            0.81
+          ],
+          "radius": [
+            0.075,
+            0.055
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "105222",
+    "title": "The Foot Seen from Above",
+    "observation": "The reference provides dorsal/front and side comparisons. The chosen final plate is a true overhead view with the foot pointing down the page.",
+    "review": {
+      "anatomy": 5,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 5,
+      "notes": "Regenerated after the first version duplicated the three-quarter toe study. Final dorsal view clearly shows five toenails, broad first toe, a stepped arc of smaller toes, tapering dorsum and understated tendon flow. The wide margins make the front-view silhouette easy to inspect."
+    },
+    "landmarks": {
+      "ankle": [
+        0.49,
+        0.18
+      ],
+      "dorsum": [
+        0.51,
+        0.44
+      ],
+      "ball": [
+        0.52,
+        0.63
+      ],
+      "bigToe": [
+        0.4,
+        0.85
+      ],
+      "secondToe": [
+        0.49,
+        0.88
+      ],
+      "thirdToe": [
+        0.55,
+        0.85
+      ],
+      "fourthToe": [
+        0.6,
+        0.8
+      ],
+      "littleToe": [
+        0.65,
+        0.73
+      ],
+      "ground": [
+        0.52,
+        0.92
+      ]
+    },
+    "motion": "Barely perceptible toe spread-and-settle from the metatarsal bases, with ankle and toe-pad contact pinned. Keep each digit length stable and preserve the overhead perspective.",
+    "image": "corpus/plates/105222.png",
+    "prompt": "Use case: scientific-educational. Create a DIFFERENT VIEW from input image2. Input1 is a reference for DORSAL TOP-DOWN FOOT VIEW, viewed directly from ABOVE. Input2 is only rendering style, absolutely do not copy its three-quarter angle. Draw one realistically proportioned adult foot as observed from an overhead camera looking straight down at its top. The ankle enters from TOP CENTER, extends VERTICALLY downward, and the toes point toward BOTTOM CENTER. The foot's heel is behind it and NOT visible to either side. This must clearly be the FRONT/TOP surface of the foot, not an ankle profile or side view. All five toenails visible from above, big toe on image left, middle toe joints form a staggered curved line, little toe on right is visibly smaller. Width taper of the dorsum and metatarsals plausible, foot slightly turned at most five degrees from vertical. Four smaller toes moderately flexed, soft joints and natural lengths, no cylinders or beads. Finely detailed graphite and charcoal on warm ivory paper, continuous form shading, tissue and subtle tendon and vein relief, restrained fine marks. Single upper-left soft studio light. One foot only, centered in wide 4:3 landscape with 20 percent blank margins left and right, ankle base fades softly at top. Toes fully inside frame with blank space below. Beautiful clean atelier drawing, natural living anatomy, no text, labels, arrows, border, signature or watermark.",
+    "generation": "built-in image_gen",
+    "reviewedOutput": true,
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "dorsal tendons take tension",
+          "center": [
+            0.51,
+            0.47
+          ],
+          "radius": [
+            0.12,
+            0.22
+          ],
+          "translate": [
+            0.5,
+            -1.4
+          ],
+          "phase": "action",
+          "delay": 0,
+          "rotate": 0,
+          "pivot": [
+            0.51,
+            0.47
+          ]
+        },
+        {
+          "name": "big toe base opens",
+          "center": [
+            0.4,
+            0.69
+          ],
+          "radius": [
+            0.065,
+            0.12
+          ],
+          "translate": [
+            -1.1,
+            -0.3
+          ],
+          "phase": "action",
+          "delay": 0.1,
+          "rotate": 0,
+          "pivot": [
+            0.4,
+            0.69
+          ]
+        },
+        {
+          "name": "outer toe bases release",
+          "center": [
+            0.6,
+            0.68
+          ],
+          "radius": [
+            0.07,
+            0.1
+          ],
+          "translate": [
+            0.8,
+            -0.2
+          ],
+          "phase": "action",
+          "delay": 0.23,
+          "rotate": 0,
+          "pivot": [
+            0.6,
+            0.68
+          ]
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.49,
+            0.18
+          ],
+          "radius": [
+            0.12,
+            0.14
+          ]
+        },
+        {
+          "center": [
+            0.4,
+            0.85
+          ],
+          "radius": [
+            0.065,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0.49,
+            0.88
+          ],
+          "radius": [
+            0.05,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0.55,
+            0.85
+          ],
+          "radius": [
+            0.045,
+            0.06
+          ]
+        },
+        {
+          "center": [
+            0.6,
+            0.8
+          ],
+          "radius": [
+            0.045,
+            0.06
+          ]
+        },
+        {
+          "center": [
+            0.65,
+            0.73
+          ],
+          "radius": [
+            0.04,
+            0.045
+          ]
+        }
+      ]
+    }
+  }
+]

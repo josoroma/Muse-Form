@@ -1,0 +1,1100 @@
+[
+  {
+    "id": "105193",
+    "image": "corpus/plates/105193.png",
+    "prompt": "Use case: illustration-story. Asset type: polished original fine-art corpus plate, landscape 4:3 composition at the highest available resolution. Create a masterful realistic graphite and soft charcoal atelier drawing on warm ivory paper. Image 1 is ONLY an anatomical/expressive reference photographed from a book: learn the anatomy and gesture; do not copy the page composition, captions, diagrams, paper skew or identity. Image 2 is ONLY the approved rendering-style reference: match its convincing volume, fine graphite grain, exquisite controlled tone, soft upper-left window light and quiet ivory ground. A finished gallery-quality drawing, refined and anatomically observed, not a photograph, not plastic CGI. Beautiful broad halftones, selective crisp focal edges, delicate secondary edges and lost edges toward the base. Absolutely no heavy uniform outlines, flat vector shapes, repetitive hatch bands, scratchy construction lines, doodles, diagrams, letters, text, signatures, watermarks or borders. Keep a clean restful composition with generous negative space; the subject fills 70–80% of image height. One complete dry adult human skull in an elegant three-quarter view turned slightly to the viewer's left, resting naturally on a subtle planar surface. Convincing cranial vault and temple, deep anatomically shaped orbital cavities, bony nasal opening, open zygomatic arches, delicate maxilla and clearly structured mandible. Upper and lower teeth are naturally interlocking, not an exaggerated grin; dental arcade recedes correctly in perspective. Tiny irregular bone pores and sutures, no grotesque damage. Light upper-left illuminates forehead and cheek rim, rich soft occlusion within orbits, believable reflected light and one quiet contact shadow. Entire skull fits inside frame without clipping.",
+    "generation": "built-in image_gen",
+    "passes": 1,
+    "review": {
+      "anatomy": 4,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 4,
+      "notes": "Clear cranial volume, correctly receding arches and convincing orbital occlusion. Dental irregularity is plausible as a drawing but not a clinically validated tooth atlas. Complete silhouette and stable contact shadow; fairly close framing suits the osteological study."
+    },
+    "landmarks": {
+      "head": [
+        0.53,
+        0.46
+      ],
+      "jaw": [
+        0.44,
+        0.78
+      ],
+      "jawHinge": [
+        0.66,
+        0.59
+      ],
+      "leftOrbit": [
+        0.29,
+        0.39
+      ],
+      "rightOrbit": [
+        0.46,
+        0.4
+      ],
+      "ground": [
+        0.52,
+        0.91
+      ]
+    },
+    "motion": "Rigid osteological plate. A restrained local increase in the existing upper-left illumination reveals orbital depth; no mandible deformation.",
+    "rigOverride": {
+      "regions": [],
+      "pins": [],
+      "light": {
+        "center": [
+          0.43,
+          0.4
+        ],
+        "radius": [
+          0.39,
+          0.5
+        ],
+        "strength": 0.048
+      }
+    }
+  },
+  {
+    "id": "105194",
+    "image": "corpus/plates/105194.png",
+    "prompt": "Use case: illustration-story. Asset type: polished original fine-art corpus plate, landscape 4:3 composition at the highest available resolution. Create a masterful realistic graphite and soft charcoal atelier drawing on warm ivory paper. Image 1 is ONLY an anatomical/expressive reference photographed from a book: learn the anatomy and gesture; do not copy the page composition, captions, diagrams, paper skew or identity. Image 2 is ONLY the approved rendering-style reference: match its convincing volume, fine graphite grain, exquisite controlled tone, soft upper-left window light and quiet ivory ground. A finished gallery-quality drawing, refined and anatomically observed, not a photograph, not plastic CGI. Beautiful broad halftones, selective crisp focal edges, delicate secondary edges and lost edges toward the base. Absolutely no heavy uniform outlines, flat vector shapes, repetitive hatch bands, scratchy construction lines, doodles, diagrams, letters, text, signatures, watermarks or borders. Keep a clean restful composition with generous negative space; the subject fills 70–80% of image height. A beautifully observed close study of one adult human eye and surrounding orbital planes, brow and bridge of nose at the left. Natural relaxed open eye looking slightly to the right of camera. Both eyelids visibly wrap a spherical globe with believable thickness; small tear duct, subtle wet lower lid, detailed iris whose top is partially covered by upper lid, single luminous catchlight. Realistically grouped sparse lashes and directional eyebrow hairs. Sculpt the brow ridge, upper lid crease and lower orbital volume with soft graphite tone, not dark cosmetic outlines. Fade the surrounding skin study gracefully into clean paper; eye is the single focal point.",
+    "generation": "built-in image_gen",
+    "passes": 1,
+    "review": {
+      "anatomy": 4,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 5,
+      "notes": "Lids visibly envelop the globe; believable tear lake, wet lower edge and orbital brow. Iris foreshortening and grouped lashes are convincing. Fine graphite grain remains quiet and the only sharp accent is the focal eye."
+    },
+    "landmarks": {
+      "iris": [
+        0.438,
+        0.479
+      ],
+      "brow": [
+        0.49,
+        0.19
+      ],
+      "upperLid": [
+        0.51,
+        0.403
+      ],
+      "lowerLid": [
+        0.51,
+        0.58
+      ],
+      "tearDuct": [
+        0.345,
+        0.54
+      ]
+    },
+    "motion": "Keep eye, lashes, pupil and lids rigid. A small warm-light breath over the orbital plane studies surface depth without pretending to animate a blink.",
+    "rigOverride": {
+      "regions": [],
+      "pins": [],
+      "light": {
+        "center": [
+          0.46,
+          0.4
+        ],
+        "radius": [
+          0.4,
+          0.43
+        ],
+        "strength": 0.035
+      }
+    }
+  },
+  {
+    "id": "105195",
+    "image": "corpus/plates/105195.png",
+    "prompt": "Use case: illustration-story. Asset type: polished original fine-art corpus plate, landscape 4:3 composition at the highest available resolution. Create a masterful realistic graphite and soft charcoal atelier drawing on warm ivory paper. Image 1 is ONLY an anatomical/expressive reference photographed from a book: learn the anatomy and gesture; do not copy the page composition, captions, diagrams, paper skew or identity. Image 2 is ONLY the approved rendering-style reference: match its convincing volume, fine graphite grain, exquisite controlled tone, soft upper-left window light and quiet ivory ground. A finished gallery-quality drawing, refined and anatomically observed, not a photograph, not plastic CGI. Beautiful broad halftones, selective crisp focal edges, delicate secondary edges and lost edges toward the base. Absolutely no heavy uniform outlines, flat vector shapes, repetitive hatch bands, scratchy construction lines, doodles, diagrams, letters, text, signatures, watermarks or borders. Keep a clean restful composition with generous negative space; the subject fills 70–80% of image height. A single large human left ear, upright, seen in a slight three-quarter view attached to a delicately indicated side of head. Draw the continuous fleshy helix, correctly branching antihelix, triangular fossa, deep conchal bowl, tragus, antitragus and attached soft lobule with exquisite subtle tonal volume. The ear is a plausible living anatomical form, not a detached plastic model or symbolic spiral. A thin suggestion of temple and neck fades into ivory paper; no stray hair covering the cartilage. Ear centered with margins, its full silhouette visible.",
+    "generation": "built-in image_gen",
+    "passes": 1,
+    "review": {
+      "anatomy": 4,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 5,
+      "notes": "Readable helix, branching antihelix, concha and lobule with coherent attached skin. Excellent soft/hard edge balance. The subtle anatomical drawing remains an art study rather than a medically validated diagram."
+    },
+    "landmarks": {
+      "concha": [
+        0.5,
+        0.47
+      ],
+      "helix": [
+        0.59,
+        0.31
+      ],
+      "tragus": [
+        0.43,
+        0.46
+      ],
+      "lobule": [
+        0.43,
+        0.73
+      ]
+    },
+    "motion": "Cartilage remains rigid. A quiet light variation follows the already illuminated ear, retaining all conchal shadows and attachment.",
+    "rigOverride": {
+      "regions": [],
+      "pins": [],
+      "light": {
+        "center": [
+          0.53,
+          0.41
+        ],
+        "radius": [
+          0.34,
+          0.49
+        ],
+        "strength": 0.05
+      }
+    }
+  },
+  {
+    "id": "105196",
+    "image": "corpus/plates/105196.png",
+    "prompt": "Use case: illustration-story. Asset type: polished original fine-art corpus plate, landscape 4:3 composition at the highest available resolution. Create a masterful realistic graphite and soft charcoal atelier drawing on warm ivory paper. Image 1 is ONLY an anatomical/expressive reference photographed from a book: learn the anatomy and gesture; do not copy the page composition, captions, diagrams, paper skew or identity. Image 2 is ONLY the approved rendering-style reference: match its convincing volume, fine graphite grain, exquisite controlled tone, soft upper-left window light and quiet ivory ground. A finished gallery-quality drawing, refined and anatomically observed, not a photograph, not plastic CGI. Beautiful broad halftones, selective crisp focal edges, delicate secondary edges and lost edges toward the base. Absolutely no heavy uniform outlines, flat vector shapes, repetitive hatch bands, scratchy construction lines, doodles, diagrams, letters, text, signatures, watermarks or borders. Keep a clean restful composition with generous negative space; the subject fills 70–80% of image height. An original adult man around forty in a natural three-quarter head-and-shoulders portrait, dark wavy short hair, warm expressive eyes and a genuine restrained closed-mouth smile. Smiling cheek pads lift softly, lower lids narrow slightly, mouth corners rise with natural asymmetry; relaxed forehead and brows. A real individual with subtle skin pores, restrained stubble, believable nose cartilage and ear folds, head/neck/shoulder proportions. Dress simply in an open-collar dark linen shirt whose lower shoulders dissolve into paper. Emotion is welcoming and quietly happy, not a posed advertising grin. No props. Keep the head complete with air above hair.",
+    "generation": "built-in image_gen",
+    "refinementPrompt": "Edit target: the supplied graphite portrait. Make exactly one correction: reframe this SAME drawing wider so the entire portrait is about 12% smaller within the landscape 4:3 canvas. Add clean matching warm ivory paper around it, especially a clearly visible 8% margin ABOVE the highest hair strand. Retain the identical face, expression, identity, anatomical proportions, light, graphite detail, paper texture, clothing and pose. Keep both shoulders pleasantly fading into the bottom of the paper, not cut by a hard edge. No face retouching, no changed smile or gaze, no new details, no text, no border. The head must be complete with comfortable breathing room and may never touch the top edge.",
+    "passes": 2,
+    "review": {
+      "anatomy": 5,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 5,
+      "notes": "Coordinated cheek lift and soft lower lids support a restrained closed-mouth smile. Nose, ear and neck remain dimensional. First candidate framed hair too tightly; second pass adds clean paper and softer shoulder endings."
+    },
+    "landmarks": {
+      "head": [
+        0.52,
+        0.43
+      ],
+      "eyeLeft": [
+        0.49,
+        0.405
+      ],
+      "eyeRight": [
+        0.6,
+        0.435
+      ],
+      "nose": [
+        0.55,
+        0.495
+      ],
+      "mouth": [
+        0.53,
+        0.56
+      ],
+      "neck": [
+        0.49,
+        0.74
+      ],
+      "chest": [
+        0.51,
+        0.86
+      ]
+    },
+    "motion": "A minute warm nod and relaxed shoulder breath; expression stays drawn and fixed. Eyes, nose and mouth move together without face scaling.",
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "coherent head intention",
+          "center": [
+            0.52,
+            0.43
+          ],
+          "radius": [
+            0.6,
+            0.88
+          ],
+          "translate": [
+            1,
+            -1
+          ],
+          "rotate": 0.2,
+          "pivot": [
+            0.49,
+            0.74
+          ],
+          "phase": "action"
+        },
+        {
+          "name": "quiet shoulder breath",
+          "center": [
+            0.51,
+            0.86
+          ],
+          "radius": [
+            0.33,
+            0.15
+          ],
+          "translate": [
+            0,
+            -1.7
+          ],
+          "rotate": 0,
+          "pivot": [
+            0.51,
+            0.86
+          ],
+          "phase": "breath"
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.5,
+            0
+          ],
+          "radius": [
+            0.75,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0.5,
+            1
+          ],
+          "radius": [
+            0.75,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0,
+            0.5
+          ],
+          "radius": [
+            0.06,
+            0.75
+          ]
+        },
+        {
+          "center": [
+            1,
+            0.5
+          ],
+          "radius": [
+            0.06,
+            0.75
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "105197",
+    "image": "corpus/plates/105197.png",
+    "prompt": "Use case: illustration-story. Asset type: polished original fine-art corpus plate, landscape 4:3 composition at the highest available resolution. Create a masterful realistic graphite and soft charcoal atelier drawing on warm ivory paper. Image 1 is ONLY an anatomical/expressive reference photographed from a book: learn the anatomy and gesture; do not copy the page composition, captions, diagrams, paper skew or identity. Image 2 is ONLY the approved rendering-style reference: match its convincing volume, fine graphite grain, exquisite controlled tone, soft upper-left window light and quiet ivory ground. A finished gallery-quality drawing, refined and anatomically observed, not a photograph, not plastic CGI. Beautiful broad halftones, selective crisp focal edges, delicate secondary edges and lost edges toward the base. Absolutely no heavy uniform outlines, flat vector shapes, repetitive hatch bands, scratchy construction lines, doodles, diagrams, letters, text, signatures, watermarks or borders. Keep a clean restful composition with generous negative space; the subject fills 70–80% of image height. An original adult man around fifty with a long thoughtful face, slightly receding short hair and subtle gray beard stubble, in a gentle three-quarter head-and-shoulders portrait expressing quiet sadness. The gaze falls slightly downward, inner eyebrows rise and draw together, mouth is closed with barely lowered corners, soft tension in the lower lip. Tender believable emotional restraint, no cartoon frown or tears. Sculpt the orbital and cheek planes, the nose and chin, and the natural neck tendons with fine continuous graphite tone. Simple light linen shirt fading at shoulders into clean paper. Complete head and hair with at least 7% quiet margin above it.",
+    "generation": "built-in image_gen",
+    "refinementPrompt": "Edit target: the supplied graphite portrait. Make exactly one correction: reframe this SAME drawing wider so the entire portrait is about 12% smaller within the landscape 4:3 canvas. Add clean matching warm ivory paper around it, especially a clearly visible 8% margin ABOVE the highest hair strand. Retain the identical face, expression, identity, anatomical proportions, light, graphite detail, paper texture, clothing and pose. Keep both shoulders pleasantly fading into the bottom of the paper, not cut by a hard edge. No face retouching, no changed smile or gaze, no new details, no text, no border. The head must be complete with comfortable breathing room and may never touch the top edge.",
+    "passes": 2,
+    "review": {
+      "anatomy": 5,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 5,
+      "notes": "Inner brows lift under believable forehead tension, lowered gaze and mouth corners read as quiet sadness. Refined beard and age detail avoid a plastic finish. Reframed to preserve clear head margin and soften shoulders."
+    },
+    "landmarks": {
+      "head": [
+        0.51,
+        0.43
+      ],
+      "eyeLeft": [
+        0.526,
+        0.434
+      ],
+      "eyeRight": [
+        0.621,
+        0.467
+      ],
+      "nose": [
+        0.56,
+        0.53
+      ],
+      "mouth": [
+        0.544,
+        0.605
+      ],
+      "neck": [
+        0.47,
+        0.78
+      ],
+      "chest": [
+        0.5,
+        0.87
+      ]
+    },
+    "motion": "A barely perceptible downward head intention followed by a slow breath and return; no eye or lip morphing.",
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "coherent head intention",
+          "center": [
+            0.51,
+            0.43
+          ],
+          "radius": [
+            0.6,
+            0.88
+          ],
+          "translate": [
+            0.4,
+            1.6
+          ],
+          "rotate": -0.16,
+          "pivot": [
+            0.47,
+            0.78
+          ],
+          "phase": "action"
+        },
+        {
+          "name": "quiet shoulder breath",
+          "center": [
+            0.5,
+            0.87
+          ],
+          "radius": [
+            0.33,
+            0.15
+          ],
+          "translate": [
+            0,
+            -1.7
+          ],
+          "rotate": 0,
+          "pivot": [
+            0.5,
+            0.87
+          ],
+          "phase": "breath"
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.5,
+            0
+          ],
+          "radius": [
+            0.75,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0.5,
+            1
+          ],
+          "radius": [
+            0.75,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0,
+            0.5
+          ],
+          "radius": [
+            0.06,
+            0.75
+          ]
+        },
+        {
+          "center": [
+            1,
+            0.5
+          ],
+          "radius": [
+            0.06,
+            0.75
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "105198",
+    "image": "corpus/plates/105198.png",
+    "prompt": "Use case: illustration-story. Asset type: polished original fine-art corpus plate, landscape 4:3 composition at the highest available resolution. Create a masterful realistic graphite and soft charcoal atelier drawing on warm ivory paper. Image 1 is ONLY an anatomical/expressive reference photographed from a book: learn the anatomy and gesture; do not copy the page composition, captions, diagrams, paper skew or identity. Image 2 is ONLY the approved rendering-style reference: match its convincing volume, fine graphite grain, exquisite controlled tone, soft upper-left window light and quiet ivory ground. A finished gallery-quality drawing, refined and anatomically observed, not a photograph, not plastic CGI. Beautiful broad halftones, selective crisp focal edges, delicate secondary edges and lost edges toward the base. Absolutely no heavy uniform outlines, flat vector shapes, repetitive hatch bands, scratchy construction lines, doodles, diagrams, letters, text, signatures, watermarks or borders. Keep a clean restful composition with generous negative space; the subject fills 70–80% of image height. An original adult man around thirty-five with close-cropped hair, broad cheekbones, a strong nose and light beard stubble, in a near-front three-quarter head-and-shoulders portrait expressing controlled anger. Eyebrows compress down and inward, glabella subtly furrows, upper lids narrow around a focused gaze, nostrils gently flare, lips press together in a believable firm line and jaw clenches. No teeth bared, no shouting or grotesque caricature. Natural asymmetry, restrained pores and skin folds, strong believable neck structure. Simple dark work shirt dissolving at lower shoulders into paper. Complete head with at least 7% clear paper above hair. Emotion vivid through coordinated small facial changes.",
+    "generation": "built-in image_gen",
+    "refinementPrompt": "Edit target: the supplied graphite portrait. Make exactly one correction: reframe this SAME drawing wider so the entire portrait is about 12% smaller within the landscape 4:3 canvas. Add clean matching warm ivory paper around it, especially a clearly visible 8% margin ABOVE the highest hair strand. Retain the identical face, expression, identity, anatomical proportions, light, graphite detail, paper texture, clothing and pose. Keep both shoulders pleasantly fading into the bottom of the paper, not cut by a hard edge. No face retouching, no changed smile or gaze, no new details, no text, no border. The head must be complete with comfortable breathing room and may never touch the top edge.",
+    "passes": 2,
+    "review": {
+      "anatomy": 5,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 5,
+      "notes": "Compressed brow, narrowed lids and taut mouth clearly communicate controlled anger. Cheek and neck anatomy stay coherent under the expression. Reframing improves balance without changing the face."
+    },
+    "landmarks": {
+      "head": [
+        0.48,
+        0.43
+      ],
+      "eyeLeft": [
+        0.354,
+        0.435
+      ],
+      "eyeRight": [
+        0.478,
+        0.403
+      ],
+      "nose": [
+        0.41,
+        0.5
+      ],
+      "mouth": [
+        0.428,
+        0.585
+      ],
+      "neck": [
+        0.52,
+        0.76
+      ],
+      "chest": [
+        0.54,
+        0.86
+      ]
+    },
+    "motion": "Small held head intention and restrained breath, with a deliberate settle. The stern expression remains intact.",
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "coherent head intention",
+          "center": [
+            0.48,
+            0.43
+          ],
+          "radius": [
+            0.6,
+            0.88
+          ],
+          "translate": [
+            0,
+            -1.1
+          ],
+          "rotate": 0.13,
+          "pivot": [
+            0.52,
+            0.76
+          ],
+          "phase": "action"
+        },
+        {
+          "name": "quiet shoulder breath",
+          "center": [
+            0.54,
+            0.86
+          ],
+          "radius": [
+            0.33,
+            0.15
+          ],
+          "translate": [
+            0,
+            -1.7
+          ],
+          "rotate": 0,
+          "pivot": [
+            0.54,
+            0.86
+          ],
+          "phase": "breath"
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.5,
+            0
+          ],
+          "radius": [
+            0.75,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0.5,
+            1
+          ],
+          "radius": [
+            0.75,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0,
+            0.5
+          ],
+          "radius": [
+            0.06,
+            0.75
+          ]
+        },
+        {
+          "center": [
+            1,
+            0.5
+          ],
+          "radius": [
+            0.06,
+            0.75
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "105199",
+    "image": "corpus/plates/105199.png",
+    "prompt": "Use case: illustration-story. Asset type: polished original fine-art corpus plate, landscape 4:3 composition at the highest available resolution. Create a masterful realistic graphite and soft charcoal atelier drawing on warm ivory paper. Image 1 is ONLY an anatomical/expressive reference photographed from a book: learn the anatomy and gesture; do not copy the page composition, captions, diagrams, paper skew or identity. Image 2 is ONLY the approved rendering-style reference: match its convincing volume, fine graphite grain, exquisite controlled tone, soft upper-left window light and quiet ivory ground. A finished gallery-quality drawing, refined and anatomically observed, not a photograph, not plastic CGI. Beautiful broad halftones, selective crisp focal edges, delicate secondary edges and lost edges toward the base. Absolutely no heavy uniform outlines, flat vector shapes, repetitive hatch bands, scratchy construction lines, doodles, diagrams, letters, text, signatures, watermarks or borders. Keep a clean restful composition with generous negative space; the subject fills 70–80% of image height. An original adult man in his late twenties with short tousled hair, clean-shaven narrow face, realistic eyes and fine facial features, in a three-quarter head-and-shoulders portrait expressing a sudden moment of fear held under control. Inner brows lift and tense together, upper eyelids widen with a small visible strip of sclera above the iris but eyes stay anatomically natural, lower eyelids tense. Lips part slightly and retract horizontally to reveal only a narrow strip of upper teeth; tense jaw and subtle neck tendons. No screaming, no monster face, no melodramatic bulging eyeballs, no sweat drops. Simple open-neck shirt fading at shoulder edges. Complete head with 7% paper above the hair. Clean elegant fine art finish with the emotional focal point at the eyes.",
+    "generation": "built-in image_gen",
+    "refinementPrompt": "Edit target: the supplied graphite portrait. Make exactly one correction: reframe this SAME drawing wider so the entire portrait is about 12% smaller within the landscape 4:3 canvas. Add clean matching warm ivory paper around it, especially a clearly visible 8% margin ABOVE the highest hair strand. Retain the identical face, expression, identity, anatomical proportions, light, graphite detail, paper texture, clothing and pose. Keep both shoulders pleasantly fading into the bottom of the paper, not cut by a hard edge. No face retouching, no changed smile or gaze, no new details, no text, no border. The head must be complete with comfortable breathing room and may never touch the top edge.",
+    "passes": 2,
+    "review": {
+      "anatomy": 4,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 5,
+      "notes": "Raised tense inner brows, upward glance and retracted parted lips distinguish fear from surprise. Teeth form a narrow plausible strip. First candidate touched the upper hair margin; second pass fixes the framing and shoulder fade."
+    },
+    "landmarks": {
+      "head": [
+        0.42,
+        0.41
+      ],
+      "eyeLeft": [
+        0.434,
+        0.393
+      ],
+      "eyeRight": [
+        0.537,
+        0.37
+      ],
+      "nose": [
+        0.49,
+        0.46
+      ],
+      "mouth": [
+        0.498,
+        0.55
+      ],
+      "neck": [
+        0.45,
+        0.75
+      ],
+      "chest": [
+        0.55,
+        0.82
+      ]
+    },
+    "motion": "A tiny retreat and restrained breath keep the fearful pose alive. Preserve the iris, teeth and facial proportions as a single coherent region.",
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "coherent head intention",
+          "center": [
+            0.42,
+            0.41
+          ],
+          "radius": [
+            0.6,
+            0.88
+          ],
+          "translate": [
+            1.4,
+            -1.4
+          ],
+          "rotate": 0.16,
+          "pivot": [
+            0.45,
+            0.75
+          ],
+          "phase": "action"
+        },
+        {
+          "name": "quiet shoulder breath",
+          "center": [
+            0.55,
+            0.82
+          ],
+          "radius": [
+            0.33,
+            0.15
+          ],
+          "translate": [
+            0,
+            -1.7
+          ],
+          "rotate": 0,
+          "pivot": [
+            0.55,
+            0.82
+          ],
+          "phase": "breath"
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.5,
+            0
+          ],
+          "radius": [
+            0.75,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0.5,
+            1
+          ],
+          "radius": [
+            0.75,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0,
+            0.5
+          ],
+          "radius": [
+            0.06,
+            0.75
+          ]
+        },
+        {
+          "center": [
+            1,
+            0.5
+          ],
+          "radius": [
+            0.06,
+            0.75
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "105200",
+    "image": "corpus/plates/105200.png",
+    "prompt": "Use case: illustration-story. Asset type: polished original fine-art corpus plate, landscape 4:3 composition at the highest available resolution. Create a masterful realistic graphite and soft charcoal atelier drawing on warm ivory paper. Image 1 is ONLY an anatomical/expressive reference photographed from a book: learn the anatomy and gesture; do not copy the page composition, captions, diagrams, paper skew or identity. Image 2 is ONLY the approved rendering-style reference: match its convincing volume, fine graphite grain, exquisite controlled tone, soft upper-left window light and quiet ivory ground. A finished gallery-quality drawing, refined and anatomically observed, not a photograph, not plastic CGI. Beautiful broad halftones, selective crisp focal edges, delicate secondary edges and lost edges toward the base. Absolutely no heavy uniform outlines, flat vector shapes, repetitive hatch bands, scratchy construction lines, doodles, diagrams, letters, text, signatures, watermarks or borders. Keep a clean restful composition with generous negative space; the subject fills 70–80% of image height. An original adult man around thirty with gently curled dark hair, clean-shaven face and delicate expressive features, in a near-front three-quarter head-and-shoulders portrait expressing genuine astonishment. Both brows naturally rise with fine horizontal forehead creases, eyes widen but retain natural iris size, jaw drops slightly to form a soft oval gasp. Mouth anatomy correctly articulates lips, small visible upper incisors and dark interior; lower jaw connected to believable neck. Wonder rather than terror, clear contrast to a frightened expression. Simple light linen shirt dissolving at shoulders into paper. The COMPLETE head is inside the image with generous blank paper above the hair; frame WIDER rather than cropping the hair.",
+    "generation": "built-in image_gen",
+    "refinementPrompt": "Edit target: the supplied graphite portrait. Make exactly one correction: reframe this SAME drawing wider so the entire portrait is about 12% smaller within the landscape 4:3 canvas. Add clean matching warm ivory paper around it, especially a clearly visible 8% margin ABOVE the highest hair strand. Retain the identical face, expression, identity, anatomical proportions, light, graphite detail, paper texture, clothing and pose. Keep both shoulders pleasantly fading into the bottom of the paper, not cut by a hard edge. No face retouching, no changed smile or gaze, no new details, no text, no border. The head must be complete with comfortable breathing room and may never touch the top edge.",
+    "passes": 2,
+    "review": {
+      "anatomy": 4,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 5,
+      "notes": "Raised orbital arches, clear natural irises and a softly dropped jaw read as astonishment. Mouth opening is shaped rather than symbolic. Second pass widens framing and keeps the same character."
+    },
+    "landmarks": {
+      "head": [
+        0.46,
+        0.39
+      ],
+      "eyeLeft": [
+        0.454,
+        0.383
+      ],
+      "eyeRight": [
+        0.56,
+        0.366
+      ],
+      "nose": [
+        0.515,
+        0.44
+      ],
+      "mouth": [
+        0.529,
+        0.54
+      ],
+      "neck": [
+        0.47,
+        0.73
+      ],
+      "chest": [
+        0.5,
+        0.83
+      ]
+    },
+    "motion": "Subtle upward head intention with a small chest breath; keep the astonished expression and mouth interior rigid.",
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "coherent head intention",
+          "center": [
+            0.46,
+            0.39
+          ],
+          "radius": [
+            0.6,
+            0.88
+          ],
+          "translate": [
+            0,
+            -1.6
+          ],
+          "rotate": -0.15,
+          "pivot": [
+            0.47,
+            0.73
+          ],
+          "phase": "action"
+        },
+        {
+          "name": "quiet shoulder breath",
+          "center": [
+            0.5,
+            0.83
+          ],
+          "radius": [
+            0.33,
+            0.15
+          ],
+          "translate": [
+            0,
+            -1.7
+          ],
+          "rotate": 0,
+          "pivot": [
+            0.5,
+            0.83
+          ],
+          "phase": "breath"
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.5,
+            0
+          ],
+          "radius": [
+            0.75,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0.5,
+            1
+          ],
+          "radius": [
+            0.75,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0,
+            0.5
+          ],
+          "radius": [
+            0.06,
+            0.75
+          ]
+        },
+        {
+          "center": [
+            1,
+            0.5
+          ],
+          "radius": [
+            0.06,
+            0.75
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "105202",
+    "image": "corpus/plates/105202.png",
+    "prompt": "Use case: illustration-story. Asset type: polished original fine-art corpus plate, landscape 4:3 composition at the highest available resolution. Create a masterful realistic graphite and soft charcoal atelier drawing on warm ivory paper. Image 1 is ONLY an anatomical/expressive reference photographed from a book: learn the anatomy and gesture; do not copy the page composition, captions, diagrams, paper skew or identity. Image 2 is ONLY the approved rendering-style reference: match its convincing volume, fine graphite grain, exquisite controlled tone, soft upper-left window light and quiet ivory ground. A finished gallery-quality drawing, refined and anatomically observed, not a photograph, not plastic CGI. Beautiful broad halftones, selective crisp focal edges, delicate secondary edges and lost edges toward the base. Absolutely no heavy uniform outlines, flat vector shapes, repetitive hatch bands, scratchy construction lines, doodles, diagrams, letters, text, signatures, watermarks or borders. Keep a clean restful composition with generous negative space; the subject fills 70–80% of image height. An original middle-aged adult man in clear RIGHT-facing profile caught in a warm spontaneous laugh, head slightly tipped back. Short slightly graying swept hair, realistic ear folds, eye joyfully narrowed with fine crow's feet, cheek raised, mouth opens naturally with perspective upper dental arcade and connected lower jaw; face is distinctly profile, only one eye visible. Strong nose silhouette, forehead, lips and chin form a beautiful natural contour with soft lost edges. Believable neck tendons and shoulder of a plain open-collar linen shirt, unfinished shoulders dissolving into paper. Balanced composition with empty space in front of the face, complete back of skull and ample paper above hair. No props and no exaggerated cartoon mouth.",
+    "generation": "built-in image_gen",
+    "refinementPrompt": "Edit target: the supplied graphite portrait. Make exactly one correction: reframe this SAME drawing wider so the entire portrait is about 12% smaller within the landscape 4:3 canvas. Add clean matching warm ivory paper around it, especially a clearly visible 8% margin ABOVE the highest hair strand. Retain the identical face, expression, identity, anatomical proportions, light, graphite detail, paper texture, clothing and pose. Keep both shoulders pleasantly fading into the bottom of the paper, not cut by a hard edge. No face retouching, no changed smile or gaze, no new details, no text, no border. The head must be complete with comfortable breathing room and may never touch the top edge.",
+    "passes": 2,
+    "review": {
+      "anatomy": 4,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 5,
+      "notes": "Strong profile silhouette, lifted cheek, folded lid and receding dental arcade support a natural laugh. Neck follows the lifted chin. Second pass adds purposeful lead room and a safe top margin; no need to deform the jaw."
+    },
+    "landmarks": {
+      "head": [
+        0.45,
+        0.42
+      ],
+      "eye": [
+        0.578,
+        0.318
+      ],
+      "ear": [
+        0.391,
+        0.427
+      ],
+      "nose": [
+        0.642,
+        0.369
+      ],
+      "mouth": [
+        0.615,
+        0.474
+      ],
+      "chin": [
+        0.642,
+        0.575
+      ],
+      "neck": [
+        0.52,
+        0.72
+      ],
+      "chest": [
+        0.51,
+        0.84
+      ]
+    },
+    "motion": "A tiny coherent head lift and breathing response suggest the held laugh; keep jaw, teeth, eye and ear proportions fixed.",
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "coherent head intention",
+          "center": [
+            0.45,
+            0.42
+          ],
+          "radius": [
+            0.6,
+            0.88
+          ],
+          "translate": [
+            0.5,
+            -1.7
+          ],
+          "rotate": -0.18,
+          "pivot": [
+            0.52,
+            0.72
+          ],
+          "phase": "action"
+        },
+        {
+          "name": "quiet shoulder breath",
+          "center": [
+            0.51,
+            0.84
+          ],
+          "radius": [
+            0.33,
+            0.15
+          ],
+          "translate": [
+            0,
+            -2.3
+          ],
+          "rotate": 0,
+          "pivot": [
+            0.51,
+            0.84
+          ],
+          "phase": "breath"
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.5,
+            0
+          ],
+          "radius": [
+            0.75,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0.5,
+            1
+          ],
+          "radius": [
+            0.75,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0,
+            0.5
+          ],
+          "radius": [
+            0.06,
+            0.75
+          ]
+        },
+        {
+          "center": [
+            1,
+            0.5
+          ],
+          "radius": [
+            0.06,
+            0.75
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "105203",
+    "image": "corpus/plates/105203.png",
+    "prompt": "Use case: illustration-story. Asset type: polished original fine-art corpus plate, landscape 4:3 composition at the highest available resolution. Create a masterful realistic graphite and soft charcoal atelier drawing on warm ivory paper. Image 1 is ONLY an anatomical/expressive reference photographed from a book: learn the anatomy and gesture; do not copy the page composition, captions, diagrams, paper skew or identity. Image 2 is ONLY the approved rendering-style reference: match its convincing volume, fine graphite grain, exquisite controlled tone, soft upper-left window light and quiet ivory ground. A finished gallery-quality drawing, refined and anatomically observed, not a photograph, not plastic CGI. Beautiful broad halftones, selective crisp focal edges, delicate secondary edges and lost edges toward the base. Absolutely no heavy uniform outlines, flat vector shapes, repetitive hatch bands, scratchy construction lines, doodles, diagrams, letters, text, signatures, watermarks or borders. Keep a clean restful composition with generous negative space; the subject fills 70–80% of image height. An original adult man around forty with slightly wavy dark hair and subtle stubble in a near-front head-and-shoulders portrait giving a playful conspiratorial wink. The eye on the viewer's LEFT is naturally closed by orbicularis contraction, with visible lid fold and lifted cheek; the eye on the viewer's RIGHT remains fully open, its brow slightly raised. A small asymmetric closed-mouth smile curls toward the winking side. Expression is charming and human, not exaggerated or grimacing. Perfectly coherent skull, cheeks, nose, realistic cartilage, lips and neck. Plain dark shirt fades near lower shoulders into the ivory paper. Complete head with ample blank paper above hair and both sides. Make this distinctly recognizable as a wink at first glance.",
+    "generation": "built-in image_gen",
+    "refinementPrompt": "Edit target: the supplied graphite portrait. Make exactly one correction: reframe this SAME drawing wider so the entire portrait is about 12% smaller within the landscape 4:3 canvas. Add clean matching warm ivory paper around it, especially a clearly visible 8% margin ABOVE the highest hair strand. Retain the identical face, expression, identity, anatomical proportions, light, graphite detail, paper texture, clothing and pose. Keep both shoulders pleasantly fading into the bottom of the paper, not cut by a hard edge. No face retouching, no changed smile or gaze, no new details, no text, no border. The head must be complete with comfortable breathing room and may never touch the top edge.",
+    "passes": 2,
+    "review": {
+      "anatomy": 5,
+      "lighting": 5,
+      "cleanliness": 5,
+      "composition": 5,
+      "notes": "Unilateral lid squeeze, raised cheek and asymmetric lip corner form a readable wink without a pasted-on eye. The open eye remains naturally shaped. Second pass fixes clipped top hair and restores clean negative space."
+    },
+    "landmarks": {
+      "head": [
+        0.5,
+        0.43
+      ],
+      "closedEye": [
+        0.484,
+        0.452
+      ],
+      "openEye": [
+        0.604,
+        0.446
+      ],
+      "nose": [
+        0.555,
+        0.53
+      ],
+      "mouth": [
+        0.547,
+        0.606
+      ],
+      "neck": [
+        0.496,
+        0.78
+      ],
+      "chest": [
+        0.5,
+        0.85
+      ]
+    },
+    "motion": "A minute knowing head inclination with a quiet breath. The existing wink stays fixed; no simulated eyelid closing or opening.",
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "coherent head intention",
+          "center": [
+            0.5,
+            0.43
+          ],
+          "radius": [
+            0.6,
+            0.88
+          ],
+          "translate": [
+            0.8,
+            -0.7
+          ],
+          "rotate": 0.2,
+          "pivot": [
+            0.496,
+            0.78
+          ],
+          "phase": "action"
+        },
+        {
+          "name": "quiet shoulder breath",
+          "center": [
+            0.5,
+            0.85
+          ],
+          "radius": [
+            0.33,
+            0.15
+          ],
+          "translate": [
+            0,
+            -1.7
+          ],
+          "rotate": 0,
+          "pivot": [
+            0.5,
+            0.85
+          ],
+          "phase": "breath"
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.5,
+            0
+          ],
+          "radius": [
+            0.75,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0.5,
+            1
+          ],
+          "radius": [
+            0.75,
+            0.07
+          ]
+        },
+        {
+          "center": [
+            0,
+            0.5
+          ],
+          "radius": [
+            0.06,
+            0.75
+          ]
+        },
+        {
+          "center": [
+            1,
+            0.5
+          ],
+          "radius": [
+            0.06,
+            0.75
+          ]
+        }
+      ]
+    }
+  }
+]

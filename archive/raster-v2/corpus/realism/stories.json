@@ -1,0 +1,923 @@
+[
+  {
+    "id": "105232",
+    "image": "corpus/plates/105232.png",
+    "prompt": "Use case: illustration-story. Create one original finished landscape 4:3 fine-art story illustration, a still master for a restrained seven-second living drawing. The Captain Who Charted the Moon: a weathered older seafarer, realistic full adult proportions, on a worn timber harbor pier at dusk, using a long solid brass telescope to observe a small pale crescent moon. His near hand naturally wraps the telescope barrel with credible fingers; the eyepiece meets his eye. Other hand holds a small loosely folded star chart at hip level. He wears a battered dark tricorn, one restrained feather, weathered russet long coat, linen shirt, wool trousers, and tall scuffed boots. Graying beard, subtle smile, age, pores, believable muscle and facial structure, weighted contrapposto stance with both feet grounded. Think an exceptionally accomplished observational graphite drawing gently enriched with translucent watercolor and sparse opaque gouache: continuous sculptural halftones, selectively lost edges, meticulous controlled detail around face/hands, rough cloth and matte leather distinct from brass glints. Atmospheric blue-sage harbor recedes behind him, one distant sailing vessel, low coastal hills, simple coiled rope and bollard; the human subject dominates. Natural upper-left cool sky light and soft warm remaining horizon bounce, grounded contact shadow. Strong clear silhouette, convincing perspective, quiet negative space around telescope and gaze. Composition is natural cinematic narrative, no decorative frame, no captions or lettering. No cartoon mascot, chibi, doll anatomy, cel shading, sticker outline, vector appearance, plastic 3D render, busy scratchy hatching, random surface marks, duplicated fingers, malformed hands, scattered clutter. Original drawing rather than a copied book page. Render a unified 4:3 image at high resolution with no border or text.",
+    "generation": "built-in image_gen",
+    "revisionPrompts": [
+      "Use case: precise-object-edit. Edit this illustration to correct exactly one visual storytelling issue: the pirate currently holds the telescope eyepiece too low, close to his nose rather than aligned with his eye. Keep the entire scene, full adult figure, garments, hands, pier, rope, harbor, ship, moon, framing, lighting and realistic painted finish unchanged. Raise and angle the rigid brass telescope and naturally adjust its supporting forearm/wrist so the small eyepiece visibly rests snugly at the pirate's nearer visible eye. His eye must actually be looking through the optical axis, not over the telescope. The barrel is one straight solid tube. Supporting fingers wrap it naturally with a believable grip. A slight head tilt is permitted solely to achieve this eye-to-eyepiece alignment. Preserve the anatomy and all unrelated image details. No text or frame."
+    ],
+    "review": {
+      "anatomy": 4,
+      "lighting": 5,
+      "cleanliness": 4,
+      "composition": 4,
+      "notes": [
+        "Generated raster illustration with a realistic painted finish; full-resolution still visually inspected. Scores are a subjective review of this still, not clinical validation or proof of animation quality.",
+        "Adult head-to-body ratio, planted boots, bent supporting elbow and readable fingers improve substantially over the prior short-limbed cutout. A second ImageGen pass corrected the telescope's low eyepiece position toward the visible eye.",
+        "Cloth, worn leather, matte beard and narrow brass highlights are distinct; receding harbor and ship establish depth. Pier/rope detail is intentionally denser than the quiet sky; preserve that contrast.",
+        "The final is a detailed painted scene, not graphite on paper. Do not describe it as hand-authored or editable vector art. Telescope/face/hand are a rigid contact group; avoid broad deformations there."
+      ],
+      "rigCalibration": "Authored against the actual 1448×1086 painted plate, using normalized image coordinates and restrained 1200-pixel displacement amplitudes. Local regions avoid rigid anatomy/props and anchored contacts. Visually inspected the actual master, six browser poses including the 3.5-second peak, and the encoded 3.5-second frame after export. No visible contact break, mesh seam or clipping was found in those samples. This is sampled-frame inspection, not continuous review of every encoded frame. See qa/realism/art-review.json for the action limits and per-study judgments."
+    },
+    "landmarks": {
+      "head": [
+        0.326,
+        0.13
+      ],
+      "eye": [
+        0.343,
+        0.096
+      ],
+      "telescopeEyepiece": [
+        0.351,
+        0.099
+      ],
+      "telescopeBarrelCenter": [
+        0.453,
+        0.092
+      ],
+      "telescopeHand": [
+        0.398,
+        0.102
+      ],
+      "shoulder": [
+        0.355,
+        0.218
+      ],
+      "chest": [
+        0.327,
+        0.307
+      ],
+      "featherTip": [
+        0.239,
+        0.04
+      ],
+      "coatHemLeft": [
+        0.185,
+        0.691
+      ],
+      "coatHemRight": [
+        0.424,
+        0.653
+      ],
+      "chart": [
+        0.229,
+        0.536
+      ],
+      "leftFootContact": [
+        0.21,
+        0.899
+      ],
+      "rightFootContact": [
+        0.425,
+        0.869
+      ],
+      "waterCenter": [
+        0.77,
+        0.669
+      ],
+      "lantern": [
+        0.115,
+        0.326
+      ]
+    },
+    "motion": "Seven-second restrained cinemagraph: feather tip receives a small breeze; the two free coat hems answer with delayed motion. A small clear-water patch shifts by less than one pixel while a harbor lantern brightens slightly. Face, eye/telescope contact, chart grip, trouser support and planted boots remain pinned. The existing observing pose is held throughout. The common action envelope anticipates at 0.8–1.4 s, peaks by 3.2 s, holds until 4.1 s and settles by 6.5 s, with an exact matching loop endpoint.",
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "feather tip breeze",
+          "center": [
+            0.247,
+            0.068
+          ],
+          "radius": [
+            0.054,
+            0.061
+          ],
+          "translate": [
+            0.6,
+            -0.25
+          ],
+          "rotate": 0.65,
+          "pivot": [
+            0.284,
+            0.104
+          ],
+          "phase": "action",
+          "delay": 0
+        },
+        {
+          "name": "free left coat hem",
+          "center": [
+            0.199,
+            0.685
+          ],
+          "radius": [
+            0.061,
+            0.113
+          ],
+          "translate": [
+            -1.15,
+            0.2
+          ],
+          "rotate": 0.18,
+          "pivot": [
+            0.241,
+            0.553
+          ],
+          "phase": "action",
+          "delay": 0.23
+        },
+        {
+          "name": "free right coat hem",
+          "center": [
+            0.413,
+            0.653
+          ],
+          "radius": [
+            0.042,
+            0.118
+          ],
+          "translate": [
+            1.05,
+            0.15
+          ],
+          "rotate": -0.15,
+          "pivot": [
+            0.379,
+            0.501
+          ],
+          "phase": "action",
+          "delay": 0.36
+        },
+        {
+          "name": "quiet harbor ripple",
+          "center": [
+            0.878,
+            0.676
+          ],
+          "radius": [
+            0.098,
+            0.033
+          ],
+          "translate": [
+            0.8,
+            0
+          ],
+          "rotate": 0,
+          "pivot": [
+            0.878,
+            0.676
+          ],
+          "phase": "breath",
+          "delay": 0
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.326,
+            0.137
+          ],
+          "radius": [
+            0.083,
+            0.092
+          ]
+        },
+        {
+          "center": [
+            0.447,
+            0.102
+          ],
+          "radius": [
+            0.13,
+            0.06
+          ]
+        },
+        {
+          "center": [
+            0.238,
+            0.52
+          ],
+          "radius": [
+            0.1,
+            0.15
+          ]
+        },
+        {
+          "center": [
+            0.253,
+            0.754
+          ],
+          "radius": [
+            0.041,
+            0.164
+          ]
+        },
+        {
+          "center": [
+            0.218,
+            0.89
+          ],
+          "radius": [
+            0.075,
+            0.065
+          ]
+        },
+        {
+          "center": [
+            0.421,
+            0.86
+          ],
+          "radius": [
+            0.082,
+            0.075
+          ]
+        }
+      ],
+      "light": {
+        "center": [
+          0.114,
+          0.326
+        ],
+        "radius": [
+          0.027,
+          0.056
+        ],
+        "strength": 0.022
+      }
+    }
+  },
+  {
+    "id": "105233",
+    "image": "corpus/plates/105233.png",
+    "prompt": "Use case: illustration-story. Create one original finished high-resolution landscape 4:3 fine-art illustrated scene, a master for a subtle seven-second living painting. The Lantern Keeper of Willow Marsh: a believable gentle marsh dragon at a quiet twilight pond, its heavy serpentine body coiled naturally on a muddy moss bank, a long elegant neck raising a narrow alert reptilian head. Plausible anatomical construction from skull through neck, shoulder, bent elbow and foreclaw. Soft olive scales, ochre belly plates, aged small branching horns, fine whiskers, calm intelligent small eyes, reptilian not humanoid face. The dragon's raised near foreclaw has three clearly separated curved digits wrapped through the small rigid metal ring handle of one antique warm glowing lantern, hanging vertically just above the water beside its neck. Batlike wings rest folded against its back with a small graceful opening, coherent articulated wing bones and thin muted parchment membranes, no enormous showy wings. Strong grounded body contact, thick tail curling back into the bank, shoulder/chest carry its weight. Realistic observed texture and weight, richly modeled continuous halftones with charcoal/graphite finesse, translucent watercolor and restrained oil/gouache color glazes. Painterly craftsmanship, refined edges, not a CGI creature render. Composition: dragon at left/center, lantern at right-center with quiet air around it, calm pond foreground with a few believable elliptical lily pads, willow roots and reeds, far misty marsh fades into soft sage-blue depth. Lantern casts warm light coherently onto the supporting claw, chest scales and a small pool reflection; cool upper-left twilight fill shapes the rest. Emphasis on the tender eye-to-lantern relationship. Controlled detail, clear silhouette, three depth planes; no visual clutter. No human arms/hands, cartoon mascot, toy dragon, big baby eyes, smile pasted on a snout, flat vector outlines, plastic shine, random scratch hatching, multiple lanterns, disconnected claws, extra limbs, text, borders or decorative frame. Full image 4:3 landscape.",
+    "generation": "built-in image_gen",
+    "review": {
+      "anatomy": 4,
+      "lighting": 5,
+      "cleanliness": 4,
+      "composition": 5,
+      "notes": [
+        "Generated raster illustration with a realistic painted finish; full-resolution still visually inspected. Scores are a subjective review of this still, not clinical validation or proof of animation quality.",
+        "Continuous neck enters a weighted chest; one forepaw rests on the bank and the other curls around the lantern ring. Folded wing membranes attach along visible bones. The small eye and long muzzle preserve animal character.",
+        "Warm lantern light shapes the lower jaw, chest, forearm, moss and reflection; blue twilight places the distant marsh behind the subject. Silhouette is readable despite detailed scale texture.",
+        "The wing is aged/tattered by generation and the rich moss foreground is deliberate. Do not animate its rigid ribs, claws or lantern housing with a rubber mesh."
+      ],
+      "rigCalibration": "Authored against the actual 1448×1086 painted plate, using normalized image coordinates and restrained 1200-pixel displacement amplitudes. Local regions avoid rigid anatomy/props and anchored contacts. Visually inspected the actual master, six browser poses including the 3.5-second peak, and the encoded 3.5-second frame after export. No visible contact break, mesh seam or clipping was found in those samples. This is sampled-frame inspection, not continuous review of every encoded frame. See qa/realism/art-review.json for the action limits and per-study judgments."
+    },
+    "landmarks": {
+      "head": [
+        0.58,
+        0.24
+      ],
+      "eye": [
+        0.588,
+        0.235
+      ],
+      "muzzle": [
+        0.626,
+        0.3
+      ],
+      "neck": [
+        0.483,
+        0.367
+      ],
+      "chest": [
+        0.505,
+        0.51
+      ],
+      "wingMembrane": [
+        0.205,
+        0.386
+      ],
+      "wingBonePivot": [
+        0.297,
+        0.29
+      ],
+      "claw": [
+        0.68,
+        0.418
+      ],
+      "lanternHandle": [
+        0.685,
+        0.456
+      ],
+      "lantern": [
+        0.684,
+        0.565
+      ],
+      "lanternReflection": [
+        0.712,
+        0.857
+      ],
+      "groundedForepaw": [
+        0.575,
+        0.66
+      ],
+      "bodyContact": [
+        0.373,
+        0.725
+      ],
+      "tail": [
+        0.216,
+        0.715
+      ],
+      "willowLeaves": [
+        0.23,
+        0.16
+      ]
+    },
+    "motion": "Seven-second restrained cinemagraph: a shallow chest breath peaks at the middle of the loop, a willow tip responds to a small breeze and warm lantern light gently builds and settles. Face, antlers, claw/ring connection, lantern housing, grounded forepaw and belly contact are pinned. No lantern swing or wing lift is claimed. Action tracks settle by 6.4 s; breathing returns with matching position and zero endpoint velocity at 7 s.",
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "quiet dragon chest breath",
+          "center": [
+            0.505,
+            0.507
+          ],
+          "radius": [
+            0.115,
+            0.159
+          ],
+          "translate": [
+            0,
+            -1.65
+          ],
+          "rotate": 0,
+          "pivot": [
+            0.505,
+            0.507
+          ],
+          "phase": "breath",
+          "delay": 0
+        },
+        {
+          "name": "willow tip answers breeze",
+          "center": [
+            0.325,
+            0.162
+          ],
+          "radius": [
+            0.034,
+            0.075
+          ],
+          "translate": [
+            0.75,
+            0.2
+          ],
+          "rotate": 0.2,
+          "pivot": [
+            0.326,
+            0.091
+          ],
+          "phase": "action",
+          "delay": 0.3
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.59,
+            0.262
+          ],
+          "radius": [
+            0.115,
+            0.145
+          ]
+        },
+        {
+          "center": [
+            0.678,
+            0.453
+          ],
+          "radius": [
+            0.062,
+            0.12
+          ]
+        },
+        {
+          "center": [
+            0.684,
+            0.57
+          ],
+          "radius": [
+            0.058,
+            0.096
+          ]
+        },
+        {
+          "center": [
+            0.564,
+            0.656
+          ],
+          "radius": [
+            0.13,
+            0.055
+          ]
+        },
+        {
+          "center": [
+            0.38,
+            0.733
+          ],
+          "radius": [
+            0.265,
+            0.085
+          ]
+        },
+        {
+          "center": [
+            0.292,
+            0.312
+          ],
+          "radius": [
+            0.082,
+            0.066
+          ]
+        }
+      ],
+      "light": {
+        "center": [
+          0.685,
+          0.583
+        ],
+        "radius": [
+          0.155,
+          0.3
+        ],
+        "strength": 0.046
+      }
+    }
+  },
+  {
+    "id": "105234",
+    "image": "corpus/plates/105234.png",
+    "prompt": "Use case: illustration-story. Create one original finished realistic fine-art storybook painting, high resolution 4:3 landscape. A Small Worm and a Borrowed Star: an endearing yet biologically plausible fantasy woodland worm pauses on damp forest soil to regard one tiny warm firefly floating near its raised tapered head. The worm is hand-sized; the forest is seen at its eye level. A continuous heavy fleshy body flows from the low gently coiled abdomen into a softly curving raised neck/head; countless subtle segmented annuli wrap around volume, compress on the inside of the bend and spread outside it. Clay-rose warm brown skin with fine wrinkles, small scattered darker freckles, gentle moist highlights, underside pressed into soil with a real contact shadow. Head remains an animal head continuous with body, not a human face pasted onto a cylinder. A pair of very small dark attentive eyes and two delicate curved fleshy feelers can suggest curiosity; mouth is a small unobtrusive natural crease, no humanoid lips, teeth, cheekbones, bonnet or hat. Real believable weight and perspective, no snake scales or legs. Strong clear S gesture, tender sense of wonder and slightly humorous dignity. Place two softly lit realistic russet mushrooms with thin stems at one side, a few large ferns framing an airy background, moss, leaf litter and only a few dew drops. The firefly is tiny and singular in the quiet space near the creature's gaze. Early morning light slants from upper left, soft reflected green fill, forest recedes through luminous haze in three planes. A carefully observed colored-pencil/graphite foundation developed with transparent watercolor and luminous restrained gouache: continuous fine halftones, natural matte texture, selective lost edges, rich but controlled detail around creature and firefly, a coherent painted image. No broad black contour, flat cel shade, cartoon mascot, plush toy, human head, plastic render, excessive shiny slime, scratchy random hatching, decorative border, captions, symbols, letters or book-page photograph. Keep all important anatomy inside frame. Full-bleed 4:3 landscape.",
+    "generation": "built-in image_gen",
+    "review": {
+      "anatomy": 4,
+      "lighting": 5,
+      "cleanliness": 4,
+      "composition": 5,
+      "notes": [
+        "Generated raster illustration with a realistic painted finish; full-resolution still visually inspected. Scores are a subjective review of this still, not clinical validation or proof of animation quality.",
+        "Heavy continuous coil rises into the neck without a separate human head. Annuli compress along the inner curve and spread across the outer bend. Head and feelers are gentle fantasy additions, not scientific earthworm anatomy.",
+        "Warm upper-left backlight, green atmospheric fill and lower body contact ground the subject. Small firefly has clear negative space; mushrooms set scale.",
+        "The skin is deliberately moist and the still has strong microtexture. Keep deformation tiny so highlights do not swim; the entire coil and soil are static anchors."
+      ],
+      "rigCalibration": "Authored against the actual 1448×1086 painted plate, using normalized image coordinates and restrained 1200-pixel displacement amplitudes. Local regions avoid rigid anatomy/props and anchored contacts. Visually inspected the actual master, six browser poses including the 3.5-second peak, and the encoded 3.5-second frame after export. No visible contact break, mesh seam or clipping was found in those samples. This is sampled-frame inspection, not continuous review of every encoded frame. See qa/realism/art-review.json for the action limits and per-study judgments."
+    },
+    "landmarks": {
+      "head": [
+        0.625,
+        0.333
+      ],
+      "eye": [
+        0.639,
+        0.311
+      ],
+      "neck": [
+        0.604,
+        0.493
+      ],
+      "neckBase": [
+        0.584,
+        0.673
+      ],
+      "bodyCoil": [
+        0.347,
+        0.678
+      ],
+      "bodyContact": [
+        0.38,
+        0.776
+      ],
+      "feelerBaseLeft": [
+        0.644,
+        0.294
+      ],
+      "feelerTipLeft": [
+        0.688,
+        0.257
+      ],
+      "feelerBaseRight": [
+        0.665,
+        0.302
+      ],
+      "feelerTipRight": [
+        0.72,
+        0.294
+      ],
+      "firefly": [
+        0.781,
+        0.239
+      ],
+      "mushroomCap": [
+        0.139,
+        0.269
+      ],
+      "fernTip": [
+        0.886,
+        0.339
+      ]
+    },
+    "motion": "Seven-second restrained cinemagraph: the firefly makes a tiny hover drift and returns; the head inclines almost imperceptibly toward it, followed by two differently delayed feeler responses. The coil and lower neck remain anchored in the soil. Firefly glow rises subtly. There is no whole-image sway. The head/feeler action anticipates at 0.8–1.4 s, peaks around 3.2–3.5 s and settles by 6.5 s; hover returns with matching zero endpoint velocity at 7 s.",
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "small curious head lean",
+          "center": [
+            0.616,
+            0.407
+          ],
+          "radius": [
+            0.134,
+            0.257
+          ],
+          "translate": [
+            0.85,
+            -0.5
+          ],
+          "rotate": 0.12,
+          "pivot": [
+            0.597,
+            0.641
+          ],
+          "phase": "action",
+          "delay": 0
+        },
+        {
+          "name": "left feeler delayed attention",
+          "center": [
+            0.684,
+            0.271
+          ],
+          "radius": [
+            0.043,
+            0.037
+          ],
+          "translate": [
+            0.6,
+            -0.55
+          ],
+          "rotate": 0.4,
+          "pivot": [
+            0.644,
+            0.294
+          ],
+          "phase": "action",
+          "delay": 0.22
+        },
+        {
+          "name": "right feeler delayed attention",
+          "center": [
+            0.703,
+            0.289
+          ],
+          "radius": [
+            0.037,
+            0.025
+          ],
+          "translate": [
+            0.65,
+            -0.35
+          ],
+          "rotate": 0.35,
+          "pivot": [
+            0.665,
+            0.302
+          ],
+          "phase": "action",
+          "delay": 0.32
+        },
+        {
+          "name": "firefly hover drift",
+          "center": [
+            0.781,
+            0.239
+          ],
+          "radius": [
+            0.042,
+            0.052
+          ],
+          "translate": [
+            -1.6,
+            -1.0
+          ],
+          "rotate": -0.2,
+          "pivot": [
+            0.781,
+            0.239
+          ],
+          "phase": "breath",
+          "delay": 0
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.364,
+            0.77
+          ],
+          "radius": [
+            0.317,
+            0.102
+          ]
+        },
+        {
+          "center": [
+            0.587,
+            0.68
+          ],
+          "radius": [
+            0.087,
+            0.071
+          ]
+        },
+        {
+          "center": [
+            0.5,
+            0.535
+          ],
+          "radius": [
+            0.04,
+            0.21
+          ]
+        },
+        {
+          "center": [
+            0.746,
+            0.51
+          ],
+          "radius": [
+            0.05,
+            0.18
+          ]
+        }
+      ],
+      "light": {
+        "center": [
+          0.781,
+          0.239
+        ],
+        "radius": [
+          0.047,
+          0.061
+        ],
+        "strength": 0.035
+      }
+    }
+  },
+  {
+    "id": "105235",
+    "image": "corpus/plates/105235.png",
+    "prompt": "Use case: illustration-story. A finished original hand-drawn and hand-painted children's fantasy book plate, landscape 4:3, highly realistic anatomical observation combined with visible graphite drawing and delicate watercolor/gouache brushwork on subtly grained warm ivory paper. This is an artistic drawing, not a photograph and not a 3D render. The Gardener Who Grew Another Morning: a kindly undead elderly gardener with believable human adult proportions kneels on one knee on dark garden soil and carefully tends one small sapling in a terracotta pot. He has an aged gaunt face, intact dry pale grey-olive skin, hollow cheeks, small gentle living eyes, reassuring closed crooked smile, wispy silver hair and a tiny daisy tucked behind one ear. A few old healed stitched seams suggest undead fantasy; no exposed skull, gore, open wounds or frightening teeth. Worn sage linen work jacket with a patched elbow, warm brown apron, rolled shirt cuff, charcoal wool trousers and scuffed work boots. His near hand has five anatomically plausible fingers naturally curled around the real handle of a small stoneware watering jug decorated with one subtle blue bird. He holds the jug above the terracotta sapling pot, with a thin believable stream of water flowing from spout to soil. Other hand supports his raised knee with a relaxed grip. Show a credible kneeling pose: rear knee and boot supported on ground, forward foot flat and knee raised. Shoulders, arms, hands, pelvis and limbs connect clearly. An old low garden wall and a receding path in soft focus, a few cabbage leaves and one slender trellis, muted morning haze. Intimate calm three-quarter view, gardener on left/center and seedling at lower right, generous atmospheric space. Realistic light from upper left models face, cloth and hand through continuous half-tones and soft core shadows, warm bounce from soil. Reserve the sharpest detail for face, jug grip and sapling; background uses broad translucent washes. Visible refined graphite contour accents, fine directional tonal pencil marks, layered pigment blooms and occasional gouache highlights distinguish materials without messy scratch texture. No cartoon mascot, doll proportions, black sticker outlines, cel shading, plastic glossy skin, repeated oval muscle pads, extra fingers, distorted jug, multiple water streams, random lettering or symbols. No title, caption, border, frame or watermark. Full 4:3 painting.",
+    "generation": "built-in image_gen",
+    "review": {
+      "anatomy": 4,
+      "lighting": 5,
+      "cleanliness": 4,
+      "composition": 5,
+      "notes": [
+        "Generated raster illustration with a realistic painted finish; full-resolution still visually inspected. Scores are a subjective review of this still, not clinical validation or proof of animation quality.",
+        "Adult proportions and a clear one-knee-down/one-foot-flat pose carry weight. Near fingers wrap the jug handle and far fingers rest over the raised knee. Gaunt features, hair and healed stitches establish a gentle undead character without gore.",
+        "Jug spout, stream and soil connect; the sapling/hand/face make a clear narrative triangle. Background path and muted village recede behind warm garden light.",
+        "The jug is already tilted with a visible stream in the base artwork. Preserve that held pouring pose unless separate clean layers are produced; do not claim a full pour-and-return animation from local mesh alone."
+      ],
+      "rigCalibration": "Authored against the actual 1448×1086 painted plate, using normalized image coordinates and restrained 1200-pixel displacement amplitudes. Local regions avoid rigid anatomy/props and anchored contacts. Visually inspected the actual master, six browser poses including the 3.5-second peak, and the encoded 3.5-second frame after export. No visible contact break, mesh seam or clipping was found in those samples. This is sampled-frame inspection, not continuous review of every encoded frame. See qa/realism/art-review.json for the action limits and per-study judgments."
+    },
+    "landmarks": {
+      "head": [
+        0.506,
+        0.124
+      ],
+      "eye": [
+        0.534,
+        0.13
+      ],
+      "neck": [
+        0.458,
+        0.205
+      ],
+      "chest": [
+        0.401,
+        0.321
+      ],
+      "nearElbow": [
+        0.31,
+        0.415
+      ],
+      "jugHand": [
+        0.475,
+        0.468
+      ],
+      "jug": [
+        0.496,
+        0.577
+      ],
+      "jugSpout": [
+        0.578,
+        0.574
+      ],
+      "water": [
+        0.602,
+        0.669
+      ],
+      "waterSoilContact": [
+        0.609,
+        0.756
+      ],
+      "sapling": [
+        0.646,
+        0.677
+      ],
+      "saplingRoot": [
+        0.641,
+        0.758
+      ],
+      "rearKneeContact": [
+        0.307,
+        0.87
+      ],
+      "frontFootContact": [
+        0.521,
+        0.866
+      ],
+      "farHand": [
+        0.595,
+        0.432
+      ],
+      "hairTip": [
+        0.471,
+        0.043
+      ]
+    },
+    "motion": "Seven-second restrained cinemagraph: the gardener holds the illustrated pouring pose, with faint garment breathing, a small hair-tip breeze and a delayed sapling response. A slight local highlight change touches the existing stream and leaves. Face, hands, ceramic jug, water endpoints, pot, supporting knee and planted boot remain fixed. This is a living held pose, not a pour-and-return cycle. All tracks return cleanly at 7 s.",
+    "rigOverride": {
+      "regions": [
+        {
+          "name": "garment breath",
+          "center": [
+            0.397,
+            0.315
+          ],
+          "radius": [
+            0.1,
+            0.126
+          ],
+          "translate": [
+            0,
+            -1.1
+          ],
+          "rotate": 0,
+          "pivot": [
+            0.397,
+            0.315
+          ],
+          "phase": "breath",
+          "delay": 0
+        },
+        {
+          "name": "silver hair tip breeze",
+          "center": [
+            0.483,
+            0.046
+          ],
+          "radius": [
+            0.073,
+            0.033
+          ],
+          "translate": [
+            0.65,
+            -0.2
+          ],
+          "rotate": 0.25,
+          "pivot": [
+            0.491,
+            0.086
+          ],
+          "phase": "action",
+          "delay": 0.16
+        },
+        {
+          "name": "sapling leaf response",
+          "center": [
+            0.65,
+            0.675
+          ],
+          "radius": [
+            0.052,
+            0.073
+          ],
+          "translate": [
+            0.8,
+            -0.25
+          ],
+          "rotate": 0.42,
+          "pivot": [
+            0.641,
+            0.758
+          ],
+          "phase": "action",
+          "delay": 0.3
+        }
+      ],
+      "pins": [
+        {
+          "center": [
+            0.521,
+            0.153
+          ],
+          "radius": [
+            0.072,
+            0.092
+          ]
+        },
+        {
+          "center": [
+            0.478,
+            0.468
+          ],
+          "radius": [
+            0.078,
+            0.066
+          ]
+        },
+        {
+          "center": [
+            0.497,
+            0.577
+          ],
+          "radius": [
+            0.107,
+            0.104
+          ]
+        },
+        {
+          "center": [
+            0.581,
+            0.577
+          ],
+          "radius": [
+            0.032,
+            0.043
+          ]
+        },
+        {
+          "center": [
+            0.641,
+            0.833
+          ],
+          "radius": [
+            0.104,
+            0.091
+          ]
+        },
+        {
+          "center": [
+            0.405,
+            0.869
+          ],
+          "radius": [
+            0.29,
+            0.101
+          ]
+        },
+        {
+          "center": [
+            0.595,
+            0.432
+          ],
+          "radius": [
+            0.057,
+            0.058
+          ]
+        },
+        {
+          "center": [
+            0.608,
+            0.756
+          ],
+          "radius": [
+            0.022,
+            0.018
+          ]
+        }
+      ],
+      "light": {
+        "center": [
+          0.61,
+          0.693
+        ],
+        "radius": [
+          0.052,
+          0.11
+        ],
+        "strength": 0.012
+      }
+    }
+  }
+]

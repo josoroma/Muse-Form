@@ -1,0 +1,282 @@
+[
+  {
+    "id": "105193",
+    "title": "Three-quarter skull",
+    "svg": "corpus/svg/105193.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. A complete adult skull in three-quarter view facing left. Preserve the continuous cranial vault, unequal receding orbital cavities, nasal aperture, open zygomatic arch and attached mandible. A compact natural dental arcade has distinct incisor, canine and molar forms and a quieter lower row. Reserve the focal line for the near orbital rim. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Animate only the stated restrained action in a seamless seven-second loop; preserve all facial feature dimensions and attachment.",
+    "method": "Hand-authored native cubic anatomical contours informed by the original source observation and the owned realistic-v2 construction plate; no automatic edge trace, bitmap embedding or generated texture in the final SVG.",
+    "review": {
+      "notes": "The full vault and mandible stay connected. The dental arcade was redrawn with varying crown shapes after the first repeated-capsule version; this is an artistic osteological study, not a dental or medical atlas.",
+      "scope": "Authored still inspected at full size and native thumbnail size by the author and an independent collaborating reviewer. Animation reviewed separately by the corpus compositor."
+    },
+    "motionCaption": "The skull holds still while the near orbital rim gently changes emphasis.",
+    "animations": [
+      {
+        "target": "near-orbit",
+        "attribute": "stroke",
+        "values": [
+          "#fafafa",
+          "#a1a1aa",
+          "#fafafa"
+        ],
+        "keyTimes": [
+          0,
+          0.5,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105194",
+    "title": "Eye and eyelid structure",
+    "svg": "corpus/svg/105194.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. An enlarged human eye viewed obliquely. The upper lid wraps the globe, the lower rim has a shallow asymmetric curve, and the tear duct joins the inner corner. Clip the circular iris and pupil beneath the actual lid aperture. Suggest brow and nose bridge with a few continuous contours; no eyelash texture or radiating iris decoration. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Animate only the stated restrained action in a seamless seven-second loop; preserve all facial feature dimensions and attachment.",
+    "method": "Hand-authored native cubic anatomical contours informed by the original source observation and the owned realistic-v2 construction plate; no automatic edge trace, bitmap embedding or generated texture in the final SVG.",
+    "review": {
+      "notes": "The iris and pupil are explicitly clipped beneath the upper lid. Unequal lid arcs, tear duct and lower orbital fold establish depth without a cartoon full-circle eye. The sparse brow is structural rather than individual hair texture. Independent review identified an overly narrow pupil; it was broadened to a near-circular foreshortened form and re-rendered.",
+      "scope": "Authored still inspected at full size and native thumbnail size by the author and an independent collaborating reviewer. Animation reviewed separately by the corpus compositor."
+    },
+    "motionCaption": "A quiet emphasis moves through the upper eyelid while the anatomy remains fixed.",
+    "animations": [
+      {
+        "target": "upper-lid",
+        "attribute": "stroke",
+        "values": [
+          "#fafafa",
+          "#a1a1aa",
+          "#fafafa"
+        ],
+        "keyTimes": [
+          0,
+          0.5,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105195",
+    "title": "Auricle and concha",
+    "svg": "corpus/svg/105195.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. One upright dimensional human ear, with a continuous helix, a branching antihelix, concha, tragus, antitragus and fleshy lobe. Show the connections between folds and preserve clean negative spaces. A short temporal attachment places the ear on a head without drawing the entire head. Focus the upper helix. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Animate only the stated restrained action in a seamless seven-second loop; preserve all facial feature dimensions and attachment.",
+    "method": "Hand-authored native cubic anatomical contours informed by the original source observation and the owned realistic-v2 construction plate; no automatic edge trace, bitmap embedding or generated texture in the final SVG.",
+    "review": {
+      "notes": "The outer helix, antihelix branch, tragus and lobe are separately readable and connected. Interior folds have lower contrast than the silhouette; no spiral icon or decorative texture is used.",
+      "scope": "Authored still inspected at full size and native thumbnail size by the author and an independent collaborating reviewer. Animation reviewed separately by the corpus compositor."
+    },
+    "motionCaption": "The upper helix receives one slow seven-second emphasis cycle.",
+    "animations": [
+      {
+        "target": "ear-helix",
+        "attribute": "stroke",
+        "values": [
+          "#fafafa",
+          "#a1a1aa",
+          "#fafafa"
+        ],
+        "keyTimes": [
+          0,
+          0.5,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105196",
+    "title": "A quiet smile",
+    "svg": "corpus/svg/105196.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. A three-quarter adult male portrait with a relaxed smile and a slight head tilt. Lift the cheeks, soften the lower eyelids and curve the lips upward asymmetrically. Preserve adult cranial proportions, a dimensional ear, a believable nose and an open shirt collar. Clip both irises under reduced eyelid apertures; focus only the near upper eyelid. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Animate only the stated restrained action in a seamless seven-second loop; preserve all facial feature dimensions and attachment.",
+    "method": "Hand-authored native cubic anatomical contours informed by the original source observation and the owned realistic-v2 construction plate; no automatic edge trace, bitmap embedding or generated texture in the final SVG.",
+    "review": {
+      "notes": "Revised the eye apertures and clipped both irises after the earlier staring appearance. A single near lid is bright; the far eye is subordinate. The held smile uses cheek and lip curves, with small restrained head motion.",
+      "scope": "Authored still inspected at full size and native thumbnail size by the author and an independent collaborating reviewer. Animation reviewed separately by the corpus compositor."
+    },
+    "motionCaption": "A held smile with a very small head inclination, returning to the same pose.",
+    "animations": [
+      {
+        "target": "head",
+        "type": "rotate",
+        "values": [
+          "0 193 241",
+          "-0.35 193 241",
+          "0 193 241"
+        ],
+        "keyTimes": [
+          0,
+          0.5,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105197",
+    "title": "Quiet sadness",
+    "svg": "corpus/svg/105197.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. An older adult male with an elongated face, receding swept hair and a lowered gaze. Raise and draw together the inner brows; keep the eyelids heavy and the mouth corners quietly lowered. Use nasolabial and chin contours to explain the expression instead of a generic frown. Preserve an attached long neck and open collar. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Animate only the stated restrained action in a seamless seven-second loop; preserve all facial feature dimensions and attachment.",
+    "method": "Hand-authored native cubic anatomical contours informed by the original source observation and the owned realistic-v2 construction plate; no automatic edge trace, bitmap embedding or generated texture in the final SVG.",
+    "review": {
+      "notes": "Distinct long jaw, inner-brow lift, downcast irises and heavy lids communicate sadness. Hair and beard are reduced to directional boundaries. No tears or theatrical expression morph is claimed.",
+      "scope": "Authored still inspected at full size and native thumbnail size by the author and an independent collaborating reviewer. Animation reviewed separately by the corpus compositor."
+    },
+    "motionCaption": "The sad expression holds while the head settles by a fraction of a degree.",
+    "animations": [
+      {
+        "target": "head",
+        "type": "rotate",
+        "values": [
+          "0 190 241",
+          "0.32 190 241",
+          "0 190 241"
+        ],
+        "keyTimes": [
+          0,
+          0.5,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105198",
+    "title": "Contained anger",
+    "svg": "corpus/svg/105198.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. A broad-jawed adult male turned slightly left. Compress the inner brows, narrow the eyes, tighten the nostril wings and press the lips. Show a square mandibular angle, short swept hair and neck tension with a few restrained curves. Focus one near upper eyelid; avoid decorative forehead hatch marks. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Animate only the stated restrained action in a seamless seven-second loop; preserve all facial feature dimensions and attachment.",
+    "method": "Hand-authored native cubic anatomical contours informed by the original source observation and the owned realistic-v2 construction plate; no automatic edge trace, bitmap embedding or generated texture in the final SVG.",
+    "review": {
+      "notes": "The wider mandible, compressed glabella, narrow eye apertures and pressed lips distinguish this portrait from sadness. Both irises remain contained by their lids; one focal upper lid carries the eye contact.",
+      "scope": "Authored still inspected at full size and native thumbnail size by the author and an independent collaborating reviewer. Animation reviewed separately by the corpus compositor."
+    },
+    "motionCaption": "A held angry expression with a tiny coherent head inclination.",
+    "animations": [
+      {
+        "target": "head",
+        "type": "rotate",
+        "values": [
+          "0 196 242",
+          "-0.3 196 242",
+          "0 196 242"
+        ],
+        "keyTimes": [
+          0,
+          0.5,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105199",
+    "title": "A moment of fear",
+    "svg": "corpus/svg/105199.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. An adult male looking upward to the right, with raised knitted inner brows, tense wide eyes, a retracted slightly parted mouth and taut neck tendons. The lower lids remain supportive and the upper teeth are a short quiet strip. Use a slim asymmetrical jaw and swept hair. Keep the fear readable through coordinated facial muscles, not bulging eyeballs. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Animate only the stated restrained action in a seamless seven-second loop; preserve all facial feature dimensions and attachment.",
+    "method": "Hand-authored native cubic anatomical contours informed by the original source observation and the owned realistic-v2 construction plate; no automatic edge trace, bitmap embedding or generated texture in the final SVG.",
+    "review": {
+      "notes": "Fear uses an upward side gaze, brow knitting, horizontal mouth tension and restrained upper teeth. It differs from surprise in both gaze and mouth geometry. The native curves simplify the muscle planes without deforming the eyes. Independent review identified an upper eyelid too narrow for the expression; both upper lids were lifted while the lower rims stayed fixed, then re-rendered.",
+      "scope": "Authored still inspected at full size and native thumbnail size by the author and an independent collaborating reviewer. Animation reviewed separately by the corpus compositor."
+    },
+    "motionCaption": "A held fearful glance with a tiny head recoil and return; the expression is not morphed.",
+    "animations": [
+      {
+        "target": "head",
+        "type": "rotate",
+        "values": [
+          "0 184 253",
+          "-0.35 184 253",
+          "0 184 253"
+        ],
+        "keyTimes": [
+          0,
+          0.5,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105200",
+    "title": "Open surprise",
+    "svg": "corpus/svg/105200.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. An adult male with a rounder cranial shape and loose swept curls. Raise both inner and outer brows, show naturally wide eyes and drop the lower jaw for a soft vertically open mouth. Keep eyelids wrapped around clipped irises and the upper dental edge in perspective. Avoid a circular emoji mouth or symmetric graphic eyes. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Animate only the stated restrained action in a seamless seven-second loop; preserve all facial feature dimensions and attachment.",
+    "method": "Hand-authored native cubic anatomical contours informed by the original source observation and the owned realistic-v2 construction plate; no automatic edge trace, bitmap embedding or generated texture in the final SVG.",
+    "review": {
+      "notes": "The more vertical open mouth, evenly raised brows and level gaze separate surprise from fear. Jaw and throat remain attached. The drawing contains no continuous expression transition; it holds one authored pose. Independent review identified normal-width eyes beneath strongly raised brows; the upper lids were lifted without moving the lower rims, then re-rendered. The mouth was also widened and made less circular.",
+      "scope": "Authored still inspected at full size and native thumbnail size by the author and an independent collaborating reviewer. Animation reviewed separately by the corpus compositor."
+    },
+    "motionCaption": "A held surprised expression with a small coherent head inclination and return.",
+    "animations": [
+      {
+        "target": "head",
+        "type": "rotate",
+        "values": [
+          "0 190 251",
+          "-0.3 190 251",
+          "0 190 251"
+        ],
+        "keyTimes": [
+          0,
+          0.5,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105202",
+    "title": "Laughter in profile",
+    "svg": "corpus/svg/105202.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. A right-facing adult male profile in laughter. Draw one eye only, compressed by a raised cheek. Connect forehead, nasal bridge, nose tip, upper lip, receding open mouth, lower lip and chin as a continuous profile silhouette. A small perspective dental edge sits beneath the upper lip. Show the near ear and the neck leading naturally into an open collar. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Animate only the stated restrained action in a seamless seven-second loop; preserve all facial feature dimensions and attachment.",
+    "method": "Hand-authored native cubic anatomical contours informed by the original source observation and the owned realistic-v2 construction plate; no automatic edge trace, bitmap embedding or generated texture in the final SVG.",
+    "review": {
+      "notes": "The single-eye profile has a connected nose, lip and chin contour. The mouth interior recedes toward its corner, and the short dental edge follows the upper lip. This is a held laugh with head intention, not a complete jaw-opening cycle.",
+      "scope": "Authored still inspected at full size and native thumbnail size by the author and an independent collaborating reviewer. Animation reviewed separately by the corpus compositor."
+    },
+    "motionCaption": "A held profile laugh with a small backward inclination and return.",
+    "animations": [
+      {
+        "target": "head",
+        "type": "rotate",
+        "values": [
+          "0 191 236",
+          "-0.4 191 236",
+          "0 191 236"
+        ],
+        "keyTimes": [
+          0,
+          0.5,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105203",
+    "title": "A knowing wink",
+    "svg": "corpus/svg/105203.svg",
+    "prompt": "Create a clean native SVG drawing, 1200 by 900 pixels with a 400 by 300 viewBox. An adult male portrait with one eye closed, the same-side cheek lifted, the other eye gently open, and an asymmetric closed-mouth smile. Coordinate the closed lid, crow-feet and compressed cheek rather than deleting the eye. Draw distinct swept hair, a tapered jaw and a crew-neck shirt. Reserve the focal accent for the closed eyelid. Use Hairline-inspired contour discipline adapted to organic anatomy: background #101014, silhouette #a1a1aa, internal structure #52525b, receding detail #27272a, and one meaningful focal contour #fafafa. Use a uniform 0.92-pixel non-scaling stroke with round caps and joins. Favor continuous anatomical cubic curves, meaningful occlusion and clear negative space. No embedded raster images, filled tonal shapes, gradients, filters, grain, repetitive hatching, labels, borders or text. Keep a complete silhouette and generous safe margins. The original source photo supplies anatomical context; the internal realistic corpus plate supplies proportional construction. Rebuild selected contours independently, without copying a photographed page layout. Animate only the stated restrained action in a seamless seven-second loop; preserve all facial feature dimensions and attachment.",
+    "method": "Hand-authored native cubic anatomical contours informed by the original source observation and the owned realistic-v2 construction plate; no automatic edge trace, bitmap embedding or generated texture in the final SVG.",
+    "review": {
+      "notes": "The closed lid, cheek lift and asymmetric smile are authored together. The opposite iris is clipped beneath a normal narrow aperture. The wink remains held; motion does not claim to open or close the eyelid.",
+      "scope": "Authored still inspected at full size and native thumbnail size by the author and an independent collaborating reviewer. Animation reviewed separately by the corpus compositor."
+    },
+    "motionCaption": "A held wink with a small head inclination and return.",
+    "animations": [
+      {
+        "target": "head",
+        "type": "rotate",
+        "values": [
+          "0 197 243",
+          "0.35 197 243",
+          "0 197 243"
+        ],
+        "keyTimes": [
+          0,
+          0.5,
+          1
+        ]
+      }
+    ]
+  }
+]

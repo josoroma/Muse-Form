@@ -1,0 +1,21 @@
+# Research and attribution
+
+Inspected on October 21, 2026. The drawings, animation tracks, renderer, and skill prose in this project are original implementations. These repositories informed decisions; their engines and skill texts were not vendored. The interpretations below are our synthesis, not claims of compatibility or identical behavior.
+
+| Source | Adopted idea | Inspected revision / upstream license |
+| --- | --- | --- |
+| [Hairline](https://github.com/lucasmarkes/hairline), [drawing rules](https://github.com/lucasmarkes/hairline/blob/37d2e78dcb333ab30c3338e28ed4a690364ea014/skills/hairline-create/rules.md) | Designed rest pose; differentiated line hierarchy; bounded motion; back-to-front occlusion; actual visual inspection. The current edition also adopts its monochrome restriction. Organic subjects keep their observed viewpoint; its isometric machinery and pointer tours are not used. | `37d2e78dcb333ab30c3338e28ed4a690364ea014` / MIT, Lucas Marques |
+| [Awesome motion design agent skills](https://github.com/frankxai/awesome-motion-design-agent-skills/blob/b45d60fa5b0f7b7d07331572416b80e17dcfd203/rubrics/motion-quality-rubric.md) | Separate reviews for intent, timing, hierarchy, accessibility, and performance. This is a curated resource, not a character renderer. | `b45d60fa5b0f7b7d07331572416b80e17dcfd203` / CC0-1.0 |
+| [Claude Motion](https://github.com/whaleyxbt/claude-motion/blob/e627941543d9988b155dc610bb9cc0115a5e365e/.claude/skills/motion-design/SKILL.md) | Named beats, frame-derived state, a single focal action, and restrained secondary movement. | `e627941543d9988b155dc610bb9cc0115a5e365e` / MIT |
+| [iart animation principles](https://github.com/iart-ai/motion-design-skills/blob/3c129f769d90a1328c209c386492333c9ac62312/skills/animation-principles/SKILL.md) | Emotional intent, micro-story, anticipation, curved trajectories, and weight-dependent follow-through. | `3c129f769d90a1328c209c386492333c9ac62312` / MIT |
+| [HyperFrames motion reel guide](https://sunwood-ai-labs.github.io/hyperframes-motion-reel-skill/guide/getting-started), [source skill](https://github.com/Sunwood-ai-labs/hyperframes-motion-reel-skill/blob/be78681a88a70f1f66c82275299fe569a9a9fcaa/SKILL.md) | Separate choreography from detail; absolute-time rendering; check the encoded result as well as preview. The current line edition uses native SVG/Chrome/FFmpeg; the archived realism edition used WebGL plates. | `be78681a88a70f1f66c82275299fe569a9a9fcaa` / MIT skill |
+| [Motion Designer](https://github.com/kaventro/motion-designer/blob/7d0b8bb78ddd2c91c57db9d1e83fcf711304bdb8/skills/motion-designer/reference/motion.md) | Time is the source of frame state; named actions, readable holds, and loop continuity. | `7d0b8bb78ddd2c91c57db9d1e83fcf711304bdb8` / MIT |
+| [iart motion-skills](https://github.com/iart-ai/motion-skills/tree/bb5a3ce666110855a3437de2f70e9968c408e005) | Useful routing to illustration, SVG, and motion references; render, freeze, inspect, and repair. | `bb5a3ce666110855a3437de2f70e9968c408e005` / MIT |
+
+If later work copies upstream code or substantial prose, retain the applicable copyright and license notices. A link alone does not replace those notices. The original local photographs appear to be book pages; their publication and artists have not been established, and the photos are not redistributed in this corpus.
+
+Skill packaging was checked against [OpenAI's skill documentation](https://learn.chatgpt.com/docs/build-skills). The local skill-creator workflow guided the folder structure and validation; Taster guided deterministic motion and visual verification. Neither is required to run the finished local SVG illustrations and loops.
+
+## October 22, 2026: return to native contours
+
+Rechecked Hairline and its ten drawing rules at revision 37d2e78dcb333ab30c3338e28ed4a690364ea014. The current edition adopts its monochrome stroke hierarchy, sparse structural marks, opaque ground-colored occlusion, a single focal accent, designed rest pose and bounded movement. Organic subjects retain observed anatomy/viewpoints; the collection does not claim strict isometric construction or use Hairline’s runtime. Curated contours and authored character groups are original implementation work.

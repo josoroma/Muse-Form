@@ -1,0 +1,19 @@
+{
+  "id": "105195",
+  "title": "Cartilage catching the light",
+  "duration": 7,
+  "imageUrl": "../plates/105195.png",
+  "regions": [],
+  "light": {
+    "center": [
+      0.53,
+      0.41
+    ],
+    "radius": [
+      0.34,
+      0.49
+    ],
+    "strength": 0.05
+  },
+  "pins": []
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seven-second storytelling"
+  short_description: "Native SVG drawings and seven-second illustrated stories"
+  default_prompt: "Use $seven-second-storytelling to create clean, believable native SVG art with Hairline-inspired contours, animate a seven-second gesture, inspect the rendered result, and preserve its prompt and asset links."

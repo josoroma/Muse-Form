@@ -1,0 +1,92 @@
+{
+  "id": "105197",
+  "title": "The weight of a quiet thought",
+  "duration": 7,
+  "imageUrl": "../plates/105197.png",
+  "regions": [
+    {
+      "name": "coherent head intention",
+      "center": [
+        0.51,
+        0.43
+      ],
+      "radius": [
+        0.6,
+        0.88
+      ],
+      "translate": [
+        0.4,
+        1.6
+      ],
+      "rotate": -0.16,
+      "pivot": [
+        0.47,
+        0.78
+      ],
+      "phase": "action"
+    },
+    {
+      "name": "quiet shoulder breath",
+      "center": [
+        0.5,
+        0.87
+      ],
+      "radius": [
+        0.33,
+        0.15
+      ],
+      "translate": [
+        0,
+        -1.7
+      ],
+      "rotate": 0,
+      "pivot": [
+        0.5,
+        0.87
+      ],
+      "phase": "breath"
+    }
+  ],
+  "pins": [
+    {
+      "center": [
+        0.5,
+        0
+      ],
+      "radius": [
+        0.75,
+        0.07
+      ]
+    },
+    {
+      "center": [
+        0.5,
+        1
+      ],
+      "radius": [
+        0.75,
+        0.07
+      ]
+    },
+    {
+      "center": [
+        0,
+        0.5
+      ],
+      "radius": [
+        0.06,
+        0.75
+      ]
+    },
+    {
+      "center": [
+        1,
+        0.5
+      ],
+      "radius": [
+        0.06,
+        0.75
+      ]
+    }
+  ]
+}

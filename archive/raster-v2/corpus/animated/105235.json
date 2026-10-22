@@ -1,0 +1,167 @@
+{
+  "id": "105235",
+  "title": "The Gardener Who Grew Another Morning",
+  "duration": 7,
+  "imageUrl": "../plates/105235.png",
+  "regions": [
+    {
+      "name": "garment breath",
+      "center": [
+        0.397,
+        0.315
+      ],
+      "radius": [
+        0.1,
+        0.126
+      ],
+      "translate": [
+        0,
+        -1.1
+      ],
+      "rotate": 0,
+      "pivot": [
+        0.397,
+        0.315
+      ],
+      "phase": "breath",
+      "delay": 0
+    },
+    {
+      "name": "silver hair tip breeze",
+      "center": [
+        0.483,
+        0.046
+      ],
+      "radius": [
+        0.073,
+        0.033
+      ],
+      "translate": [
+        0.65,
+        -0.2
+      ],
+      "rotate": 0.25,
+      "pivot": [
+        0.491,
+        0.086
+      ],
+      "phase": "action",
+      "delay": 0.16
+    },
+    {
+      "name": "sapling leaf response",
+      "center": [
+        0.65,
+        0.675
+      ],
+      "radius": [
+        0.052,
+        0.073
+      ],
+      "translate": [
+        0.8,
+        -0.25
+      ],
+      "rotate": 0.42,
+      "pivot": [
+        0.641,
+        0.758
+      ],
+      "phase": "action",
+      "delay": 0.3
+    }
+  ],
+  "pins": [
+    {
+      "center": [
+        0.521,
+        0.153
+      ],
+      "radius": [
+        0.072,
+        0.092
+      ]
+    },
+    {
+      "center": [
+        0.478,
+        0.468
+      ],
+      "radius": [
+        0.078,
+        0.066
+      ]
+    },
+    {
+      "center": [
+        0.497,
+        0.577
+      ],
+      "radius": [
+        0.107,
+        0.104
+      ]
+    },
+    {
+      "center": [
+        0.581,
+        0.577
+      ],
+      "radius": [
+        0.032,
+        0.043
+      ]
+    },
+    {
+      "center": [
+        0.641,
+        0.833
+      ],
+      "radius": [
+        0.104,
+        0.091
+      ]
+    },
+    {
+      "center": [
+        0.405,
+        0.869
+      ],
+      "radius": [
+        0.29,
+        0.101
+      ]
+    },
+    {
+      "center": [
+        0.595,
+        0.432
+      ],
+      "radius": [
+        0.057,
+        0.058
+      ]
+    },
+    {
+      "center": [
+        0.608,
+        0.756
+      ],
+      "radius": [
+        0.022,
+        0.018
+      ]
+    }
+  ],
+  "light": {
+    "center": [
+      0.61,
+      0.693
+    ],
+    "radius": [
+      0.052,
+      0.11
+    ],
+    "strength": 0.012
+  }
+}

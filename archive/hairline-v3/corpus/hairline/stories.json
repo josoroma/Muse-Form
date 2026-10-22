@@ -1,0 +1,194 @@
+[
+  {
+    "id": "105232",
+    "svg": "corpus/svg/105232.svg",
+    "prompt": "An adult weathered seafarer standing on a pier, eye aligned with a long brass telescope, a star chart held at his side. Build native cubic silhouettes with adult proportions, five-finger grips and planted boots; retain only the hat, coat construction, face profile, telescope sections and sparse harbor depth cues. Use charcoal occlusion plates, a 1.1-pixel monochrome stroke hierarchy and one bright lens rim. No texture trace, image, gradient, glow, caption or colored fill.",
+    "method": "Hand-authored native SVG contour geometry informed by the prior generated pose; no raster embedded or automatic paint trace.",
+    "review": {
+      "notes": "Inspected full-size rest and authored feather extreme. Adult body proportion and long planted legs remain coherent; the profile meets the eyepiece and raised fingers interrupt the tube as a grip. Softened the initially angular beard. Sparse pier and ship retain depth. Only the feather moves; there is no telescope lift or coat-body motion.",
+      "stillAndAuthoredPeakInspected": true,
+      "encodedFilmInspected": false,
+      "limits": "Sparse illustrative anatomy and selected local object movement; not a photorealistic drawing or full articulated character performance."
+    },
+    "motionCaption": "The hat feather answers a small sea breeze while the telescope, hands, coat and planted boots stay rigid.",
+    "animations": [
+      {
+        "target": "feather",
+        "type": "rotate",
+        "values": [
+          "0 308 80",
+          "0 308 80",
+          "-2 308 80",
+          "7 308 80",
+          "4 308 80",
+          "0 308 80",
+          "0 308 80"
+        ],
+        "keyTimes": [
+          0,
+          0.12,
+          0.22,
+          0.46,
+          0.62,
+          0.88,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105233",
+    "svg": "corpus/svg/105233.svg",
+    "prompt": "A grounded heavy marsh dragon with a continuous curved neck, folded wing bones and a claw genuinely supporting a lantern ring. Author clean silhouettes and a few structural creases; keep the paw, tail and belly on the bank. Monochrome charcoal Hairline-inspired line hierarchy, with the flame as the only bright accent. Omit scales, foliage noise and tonal shading; native SVG geometry only.",
+    "method": "Hand-authored native SVG contour geometry informed by the prior generated pose; no raster embedded or automatic paint trace.",
+    "review": {
+      "notes": "Inspected full-size rest and lantern rotation extreme. Ring remains in the claw, the lamp rotates from its suspension point, and the heavy body, tail and resting paw stay fixed. Removed small spine marks whose attachment was ambiguous. Wing membranes remain a simplified invented structure. No wingbeat or body lift is claimed.",
+      "stillAndAuthoredPeakInspected": true,
+      "encodedFilmInspected": false,
+      "limits": "Sparse illustrative anatomy and selected local object movement; not a photorealistic drawing or full articulated character performance."
+    },
+    "motionCaption": "The lantern sways from a fixed ring while the dragon keeps its grasp, folded wings and planted ground contacts.",
+    "animations": [
+      {
+        "target": "lantern",
+        "type": "rotate",
+        "values": [
+          "0 718 442",
+          "0 718 442",
+          "-1.5 718 442",
+          "4.5 718 442",
+          "2 718 442",
+          "0 718 442",
+          "0 718 442"
+        ],
+        "keyTimes": [
+          0,
+          0.12,
+          0.22,
+          0.46,
+          0.62,
+          0.88,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105234",
+    "svg": "corpus/svg/105234.svg",
+    "prompt": "A continuous coiled soft-bodied worm raises its small animal-like head toward a firefly. Construct an authored swept contour with sparse curved segment seams, two fine feelers and a small near eye. Keep the coil weighted on the ground, the mushrooms quiet and the firefly the single bright stroke. Native SVG paths on charcoal, no bitmap, texture, gradient, glow or human face pasted onto the worm.",
+    "method": "Hand-authored native SVG contour geometry informed by the prior generated pose; no raster embedded or automatic paint trace.",
+    "review": {
+      "notes": "Inspected full-size rest and authored firefly/feeler extreme. Widened the coil bend to remove offset-curve self-intersection, and moved the eye off the silhouette. Feelers rotate at their visible roots; the continuous body remains weighted. Segment rhythm is deliberately sparse and somewhat regular. No crawling or major neck bend is claimed.",
+      "stillAndAuthoredPeakInspected": true,
+      "encodedFilmInspected": false,
+      "limits": "Sparse illustrative anatomy and selected local object movement; not a photorealistic drawing or full articulated character performance."
+    },
+    "motionCaption": "The firefly makes a returning hover and the attached feelers turn toward it; the continuous body holds its weighted coil.",
+    "animations": [
+      {
+        "target": "firefly",
+        "type": "translate",
+        "values": [
+          "0 0",
+          "0 0",
+          "4 2",
+          "-18 -12",
+          "-10 -6",
+          "0 0",
+          "0 0"
+        ],
+        "keyTimes": [
+          0,
+          0.12,
+          0.22,
+          0.46,
+          0.62,
+          0.88,
+          1
+        ]
+      },
+      {
+        "target": "feeler-near",
+        "type": "rotate",
+        "values": [
+          "0 801 282",
+          "0 801 282",
+          "-3 801 282",
+          "12 801 282",
+          "7 801 282",
+          "0 801 282",
+          "0 801 282"
+        ],
+        "keyTimes": [
+          0,
+          0.12,
+          0.22,
+          0.46,
+          0.62,
+          0.88,
+          1
+        ]
+      },
+      {
+        "target": "feeler-far",
+        "type": "rotate",
+        "values": [
+          "0 813 292",
+          "0 813 292",
+          "-2 813 292",
+          "8 813 292",
+          "5 813 292",
+          "0 813 292",
+          "0 813 292"
+        ],
+        "keyTimes": [
+          0,
+          0.12,
+          0.22,
+          0.46,
+          0.62,
+          0.88,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "105235",
+    "svg": "corpus/svg/105235.svg",
+    "prompt": "An elderly kindly undead gardener kneels with one boot planted and one knee down, holding a ceramic jug by its handle to water a sapling. Author believable adult proportions, a clear five-digit grip, restrained facial creases and a few stitches without gore. Quiet native cubic contours on charcoal; water is the single bright accent. Use only background-colored occlusion plates, no texture trace, colored fill, gradients or embedded image.",
+    "method": "Hand-authored native SVG contour geometry informed by the prior generated pose; no raster embedded or automatic paint trace.",
+    "review": {
+      "notes": "Inspected full-size rest and sapling extreme. Bent the near fingers around the handle and raised its arc to make the grip continuous. Planted boot, grounded knee and pot retain their contact; sapling pivots at the soil line. Water and jug are held contours. This does not perform a full pouring action.",
+      "stillAndAuthoredPeakInspected": true,
+      "encodedFilmInspected": false,
+      "limits": "Sparse illustrative anatomy and selected local object movement; not a photorealistic drawing or full articulated character performance."
+    },
+    "motionCaption": "The sapling makes a gentle anchored lean; the adult pose, handle grip, jug, water source, knee, boot and pot stay fixed.",
+    "animations": [
+      {
+        "target": "sapling",
+        "type": "rotate",
+        "values": [
+          "0 687 652",
+          "0 687 652",
+          "-1 687 652",
+          "3 687 652",
+          "1.5 687 652",
+          "0 687 652",
+          "0 687 652"
+        ],
+        "keyTimes": [
+          0,
+          0.12,
+          0.22,
+          0.46,
+          0.62,
+          0.88,
+          1
+        ]
+      }
+    ]
+  }
+]

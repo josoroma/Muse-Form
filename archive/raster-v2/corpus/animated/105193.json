@@ -1,0 +1,19 @@
+{
+  "id": "105193",
+  "title": "Architecture beneath the face",
+  "duration": 7,
+  "imageUrl": "../plates/105193.png",
+  "regions": [],
+  "light": {
+    "center": [
+      0.43,
+      0.4
+    ],
+    "radius": [
+      0.39,
+      0.5
+    ],
+    "strength": 0.048
+  },
+  "pins": []
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "SVG storytelling · five seconds"
+  short_description: "Native SVG drawings with visible five-second motion"
+  default_prompt: "Use $seven-second-storytelling to create Hairline-inspired native SVG art with clearly visible expression, finger, muscle or character motion. Make a five-second loop, inspect its extremes and playback, and deliver static and animated SVGs with prompts and links."

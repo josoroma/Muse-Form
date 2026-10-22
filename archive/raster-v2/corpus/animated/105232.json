@@ -1,0 +1,169 @@
+{
+  "id": "105232",
+  "title": "The Captain Who Charted the Moon",
+  "duration": 7,
+  "imageUrl": "../plates/105232.png",
+  "regions": [
+    {
+      "name": "feather tip breeze",
+      "center": [
+        0.247,
+        0.068
+      ],
+      "radius": [
+        0.054,
+        0.061
+      ],
+      "translate": [
+        0.6,
+        -0.25
+      ],
+      "rotate": 0.65,
+      "pivot": [
+        0.284,
+        0.104
+      ],
+      "phase": "action",
+      "delay": 0
+    },
+    {
+      "name": "free left coat hem",
+      "center": [
+        0.199,
+        0.685
+      ],
+      "radius": [
+        0.061,
+        0.113
+      ],
+      "translate": [
+        -1.15,
+        0.2
+      ],
+      "rotate": 0.18,
+      "pivot": [
+        0.241,
+        0.553
+      ],
+      "phase": "action",
+      "delay": 0.23
+    },
+    {
+      "name": "free right coat hem",
+      "center": [
+        0.413,
+        0.653
+      ],
+      "radius": [
+        0.042,
+        0.118
+      ],
+      "translate": [
+        1.05,
+        0.15
+      ],
+      "rotate": -0.15,
+      "pivot": [
+        0.379,
+        0.501
+      ],
+      "phase": "action",
+      "delay": 0.36
+    },
+    {
+      "name": "quiet harbor ripple",
+      "center": [
+        0.878,
+        0.676
+      ],
+      "radius": [
+        0.098,
+        0.033
+      ],
+      "translate": [
+        0.8,
+        0
+      ],
+      "rotate": 0,
+      "pivot": [
+        0.878,
+        0.676
+      ],
+      "phase": "breath",
+      "delay": 0
+    }
+  ],
+  "pins": [
+    {
+      "center": [
+        0.326,
+        0.137
+      ],
+      "radius": [
+        0.083,
+        0.092
+      ]
+    },
+    {
+      "center": [
+        0.447,
+        0.102
+      ],
+      "radius": [
+        0.13,
+        0.06
+      ]
+    },
+    {
+      "center": [
+        0.238,
+        0.52
+      ],
+      "radius": [
+        0.1,
+        0.15
+      ]
+    },
+    {
+      "center": [
+        0.253,
+        0.754
+      ],
+      "radius": [
+        0.041,
+        0.164
+      ]
+    },
+    {
+      "center": [
+        0.218,
+        0.89
+      ],
+      "radius": [
+        0.075,
+        0.065
+      ]
+    },
+    {
+      "center": [
+        0.421,
+        0.86
+      ],
+      "radius": [
+        0.082,
+        0.075
+      ]
+    }
+  ],
+  "light": {
+    "center": [
+      0.114,
+      0.326
+    ],
+    "radius": [
+      0.027,
+      0.056
+    ],
+    "strength": 0.022
+  }
+}

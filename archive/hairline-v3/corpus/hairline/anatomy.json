@@ -1,0 +1,454 @@
+[
+  {
+    "id": "105214",
+    "title": "A Breath Through the Spiral",
+    "category": "torso",
+    "sourcePlate": "archive/raster-v2/corpus/plates/105214.png",
+    "svg": "corpus/svg/105214.svg",
+    "geometry": "corpus/hairline/geometry/105214.json",
+    "prompt": "Draw a breath through the spiral as native SVG anatomical line art derived from the owned 105214 graphite plate. Preserve the original gesture, perspective, joints and digit topology. Use charcoal #101014 ground, a thin #a1a1aa silhouette, sparse #52525b structural contours and one #fafafa focal contour. Smooth the curves; remove texture scratches, shadow bands and redundant anatomy marks. No raster embedding, gradients, filters, shading fills or labels. Compose at 1200 by 900 with clear contact and negative space.",
+    "method": "Low-pass structural edge extraction from owned plate; graph-connected curves, directional gap joining, cubic simplification and per-subject removal/repair. Anatomical silhouette gaps are explicitly repaired at the torso, dorsal hand and foot contact contours.",
+    "review": {
+      "notes": "Inspected the native SVG in Chrome at full size and in the contact sheet. Reconnected the armpit and raised-shoulder contours after the raster source faded there; ribcage/waist counter-rotation remains readable. Cropped neck and arm ends are intentional study framing.",
+      "stillInspected": true,
+      "inspection": "Chrome renders at 1200x900 and multi-study contact sheet; final motion is reviewed separately."
+    },
+    "landmarks": {
+      "neck": [
+        0.47,
+        0.08
+      ],
+      "shoulderLeft": [
+        0.2,
+        0.28
+      ],
+      "shoulderRight": [
+        0.75,
+        0.12
+      ],
+      "sternum": [
+        0.48,
+        0.33
+      ],
+      "ribcage": [
+        0.5,
+        0.49
+      ],
+      "navel": [
+        0.58,
+        0.72
+      ],
+      "waist": [
+        0.55,
+        0.88
+      ]
+    },
+    "pathCount": 47
+  },
+  {
+    "id": "105215",
+    "title": "Tension in the Turn",
+    "category": "arm",
+    "sourcePlate": "archive/raster-v2/corpus/plates/105215.png",
+    "svg": "corpus/svg/105215.svg",
+    "geometry": "corpus/hairline/geometry/105215.json",
+    "prompt": "Draw tension in the turn as native SVG anatomical line art derived from the owned 105215 graphite plate. Preserve the original gesture, perspective, joints and digit topology. Use charcoal #101014 ground, a thin #a1a1aa silhouette, sparse #52525b structural contours and one #fafafa focal contour. Smooth the curves; remove texture scratches, shadow bands and redundant anatomy marks. No raster embedding, gradients, filters, shading fills or labels. Compose at 1200 by 900 with clear contact and negative space.",
+    "method": "Low-pass structural edge extraction from owned plate; graph-connected curves, directional gap joining, cubic simplification and per-subject removal/repair. Anatomical silhouette gaps are explicitly repaired at the torso, dorsal hand and foot contact contours.",
+    "review": {
+      "notes": "Inspected the native SVG in Chrome. Preserved the elbow triangle, tapered forearm and closed fist while reducing the bodybuilder-looking shadow divisions to a small number of continuous anatomical lines.",
+      "stillInspected": true,
+      "inspection": "Chrome renders at 1200x900 and multi-study contact sheet; final motion is reviewed separately."
+    },
+    "landmarks": {
+      "shoulder": [
+        0.25,
+        0.54
+      ],
+      "biceps": [
+        0.53,
+        0.68
+      ],
+      "elbow": [
+        0.87,
+        0.82
+      ],
+      "wrist": [
+        0.68,
+        0.25
+      ],
+      "fist": [
+        0.56,
+        0.14
+      ]
+    },
+    "pathCount": 34
+  },
+  {
+    "id": "105216",
+    "title": "The Palm Opens",
+    "category": "hand",
+    "sourcePlate": "archive/raster-v2/corpus/plates/105216.png",
+    "svg": "corpus/svg/105216.svg",
+    "geometry": "corpus/hairline/geometry/105216.json",
+    "prompt": "Draw the palm opens as native SVG anatomical line art derived from the owned 105216 graphite plate. Preserve the original gesture, perspective, joints and digit topology. Use charcoal #101014 ground, a thin #a1a1aa silhouette, sparse #52525b structural contours and one #fafafa focal contour. Smooth the curves; remove texture scratches, shadow bands and redundant anatomy marks. No raster embedding, gradients, filters, shading fills or labels. Compose at 1200 by 900 with clear contact and negative space.",
+    "method": "Low-pass structural edge extraction from owned plate; graph-connected curves, directional gap joining, cubic simplification and per-subject removal/repair. Anatomical silhouette gaps are explicitly repaired at the torso, dorsal hand and foot contact contours.",
+    "review": {
+      "notes": "Inspected the native SVG in Chrome. Five digits, thumb opposition, finger-web topology and the palmar cup read clearly. The outside contour is stronger than the sparse palm and joint creases; texture scratches were removed.",
+      "stillInspected": true,
+      "inspection": "Chrome renders at 1200x900 and multi-study contact sheet; final motion is reviewed separately."
+    },
+    "landmarks": {
+      "wrist": [
+        0.26,
+        0.76
+      ],
+      "palm": [
+        0.49,
+        0.57
+      ],
+      "thumbTip": [
+        0.4,
+        0.07
+      ],
+      "indexTip": [
+        0.76,
+        0.19
+      ],
+      "middleTip": [
+        0.87,
+        0.36
+      ],
+      "ringTip": [
+        0.91,
+        0.51
+      ],
+      "littleTip": [
+        0.86,
+        0.66
+      ]
+    },
+    "pathCount": 45
+  },
+  {
+    "id": "105217",
+    "title": "Tendons Beneath the Gesture",
+    "category": "hand",
+    "sourcePlate": "archive/raster-v2/corpus/plates/105217.png",
+    "svg": "corpus/svg/105217.svg",
+    "geometry": "corpus/hairline/geometry/105217.json",
+    "prompt": "Draw tendons beneath the gesture as native SVG anatomical line art derived from the owned 105217 graphite plate. Preserve the original gesture, perspective, joints and digit topology. Use charcoal #101014 ground, a thin #a1a1aa silhouette, sparse #52525b structural contours and one #fafafa focal contour. Smooth the curves; remove texture scratches, shadow bands and redundant anatomy marks. No raster embedding, gradients, filters, shading fills or labels. Compose at 1200 by 900 with clear contact and negative space.",
+    "method": "Low-pass structural edge extraction from owned plate; graph-connected curves, directional gap joining, cubic simplification and per-subject removal/repair. Anatomical silhouette gaps are explicitly repaired at the torso, dorsal hand and foot contact contours.",
+    "review": {
+      "notes": "Inspected the native SVG in Chrome and repaired the thumb web, lower palm and wrist silhouette. Five digits are connected through a clear dorsal-hand outline. Tendon and knuckle lines remain subordinate; the small finger retains its source foreshortening.",
+      "stillInspected": true,
+      "inspection": "Chrome renders at 1200x900 and multi-study contact sheet; final motion is reviewed separately."
+    },
+    "landmarks": {
+      "wrist": [
+        0.22,
+        0.78
+      ],
+      "hand": [
+        0.52,
+        0.56
+      ],
+      "thumbTip": [
+        0.85,
+        0.67
+      ],
+      "indexTip": [
+        0.95,
+        0.29
+      ],
+      "middleTip": [
+        0.88,
+        0.12
+      ],
+      "ringTip": [
+        0.76,
+        0.065
+      ],
+      "littleTip": [
+        0.61,
+        0.15
+      ]
+    },
+    "pathCount": 70
+  },
+  {
+    "id": "105218",
+    "title": "Weight Through the Outer Leg",
+    "category": "leg",
+    "sourcePlate": "archive/raster-v2/corpus/plates/105218.png",
+    "svg": "corpus/svg/105218.svg",
+    "geometry": "corpus/hairline/geometry/105218.json",
+    "prompt": "Draw weight through the outer leg as native SVG anatomical line art derived from the owned 105218 graphite plate. Preserve the original gesture, perspective, joints and digit topology. Use charcoal #101014 ground, a thin #a1a1aa silhouette, sparse #52525b structural contours and one #fafafa focal contour. Smooth the curves; remove texture scratches, shadow bands and redundant anatomy marks. No raster embedding, gradients, filters, shading fills or labels. Compose at 1200 by 900 with clear contact and negative space.",
+    "method": "Low-pass structural edge extraction from owned plate; graph-connected curves, directional gap joining, cubic simplification and per-subject removal/repair. Anatomical silhouette gaps are explicitly repaired at the torso, dorsal hand and foot contact contours.",
+    "review": {
+      "notes": "Inspected the native SVG in Chrome. Repaired the heel-to-arch contact contour and removed the cast-shadow line; the knee/calf/ankle relationship is continuous. Removed short nonstructural leg marks to preserve negative space.",
+      "stillInspected": true,
+      "inspection": "Chrome renders at 1200x900 and multi-study contact sheet; final motion is reviewed separately."
+    },
+    "landmarks": {
+      "knee": [
+        0.43,
+        0.22
+      ],
+      "calf": [
+        0.44,
+        0.45
+      ],
+      "ankle": [
+        0.49,
+        0.77
+      ],
+      "heel": [
+        0.46,
+        0.86
+      ],
+      "ball": [
+        0.68,
+        0.9
+      ],
+      "toeTips": [
+        0.76,
+        0.93
+      ],
+      "ground": [
+        0.62,
+        0.95
+      ]
+    },
+    "pathCount": 41
+  },
+  {
+    "id": "105219",
+    "title": "The Calf Holds the Weight",
+    "category": "leg",
+    "sourcePlate": "archive/raster-v2/corpus/plates/105219.png",
+    "svg": "corpus/svg/105219.svg",
+    "geometry": "corpus/hairline/geometry/105219.json",
+    "prompt": "Draw the calf holds the weight as native SVG anatomical line art derived from the owned 105219 graphite plate. Preserve the original gesture, perspective, joints and digit topology. Use charcoal #101014 ground, a thin #a1a1aa silhouette, sparse #52525b structural contours and one #fafafa focal contour. Smooth the curves; remove texture scratches, shadow bands and redundant anatomy marks. No raster embedding, gradients, filters, shading fills or labels. Compose at 1200 by 900 with clear contact and negative space.",
+    "method": "Low-pass structural edge extraction from owned plate; graph-connected curves, directional gap joining, cubic simplification and per-subject removal/repair. Anatomical silhouette gaps are explicitly repaired at the torso, dorsal hand and foot contact contours.",
+    "review": {
+      "notes": "Inspected the native SVG in Chrome. Reconnected the rear heel and trimmed the false ground-shadow tail. Asymmetric calf heads, knee hollow and Achilles direction remain readable with fewer short vein fragments.",
+      "stillInspected": true,
+      "inspection": "Chrome renders at 1200x900 and multi-study contact sheet; final motion is reviewed separately."
+    },
+    "landmarks": {
+      "knee": [
+        0.54,
+        0.27
+      ],
+      "calf": [
+        0.57,
+        0.48
+      ],
+      "achilles": [
+        0.59,
+        0.73
+      ],
+      "heel": [
+        0.57,
+        0.87
+      ],
+      "forefoot": [
+        0.66,
+        0.86
+      ],
+      "ground": [
+        0.6,
+        0.92
+      ]
+    },
+    "pathCount": 29
+  },
+  {
+    "id": "105220",
+    "title": "The Knee Connects the Gesture",
+    "category": "leg",
+    "sourcePlate": "archive/raster-v2/corpus/plates/105220.png",
+    "svg": "corpus/svg/105220.svg",
+    "geometry": "corpus/hairline/geometry/105220.json",
+    "prompt": "Draw the knee connects the gesture as native SVG anatomical line art derived from the owned 105220 graphite plate. Preserve the original gesture, perspective, joints and digit topology. Use charcoal #101014 ground, a thin #a1a1aa silhouette, sparse #52525b structural contours and one #fafafa focal contour. Smooth the curves; remove texture scratches, shadow bands and redundant anatomy marks. No raster embedding, gradients, filters, shading fills or labels. Compose at 1200 by 900 with clear contact and negative space.",
+    "method": "Low-pass structural edge extraction from owned plate; graph-connected curves, directional gap joining, cubic simplification and per-subject removal/repair. Anatomical silhouette gaps are explicitly repaired at the torso, dorsal hand and foot contact contours.",
+    "review": {
+      "notes": "Inspected the native SVG in Chrome. Correct leg category follows the actual source. The bent-knee connection and heel/sole are continuous; removed the stray heel tip and reduced short interior marks. The upper-thigh crop is intentional.",
+      "stillInspected": true,
+      "inspection": "Chrome renders at 1200x900 and multi-study contact sheet; final motion is reviewed separately."
+    },
+    "landmarks": {
+      "thigh": [
+        0.26,
+        0.14
+      ],
+      "knee": [
+        0.53,
+        0.21
+      ],
+      "calf": [
+        0.46,
+        0.46
+      ],
+      "ankle": [
+        0.49,
+        0.75
+      ],
+      "heel": [
+        0.45,
+        0.86
+      ],
+      "forefoot": [
+        0.65,
+        0.91
+      ],
+      "ground": [
+        0.57,
+        0.94
+      ]
+    },
+    "pathCount": 37
+  },
+  {
+    "id": "105221",
+    "title": "Five Toes, One Foundation",
+    "category": "foot",
+    "sourcePlate": "archive/raster-v2/corpus/plates/105221.png",
+    "svg": "corpus/svg/105221.svg",
+    "geometry": "corpus/hairline/geometry/105221.json",
+    "prompt": "Draw five toes, one foundation as native SVG anatomical line art derived from the owned 105221 graphite plate. Preserve the original gesture, perspective, joints and digit topology. Use charcoal #101014 ground, a thin #a1a1aa silhouette, sparse #52525b structural contours and one #fafafa focal contour. Smooth the curves; remove texture scratches, shadow bands and redundant anatomy marks. No raster embedding, gradients, filters, shading fills or labels. Compose at 1200 by 900 with clear contact and negative space.",
+    "method": "Low-pass structural edge extraction from owned plate; graph-connected curves, directional gap joining, cubic simplification and per-subject removal/repair. Anatomical silhouette gaps are explicitly repaired at the torso, dorsal hand and foot contact contours.",
+    "review": {
+      "notes": "Inspected the native SVG in Chrome. Repaired the heel, forefoot and stepped toe silhouette; five toe forms remain distinct. Removed shadow bands under the heel and the least useful short vein traces. Interior marks describe joints and nail planes rather than tonal shading.",
+      "stillInspected": true,
+      "inspection": "Chrome renders at 1200x900 and multi-study contact sheet; final motion is reviewed separately."
+    },
+    "landmarks": {
+      "ankle": [
+        0.29,
+        0.3
+      ],
+      "heel": [
+        0.17,
+        0.57
+      ],
+      "dorsum": [
+        0.48,
+        0.57
+      ],
+      "ball": [
+        0.62,
+        0.74
+      ],
+      "littleToe": [
+        0.51,
+        0.82
+      ],
+      "fourthToe": [
+        0.61,
+        0.85
+      ],
+      "thirdToe": [
+        0.69,
+        0.84
+      ],
+      "secondToe": [
+        0.77,
+        0.82
+      ],
+      "bigToe": [
+        0.86,
+        0.77
+      ],
+      "ground": [
+        0.65,
+        0.9
+      ]
+    },
+    "pathCount": 53
+  },
+  {
+    "id": "105222",
+    "title": "The Foot Seen from Above",
+    "category": "foot",
+    "sourcePlate": "archive/raster-v2/corpus/plates/105222.png",
+    "svg": "corpus/svg/105222.svg",
+    "geometry": "corpus/hairline/geometry/105222.json",
+    "prompt": "Draw the foot seen from above as native SVG anatomical line art derived from the owned 105222 graphite plate. Preserve the original gesture, perspective, joints and digit topology. Use charcoal #101014 ground, a thin #a1a1aa silhouette, sparse #52525b structural contours and one #fafafa focal contour. Smooth the curves; remove texture scratches, shadow bands and redundant anatomy marks. No raster embedding, gradients, filters, shading fills or labels. Compose at 1200 by 900 with clear contact and negative space.",
+    "method": "Low-pass structural edge extraction from owned plate; graph-connected curves, directional gap joining, cubic simplification and per-subject removal/repair. Anatomical silhouette gaps are explicitly repaired at the torso, dorsal hand and foot contact contours.",
+    "review": {
+      "notes": "Inspected the native SVG in Chrome. A true dorsal view with all five toes, graduated widths and a continuous front edge. Replaced the fragmented left ankle with one deliberate continuous contour and removed its duplicate fragments. Long metatarsal/tendon directions retain the viewpoint.",
+      "stillInspected": true,
+      "inspection": "Chrome renders at 1200x900 and multi-study contact sheet; final motion is reviewed separately."
+    },
+    "landmarks": {
+      "ankle": [
+        0.49,
+        0.18
+      ],
+      "dorsum": [
+        0.51,
+        0.44
+      ],
+      "ball": [
+        0.52,
+        0.63
+      ],
+      "bigToe": [
+        0.4,
+        0.85
+      ],
+      "secondToe": [
+        0.49,
+        0.88
+      ],
+      "thirdToe": [
+        0.55,
+        0.85
+      ],
+      "fourthToe": [
+        0.6,
+        0.8
+      ],
+      "littleToe": [
+        0.65,
+        0.73
+      ],
+      "ground": [
+        0.52,
+        0.92
+      ]
+    },
+    "pathCount": 43
+  },
+  {
+    "id": "105223",
+    "title": "The Foot in Three-Quarter View",
+    "category": "foot",
+    "sourcePlate": "archive/raster-v2/corpus/plates/105223.png",
+    "svg": "corpus/svg/105223.svg",
+    "geometry": "corpus/hairline/geometry/105223.json",
+    "prompt": "Draw the foot in three-quarter view as native SVG anatomical line art derived from the owned 105223 graphite plate. Preserve the original gesture, perspective, joints and digit topology. Use charcoal #101014 ground, a thin #a1a1aa silhouette, sparse #52525b structural contours and one #fafafa focal contour. Smooth the curves; remove texture scratches, shadow bands and redundant anatomy marks. No raster embedding, gradients, filters, shading fills or labels. Compose at 1200 by 900 with clear contact and negative space.",
+    "method": "Low-pass structural edge extraction from owned plate; graph-connected curves, directional gap joining, cubic simplification and per-subject removal/repair. Anatomical silhouette gaps are explicitly repaired at the torso, dorsal hand and foot contact contours.",
+    "review": {
+      "notes": "Inspected the native SVG in Chrome. Rebuilt the lost heel/arch/anterior-ankle silhouette around the retained observed toe contours. Smoothed the little-toe sole shelf and the pointed great-toe lip into deliberate anatomical arcs. Removed cast-shadow bands and low-value short traces. This is a curated line interpretation of the owned plate, not a 3D reconstruction.",
+      "stillInspected": true,
+      "inspection": "Chrome renders at 1200x900 and multi-study contact sheet; final motion is reviewed separately."
+    },
+    "landmarks": {
+      "ankle": [
+        0.34,
+        0.39
+      ],
+      "heel": [
+        0.21,
+        0.7
+      ],
+      "ball": [
+        0.67,
+        0.82
+      ]
+    },
+    "pathCount": 42
+  }
+]

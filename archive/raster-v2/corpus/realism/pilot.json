@@ -1,0 +1,43 @@
+[
+  {
+    "id": "105223",
+    "image": "corpus/plates/105223.png",
+    "generation": "built-in image_gen",
+    "prompt": "Create one original realistic fine-art charcoal and graphite drawing of a human foot and lower ankle in three-quarter side view, toes pointing right, heel bearing weight on a quiet studio surface. Use 105223.jpg as anatomy-construction reference only, never an edit target or page reproduction. Anatomically credible heel pad, longitudinal arch, Achilles insertion, asymmetric malleolus, long tendons under skin, five naturally overlapping toes with real knuckles and restrained nails, no detached pieces. Carefully observed organic proportions, not geometric diagram shapes. Relaxed whole foot without injury. Upper-left light, continuous tonal modeling, transparent charcoal contact shadow below heel and ball, soft halftones, selective lost edges, sparse precise pencil marks following form. Ivory cotton paper, warm graphite with a hint of sanguine in the deepest halftones. Clean deliberate atelier realism. No messy hatching, repeated synthetic contour strips, bold outlines, cel shading, cartoon, plastic CGI, labels, text or frame. Wide 4:3 composition with clean margins. Do not reproduce book layout, lettering, photograph or page borders.",
+    "review": {
+      "anatomy": 4,
+      "lighting": 5,
+      "cleanliness": 4,
+      "composition": 4,
+      "notes": [
+        "Five toes, integrated heel/arch/ankle and grounded cast shadow are substantially more believable than the prior vector plate. Grain is visible at full size but follows continuous tones; the upper ankle deliberately crops. Artistic reference, not a clinical atlas.",
+        "Independent review corrected the view description: lateral/dorsal three-quarter anatomy rather than the old edition’s medial-arch label."
+      ]
+    },
+    "landmarks": {
+      "ankle": [
+        0.35,
+        0.4
+      ],
+      "heel": [
+        0.23,
+        0.7
+      ],
+      "arch": [
+        0.49,
+        0.67
+      ],
+      "ball": [
+        0.66,
+        0.8
+      ],
+      "toes": [
+        0.8,
+        0.8
+      ]
+    },
+    "motion": "A restrained shift of ankle load, less than five pixels, with heel and ball pinned. Tendon motion softens into a hold; no foot floating, detached toes or camera zoom.",
+    "title": "Weight Across the Foot",
+    "observation": "The source teaches the continuous transition from ankle through heel and arch into the toes. This interpretation shows a lateral/dorsal three-quarter foot with the great toe on the far side; it is not a dedicated medial-arch view."
+  }
+]

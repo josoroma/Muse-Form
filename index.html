@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3eee2">
+  <title>Five — Contours in motion</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2324343b'/%3E%3Cpath d='M18 18H48L29 49' fill='none' stroke='%23f3eee2' stroke-width='5'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="gallery.mjs"></script>
+</head>
+<body>
+  <header class="masthead"><a class="brand" href="#">FIVE<span>THE MOVING SKETCHBOOK</span></a><a class="manual" href="README.md">The corpus & prompts ↗</a></header>
+  <main>
+    <section class="introduction"><div><p class="eyebrow">ANATOMY · CHARACTER · LITTLE STORIES</p><h1>A drawing.<br>A breath of life.</h1></div><p class="intro-note">Twenty-four drawings in light and line.<br>Native SVG. Five seconds of expressive motion.<br><span>Watch the gesture. Explore every pose.</span></p></section>
+    <section class="workbench" aria-label="Animation studio">
+      <div class="player-column">
+        <div class="stage" id="stage" aria-label="Selected drawing"><p class="loading">Opening the sketchbook…</p></div>
+        <div class="transport">
+          <button id="play" class="play" aria-label="Play animation" disabled>▶ <span>Play</span></button>
+          <button id="restart" class="icon-button" aria-label="Restart animation" title="Restart">↺</button>
+          <label class="sr-only" for="scrub">Animation time in seconds</label><input id="scrub" type="range" min="0" max="5" step="0.01" value="0">
+          <output id="clock" for="scrub">0.00 / 5.00</output>
+          <label class="loop"><input type="checkbox" id="loop" checked> Loop</label>
+        </div>
+        <div class="frame-note"><span id="format">NATIVE SVG · 5 SECONDS</span><span>Space to play · ← → to step</span></div>
+      </div>
+      <aside class="study-notes">
+        <p class="eyebrow" id="study-number"></p><h2 id="study-title">Loading…</h2>
+        <p class="observation" id="observation"></p>
+        <div class="rule"></div><p class="eyebrow">A SMALL MOVEMENT</p><p class="motion" id="motion"></p>
+        <div class="downloads"><a id="static-link" download>Static SVG ↗</a><a id="animated-link" download>Animated SVG ↗</a></div>
+        <details id="prompt-details"><summary>Read the drawing prompt</summary><p id="prompt"></p><button id="copy-prompt">Copy prompt</button><p id="copy-status" role="status"></p></details>
+        <p class="source-note" id="source-note"></p>
+      </aside>
+    </section>
+    <section class="collection" aria-labelledby="collection-title">
+      <div class="collection-heading"><div><p class="eyebrow">THE REFERENCE CORPUS</p><h2 id="collection-title">An atlas of small gestures.</h2></div><span id="count">24 studies</span></div>
+      <div class="filters" role="group" aria-label="Filter studies"><button data-filter="all" aria-pressed="true">All studies</button><button data-filter="face" aria-pressed="false">Faces & expressions</button><button data-filter="anatomy" aria-pressed="false">Body & movement</button><button data-filter="story" aria-pressed="false">Little stories</button></div>
+      <div id="library" class="library"></div>
+    </section>
+  </main>
+  <footer><span>FIVE / An open sketchbook</span><p>Original illustrations inspired by the supplied drawing studies.<br>Twenty-four art prompts. Five-second SVG gestures, expressions and stories.</p><a href="skills/five-second-storytelling/SKILL.md">The reusable skill ↗</a></footer>
+</body>
+</html>

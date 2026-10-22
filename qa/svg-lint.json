@@ -1,0 +1,338 @@
+[
+  {
+    "file": "corpus/animated/105193.svg",
+    "pass": true,
+    "paths": 822,
+    "animations": 2,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105194.svg",
+    "pass": true,
+    "paths": 543,
+    "animations": 6,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105195.svg",
+    "pass": true,
+    "paths": 834,
+    "animations": 2,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105196.svg",
+    "pass": true,
+    "paths": 832,
+    "animations": 11,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105197.svg",
+    "pass": true,
+    "paths": 833,
+    "animations": 12,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105198.svg",
+    "pass": true,
+    "paths": 833,
+    "animations": 12,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105199.svg",
+    "pass": true,
+    "paths": 841,
+    "animations": 12,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105200.svg",
+    "pass": true,
+    "paths": 834,
+    "animations": 12,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105202.svg",
+    "pass": true,
+    "paths": 545,
+    "animations": 3,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105203.svg",
+    "pass": true,
+    "paths": 835,
+    "animations": 10,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105214.svg",
+    "pass": true,
+    "paths": 585,
+    "animations": 2,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105215.svg",
+    "pass": true,
+    "paths": 294,
+    "animations": 3,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105216.svg",
+    "pass": true,
+    "paths": 583,
+    "animations": 5,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105217.svg",
+    "pass": true,
+    "paths": 576,
+    "animations": 5,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105218.svg",
+    "pass": true,
+    "paths": 330,
+    "animations": 2,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105219.svg",
+    "pass": true,
+    "paths": 222,
+    "animations": 1,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105220.svg",
+    "pass": true,
+    "paths": 249,
+    "animations": 1,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105221.svg",
+    "pass": true,
+    "paths": 501,
+    "animations": 6,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105222.svg",
+    "pass": true,
+    "paths": 385,
+    "animations": 6,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105223.svg",
+    "pass": true,
+    "paths": 300,
+    "animations": 1,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105232.svg",
+    "pass": true,
+    "paths": 175,
+    "animations": 4,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105233.svg",
+    "pass": true,
+    "paths": 274,
+    "animations": 8,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105234.svg",
+    "pass": true,
+    "paths": 207,
+    "animations": 4,
+    "errors": []
+  },
+  {
+    "file": "corpus/animated/105235.svg",
+    "pass": true,
+    "paths": 240,
+    "animations": 5,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105193.svg",
+    "pass": true,
+    "paths": 822,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105194.svg",
+    "pass": true,
+    "paths": 543,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105195.svg",
+    "pass": true,
+    "paths": 834,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105196.svg",
+    "pass": true,
+    "paths": 832,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105197.svg",
+    "pass": true,
+    "paths": 833,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105198.svg",
+    "pass": true,
+    "paths": 833,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105199.svg",
+    "pass": true,
+    "paths": 841,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105200.svg",
+    "pass": true,
+    "paths": 834,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105202.svg",
+    "pass": true,
+    "paths": 545,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105203.svg",
+    "pass": true,
+    "paths": 835,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105214.svg",
+    "pass": true,
+    "paths": 585,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105215.svg",
+    "pass": true,
+    "paths": 294,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105216.svg",
+    "pass": true,
+    "paths": 583,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105217.svg",
+    "pass": true,
+    "paths": 576,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105218.svg",
+    "pass": true,
+    "paths": 330,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105219.svg",
+    "pass": true,
+    "paths": 222,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105220.svg",
+    "pass": true,
+    "paths": 249,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105221.svg",
+    "pass": true,
+    "paths": 501,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105222.svg",
+    "pass": true,
+    "paths": 385,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105223.svg",
+    "pass": true,
+    "paths": 300,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105232.svg",
+    "pass": true,
+    "paths": 175,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105233.svg",
+    "pass": true,
+    "paths": 274,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105234.svg",
+    "pass": true,
+    "paths": 207,
+    "animations": 0,
+    "errors": []
+  },
+  {
+    "file": "corpus/svg/105235.svg",
+    "pass": true,
+    "paths": 240,
+    "animations": 0,
+    "errors": []
+  }
+]
