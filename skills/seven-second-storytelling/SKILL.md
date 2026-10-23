@@ -54,6 +54,6 @@ Use semantic transforms and authored matching-topology path poses. Large changes
 
 Deliver static and animated SVGs. Do not generate or offer MP4s unless the user later explicitly asks. QA snapshots are internal inspection evidence. The gallery autoplays selection unless reduced motion is enabled; it supports pause, restart, scrubbing and keyboard control and pauses when hidden.
 
-Project workflow: compose → catalog → check → verify → install-skill → bundle. The portable bundle contains all 48 SVGs and the full prompt manifest. The `storytelling-svgs.zip` delivery contains only the static and animated SVGs. Prior editions remain archived.
+Project workflow: compose → catalog → check → playback → visual review and repair → verify → install-skill → bundle. Rebuild the catalog after changing review metadata. The portable bundle contains all 48 SVGs and the full prompt manifest. The `storytelling-svgs.zip` delivery contains only the static and animated SVGs. Preserve the accepted edition before replacing animations; `archive/hairline-v3` preserves the drawings accepted before this motion revision.
 
 Split large corpora by subject family with disjoint source ownership. Main-agent review still resolves cross-family quality and motion issues. Disclose self-review and distinguish sampled inspection from continuous playback. [Research notes](references/sources.md) record the supplied motion projects; this collection adapts Hairline's drawing discipline rather than its isometric engine.

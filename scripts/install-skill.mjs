@@ -8,6 +8,6 @@ for(const folder of ['svg','animated'])await cp(resolve(ROOT,'corpus',folder),re
 const manifest=JSON.parse(await readFile(resolve(ROOT,'corpus/manifest.json')));
 for(const s of manifest.studies){s.svg=`svg/${s.id}.svg`;s.image=s.svg;s.poster=s.svg;s.animated=`animated/${s.id}.svg`;s.rig=s.animated;delete s.video;}
 await writeFile(resolve(corpus,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');await mkdir(resolve(source,'assets/quality'),{recursive:true});
-for(const file of ['art-review.json','svg-checks.json','verification.json'])await cp(resolve(ROOT,'qa/motion-five',file),resolve(source,'assets/quality',file));
+for(const file of ['art-review.json','svg-checks.json','playback.json','verification.json'])await cp(resolve(ROOT,'qa/motion-five',file),resolve(source,'assets/quality',file));
 await rm(resolve(source,'assets/quality/check-results.json'),{force:true});await rm(resolve(target,'assets/quality/check-results.json'),{force:true});
 await mkdir(target,{recursive:true});await cp(source,target,{recursive:true,filter:p=>!p.includes('__pycache__')});await writeFile(resolve(target,'.storytelling-install.json'),JSON.stringify({source,name,edition:4,corpusCount:24},null,2)+'\n');console.log(`Installed 24 native drawings and 24 five-second SVG loops at ${target}`);

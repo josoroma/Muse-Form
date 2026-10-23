@@ -18,7 +18,15 @@
         5
       ],
       "continuousPlaybackInspected": false,
-      "limits": "Sparse illustrative anatomy; explicit local character action with a fixed camera. Review covers sampled native frames, not continuous playback. SVG-only delivery."
+      "limits": "Sparse illustrative anatomy; explicit local character action with a fixed camera. Review covers sampled native frames, not continuous playback. SVG-only delivery.",
+      "finalMotionReview": {
+        "reviewer": "Main-agent self-review of delegated authoring and subsequent local repairs",
+        "scope": "Static and authored-time pose sheets, full-size peaks where needed, and ten sampled frames from actual automatic browser playback crossing the loop boundary.",
+        "finding": "Head, hat, telescope and gripping hand scan together, with the arm following. Boots stay fixed; the telescope has frame clearance and stays in the grip.",
+        "continuousPlaybackInspected": false,
+        "accepted": true,
+        "animatedSHA256": "843d81f0fc0544dc0cf78417da369bf7bbbe00faa445906a28957bdaf6ab1b06"
+      }
     },
     "motionCaption": "The captain raises the telescope to scan, turns his head with the eyepiece, then lowers the view; the gripping fingers follow the tube, shoulder and neck stay attached, and the boots remain planted.",
     "animations": [
@@ -439,7 +447,15 @@
         5
       ],
       "continuousPlaybackInspected": false,
-      "limits": "Sparse illustrative anatomy; explicit local character action with a fixed camera. Review covers sampled native frames, not continuous playback. SVG-only delivery."
+      "limits": "Sparse illustrative anatomy; explicit local character action with a fixed camera. Review covers sampled native frames, not continuous playback. SVG-only delivery.",
+      "finalMotionReview": {
+        "reviewer": "Main-agent self-review of delegated authoring and subsequent local repairs",
+        "scope": "Static and authored-time pose sheets, full-size peaks where needed, and ten sampled frames from actual automatic browser playback crossing the loop boundary.",
+        "finding": "The neck bends, the wing opens and the lantern lifts with the holding claw. Tail and resting paw stay fixed; existing faint muzzle whiskers remain intentional.",
+        "continuousPlaybackInspected": false,
+        "accepted": true,
+        "animatedSHA256": "544dc41d55588fafe4d530473bcd3c4b9af79b539be06cba891ebf661724035b"
+      }
     },
     "motionCaption": "The dragon inhales, raises and bends its neck, and opens the near wing before settling; the supporting arm lifts the lantern by its ring and the lamp follows with a delayed swing while tail and resting paw stay grounded.",
     "animations": [
@@ -904,7 +920,15 @@
         5
       ],
       "continuousPlaybackInspected": false,
-      "limits": "Sparse illustrative anatomy; explicit local character action with a fixed camera. Review covers sampled native frames, not continuous playback. SVG-only delivery."
+      "limits": "Sparse illustrative anatomy; explicit local character action with a fixed camera. Review covers sampled native frames, not continuous playback. SVG-only delivery.",
+      "finalMotionReview": {
+        "reviewer": "Main-agent self-review of delegated authoring and subsequent local repairs",
+        "scope": "Static and authored-time pose sheets, full-size peaks where needed, and ten sampled frames from actual automatic browser playback crossing the loop boundary.",
+        "finding": "The coil stays planted while the neck compresses and extends toward the firefly. Cross-seams and facial details follow the continuous body without a detached tip.",
+        "continuousPlaybackInspected": false,
+        "accepted": true,
+        "animatedSHA256": "f2ad80863bf3362c80d947c36bb430bf7219054bfd366054416bf41f56077a76"
+      }
     },
     "motionCaption": "The worm compresses in anticipation, extends its continuous neck toward the rising firefly, and settles back into the same weighted coil; segment seams, eye, mouth and feelers follow the same authored body poses.",
     "animations": [
@@ -1413,7 +1437,15 @@
         5
       ],
       "continuousPlaybackInspected": false,
-      "limits": "Sparse illustrative anatomy; explicit local character action with a fixed camera. Review covers sampled native frames, not continuous playback. SVG-only delivery."
+      "limits": "Sparse illustrative anatomy; explicit local character action with a fixed camera. Review covers sampled native frames, not continuous playback. SVG-only delivery.",
+      "finalMotionReview": {
+        "reviewer": "Main-agent self-review of delegated authoring and subsequent local repairs",
+        "scope": "Static and authored-time pose sheets, full-size peaks where needed, and ten sampled frames from actual automatic browser playback crossing the loop boundary.",
+        "finding": "Arm, gripping fingers and jug tip together; the stream begins at the moving spout and falls inside the pot. Planted boot, knee and pot stay fixed while head and plant give secondary responses.",
+        "continuousPlaybackInspected": false,
+        "accepted": true,
+        "animatedSHA256": "839a2427741fb30a3da93671a93ae3e5a3ecef16b46c3faa1bd270805f4a51ef"
+      }
     },
     "motionCaption": "The gardener nods toward the pot and tips the jug with the attached forearm and gripping hand. A changing stream begins during the tip, stops as the jug returns, and the rooted sapling answers with a gentle lean; knee, boot and pot remain fixed.",
     "animations": [

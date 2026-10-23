@@ -192,6 +192,7 @@ def produce(id,out=ROOT/'corpus/svg'):
             'M572,756 C585,775 606,790 628,790 C646,790 661,785 669,776 C675,794 695,804 720,802 C740,800 755,796 763,788 C770,802 788,805 808,801 C834,797 856,787 867,782 C879,786 894,785 913,777'],
     }
     for n,d in enumerate(repairs.get(id,[])):
+        if id=='105217' and n==5:continue
         manual.append({'id':f'{id}-contact-repair-{n}','role':'silhouette','d':d,'stroke':'#a1a1aa'})
     explicit_outer={
         '105214':{0,1,2},'105215':{0,1,2},'105216':{0,1,2},
@@ -233,6 +234,10 @@ def produce(id,out=ROOT/'corpus/svg'):
     # A nearly straight observed edge can simplify away; choose the focal
     # contour only from curves that survive the native cubic conversion.
     curves={i:path(p,1200/724) for i,p,role in candidates}
+    if id=='105217':
+        marker='771.08,266.56'
+        end=curves[3].find(marker)+len(marker)
+        if end>=len(marker):curves[3]=curves[3][:end]+'C768,273 769,279 776.71,274.53'
     if id=='105222':
         curves[2]=replace_contour_span(curves[2],[426.41,272.45],[437.05,361.62],
             'C429,305 436,331 434,363 C432,398 428,428 430,458 C431,473 430,485 425.97,497.21')
@@ -320,7 +325,7 @@ def articulated_pose(id,point,amount,role='interior'):
         # Pelvis stays anchored; the ribcage bends around the waist, with a
         # small opposing chest expansion following the existing muscle planes.
         w=smooth01((740-y)/300)
-        q=rotate(p,[620,690],-7.5*amount*w)
+        q=rotate(p,[620,690],-5*amount*w)
         chest=np.exp(-(((x-650)/350)**2+((y-310)/260)**2))
         q+=np.array([(x-650)*.065,-15])*amount*chest
         return q
@@ -328,9 +333,9 @@ def articulated_pose(id,point,amount,role='interior'):
         # Elbow fold separates humerus from radius/ulna. The fist follows the
         # forearm rigidly; only a narrow joint band blends the attached skin.
         joint=smooth01((.66*x-y+8)/220)
-        q=rotate(p,[1020,700],-18*amount*joint)
+        q=rotate(p,[1020,700],-12*amount*joint)
         muscle=np.exp(-(((x-690)/250)**2+((y-640)/170)**2))*(1-joint)
-        q[1]+=(y-640)*.19*amount*muscle
+        q[1]+=(y-640)*.12*amount*muscle
         return q
     if id in ['105218','105220']:
         ankle=np.array([600,710] if id=='105218' else [565,700])
@@ -419,6 +424,7 @@ def add_motion(record):
     svg_file.write_text(svg);geometry_file.write_text(json.dumps(geom,indent=2)+'\n')
     record['animations']=animations
     record['animationDirection']=ACTIONS[id]
+    record['motionCaption']=ACTIONS[id]
     record['animationMethod']='Explicit matching-topology native SVG poses; anatomical joint rotations with local skin blending and authored muscle-contour response. No inherited raster-region rig.'
     record['motionEvidence']={'durationSeconds':5,'maximumControlPointDisplacement':round(maximum,2),'reviewStatus':'pending rendered extreme-pose inspection','sampleTimes':[0,.8,1.5,2.5,3.5,4.5,5]}
     record['prompt']=record['prompt'].split(' Animate over exactly five seconds:')[0]+' Animate over exactly five seconds: '+ACTIONS[id]+' Preserve joint attachment, anatomical lengths and the named support contacts. The first and last native path poses must match.'

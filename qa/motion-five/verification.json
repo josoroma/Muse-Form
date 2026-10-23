@@ -1,0 +1,18 @@
+{
+  "browser": {
+    "reducedMotionStartsPaused": true,
+    "all24Studies": true,
+    "filtersAndSelection": true,
+    "reverseSeek": true,
+    "playPause": true,
+    "restart": true,
+    "singlePassStopsAtFive": true,
+    "keyboardPlaybackAndStep": true,
+    "mobileNoHorizontalOverflow": true,
+    "everyDrawingLoads": true,
+    "onlySVGDownloads": true,
+    "normalMotionAutoplays": true
+  },
+  "errors": [],
+  "pass": true
+}

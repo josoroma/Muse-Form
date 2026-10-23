@@ -8,7 +8,15 @@
     "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
     "review": {
       "notes": "The accepted native still is retained.  Motion has been rebuilt as an actual five-second local action: The mandible opens at its hinge, pauses, closes, then makes a smaller second opening and returns in five seconds.",
-      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff.",
+      "finalMotionReview": {
+        "reviewer": "Main-agent self-review of delegated authoring and subsequent local repairs",
+        "scope": "Static and authored-time pose sheets, full-size peaks where needed, and ten sampled frames from actual automatic browser playback crossing the loop boundary.",
+        "finding": "The jaw opens clearly beneath the fixed cranium; teeth and lower jaw follow the hinge together. The smaller second opening reads as a distinct beat.",
+        "continuousPlaybackInspected": false,
+        "accepted": true,
+        "animatedSHA256": "0b1c4afb4b0efebfdffa388ef2a2be85d7ebbe9064e2fb4186b0aedbf507d479"
+      }
     },
     "motionCaption": "The mandible opens at its hinge, pauses, closes, then makes a smaller second opening and returns in five seconds.",
     "animations": [
@@ -45,7 +53,15 @@
     "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
     "review": {
       "notes": "The accepted native still is retained.  Independent review identified an overly narrow pupil; it was broadened to a near-circular foreshortened form and re-rendered. Motion has been rebuilt as an actual five-second local action: The eye glances right, fully blinks, glances left, blinks again and returns; the pupil stays behind the moving eyelid aperture.",
-      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff.",
+      "finalMotionReview": {
+        "reviewer": "Main-agent self-review of delegated authoring and subsequent local repairs",
+        "scope": "Static and authored-time pose sheets, full-size peaks where needed, and ten sampled frames from actual automatic browser playback crossing the loop boundary.",
+        "finding": "Gaze changes and two blinks visibly close the aperture. The iris stays behind the lid; the lid returns without a detached edge.",
+        "continuousPlaybackInspected": false,
+        "accepted": true,
+        "animatedSHA256": "bdf8c761e231b6444430c24e0c11341d30e847f606dc5acf6ac85eeb48986af8"
+      }
     },
     "motionCaption": "The eye glances right, fully blinks, glances left, blinks again and returns; the pupil stays behind the moving eyelid aperture.",
     "animations": [
@@ -264,7 +280,15 @@
     "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
     "review": {
       "notes": "The accepted native still is retained.  Motion has been rebuilt as an actual five-second local action: A pinna-flex demonstration folds the outer ear toward its fixed attachment, rebounds and returns over five seconds; it does not imply voluntary ear articulation.",
-      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff.",
+      "finalMotionReview": {
+        "reviewer": "Main-agent self-review of delegated authoring and subsequent local repairs",
+        "scope": "Static and authored-time pose sheets, full-size peaks where needed, and ten sampled frames from actual automatic browser playback crossing the loop boundary.",
+        "finding": "Helix and interior folds flex together toward the fixed attachment. This is a pinna-flex demonstration, not a claim of voluntary ear articulation.",
+        "continuousPlaybackInspected": false,
+        "accepted": true,
+        "animatedSHA256": "d3159b7b83444065d51e337bdb0f804540b934f0559e88bde4256eb1ed9f3e62"
+      }
     },
     "motionCaption": "A pinna-flex demonstration folds the outer ear toward its fixed attachment, rebounds and returns over five seconds; it does not imply voluntary ear articulation.",
     "animations": [
@@ -565,7 +589,15 @@
     "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
     "review": {
       "notes": "The accepted native still is retained.  Motion has been rebuilt as an actual five-second local action: The quiet smile releases, then broadens with lifted cheeks and an opening mouth; both eyes blink and the face returns to its original smile in five seconds.",
-      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff.",
+      "finalMotionReview": {
+        "reviewer": "Main-agent self-review of delegated authoring and subsequent local repairs",
+        "scope": "Static and authored-time pose sheets, full-size peaks where needed, and ten sampled frames from actual automatic browser playback crossing the loop boundary.",
+        "finding": "The mouth relaxes and broadens with cheek and lid changes. The smile remains legible at thumbnail size without moving the whole portrait.",
+        "continuousPlaybackInspected": false,
+        "accepted": true,
+        "animatedSHA256": "1f7ac6e5f3425966facda6e4ffafe15bacd16ce4d1d6444b5ec7a2832eecf87a"
+      }
     },
     "motionCaption": "The quiet smile releases, then broadens with lifted cheeks and an opening mouth; both eyes blink and the face returns to its original smile in five seconds.",
     "animations": [
@@ -988,7 +1020,15 @@
     "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
     "review": {
       "notes": "The accepted native still is retained.  Motion has been rebuilt as an actual five-second local action: The sad face relaxes toward neutral, then the inner brows lift, the lids droop and the mouth corners lower together before returning in five seconds.",
-      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff.",
+      "finalMotionReview": {
+        "reviewer": "Main-agent self-review of delegated authoring and subsequent local repairs",
+        "scope": "Static and authored-time pose sheets, full-size peaks where needed, and ten sampled frames from actual automatic browser playback crossing the loop boundary.",
+        "finding": "Inner brows, eyelids and downturned mouth change together while neck and outer face stay stable. The sad expression releases and returns clearly.",
+        "continuousPlaybackInspected": false,
+        "accepted": true,
+        "animatedSHA256": "3e972813741f15f0070af53ef979540017d606d42579775ec29aeea3eaf0918d"
+      }
     },
     "motionCaption": "The sad face relaxes toward neutral, then the inner brows lift, the lids droop and the mouth corners lower together before returning in five seconds.",
     "animations": [
@@ -1399,7 +1439,15 @@
     "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
     "review": {
       "notes": "The accepted native still is retained.  Motion has been rebuilt as an actual five-second local action: The brows and lips release, then the brows draw inward, eyes narrow, nostrils tense and lips press into anger; all return within five seconds.",
-      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff.",
+      "finalMotionReview": {
+        "reviewer": "Main-agent self-review of delegated authoring and subsequent local repairs",
+        "scope": "Static and authored-time pose sheets, full-size peaks where needed, and ten sampled frames from actual automatic browser playback crossing the loop boundary.",
+        "finding": "Compressed brows, narrowed eyes and pressed lips act together. Nose and outer head stay stable while facial tension changes.",
+        "continuousPlaybackInspected": false,
+        "accepted": true,
+        "animatedSHA256": "a53889f71916d9f74d3e4da8c1fac8931e2c144a1006af6fc504b2700bd04dc8"
+      }
     },
     "motionCaption": "The brows and lips release, then the brows draw inward, eyes narrow, nostrils tense and lips press into anger; all return within five seconds.",
     "animations": [
@@ -1832,7 +1880,15 @@
     "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
     "review": {
       "notes": "The accepted native still is retained.  Independent review identified an upper eyelid too narrow for the expression; both upper lids were lifted while the lower rims stayed fixed, then re-rendered. Motion has been rebuilt as an actual five-second local action: A calmer face snaps into fear: eyes widen, inner brows lift, the mouth retracts and the lower jaw drops; the coordinated facial action returns in five seconds.",
-      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff.",
+      "finalMotionReview": {
+        "reviewer": "Main-agent self-review of delegated authoring and subsequent local repairs",
+        "scope": "Static and authored-time pose sheets, full-size peaks where needed, and ten sampled frames from actual automatic browser playback crossing the loop boundary.",
+        "finding": "Eyes, brows and mouth make a coordinated fear response. Mouth aperture and lower jaw move without a gap in the face outline.",
+        "continuousPlaybackInspected": false,
+        "accepted": true,
+        "animatedSHA256": "c40b64e8002ef49792171cb06216b7141fab95a8e6074bdf6baaadde02a4478d"
+      }
     },
     "motionCaption": "A calmer face snaps into fear: eyes widen, inner brows lift, the mouth retracts and the lower jaw drops; the coordinated facial action returns in five seconds.",
     "animations": [
@@ -2375,7 +2431,15 @@
     "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
     "review": {
       "notes": "The accepted native still is retained.  Independent review identified normal-width eyes beneath strongly raised brows; the upper lids were lifted without moving the lower rims, then re-rendered. The mouth was also widened and made less circular. Motion has been rebuilt as an actual five-second local action: The open mouth closes and brows settle, then a visible gasp lifts both brows, opens the eyes and drops the jaw; the face returns within five seconds.",
-      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff.",
+      "finalMotionReview": {
+        "reviewer": "Main-agent self-review of delegated authoring and subsequent local repairs",
+        "scope": "Static and authored-time pose sheets, full-size peaks where needed, and ten sampled frames from actual automatic browser playback crossing the loop boundary.",
+        "finding": "The mouth closes and reopens into a gasp, supported by brow and eye changes. It does not collapse into a crossed contour at closure.",
+        "continuousPlaybackInspected": false,
+        "accepted": true,
+        "animatedSHA256": "58c14715da22360a9000db5fc33b0d4eb66e9d1b9758fd2068872a2974b89b60"
+      }
     },
     "motionCaption": "The open mouth closes and brows settle, then a visible gasp lifts both brows, opens the eyes and drops the jaw; the face returns within five seconds.",
     "animations": [
@@ -2896,7 +2960,15 @@
     "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
     "review": {
       "notes": "The accepted native still is retained.  Motion has been rebuilt as an actual five-second local action: The profile laugh releases to a closed mouth and open eye, then the jaw opens, cheek rises and eye squeezes shut again in a five-second acting loop.",
-      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff.",
+      "finalMotionReview": {
+        "reviewer": "Main-agent self-review of delegated authoring and subsequent local repairs",
+        "scope": "Static and authored-time pose sheets, full-size peaks where needed, and ten sampled frames from actual automatic browser playback crossing the loop boundary.",
+        "finding": "The side-view jaw and lip silhouette open and close while the eye shifts between open and squinting. Chin and neck remain attached.",
+        "continuousPlaybackInspected": false,
+        "accepted": true,
+        "animatedSHA256": "90627d8e5a7d7f58545ca1016c028dd60fcbc0462b4d0a7b74f6afabd4cc6b4a"
+      }
     },
     "motionCaption": "The profile laugh releases to a closed mouth and open eye, then the jaw opens, cheek rises and eye squeezes shut again in a five-second acting loop.",
     "animations": [
@@ -3263,7 +3335,15 @@
     "method": "Hand-authored native cubic anatomical contours and coordinated local action poses informed by source observation and the owned realistic-v2 construction plate; matching-topology SVG morphs and semantic articulation, without edge traces, bitmap embedding or generated texture.",
     "review": {
       "notes": "The accepted native still is retained.  Motion has been rebuilt as an actual five-second local action: The closed eye opens, then makes two clear winks as the same-side cheek lifts and the smile returns; the clipped iris disappears completely on each closure.",
-      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff."
+      "scope": "Still and authored action poses reviewed at full size and native thumbnail size; exact-time samples and boundary agreement checked before handoff.",
+      "finalMotionReview": {
+        "reviewer": "Main-agent self-review of delegated authoring and subsequent local repairs",
+        "scope": "Static and authored-time pose sheets, full-size peaks where needed, and ten sampled frames from actual automatic browser playback crossing the loop boundary.",
+        "finding": "The closed eye opens and makes two clear winks; cheek and smile follow. The clipped iris disappears at closure and returns inside the eye.",
+        "continuousPlaybackInspected": false,
+        "accepted": true,
+        "animatedSHA256": "3f9a36b3dc8a88b333b50bf3baee4620014a2d1976f3513a270ae5e868138268"
+      }
     },
     "motionCaption": "The closed eye opens, then makes two clear winks as the same-side cheek lifts and the smile returns; the clipped iris disappears completely on each closure.",
     "animations": [

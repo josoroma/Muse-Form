@@ -8,6 +8,7 @@
     "start": "node scripts/serve.mjs",
     "catalog": "node scripts/catalog.mjs",
     "check": "node scripts/check.mjs",
+    "playback": "node scripts/playback-check.mjs",
     "verify": "node scripts/verify.mjs",
     "install-skill": "node scripts/install-skill.mjs",
     "compose": "node scripts/compose.mjs",

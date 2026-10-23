@@ -68,6 +68,7 @@ Canonical inputs are corpus/svg/*.svg and corpus/hairline/*.json. The vector-*.p
 npm run compose       # insert authored five-second native SMIL tracks
 npm run catalog       # rebuild README, manifest and skill index
 npm run check         # structure, movement measurements and pose sheets
+npm run playback      # sample actual automatic SVG playback across the loop
 npm run verify        # playback, scrubbing, downloads and responsive gallery
 npm run install-skill # update the local reusable skill
 npm run bundle        # package 48 SVGs and the portable skill
@@ -75,7 +76,7 @@ npm run bundle        # package 48 SVGs and the portable skill
 
 QA uses Node.js 22+, pinned Playwright Core and local Chrome/Chromium; set CHROME_PATH when needed. Bundling uses Python 3. No video encoder is required. Checks measure source loop closure, repeatable seeking and substantial changes to visible geometry. Visual review checks expression, finger topology, joint attachment, occlusion and the strongest poses. Measurements support this review; they do not certify artistic quality.
 
-Evidence: [SVG and motion checks](qa/motion-five/svg-checks.json), [gallery verification](qa/motion-five/verification.json), [per-drawing art review](qa/motion-five/art-review.json), and individual pose sheets below.
+Evidence: [SVG and motion checks](qa/motion-five/svg-checks.json), [automatic playback samples](qa/motion-five/playback.json), [gallery verification](qa/motion-five/verification.json), [per-drawing art review](qa/motion-five/art-review.json), and individual pose sheets below.
 
 ## Reusable skill
 
@@ -112,7 +113,7 @@ ${s.prompt}
 
 **Author review:** ${notes(s.review?.notes || s.review)}
 
-[Static SVG](${s.svg}) · [Animated SVG](${s.animated}) · [Pose sheet](qa/motion-five/${s.id}-contact.png)
+[Static SVG](${s.svg}) · [Animated SVG](${s.animated}) · [Pose sheet](qa/motion-five/${s.id}-contact.png) · [Playback samples](qa/motion-five/${s.id}-playback.png)
 `).join('');
 await writeFile(resolve(ROOT, 'README.md'), introduction + body);
 await writeFile(resolve(ROOT, 'skills/seven-second-storytelling/references/corpus-index.md'), `# Five-second native SVG corpus

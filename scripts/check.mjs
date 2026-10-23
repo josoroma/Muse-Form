@@ -28,8 +28,9 @@ async function difference(page, first, last) {
       let max = 0;
       for (let c = 0; c < 3; c++) { const d = Math.abs(pixels[0][i+c] - pixels[1][i+c]); total += d; max = Math.max(max, d); }
       if (max > 0) differentPixels++;
-      if (max >= 16) strongChanges++;
-      if (Math.max(pixels[0][i], pixels[0][i+1], pixels[0][i+2], pixels[1][i], pixels[1][i+1], pixels[1][i+2]) > 38) inkPixels++;
+      const ink = Math.max(pixels[0][i], pixels[0][i+1], pixels[0][i+2], pixels[1][i], pixels[1][i+1], pixels[1][i+2]) > 38;
+      if (ink) inkPixels++;
+      if (ink && max >= 16) strongChanges++;
     }
     const count = pixels[0].length / 4;
     return { differentPixels, fraction: differentPixels / count, meanChannelDelta: total / (count * 3), strongChanges, inkPixels, changedInkFraction: strongChanges / Math.max(1, inkPixels) };

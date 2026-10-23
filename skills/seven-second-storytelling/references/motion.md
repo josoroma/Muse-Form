@@ -33,12 +33,13 @@ The compositor inserts `dur="5s"`, `repeatCount="indefinite"`, normalized key ti
 npm run compose
 npm run catalog
 npm run check
+npm run playback
 npm run verify
 npm run install-skill
 npm run bundle
 ~~~
 
-Compose/check accept selected IDs for a local repair. Full corpus revisions require all assets checked. Inspect the generated pose sheets and full-size peaks, then watch actual browser playback. Record what was inspected accurately.
+Compose/check accept selected IDs for a local repair. Full corpus revisions require all assets checked. Inspect the generated pose sheets and full-size peaks, then inspect actual browser playback. The playback command unpauses each SVG once and captures ten elapsed-time samples across the loop boundary without seeking between them. Review its strips as well as authored extremes. Record sampled playback as sampled playback, not continuous viewing.
 
 The portable helper captures a QA still:
 

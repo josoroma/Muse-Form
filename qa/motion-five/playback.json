@@ -1,0 +1,486 @@
+{
+  "duration": 5,
+  "results": [
+    {
+      "id": "105193",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.05,
+        0.65,
+        1.25,
+        1.85,
+        2.45,
+        3.05,
+        3.65,
+        4.25,
+        4.85,
+        5.366
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105194",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.05,
+        0.633,
+        1.233,
+        1.85,
+        2.45,
+        3.05,
+        3.65,
+        4.25,
+        4.85,
+        5.417
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105195",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.05,
+        0.65,
+        1.25,
+        1.85,
+        2.45,
+        3.05,
+        3.65,
+        4.25,
+        4.85,
+        5.416
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105196",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.05,
+        0.65,
+        1.25,
+        1.85,
+        2.45,
+        3.05,
+        3.65,
+        4.25,
+        4.85,
+        5.35
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105197",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.05,
+        0.65,
+        1.233,
+        1.85,
+        2.45,
+        3.05,
+        3.65,
+        4.25,
+        4.85,
+        5.6
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105198",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.05,
+        0.633,
+        1.217,
+        1.833,
+        2.433,
+        3.033,
+        3.633,
+        4.233,
+        4.833,
+        5.333
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105199",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.033,
+        0.633,
+        1.233,
+        1.833,
+        2.433,
+        3.033,
+        3.633,
+        4.233,
+        4.833,
+        5.333
+      ],
+      "distinctFrames": 9,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105200",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.033,
+        0.617,
+        1.217,
+        1.833,
+        2.433,
+        3.033,
+        3.633,
+        4.233,
+        4.833,
+        5.333
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105202",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.05,
+        0.633,
+        1.233,
+        1.85,
+        2.45,
+        3.05,
+        3.65,
+        4.25,
+        4.85,
+        5.416
+      ],
+      "distinctFrames": 7,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105203",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.067,
+        0.633,
+        1.25,
+        1.85,
+        2.45,
+        3.05,
+        3.65,
+        4.25,
+        4.85,
+        5.35
+      ],
+      "distinctFrames": 8,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105214",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.05,
+        0.633,
+        1.233,
+        1.85,
+        2.45,
+        3.05,
+        3.65,
+        4.25,
+        4.85,
+        5.416
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105215",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.017,
+        0.617,
+        1.233,
+        1.833,
+        2.433,
+        3.033,
+        3.633,
+        4.233,
+        4.833,
+        5.566
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105216",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.05,
+        0.633,
+        1.25,
+        1.85,
+        2.45,
+        3.05,
+        3.65,
+        4.25,
+        4.85,
+        5.417
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105217",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.05,
+        0.633,
+        1.233,
+        1.85,
+        2.433,
+        3.05,
+        3.65,
+        4.25,
+        4.85,
+        5.417
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105218",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.033,
+        0.633,
+        1.233,
+        1.85,
+        2.45,
+        3.05,
+        3.65,
+        4.25,
+        4.85,
+        5.4
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105219",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.033,
+        0.633,
+        1.233,
+        1.833,
+        2.433,
+        3.033,
+        3.633,
+        4.233,
+        4.833,
+        5.333
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105220",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.05,
+        0.633,
+        1.233,
+        1.85,
+        2.45,
+        3.05,
+        3.65,
+        4.25,
+        4.85,
+        5.5
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105221",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.05,
+        0.633,
+        1.233,
+        1.85,
+        2.45,
+        3.05,
+        3.65,
+        4.25,
+        4.85,
+        5.5
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105222",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.05,
+        0.617,
+        1.217,
+        1.833,
+        2.417,
+        3.033,
+        3.633,
+        4.233,
+        4.833,
+        5.333
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105223",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.033,
+        0.617,
+        1.217,
+        1.833,
+        2.433,
+        3.033,
+        3.633,
+        4.233,
+        4.833,
+        5.333
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105232",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.083,
+        0.65,
+        1.25,
+        1.867,
+        2.467,
+        3.067,
+        3.667,
+        4.266,
+        4.866,
+        5.45
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105233",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.067,
+        0.65,
+        1.25,
+        1.85,
+        2.45,
+        3.05,
+        3.65,
+        4.25,
+        4.85,
+        5.35
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105234",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.017,
+        0.617,
+        1.233,
+        1.833,
+        2.433,
+        3.033,
+        3.633,
+        4.233,
+        4.833,
+        5.566
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "105235",
+      "naturallyRunning": true,
+      "timeSamples": [
+        0.033,
+        0.617,
+        1.233,
+        1.833,
+        2.433,
+        3.033,
+        3.633,
+        4.233,
+        4.833,
+        5.566
+      ],
+      "distinctFrames": 10,
+      "crossesFiveSecondBoundary": true,
+      "scope": "Observed automatic SVG playback through sampled screenshots; no repeated seeking between samples.",
+      "pass": true
+    }
+  ],
+  "pass": true
+}
