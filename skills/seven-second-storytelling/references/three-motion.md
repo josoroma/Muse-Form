@@ -1,0 +1,41 @@
+# Three.js anatomy motion
+
+Use this mode when the user requests Three.js, a real 3D anatomy scene, or interactive depth and camera inspection. Deliver a runnable HTML/JavaScript scene with its source geometry. Keep the accepted static and animated SVGs intact. Five seconds remains the default loop duration; a user-specified duration takes precedence.
+
+## Reusable explorer
+
+Start with [assets/three/index.html](../assets/three/index.html). Copy the entire `assets/three/` folder when adapting it, preserving its local module paths, import map, bundled Three.js files and license. Serve it over local HTTP rather than opening ES modules with `file://`.
+
+The supplied edition contains five studies: full-body reach, elbow flexion, hand closing/opening, loaded leg bend, and foot heel raise. Reuse only the requested scenes. Its original procedural surfaces are illustrative, not scanned anatomy or a validated biomechanical model. [SOURCES.md](../assets/three/SOURCES.md) contains source-backed label wording and scope.
+
+- `upper-body.mjs`: `createBody()` and `createArm()`.
+- `hand.mjs`: `createHand()`, joint chains and wrist attachment.
+- `lower-limb.mjs`: `createLeg()` and `createFoot()`.
+- `geometry.mjs`: shared shape, contour and registration helpers.
+- `runtime/motion.mjs`: transport and time-based pose helpers.
+- `runtime/camera-rig.mjs`: directed framing and interruptible OrbitControls.
+- `app.mjs`: selection, projected labels, playback and inspection UI.
+
+Each study exposes a `group`, `parts`, `update(tSeconds)`, camera suggestion, explanatory beats and metrics. Each part has a stable `id`, `name`, `description`, selectable `object` and local `anchor`. Mesh `userData.partId` connects pointer hits to the same semantic part used by buttons and labels.
+
+## Form and articulation
+
+Build recognizable volumes before adding explanatory overlays. Use smooth continuous profiles, resolved joint transitions and quiet surface landmarks. Inspect normals and silhouettes from front, side and three-quarter views; smooth lighting cannot hide a broken form. Update geometry bounds after deformation when needed for framing, picking or culling.
+
+Use hierarchical pivots for finger segments and rigid limb motion, with localized surface deformation where a continuous contour crosses a joint. Derive every pose from stored rest geometry and the requested time; do not accumulate rotations or deformation frame by frame. Keep bone lengths credible, finger webs intact, the thumb base attached and held objects in their grip. A heel raise keeps the supporting forefoot connected to the ground. Muscle fullness may clarify motion, but should not imply measured force or activation.
+
+For full-body assembly, use explicit wrist/hip attachment anchors and check both sides after mirroring. Framing should include the union of the motion extremes, including depth in camera space, with room for labels. Test the moving scene before choosing its default camera.
+
+## Labels and camera
+
+Use concise wording supported by authoritative anatomy sources, such as the OpenStax references in `SOURCES.md`. Name broad surface overlays as regions when they do not isolate an individual muscle. Do not claim visible shortening, rotation or contact that the authored geometry does not show. Metrics describe the model's authored pose, not measurements of a real person.
+
+Keep anchors attached to the same joint hierarchy or deformation as their structures. Update world matrices before projecting labels. Hide or dim occluded anchors, avoid overlapping labels, and keep selection available through keyboard-accessible buttons. Highlights should preserve the form and remain attached through the motion.
+
+Only one system owns the camera at a time. User orbit, pan or zoom immediately interrupts a scripted move; a deliberate guided-view action may restore it. A scrubbed timeline must reproduce the same directed camera pose as well as the same anatomy pose. Manual inspection must not be pulled back by a simultaneous animation. Fit, front, side and focus actions should remain usable at mobile sizes.
+
+## Browser review
+
+Review actual browser rendering, not only mesh counts or coordinate tests. Inspect rest, each authored extreme, return and the loop boundary; then sample unpaused playback. Check joint continuity, finger collisions, support, clipping, normal seams, highlights and moving labels. Distinguish sampled playback inspection from continuous viewing in review notes.
+
+Verify repeatable forward/reverse seeking, matching five-second endpoints, pause/restart/single-pass behavior, camera interruption and selection of visible structures. Test reduced motion, hidden-tab pause, touch/orbit controls, mobile framing and WebGL failure messaging. Repair concrete defects, recheck affected views and refresh the packaged source. Preserve source links and original-model attribution alongside the deliverable; no MP4 or 3D export format is implied by this mode.

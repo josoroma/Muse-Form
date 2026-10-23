@@ -3,7 +3,7 @@
   "version": "4.0.0",
   "private": true,
   "type": "module",
-  "description": "Native SVG drawing corpus with visible five-second character and anatomical motion.",
+  "description": "A native SVG drawing corpus and a Three.js anatomy explorer with five-second movement studies.",
   "scripts": {
     "start": "node scripts/serve.mjs",
     "catalog": "node scripts/catalog.mjs",
@@ -12,9 +12,17 @@
     "verify": "node scripts/verify.mjs",
     "install-skill": "node scripts/install-skill.mjs",
     "compose": "node scripts/compose.mjs",
-    "bundle": "python3 scripts/bundle.py"
+    "bundle": "python3 scripts/bundle.py",
+    "build:three": "node scripts/build-three.mjs",
+    "catalog:three": "node scripts/catalog-three.mjs",
+    "check:three": "node scripts/check-three.mjs",
+    "playback:three": "node scripts/playback-three.mjs",
+    "bundle:three": "python3 scripts/bundle-three.py"
   },
   "devDependencies": {
     "playwright-core": "1.64.1"
+  },
+  "dependencies": {
+    "three": "0.186.1"
   }
 }

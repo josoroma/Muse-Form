@@ -1,0 +1,293 @@
+{
+  "renderer": "Three.js 0.186.1 / Chrome WebGL",
+  "duration": 5,
+  "scenes": [
+    {
+      "id": "body",
+      "rest": {
+        "hash": 2986536285,
+        "finite": true,
+        "meshCount": 146,
+        "vertices": 297421
+      },
+      "peak": {
+        "hash": 3560802734,
+        "finite": true,
+        "meshCount": 146,
+        "vertices": 297421
+      },
+      "end": {
+        "hash": 2986536285,
+        "finite": true,
+        "meshCount": 146,
+        "vertices": 297421
+      },
+      "visibleModelChange": true,
+      "loopCloses": true,
+      "deterministicReverseSeek": true,
+      "frames": [
+        {
+          "time": 0,
+          "file": "body-rest.png"
+        },
+        {
+          "time": 0.65,
+          "file": "body-t0.65.png"
+        },
+        {
+          "time": 1.5,
+          "file": "body-t1.50.png"
+        },
+        {
+          "time": 2.5,
+          "file": "body-peak.png"
+        },
+        {
+          "time": 3.75,
+          "file": "body-t3.75.png"
+        },
+        {
+          "time": 5,
+          "file": "body-t5.00.png"
+        }
+      ],
+      "labels": 10,
+      "pass": true
+    },
+    {
+      "id": "arm",
+      "rest": {
+        "hash": 3115592360,
+        "finite": true,
+        "meshCount": 46,
+        "vertices": 85150
+      },
+      "peak": {
+        "hash": 1797747103,
+        "finite": true,
+        "meshCount": 46,
+        "vertices": 85150
+      },
+      "end": {
+        "hash": 3115592360,
+        "finite": true,
+        "meshCount": 46,
+        "vertices": 85150
+      },
+      "visibleModelChange": true,
+      "loopCloses": true,
+      "deterministicReverseSeek": true,
+      "frames": [
+        {
+          "time": 0,
+          "file": "arm-rest.png"
+        },
+        {
+          "time": 0.65,
+          "file": "arm-t0.65.png"
+        },
+        {
+          "time": 1.5,
+          "file": "arm-t1.50.png"
+        },
+        {
+          "time": 2.5,
+          "file": "arm-peak.png"
+        },
+        {
+          "time": 3.75,
+          "file": "arm-t3.75.png"
+        },
+        {
+          "time": 5,
+          "file": "arm-t5.00.png"
+        }
+      ],
+      "labels": 6,
+      "pass": true
+    },
+    {
+      "id": "hand",
+      "rest": {
+        "hash": 1296699139,
+        "finite": true,
+        "meshCount": 40,
+        "vertices": 48220
+      },
+      "peak": {
+        "hash": 1256578596,
+        "finite": true,
+        "meshCount": 40,
+        "vertices": 48220
+      },
+      "end": {
+        "hash": 1296699139,
+        "finite": true,
+        "meshCount": 40,
+        "vertices": 48220
+      },
+      "visibleModelChange": true,
+      "loopCloses": true,
+      "deterministicReverseSeek": true,
+      "frames": [
+        {
+          "time": 0,
+          "file": "hand-rest.png"
+        },
+        {
+          "time": 0.65,
+          "file": "hand-t0.65.png"
+        },
+        {
+          "time": 1.5,
+          "file": "hand-t1.50.png"
+        },
+        {
+          "time": 2.5,
+          "file": "hand-peak.png"
+        },
+        {
+          "time": 3.75,
+          "file": "hand-t3.75.png"
+        },
+        {
+          "time": 5,
+          "file": "hand-t5.00.png"
+        }
+      ],
+      "labels": 7,
+      "pass": true
+    },
+    {
+      "id": "leg",
+      "rest": {
+        "hash": 1633932997,
+        "finite": true,
+        "meshCount": 16,
+        "vertices": 26416
+      },
+      "peak": {
+        "hash": 4113407361,
+        "finite": true,
+        "meshCount": 16,
+        "vertices": 26416
+      },
+      "end": {
+        "hash": 1633932997,
+        "finite": true,
+        "meshCount": 16,
+        "vertices": 26416
+      },
+      "visibleModelChange": true,
+      "loopCloses": true,
+      "deterministicReverseSeek": true,
+      "frames": [
+        {
+          "time": 0,
+          "file": "leg-rest.png"
+        },
+        {
+          "time": 0.65,
+          "file": "leg-t0.65.png"
+        },
+        {
+          "time": 1.5,
+          "file": "leg-t1.50.png"
+        },
+        {
+          "time": 2.5,
+          "file": "leg-peak.png"
+        },
+        {
+          "time": 3.75,
+          "file": "leg-t3.75.png"
+        },
+        {
+          "time": 5,
+          "file": "leg-t5.00.png"
+        }
+      ],
+      "labels": 11,
+      "pass": true
+    },
+    {
+      "id": "foot",
+      "rest": {
+        "hash": 3048637490,
+        "finite": true,
+        "meshCount": 11,
+        "vertices": 15143
+      },
+      "peak": {
+        "hash": 2814799266,
+        "finite": true,
+        "meshCount": 11,
+        "vertices": 15143
+      },
+      "end": {
+        "hash": 3048637490,
+        "finite": true,
+        "meshCount": 11,
+        "vertices": 15143
+      },
+      "visibleModelChange": true,
+      "loopCloses": true,
+      "deterministicReverseSeek": true,
+      "frames": [
+        {
+          "time": 0,
+          "file": "foot-rest.png"
+        },
+        {
+          "time": 0.65,
+          "file": "foot-t0.65.png"
+        },
+        {
+          "time": 1.5,
+          "file": "foot-t1.50.png"
+        },
+        {
+          "time": 2.5,
+          "file": "foot-peak.png"
+        },
+        {
+          "time": 3.75,
+          "file": "foot-t3.75.png"
+        },
+        {
+          "time": 5,
+          "file": "foot-t5.00.png"
+        }
+      ],
+      "labels": 10,
+      "pass": true
+    }
+  ],
+  "interactions": {
+    "reducedMotionStartsPaused": true,
+    "selectionAndExplanation": true,
+    "frameSelection": true,
+    "hideLabels": true,
+    "scrubPauses": true,
+    "restartRestoresStart": true,
+    "playPause": true,
+    "singlePassStopsAtFive": true,
+    "guidedCameraMoves": true,
+    "dragInterruptsGuidedCamera": true,
+    "keyboardOrbit": true,
+    "aboutAndSources": true,
+    "normalMotionAutoplays": true,
+    "mobileNoHorizontalOverflow": true,
+    "mobileLabelsInside": true,
+    "onlyLocalRequests": true
+  },
+  "errors": [],
+  "sources": {
+    "three/app.mjs": "a7fd2fe0d52ca7e896c29a983e559aa126244155d0fa2737762b4cc290dc2e88",
+    "three/geometry.mjs": "aa62a681ad55d4665ced401459c8aacf55fa72868aa1e09f89c25ab0c57c737d",
+    "three/upper-body.mjs": "52dd687512f0770ff1b8cd90ee95e8826c60e73d2fa05dd0a1a76415e6983df6",
+    "three/hand.mjs": "4fe9891801f2c056a0b5821a77db75124fdb196fb7ee80ab1f1b4576443d7ee1",
+    "three/lower-limb.mjs": "27a5cc0d4571b452a306a375bbd369d10dc5f825464080b27a223b78097bb344"
+  },
+  "pass": true
+}

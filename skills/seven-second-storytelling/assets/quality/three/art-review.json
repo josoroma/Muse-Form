@@ -1,0 +1,220 @@
+{
+  "edition": "Three.js anatomy explorer",
+  "durationSeconds": 5,
+  "reviewers": [
+    "Primary agent: rendered pose and unpaused playback sample review",
+    "Peer agent: independent rest/peak, mobile layout, source and wording review"
+  ],
+  "scope": {
+    "authoredPoseTimes": [
+      0,
+      0.65,
+      1.5,
+      2.5,
+      3.75,
+      5
+    ],
+    "unpausedElapsedTargets": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      4.9,
+      5.5
+    ],
+    "desktopViewport": [
+      1440,
+      1080
+    ],
+    "playbackViewport": [
+      1280,
+      960
+    ],
+    "mobileViewportWidth": 390,
+    "method": "Inspected rendered pose frames and contact sheets, then seven screenshots sampled from unpaused browser playback per study across one loop boundary. Automated checks independently measure model geometry, camera, controls and layout. This is sampled self-review, not a continuous frame-by-frame or independent clinical validation."
+  },
+  "sources": {
+    "three/app.mjs": "a7fd2fe0d52ca7e896c29a983e559aa126244155d0fa2737762b4cc290dc2e88",
+    "three/geometry.mjs": "aa62a681ad55d4665ced401459c8aacf55fa72868aa1e09f89c25ab0c57c737d",
+    "three/upper-body.mjs": "52dd687512f0770ff1b8cd90ee95e8826c60e73d2fa05dd0a1a76415e6983df6",
+    "three/hand.mjs": "4fe9891801f2c056a0b5821a77db75124fdb196fb7ee80ab1f1b4576443d7ee1",
+    "three/lower-limb.mjs": "27a5cc0d4571b452a306a375bbd369d10dc5f825464080b27a223b78097bb344"
+  },
+  "globalRepairs": [
+    "Removed clipping from the anatomical structure button lists.",
+    "Computed camera framing from the motion envelope including camera-space depth.",
+    "Preserved explicit camera ownership: manual gestures stop guidance."
+  ],
+  "studies": [
+    {
+      "id": "body",
+      "acceptedForIllustratedExplorer": true,
+      "repairsAndChecks": [
+        "Smoothed torso profile interpolation to remove horizontal shading ridges.",
+        "Closed the neck/head attachment and softened shoulder caps at the torso.",
+        "Widened the lower pelvis to cover the leg attachment.",
+        "Kept both supporting feet fixed while the arm reaches and the trunk counter-turns."
+      ],
+      "observations": "The whole-body reach is readable, the head remains joined to the neck and the planted stance stays stable. The forms are a stylized sculptural mannequin, with quiet anatomical landmarks.",
+      "inspectedPoseFrames": [
+        "body-rest.png",
+        "body-t0.65.png",
+        "body-t1.50.png",
+        "body-peak.png",
+        "body-t3.75.png",
+        "body-t5.00.png"
+      ],
+      "inspectedPlaybackFrames": [
+        "body-live-0.0.png",
+        "body-live-1.0.png",
+        "body-live-2.0.png",
+        "body-live-3.0.png",
+        "body-live-4.0.png",
+        "body-live-4.9.png",
+        "body-live-5.5.png"
+      ],
+      "poseContactSheet": "body-contact.jpg",
+      "playbackContactSheet": "body-live-contact.jpg",
+      "exactGeometryLoop": true,
+      "reverseSeeking": true,
+      "unpausedPlaybackPass": true
+    },
+    {
+      "id": "arm",
+      "acceptedForIllustratedExplorer": true,
+      "repairsAndChecks": [
+        "Replaced eased-per-span loft interpolation with a smooth cardinal profile.",
+        "Retained a connected elbow and attached hand through the flexion extreme.",
+        "Corrected the explanation to describe visible biceps fullness, without claiming simulated shortening."
+      ],
+      "observations": "The bent forearm, closed hand and anterior-arm fullness clearly differ from rest. The elbow and wrist remain attached in the reviewed poses.",
+      "inspectedPoseFrames": [
+        "arm-rest.png",
+        "arm-t0.65.png",
+        "arm-t1.50.png",
+        "arm-peak.png",
+        "arm-t3.75.png",
+        "arm-t5.00.png"
+      ],
+      "inspectedPlaybackFrames": [
+        "arm-live-0.0.png",
+        "arm-live-1.0.png",
+        "arm-live-2.0.png",
+        "arm-live-3.0.png",
+        "arm-live-4.0.png",
+        "arm-live-4.9.png",
+        "arm-live-5.5.png"
+      ],
+      "poseContactSheet": "arm-contact.jpg",
+      "playbackContactSheet": "arm-live-contact.jpg",
+      "exactGeometryLoop": true,
+      "reverseSeeking": true,
+      "unpausedPlaybackPass": true
+    },
+    {
+      "id": "hand",
+      "acceptedForIllustratedExplorer": true,
+      "repairsAndChecks": [
+        "Replaced a jagged thenar selection edge with a shared interpolated surface boundary.",
+        "Projected palm creases onto the modeled surface.",
+        "Inspected the graduated digits, thumb opposition, and linked grasp/release at rest and peak."
+      ],
+      "observations": "Finger knuckles lead a soft grasp, the interphalangeal chains fold inward and the thumb turns across the palm. The thenar highlight follows a clean boundary.",
+      "inspectedPoseFrames": [
+        "hand-rest.png",
+        "hand-t0.65.png",
+        "hand-t1.50.png",
+        "hand-peak.png",
+        "hand-t3.75.png",
+        "hand-t5.00.png"
+      ],
+      "inspectedPlaybackFrames": [
+        "hand-live-0.0.png",
+        "hand-live-1.0.png",
+        "hand-live-2.0.png",
+        "hand-live-3.0.png",
+        "hand-live-4.0.png",
+        "hand-live-4.9.png",
+        "hand-live-5.5.png"
+      ],
+      "poseContactSheet": "hand-contact.jpg",
+      "playbackContactSheet": "hand-live-contact.jpg",
+      "exactGeometryLoop": true,
+      "reverseSeeking": true,
+      "unpausedPlaybackPass": true
+    },
+    {
+      "id": "leg",
+      "acceptedForIllustratedExplorer": true,
+      "repairsAndChecks": [
+        "Rebuilt the lower ankle, Achilles, heel and instep as one continuous loft.",
+        "Removed a folded forefoot transition and shortened disproportionate toes.",
+        "Kept the foot planted as the knee advances and the thigh loads."
+      ],
+      "observations": "The knee loading and recovery are visible, with a grounded foot and continuous ankle contour. Thigh and calf masses remain legible under the selected-region tint.",
+      "inspectedPoseFrames": [
+        "leg-rest.png",
+        "leg-t0.65.png",
+        "leg-t1.50.png",
+        "leg-peak.png",
+        "leg-t3.75.png",
+        "leg-t5.00.png"
+      ],
+      "inspectedPlaybackFrames": [
+        "leg-live-0.0.png",
+        "leg-live-1.0.png",
+        "leg-live-2.0.png",
+        "leg-live-3.0.png",
+        "leg-live-4.0.png",
+        "leg-live-4.9.png",
+        "leg-live-5.5.png"
+      ],
+      "poseContactSheet": "leg-contact.jpg",
+      "playbackContactSheet": "leg-live-contact.jpg",
+      "exactGeometryLoop": true,
+      "reverseSeeking": true,
+      "unpausedPlaybackPass": true
+    },
+    {
+      "id": "foot",
+      "acceptedForIllustratedExplorer": true,
+      "repairsAndChecks": [
+        "Replaced the intersecting ankle cylinder with a continuous ankle-to-foot surface.",
+        "Repaired forefoot topology and toe proportions.",
+        "Framed the union of animated poses in camera space, including depth, to avoid clipping.",
+        "Renamed the broad base selection Foot contour and chose Dorsum of foot as the default highlight."
+      ],
+      "observations": "Heel rise is visible against the support circle; the forefoot and toe tips remain supported. Ankle and toes stay within the reviewed camera frames.",
+      "inspectedPoseFrames": [
+        "foot-rest.png",
+        "foot-t0.65.png",
+        "foot-t1.50.png",
+        "foot-peak.png",
+        "foot-t3.75.png",
+        "foot-t5.00.png"
+      ],
+      "inspectedPlaybackFrames": [
+        "foot-live-0.0.png",
+        "foot-live-1.0.png",
+        "foot-live-2.0.png",
+        "foot-live-3.0.png",
+        "foot-live-4.0.png",
+        "foot-live-4.9.png",
+        "foot-live-5.5.png"
+      ],
+      "poseContactSheet": "foot-contact.jpg",
+      "playbackContactSheet": "foot-live-contact.jpg",
+      "exactGeometryLoop": true,
+      "reverseSeeking": true,
+      "unpausedPlaybackPass": true
+    }
+  ],
+  "limitations": [
+    "Original procedural surface illustrations simplify anatomy; they are not scanned or medically validated models.",
+    "Selected-region highlights indicate selection, not measured muscle activation.",
+    "The full-body model uses sculptural proportions rather than photorealistic skin or detailed dissection anatomy.",
+    "The scene animation and camera are editable JavaScript, not exported FBX/GLB/BVH clips."
+  ],
+  "pass": true
+}

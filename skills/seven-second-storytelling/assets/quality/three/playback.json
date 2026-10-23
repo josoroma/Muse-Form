@@ -1,0 +1,441 @@
+{
+  "duration": 5,
+  "results": [
+    {
+      "id": "body",
+      "frames": [
+        {
+          "elapsed": 0.158,
+          "time": 0.016600000000000392,
+          "camera": [
+            10.80074167984102,
+            8.081869611801912,
+            17.73656719622824
+          ],
+          "hash": "8d6645ed824325cd24b25bcbaa3f35ea1e95093f74be65ce0c1493b9412db1d5",
+          "playing": true
+        },
+        {
+          "elapsed": 1.125,
+          "time": 1.016500000000013,
+          "camera": [
+            12.934410511362918,
+            8.081869611801912,
+            16.248835555631757
+          ],
+          "hash": "513c0e611467a946dcfe98f46c805e45dc2bd84ce5525582894256f56326f86e",
+          "playing": true
+        },
+        {
+          "elapsed": 2.124,
+          "time": 2.0165000000000255,
+          "camera": [
+            12.077797894194013,
+            8.081869611801912,
+            16.89651486536434
+          ],
+          "hash": "5b0f76f346778a257714c9e013f2eb106b2ce57692fb654b5dd39bbe00657067",
+          "playing": true
+        },
+        {
+          "elapsed": 3.121,
+          "time": 3.01640000000004,
+          "camera": [
+            9.275725983851817,
+            8.081869611801912,
+            18.56884838161678
+          ],
+          "hash": "ba780a6dbb7aaaf008b852a6d9623e359597df047f5dff0bc7d482c636739821",
+          "playing": true
+        },
+        {
+          "elapsed": 4.121,
+          "time": 4.016500000000054,
+          "camera": [
+            8.417224017453295,
+            8.081869611801912,
+            18.964660781173123
+          ],
+          "hash": "76adb94eb9bb247fa52c44fbb7a70d60c240ac51ea020b0b4d689239bdb8293e",
+          "playing": true
+        },
+        {
+          "elapsed": 5.023,
+          "time": 4.916400000000067,
+          "camera": [
+            10.500020082547245,
+            8.081869611801912,
+            17.914603683895898
+          ],
+          "hash": "852a8d271fa5aaefeb0571761c83cf462777bae4c41fcff694c56c3253ba1e2a",
+          "playing": true
+        },
+        {
+          "elapsed": 5.623,
+          "time": 0.5164000000000737,
+          "camera": [
+            12.153322524072767,
+            8.081869611801912,
+            16.842290457484207
+          ],
+          "hash": "db29d022b7ddd31aab6246720212b6ddb29c0798d18a96eaf046d4d9c6e4b993",
+          "playing": true
+        }
+      ],
+      "distinctFrames": 7,
+      "cameraChanges": 7,
+      "loopObserved": true,
+      "scope": "Sampled unpaused browser playback for more than one five-second cycle, with no seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "arm",
+      "frames": [
+        {
+          "elapsed": 0.128,
+          "time": 0.01670000000000016,
+          "camera": [
+            10.018295985603128,
+            4.380212649506642,
+            15.408976137994863
+          ],
+          "hash": "b19f5162f3cff9131cf844469910d8aa6ab977ddbb965bb9c711a27db198dba3",
+          "playing": true
+        },
+        {
+          "elapsed": 1.128,
+          "time": 1.0966000000000076,
+          "camera": [
+            11.765404267119681,
+            4.380212649506642,
+            13.953255013795527
+          ],
+          "hash": "668dcb2b1a9e9914dcac74cedfa1f8632a66f9a82b4cd94447d4c565fb0df509",
+          "playing": true
+        },
+        {
+          "elapsed": 2.119,
+          "time": 2.0966000000000147,
+          "camera": [
+            10.887653873866924,
+            4.380212649506642,
+            14.734331487225003
+          ],
+          "hash": "e14ed2b313ed2b6776dfb799bc27886c4bda2f1a4f4b229f25423685e22e3fa8",
+          "playing": true
+        },
+        {
+          "elapsed": 3.118,
+          "time": 3.0966000000000022,
+          "camera": [
+            8.625150409940268,
+            4.380212649506642,
+            16.318273637921454
+          ],
+          "hash": "9c78385545a75485bf74a8e7fc85f157405c77ba75a19755c2f5d15af06d0799",
+          "playing": true
+        },
+        {
+          "elapsed": 4.13,
+          "time": 4.096499999999988,
+          "camera": [
+            8.160215803854086,
+            4.380212649506642,
+            16.580374904821728
+          ],
+          "hash": "ed7215167608d08dcf55fb14a81c3503839a0b9b15dfd61d7e01a472be7b78d1",
+          "playing": true
+        },
+        {
+          "elapsed": 5.023,
+          "time": 4.996400000000001,
+          "camera": [
+            9.969304776036848,
+            4.380212649506642,
+            15.444370960136009
+          ],
+          "hash": "4e98b1ec28b81e29fdfcbc242001eac6d2ea8cae1de7e8dabcf101479d78101a",
+          "playing": true
+        },
+        {
+          "elapsed": 5.629,
+          "time": 0.5965000000000096,
+          "camera": [
+            11.240698993804964,
+            4.380212649506642,
+            14.433219164577327
+          ],
+          "hash": "782bf81432c1f9e80d6183d7b8f325d4200539b5a6103f614a5eaeb1cd6aeb90",
+          "playing": true
+        }
+      ],
+      "distinctFrames": 7,
+      "cameraChanges": 7,
+      "loopObserved": true,
+      "scope": "Sampled unpaused browser playback for more than one five-second cycle, with no seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "hand",
+      "frames": [
+        {
+          "elapsed": 0.146,
+          "time": 0.01669999999999927,
+          "camera": [
+            5.209170903460358,
+            3.469307463098697,
+            10.982212733758136
+          ],
+          "hash": "522b59dce682ecc3ce048eb5393d80902ef6be3f3e53efd3a2af0b81b6c183dc",
+          "playing": true
+        },
+        {
+          "elapsed": 1.115,
+          "time": 1.0967000000000118,
+          "camera": [
+            6.525496965887883,
+            3.469307463098697,
+            10.122025211025964
+          ],
+          "hash": "d34488dc48f17c4ddf0030fdc9d69328ee07866a1629685e48288d01d5e835de",
+          "playing": true
+        },
+        {
+          "elapsed": 2.115,
+          "time": 2.0966000000000165,
+          "camera": [
+            5.860182603042319,
+            3.469307463098697,
+            10.588344881996756
+          ],
+          "hash": "281469b1674e5d5a0ea079d223007f667e9162f17bae061d13ddc5cf86b8d26a",
+          "playing": true
+        },
+        {
+          "elapsed": 3.108,
+          "time": 3.096599999999997,
+          "camera": [
+            4.179658562492734,
+            3.469307463098697,
+            11.495377194812976
+          ],
+          "hash": "2cb04fb0088ebb1ad9cf3d98b8e9919461b75b17ad76f989f82a18031ab87348",
+          "playing": true
+        },
+        {
+          "elapsed": 4.121,
+          "time": 4.096499999999985,
+          "camera": [
+            3.839385106645675,
+            3.469307463098697,
+            11.638229891759066
+          ],
+          "hash": "5163360356a0c920e44b538ef8d815c369dd6f8687327ee3bf9bac8935374257",
+          "playing": true
+        },
+        {
+          "elapsed": 5.02,
+          "time": 4.996500000000001,
+          "camera": [
+            5.172873813160035,
+            3.469307463098697,
+            11.002506390562324
+          ],
+          "hash": "a900680d4856f96cd67fcc88fbffebf27a391aeb7649fde2a8f912dc51041a67",
+          "playing": true
+        },
+        {
+          "elapsed": 5.619,
+          "time": 0.5965000000000069,
+          "camera": [
+            6.126726914880894,
+            3.469307463098697,
+            10.409755516422807
+          ],
+          "hash": "f45b84682a1b4edd8226bba4291139d983a4465feac8c7fdaefd245b8200ac2a",
+          "playing": true
+        }
+      ],
+      "distinctFrames": 7,
+      "cameraChanges": 7,
+      "loopObserved": true,
+      "scope": "Sampled unpaused browser playback for more than one five-second cycle, with no seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "leg",
+      "frames": [
+        {
+          "elapsed": 0.134,
+          "time": 0.0500999999999987,
+          "camera": [
+            10.405954287608896,
+            6.1543345365206115,
+            13.868335349470815
+          ],
+          "hash": "27ae38ea996180b80be7d625c3261f84a178d3944121c0ad6116fc92b313a3af",
+          "playing": true
+        },
+        {
+          "elapsed": 1.123,
+          "time": 1.0500000000000096,
+          "camera": [
+            12.07364310962323,
+            6.1543345365206115,
+            12.441303472738776
+          ],
+          "hash": "95cfc130681250c46b8b14f9a1f98a0032bad570a4fde1d5be80a7d7bda602fb",
+          "playing": true
+        },
+        {
+          "elapsed": 2.119,
+          "time": 2.0500000000000185,
+          "camera": [
+            11.299373886223384,
+            6.1543345365206115,
+            13.149551511623935
+          ],
+          "hash": "61fdfdaf0bc0fe905596ee6c68c5a96570b9f1053c55411c3d3543d5021f8dbd",
+          "playing": true
+        },
+        {
+          "elapsed": 3.122,
+          "time": 3.049900000000001,
+          "camera": [
+            9.000521010643459,
+            6.1543345365206115,
+            14.820335485687457
+          ],
+          "hash": "3a16c01b34c31da55fcd33c46a07c51b9ff26220bbaba577250c823324c846a8",
+          "playing": true
+        },
+        {
+          "elapsed": 4.124,
+          "time": 4.0498999999999885,
+          "camera": [
+            8.387065999275338,
+            6.1543345365206115,
+            15.176386546387242
+          ],
+          "hash": "995362482533a37c0a68c1af4ba33c6b44953f3397ae8464d882a3da64ca0371",
+          "playing": true
+        },
+        {
+          "elapsed": 5.024,
+          "time": 4.949899999999992,
+          "camera": [
+            10.160387291094835,
+            6.1543345365206115,
+            14.049491330505775
+          ],
+          "hash": "db46e90112f4fcf6461a84b86557be090110d15815751cbe990938ffdf11e019",
+          "playing": true
+        },
+        {
+          "elapsed": 5.622,
+          "time": 0.5497999999999967,
+          "camera": [
+            11.484627691017428,
+            6.1543345365206115,
+            12.987823774033927
+          ],
+          "hash": "cc2cc9ec358324849780c89a886fa9873b2498642e2e3ce5677fb25ed1c7c859",
+          "playing": true
+        }
+      ],
+      "distinctFrames": 7,
+      "cameraChanges": 7,
+      "loopObserved": true,
+      "scope": "Sampled unpaused browser playback for more than one five-second cycle, with no seeking between samples.",
+      "pass": true
+    },
+    {
+      "id": "foot",
+      "frames": [
+        {
+          "elapsed": 0.137,
+          "time": 0.016700000000001047,
+          "camera": [
+            4.2616938701071,
+            3.7536746726555075,
+            5.8054960459268
+          ],
+          "hash": "4cef67a7d6f3377138565eb0f3657b1acccc9087f482a8b4c96766acffb87c57",
+          "playing": true
+        },
+        {
+          "elapsed": 1.111,
+          "time": 1.016600000000011,
+          "camera": [
+            4.933203200219047,
+            3.7536746726555075,
+            5.201981804389938
+          ],
+          "hash": "62e3a6e837531ee2fedb7a5aa22d5c9113a3733852242244d5e2ee6fbf77f105",
+          "playing": true
+        },
+        {
+          "elapsed": 2.113,
+          "time": 2.0165000000000246,
+          "camera": [
+            4.665706843203793,
+            3.7536746726555075,
+            5.4616830087583335
+          ],
+          "hash": "edeba81c975f9ced6ce5d4c10579450fa2573912e353d725fbd52a045e30a23f",
+          "playing": true
+        },
+        {
+          "elapsed": 3.132,
+          "time": 3.0165000000000095,
+          "camera": [
+            3.7716550362957943,
+            3.7536746726555075,
+            6.157414174479259
+          ],
+          "hash": "c5f876739962d6ff0b4de31f1b4d06e2b8ccdd31f6c036b8ae676bb5936d2774",
+          "playing": true
+        },
+        {
+          "elapsed": 4.113,
+          "time": 4.0164999999999935,
+          "camera": [
+            3.492866930949883,
+            3.7536746726555075,
+            6.330349038934768
+          ],
+          "hash": "33edd1617409021a172330c6bec685ab5b839d91a6c5b6219ef079c63a39fca6",
+          "playing": true
+        },
+        {
+          "elapsed": 5.028,
+          "time": 4.916500000000003,
+          "camera": [
+            4.165691216871268,
+            3.7536746726555075,
+            5.8796629407918655
+          ],
+          "hash": "7ee607caf4237c857f75ebcc7adf218b0028017b7c665555f7d1d18fa484487e",
+          "playing": true
+        },
+        {
+          "elapsed": 5.628,
+          "time": 0.5165000000000113,
+          "camera": [
+            4.689482580668706,
+            3.7536746726555075,
+            5.439714440533523
+          ],
+          "hash": "d2f21db40fc7f9847a035d55f6485b7911fc50cc5a3900431bb4ef87ffb7dff5",
+          "playing": true
+        }
+      ],
+      "distinctFrames": 7,
+      "cameraChanges": 7,
+      "loopObserved": true,
+      "scope": "Sampled unpaused browser playback for more than one five-second cycle, with no seeking between samples.",
+      "pass": true
+    }
+  ],
+  "pass": true
+}

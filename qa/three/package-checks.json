@@ -1,0 +1,86 @@
+{
+  "packageRoot": "/var/folders/46/br4h6sv561q33ld7c_720shm0000gn/T/form-anatomy-package-GVwjt8",
+  "scenes": [
+    {
+      "id": "body",
+      "drawCalls": 370,
+      "time": 2.5
+    },
+    {
+      "id": "arm",
+      "drawCalls": 125,
+      "time": 2.5
+    },
+    {
+      "id": "hand",
+      "drawCalls": 113,
+      "time": 2.5
+    },
+    {
+      "id": "leg",
+      "drawCalls": 46,
+      "time": 2.5
+    },
+    {
+      "id": "foot",
+      "drawCalls": 36,
+      "time": 2.5
+    }
+  ],
+  "errors": [],
+  "requestsOutsidePackage": [],
+  "checks": {
+    "packagedSVGGallery": true,
+    "galleryMobileNoOverflow": true,
+    "skillSVGIndex": true,
+    "skillExplorer": true,
+    "skillBackLink": true,
+    "noBrowserErrors": true,
+    "localAssetsOnly": true
+  },
+  "galleryHeader": {
+    "height": 78,
+    "children": [
+      {
+        "text": "FIVETHE MOVING SKETCHBOOK",
+        "rect": {
+          "x": 18,
+          "y": 22.5,
+          "width": 168.875,
+          "height": 32,
+          "top": 22.5,
+          "right": 186.875,
+          "bottom": 54.5,
+          "left": 18
+        }
+      },
+      {
+        "text": "Explore the 3D anatomy ↗",
+        "rect": {
+          "x": 186.875,
+          "y": 26.5,
+          "width": 96.125,
+          "height": 24,
+          "top": 26.5,
+          "right": 283,
+          "bottom": 50.5,
+          "left": 186.875
+        }
+      },
+      {
+        "text": "The corpus & prompts ↗",
+        "rect": {
+          "x": 283,
+          "y": 26.5,
+          "width": 89,
+          "height": 24,
+          "top": 26.5,
+          "right": 372,
+          "bottom": 50.5,
+          "left": 283
+        }
+      }
+    ]
+  },
+  "pass": true
+}

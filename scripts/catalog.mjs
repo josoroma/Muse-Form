@@ -37,6 +37,10 @@ The collection uses [Hairline-inspired](https://github.com/lucasmarkes/hairline)
 
 [Download all 48 SVGs](exports/storytelling-svgs.zip) · [Reusable skill bundle](exports/seven-second-storytelling.skill.zip)
 
+## Three.js anatomy edition
+
+[Open FORM](three/index.html) to explore five real 3D studies: full body, arm, hand, leg and foot. Each has a five-second joint-driven movement, a guided camera that yields to manual orbit, selectable surface regions and anchored explanatory labels. [3D source and prompts](three/README.md) · [Portable explorer bundle](exports/form-anatomy-threejs.zip). The accepted SVGs remain available below.
+
 ![Static drawing corpus](qa/motion-five/corpus-contact.jpg)
 
 ## Open and play
