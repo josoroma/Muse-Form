@@ -1,31 +1,30 @@
 import { writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { ROOT } from './serve.mjs';
-import { createBody, createArm } from '../three/upper-body.mjs';
-import { createHand } from '../three/hand.mjs';
-import { createLeg, createFoot } from '../three/lower-limb.mjs';
+import { getAnatomyMetadata } from '../three/character/anatomy.mjs';
 
-const briefs={
-  body:{factory:createBody,source:'upper-body.mjs',references:['105214','105215','105218','105219'],prompt:'Create an original sculptural full-body anatomy study in Three.js. Build continuous ribcage, waist, pelvis, neck and cranial volumes, with sparse chest and facial contours; attach proportional articulated arms, hands, legs and five-toed feet. Use a quiet charcoal stage, cool stone surfaces, warm directional light and a cyan selected region. Animate a five-second reach-and-return: shoulder lift and elbow flexion, a slight trunk counter-turn and head response, with both feet planted. Keep head, shoulder, wrist and hip attachments closed. Add selectable anatomical regions and explanatory labels, and a modest guided camera arc that stops on manual orbit. Preserve matching start/end geometry.'},
-  arm:{factory:createArm,source:'upper-body.mjs',references:['105215'],prompt:'Create an original native Three.js arm volume with a tapered upper arm, elbow, forearm and attached articulated hand. Give the deltoid, anterior biceps region, posterior triceps region, elbow and forearm distinct selectable identities. Keep the upper arm steady while the forearm bends around the elbow from 12 to 100 degrees over a five-second preparation, flexion, hold and release. Add modest biceps fullness without changing forearm length; the hand must remain attached and close its digits. Use smooth contour profiles, shared normals, restrained lighting, anchored labels and an interruptible guided camera.'},
-  hand:{factory:createHand,source:'hand.mjs',references:['105216','105217'],prompt:'Build a clean organic Three.js hand from original contoured mesh surfaces. Establish a broad palm, thenar pad, wrist, five graduated digits, connected knuckles and a separate thumb opposition chain. Use three phalangeal segments per non-thumb finger and two beyond the thumb metacarpal; retain joint centers and consistent segment lengths. Over five seconds, gather the fingers, close a soft grasp, turn the thumb pad across the palm, hold, and release. Resolve palm and highlight boundaries with shared geometry rather than floating patches. Keep nails and creases subtle. Provide selectable finger/thenar regions, labels, a seekable timeline and a camera that yields to manual inspection.'},
-  leg:{factory:createLeg,source:'lower-limb.mjs',references:['105218','105219','105220'],prompt:'Create a continuous Three.js leg anatomy study from the cropped thigh through knee, asymmetric calf, tibial ridge, Achilles region and a planted five-toed foot. Shape quadriceps and calf masses with quiet surface asymmetry. Animate a five-second loading bend and recovery: the knee advances, the thigh counter-rotates, the ankle attachment stays continuous, and the foot does not slide. Highlight selected surface regions rather than implying measured activation. Keep labels anchored to the deformed surface and show the same authored knee angle in the readout. Inspect rest, loaded peak, reverse seeking and the sole contact.'},
-  foot:{factory:createFoot,source:'lower-limb.mjs',references:['105221','105222','105223'],prompt:'Build an original Three.js foot with one smooth ankle-to-heel-to-instep surface, a visible medial arch, metatarsal support and five separately formed toes with natural length hierarchy. Use restrained nail margins and joint creases. Animate a five-second heel rise of about 21 degrees around the ball of the foot, hold, and lower; toe tips remain supported while the proximal toes extend. Blend the little toe into the lateral metatarsal volume and keep its root attached from front, side and below throughout the heel rise. Avoid a cylindrical ankle intersecting a shoe-like foot, folded loft surfaces, floating toes or drifting labels. Provide selectable dorsum, heel, ankle, forefoot and toe regions. Frame the union of all poses so toes and ankle remain visible throughout the guided camera arc.'}
+const common = 'Use the shared adult female character from the licensed CC0 MakeHuman-derived GLB, with its continuous human topology, 53-bone rig, skin weights and embedded textures. Bake one fixed original identity with blonde hair, blue eyes, soft facial contours and a neutral anatomical bodysuit; use exactly the same identity in FORM and MUSE. Keep shoulders, clavicles, waist, hips, limbs, hands and feet organically connected. Use the existing charcoal stage, serif interface, soft studio illumination and mint selection accent. Selected regions reuse the character surface triangles, with translucent feathered overlays and anchors that follow the evaluated skinned surface. Keep the five-second timeline, responsive controls and guided camera; manual orbit interrupts guidance. Restore the exact neutral pose at five seconds. ';
+const briefs = {
+  body: { references: ['105214','105215','105218','105219'], prompt: 'Frame the complete character in a relaxed standing pose. Animate a controlled reach and return through the clavicle, shoulder, elbow, wrist and fingers, with a small trunk counter-turn and head response. Keep both feet supported. Preserve selectable Pectoralis region, Back and Pelvis surfaces, plus the abdominal wall, shoulder and head. Inspect front, profile, three-quarter and posterior silhouettes; do not add circular chest markings.' },
+  arm: { references: ['105215'], prompt: 'Frame the same character’s arm from shoulder through fingertips. Bend the forearm at its anatomical elbow pivot while the shoulder and upper arm remain coherent. Let the attached hand travel with the forearm and soften the fingers into the gesture. Provide selectable deltoid, biceps, triceps, forearm and hand/wrist regions. Keep the source skin continuous at shoulder, elbow and wrist; the selected surface indicates a region rather than isolated internal muscle anatomy.' },
+  hand: { references: ['105216','105217'], prompt: 'Closely frame the same skinned character’s hand, retaining the original palm, finger webs, thumb base, nails and graduated digit proportions. Author an ordered soft closing wave through the knuckles and phalangeal joints, with the ulnar fingers starting slightly earlier and the thumb turning toward the palm. Keep the little finger rooted in the ulnar palm. Avoid intersections and abrupt joint angles. Provide selectable palm, thenar region, thumb and individual fingers, with labels attached to their moving surface.' },
+  leg: { references: ['105218','105219','105220'], prompt: 'Frame the same character’s thigh, knee, calf and attached foot. Author a shallow supported bend shared across the hip, knee and ankle, then recover. Correct the pelvis position to preserve forefoot support. Keep continuous thigh-to-knee and calf-to-ankle transitions, with selectable anterior thigh, posterior thigh, knee and calf regions. Inspect the supporting contact and the contour throughout the five-second movement.' },
+  foot: { references: ['105221','105222','105223'], prompt: 'Frame the same character’s ankle and complete five-toed foot. Raise the heel through the foot/forefoot joint chain while the forefoot remains supported, hold briefly, and settle. Preserve the continuous arch, heel, instep and toe roots, especially the short lateral little toe. Provide selectable ankle, dorsum, forefoot/toes and heel surfaces. Inspect frontal, medial, lateral, three-quarter and underside views at rest and peak; the toes must remain part of the same connected skin surface.' },
 };
-const studies=[];
-for(const [id,brief] of Object.entries(briefs)){
-  const model=brief.factory();
-  studies.push({id,title:model.title,action:model.subtitle,duration:5,view:`index.html#${id}`,source:brief.source,svgReferenceIDs:brief.references,prompt:brief.prompt,method:'Original procedural Three.js surface geometry and authored deterministic joint/mesh animation; no external model or scanned anatomy.',parts:model.parts.map(({id,name,description})=>({id,name,description})),beats:model.beats});
-}
-const manifest={title:'FORM — Anatomy in motion',renderer:'Three.js 0.186.1',duration:5,edition:1,scope:'Five simplified original 3D anatomy studies, separate from the accepted SVG corpus.',studies};
-await writeFile(resolve(ROOT,'three/manifest.json'),JSON.stringify(manifest,null,2)+'\n');
-const readme=`# FORM — Anatomy in motion
+const method = 'Licensed CC0 MakeHuman-derived GLB topology, textures and skinning; one locally selected adult identity; authored deterministic skeletal animation; surface-triangle overlays and posed anchors. The mesh is externally authored asset data, not a new procedural sculpt or scan.';
+const studies = Object.entries(briefs).map(([id, brief]) => {
+  const model = getAnatomyMetadata(id);
+  return { id, title: model.title, action: model.subtitle, duration: 5, view: `index.html#${id}`, source: 'character/anatomy.mjs', model: 'character/assets/adult-female-source.glb', svgReferenceIDs: brief.references, prompt: common + brief.prompt, method, parts: model.parts, beats: model.beats };
+});
+const manifest = { title: 'FORM — Anatomy in motion', renderer: 'Three.js 0.186.1', duration: 5, edition: 3, identity: 'One original adult blonde woman with blue eyes, shared with MUSE.', scope: 'Five views of one licensed skinned character: full body, arm, hand, leg and foot. The accepted SVG corpus remains separate.', assetLicense: 'CC0-1.0', assetProvenance: 'character/assets/README.md', studies };
+await writeFile(resolve(ROOT, 'three/manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
+await writeFile(resolve(ROOT, 'three/README.md'), `# FORM — Anatomy in motion
 
-Five original Three.js anatomy studies: **full body, arm, hand, leg and foot**. Each has a five-second movement, editable native 3D geometry, selectable structures, explanatory labels and an interruptible guided camera.
+Five anatomical studies of **one shared adult female character**: full body, arm, hand, leg and foot. The licensed skinned GLB supplies continuous human topology, connected fingers and toes, and embedded skin and eye maps. Local code sets the blonde, blue-eyed identity, materials and five-second movements. [MUSE](../expressions/index.html) uses the same character for facial acting.
 
-[Open the explorer](index.html) · [Portable source bundle](../exports/form-and-muse-threejs.zip) · [Existing SVG collection](../index.html) · [MUSE / Expressions](../expressions/index.html)
+[Open FORM](index.html) · [Portable source bundle](../exports/form-and-muse-threejs.zip) · [SVG collection](../index.html) · [Character assets and license](character/assets/README.md)
 
-![Hand at the grasp pose](../qa/three/hand-peak.png)
+![Hand during the closing gesture](../qa/three/hand-peak.png)
 
 ## Run locally
 
@@ -37,43 +36,46 @@ npm run build:three
 npm start
 ~~~
 
-Open **http://127.0.0.1:4173/three/**. The checked-in local vendor files also allow running node scripts/serve.mjs directly. Serve over HTTP; module imports need a local server rather than opening an HTML file from disk. No external asset requests or video encoder are needed.
+Open **http://127.0.0.1:4173/three/**. The included vendor files also allow running node scripts/serve.mjs directly. Serve over HTTP so JavaScript modules and GLBs load correctly. The browser loads the character, textures and engine locally; no external model service or video encoder is required.
 
 ## Inspect the movement
 
-- Select a study, play or pause, and scrub anywhere from 0 to 5 seconds. Phase buttons jump to useful poses.
-- Select a 3D form, its label or its named button. The same part ID drives highlight, explanation and anchor.
-- Drag to orbit; use right-drag to pan and the wheel or visible buttons to zoom. A pointer gesture immediately releases the guided camera. Re-enable **Guided camera** explicitly to resume it.
-- Use Overview, Front, Side or Frame this structure. When the canvas has keyboard focus, arrows orbit, +/− zoom and Home restores the overview.
-- Reduced motion starts paused with a stationary camera. Hidden tabs stop advancing. A WebGL failure links to the native SVG collection.
+- Choose a study, play or pause, and scrub from 0 to 5 seconds. Phase buttons jump to useful poses.
+- Select a surface, label or named button. The mint overlay, explanation and label refer to the same underlying surface triangles.
+- Inspect Pectoralis region, Back and Pelvis in the full-body study. The bodysuit and region overlays follow the body skin.
+- Drag to orbit, right-drag to pan and scroll or use the visible buttons to zoom. Manual gestures interrupt guidance; enable **Guided camera** to resume it.
+- Use Overview, Front, Side or Frame this structure. Canvas keyboard shortcuts are arrows to orbit, +/− to zoom and Home for overview.
+- Reduced motion starts paused. Hidden tabs stop advancing. A WebGL fallback links to the native SVG collection.
 
-The models are sculptural anatomical illustrations, not scans or validated biomechanical simulations. Surface regions simplify structure boundaries. Highlights identify the selection rather than muscle activation; angular readouts describe the authored pose. [Anatomy sources and scope](SOURCES.md) support the explanatory wording.
+This is an illustrative skinned character, not a body scan or a medically validated anatomical simulator. Surface labels indicate approximate regions beneath the skin and clothing. Highlights show selection, not muscle activation; movement percentages describe the authored animation. [Sources and scope](SOURCES.md) explain those limits.
 
 ## Source and reproduction
 
 | File | Purpose |
 | --- | --- |
-| [app.mjs](app.mjs) | Rendering, local selection, projected labels, camera ownership and transport |
-| [upper-body.mjs](upper-body.mjs) | Continuous torso/arm geometry, whole-body reach, elbow flexion |
-| [hand.mjs](hand.mjs) | Palm, connected finger chains, thumb opposition and grasp |
-| [lower-limb.mjs](lower-limb.mjs) | Leg loading, ankle/heel continuity, forefoot support |
-| [geometry.mjs](geometry.mjs) | Smooth loft profiles, semantic surface regions and shared normals |
-| [manifest.json](manifest.json) | Full prompts, anatomical structures, source IDs and phases |
+| [app.mjs](app.mjs) | Rendering, camera ownership, selection, labels and transport |
+| [character/character.mjs](character/character.mjs) | Shared identity, GLB loading, skeleton fitting, cloning and bodysuit |
+| [character/anatomy.mjs](character/anatomy.mjs) | Five skeletal movement studies and metadata |
+| [character/materials.mjs](character/materials.mjs) | Skin, blue eyes, blonde hair, oral surfaces and clothing |
+| [character/regions.mjs](character/regions.mjs) | Conforming overlays, posed anchors and cached picking surface |
+| [character/assets/adult-female-source.glb](character/assets/adult-female-source.glb) | CC0 character mesh, rig, textures and facial morphs |
+| [Character provenance](character/assets/README.md) | Pinned upstream sources, licenses and material limitations |
+| [Expression transfer builder](../scripts/build-character-expressions.py) | Reproducible transfer of official CC0 facial targets to the GLB |
+| [manifest.json](manifest.json) | Complete prompts, source IDs, structures and phases |
 | [vendor/LICENSE](vendor/LICENSE) | Three.js MIT license |
 
-The camera and timeline helpers in runtime/ were adapted from the locally supplied Taster skill. They are included here so the explorer runs independently. Three.js is pinned to 0.186.1; build:three copies the required engine and OrbitControls files with their license.
+The body and hair derive from CC0 MakeHuman assets exported by Kasper Olesen’s CharacterCreator. Its generator/runtime code is not imported. The new local adapters consume standard glTF data. The expression builder uses Python with NumPy and SciPy, the pinned source GLB, and selected CC0 inputs preserved in character/assets/makehuman-expression-inputs.zip. Camera and timeline helpers were adapted from the locally supplied Taster skill. Three.js is pinned to 0.186.1.
 
 ~~~sh
-npm run catalog:three  # rebuild the 3D prompts and manifest
-npm run check:three    # all five scenes, motion and interaction checks
-npm run playback:three # sample unpaused model/camera/label motion through a loop
-npm run bundle:three   # portable explorer with the preserved SVG collection
+npm run catalog:three
+npm run check:three
+npm run playback:three
+npm run bundle:three
 ~~~
 
-[Browser checks](../qa/three/checks.json) record actual mesh motion, exact 0/5 geometry, reverse seeking, camera interruption, selection, playback, reduced motion and mobile layout. [Automatic playback samples](../qa/three/playback.json) cover model and camera motion across the loop boundary. [Visual review](../qa/three/art-review.json) records inspected frames and concrete repairs. No continuous frame-by-frame review is claimed.
+[Browser checks](../qa/three/checks.json) inspect evaluated skinned geometry, exact endpoints, reverse seeking and interactions. [Playback samples](../qa/three/playback.json) inspect unpaused motion. [Visual review](../qa/three/art-review.json) records inspected views and repairs; these checks do not certify anatomical or artistic accuracy. The preceding procedural edition is preserved in [archive/procedural-v3](../archive/procedural-v3).
 
 ## Corpus prompts
 
-${studies.map(s=>`### ${s.id} — ${s.title}\n\n[Open study](${s.view}) · [Editable geometry](${s.source}) · SVG reference IDs: ${s.svgReferenceIDs.join(', ')}.\n\n${s.prompt}\n\n**Action:** ${s.beats.map(b=>`${b.label}: ${b.description}`).join(' ')}\n`).join('\n')}`;
-await writeFile(resolve(ROOT,'three/README.md'),readme);
-console.log('Cataloged five Three.js studies with prompts, source links, structures and motion phases.');
+${studies.map(s => `### ${s.id} — ${s.title}\n\n[Open study](${s.view}) · [Movement source](${s.source}) · [Character GLB](${s.model}) · SVG reference IDs: ${s.svgReferenceIDs.join(', ')}.\n\n${s.prompt}\n\n**Method:** ${s.method}\n\n**Action:** ${s.beats.map(b => `${b.label}: ${b.description}`).join(' ')}\n`).join('\n')}`);
+console.log('Cataloged five shared-character anatomy studies from model metadata.');

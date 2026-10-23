@@ -17,7 +17,7 @@ try{
       const bytes=await page.locator('#viewport').screenshot({path:resolve(dir,`${id}-live-${target.toFixed(1)}.png`)});
       frames.push({elapsed:(Date.now()-began)/1000,time:state.time,camera:state.camera.position,hash:createHash('sha256').update(bytes).digest('hex'),playing:state.playing});
     }
-    const result={id,frames,distinctFrames:new Set(frames.map(f=>f.hash)).size,cameraChanges:new Set(frames.map(f=>f.camera.join(','))).size,loopObserved:frames.at(-1).time<1.5&&frames[5].time>4,scope:'Sampled unpaused browser playback for more than one five-second cycle, with no seeking between samples.'};
+    const result={id,frames,distinctFrames:new Set(frames.map(f=>f.hash)).size,cameraChanges:new Set(frames.map(f=>f.camera.join(','))).size,loopObserved:frames.some((frame,i)=>i>0&&frames[i-1].time>3.5&&frame.time<1.5),scope:'Sampled unpaused browser playback for more than one five-second cycle, with no seeking between samples. Loop detection uses an actual decreasing-time boundary rather than assuming a screenshot lands before the boundary.'};
     result.pass=result.distinctFrames>=5&&result.cameraChanges>=5&&result.loopObserved&&frames.every(f=>f.playing);results.push(result);console.log(`${result.pass?'PASS':'FAIL'} ${id}: automatic model, camera and labels across five-second boundary.`);
   }
   await writeFile(resolve(dir,'playback.json'),JSON.stringify({duration:5,results,pass:results.every(r=>r.pass)},null,2)+'\n');

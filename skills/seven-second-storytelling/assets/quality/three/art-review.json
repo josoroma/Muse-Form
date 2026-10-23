@@ -1,9 +1,10 @@
 {
-  "edition": "Three.js anatomy explorer",
+  "edition": "FORM — shared licensed adult-female character",
+  "revision": "Native GLB skin, five attached anatomical studies, long blonde hair, surface-conforming mint selections",
+  "reviewedOn": "2026-10-23",
   "durationSeconds": 5,
   "reviewers": [
-    "Primary agent: rendered pose and unpaused playback sample review",
-    "Peer agent: independent rest/peak, mobile layout, source and wording review"
+    "FORM integration agent: actual rendered poses, camera views, mobile layouts and sampled unpaused playback; this is an authored self-review, not independent clinical or artistic certification."
   ],
   "scope": {
     "authoredPoseTimes": [
@@ -13,6 +14,16 @@
       2.5,
       3.75,
       5
+    ],
+    "views": [
+      "front",
+      "three-quarter",
+      "profile"
+    ],
+    "viewPoseTimes": [
+      0,
+      1.5,
+      2.5
     ],
     "unpausedElapsedTargets": [
       0,
@@ -31,35 +42,72 @@
       1280,
       960
     ],
-    "mobileViewportWidth": 390,
-    "method": "Inspected rendered pose frames and contact sheets, then seven screenshots sampled from unpaused browser playback per study across one loop boundary. Automated checks independently measure model geometry, camera, controls and layout. This is sampled self-review, not a continuous frame-by-frame or independent clinical validation.",
-    "revisionReview": "Rechecked all five studies in fresh unpaused playback samples. Inspected the repaired foot at front, lateral, medial, three-quarter and underside at rest/rise; inspected the ankle/leg and mirrored body attachments. Independently checked existing hand pinky from front, side and back through grasp; its continuous attachment was already sound and hand.mjs is unchanged."
+    "mobileViewport": [
+      390,
+      844
+    ],
+    "mobilePoseTimes": [
+      0,
+      2.5
+    ],
+    "studies": [
+      "body",
+      "arm",
+      "hand",
+      "leg",
+      "foot"
+    ],
+    "method": "Reviewed actual browser screenshots and enlarged contact sheets: six authored poses and nine view/pose combinations per study, seven unpaused samples across a loop boundary per study, and mobile rest/peak for all five studies. Also inspected rear Back-selection/clear captures. Automated checks independently compare posed body vertices, bone matrices, shared identity, exact loop endpoints, reverse seeking, surface anchors, interactions and layout.",
+    "finalMaterialReview": "Final selected-region tint and Back-only hair fade were checked in refreshed browser pose/view/mobile captures. The preceding unpaused playback samples use identical geometry and motion; the last change affects selection materials only."
   },
   "sources": {
-    "three/app.mjs": "01e2b2962b4125b71de3dd342c5fa5765d9237fc248a1dec24e8546492d028a3",
+    "three/app.mjs": "aa6f9c2be90b21409a56417c410ae0f07ad4a59a1b8298c10e4b7ae14a9fcc3f",
     "three/geometry.mjs": "aa62a681ad55d4665ced401459c8aacf55fa72868aa1e09f89c25ab0c57c737d",
-    "three/upper-body.mjs": "52dd687512f0770ff1b8cd90ee95e8826c60e73d2fa05dd0a1a76415e6983df6",
-    "three/hand.mjs": "34eedb511671159c18d6840b7971da4cb34593d8b46dd638003dbd4989a40216",
-    "three/lower-limb.mjs": "ea692a0a9e1344c374aa16ac52e26b42def2e98b20a1c51a49b2fcf8e949fd4d"
+    "three/character/character.mjs": "2aaf55f4cf2d18475817780ba4e4c9114227c31642b1395422743008b336b55b",
+    "three/character/anatomy.mjs": "e3472489a0f5833764de0d74b8233ad079bcaf2ccdacb75836d255f67150844e",
+    "three/character/regions.mjs": "4fd014da445966949d867d4f71f18fe19a7f0fef5648dc7643e53459c1fc6139",
+    "three/character/materials.mjs": "ad15581446fbcb0e079f55af4e6b633a298cc60176465b1f571099fd9b30d229",
+    "three/character/subdivide-hair.mjs": "fd095a33b1700d6abc220e8ff8bb825869f90ec0f3671bfd6d160ef75208c14a",
+    "three/runtime/camera-rig.mjs": "1fb02cf51badcd0deb67acec9ea2f0b3bbe37598721e036532c34b497ac01211",
+    "three/runtime/motion.mjs": "da2c372951e868a257e1e0764a48f7fa9caa9e70a8ffed70338cfa52662e675e",
+    "expressions/studio.mjs": "d34b2e1a1e9561599fe1f9a504b0c2bbf911889a6bd51a1384f3cd88ac048d45",
+    "three/character/assets/adult-female-source.glb": "b0fae3610eef39a6cdc9c56d9c8bccc0cd9bcc1cf346ae1d9bfa121e5a86e1fe",
+    "three/character/assets/hair-long.glb": "d340fff458f920dd16dcc80493a1a33207b00c6bbfb08c4c53aba54704a78818",
+    "three/style.css": "86ef4e8eb7fa244d681f2e9a934760fb6641d8ca2e03b182f3c93dff78112376",
+    "three/index.html": "ebe67dad32a611fd2088f3ddf2914c0adef7e09a5a5e0c8022150ce6f33fd423",
+    "scripts/check-three.mjs": "d134a48a1270e7fdc120d9bc8431cf80dd212a863aeb21189f0c1f26f2b6606c",
+    "scripts/playback-three.mjs": "2d23b07a48cc351632b4f3a76650f60cef3b1b47ea66f57cd8329063b09b7aa9"
+  },
+  "assets": {
+    "three/character/assets/CC0-MakeHuman.txt": "f6089cba01cb570a24712b41ab8a586ccd3cc5ef53dc266ca50b95c288956d2c",
+    "three/character/assets/README.md": "e67eb995de0d653bcf5e96431209ad0b5e446d35aee52cd62e2f63c593b1f1e1",
+    "three/character/assets/adult-female-source.glb": "b0fae3610eef39a6cdc9c56d9c8bccc0cd9bcc1cf346ae1d9bfa121e5a86e1fe",
+    "three/character/assets/body-joints.json": "47c40fcaeb9f089f0f32ba781e2a0ac7d7a925a47b6db3c46102f0091a53a839",
+    "three/character/assets/expression-data-checks.json": "554ad80370ec8a082c1a6aa4206085d34d61404da0f986df349d035432f607a4",
+    "three/character/assets/expression-transfer-report.json": "05422b1f25809d9f57ec87a49979f0fdde4b839b117723db564e249539127507",
+    "three/character/assets/gltf-validation.json": "8a4e2b7c8ef060e73c10b201ce35f5ad1413e61be840a0a7fdba9d4f7ff9c569",
+    "three/character/assets/hair-long.glb": "d340fff458f920dd16dcc80493a1a33207b00c6bbfb08c4c53aba54704a78818",
+    "three/character/assets/kblood-license-notes.md": "18af8d071bcb1cab2260263991ad49c314dc616facf7f33b0ab19bee78d4ec13",
+    "three/character/assets/makehuman-asset-licenses.json": "b18bbc7f45fe7c28bcf3b119f44f7b8425d3b4c871f99c694b181b5603f4758e",
+    "three/character/assets/makehuman-expression-inputs.zip": "3944971d2d8296d615f916653091b853f4333d34141d7b07077f8d7b6eb84239"
   },
   "globalRepairs": [
-    "Removed clipping from the anatomical structure button lists.",
-    "Computed camera framing from the motion envelope including camera-space depth.",
-    "Preserved explicit camera ownership: manual gestures stop guidance.",
-    "Front and Side frame the complete motion envelope, so an opening hand remains inside the view.",
-    "Replaced separate toe root shells with one continuous forefoot/toe surface and shared normals, including the lateral fifth-toe attachment pictured by the user."
+    "All five studies now instantiate the same optimized licensed skinned mesh instead of primitive body parts.",
+    "Kept native finger, wrist, elbow, shoulder, hip, knee, ankle and toe relationships.",
+    "Mint overlays copy the skinning/morph surface, feather their boundaries and use a garment-aware offset.",
+    "Labels use anchors evaluated on the posed surface; picking uses a cached posed body mesh.",
+    "The two-pass Loop hair refinement preserves UV seams, card connectivity, morph deltas and normalized skin weights."
   ],
   "studies": [
     {
       "id": "body",
       "acceptedForIllustratedExplorer": true,
       "repairsAndChecks": [
-        "Smoothed torso profile interpolation to remove horizontal shading ridges.",
-        "Closed the neck/head attachment and softened shoulder caps at the torso.",
-        "Widened the lower pelvis to cover the leg attachment.",
-        "Kept both supporting feet fixed while the arm reaches and the trunk counter-turns."
+        "Replaced primitive assemblies with the shared CC0 skinned adult-female character.",
+        "Preserved Pectoralis, Back and Pelvis as surface selections, including posed barycentric anchors.",
+        "Added explicit Back-only hair fade and exact material/shadow restoration on clearing."
       ],
-      "observations": "The whole-body reach is readable, the head remains joined to the neck and the planted stance stays stable. The forms are a stylized sculptural mannequin, with quiet anatomical landmarks.",
+      "observations": "One clothed adult female identity occupies the full-body study. Neck, shoulders, torso, hips and legs are continuous; the reaching arm and head counter-turn are visible while both feet stay planted. Front, profile and three-quarter views retain the same proportions. The Back selection reveals the upper-back mint surface through faded hair; clearing it restores the opaque hair.",
       "inspectedPoseFrames": [
         "body-rest.png",
         "body-t0.65.png",
@@ -67,6 +115,17 @@
         "body-peak.png",
         "body-t3.75.png",
         "body-t5.00.png"
+      ],
+      "inspectedViewFrames": [
+        "body-front-rest.png",
+        "body-front-intermediate.png",
+        "body-front-peak.png",
+        "body-threequarter-rest.png",
+        "body-threequarter-intermediate.png",
+        "body-threequarter-peak.png",
+        "body-side-rest.png",
+        "body-side-intermediate.png",
+        "body-side-peak.png"
       ],
       "inspectedPlaybackFrames": [
         "body-live-0.0.png",
@@ -77,21 +136,30 @@
         "body-live-4.9.png",
         "body-live-5.5.png"
       ],
+      "inspectedMobileFrames": [
+        "mobile-body-rest.png",
+        "mobile-body.png"
+      ],
       "poseContactSheet": "body-contact.jpg",
+      "viewContactSheet": "body-views-contact.jpg",
       "playbackContactSheet": "body-live-contact.jpg",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true
+      "unpausedPlaybackPass": true,
+      "renderObservation": {
+        "drawCalls": 20,
+        "triangles": 205886,
+        "meanRenderMs": 6.776666669050853
+      }
     },
     {
       "id": "arm",
       "acceptedForIllustratedExplorer": true,
       "repairsAndChecks": [
-        "Replaced eased-per-span loft interpolation with a smooth cardinal profile.",
-        "Retained a connected elbow and attached hand through the flexion extreme.",
-        "Corrected the explanation to describe visible biceps fullness, without claiming simulated shortening."
+        "Uses the same continuous body mesh and anatomical arm chain.",
+        "Raised sleeve-crossing surface overlays to 1.7 mm so they render above the 1.2 mm garment shell."
       ],
-      "observations": "The bent forearm, closed hand and anterior-arm fullness clearly differ from rest. The elbow and wrist remain attached in the reviewed poses.",
+      "observations": "The forearm rises through a clear elbow bend while the wrist and fingers stay attached. The shoulder flows into the upper arm without a separate sphere. Sleeve-crossing overlays remain smooth after increasing their offset above the suit. Close framing intentionally shows the connected torso; in mobile arm framing its adjacent head passes beneath the fixed title.",
       "inspectedPoseFrames": [
         "arm-rest.png",
         "arm-t0.65.png",
@@ -99,6 +167,17 @@
         "arm-peak.png",
         "arm-t3.75.png",
         "arm-t5.00.png"
+      ],
+      "inspectedViewFrames": [
+        "arm-front-rest.png",
+        "arm-front-intermediate.png",
+        "arm-front-peak.png",
+        "arm-threequarter-rest.png",
+        "arm-threequarter-intermediate.png",
+        "arm-threequarter-peak.png",
+        "arm-side-rest.png",
+        "arm-side-intermediate.png",
+        "arm-side-peak.png"
       ],
       "inspectedPlaybackFrames": [
         "arm-live-0.0.png",
@@ -109,24 +188,31 @@
         "arm-live-4.9.png",
         "arm-live-5.5.png"
       ],
+      "inspectedMobileFrames": [
+        "mobile-arm-rest.png",
+        "mobile-arm.png"
+      ],
       "poseContactSheet": "arm-contact.jpg",
+      "viewContactSheet": "arm-views-contact.jpg",
       "playbackContactSheet": "arm-live-contact.jpg",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true
+      "unpausedPlaybackPass": true,
+      "renderObservation": {
+        "drawCalls": 19,
+        "triangles": 205095,
+        "meanRenderMs": 6.768333335717519
+      }
     },
     {
       "id": "hand",
       "acceptedForIllustratedExplorer": true,
       "repairsAndChecks": [
-        "Replaced stacked finger segments with one continuous watertight palm, thumb web and finger surface.",
-        "Shaped a metacarpal dome, graduated fingers and integrated nail beds.",
-        "Smoothed joint bending through grasp and release and repaired semantic-region edge topology.",
-        "Verified exact 0/5 geometry and normals, finite positions, independent instances and 0 unmatched surface edges.",
-        "Reviewed front/back/side silhouettes, mobile framing and arm/body attachments.",
-        "Rechecked the pinky attachment from front/back/lateral at rest and grasp; no detached root found and hand source preserved."
+        "Uses the connected palm and finger topology from the licensed full-body mesh.",
+        "Authored staggered MCP/PIP/DIP curls and thumb opposition on native finger bones.",
+        "Preserved the hand presentation pose and independent digit selections."
       ],
-      "observations": "The digits curl through continuous joints, with a connected thumb web and palm. The nail beds sit within the finger surfaces. The soft grasp remains readable during the guided camera move.",
+      "observations": "The pinky emerges from the ulnar palm with a shorter proportion than its neighbors. All five digits remain attached through open, intermediate and curled poses; the finger chains bend at distinct joints and the thumb opposes across the palm. The front study isolates the requested hand; manual three-quarter rotation can bring the adjacent face behind the fixed title.",
       "inspectedPoseFrames": [
         "hand-rest.png",
         "hand-t0.65.png",
@@ -134,6 +220,17 @@
         "hand-peak.png",
         "hand-t3.75.png",
         "hand-t5.00.png"
+      ],
+      "inspectedViewFrames": [
+        "hand-front-rest.png",
+        "hand-front-intermediate.png",
+        "hand-front-peak.png",
+        "hand-threequarter-rest.png",
+        "hand-threequarter-intermediate.png",
+        "hand-threequarter-peak.png",
+        "hand-side-rest.png",
+        "hand-side-intermediate.png",
+        "hand-side-peak.png"
       ],
       "inspectedPlaybackFrames": [
         "hand-live-0.0.png",
@@ -144,23 +241,31 @@
         "hand-live-4.9.png",
         "hand-live-5.5.png"
       ],
+      "inspectedMobileFrames": [
+        "mobile-hand-rest.png",
+        "mobile-hand.png"
+      ],
       "poseContactSheet": "hand-contact.jpg",
+      "viewContactSheet": "hand-views-contact.jpg",
       "playbackContactSheet": "hand-live-contact.jpg",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
       "unpausedPlaybackPass": true,
-      "additionalEvidence": "hand-v2/"
+      "renderObservation": {
+        "drawCalls": 17,
+        "triangles": 205180,
+        "meanRenderMs": 6.679166665673256
+      }
     },
     {
       "id": "leg",
       "acceptedForIllustratedExplorer": true,
       "repairsAndChecks": [
-        "Rebuilt the lower ankle, Achilles, heel and instep as one continuous loft.",
-        "Removed a folded forefoot transition and shortened disproportionate toes.",
-        "Kept the foot planted as the knee advances and the thigh loads.",
-        "Matched the revised fused foot surface and ankle normals to the existing shin."
+        "Shares one leg, hip and foot surface with the full character.",
+        "Maintains support by solving pelvis translation against the forefoot during the bend.",
+        "Raised thigh overlays above the suit to remove visible depth conflicts."
       ],
-      "observations": "The knee loading and recovery are visible, with a grounded foot and continuous ankle contour. Thigh and calf masses remain legible under the selected-region tint.",
+      "observations": "Hip, knee, calf and ankle stay continuous during the shallow supported bend. Both feet remain planted as the body lowers. The quadriceps tint now crosses the shorts without the earlier triangular depth-conflict fragments; the side silhouette preserves the knee and heel relationships.",
       "inspectedPoseFrames": [
         "leg-rest.png",
         "leg-t0.65.png",
@@ -168,6 +273,17 @@
         "leg-peak.png",
         "leg-t3.75.png",
         "leg-t5.00.png"
+      ],
+      "inspectedViewFrames": [
+        "leg-front-rest.png",
+        "leg-front-intermediate.png",
+        "leg-front-peak.png",
+        "leg-threequarter-rest.png",
+        "leg-threequarter-intermediate.png",
+        "leg-threequarter-peak.png",
+        "leg-side-rest.png",
+        "leg-side-intermediate.png",
+        "leg-side-peak.png"
       ],
       "inspectedPlaybackFrames": [
         "leg-live-0.0.png",
@@ -178,26 +294,30 @@
         "leg-live-4.9.png",
         "leg-live-5.5.png"
       ],
+      "inspectedMobileFrames": [
+        "mobile-leg-rest.png",
+        "mobile-leg.png"
+      ],
       "poseContactSheet": "leg-contact.jpg",
+      "viewContactSheet": "leg-views-contact.jpg",
       "playbackContactSheet": "leg-live-contact.jpg",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
       "unpausedPlaybackPass": true,
-      "additionalEvidence": "revision-v3/"
+      "renderObservation": {
+        "drawCalls": 20,
+        "triangles": 205195,
+        "meanRenderMs": 6.691666666666666
+      }
     },
     {
       "id": "foot",
       "acceptedForIllustratedExplorer": true,
       "repairsAndChecks": [
-        "Replaced the intersecting ankle cylinder with a continuous ankle-to-foot surface.",
-        "Repaired forefoot topology and toe proportions.",
-        "Framed the union of animated poses in camera space, including depth, to avoid clipping.",
-        "Renamed the broad base selection Foot contour and chose Dorsum of foot as the default highlight.",
-        "Fused all five toes and forefoot into a closed surface with zero unmatched mesh edges.",
-        "Removed the visible lateral toe gap and exposed root cap during heel rise.",
-        "Reprojected nail margins and joint creases onto the deforming skin; retained selectable regions and focused bounds."
+        "Uses the native connected ankle, heel, forefoot and toes.",
+        "Counter-rotates the toe joint during heel rise and restores the same endpoint pose."
       ],
-      "observations": "All five toes join the forefoot continuously in reviewed front, side, oblique and underside views. The little toe remains short, aligned and attached during heel rise. The shape is an illustrative surface model, not a scan.",
+      "observations": "The heel rises and returns while the toes remain part of the same continuous forefoot. Front and oblique views show all five connected toes, including the small lateral toe. The ankle, instep and calf transition smoothly; toe support remains stable through the authored rise.",
       "inspectedPoseFrames": [
         "foot-rest.png",
         "foot-t0.65.png",
@@ -205,6 +325,17 @@
         "foot-peak.png",
         "foot-t3.75.png",
         "foot-t5.00.png"
+      ],
+      "inspectedViewFrames": [
+        "foot-front-rest.png",
+        "foot-front-intermediate.png",
+        "foot-front-peak.png",
+        "foot-threequarter-rest.png",
+        "foot-threequarter-intermediate.png",
+        "foot-threequarter-peak.png",
+        "foot-side-rest.png",
+        "foot-side-intermediate.png",
+        "foot-side-peak.png"
       ],
       "inspectedPlaybackFrames": [
         "foot-live-0.0.png",
@@ -215,22 +346,61 @@
         "foot-live-4.9.png",
         "foot-live-5.5.png"
       ],
+      "inspectedMobileFrames": [
+        "mobile-foot-rest.png",
+        "mobile-foot.png"
+      ],
       "poseContactSheet": "foot-contact.jpg",
+      "viewContactSheet": "foot-views-contact.jpg",
       "playbackContactSheet": "foot-live-contact.jpg",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
       "unpausedPlaybackPass": true,
-      "additionalEvidence": "revision-v3/review.json",
-      "topologyAndTimingEvidence": "revision-v3/model-checks.json"
+      "renderObservation": {
+        "drawCalls": 20,
+        "triangles": 205417,
+        "meanRenderMs": 6.730833330750466
+      }
     }
   ],
-  "limitations": [
-    "Original procedural surface illustrations simplify anatomy; they are not scanned or medically validated models.",
-    "Selected-region highlights indicate selection, not measured muscle activation.",
-    "The full-body model uses sculptural proportions rather than photorealistic skin or detailed dissection anatomy.",
-    "The scene animation and camera are editable JavaScript, not exported FBX/GLB/BVH clips."
+  "additionalEvidence": [
+    "body-back-selected.png",
+    "body-back-restored.png",
+    "shared-character-front.png",
+    "../character/subdivision/synthetic-checks.json",
+    "../character/subdivision/asset-checks.json"
   ],
-  "pass": true,
-  "reviewedOn": "2026-10-23",
-  "revision": "Continuous forefoot and toe roots; preserved hand geometry"
+  "interactions": {
+    "reducedMotionStartsPaused": true,
+    "sameSculptedIdentityAcrossStudies": true,
+    "pectoralBackPelvisPreserved": true,
+    "surfaceSelectionPreservesSkin": true,
+    "anchorsFollowPosedSurface": true,
+    "backSelectionRevealsSurface": true,
+    "clearSelectionRestoresHair": true,
+    "selectionAndExplanation": true,
+    "frameSelection": true,
+    "hideLabels": true,
+    "scrubPauses": true,
+    "restartRestoresStart": true,
+    "playPause": true,
+    "singlePassStopsAtFive": true,
+    "guidedCameraMoves": true,
+    "dragInterruptsGuidedCamera": true,
+    "keyboardOrbit": true,
+    "aboutAndSources": true,
+    "normalMotionAutoplays": true,
+    "mobileNoHorizontalOverflow": true,
+    "mobileLabelsInside": true,
+    "onlyLocalRequests": true
+  },
+  "limitations": [
+    "This is an illustrative, adapted CC0 character mesh and authored skeletal animation, not a scan, a clinical anatomy model or a medically validated simulation.",
+    "The result has natural continuous human topology and textured PBR materials, but it is not a photoreal digital double or a verified likeness of Sydney Sweeney. Hair still uses textured cards rather than individually simulated strands.",
+    "Mint patches indicate semantic surface regions, not dissected muscles, quantified activation or simulated tissue mechanics.",
+    "Very close inspection can reveal source texture softness, card-based hair structure, garment edge aliasing and shadow-map resolution.",
+    "Some free-orbit limb views and mobile arm framing include adjacent head or torso beneath the fixed headline; the requested limb remains visible and controls remain usable.",
+    "Playback review samples screenshots across a loop boundary; it is not frame-by-frame inspection of every rendered frame or every possible camera angle."
+  ],
+  "pass": true
 }

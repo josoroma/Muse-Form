@@ -1,10 +1,12 @@
 # MUSE: one portrait, eight expressions
 
-Use [MUSE](../assets/expressions/index.html) for a requested 3D facial-expression study. It is an original procedural sculpture of an adult woman, separate from the FORM anatomy explorer and the accepted SVG corpus. Preserve one recognizable identity and a shared neutral pose across joy, sadness, anger, fear, surprise, disgust, wink and laughter. Laughter retains the corpus reference ID **105202**; do not invent a source ID for a newly authored pose.
+Use [MUSE](../assets/expressions/index.html) for a requested 3D facial-expression study. It shows the same adult female CC0 skinned character as FORM, in a separate portrait and expression view; the accepted SVG corpus remains independent. The app applies one authored identity and material treatment across both viewers. Preserve one recognizable identity and a shared neutral pose across joy, sadness, anger, fear, surprise, disgust, wink and laughter. Laughter retains the corpus reference ID **105202**; do not invent a source ID for a newly authored pose.
 
-Read the current `assets/expressions/face.mjs` before adapting its geometry. `createFace(expressionId)` provides the portrait group, selectable parts, pose update, beats and metrics; `EXPRESSION_IDS` and `EXPRESSIONS` enumerate the authored performances. `app.mjs` supplies its own view and imports the camera/transport from FORM. Keep `assets/expressions/` and `assets/three/` as siblings because MUSE also uses FORM's local Three.js engine and base stylesheet. Serve their parent folder over HTTP.
+Read the current `assets/expressions/character-face.mjs` before adapting its geometry. `createFace(expressionId)` provides the portrait group, selectable parts, pose update, beats and metrics; `getExpressionMetadata()` provides catalog metadata without loading the browser assets. `app.mjs` supplies its own view and imports the camera/transport from FORM. Keep `assets/expressions/` and `assets/three/` as siblings because MUSE also uses FORM's local Three.js engine and base stylesheet. Serve their parent folder over HTTP.
 
-## Build the face, then act
+## Establish the face, then act
+
+Start with the continuous licensed mesh and its shape targets in `assets/three/character/`. Await `loadCharacter()`, clone the skeleton, and reset absolute bone and morph state for each update. The official CC0 expression targets are fitted to eyelids, brows, lashes, teeth and tongue as well as the body. Keep the asset provenance and build instructions with any derivative. Do not replace a sculpted face with disconnected primitives.
 
 Establish the complete cranial, cheek, nose, jaw and neck volumes before expression changes. The eyes and mouth need real boundaries in the facial surface, with attached lids, lips and surrounding skin. Separate feature shapes placed on an unchanged head will not create convincing full-face acting.
 
@@ -25,3 +27,5 @@ Inspect the shared neutral portrait first, then every performance at its stronge
 - Selection anchors follow the posed feature. Highlights do not hide boundary defects. Camera motion yields to manual inspection and frames the complete portrait through all extremes.
 
 Check deterministic reverse seeking and matching 0/5-second geometry, then repair and reopen any affected expressions. Keep prompts, source IDs and review evidence with the separate edition. The skill's presence and an automated pass are not a substitute for this visual review.
+
+The current material uses physically based skin with a modest diffuse-wrap approximation, not volumetric subsurface scattering. Hair is textured geometry, not a simulated strand groom. Do not describe a procedural or licensed game-ready asset as a scan, an exact celebrity likeness or a production digital double. Inspect the actual result at close portrait scale before making quality claims.

@@ -27,7 +27,7 @@
         <div id="viewport" class="viewport">
           <div class="scene-heading"><p class="eyebrow" id="scene-number">EXPRESSION 01 / JOY</p><h1 id="scene-title">A quiet smile.</h1></div>
           <div id="canvas-host"></div><svg id="leaders" aria-hidden="true"></svg><div id="labels" aria-label="Facial feature labels"></div>
-          <div class="scene-tools" role="group" aria-label="Camera controls"><button id="overview" title="Frame the portrait (Home)">⌂ <span>Portrait</span></button><button id="front">Front</button><button id="side">Profile</button><button id="zoom-in" aria-label="Zoom in">＋</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
+          <div class="scene-tools" role="group" aria-label="Camera controls"><button id="overview" title="Frame the portrait (Home)">⌂ <span>Portrait</span></button><button id="wholebody" aria-pressed="false">Full body</button><button id="front">Front</button><button id="side">Profile</button><button id="zoom-in" aria-label="Zoom in">＋</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
           <div class="view-status"><span class="status-dot"></span><span id="camera-status">Guided view</span><span class="drag-hint">Drag to orbit · scroll to zoom</span></div>
           <div id="fallback" hidden><h2>Explore the expression drawings</h2><p>This browser could not start the portrait’s 3D view.</p><a href="../#105196">Open the SVG expression collection ↗</a></div>
         </div>
@@ -38,15 +38,15 @@
         <div class="chapter"><span class="chapter-number" id="beat-count">01 / 04</span><p class="eyebrow">THE EXPRESSION</p><h2 id="beat-title">At rest</h2><p id="beat-description">A calm portrait before the expression begins.</p></div>
         <div id="beat-buttons" class="beat-buttons" aria-label="Jump to expression phase"></div>
         <div class="metrics" id="metrics"></div>
-        <div class="anatomy-heading"><p class="eyebrow">THE FEATURES</p><button id="clear-selection">Clear</button></div>
+        <div class="anatomy-heading"><p class="eyebrow">ANATOMY & EXPRESSION</p><button id="clear-selection">Clear</button></div>
         <div id="parts" class="parts" aria-label="Facial features"></div>
         <section class="selection" aria-live="polite"><div class="selection-rule"></div><h3 id="part-name">Follow a facial feature</h3><p id="part-description">Select the brows, eyes, cheeks, lips or jaw to see how the expression is formed.</p><button id="focus" disabled>Frame this feature ↗</button></section>
-        <p class="portrait-note">An original sculpted portrait.<br>Eight interpretations of expression.</p>
+        <p class="portrait-note">One shared sculpted character.<br>Eight interpretations of expression.</p>
       </aside>
     </section>
     <footer><p><span>MUSE / 2026</span> A companion to FORM, the moving anatomy atlas.</p><a href="SOURCES.md">Facial anatomy notes ↗</a><a href="README.md">Source & prompts ↗</a></footer>
   </main>
-  <dialog id="about-dialog"><button id="close-about" aria-label="Close">×</button><p class="eyebrow">ABOUT MUSE</p><h2>The face carries<br>the gesture.</h2><p>One original adult woman, sculpted in Three.js. Eight five-second studies coordinate the eyebrows, eyelids, cheeks, lips and jaw. Pause any moment and orbit the portrait to inspect its form.</p><p>These are authored acting studies. The expression names describe the performance; they do not diagnose emotion or reveal a person’s inner state.</p><p>FORM remains the separate atlas for body, arm, hand, leg and foot. The native SVG collection is preserved alongside both editions.</p><a href="SOURCES.md">Read the facial anatomy notes ↗</a><a href="../three/">Open FORM / Anatomy ↗</a></dialog>
+  <dialog id="about-dialog"><button id="close-about" aria-label="Close">×</button><p class="eyebrow">ABOUT MUSE</p><h2>The face carries<br>the gesture.</h2><p>One adult character, shared with FORM. Eight five-second studies coordinate the eyebrows, eyelids, cheeks, lips and jaw. Pause any moment and orbit the portrait to inspect its form.</p><p>These are authored acting studies. The expression names describe the performance; they do not diagnose emotion or reveal a person’s inner state.</p><p>Use Full body to inspect the same character and its anatomical regions. FORM remains the separate atlas for body, arm, hand, leg and foot. The native SVG collection is preserved alongside both editions.</p><a href="SOURCES.md">Read the facial anatomy notes ↗</a><a href="../three/">Open FORM / Anatomy ↗</a></dialog>
   <p class="sr-only" id="announcement" role="status"></p>
 </body>
 </html>

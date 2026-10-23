@@ -1,0 +1,30 @@
+{
+  "pass": true,
+  "trueLoopSmoothing": true,
+  "sourceUntouched": true,
+  "uvSeamsPreserved": true,
+  "relativeMorphPreserved": true,
+  "cardBoundaryPinned": true,
+  "maxWeightError": 2.2351741790771484e-8,
+  "iterations": 2,
+  "inputVertices": 7,
+  "inputTriangles": 8,
+  "passes": [
+    {
+      "vertices": 21,
+      "triangles": 32,
+      "weldedVertices": 1,
+      "boundaryVertices": 0,
+      "heldBoundaryVertices": 0,
+      "nonManifoldVertices": 0
+    },
+    {
+      "vertices": 73,
+      "triangles": 128,
+      "weldedVertices": 3,
+      "boundaryVertices": 0,
+      "heldBoundaryVertices": 0,
+      "nonManifoldVertices": 0
+    }
+  ]
+}

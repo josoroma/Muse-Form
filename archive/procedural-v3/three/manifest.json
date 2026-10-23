@@ -1,0 +1,432 @@
+{
+  "title": "FORM — Anatomy in motion",
+  "renderer": "Three.js 0.186.1",
+  "duration": 5,
+  "edition": 1,
+  "scope": "Five simplified original 3D anatomy studies, separate from the accepted SVG corpus.",
+  "studies": [
+    {
+      "id": "body",
+      "title": "A gesture is a whole-body event.",
+      "action": "Reach & return",
+      "duration": 5,
+      "view": "index.html#body",
+      "source": "upper-body.mjs",
+      "svgReferenceIDs": [
+        "105214",
+        "105215",
+        "105218",
+        "105219"
+      ],
+      "prompt": "Create an original sculptural full-body anatomy study in Three.js. Build continuous ribcage, waist, pelvis, neck and cranial volumes, with sparse chest and facial contours; attach proportional articulated arms, hands, legs and five-toed feet. Use a quiet charcoal stage, cool stone surfaces, warm directional light and a cyan selected region. Animate a five-second reach-and-return: shoulder lift and elbow flexion, a slight trunk counter-turn and head response, with both feet planted. Keep head, shoulder, wrist and hip attachments closed. Add selectable anatomical regions and explanatory labels, and a modest guided camera arc that stops on manual orbit. Preserve matching start/end geometry.",
+      "method": "Original procedural Three.js surface geometry and authored deterministic joint/mesh animation; no external model or scanned anatomy.",
+      "parts": [
+        {
+          "id": "pelvis",
+          "name": "Pelvis",
+          "description": "The pelvis connects the trunk to the legs and provides the base for this reaching pose."
+        },
+        {
+          "id": "back",
+          "name": "Back",
+          "description": "Posterior trunk muscles help maintain posture as the arms move."
+        },
+        {
+          "id": "obliques",
+          "name": "External oblique region",
+          "description": "The side of the torso links ribcage and pelvis, revealing the direction of trunk rotation."
+        },
+        {
+          "id": "abdomen",
+          "name": "Abdominal wall",
+          "description": "The abdominal wall supports the trunk. A small counter-turn keeps the gesture connected through the body."
+        },
+        {
+          "id": "chest",
+          "name": "Pectoralis region",
+          "description": "The chest connects the upper arm visually to the ribcage. Watch the shoulder and chest relationship during the reach."
+        },
+        {
+          "id": "neck",
+          "name": "Neck",
+          "description": "The neck supports the head while the shoulder and arm change position."
+        },
+        {
+          "id": "head",
+          "name": "Head & gaze",
+          "description": "The head turns slightly toward the reaching hand; gaze gives the movement a direction."
+        },
+        {
+          "id": "support-arm",
+          "name": "Balancing arm",
+          "description": "The opposite arm gives the reaching pose balance and a clear silhouette."
+        },
+        {
+          "id": "reach-arm",
+          "name": "Reaching arm",
+          "description": "The shoulder lifts the upper arm while the elbow bends. The hand leads a connected reaching gesture."
+        },
+        {
+          "id": "support-legs",
+          "name": "Supporting legs",
+          "description": "The feet stay grounded while the upper body reaches. Support makes the gesture readable."
+        }
+      ],
+      "beats": [
+        {
+          "time": 0,
+          "label": "Ground",
+          "description": "The feet establish support before the arm moves."
+        },
+        {
+          "time": 1.5,
+          "label": "Reach",
+          "description": "The shoulder lifts, the elbow bends, and the trunk gently counter-turns."
+        },
+        {
+          "time": 2.5,
+          "label": "Hold",
+          "description": "Follow the connected line from the planted foot to the reaching hand."
+        },
+        {
+          "time": 3.5,
+          "label": "Return",
+          "description": "The shoulder and arm settle back into the same resting pose."
+        }
+      ]
+    },
+    {
+      "id": "arm",
+      "title": "The shape of a bend.",
+      "action": "Elbow flexion",
+      "duration": 5,
+      "view": "index.html#arm",
+      "source": "upper-body.mjs",
+      "svgReferenceIDs": [
+        "105215"
+      ],
+      "prompt": "Create an original native Three.js arm volume with a tapered upper arm, elbow, forearm and attached articulated hand. Give the deltoid, anterior biceps region, posterior triceps region, elbow and forearm distinct selectable identities. Keep the upper arm steady while the forearm bends around the elbow from 12 to 100 degrees over a five-second preparation, flexion, hold and release. Add modest biceps fullness without changing forearm length; the hand must remain attached and close its digits. Use smooth contour profiles, shared normals, restrained lighting, anchored labels and an interruptible guided camera.",
+      "method": "Original procedural Three.js surface geometry and authored deterministic joint/mesh animation; no external model or scanned anatomy.",
+      "parts": [
+        {
+          "id": "forearm",
+          "name": "Forearm flexors",
+          "description": "Forearm muscles transmit force through tendons toward the wrist and fingers. The forearm moves as a unit below the elbow."
+        },
+        {
+          "id": "elbow",
+          "name": "Elbow joint",
+          "description": "The forearm bends around the elbow. The upper arm stays steady during this isolated flexion study."
+        },
+        {
+          "id": "triceps",
+          "name": "Triceps brachii",
+          "description": "The triceps lies behind the upper arm and straightens the elbow. Compare its posterior position with the biceps as the forearm bends."
+        },
+        {
+          "id": "biceps",
+          "name": "Biceps brachii",
+          "description": "This anterior upper-arm muscle helps bend the elbow. Its belly becomes more prominent in this flexed pose."
+        },
+        {
+          "id": "shoulder",
+          "name": "Deltoid",
+          "description": "The deltoid forms the shoulder cap and helps lift the upper arm."
+        },
+        {
+          "id": "grip",
+          "name": "Hand & wrist",
+          "description": "The hand travels with the forearm. Finger joints close the grasp while the wrist remains attached."
+        }
+      ],
+      "beats": [
+        {
+          "time": 0,
+          "label": "Prepare",
+          "description": "Find the shoulder, elbow and wrist."
+        },
+        {
+          "time": 1.5,
+          "label": "Flex",
+          "description": "The forearm turns around the elbow; the upper arm stays steady."
+        },
+        {
+          "time": 2.5,
+          "label": "Hold",
+          "description": "Observe the fuller anterior biceps contour."
+        },
+        {
+          "time": 3.5,
+          "label": "Release",
+          "description": "The forearm lowers and the muscle contour returns."
+        }
+      ]
+    },
+    {
+      "id": "hand",
+      "title": "The hand, in motion",
+      "action": "Opposition · flexion · coordinated release",
+      "duration": 5,
+      "view": "index.html#hand",
+      "source": "hand.mjs",
+      "svgReferenceIDs": [
+        "105216",
+        "105217"
+      ],
+      "prompt": "Build a clean organic Three.js hand from original contoured mesh surfaces. Establish a broad palm, thenar pad, wrist, five graduated digits, connected knuckles and a separate thumb opposition chain. Use three phalangeal segments per non-thumb finger and two beyond the thumb metacarpal; retain joint centers and consistent segment lengths. Over five seconds, gather the fingers, close a soft grasp, turn the thumb pad across the palm, hold, and release. Resolve palm and highlight boundaries with shared geometry rather than floating patches. Keep nails and creases subtle. Provide selectable finger/thenar regions, labels, a seekable timeline and a camera that yields to manual inspection.",
+      "method": "Original procedural Three.js surface geometry and authored deterministic joint/mesh animation; no external model or scanned anatomy.",
+      "parts": [
+        {
+          "id": "palm",
+          "name": "Palmar arches",
+          "description": "The palm forms a stable base. Its transverse arch cups gently while the finger joints close around the grasp."
+        },
+        {
+          "id": "thenar",
+          "name": "Thenar eminence",
+          "description": "This muscular pad at the thumb base supports opposition: the thumb turns toward the finger pads to shape a grasp."
+        },
+        {
+          "id": "index",
+          "name": "Index finger",
+          "description": "Three phalanges articulate beneath one continuous skin surface. The pad follows a joint-controlled arc toward the palm, with a conforming nail bed on the dorsal surface."
+        },
+        {
+          "id": "middle",
+          "name": "Middle finger",
+          "description": "Three phalanges articulate beneath one continuous skin surface. The longest digit leads the relaxed grasp."
+        },
+        {
+          "id": "ring",
+          "name": "Ring finger",
+          "description": "Three phalanges articulate beneath one continuous skin surface. The pad follows a joint-controlled arc toward the palm, with a conforming nail bed on the dorsal surface."
+        },
+        {
+          "id": "little",
+          "name": "Little finger",
+          "description": "Three phalanges articulate beneath one continuous skin surface. The little finger closes slightly later to support the cupped palm."
+        },
+        {
+          "id": "thumb",
+          "name": "Thumb opposition",
+          "description": "Two phalanges continue from the thumb metacarpal. A broad saddle base turns its pad across the palm as the fingers flex; the skin and nail bed follow the same continuous surface."
+        }
+      ],
+      "beats": [
+        {
+          "time": 0,
+          "label": "Open",
+          "description": "A relaxed palm with five distinct digits and a broad thumb web."
+        },
+        {
+          "time": 0.48,
+          "label": "Gather",
+          "description": "The finger knuckles begin the grasp; the thumb turns toward the palm."
+        },
+        {
+          "time": 2.12,
+          "label": "Grasp",
+          "description": "Interphalangeal flexion carries the pads inward. The thenar pad subtly changes with opposition."
+        },
+        {
+          "time": 2.85,
+          "label": "Release",
+          "description": "The linked joints reverse their arcs and recover the open hand."
+        },
+        {
+          "time": 4.62,
+          "label": "Settle",
+          "description": "The rest pose is held before the exact five-second loop repeats."
+        }
+      ]
+    },
+    {
+      "id": "leg",
+      "title": "Load & recover",
+      "action": "The leg · one continuous line of support",
+      "duration": 5,
+      "view": "index.html#leg",
+      "source": "lower-limb.mjs",
+      "svgReferenceIDs": [
+        "105218",
+        "105219",
+        "105220"
+      ],
+      "prompt": "Create a continuous Three.js leg anatomy study from the cropped thigh through knee, asymmetric calf, tibial ridge, Achilles region and a planted five-toed foot. Shape quadriceps and calf masses with quiet surface asymmetry. Animate a five-second loading bend and recovery: the knee advances, the thigh counter-rotates, the ankle attachment stays continuous, and the foot does not slide. Highlight selected surface regions rather than implying measured activation. Keep labels anchored to the deformed surface and show the same authored knee angle in the readout. Inspect rest, loaded peak, reverse seeking and the sole contact.",
+      "method": "Original procedural Three.js surface geometry and authored deterministic joint/mesh animation; no external model or scanned anatomy.",
+      "parts": [
+        {
+          "id": "leg-contour",
+          "name": "Leg contour",
+          "description": "The thigh, knee and lower leg maintain one continuous form through the bend."
+        },
+        {
+          "id": "leg-quadriceps",
+          "name": "Quadriceps",
+          "description": "The anterior thigh group extends the knee and controls the lowering phase."
+        },
+        {
+          "id": "leg-patella",
+          "name": "Patellar region",
+          "description": "The patella lies at the front of the knee; the surface turns with the knee angle."
+        },
+        {
+          "id": "leg-tibial-ridge",
+          "name": "Tibial ridge",
+          "description": "The anterior border of the tibia reads as a quiet plane down the shin."
+        },
+        {
+          "id": "leg-calf",
+          "name": "Gastrocnemius",
+          "description": "The two superficial calf heads taper toward the Achilles tendon."
+        },
+        {
+          "id": "leg-achilles",
+          "name": "Achilles tendon",
+          "description": "The Achilles tendon continues the calf toward its attachment on the heel."
+        },
+        {
+          "id": "leg-ankle",
+          "name": "Ankle region",
+          "description": "The ankle narrows above the heel, with its surface continuing into the dorsum."
+        },
+        {
+          "id": "leg-midfoot",
+          "name": "Foot contour",
+          "description": "A continuous skin surface joins heel, arch, metatarsal support and all five toes."
+        },
+        {
+          "id": "leg-heel",
+          "name": "Calcaneal region",
+          "description": "The heel rises as the foot rolls over the supporting forefoot."
+        },
+        {
+          "id": "leg-instep",
+          "name": "Dorsum of foot",
+          "description": "The instep slopes continuously from the ankle toward the metatarsals."
+        },
+        {
+          "id": "leg-forefoot",
+          "name": "Metatarsal support",
+          "description": "The ball of the foot carries the support as the heel lifts."
+        },
+        {
+          "id": "leg-toes",
+          "name": "Phalanges",
+          "description": "Five toes continue from one forefoot surface; the great toe is broader and the outer toes shorten."
+        }
+      ],
+      "beats": [
+        {
+          "time": 0,
+          "label": "Stand",
+          "description": "The foot remains grounded beneath a long, quiet leg."
+        },
+        {
+          "time": 1.3,
+          "label": "Load",
+          "description": "The knee moves forward as the thigh folds above it."
+        },
+        {
+          "time": 2.35,
+          "label": "Control",
+          "description": "The anterior thigh controls the held bend."
+        },
+        {
+          "time": 3.6,
+          "label": "Recover",
+          "description": "Thigh and shin return together without sliding the foot."
+        }
+      ]
+    },
+    {
+      "id": "foot",
+      "title": "From heel to forefoot",
+      "action": "The foot · a controlled rise over a stable base",
+      "duration": 5,
+      "view": "index.html#foot",
+      "source": "lower-limb.mjs",
+      "svgReferenceIDs": [
+        "105221",
+        "105222",
+        "105223"
+      ],
+      "prompt": "Build an original Three.js foot with one smooth ankle-to-heel-to-instep surface, a visible medial arch, metatarsal support and five separately formed toes with natural length hierarchy. Use restrained nail margins and joint creases. Animate a five-second heel rise of about 21 degrees around the ball of the foot, hold, and lower; toe tips remain supported while the proximal toes extend. Blend the little toe into the lateral metatarsal volume and keep its root attached from front, side and below throughout the heel rise. Avoid a cylindrical ankle intersecting a shoe-like foot, folded loft surfaces, floating toes or drifting labels. Provide selectable dorsum, heel, ankle, forefoot and toe regions. Frame the union of all poses so toes and ankle remain visible throughout the guided camera arc.",
+      "method": "Original procedural Three.js surface geometry and authored deterministic joint/mesh animation; no external model or scanned anatomy.",
+      "parts": [
+        {
+          "id": "foot-ankle",
+          "name": "Ankle region",
+          "description": "The ankle narrows above the heel, with its surface continuing into the dorsum."
+        },
+        {
+          "id": "foot-midfoot",
+          "name": "Foot contour",
+          "description": "A continuous skin surface joins heel, arch, metatarsal support and all five toes."
+        },
+        {
+          "id": "foot-heel",
+          "name": "Calcaneal region",
+          "description": "The heel rises as the foot rolls over the supporting forefoot."
+        },
+        {
+          "id": "foot-instep",
+          "name": "Dorsum of foot",
+          "description": "The instep slopes continuously from the ankle toward the metatarsals."
+        },
+        {
+          "id": "foot-forefoot",
+          "name": "Metatarsal support",
+          "description": "The ball of the foot carries the support as the heel lifts."
+        },
+        {
+          "id": "foot-toe-1",
+          "name": "Great toe",
+          "description": "The great toe has two phalanges and a broad supporting pad."
+        },
+        {
+          "id": "foot-toe-2",
+          "name": "Second toe",
+          "description": "The smaller toes continue from a shared metatarsal web; their distal pads stay planted as the heel rises."
+        },
+        {
+          "id": "foot-toe-3",
+          "name": "Third toe",
+          "description": "The smaller toes continue from a shared metatarsal web; their distal pads stay planted as the heel rises."
+        },
+        {
+          "id": "foot-toe-4",
+          "name": "Fourth toe",
+          "description": "The smaller toes continue from a shared metatarsal web; their distal pads stay planted as the heel rises."
+        },
+        {
+          "id": "foot-toe-5",
+          "name": "Fifth toe",
+          "description": "The smaller toes continue from a shared metatarsal web; their distal pads stay planted as the heel rises."
+        }
+      ],
+      "beats": [
+        {
+          "time": 0,
+          "label": "Settle",
+          "description": "Heel, forefoot and toes establish a broad support."
+        },
+        {
+          "time": 1.3,
+          "label": "Roll",
+          "description": "The heel lifts while pressure moves toward the metatarsal heads."
+        },
+        {
+          "time": 2.35,
+          "label": "Rise",
+          "description": "The toe tips remain planted as the proximal toes extend."
+        },
+        {
+          "time": 3.6,
+          "label": "Lower",
+          "description": "The arch and heel return in a controlled recovery."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "errors": [],
+  "performance": {
+    "study": "body",
+    "selected": "chest",
+    "cameraOwner": "guided",
+    "time": 2.563200000000032,
+    "progress": 0.5126400000000064,
+    "duration": 5,
+    "rate": 1,
+    "playing": true,
+    "camera": {
+      "position": [
+        1.3089333822833997,
+        1.1364436110865173,
+        3.351558561129353
+      ],
+      "target": [
+        0.13616727482570584,
+        0.8820955957429105,
+        0.15898575118742425
+      ],
+      "zoom": 1,
+      "transitioning": false
+    },
+    "drawCalls": 18,
+    "triangles": 84622,
+    "meanRenderMs": 12.206666663785775
+  }
+}

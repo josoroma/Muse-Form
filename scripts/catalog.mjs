@@ -39,9 +39,9 @@ The collection uses [Hairline-inspired](https://github.com/lucasmarkes/hairline)
 
 ## Three.js anatomy edition
 
-[Open FORM](three/index.html) to explore five real 3D studies: full body, arm, hand, leg and foot. Each has a five-second joint-driven movement, a guided camera that yields to manual orbit, selectable surface regions and anchored explanatory labels. [3D source and prompts](three/README.md).
+[Open FORM](three/index.html) to explore five 3D studies: full body, arm, hand, leg and foot. The shared CC0 skinned character has continuous human topology, connected fingers and toes, and a fixed original adult female identity with blonde hair, blue eyes and a neutral anatomical bodysuit. Each study has a five-second joint-driven movement, a guided camera that yields to manual orbit, selectable surface regions and anchored explanatory labels. [3D source and prompts](three/README.md).
 
-[Open MUSE](expressions/index.html) for a separate facial-expression view: one original adult brunette, eight five-second acting studies, articulated features and portrait camera controls. The portrait revision uses the supplied front/profile references for facial proportions, swept hair, eye detail and studio materials. FORM's forefoot and toes share a continuous surface through the heel-rise movement. [Expression prompts and source](expressions/README.md) · [Portable FORM + MUSE bundle](exports/form-and-muse-threejs.zip). The accepted SVGs remain available below.
+[Open MUSE](expressions/index.html) for eight five-second facial acting studies of the same character. Official CC0 facial targets coordinate brows, eyelids, cheeks, lips and jaw; Portrait and Full body views keep one identity across expressions and camera angles. The supplied appearance references inform the art direction rather than supplying a scanned likeness. [Expression prompts and source](expressions/README.md) · [Character assets and licensing](three/character/assets/README.md) · [Reproducible expression builder](scripts/build-character-expressions.py) · [Portable FORM + MUSE bundle](exports/form-and-muse-threejs.zip). The accepted SVGs remain available below.
 
 ![Static drawing corpus](qa/motion-five/corpus-contact.jpg)
 
@@ -90,7 +90,7 @@ Evidence: [SVG and motion checks](qa/motion-five/svg-checks.json), [automatic pl
 
 > Use $seven-second-storytelling to create a native SVG hand that clearly opens and curls its fingers over five seconds. Preserve believable joints and Hairline-inspired contours. Deliver static and animated SVGs, inspect the motion extremes, and record the prompt and links.
 
-Prior editions remain in [archive/hairline-v3](archive/hairline-v3), [archive/raster-v2](archive/raster-v2) and [archive/vector-v1](archive/vector-v1). [The first MUSE edition](archive/muse-v1) also preserves the preceding complete FORM + MUSE bundle; [the prior lower-limb source](archive/three-v2) preserves the foot before its continuous-surface repair.
+Prior editions remain in [archive/hairline-v3](archive/hairline-v3), [archive/raster-v2](archive/raster-v2) and [archive/vector-v1](archive/vector-v1). [The preceding procedural FORM + MUSE edition](archive/procedural-v3) preserves its editable models and complete runnable bundle before the shared skinned character revision. [The first MUSE edition](archive/muse-v1) and [the prior lower-limb source](archive/three-v2) retain earlier 3D work.
 
 ## Corpus
 

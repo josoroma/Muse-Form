@@ -1,0 +1,111 @@
+{
+  "source": "https://raw.githubusercontent.com/kblood/CharacterCreator/852e48f316b90a0937234886630e4fb4cdfd1f78/output/base_body.glb",
+  "sourceSHA256": "b5b450af89f6fbf8debf387eda8da40cd0a8c3253a2d59871c730ce7e7f46469",
+  "license": "CC0-1.0",
+  "targetNames": [
+    "exp_browDownLeft",
+    "exp_browDownRight",
+    "exp_browInnerUp",
+    "exp_browOuterUpLeft",
+    "exp_browOuterUpRight",
+    "exp_cheekPuff",
+    "exp_cheekSquintLeft",
+    "exp_cheekSquintRight",
+    "exp_eyeBlinkLeft",
+    "exp_eyeBlinkRight",
+    "exp_eyeLookDownLeft",
+    "exp_eyeLookDownRight",
+    "exp_eyeLookInLeft",
+    "exp_eyeLookInRight",
+    "exp_eyeLookOutLeft",
+    "exp_eyeLookOutRight",
+    "exp_eyeLookUpLeft",
+    "exp_eyeLookUpRight",
+    "exp_eyeSquintLeft",
+    "exp_eyeSquintRight",
+    "exp_eyeWideLeft",
+    "exp_eyeWideRight",
+    "exp_jawForward",
+    "exp_jawLeft",
+    "exp_jawOpen",
+    "exp_jawRight",
+    "exp_mouthClose",
+    "exp_mouthDimpleLeft",
+    "exp_mouthDimpleRight",
+    "exp_mouthFrownLeft",
+    "exp_mouthFrownRight",
+    "exp_mouthFunnel",
+    "exp_mouthLeft",
+    "exp_mouthLowerDownLeft",
+    "exp_mouthLowerDownRight",
+    "exp_mouthPressLeft",
+    "exp_mouthPressRight",
+    "exp_mouthPucker",
+    "exp_mouthRight",
+    "exp_mouthRollLower",
+    "exp_mouthRollUpper",
+    "exp_mouthShrugLower",
+    "exp_mouthShrugUpper",
+    "exp_mouthSmileLeft",
+    "exp_mouthSmileRight",
+    "exp_mouthStretchLeft",
+    "exp_mouthStretchRight",
+    "exp_mouthUpperUpLeft",
+    "exp_mouthUpperUpRight",
+    "exp_noseSneerLeft",
+    "exp_noseSneerRight",
+    "exp_tongueOut"
+  ],
+  "meshes": [
+    {
+      "mesh": "base",
+      "vertices": 14517,
+      "maxUVError": 5.348661691830926e-08,
+      "spatiallyResolvedUVs": 0
+    },
+    {
+      "mesh": "Eyebrows",
+      "vertices": 124,
+      "maxUVError": 4.508822498259592e-08,
+      "spatiallyResolvedUVs": 0
+    },
+    {
+      "mesh": "Eyelashes",
+      "vertices": 250,
+      "maxUVError": 4.9081173494417175e-08,
+      "spatiallyResolvedUVs": 0
+    },
+    {
+      "mesh": "Eyes",
+      "vertices": 360,
+      "maxUVError": 4.855953789568662e-08,
+      "spatiallyResolvedUVs": 0
+    },
+    {
+      "mesh": "Eyes",
+      "vertices": 232,
+      "maxUVError": 4.4234556585489644e-08,
+      "spatiallyResolvedUVs": 0
+    },
+    {
+      "mesh": "Eyes",
+      "vertices": 524,
+      "maxUVError": 4.1736518957820155e-08,
+      "spatiallyResolvedUVs": 524
+    },
+    {
+      "mesh": "Teeth",
+      "vertices": 4494,
+      "maxUVError": 5.221826276096819e-08,
+      "spatiallyResolvedUVs": 0
+    },
+    {
+      "mesh": "Tongue",
+      "vertices": 253,
+      "maxUVError": 4.922363909187829e-08,
+      "spatiallyResolvedUVs": 0
+    }
+  ],
+  "outputSHA256": "b0fae3610eef39a6cdc9c56d9c8bccc0cd9bcc1cf346ae1d9bfa121e5a86e1fe",
+  "outputBytes": 9410760
+}

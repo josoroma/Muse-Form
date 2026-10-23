@@ -2,73 +2,92 @@
   "title": "MUSE — The language of a face",
   "renderer": "Three.js 0.186.1",
   "duration": 5,
-  "edition": 2,
-  "identity": "One original adult brunette woman, modeled consistently across all views and expressions.",
+  "edition": 3,
+  "identity": "One original adult blonde woman with blue eyes, shared with FORM.",
   "appearanceReferences": [
-    "User-supplied paired front/profile laughter portrait, 23 October 2026",
-    "User-supplied paired front/profile surprise portrait, 23 October 2026"
+    "User-supplied paired front/profile laughter and surprise portraits",
+    "Subsequent user direction: adult blonde female character with blue eyes, inspired by Sydney Sweeney; original asset-based identity rather than a scan or exact likeness"
   ],
+  "assetLicense": "CC0-1.0",
+  "assetProvenance": "../three/character/assets/README.md",
   "studies": [
     {
       "id": "joy",
       "title": "A quiet joy",
       "duration": 5,
       "view": "index.html#joy",
-      "source": "face.mjs",
+      "source": "character-face.mjs",
+      "model": "../three/character/assets/adult-female-source.glb",
       "svgReferenceID": "105196",
-      "prompt": "Use the two supplied front/profile portrait references as the primary appearance guide. Create an original adult brunette woman as a native Three.js portrait, with a softly tapered oval face, rounded chin, refined nasal bridge and alae, volumetric rose lips, structured ears and a natural neck. Keep the eyes proportional to the face, with hazel irises, attached eyelid rims, curved lashes and natural brows. Give the swept brunette hair a continuous silhouette, gathered low bun, coherent fine strands and a few face-framing tendrils. Use warm skin with restrained regional color variation and microtexture, soft studio reflections, refined highlights and a green crewneck. Keep the same identity across every expression. Animate exactly five seconds: neutral, preparation, a readable expression, a short hold, recovery and the identical neutral endpoint. Coordinate brow, eyelid, cheek, lip and jaw geometry. Preserve clean occlusion, anatomical attachments and clean silhouettes from front, three-quarter and profile views. Provide selectable facial features, source-backed explanatory labels, a seekable timeline and a guided camera that yields immediately to manual orbit. Raise the mouth corners into a quiet smile. Lift the cheeks and soften the lower eyelids together; keep the upper lip and chin volumes coherent. Let the face settle gently back to neutral.",
+      "prompt": "Use the shared licensed CC0 MakeHuman-derived skinned character as the foundation. Choose one original adult female identity with a delicate jaw, softly rounded cheeks, refined nose, full lips, natural eyelid geometry, expressive blue eyes and blonde hair. Use the same face, body proportions, rig and neutral anatomical bodysuit in MUSE and FORM. Retain continuous shoulders, torso, limbs, hands and feet for the Full body view. Preserve the charcoal background, serif interface, mint region overlays and soft studio lighting. Animate the face with the official CC0 facial targets transferred onto the original topology; carry brows, lashes, lips, oral surfaces, teeth and tongue with their corresponding deformations. Keep each animation exactly five seconds with one shared neutral pose, readable preparation, a held expression and smooth recovery. Inspect front, profile and three-quarter views. Selected brow, eye, cheek, mouth, jaw, Pectoralis, Back and Pelvis regions must conform to the evaluated body surface with attached labels. Manual orbit interrupts the guided camera. Raise the mouth corners into a quiet smile. Lift the cheeks and soften the lower eyelids together; keep the upper lip and chin volumes coherent. Let the face settle gently back to neutral.",
+      "method": "Licensed CC0 skinned GLB with one locally selected adult identity; 52 official MakeHuman facial units transferred by source-vertex correspondence with accessory bindings and normal deltas; coordinated authored morph weights and small skeletal head gestures. No generated portrait is used as a flat image plane.",
       "beats": [
         {
           "time": 0,
           "label": "Presence",
-          "description": "A quiet neutral portrait establishes the same identity across every expression."
+          "description": "The same adult character begins in a relaxed neutral pose."
         },
         {
           "time": 0.52,
           "label": "Gather",
-          "description": "The first changes begin around the eyes and mouth, with the surrounding face following."
+          "description": "The brows and eyelids begin the action; the cheeks and mouth follow."
         },
         {
           "time": 2.08,
           "label": "Smile",
-          "description": "The mouth corners lift and widen while the cheeks rise into the lower lids."
+          "description": "The corners lift with the cheeks while the eyes soften into a restrained smile."
         },
         {
           "time": 2.9,
           "label": "Release",
-          "description": "The features recover together without changing the identity or resetting abruptly."
+          "description": "The expression eases back through the same attached facial surfaces."
         },
         {
           "time": 4.65,
           "label": "Rest",
-          "description": "The original neutral pose returns and holds through the matching five-second endpoint."
+          "description": "The shared neutral geometry returns and holds through the matching five-second endpoint."
         }
       ],
       "parts": [
         {
           "id": "brow",
           "name": "Brow & forehead",
-          "description": "The brows rise, lower and change their medial angle. These surface gestures suggest the action of the forehead and brow region; they are authored expression poses."
+          "description": "The brows lift, lower and draw toward the bridge. The skin and attached brow hairs follow the same sculpted expression targets."
         },
         {
           "id": "eyes",
           "name": "Eyelids & gaze",
-          "description": "Upper and lower lid margins change the visible aperture around the eyes. A closed lid covers the iris; the eyeball itself does not shrink."
+          "description": "The lids move over full eyeballs. Closing a lid covers the iris; the lashes follow the lid margin without shrinking the eye."
         },
         {
           "id": "cheeks",
           "name": "Cheek region",
-          "description": "The cheeks rise toward the lower lids in a smile and join the upper lip in a nose-wrinkle gesture. The portrait shows surface motion, not isolated internal muscles."
+          "description": "The cheek surface rises toward the lower lids and joins the mouth corners in a smile. These are authored surface motions, not measured muscle activation."
         },
         {
           "id": "mouth",
           "name": "Lips & mouth corners",
-          "description": "The corners lift, lower, stretch or draw inward. Lip contours remain attached to the surrounding face as the opening changes."
+          "description": "The lips lift, press, narrow or part together with the surrounding face. The mouth interior, teeth and tongue remain attached to their sculpted geometry."
         },
         {
           "id": "jaw",
           "name": "Jaw & chin",
-          "description": "An authored jaw release lowers the chin and lower lip together. The lower face returns to the same neutral geometry at the end of the five-second cycle."
+          "description": "The lower face releases beneath the upper jaw, carrying the lower teeth and tongue. A restrained range preserves the chin and lip silhouette in profile."
+        },
+        {
+          "id": "chest",
+          "name": "Pectoralis region",
+          "description": "A surface overlay indicates the upper chest beneath the anatomical bodysuit. The continuous shoulders and clavicles connect the torso to the arms."
+        },
+        {
+          "id": "back",
+          "name": "Back",
+          "description": "The posterior trunk joins the shoulders, waist and pelvis. Hair fades while you inspect this region so the true back surface is visible; the highlight and label follow the same skinned surface during rotation."
+        },
+        {
+          "id": "pelvis",
+          "name": "Pelvis",
+          "description": "The pelvic region connects the waist and hips to the thighs. The mint highlight marks the covered surface rather than exposed internal anatomy."
         }
       ]
     },
@@ -77,61 +96,78 @@
       "title": "A tender sadness",
       "duration": 5,
       "view": "index.html#sadness",
-      "source": "face.mjs",
+      "source": "character-face.mjs",
+      "model": "../three/character/assets/adult-female-source.glb",
       "svgReferenceID": "105197",
-      "prompt": "Use the two supplied front/profile portrait references as the primary appearance guide. Create an original adult brunette woman as a native Three.js portrait, with a softly tapered oval face, rounded chin, refined nasal bridge and alae, volumetric rose lips, structured ears and a natural neck. Keep the eyes proportional to the face, with hazel irises, attached eyelid rims, curved lashes and natural brows. Give the swept brunette hair a continuous silhouette, gathered low bun, coherent fine strands and a few face-framing tendrils. Use warm skin with restrained regional color variation and microtexture, soft studio reflections, refined highlights and a green crewneck. Keep the same identity across every expression. Animate exactly five seconds: neutral, preparation, a readable expression, a short hold, recovery and the identical neutral endpoint. Coordinate brow, eyelid, cheek, lip and jaw geometry. Preserve clean occlusion, anatomical attachments and clean silhouettes from front, three-quarter and profile views. Provide selectable facial features, source-backed explanatory labels, a seekable timeline and a guided camera that yields immediately to manual orbit. Raise the inner eyebrows while the outer brows relax. Turn the mouth corners slightly downward, soften the eyelids and lower the chin just enough to support a tender, restrained acting pose.",
+      "prompt": "Use the shared licensed CC0 MakeHuman-derived skinned character as the foundation. Choose one original adult female identity with a delicate jaw, softly rounded cheeks, refined nose, full lips, natural eyelid geometry, expressive blue eyes and blonde hair. Use the same face, body proportions, rig and neutral anatomical bodysuit in MUSE and FORM. Retain continuous shoulders, torso, limbs, hands and feet for the Full body view. Preserve the charcoal background, serif interface, mint region overlays and soft studio lighting. Animate the face with the official CC0 facial targets transferred onto the original topology; carry brows, lashes, lips, oral surfaces, teeth and tongue with their corresponding deformations. Keep each animation exactly five seconds with one shared neutral pose, readable preparation, a held expression and smooth recovery. Inspect front, profile and three-quarter views. Selected brow, eye, cheek, mouth, jaw, Pectoralis, Back and Pelvis regions must conform to the evaluated body surface with attached labels. Manual orbit interrupts the guided camera. Raise the inner eyebrows while the outer brows relax. Turn the mouth corners slightly downward, soften the eyelids and lower the chin just enough to support a tender, restrained acting pose.",
+      "method": "Licensed CC0 skinned GLB with one locally selected adult identity; 52 official MakeHuman facial units transferred by source-vertex correspondence with accessory bindings and normal deltas; coordinated authored morph weights and small skeletal head gestures. No generated portrait is used as a flat image plane.",
       "beats": [
         {
           "time": 0,
           "label": "Presence",
-          "description": "A quiet neutral portrait establishes the same identity across every expression."
+          "description": "The same adult character begins in a relaxed neutral pose."
         },
         {
           "time": 0.52,
           "label": "Gather",
-          "description": "The first changes begin around the eyes and mouth, with the surrounding face following."
+          "description": "The brows and eyelids begin the action; the cheeks and mouth follow."
         },
         {
           "time": 2.08,
           "label": "Feel",
-          "description": "The inner brows rise and draw together; the mouth corners fall and the gaze softens."
+          "description": "The inner brows lift, the mouth corners turn down and the chin lowers gently."
         },
         {
           "time": 2.9,
           "label": "Release",
-          "description": "The features recover together without changing the identity or resetting abruptly."
+          "description": "The expression eases back through the same attached facial surfaces."
         },
         {
           "time": 4.65,
           "label": "Rest",
-          "description": "The original neutral pose returns and holds through the matching five-second endpoint."
+          "description": "The shared neutral geometry returns and holds through the matching five-second endpoint."
         }
       ],
       "parts": [
         {
           "id": "brow",
           "name": "Brow & forehead",
-          "description": "The brows rise, lower and change their medial angle. These surface gestures suggest the action of the forehead and brow region; they are authored expression poses."
+          "description": "The brows lift, lower and draw toward the bridge. The skin and attached brow hairs follow the same sculpted expression targets."
         },
         {
           "id": "eyes",
           "name": "Eyelids & gaze",
-          "description": "Upper and lower lid margins change the visible aperture around the eyes. A closed lid covers the iris; the eyeball itself does not shrink."
+          "description": "The lids move over full eyeballs. Closing a lid covers the iris; the lashes follow the lid margin without shrinking the eye."
         },
         {
           "id": "cheeks",
           "name": "Cheek region",
-          "description": "The cheeks rise toward the lower lids in a smile and join the upper lip in a nose-wrinkle gesture. The portrait shows surface motion, not isolated internal muscles."
+          "description": "The cheek surface rises toward the lower lids and joins the mouth corners in a smile. These are authored surface motions, not measured muscle activation."
         },
         {
           "id": "mouth",
           "name": "Lips & mouth corners",
-          "description": "The corners lift, lower, stretch or draw inward. Lip contours remain attached to the surrounding face as the opening changes."
+          "description": "The lips lift, press, narrow or part together with the surrounding face. The mouth interior, teeth and tongue remain attached to their sculpted geometry."
         },
         {
           "id": "jaw",
           "name": "Jaw & chin",
-          "description": "An authored jaw release lowers the chin and lower lip together. The lower face returns to the same neutral geometry at the end of the five-second cycle."
+          "description": "The lower face releases beneath the upper jaw, carrying the lower teeth and tongue. A restrained range preserves the chin and lip silhouette in profile."
+        },
+        {
+          "id": "chest",
+          "name": "Pectoralis region",
+          "description": "A surface overlay indicates the upper chest beneath the anatomical bodysuit. The continuous shoulders and clavicles connect the torso to the arms."
+        },
+        {
+          "id": "back",
+          "name": "Back",
+          "description": "The posterior trunk joins the shoulders, waist and pelvis. Hair fades while you inspect this region so the true back surface is visible; the highlight and label follow the same skinned surface during rotation."
+        },
+        {
+          "id": "pelvis",
+          "name": "Pelvis",
+          "description": "The pelvic region connects the waist and hips to the thighs. The mint highlight marks the covered surface rather than exposed internal anatomy."
         }
       ]
     },
@@ -140,61 +176,78 @@
       "title": "Contained anger",
       "duration": 5,
       "view": "index.html#anger",
-      "source": "face.mjs",
+      "source": "character-face.mjs",
+      "model": "../three/character/assets/adult-female-source.glb",
       "svgReferenceID": "105198",
-      "prompt": "Use the two supplied front/profile portrait references as the primary appearance guide. Create an original adult brunette woman as a native Three.js portrait, with a softly tapered oval face, rounded chin, refined nasal bridge and alae, volumetric rose lips, structured ears and a natural neck. Keep the eyes proportional to the face, with hazel irises, attached eyelid rims, curved lashes and natural brows. Give the swept brunette hair a continuous silhouette, gathered low bun, coherent fine strands and a few face-framing tendrils. Use warm skin with restrained regional color variation and microtexture, soft studio reflections, refined highlights and a green crewneck. Keep the same identity across every expression. Animate exactly five seconds: neutral, preparation, a readable expression, a short hold, recovery and the identical neutral endpoint. Coordinate brow, eyelid, cheek, lip and jaw geometry. Preserve clean occlusion, anatomical attachments and clean silhouettes from front, three-quarter and profile views. Provide selectable facial features, source-backed explanatory labels, a seekable timeline and a guided camera that yields immediately to manual orbit. Draw the eyebrows down and inward, narrow the eyelid openings and press the lips. Preserve a composed face with readable tension, avoiding grotesque distortion or detached brow shapes.",
+      "prompt": "Use the shared licensed CC0 MakeHuman-derived skinned character as the foundation. Choose one original adult female identity with a delicate jaw, softly rounded cheeks, refined nose, full lips, natural eyelid geometry, expressive blue eyes and blonde hair. Use the same face, body proportions, rig and neutral anatomical bodysuit in MUSE and FORM. Retain continuous shoulders, torso, limbs, hands and feet for the Full body view. Preserve the charcoal background, serif interface, mint region overlays and soft studio lighting. Animate the face with the official CC0 facial targets transferred onto the original topology; carry brows, lashes, lips, oral surfaces, teeth and tongue with their corresponding deformations. Keep each animation exactly five seconds with one shared neutral pose, readable preparation, a held expression and smooth recovery. Inspect front, profile and three-quarter views. Selected brow, eye, cheek, mouth, jaw, Pectoralis, Back and Pelvis regions must conform to the evaluated body surface with attached labels. Manual orbit interrupts the guided camera. Draw the eyebrows down and inward, narrow the eyelid openings and press the lips. Preserve a composed face with readable tension, avoiding grotesque distortion or detached brow shapes.",
+      "method": "Licensed CC0 skinned GLB with one locally selected adult identity; 52 official MakeHuman facial units transferred by source-vertex correspondence with accessory bindings and normal deltas; coordinated authored morph weights and small skeletal head gestures. No generated portrait is used as a flat image plane.",
       "beats": [
         {
           "time": 0,
           "label": "Presence",
-          "description": "A quiet neutral portrait establishes the same identity across every expression."
+          "description": "The same adult character begins in a relaxed neutral pose."
         },
         {
           "time": 0.52,
           "label": "Gather",
-          "description": "The first changes begin around the eyes and mouth, with the surrounding face following."
+          "description": "The brows and eyelids begin the action; the cheeks and mouth follow."
         },
         {
           "time": 2.08,
           "label": "Focus",
-          "description": "The inner brows draw down toward the bridge; the lids narrow and the lips press together."
+          "description": "The brows draw inward, the lids narrow and the lips press together in a controlled acting pose."
         },
         {
           "time": 2.9,
           "label": "Release",
-          "description": "The features recover together without changing the identity or resetting abruptly."
+          "description": "The expression eases back through the same attached facial surfaces."
         },
         {
           "time": 4.65,
           "label": "Rest",
-          "description": "The original neutral pose returns and holds through the matching five-second endpoint."
+          "description": "The shared neutral geometry returns and holds through the matching five-second endpoint."
         }
       ],
       "parts": [
         {
           "id": "brow",
           "name": "Brow & forehead",
-          "description": "The brows rise, lower and change their medial angle. These surface gestures suggest the action of the forehead and brow region; they are authored expression poses."
+          "description": "The brows lift, lower and draw toward the bridge. The skin and attached brow hairs follow the same sculpted expression targets."
         },
         {
           "id": "eyes",
           "name": "Eyelids & gaze",
-          "description": "Upper and lower lid margins change the visible aperture around the eyes. A closed lid covers the iris; the eyeball itself does not shrink."
+          "description": "The lids move over full eyeballs. Closing a lid covers the iris; the lashes follow the lid margin without shrinking the eye."
         },
         {
           "id": "cheeks",
           "name": "Cheek region",
-          "description": "The cheeks rise toward the lower lids in a smile and join the upper lip in a nose-wrinkle gesture. The portrait shows surface motion, not isolated internal muscles."
+          "description": "The cheek surface rises toward the lower lids and joins the mouth corners in a smile. These are authored surface motions, not measured muscle activation."
         },
         {
           "id": "mouth",
           "name": "Lips & mouth corners",
-          "description": "The corners lift, lower, stretch or draw inward. Lip contours remain attached to the surrounding face as the opening changes."
+          "description": "The lips lift, press, narrow or part together with the surrounding face. The mouth interior, teeth and tongue remain attached to their sculpted geometry."
         },
         {
           "id": "jaw",
           "name": "Jaw & chin",
-          "description": "An authored jaw release lowers the chin and lower lip together. The lower face returns to the same neutral geometry at the end of the five-second cycle."
+          "description": "The lower face releases beneath the upper jaw, carrying the lower teeth and tongue. A restrained range preserves the chin and lip silhouette in profile."
+        },
+        {
+          "id": "chest",
+          "name": "Pectoralis region",
+          "description": "A surface overlay indicates the upper chest beneath the anatomical bodysuit. The continuous shoulders and clavicles connect the torso to the arms."
+        },
+        {
+          "id": "back",
+          "name": "Back",
+          "description": "The posterior trunk joins the shoulders, waist and pelvis. Hair fades while you inspect this region so the true back surface is visible; the highlight and label follow the same skinned surface during rotation."
+        },
+        {
+          "id": "pelvis",
+          "name": "Pelvis",
+          "description": "The pelvic region connects the waist and hips to the thighs. The mint highlight marks the covered surface rather than exposed internal anatomy."
         }
       ]
     },
@@ -203,61 +256,78 @@
       "title": "A moment of fear",
       "duration": 5,
       "view": "index.html#fear",
-      "source": "face.mjs",
+      "source": "character-face.mjs",
+      "model": "../three/character/assets/adult-female-source.glb",
       "svgReferenceID": "105199",
-      "prompt": "Use the two supplied front/profile portrait references as the primary appearance guide. Create an original adult brunette woman as a native Three.js portrait, with a softly tapered oval face, rounded chin, refined nasal bridge and alae, volumetric rose lips, structured ears and a natural neck. Keep the eyes proportional to the face, with hazel irises, attached eyelid rims, curved lashes and natural brows. Give the swept brunette hair a continuous silhouette, gathered low bun, coherent fine strands and a few face-framing tendrils. Use warm skin with restrained regional color variation and microtexture, soft studio reflections, refined highlights and a green crewneck. Keep the same identity across every expression. Animate exactly five seconds: neutral, preparation, a readable expression, a short hold, recovery and the identical neutral endpoint. Coordinate brow, eyelid, cheek, lip and jaw geometry. Preserve clean occlusion, anatomical attachments and clean silhouettes from front, three-quarter and profile views. Provide selectable facial features, source-backed explanatory labels, a seekable timeline and a guided camera that yields immediately to manual orbit. Raise and draw together the brows, widen the eyes, stretch the mouth corners slightly sideways and part the lips with a small jaw release. Coordinate the features so this differs clearly from surprise.",
+      "prompt": "Use the shared licensed CC0 MakeHuman-derived skinned character as the foundation. Choose one original adult female identity with a delicate jaw, softly rounded cheeks, refined nose, full lips, natural eyelid geometry, expressive blue eyes and blonde hair. Use the same face, body proportions, rig and neutral anatomical bodysuit in MUSE and FORM. Retain continuous shoulders, torso, limbs, hands and feet for the Full body view. Preserve the charcoal background, serif interface, mint region overlays and soft studio lighting. Animate the face with the official CC0 facial targets transferred onto the original topology; carry brows, lashes, lips, oral surfaces, teeth and tongue with their corresponding deformations. Keep each animation exactly five seconds with one shared neutral pose, readable preparation, a held expression and smooth recovery. Inspect front, profile and three-quarter views. Selected brow, eye, cheek, mouth, jaw, Pectoralis, Back and Pelvis regions must conform to the evaluated body surface with attached labels. Manual orbit interrupts the guided camera. Raise and draw together the brows, widen the eyes, stretch the mouth corners slightly sideways and part the lips with a small jaw release. Coordinate the features so this differs clearly from surprise.",
+      "method": "Licensed CC0 skinned GLB with one locally selected adult identity; 52 official MakeHuman facial units transferred by source-vertex correspondence with accessory bindings and normal deltas; coordinated authored morph weights and small skeletal head gestures. No generated portrait is used as a flat image plane.",
       "beats": [
         {
           "time": 0,
           "label": "Presence",
-          "description": "A quiet neutral portrait establishes the same identity across every expression."
+          "description": "The same adult character begins in a relaxed neutral pose."
         },
         {
           "time": 0.52,
           "label": "Gather",
-          "description": "The first changes begin around the eyes and mouth, with the surrounding face following."
+          "description": "The brows and eyelids begin the action; the cheeks and mouth follow."
         },
         {
           "time": 2.08,
           "label": "Startle",
-          "description": "Raised inner brows and widened eyes accompany a stretched, slightly open mouth."
+          "description": "The inner brows rise with widened eyes and a small, laterally stretched mouth opening."
         },
         {
           "time": 2.9,
           "label": "Release",
-          "description": "The features recover together without changing the identity or resetting abruptly."
+          "description": "The expression eases back through the same attached facial surfaces."
         },
         {
           "time": 4.65,
           "label": "Rest",
-          "description": "The original neutral pose returns and holds through the matching five-second endpoint."
+          "description": "The shared neutral geometry returns and holds through the matching five-second endpoint."
         }
       ],
       "parts": [
         {
           "id": "brow",
           "name": "Brow & forehead",
-          "description": "The brows rise, lower and change their medial angle. These surface gestures suggest the action of the forehead and brow region; they are authored expression poses."
+          "description": "The brows lift, lower and draw toward the bridge. The skin and attached brow hairs follow the same sculpted expression targets."
         },
         {
           "id": "eyes",
           "name": "Eyelids & gaze",
-          "description": "Upper and lower lid margins change the visible aperture around the eyes. A closed lid covers the iris; the eyeball itself does not shrink."
+          "description": "The lids move over full eyeballs. Closing a lid covers the iris; the lashes follow the lid margin without shrinking the eye."
         },
         {
           "id": "cheeks",
           "name": "Cheek region",
-          "description": "The cheeks rise toward the lower lids in a smile and join the upper lip in a nose-wrinkle gesture. The portrait shows surface motion, not isolated internal muscles."
+          "description": "The cheek surface rises toward the lower lids and joins the mouth corners in a smile. These are authored surface motions, not measured muscle activation."
         },
         {
           "id": "mouth",
           "name": "Lips & mouth corners",
-          "description": "The corners lift, lower, stretch or draw inward. Lip contours remain attached to the surrounding face as the opening changes."
+          "description": "The lips lift, press, narrow or part together with the surrounding face. The mouth interior, teeth and tongue remain attached to their sculpted geometry."
         },
         {
           "id": "jaw",
           "name": "Jaw & chin",
-          "description": "An authored jaw release lowers the chin and lower lip together. The lower face returns to the same neutral geometry at the end of the five-second cycle."
+          "description": "The lower face releases beneath the upper jaw, carrying the lower teeth and tongue. A restrained range preserves the chin and lip silhouette in profile."
+        },
+        {
+          "id": "chest",
+          "name": "Pectoralis region",
+          "description": "A surface overlay indicates the upper chest beneath the anatomical bodysuit. The continuous shoulders and clavicles connect the torso to the arms."
+        },
+        {
+          "id": "back",
+          "name": "Back",
+          "description": "The posterior trunk joins the shoulders, waist and pelvis. Hair fades while you inspect this region so the true back surface is visible; the highlight and label follow the same skinned surface during rotation."
+        },
+        {
+          "id": "pelvis",
+          "name": "Pelvis",
+          "description": "The pelvic region connects the waist and hips to the thighs. The mint highlight marks the covered surface rather than exposed internal anatomy."
         }
       ]
     },
@@ -266,61 +336,78 @@
       "title": "Open wonder",
       "duration": 5,
       "view": "index.html#surprise",
-      "source": "face.mjs",
+      "source": "character-face.mjs",
+      "model": "../three/character/assets/adult-female-source.glb",
       "svgReferenceID": "105200",
-      "prompt": "Use the two supplied front/profile portrait references as the primary appearance guide. Create an original adult brunette woman as a native Three.js portrait, with a softly tapered oval face, rounded chin, refined nasal bridge and alae, volumetric rose lips, structured ears and a natural neck. Keep the eyes proportional to the face, with hazel irises, attached eyelid rims, curved lashes and natural brows. Give the swept brunette hair a continuous silhouette, gathered low bun, coherent fine strands and a few face-framing tendrils. Use warm skin with restrained regional color variation and microtexture, soft studio reflections, refined highlights and a green crewneck. Keep the same identity across every expression. Animate exactly five seconds: neutral, preparation, a readable expression, a short hold, recovery and the identical neutral endpoint. Coordinate brow, eyelid, cheek, lip and jaw geometry. Preserve clean occlusion, anatomical attachments and clean silhouettes from front, three-quarter and profile views. Provide selectable facial features, source-backed explanatory labels, a seekable timeline and a guided camera that yields immediately to manual orbit. Lift both brows, open both eyelid apertures and lower the jaw into a rounded mouth opening. Maintain a convincing mouth cavity and attached lip, chin and cheek surfaces through the strongest pose.",
+      "prompt": "Use the shared licensed CC0 MakeHuman-derived skinned character as the foundation. Choose one original adult female identity with a delicate jaw, softly rounded cheeks, refined nose, full lips, natural eyelid geometry, expressive blue eyes and blonde hair. Use the same face, body proportions, rig and neutral anatomical bodysuit in MUSE and FORM. Retain continuous shoulders, torso, limbs, hands and feet for the Full body view. Preserve the charcoal background, serif interface, mint region overlays and soft studio lighting. Animate the face with the official CC0 facial targets transferred onto the original topology; carry brows, lashes, lips, oral surfaces, teeth and tongue with their corresponding deformations. Keep each animation exactly five seconds with one shared neutral pose, readable preparation, a held expression and smooth recovery. Inspect front, profile and three-quarter views. Selected brow, eye, cheek, mouth, jaw, Pectoralis, Back and Pelvis regions must conform to the evaluated body surface with attached labels. Manual orbit interrupts the guided camera. Lift both brows, open both eyelid apertures and lower the jaw into a rounded mouth opening. Maintain a convincing mouth cavity and attached lip, chin and cheek surfaces through the strongest pose.",
+      "method": "Licensed CC0 skinned GLB with one locally selected adult identity; 52 official MakeHuman facial units transferred by source-vertex correspondence with accessory bindings and normal deltas; coordinated authored morph weights and small skeletal head gestures. No generated portrait is used as a flat image plane.",
       "beats": [
         {
           "time": 0,
           "label": "Presence",
-          "description": "A quiet neutral portrait establishes the same identity across every expression."
+          "description": "The same adult character begins in a relaxed neutral pose."
         },
         {
           "time": 0.52,
           "label": "Gather",
-          "description": "The first changes begin around the eyes and mouth, with the surrounding face following."
+          "description": "The brows and eyelids begin the action; the cheeks and mouth follow."
         },
         {
           "time": 2.08,
           "label": "Wonder",
-          "description": "Both brows lift, the upper lids rise and the jaw opens beneath a rounded mouth."
+          "description": "Both brows lift, the eyelids open and the lips round around a modest jaw release."
         },
         {
           "time": 2.9,
           "label": "Release",
-          "description": "The features recover together without changing the identity or resetting abruptly."
+          "description": "The expression eases back through the same attached facial surfaces."
         },
         {
           "time": 4.65,
           "label": "Rest",
-          "description": "The original neutral pose returns and holds through the matching five-second endpoint."
+          "description": "The shared neutral geometry returns and holds through the matching five-second endpoint."
         }
       ],
       "parts": [
         {
           "id": "brow",
           "name": "Brow & forehead",
-          "description": "The brows rise, lower and change their medial angle. These surface gestures suggest the action of the forehead and brow region; they are authored expression poses."
+          "description": "The brows lift, lower and draw toward the bridge. The skin and attached brow hairs follow the same sculpted expression targets."
         },
         {
           "id": "eyes",
           "name": "Eyelids & gaze",
-          "description": "Upper and lower lid margins change the visible aperture around the eyes. A closed lid covers the iris; the eyeball itself does not shrink."
+          "description": "The lids move over full eyeballs. Closing a lid covers the iris; the lashes follow the lid margin without shrinking the eye."
         },
         {
           "id": "cheeks",
           "name": "Cheek region",
-          "description": "The cheeks rise toward the lower lids in a smile and join the upper lip in a nose-wrinkle gesture. The portrait shows surface motion, not isolated internal muscles."
+          "description": "The cheek surface rises toward the lower lids and joins the mouth corners in a smile. These are authored surface motions, not measured muscle activation."
         },
         {
           "id": "mouth",
           "name": "Lips & mouth corners",
-          "description": "The corners lift, lower, stretch or draw inward. Lip contours remain attached to the surrounding face as the opening changes."
+          "description": "The lips lift, press, narrow or part together with the surrounding face. The mouth interior, teeth and tongue remain attached to their sculpted geometry."
         },
         {
           "id": "jaw",
           "name": "Jaw & chin",
-          "description": "An authored jaw release lowers the chin and lower lip together. The lower face returns to the same neutral geometry at the end of the five-second cycle."
+          "description": "The lower face releases beneath the upper jaw, carrying the lower teeth and tongue. A restrained range preserves the chin and lip silhouette in profile."
+        },
+        {
+          "id": "chest",
+          "name": "Pectoralis region",
+          "description": "A surface overlay indicates the upper chest beneath the anatomical bodysuit. The continuous shoulders and clavicles connect the torso to the arms."
+        },
+        {
+          "id": "back",
+          "name": "Back",
+          "description": "The posterior trunk joins the shoulders, waist and pelvis. Hair fades while you inspect this region so the true back surface is visible; the highlight and label follow the same skinned surface during rotation."
+        },
+        {
+          "id": "pelvis",
+          "name": "Pelvis",
+          "description": "The pelvic region connects the waist and hips to the thighs. The mint highlight marks the covered surface rather than exposed internal anatomy."
         }
       ]
     },
@@ -329,61 +416,78 @@
       "title": "A passing distaste",
       "duration": 5,
       "view": "index.html#disgust",
-      "source": "face.mjs",
+      "source": "character-face.mjs",
+      "model": "../three/character/assets/adult-female-source.glb",
       "svgReferenceID": null,
-      "prompt": "Use the two supplied front/profile portrait references as the primary appearance guide. Create an original adult brunette woman as a native Three.js portrait, with a softly tapered oval face, rounded chin, refined nasal bridge and alae, volumetric rose lips, structured ears and a natural neck. Keep the eyes proportional to the face, with hazel irises, attached eyelid rims, curved lashes and natural brows. Give the swept brunette hair a continuous silhouette, gathered low bun, coherent fine strands and a few face-framing tendrils. Use warm skin with restrained regional color variation and microtexture, soft studio reflections, refined highlights and a green crewneck. Keep the same identity across every expression. Animate exactly five seconds: neutral, preparation, a readable expression, a short hold, recovery and the identical neutral endpoint. Coordinate brow, eyelid, cheek, lip and jaw geometry. Preserve clean occlusion, anatomical attachments and clean silhouettes from front, three-quarter and profile views. Provide selectable facial features, source-backed explanatory labels, a seekable timeline and a guided camera that yields immediately to manual orbit. Lift the upper lip asymmetrically, tighten the nose and lower brow region, and gently narrow the eyes. Use a fleeting, restrained recoil with a coherent nasal and cheek surface.",
+      "prompt": "Use the shared licensed CC0 MakeHuman-derived skinned character as the foundation. Choose one original adult female identity with a delicate jaw, softly rounded cheeks, refined nose, full lips, natural eyelid geometry, expressive blue eyes and blonde hair. Use the same face, body proportions, rig and neutral anatomical bodysuit in MUSE and FORM. Retain continuous shoulders, torso, limbs, hands and feet for the Full body view. Preserve the charcoal background, serif interface, mint region overlays and soft studio lighting. Animate the face with the official CC0 facial targets transferred onto the original topology; carry brows, lashes, lips, oral surfaces, teeth and tongue with their corresponding deformations. Keep each animation exactly five seconds with one shared neutral pose, readable preparation, a held expression and smooth recovery. Inspect front, profile and three-quarter views. Selected brow, eye, cheek, mouth, jaw, Pectoralis, Back and Pelvis regions must conform to the evaluated body surface with attached labels. Manual orbit interrupts the guided camera. Lift the upper lip asymmetrically, tighten the nose and lower brow region, and gently narrow the eyes. Use a fleeting, restrained recoil with a coherent nasal and cheek surface.",
+      "method": "Licensed CC0 skinned GLB with one locally selected adult identity; 52 official MakeHuman facial units transferred by source-vertex correspondence with accessory bindings and normal deltas; coordinated authored morph weights and small skeletal head gestures. No generated portrait is used as a flat image plane.",
       "beats": [
         {
           "time": 0,
           "label": "Presence",
-          "description": "A quiet neutral portrait establishes the same identity across every expression."
+          "description": "The same adult character begins in a relaxed neutral pose."
         },
         {
           "time": 0.52,
           "label": "Gather",
-          "description": "The first changes begin around the eyes and mouth, with the surrounding face following."
+          "description": "The brows and eyelids begin the action; the cheeks and mouth follow."
         },
         {
           "time": 2.08,
           "label": "Recoil",
-          "description": "The upper lip rises asymmetrically and the nose wings lift; the eyes narrow with the cheek."
+          "description": "One side of the upper lip rises with the nose while the brows and eyes tighten briefly."
         },
         {
           "time": 2.9,
           "label": "Release",
-          "description": "The features recover together without changing the identity or resetting abruptly."
+          "description": "The expression eases back through the same attached facial surfaces."
         },
         {
           "time": 4.65,
           "label": "Rest",
-          "description": "The original neutral pose returns and holds through the matching five-second endpoint."
+          "description": "The shared neutral geometry returns and holds through the matching five-second endpoint."
         }
       ],
       "parts": [
         {
           "id": "brow",
           "name": "Brow & forehead",
-          "description": "The brows rise, lower and change their medial angle. These surface gestures suggest the action of the forehead and brow region; they are authored expression poses."
+          "description": "The brows lift, lower and draw toward the bridge. The skin and attached brow hairs follow the same sculpted expression targets."
         },
         {
           "id": "eyes",
           "name": "Eyelids & gaze",
-          "description": "Upper and lower lid margins change the visible aperture around the eyes. A closed lid covers the iris; the eyeball itself does not shrink."
+          "description": "The lids move over full eyeballs. Closing a lid covers the iris; the lashes follow the lid margin without shrinking the eye."
         },
         {
           "id": "cheeks",
           "name": "Cheek region",
-          "description": "The cheeks rise toward the lower lids in a smile and join the upper lip in a nose-wrinkle gesture. The portrait shows surface motion, not isolated internal muscles."
+          "description": "The cheek surface rises toward the lower lids and joins the mouth corners in a smile. These are authored surface motions, not measured muscle activation."
         },
         {
           "id": "mouth",
           "name": "Lips & mouth corners",
-          "description": "The corners lift, lower, stretch or draw inward. Lip contours remain attached to the surrounding face as the opening changes."
+          "description": "The lips lift, press, narrow or part together with the surrounding face. The mouth interior, teeth and tongue remain attached to their sculpted geometry."
         },
         {
           "id": "jaw",
           "name": "Jaw & chin",
-          "description": "An authored jaw release lowers the chin and lower lip together. The lower face returns to the same neutral geometry at the end of the five-second cycle."
+          "description": "The lower face releases beneath the upper jaw, carrying the lower teeth and tongue. A restrained range preserves the chin and lip silhouette in profile."
+        },
+        {
+          "id": "chest",
+          "name": "Pectoralis region",
+          "description": "A surface overlay indicates the upper chest beneath the anatomical bodysuit. The continuous shoulders and clavicles connect the torso to the arms."
+        },
+        {
+          "id": "back",
+          "name": "Back",
+          "description": "The posterior trunk joins the shoulders, waist and pelvis. Hair fades while you inspect this region so the true back surface is visible; the highlight and label follow the same skinned surface during rotation."
+        },
+        {
+          "id": "pelvis",
+          "name": "Pelvis",
+          "description": "The pelvic region connects the waist and hips to the thighs. The mint highlight marks the covered surface rather than exposed internal anatomy."
         }
       ]
     },
@@ -392,61 +496,78 @@
       "title": "A knowing wink",
       "duration": 5,
       "view": "index.html#wink",
-      "source": "face.mjs",
+      "source": "character-face.mjs",
+      "model": "../three/character/assets/adult-female-source.glb",
       "svgReferenceID": "105203",
-      "prompt": "Use the two supplied front/profile portrait references as the primary appearance guide. Create an original adult brunette woman as a native Three.js portrait, with a softly tapered oval face, rounded chin, refined nasal bridge and alae, volumetric rose lips, structured ears and a natural neck. Keep the eyes proportional to the face, with hazel irises, attached eyelid rims, curved lashes and natural brows. Give the swept brunette hair a continuous silhouette, gathered low bun, coherent fine strands and a few face-framing tendrils. Use warm skin with restrained regional color variation and microtexture, soft studio reflections, refined highlights and a green crewneck. Keep the same identity across every expression. Animate exactly five seconds: neutral, preparation, a readable expression, a short hold, recovery and the identical neutral endpoint. Coordinate brow, eyelid, cheek, lip and jaw geometry. Preserve clean occlusion, anatomical attachments and clean silhouettes from front, three-quarter and profile views. Provide selectable facial features, source-backed explanatory labels, a seekable timeline and a guided camera that yields immediately to manual orbit. Close one eyelid aperture fully, hide the iris behind the lid, lift the same cheek and add a small asymmetric smile. Keep the opposite eye open; reopen the closed eye smoothly before recovering neutral.",
+      "prompt": "Use the shared licensed CC0 MakeHuman-derived skinned character as the foundation. Choose one original adult female identity with a delicate jaw, softly rounded cheeks, refined nose, full lips, natural eyelid geometry, expressive blue eyes and blonde hair. Use the same face, body proportions, rig and neutral anatomical bodysuit in MUSE and FORM. Retain continuous shoulders, torso, limbs, hands and feet for the Full body view. Preserve the charcoal background, serif interface, mint region overlays and soft studio lighting. Animate the face with the official CC0 facial targets transferred onto the original topology; carry brows, lashes, lips, oral surfaces, teeth and tongue with their corresponding deformations. Keep each animation exactly five seconds with one shared neutral pose, readable preparation, a held expression and smooth recovery. Inspect front, profile and three-quarter views. Selected brow, eye, cheek, mouth, jaw, Pectoralis, Back and Pelvis regions must conform to the evaluated body surface with attached labels. Manual orbit interrupts the guided camera. Close one eyelid aperture fully, hide the iris behind the lid, lift the same cheek and add a small asymmetric smile. Keep the opposite eye open; reopen the closed eye smoothly before recovering neutral.",
+      "method": "Licensed CC0 skinned GLB with one locally selected adult identity; 52 official MakeHuman facial units transferred by source-vertex correspondence with accessory bindings and normal deltas; coordinated authored morph weights and small skeletal head gestures. No generated portrait is used as a flat image plane.",
       "beats": [
         {
           "time": 0,
           "label": "Presence",
-          "description": "A quiet neutral portrait establishes the same identity across every expression."
+          "description": "The same adult character begins in a relaxed neutral pose."
         },
         {
           "time": 0.52,
           "label": "Gather",
-          "description": "The first changes begin around the eyes and mouth, with the surrounding face following."
+          "description": "The brows and eyelids begin the action; the cheeks and mouth follow."
         },
         {
           "time": 2.08,
           "label": "Wink",
-          "description": "One aperture closes fully over its iris. The same cheek lifts into a small asymmetric smile."
+          "description": "The viewer-left eye closes fully. Its cheek lifts into a half smile while the opposite eye stays open."
         },
         {
           "time": 2.9,
           "label": "Release",
-          "description": "The features recover together without changing the identity or resetting abruptly."
+          "description": "The expression eases back through the same attached facial surfaces."
         },
         {
           "time": 4.65,
           "label": "Rest",
-          "description": "The original neutral pose returns and holds through the matching five-second endpoint."
+          "description": "The shared neutral geometry returns and holds through the matching five-second endpoint."
         }
       ],
       "parts": [
         {
           "id": "brow",
           "name": "Brow & forehead",
-          "description": "The brows rise, lower and change their medial angle. These surface gestures suggest the action of the forehead and brow region; they are authored expression poses."
+          "description": "The brows lift, lower and draw toward the bridge. The skin and attached brow hairs follow the same sculpted expression targets."
         },
         {
           "id": "eyes",
           "name": "Eyelids & gaze",
-          "description": "Upper and lower lid margins change the visible aperture around the eyes. A closed lid covers the iris; the eyeball itself does not shrink."
+          "description": "The lids move over full eyeballs. Closing a lid covers the iris; the lashes follow the lid margin without shrinking the eye."
         },
         {
           "id": "cheeks",
           "name": "Cheek region",
-          "description": "The cheeks rise toward the lower lids in a smile and join the upper lip in a nose-wrinkle gesture. The portrait shows surface motion, not isolated internal muscles."
+          "description": "The cheek surface rises toward the lower lids and joins the mouth corners in a smile. These are authored surface motions, not measured muscle activation."
         },
         {
           "id": "mouth",
           "name": "Lips & mouth corners",
-          "description": "The corners lift, lower, stretch or draw inward. Lip contours remain attached to the surrounding face as the opening changes."
+          "description": "The lips lift, press, narrow or part together with the surrounding face. The mouth interior, teeth and tongue remain attached to their sculpted geometry."
         },
         {
           "id": "jaw",
           "name": "Jaw & chin",
-          "description": "An authored jaw release lowers the chin and lower lip together. The lower face returns to the same neutral geometry at the end of the five-second cycle."
+          "description": "The lower face releases beneath the upper jaw, carrying the lower teeth and tongue. A restrained range preserves the chin and lip silhouette in profile."
+        },
+        {
+          "id": "chest",
+          "name": "Pectoralis region",
+          "description": "A surface overlay indicates the upper chest beneath the anatomical bodysuit. The continuous shoulders and clavicles connect the torso to the arms."
+        },
+        {
+          "id": "back",
+          "name": "Back",
+          "description": "The posterior trunk joins the shoulders, waist and pelvis. Hair fades while you inspect this region so the true back surface is visible; the highlight and label follow the same skinned surface during rotation."
+        },
+        {
+          "id": "pelvis",
+          "name": "Pelvis",
+          "description": "The pelvic region connects the waist and hips to the thighs. The mint highlight marks the covered surface rather than exposed internal anatomy."
         }
       ]
     },
@@ -455,61 +576,78 @@
       "title": "Uncontained delight",
       "duration": 5,
       "view": "index.html#laughter",
-      "source": "face.mjs",
+      "source": "character-face.mjs",
+      "model": "../three/character/assets/adult-female-source.glb",
       "svgReferenceID": "105202",
-      "prompt": "Use the two supplied front/profile portrait references as the primary appearance guide. Create an original adult brunette woman as a native Three.js portrait, with a softly tapered oval face, rounded chin, refined nasal bridge and alae, volumetric rose lips, structured ears and a natural neck. Keep the eyes proportional to the face, with hazel irises, attached eyelid rims, curved lashes and natural brows. Give the swept brunette hair a continuous silhouette, gathered low bun, coherent fine strands and a few face-framing tendrils. Use warm skin with restrained regional color variation and microtexture, soft studio reflections, refined highlights and a green crewneck. Keep the same identity across every expression. Animate exactly five seconds: neutral, preparation, a readable expression, a short hold, recovery and the identical neutral endpoint. Coordinate brow, eyelid, cheek, lip and jaw geometry. Preserve clean occlusion, anatomical attachments and clean silhouettes from front, three-quarter and profile views. Provide selectable facial features, source-backed explanatory labels, a seekable timeline and a guided camera that yields immediately to manual orbit. Open a broad smile with raised cheeks, softened eyes and a visible jaw release. Add a restrained head lift. Make the mouth and lips remain convincing from the profile camera, and return to the shared neutral portrait.",
+      "prompt": "Use the shared licensed CC0 MakeHuman-derived skinned character as the foundation. Choose one original adult female identity with a delicate jaw, softly rounded cheeks, refined nose, full lips, natural eyelid geometry, expressive blue eyes and blonde hair. Use the same face, body proportions, rig and neutral anatomical bodysuit in MUSE and FORM. Retain continuous shoulders, torso, limbs, hands and feet for the Full body view. Preserve the charcoal background, serif interface, mint region overlays and soft studio lighting. Animate the face with the official CC0 facial targets transferred onto the original topology; carry brows, lashes, lips, oral surfaces, teeth and tongue with their corresponding deformations. Keep each animation exactly five seconds with one shared neutral pose, readable preparation, a held expression and smooth recovery. Inspect front, profile and three-quarter views. Selected brow, eye, cheek, mouth, jaw, Pectoralis, Back and Pelvis regions must conform to the evaluated body surface with attached labels. Manual orbit interrupts the guided camera. Open a broad smile with raised cheeks, softened eyes and a visible jaw release. Add a restrained head lift. Make the mouth and lips remain convincing from the profile camera, and return to the shared neutral portrait.",
+      "method": "Licensed CC0 skinned GLB with one locally selected adult identity; 52 official MakeHuman facial units transferred by source-vertex correspondence with accessory bindings and normal deltas; coordinated authored morph weights and small skeletal head gestures. No generated portrait is used as a flat image plane.",
       "beats": [
         {
           "time": 0,
           "label": "Presence",
-          "description": "A quiet neutral portrait establishes the same identity across every expression."
+          "description": "The same adult character begins in a relaxed neutral pose."
         },
         {
           "time": 0.52,
           "label": "Gather",
-          "description": "The first changes begin around the eyes and mouth, with the surrounding face following."
+          "description": "The brows and eyelids begin the action; the cheeks and mouth follow."
         },
         {
           "time": 2.08,
           "label": "Laugh",
-          "description": "The jaw releases beneath an open smile; lifted cheeks narrow both eyes and the head rises gently."
+          "description": "An open smile raises the cheeks and narrows the eyes while the lower jaw releases beneath the upper teeth."
         },
         {
           "time": 2.9,
           "label": "Release",
-          "description": "The features recover together without changing the identity or resetting abruptly."
+          "description": "The expression eases back through the same attached facial surfaces."
         },
         {
           "time": 4.65,
           "label": "Rest",
-          "description": "The original neutral pose returns and holds through the matching five-second endpoint."
+          "description": "The shared neutral geometry returns and holds through the matching five-second endpoint."
         }
       ],
       "parts": [
         {
           "id": "brow",
           "name": "Brow & forehead",
-          "description": "The brows rise, lower and change their medial angle. These surface gestures suggest the action of the forehead and brow region; they are authored expression poses."
+          "description": "The brows lift, lower and draw toward the bridge. The skin and attached brow hairs follow the same sculpted expression targets."
         },
         {
           "id": "eyes",
           "name": "Eyelids & gaze",
-          "description": "Upper and lower lid margins change the visible aperture around the eyes. A closed lid covers the iris; the eyeball itself does not shrink."
+          "description": "The lids move over full eyeballs. Closing a lid covers the iris; the lashes follow the lid margin without shrinking the eye."
         },
         {
           "id": "cheeks",
           "name": "Cheek region",
-          "description": "The cheeks rise toward the lower lids in a smile and join the upper lip in a nose-wrinkle gesture. The portrait shows surface motion, not isolated internal muscles."
+          "description": "The cheek surface rises toward the lower lids and joins the mouth corners in a smile. These are authored surface motions, not measured muscle activation."
         },
         {
           "id": "mouth",
           "name": "Lips & mouth corners",
-          "description": "The corners lift, lower, stretch or draw inward. Lip contours remain attached to the surrounding face as the opening changes."
+          "description": "The lips lift, press, narrow or part together with the surrounding face. The mouth interior, teeth and tongue remain attached to their sculpted geometry."
         },
         {
           "id": "jaw",
           "name": "Jaw & chin",
-          "description": "An authored jaw release lowers the chin and lower lip together. The lower face returns to the same neutral geometry at the end of the five-second cycle."
+          "description": "The lower face releases beneath the upper jaw, carrying the lower teeth and tongue. A restrained range preserves the chin and lip silhouette in profile."
+        },
+        {
+          "id": "chest",
+          "name": "Pectoralis region",
+          "description": "A surface overlay indicates the upper chest beneath the anatomical bodysuit. The continuous shoulders and clavicles connect the torso to the arms."
+        },
+        {
+          "id": "back",
+          "name": "Back",
+          "description": "The posterior trunk joins the shoulders, waist and pelvis. Hair fades while you inspect this region so the true back surface is visible; the highlight and label follow the same skinned surface during rotation."
+        },
+        {
+          "id": "pelvis",
+          "name": "Pelvis",
+          "description": "The pelvic region connects the waist and hips to the thighs. The mint highlight marks the covered surface rather than exposed internal anatomy."
         }
       ]
     }

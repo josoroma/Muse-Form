@@ -1,11 +1,9 @@
 {
-  "edition": "MUSE — reference-led native portrait revision 2",
+  "edition": "MUSE — shared licensed skinned character revision 3",
   "reviewedOn": "2026-10-23",
   "durationSeconds": 5,
   "reviewers": [
-    "Primary agent: supplied reference comparison, all peak views, mobile framing and unpaused playback samples",
-    "Peer agent: all eight front/three-quarter/profile peaks on frozen source and live wink/laughter",
-    "Model author: repeated geometry repairs, exact endpoint validation and all eight six-pose sequences"
+    "Character/expression agent: authored expression targets and recipes; self-reviewed final browser outputs. Root agent reviews the combined FORM/MUSE delivery."
   ],
   "scope": {
     "authoredPoseTimes": [
@@ -15,6 +13,10 @@
       2.5,
       3.75,
       5
+    ],
+    "anglePoseTimes": [
+      0,
+      2.5
     ],
     "unpausedElapsedTargets": [
       0,
@@ -29,149 +31,255 @@
       1440,
       1080
     ],
-    "mobileWidth": 390,
-    "method": "Reviewed all eight expressions at six authored times, front/three-quarter/profile rest and peaks, mobile wink/surprise layouts, and seven screenshots per expression sampled from uninterrupted browser playback across a loop boundary. Inspected the eyes, teeth, nose, hair boundary, jaw and ear/profile join closely. Source hashes refer to the final frozen modules. This is sampled visual review, not continuous frame-by-frame or clinical validation.",
+    "playbackViewport": [
+      1280,
+      960
+    ],
+    "mobileViewport": [
+      390,
+      844
+    ],
     "views": [
       "front",
       "three-quarter",
       "profile"
-    ]
+    ],
+    "method": "Inspected eight six-pose sequences, all eight frontal/three-quarter/profile rest and peak comparisons, seven screenshots per expression sampled from uninterrupted playback across a loop boundary, mobile wink/surprise and the three full-body anatomical selections. Contact sheets were reviewed for all samples; wink frontal, surprise frontal and laughter three-quarter peaks were also inspected at full captured resolution. This is sampled self-review, not continuous frame-by-frame, clinical or independent artistic certification."
   },
   "sources": {
-    "expressions/app.mjs": "50d93efb3ecc853f25602cb2122dd783d6c84807d3c04a60b02e43f55e679cdc",
-    "expressions/face.mjs": "818b210672e02b5bfaf0e6de14f647f820f26005e6d5a06368466cb25baf2ae7",
-    "expressions/face-detail.mjs": "94cbd87f3c37aa86b768e919b7d1dcd83bf577f35b5d4ac4f3dfd34c33cf45a1",
+    "expressions/index.html": "d7b31a055afc9a09c9f9d2fe3b71758e1ee902e21cb04c974b68763484025114",
+    "expressions/app.mjs": "4e0ba671e28bb7e1b1ede5cc48fc06bb5d8d37537ce4fb3617c69fb4a23acd10",
+    "expressions/character-face.mjs": "32c151408c2efad062a7b6732319873435d54eb6ba2010a9ad59c6c1406ec365",
     "expressions/studio.mjs": "d34b2e1a1e9561599fe1f9a504b0c2bbf911889a6bd51a1384f3cd88ac048d45",
-    "expressions/style.css": "139850d4f1ed7b73a1381fcb2aafffa29b36431e5fce91471080969a3b047dc2",
-    "three/geometry.mjs": "aa62a681ad55d4665ced401459c8aacf55fa72868aa1e09f89c25ab0c57c737d"
+    "expressions/style.css": "4186f93ae074519f6c0e244bb81f9feaad176e0304a671713e1b8abc443fac88",
+    "three/style.css": "86ef4e8eb7fa244d681f2e9a934760fb6641d8ca2e03b182f3c93dff78112376",
+    "three/character/character.mjs": "2aaf55f4cf2d18475817780ba4e4c9114227c31642b1395422743008b336b55b",
+    "three/character/materials.mjs": "ad15581446fbcb0e079f55af4e6b633a298cc60176465b1f571099fd9b30d229",
+    "three/character/regions.mjs": "4fd014da445966949d867d4f71f18fe19a7f0fef5648dc7643e53459c1fc6139",
+    "three/character/subdivide-hair.mjs": "fd095a33b1700d6abc220e8ff8bb825869f90ec0f3671bfd6d160ef75208c14a",
+    "three/character/assets/adult-female-source.glb": "b0fae3610eef39a6cdc9c56d9c8bccc0cd9bcc1cf346ae1d9bfa121e5a86e1fe",
+    "three/character/assets/hair-long.glb": "d340fff458f920dd16dcc80493a1a33207b00c6bbfb08c4c53aba54704a78818",
+    "three/character/assets/body-joints.json": "47c40fcaeb9f089f0f32ba781e2a0ac7d7a925a47b6db3c46102f0091a53a839",
+    "three/runtime/camera-rig.mjs": "1fb02cf51badcd0deb67acec9ea2f0b3bbe37598721e036532c34b497ac01211",
+    "three/runtime/motion.mjs": "da2c372951e868a257e1e0764a48f7fa9caa9e70a8ffed70338cfa52662e675e",
+    "three/vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+    "three/vendor/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+    "three/vendor/addons/controls/OrbitControls.js": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+    "three/vendor/addons/loaders/GLTFLoader.js": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+    "three/vendor/addons/utils/SkeletonUtils.js": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+    "three/vendor/addons/utils/BufferGeometryUtils.js": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+    "scripts/check-expressions.mjs": "612dc4e97848eaedea049c3851b2785c6fd51ea3d1d24e3edad79acae9cb2e05",
+    "scripts/playback-expressions.mjs": "994be7cc6663000b4ce74e83f7f5b78510501d37cdcaa99434e72e0b7da3b458"
   },
   "repairs": [
-    "Reshaped the facial silhouette, rounded chin, cheek planes, nasal bridge and tip while keeping one neutral identity.",
-    "Reduced resting eye aperture, modeled eyelid rims, added hazel irises, fine brows and lashes that follow eye closure.",
-    "Added volumetric rose lips, individual upper tooth crowns, separated nostril apertures and a sculpted ear concha.",
-    "Removed dental protrusions and hid the upper crowns in the rounded surprise aperture.",
-    "Repaired the jagged side-head seam by resolving surface derivatives at the oval boundary.",
-    "Rebuilt swept brunette hair with a low bun, fine native strands and face-framing tendrils; removed the old rectangular lower hair edge.",
-    "Added rest-anchored skin/lip microdetail and restrained color variation, plus a local softbox environment and portrait lights.",
-    "Refined neck taper, collar closure and portrait framing for desktop and mobile."
+    "Replaced the primitive portrait with a CC0 MakeHuman-derived skinned character shared with FORM, retaining continuous face, neck, shoulder, limb and digit surfaces.",
+    "Transferred 52 official CC0 face units to the source topology, including accessory deltas for brows, lashes, eyes, teeth and tongue and source-shared normal deltas.",
+    "Authored eight bounded facial performances around one baked adult neutral identity, with exact endpoint geometry and real eyelid closure for the wink.",
+    "Tuned the jaw and upper-lip ranges together and darkened the actual inner-mouth UV region to avoid a bright exposed oral wall.",
+    "Added blonde long hair with local subdivision, blue-eye materials, an opaque neutral anatomical bodysuit, and shared dark/mint interface styling.",
+    "Attached feature/body overlays and labels to evaluated skin triangles, using a cached posed picking surface.",
+    "Repaired the playback assertion to detect an observed adjacent late-to-early loop wrap rather than requiring one fixed sample index to fall before five seconds. The runtime was unchanged by this check repair.",
+    "Strengthened only the chest/back/pelvis mint selection materials and temporarily faded hair during Back inspection. Verified visible framebuffer changes for all three regions and exact restoration of hair opacity, transparency, depth writing, alpha threshold and shadow state when selection changes."
   ],
   "studies": [
     {
       "id": "joy",
       "acceptedForIllustratedExplorer": true,
-      "observations": "Mouth corners and cheeks lift together; the eyes soften and the dental arc stays behind the lips.",
+      "observations": "The mouth corners lift with a small cheek rise and softer lids. The restrained smile stays joined to the surrounding face in the front, three-quarter and profile samples; the lips return to the same neutral shape.",
       "poseContactSheet": "joy-contact.jpg",
+      "angleContactSheet": "joy-angle-contact.jpg",
       "playbackContactSheet": "joy-live-contact.jpg",
+      "frontPeak": "joy-front-peak.png",
+      "threeQuarterPeak": "joy-threequarter-peak.png",
       "profilePeak": "joy-side-peak.png",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true,
-      "threeQuarterPeak": "joy-threequarter-peak.png"
+      "unpausedPlaybackPass": true
     },
     {
       "id": "sadness",
       "acceptedForIllustratedExplorer": true,
-      "observations": "The inner brows lift, the lids lower, and the mouth corners descend without changing the portrait identity.",
+      "observations": "The inner brow lifts and the mouth corners lower visibly. The chin lowers modestly while the jaw-to-neck transition remains connected. The acting stays restrained and is most readable in the frontal view.",
       "poseContactSheet": "sadness-contact.jpg",
+      "angleContactSheet": "sadness-angle-contact.jpg",
       "playbackContactSheet": "sadness-live-contact.jpg",
+      "frontPeak": "sadness-front-peak.png",
+      "threeQuarterPeak": "sadness-threequarter-peak.png",
       "profilePeak": "sadness-side-peak.png",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true,
-      "threeQuarterPeak": "sadness-threequarter-peak.png"
+      "unpausedPlaybackPass": true
     },
     {
       "id": "anger",
       "acceptedForIllustratedExplorer": true,
-      "observations": "The brows draw inward while the eyes narrow and the lips press into a firmer line.",
+      "observations": "The brows gather and lower while the lids narrow and lips press. The frontal peak differs from the shared neutral; oblique views retain the same facial proportions without a detached brow or mouth.",
       "poseContactSheet": "anger-contact.jpg",
+      "angleContactSheet": "anger-angle-contact.jpg",
       "playbackContactSheet": "anger-live-contact.jpg",
+      "frontPeak": "anger-front-peak.png",
+      "threeQuarterPeak": "anger-threequarter-peak.png",
       "profilePeak": "anger-side-peak.png",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true,
-      "threeQuarterPeak": "anger-threequarter-peak.png"
+      "unpausedPlaybackPass": true
     },
     {
       "id": "fear",
       "acceptedForIllustratedExplorer": true,
-      "observations": "Wide eyelids and a stretched mouth separate the expression from surprise.",
+      "observations": "The eyes widen and the mouth opens in a wider, laterally stretched shape than surprise. The teeth remain inside the mouth opening in the reviewed views; the gesture releases without a residual jaw offset.",
       "poseContactSheet": "fear-contact.jpg",
+      "angleContactSheet": "fear-angle-contact.jpg",
       "playbackContactSheet": "fear-live-contact.jpg",
+      "frontPeak": "fear-front-peak.png",
+      "threeQuarterPeak": "fear-threequarter-peak.png",
       "profilePeak": "fear-side-peak.png",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true,
-      "threeQuarterPeak": "fear-threequarter-peak.png"
+      "unpausedPlaybackPass": true
     },
     {
       "id": "surprise",
       "acceptedForIllustratedExplorer": true,
-      "observations": "Raised brows, widened apertures and a rounded mouth distinguish surprise. Upper crowns remain hidden in this pose; the jaw and rear head stay joined in profile.",
+      "observations": "The raised brows and wider eyes accompany a narrower rounded mouth opening. The dental arc remains visible inside that opening; lips, chin and mouth cavity remain joined in profile. This is a moderate surprise pose rather than the exaggerated opening in the reference.",
       "poseContactSheet": "surprise-contact.jpg",
+      "angleContactSheet": "surprise-angle-contact.jpg",
       "playbackContactSheet": "surprise-live-contact.jpg",
+      "frontPeak": "surprise-front-peak.png",
+      "threeQuarterPeak": "surprise-threequarter-peak.png",
       "profilePeak": "surprise-side-peak.png",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true,
-      "threeQuarterPeak": "surprise-threequarter-peak.png"
+      "unpausedPlaybackPass": true
     },
     {
       "id": "disgust",
       "acceptedForIllustratedExplorer": true,
-      "observations": "An asymmetric upper-lip and nose lift provide a distinct acting pose.",
+      "observations": "The asymmetric upper-lip and nose-region lift is visible, with a small head turn. The side-to-side difference remains restrained, and the lip surface returns cleanly to the common neutral.",
       "poseContactSheet": "disgust-contact.jpg",
+      "angleContactSheet": "disgust-angle-contact.jpg",
       "playbackContactSheet": "disgust-live-contact.jpg",
+      "frontPeak": "disgust-front-peak.png",
+      "threeQuarterPeak": "disgust-threequarter-peak.png",
       "profilePeak": "disgust-side-peak.png",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true,
-      "threeQuarterPeak": "disgust-threequarter-peak.png"
+      "unpausedPlaybackPass": true
     },
     {
       "id": "wink",
       "acceptedForIllustratedExplorer": true,
-      "observations": "One eyelid closes completely with a clean crease, its iris disappears, and the other eye remains open. Both eyes recover at the loop boundary.",
+      "observations": "The viewer-left eyelid closes over the iris and remains closed during the held peak; the other eye stays open. The closed-eye crease is continuous in frontal and oblique samples, with both eyes recovering before the endpoint.",
       "poseContactSheet": "wink-contact.jpg",
+      "angleContactSheet": "wink-angle-contact.jpg",
       "playbackContactSheet": "wink-live-contact.jpg",
+      "frontPeak": "wink-front-peak.png",
+      "threeQuarterPeak": "wink-threequarter-peak.png",
       "profilePeak": "wink-side-peak.png",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true,
-      "threeQuarterPeak": "wink-threequarter-peak.png"
+      "unpausedPlaybackPass": true
     },
     {
       "id": "laughter",
       "acceptedForIllustratedExplorer": true,
-      "observations": "Lifted cheeks and narrowed lids accompany the broad mouth opening. Individual upper teeth remain behind the lips and do not emerge through the chin in reviewed views.",
+      "observations": "A wider smile raises the corners and cheeks, softens the lids and exposes the dental arc. The lips and teeth remain attached in the reviewed oblique and profile views. It reads as an open smile; it does not simulate the full irregular muscular timing of spontaneous laughter.",
       "poseContactSheet": "laughter-contact.jpg",
+      "angleContactSheet": "laughter-angle-contact.jpg",
       "playbackContactSheet": "laughter-live-contact.jpg",
+      "frontPeak": "laughter-front-peak.png",
+      "threeQuarterPeak": "laughter-threequarter-peak.png",
       "profilePeak": "laughter-side-peak.png",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true,
-      "threeQuarterPeak": "laughter-threequarter-peak.png"
+      "unpausedPlaybackPass": true
     }
   ],
+  "bodySelectionReview": {
+    "evidence": [
+      "whole-body-chest.png",
+      "whole-body-back.png",
+      "whole-body-pelvis.png"
+    ],
+    "observations": "The full-body identity, relaxed hands and clothing are preserved. Chest and pelvis now show readable mint surfaces; the Back selection temporarily fades long hair so the true back surface is visible through it. Residual layered hair tint remains, while selecting Pelvis restores the normal hair. All three anchors follow the skin at the intended 2 mm offset, and each region produces measured mint pixels in the actual WebGL framebuffer.",
+    "framebufferEvidence": [
+      {
+        "id": "chest",
+        "changedPixels": 6270,
+        "mintPixels": 4891,
+        "pass": true
+      },
+      {
+        "id": "back",
+        "changedPixels": 11752,
+        "mintPixels": 145,
+        "pass": true
+      },
+      {
+        "id": "pelvis",
+        "changedPixels": 5930,
+        "mintPixels": 5196,
+        "pass": true
+      }
+    ],
+    "hairFadeAndRestorePass": true
+  },
+  "mobileReview": {
+    "evidence": [
+      "mobile-wink.png",
+      "mobile-surprise.png"
+    ],
+    "observations": "The two visible feature labels stay inside the 390 px viewport, controls remain reachable, and the portrait shows the eyelid closure or open mouth without horizontal overflow. The portrait includes upper torso rather than filling the entire viewport with the face."
+  },
   "limitations": [
-    "An original stylized adult woman, not a scanned or photorealistic portrait.",
-    "Expression presets are authored acting interpretations, not emotion recognition or diagnostic facial analysis.",
-    "Surface deformations illustrate feature coordination; they do not simulate individual biological muscle fibers.",
-    "Fine skin and hair detail are generated from native geometry and shaders; no photographs or image planes supply the rendered character."
+    "The original CC0-derived adult identity is not a scan or exact likeness of Sydney Sweeney or the supplied reference portraits.",
+    "The result is an interactive stylized human character; it does not achieve the references’ premium cinematic or photographic finish.",
+    "Long hair uses subdivided textured cards. Broad highlight bands, a visibly grouped hairline and clumped lower tips remain visible; there is no individual-strand simulation or dynamic hair response.",
+    "Skin uses embedded diffuse/normal maps and a restrained diffuse-wrap approximation, not volumetric subsurface scattering. Some facial and clothing planes remain simplified.",
+    "Eye, cheek and mouth performances are bounded artistic presets; subtle transitions and spontaneous microexpressions remain limited. Emotion names do not diagnose internal states.",
+    "Surface overlays identify approximate regions, not isolated internal muscles or measured activation. Back inspection temporarily fades the hair; residual tint from layered hair cards remains in that inspection view.",
+    "The review covers stated poses and angles, not every possible orbit, zoom, device or frame. Source topology and movement are not medically validated."
   ],
-  "pass": true,
   "appearanceReferences": [
-    "User-supplied paired laughter front/profile portrait, 23 October 2026",
-    "User-supplied paired surprise front/profile portrait, 23 October 2026"
+    "User-supplied paired laughter front/profile and surprise front/profile portraits",
+    "Later direction for an adult blonde, blue-eyed woman inspired by Sydney Sweeney, interpreted as one original asset-based character"
   ],
   "referenceMatch": {
-    "status": "Improved stylized interpretation; does not reach the supplied references’ lifelike cinematic finish.",
-    "remainingDifferences": [
-      "Simplified smooth facial planes and skin response.",
-      "Regular procedural hair groom and graphic lip edges.",
-      "Simplified ear and neck forms."
-    ],
-    "claim": "Accepted as a functioning illustrated expression explorer, not certified as photorealistic or an exact likeness."
+    "status": "Organic human topology, one consistent adult identity and visible facial acting; cinematic likeness and strand-level hair fidelity remain below the supplied visual references.",
+    "claim": "Accepted for the interactive illustrated explorer, not certified as photorealistic, medically accurate or an exact celebrity likeness."
   },
-  "passMeaning": "No unresolved runtime, attachment, occlusion or loop defect found in the stated sample scope; this is not a photorealism score."
+  "checksPass": true,
+  "playbackPass": true,
+  "pass": true,
+  "passMeaning": "Automated geometry/interactions/playback passed, and no detached facial feature, open wink aperture, gross clipping or loop discontinuity was found in the stated visual samples. This is not a photorealism or beauty score.",
+  "playbackEvidence": {
+    "record": "playback.json",
+    "captureSourceHashes": {
+      "expressions/index.html": "d7b31a055afc9a09c9f9d2fe3b71758e1ee902e21cb04c974b68763484025114",
+      "expressions/app.mjs": "4e0ba671e28bb7e1b1ede5cc48fc06bb5d8d37537ce4fb3617c69fb4a23acd10",
+      "expressions/character-face.mjs": "09ffbe9c0fe74b2fd8ff837e5d4f553f96b81b57c93da6bcb4dd8eb322b75371",
+      "expressions/studio.mjs": "d34b2e1a1e9561599fe1f9a504b0c2bbf911889a6bd51a1384f3cd88ac048d45",
+      "expressions/style.css": "4186f93ae074519f6c0e244bb81f9feaad176e0304a671713e1b8abc443fac88",
+      "three/style.css": "86ef4e8eb7fa244d681f2e9a934760fb6641d8ca2e03b182f3c93dff78112376",
+      "three/character/character.mjs": "503c8af280b9fd1d1c3d56bd0742a137f358fe0a3e33d404f5eb0e85db3d50be",
+      "three/character/materials.mjs": "ad15581446fbcb0e079f55af4e6b633a298cc60176465b1f571099fd9b30d229",
+      "three/character/regions.mjs": "4fd014da445966949d867d4f71f18fe19a7f0fef5648dc7643e53459c1fc6139",
+      "three/character/subdivide-hair.mjs": "fd095a33b1700d6abc220e8ff8bb825869f90ec0f3671bfd6d160ef75208c14a",
+      "three/character/assets/adult-female-source.glb": "b0fae3610eef39a6cdc9c56d9c8bccc0cd9bcc1cf346ae1d9bfa121e5a86e1fe",
+      "three/character/assets/hair-long.glb": "d340fff458f920dd16dcc80493a1a33207b00c6bbfb08c4c53aba54704a78818",
+      "three/character/assets/body-joints.json": "47c40fcaeb9f089f0f32ba781e2a0ac7d7a925a47b6db3c46102f0091a53a839",
+      "three/runtime/camera-rig.mjs": "1fb02cf51badcd0deb67acec9ea2f0b3bbe37598721e036532c34b497ac01211",
+      "three/runtime/motion.mjs": "da2c372951e868a257e1e0764a48f7fa9caa9e70a8ffed70338cfa52662e675e",
+      "three/vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "three/vendor/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "three/vendor/addons/controls/OrbitControls.js": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+      "three/vendor/addons/loaders/GLTFLoader.js": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+      "three/vendor/addons/utils/SkeletonUtils.js": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+      "three/vendor/addons/utils/BufferGeometryUtils.js": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+      "scripts/check-expressions.mjs": "68454d8e832bedda0ed371702c4dbf5a067fd9209784ba6d9c67e80039670b5a",
+      "scripts/playback-expressions.mjs": "994be7cc6663000b4ce74e83f7f5b78510501d37cdcaa99434e72e0b7da3b458"
+    },
+    "subsequentChanges": "Only chest/back/pelvis selection tint and temporary hair fading during Back inspection changed after these unpaused facial captures. Facial targets, pose recipes, identity and unselected hair rendering were unchanged. The complete functional/pose suite was rerun after the selection repair; unpaused facial captures were retained.",
+    "currentPoseAndInteractionRecord": "checks.json"
+  }
 }

@@ -1,7 +1,8 @@
 import * as THREE from 'three';
 import { createCameraRig } from '../three/runtime/camera-rig.mjs';
 import { createTransport } from '../three/runtime/motion.mjs';
-import { createFace } from './face.mjs';
+import { createFace } from './character-face.mjs';
+import { loadCharacter } from '../three/character/character.mjs';
 import { createPortraitStudio } from './studio.mjs';
 
 const $ = id => document.getElementById(id);
@@ -15,6 +16,7 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(36, 1, .05, 150);
 const raycaster = new THREE.Raycaster(), pointer = new THREE.Vector2(), world = new THREE.Vector3();
 let rig;
+let portraitView = true;
 
 try {
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
@@ -26,7 +28,10 @@ try {
   renderer.domElement.setAttribute('aria-label', '3D facial expression. Drag to orbit, scroll to zoom, arrows to rotate, plus or minus to zoom, Home for overview.');
   $('canvas-host').append(renderer.domElement);
   renderer.domElement.addEventListener('webglcontextlost', event => { event.preventDefault(); transport.pause(); $('fallback').hidden = false; });
-  createPortraitStudio(renderer, scene);
+  const studio = createPortraitStudio(renderer, scene);
+  studio.key.position.set(-2.5, 3.8, 4.5); studio.key.target.position.set(0, 1.4, 0);
+  Object.assign(studio.key.shadow.camera, { left:-1.1, right:1.1, top:1.3, bottom:-1.3, near:.1, far:12 });
+  studio.key.shadow.normalBias=.0008; studio.key.shadow.bias=-.00003; studio.key.shadow.camera.updateProjectionMatrix();
   const stage = new THREE.Group(); stage.visible=false; scene.add(stage);
   const floor = new THREE.Mesh(new THREE.PlaneGeometry(100, 100), new THREE.ShadowMaterial({ opacity: .24 }));
   floor.rotation.x = -Math.PI / 2; floor.receiveShadow = true; floor.position.y = -.025; stage.add(floor);
@@ -35,7 +40,7 @@ try {
   const cross = new THREE.Group();stage.add(cross);
   for(const axis of [0,1]) {const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(axis?0:-1.3,0,axis?-1.3:0),new THREE.Vector3(axis?0:1.3,0,axis?1.3:0)]),new THREE.LineDashedMaterial({color:0x6b5552,transparent:true,opacity:.2,dashSize:.07,gapSize:.10}));line.computeLineDistances();cross.add(line);}cross.position.y=-.018;
   camera.position.set(12, 9, 20);
-  rig = createCameraRig(camera, renderer.domElement, { target:[0,4.5,0], radius:6, minDistance:1, maxDistance:60, reducedMotion:reduced.matches, onUserIntent: manual });
+  rig = createCameraRig(camera, renderer.domElement, { target:[0,4.5,0], radius:6, minDistance:.08, maxDistance:15, reducedMotion:reduced.matches, onUserIntent: manual });
 
   function resize() {
     const { width, height } = $('viewport').getBoundingClientRect(); renderer.setSize(width, height, false); camera.aspect = width / height; camera.updateProjectionMatrix();
@@ -51,10 +56,9 @@ try {
   function overview(duration = .7, makeManual = true, viewDirection = null) {
     if(!active)return;
     if(makeManual) manual();
-    const bounds=(active.motionBounds||modelInfo(active).bounds).clone();
-    // A portrait composition crops the clothed shoulder base, keeping facial acting large.
-    bounds.min.y=Math.max(bounds.min.y,innerWidth<760?1.35:1.60);
-    bounds.min.x=Math.max(bounds.min.x,-1.24);bounds.max.x=Math.min(bounds.max.x,1.24);
+    const bounds=(portraitView ? active.viewBounds : active.bodyBounds || active.motionBounds || modelInfo(active).bounds).clone();
+    stage.visible = !portraitView;
+    $('wholebody').setAttribute('aria-pressed',String(!portraitView));
     const center=bounds.getCenter(new THREE.Vector3()),size=bounds.getSize(new THREE.Vector3());
     const mobile=innerWidth<760;
     const direction=viewDirection?new THREE.Vector3(...viewDirection).normalize():new THREE.Vector3(...active.camera.position).sub(new THREE.Vector3(...active.camera.target)).normalize();
@@ -83,7 +87,8 @@ try {
     camera.lookAt(base.target);camera.updateMatrixWorld();
   }
   function updateHighlight() {
-    for(const mesh of meshes) for(const mat of Array.isArray(mesh.material)?mesh.material:[mesh.material]) {
+    if(active.setSelection) active.setSelection(selected);
+    else for(const mesh of meshes) for(const mat of Array.isArray(mesh.material)?mesh.material:[mesh.material]) {
       if(!mat.userData.baseColor)continue;
       const isSelected=selected&&mesh.userData.partId===selected;
       mat.color.copy(mat.userData.baseColor);
@@ -99,6 +104,7 @@ try {
     $('part-description').textContent=part?.description||'Select the brows, eyes, cheeks, lips or jaw to see how the expression is formed.';
     $('focus').disabled=!part;
     if(announce)$('announcement').textContent=part?`${part.name}. ${part.description}`:'Selection cleared.';
+    if(['chest','back','pelvis'].includes(id)&&portraitView){portraitView=false;overview(0,true);}
     updateHighlight();render();
   }
   function setStudy(id, autoplay=!reduced.matches) {
@@ -114,7 +120,7 @@ try {
     floor.position.y=modelBounds.min.y-.025;ring.position.y=floor.position.y+.005;cross.position.y=floor.position.y+.006;
     const span=Math.max(modelBounds.max.x-modelBounds.min.x,modelBounds.max.z-modelBounds.min.z)*.85;
     ring.scale.setScalar(span);cross.scale.setScalar(span);ring.position.x=cross.position.x=0;
-    meshes=[];active.group.traverse(obj=>{if(obj.isMesh){meshes.push(obj);obj.castShadow=obj.receiveShadow=!obj.userData.noShadow;for(const mat of Array.isArray(obj.material)?obj.material:[obj.material]){if(mat.color&&!mat.userData.baseColor)mat.userData.baseColor=mat.color.clone();}}});
+    meshes=[];active.group.traverse(obj=>{if(obj.isMesh){meshes.push(obj);obj.receiveShadow=!obj.userData.noShadow&&!obj.userData.surfaceOverlay;obj.castShadow=obj.receiveShadow&&!obj.userData.noCastShadow;for(const mat of Array.isArray(obj.material)?obj.material:[obj.material]){if(mat.color&&!mat.userData.baseColor)mat.userData.baseColor=mat.color.clone();}}});
     $('scene-number').textContent=`EXPRESSION ${String(keys.indexOf(id)+1).padStart(2,'0')} / ${active.subtitle.toUpperCase()}`;
     $('scene-title').textContent=active.title;
     document.querySelectorAll('[data-study]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.study===id)));
@@ -155,7 +161,7 @@ try {
       l.dot.setAttribute('cx',px);l.dot.setAttribute('cy',py);
       // Dim labels anchored behind the visible surface instead of claiming an exposed structure.
       const direction=world.clone().sub(camera.position),distance=direction.length();raycaster.set(camera.position,direction.normalize());
-      const hit=raycaster.intersectObjects(meshes,false)[0];const occluded=hit&&hit.distance<distance-radius*.025&&hit.object.userData.partId!==l.part.id;
+      const hit=raycaster.intersectObjects(active.occlusionMeshes||meshes,false)[0];const occluded=active.isPartOccluded?active.isPartOccluded(l.part,camera):(hit&&hit.distance<distance-radius*.01&&(active.resolveHit?.(hit)||hit.object.userData.partId)!==l.part.id);
       l.button.style.opacity=occluded?'.48':'1';l.path.style.opacity=occluded?'.25':'.7';
     }
   }
@@ -181,9 +187,9 @@ try {
   $('loop').onchange=()=>{const state=transport.getState();transport=createTransport({duration:5,time:state.time,loop:$('loop').checked});if(state.playing)transport.play();render();};
   $('guided').onchange=()=>{if($('guided').checked){rig.cancelShot();cameraOwner='guided';$('camera-status').textContent='Guided view';overview(0,false);}else manual();render();};
   $('show-labels').onchange=()=>render();
-  $('overview').onclick=()=>overview();$('zoom-in').onclick=()=>{rig.zoomBy(1.2);render();};$('zoom-out').onclick=()=>{rig.zoomBy(1/1.2);render();};
+  $('overview').onclick=()=>{portraitView=true;overview();};$('wholebody').onclick=()=>{portraitView=false;overview();};$('zoom-in').onclick=()=>{rig.zoomBy(1.2);render();};$('zoom-out').onclick=()=>{rig.zoomBy(1/1.2);render();};
   for(const [id,dir] of [['front',[0,.03,1]],['side',[1,.03,0]]])$(id).onclick=()=>overview(.7,true,dir);
-  $('focus').onclick=()=>{const part=active.parts.find(p=>p.id===selected);if(!part)return;manual();const bounds=new THREE.Box3().setFromObject(part.object),center=bounds.getCenter(new THREE.Vector3());const r=Math.max(.45,bounds.getSize(new THREE.Vector3()).length()*.55);rig.fit({center:center.toArray(),radius:Math.min(r,radius*.75),duration:.8});};
+  $('focus').onclick=()=>{const part=active.parts.find(p=>p.id===selected);if(!part)return;manual();const bounds=part.getBounds?.()||new THREE.Box3().setFromObject(part.object),center=bounds.getCenter(new THREE.Vector3());const r=Math.max(.035,bounds.getSize(new THREE.Vector3()).length()*.55);rig.fit({center:center.toArray(),radius:Math.min(r,radius*.75),duration:.8});};
   $('clear-selection').onclick=()=>selectPart('');document.querySelectorAll('[data-study]').forEach(b=>b.onclick=()=>setStudy(b.dataset.study));
   $('about').onclick=()=>$('about-dialog').showModal();$('close-about').onclick=()=>$('about-dialog').close();
   let down;
@@ -191,7 +197,7 @@ try {
   renderer.domElement.addEventListener('pointerup',e=>{
     if(!down||Math.hypot(e.clientX-down.x,e.clientY-down.y)>5)return;
     const rect=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1);raycaster.setFromCamera(pointer,camera);
-    const hit=raycaster.intersectObjects(meshes,false).find(h=>h.object.userData.partId&&active.parts.some(p=>p.id===h.object.userData.partId));if(hit)selectPart(hit.object.userData.partId);
+    const hits=raycaster.intersectObjects(active.pickingMeshes||meshes,false);for(const hit of hits){const id=active.resolveHit?.(hit)||hit.object.userData.partId;if(active.parts.some(p=>p.id===id)){selectPart(id);break;}}
   });
   renderer.domElement.addEventListener('keydown',e=>{
     if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)){e.preventDefault();manual();const offset=camera.position.clone().sub(rig.controls.target);if(e.key==='ArrowLeft'||e.key==='ArrowRight')offset.applyAxisAngle(new THREE.Vector3(0,1,0),e.key==='ArrowLeft'?-.12:.12);else offset.applyAxisAngle(new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld,0),e.key==='ArrowUp'?-.08:.08);camera.position.copy(rig.controls.target).add(offset);rig.controls.update();render();}
@@ -206,6 +212,8 @@ try {
     if(cameraOwner==='manual')rig.update(dt);
     const before=performance.now();render();samples.push(performance.now()-before);if(samples.length>120)samples.shift();
   }
+  $('scene-title').textContent='Preparing the portrait…';
+  await loadCharacter();
   resize();setStudy(keys.includes(location.hash.slice(1))?location.hash.slice(1):'joy');requestAnimationFrame(tick);
   // A small inspection API supports reproducible browser QA, without bypassing UI behavior.
   window.atlas={setStudy,seek,selectPart,render,get model(){return active;},get camera(){return camera;},get state(){return{study,selected,cameraOwner,...transport.getState(),camera:rig.getState(),drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,meanRenderMs:samples.reduce((a,b)=>a+b,0)/Math.max(1,samples.length)};}};

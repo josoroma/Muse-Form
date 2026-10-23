@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101516"><title>FORM — Anatomy in motion</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101516'/%3E%3Cpath d='M20 48V16h28M20 30h20' stroke='%2396dad0' fill='none' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <header class="masthead"><a class="wordmark" href="./">FORM<span>A MOVING ANATOMY ATLAS</span></a><nav><a href="../expressions/">MUSE / Expressions ↗</a><a href="../">The SVG collection ↗</a><button id="about" aria-haspopup="dialog">About the studies</button></nav></header>
+  <main>
+    <div class="intro"><p class="eyebrow">FIVE STUDIES / THREE DIMENSIONS</p><p>A closer look at how we move.</p></div>
+    <nav class="studies" aria-label="Anatomical study">
+      <button data-study="body" aria-pressed="true"><span>01</span> Full body <small>Reach & return</small></button>
+      <button data-study="arm" aria-pressed="false"><span>02</span> Arm <small>Flex & release</small></button>
+      <button data-study="hand" aria-pressed="false"><span>03</span> Hand <small>Close & open</small></button>
+      <button data-study="leg" aria-pressed="false"><span>04</span> Leg <small>Load & recover</small></button>
+      <button data-study="foot" aria-pressed="false"><span>05</span> Foot <small>Rise & settle</small></button>
+    </nav>
+    <section class="workbench" aria-label="Interactive anatomy">
+      <div class="viewer-column">
+        <div id="viewport" class="viewport">
+          <div class="scene-heading"><p class="eyebrow" id="scene-number">STUDY 01 / REACH & RETURN</p><h1 id="scene-title">A gesture is a<br>whole-body event.</h1></div>
+          <div id="canvas-host"></div><svg id="leaders" aria-hidden="true"></svg><div id="labels" aria-label="Structure labels"></div>
+          <div class="scene-tools" role="group" aria-label="Camera controls"><button id="overview" title="Frame the whole study (Home)">⌂ <span>Overview</span></button><button id="front">Front</button><button id="side">Side</button><button id="zoom-in" aria-label="Zoom in">＋</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
+          <div class="view-status"><span class="status-dot"></span><span id="camera-status">Guided view</span><span class="drag-hint">Drag to orbit · scroll to zoom</span></div>
+          <div id="fallback" hidden><h2>Explore the drawing collection</h2><p>This browser could not start the 3D view. The original SVG studies remain available.</p><a href="../">Open the SVG collection ↗</a></div>
+        </div>
+        <div class="transport"><button id="play" class="play" aria-label="Pause motion">Ⅱ <span>Pause</span></button><button id="restart" class="restart" aria-label="Restart motion">↺</button><label class="sr-only" for="timeline">Movement time in seconds</label><input id="timeline" type="range" min="0" max="5" step="0.01" value="0"><output id="clock">0.00 <span>/ 5.00</span></output></div>
+        <div class="transport-options"><label><input id="guided" type="checkbox" checked> Guided camera</label><label><input id="show-labels" type="checkbox" checked> Labels</label><label><input id="loop" type="checkbox" checked> Loop</label><span>Space to pause · arrows to step</span></div>
+      </div>
+      <aside class="notes">
+        <div class="chapter"><span class="chapter-number" id="beat-count">01 / 04</span><p class="eyebrow">THE MOVEMENT</p><h2 id="beat-title">Ground</h2><p id="beat-description">The feet establish support before the arm moves.</p></div>
+        <div id="beat-buttons" class="beat-buttons" aria-label="Jump to movement phase"></div>
+        <div class="metrics" id="metrics"></div>
+        <div class="anatomy-heading"><p class="eyebrow">LOOK CLOSER</p><button id="clear-selection">Clear</button></div>
+        <div id="parts" class="parts" aria-label="Anatomical structures"></div>
+        <section class="selection" aria-live="polite"><div class="selection-rule"></div><h3 id="part-name">Select a structure</h3><p id="part-description">Choose a label or a form to follow its role in the movement.</p><button id="focus" disabled>Frame this structure ↗</button></section>
+      </aside>
+    </section>
+    <footer><p><span>FORM / 2026</span> A study in volume, line and movement.</p><a href="SOURCES.md">Anatomy & construction notes ↗</a><a href="README.md">Source & prompts ↗</a></footer>
+  </main>
+  <dialog id="about-dialog"><button id="close-about" aria-label="Close">×</button><p class="eyebrow">ABOUT FORM</p><h2>Move it.<br>Understand its shape.</h2><p>Five original Three.js studies connect anatomical form with a visible action. Orbit any model, pause a five-second loop, and select a structure to follow it in space.</p><p>The sculptural models simplify anatomy for visual explanation. Joint angles describe these authored poses; surface highlights identify structures, rather than measured muscle activation.</p><p>The line hierarchy grows from the Hairline-inspired SVG collection. Geometry, motion and annotations are editable JavaScript.</p><a href="SOURCES.md">Read the anatomy sources ↗</a><a href="../">Visit the original SVG collection ↗</a></dialog>
+  <p class="sr-only" id="announcement" role="status"></p>
+</body>
+</html>

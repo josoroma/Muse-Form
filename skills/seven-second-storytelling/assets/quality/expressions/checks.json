@@ -1,57 +1,146 @@
 {
   "renderer": "Three.js 0.186.1 / Chrome WebGL",
   "duration": 5,
+  "geometryMethod": "Evaluated GLB skin and morph surface, bone matrices, morph weights and region source vertices; metres.",
   "scenes": [
     {
       "id": "joy",
       "rest": {
-        "hash": 825228396,
+        "hash": 3901948176,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 4266809741,
-          "eyes": 378126549,
-          "cheeks": 2722995259,
-          "mouth": 2344808688,
-          "jaw": 2722995259
+          "brow": 2762303073,
+          "eyes": 3052434951,
+          "cheeks": 2122793063,
+          "mouth": 1868966996,
+          "jaw": 704119579,
+          "chest": 2327629426,
+          "back": 1326401868,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": false
+        "exactNeutralMatch": false,
+        "poseState": {
+          "amount": 0,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.009991526865288187,
+          "rightAperture": 0.009986049267599413,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_mouthSmileLeft": 0,
+            "exp_mouthSmileRight": 0,
+            "exp_cheekSquintLeft": 0,
+            "exp_cheekSquintRight": 0,
+            "exp_eyeSquintLeft": 0,
+            "exp_eyeSquintRight": 0,
+            "exp_jawOpen": 0
+          },
+          "time": 0,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "peak": {
-        "hash": 3357722180,
+        "hash": 1047506421,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 2868637517,
-          "eyes": 4007555896,
-          "cheeks": 1680555204,
-          "mouth": 3957215890,
-          "jaw": 1680555204
+          "brow": 2417811228,
+          "eyes": 3792374668,
+          "cheeks": 2644350459,
+          "mouth": 174615549,
+          "jaw": 1889598292,
+          "chest": 2327629426,
+          "back": 272620312,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": false
+        "exactNeutralMatch": false,
+        "poseState": {
+          "amount": 1,
+          "leftEyeOpen": 0.943718970541274,
+          "rightEyeOpen": 0.9436880989481238,
+          "leftAperture": 0.00942919344744525,
+          "rightAperture": 0.009423715849343194,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0.025,
+          "smile": 0.53,
+          "brow": 0,
+          "morphs": {
+            "exp_mouthSmileLeft": 0.53,
+            "exp_mouthSmileRight": 0.53,
+            "exp_cheekSquintLeft": 0.15,
+            "exp_cheekSquintRight": 0.15,
+            "exp_eyeSquintLeft": 0.1,
+            "exp_eyeSquintRight": 0.1,
+            "exp_jawOpen": 0.025
+          },
+          "time": 2.5,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "end": {
-        "hash": 825228396,
+        "hash": 3901948176,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 4266809741,
-          "eyes": 378126549,
-          "cheeks": 2722995259,
-          "mouth": 2344808688,
-          "jaw": 2722995259
+          "brow": 2762303073,
+          "eyes": 3052434951,
+          "cheeks": 2122793063,
+          "mouth": 1868966996,
+          "jaw": 704119579,
+          "chest": 2327629426,
+          "back": 1326401868,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": true
+        "exactNeutralMatch": true,
+        "poseState": {
+          "amount": 0,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.009991526865288187,
+          "rightAperture": 0.009986049267599413,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_mouthSmileLeft": 0,
+            "exp_mouthSmileRight": 0,
+            "exp_cheekSquintLeft": 0,
+            "exp_cheekSquintRight": 0,
+            "exp_eyeSquintLeft": 0,
+            "exp_eyeSquintRight": 0,
+            "exp_jawOpen": 0
+          },
+          "time": 0,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "localFeaturesChanged": [
         "brow",
         "eyes",
         "cheeks",
         "mouth",
-        "jaw"
+        "jaw",
+        "back"
       ],
       "visibleModelChange": true,
       "loopCloses": true,
@@ -82,59 +171,150 @@
           "file": "joy-t5.00.png"
         }
       ],
-      "labels": 5,
+      "labels": 8,
       "pass": true
     },
     {
       "id": "sadness",
       "rest": {
-        "hash": 825228396,
+        "hash": 3901948176,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 4266809741,
-          "eyes": 378126549,
-          "cheeks": 2722995259,
-          "mouth": 2344808688,
-          "jaw": 2722995259
+          "brow": 2762303073,
+          "eyes": 3052434951,
+          "cheeks": 2122793063,
+          "mouth": 1868966996,
+          "jaw": 704119579,
+          "chest": 2327629426,
+          "back": 1326401868,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": false
+        "exactNeutralMatch": false,
+        "poseState": {
+          "amount": 0,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.009991526865288187,
+          "rightAperture": 0.009986049267599413,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_browInnerUp": 0,
+            "exp_browDownLeft": 0,
+            "exp_browDownRight": 0,
+            "exp_mouthFrownLeft": 0,
+            "exp_mouthFrownRight": 0,
+            "exp_eyeSquintLeft": 0,
+            "exp_eyeSquintRight": 0,
+            "exp_mouthShrugLower": 0
+          },
+          "time": 0,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "peak": {
-        "hash": 2207832513,
+        "hash": 3933313819,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 1168180137,
-          "eyes": 14022271,
-          "cheeks": 2894529880,
-          "mouth": 673015589,
-          "jaw": 2894529880
+          "brow": 2112692523,
+          "eyes": 444299712,
+          "cheeks": 1919354934,
+          "mouth": 2220656920,
+          "jaw": 3099521850,
+          "chest": 2327629426,
+          "back": 724169640,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": false
+        "exactNeutralMatch": false,
+        "poseState": {
+          "amount": 1,
+          "leftEyeOpen": 0.9666279534697693,
+          "rightEyeOpen": 0.9666096480698912,
+          "leftAperture": 0.009658089165831739,
+          "rightAperture": 0.009652611568162864,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0.48,
+          "morphs": {
+            "exp_browInnerUp": 0.48,
+            "exp_browDownLeft": 0.12,
+            "exp_browDownRight": 0.12,
+            "exp_mouthFrownLeft": 0.38,
+            "exp_mouthFrownRight": 0.38,
+            "exp_eyeSquintLeft": 0.08,
+            "exp_eyeSquintRight": 0.08,
+            "exp_mouthShrugLower": 0.1
+          },
+          "time": 2.5,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "end": {
-        "hash": 825228396,
+        "hash": 3901948176,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 4266809741,
-          "eyes": 378126549,
-          "cheeks": 2722995259,
-          "mouth": 2344808688,
-          "jaw": 2722995259
+          "brow": 2762303073,
+          "eyes": 3052434951,
+          "cheeks": 2122793063,
+          "mouth": 1868966996,
+          "jaw": 704119579,
+          "chest": 2327629426,
+          "back": 1326401868,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": true
+        "exactNeutralMatch": true,
+        "poseState": {
+          "amount": 0,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.009991526865288187,
+          "rightAperture": 0.009986049267599413,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_browInnerUp": 0,
+            "exp_browDownLeft": 0,
+            "exp_browDownRight": 0,
+            "exp_mouthFrownLeft": 0,
+            "exp_mouthFrownRight": 0,
+            "exp_eyeSquintLeft": 0,
+            "exp_eyeSquintRight": 0,
+            "exp_mouthShrugLower": 0
+          },
+          "time": 0,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "localFeaturesChanged": [
         "brow",
         "eyes",
         "cheeks",
         "mouth",
-        "jaw"
+        "jaw",
+        "back"
       ],
       "visibleModelChange": true,
       "loopCloses": true,
@@ -165,59 +345,150 @@
           "file": "sadness-t5.00.png"
         }
       ],
-      "labels": 5,
+      "labels": 8,
       "pass": true
     },
     {
       "id": "anger",
       "rest": {
-        "hash": 825228396,
+        "hash": 3901948176,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 4266809741,
-          "eyes": 378126549,
-          "cheeks": 2722995259,
-          "mouth": 2344808688,
-          "jaw": 2722995259
+          "brow": 2762303073,
+          "eyes": 3052434951,
+          "cheeks": 2122793063,
+          "mouth": 1868966996,
+          "jaw": 704119579,
+          "chest": 2327629426,
+          "back": 1326401868,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": false
+        "exactNeutralMatch": false,
+        "poseState": {
+          "amount": 0,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.009991526865288187,
+          "rightAperture": 0.009986049267599413,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_browDownLeft": 0,
+            "exp_browDownRight": 0,
+            "exp_eyeSquintLeft": 0,
+            "exp_eyeSquintRight": 0,
+            "exp_mouthPressLeft": 0,
+            "exp_mouthPressRight": 0,
+            "exp_noseSneerLeft": 0,
+            "exp_noseSneerRight": 0
+          },
+          "time": 0,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "peak": {
-        "hash": 1058618420,
+        "hash": 2867841498,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 3402391941,
-          "eyes": 4019023763,
-          "cheeks": 3400644045,
-          "mouth": 2918484642,
-          "jaw": 3400644045
+          "brow": 4024189835,
+          "eyes": 349799761,
+          "cheeks": 4215131401,
+          "mouth": 4218120856,
+          "jaw": 1437110835,
+          "chest": 2327629426,
+          "back": 10262332,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": false
+        "exactNeutralMatch": false,
+        "poseState": {
+          "amount": 1,
+          "leftEyeOpen": 0.8818104530165756,
+          "rightEyeOpen": 0.881745623101731,
+          "leftAperture": 0.008810632831407062,
+          "rightAperture": 0.008805155233784029,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_browDownLeft": 0.62,
+            "exp_browDownRight": 0.62,
+            "exp_eyeSquintLeft": 0.24,
+            "exp_eyeSquintRight": 0.24,
+            "exp_mouthPressLeft": 0.3,
+            "exp_mouthPressRight": 0.3,
+            "exp_noseSneerLeft": 0.055,
+            "exp_noseSneerRight": 0.055
+          },
+          "time": 2.5,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "end": {
-        "hash": 825228396,
+        "hash": 3901948176,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 4266809741,
-          "eyes": 378126549,
-          "cheeks": 2722995259,
-          "mouth": 2344808688,
-          "jaw": 2722995259
+          "brow": 2762303073,
+          "eyes": 3052434951,
+          "cheeks": 2122793063,
+          "mouth": 1868966996,
+          "jaw": 704119579,
+          "chest": 2327629426,
+          "back": 1326401868,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": true
+        "exactNeutralMatch": true,
+        "poseState": {
+          "amount": 0,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.009991526865288187,
+          "rightAperture": 0.009986049267599413,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_browDownLeft": 0,
+            "exp_browDownRight": 0,
+            "exp_eyeSquintLeft": 0,
+            "exp_eyeSquintRight": 0,
+            "exp_mouthPressLeft": 0,
+            "exp_mouthPressRight": 0,
+            "exp_noseSneerLeft": 0,
+            "exp_noseSneerRight": 0
+          },
+          "time": 0,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "localFeaturesChanged": [
         "brow",
         "eyes",
         "cheeks",
         "mouth",
-        "jaw"
+        "jaw",
+        "back"
       ],
       "visibleModelChange": true,
       "loopCloses": true,
@@ -248,59 +519,162 @@
           "file": "anger-t5.00.png"
         }
       ],
-      "labels": 5,
+      "labels": 8,
       "pass": true
     },
     {
       "id": "fear",
       "rest": {
-        "hash": 825228396,
+        "hash": 3901948176,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 4266809741,
-          "eyes": 378126549,
-          "cheeks": 2722995259,
-          "mouth": 2344808688,
-          "jaw": 2722995259
+          "brow": 2762303073,
+          "eyes": 3052434951,
+          "cheeks": 2122793063,
+          "mouth": 1868966996,
+          "jaw": 704119579,
+          "chest": 2327629426,
+          "back": 1326401868,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": false
+        "exactNeutralMatch": false,
+        "poseState": {
+          "amount": 0,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.009991526865288187,
+          "rightAperture": 0.009986049267599413,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_browInnerUp": 0,
+            "exp_browOuterUpLeft": 0,
+            "exp_browOuterUpRight": 0,
+            "exp_browDownLeft": 0,
+            "exp_browDownRight": 0,
+            "exp_eyeWideLeft": 0,
+            "exp_eyeWideRight": 0,
+            "exp_mouthStretchLeft": 0,
+            "exp_mouthStretchRight": 0,
+            "exp_mouthFrownLeft": 0,
+            "exp_mouthFrownRight": 0,
+            "exp_jawOpen": 0
+          },
+          "time": 0,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "peak": {
-        "hash": 2109439761,
+        "hash": 1869435981,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 3326914501,
-          "eyes": 3429737476,
-          "cheeks": 1137272515,
-          "mouth": 2828230397,
-          "jaw": 1137272515
+          "brow": 1658523102,
+          "eyes": 1675997609,
+          "cheeks": 1588894547,
+          "mouth": 87205830,
+          "jaw": 1339667500,
+          "chest": 2327629426,
+          "back": 1148943636,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": false
+        "exactNeutralMatch": false,
+        "poseState": {
+          "amount": 1,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.011163608409256452,
+          "rightAperture": 0.011158130811495224,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0.22,
+          "smile": 0,
+          "brow": 0.55,
+          "morphs": {
+            "exp_browInnerUp": 0.55,
+            "exp_browOuterUpLeft": 0.18,
+            "exp_browOuterUpRight": 0.18,
+            "exp_browDownLeft": 0.1,
+            "exp_browDownRight": 0.1,
+            "exp_eyeWideLeft": 0.33,
+            "exp_eyeWideRight": 0.33,
+            "exp_mouthStretchLeft": 0.25,
+            "exp_mouthStretchRight": 0.25,
+            "exp_mouthFrownLeft": 0.1,
+            "exp_mouthFrownRight": 0.1,
+            "exp_jawOpen": 0.22
+          },
+          "time": 2.5,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "end": {
-        "hash": 825228396,
+        "hash": 3901948176,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 4266809741,
-          "eyes": 378126549,
-          "cheeks": 2722995259,
-          "mouth": 2344808688,
-          "jaw": 2722995259
+          "brow": 2762303073,
+          "eyes": 3052434951,
+          "cheeks": 2122793063,
+          "mouth": 1868966996,
+          "jaw": 704119579,
+          "chest": 2327629426,
+          "back": 1326401868,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": true
+        "exactNeutralMatch": true,
+        "poseState": {
+          "amount": 0,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.009991526865288187,
+          "rightAperture": 0.009986049267599413,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_browInnerUp": 0,
+            "exp_browOuterUpLeft": 0,
+            "exp_browOuterUpRight": 0,
+            "exp_browDownLeft": 0,
+            "exp_browDownRight": 0,
+            "exp_eyeWideLeft": 0,
+            "exp_eyeWideRight": 0,
+            "exp_mouthStretchLeft": 0,
+            "exp_mouthStretchRight": 0,
+            "exp_mouthFrownLeft": 0,
+            "exp_mouthFrownRight": 0,
+            "exp_jawOpen": 0
+          },
+          "time": 0,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "localFeaturesChanged": [
         "brow",
         "eyes",
         "cheeks",
         "mouth",
-        "jaw"
+        "jaw",
+        "back"
       ],
       "visibleModelChange": true,
       "loopCloses": true,
@@ -331,59 +705,150 @@
           "file": "fear-t5.00.png"
         }
       ],
-      "labels": 5,
+      "labels": 8,
       "pass": true
     },
     {
       "id": "surprise",
       "rest": {
-        "hash": 825228396,
+        "hash": 3901948176,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 4266809741,
-          "eyes": 378126549,
-          "cheeks": 2722995259,
-          "mouth": 2344808688,
-          "jaw": 2722995259
+          "brow": 2762303073,
+          "eyes": 3052434951,
+          "cheeks": 2122793063,
+          "mouth": 1868966996,
+          "jaw": 704119579,
+          "chest": 2327629426,
+          "back": 1326401868,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": false
+        "exactNeutralMatch": false,
+        "poseState": {
+          "amount": 0,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.009991526865288187,
+          "rightAperture": 0.009986049267599413,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_browInnerUp": 0,
+            "exp_browOuterUpLeft": 0,
+            "exp_browOuterUpRight": 0,
+            "exp_eyeWideLeft": 0,
+            "exp_eyeWideRight": 0,
+            "exp_jawOpen": 0,
+            "exp_mouthFunnel": 0,
+            "exp_mouthPucker": 0
+          },
+          "time": 0,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "peak": {
-        "hash": 2505153593,
+        "hash": 942421210,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 139332437,
-          "eyes": 4150976383,
-          "cheeks": 2167782078,
-          "mouth": 3583259329,
-          "jaw": 2167782078
+          "brow": 1012105016,
+          "eyes": 2328272280,
+          "cheeks": 3177906844,
+          "mouth": 427143819,
+          "jaw": 1722558413,
+          "chest": 2327629426,
+          "back": 1796415276,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": false
+        "exactNeutralMatch": false,
+        "poseState": {
+          "amount": 1,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.011244955658902508,
+          "rightAperture": 0.011239478061159101,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0.34,
+          "smile": 0,
+          "brow": 0.43,
+          "morphs": {
+            "exp_browInnerUp": 0.43,
+            "exp_browOuterUpLeft": 0.4,
+            "exp_browOuterUpRight": 0.4,
+            "exp_eyeWideLeft": 0.34,
+            "exp_eyeWideRight": 0.34,
+            "exp_jawOpen": 0.34,
+            "exp_mouthFunnel": 0.28,
+            "exp_mouthPucker": 0.06
+          },
+          "time": 2.5,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "end": {
-        "hash": 825228396,
+        "hash": 3901948176,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 4266809741,
-          "eyes": 378126549,
-          "cheeks": 2722995259,
-          "mouth": 2344808688,
-          "jaw": 2722995259
+          "brow": 2762303073,
+          "eyes": 3052434951,
+          "cheeks": 2122793063,
+          "mouth": 1868966996,
+          "jaw": 704119579,
+          "chest": 2327629426,
+          "back": 1326401868,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": true
+        "exactNeutralMatch": true,
+        "poseState": {
+          "amount": 0,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.009991526865288187,
+          "rightAperture": 0.009986049267599413,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_browInnerUp": 0,
+            "exp_browOuterUpLeft": 0,
+            "exp_browOuterUpRight": 0,
+            "exp_eyeWideLeft": 0,
+            "exp_eyeWideRight": 0,
+            "exp_jawOpen": 0,
+            "exp_mouthFunnel": 0,
+            "exp_mouthPucker": 0
+          },
+          "time": 0,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "localFeaturesChanged": [
         "brow",
         "eyes",
         "cheeks",
         "mouth",
-        "jaw"
+        "jaw",
+        "back"
       ],
       "visibleModelChange": true,
       "loopCloses": true,
@@ -414,59 +879,156 @@
           "file": "surprise-t5.00.png"
         }
       ],
-      "labels": 5,
+      "labels": 8,
       "pass": true
     },
     {
       "id": "disgust",
       "rest": {
-        "hash": 825228396,
+        "hash": 3901948176,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 4266809741,
-          "eyes": 378126549,
-          "cheeks": 2722995259,
-          "mouth": 2344808688,
-          "jaw": 2722995259
+          "brow": 2762303073,
+          "eyes": 3052434951,
+          "cheeks": 2122793063,
+          "mouth": 1868966996,
+          "jaw": 704119579,
+          "chest": 2327629426,
+          "back": 1326401868,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": false
+        "exactNeutralMatch": false,
+        "poseState": {
+          "amount": 0,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.009991526865288187,
+          "rightAperture": 0.009986049267599413,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_noseSneerLeft": 0,
+            "exp_noseSneerRight": 0,
+            "exp_mouthUpperUpLeft": 0,
+            "exp_mouthUpperUpRight": 0,
+            "exp_browDownLeft": 0,
+            "exp_browDownRight": 0,
+            "exp_eyeSquintLeft": 0,
+            "exp_eyeSquintRight": 0,
+            "exp_mouthPressRight": 0,
+            "exp_jawOpen": 0
+          },
+          "time": 0,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "peak": {
-        "hash": 1394449664,
+        "hash": 190479446,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 15873005,
-          "eyes": 3643225325,
-          "cheeks": 4215185905,
-          "mouth": 542342485,
-          "jaw": 4215185905
+          "brow": 3582174878,
+          "eyes": 2800805829,
+          "cheeks": 3390811374,
+          "mouth": 834106320,
+          "jaw": 3910255360,
+          "chest": 2327629426,
+          "back": 2878277666,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": false
+        "exactNeutralMatch": false,
+        "poseState": {
+          "amount": 1,
+          "leftEyeOpen": 0.9513321924944995,
+          "rightEyeOpen": 0.9297402948397896,
+          "leftAperture": 0.009505261159122305,
+          "rightAperture": 0.009284432390342543,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0.035,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_noseSneerLeft": 0.38,
+            "exp_noseSneerRight": 0.16,
+            "exp_mouthUpperUpLeft": 0.26,
+            "exp_mouthUpperUpRight": 0.1,
+            "exp_browDownLeft": 0.2,
+            "exp_browDownRight": 0.16,
+            "exp_eyeSquintLeft": 0.18,
+            "exp_eyeSquintRight": 0.12,
+            "exp_mouthPressRight": 0.1,
+            "exp_jawOpen": 0.035
+          },
+          "time": 2.5,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "end": {
-        "hash": 825228396,
+        "hash": 3901948176,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 4266809741,
-          "eyes": 378126549,
-          "cheeks": 2722995259,
-          "mouth": 2344808688,
-          "jaw": 2722995259
+          "brow": 2762303073,
+          "eyes": 3052434951,
+          "cheeks": 2122793063,
+          "mouth": 1868966996,
+          "jaw": 704119579,
+          "chest": 2327629426,
+          "back": 1326401868,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": true
+        "exactNeutralMatch": true,
+        "poseState": {
+          "amount": 0,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.009991526865288187,
+          "rightAperture": 0.009986049267599413,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_noseSneerLeft": 0,
+            "exp_noseSneerRight": 0,
+            "exp_mouthUpperUpLeft": 0,
+            "exp_mouthUpperUpRight": 0,
+            "exp_browDownLeft": 0,
+            "exp_browDownRight": 0,
+            "exp_eyeSquintLeft": 0,
+            "exp_eyeSquintRight": 0,
+            "exp_mouthPressRight": 0,
+            "exp_jawOpen": 0
+          },
+          "time": 0,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "localFeaturesChanged": [
         "brow",
         "eyes",
         "cheeks",
         "mouth",
-        "jaw"
+        "jaw",
+        "back"
       ],
       "visibleModelChange": true,
       "loopCloses": true,
@@ -497,59 +1059,144 @@
           "file": "disgust-t5.00.png"
         }
       ],
-      "labels": 5,
+      "labels": 8,
       "pass": true
     },
     {
       "id": "wink",
       "rest": {
-        "hash": 825228396,
+        "hash": 3901948176,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 4266809741,
-          "eyes": 378126549,
-          "cheeks": 2722995259,
-          "mouth": 2344808688,
-          "jaw": 2722995259
+          "brow": 2762303073,
+          "eyes": 3052434951,
+          "cheeks": 2122793063,
+          "mouth": 1868966996,
+          "jaw": 704119579,
+          "chest": 2327629426,
+          "back": 1326401868,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": false
+        "exactNeutralMatch": false,
+        "poseState": {
+          "amount": 0,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.009991526865288187,
+          "rightAperture": 0.009986049267599413,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_mouthSmileRight": 0,
+            "exp_mouthSmileLeft": 0,
+            "exp_cheekSquintRight": 0,
+            "exp_browOuterUpLeft": 0,
+            "exp_jawOpen": 0,
+            "exp_eyeBlinkRight": 0
+          },
+          "time": 0,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "peak": {
-        "hash": 2177913844,
+        "hash": 451124798,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 28683117,
-          "eyes": 696767414,
-          "cheeks": 2241205778,
-          "mouth": 37318946,
-          "jaw": 2241205778
+          "brow": 546610541,
+          "eyes": 3145419415,
+          "cheeks": 3270080511,
+          "mouth": 2212447190,
+          "jaw": 3548109673,
+          "chest": 2327629426,
+          "back": 2655039009,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": false
+        "exactNeutralMatch": false,
+        "poseState": {
+          "amount": 1,
+          "leftEyeOpen": 0,
+          "rightEyeOpen": 0.995701982853971,
+          "leftAperture": 0,
+          "rightAperture": 0.009943129056626181,
+          "apertureUnits": "metres",
+          "leftIrisVisible": false,
+          "rightIrisVisible": true,
+          "jawOpen": 0.02,
+          "smile": 0.29,
+          "brow": 0,
+          "morphs": {
+            "exp_mouthSmileRight": 0.36,
+            "exp_mouthSmileLeft": 0.22,
+            "exp_cheekSquintRight": 0.15,
+            "exp_browOuterUpLeft": 0.12,
+            "exp_jawOpen": 0.02,
+            "exp_eyeBlinkRight": 1
+          },
+          "time": 2.5,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "end": {
-        "hash": 825228396,
+        "hash": 3901948176,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 4266809741,
-          "eyes": 378126549,
-          "cheeks": 2722995259,
-          "mouth": 2344808688,
-          "jaw": 2722995259
+          "brow": 2762303073,
+          "eyes": 3052434951,
+          "cheeks": 2122793063,
+          "mouth": 1868966996,
+          "jaw": 704119579,
+          "chest": 2327629426,
+          "back": 1326401868,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": true
+        "exactNeutralMatch": true,
+        "poseState": {
+          "amount": 0,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.009991526865288187,
+          "rightAperture": 0.009986049267599413,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_mouthSmileRight": 0,
+            "exp_mouthSmileLeft": 0,
+            "exp_cheekSquintRight": 0,
+            "exp_browOuterUpLeft": 0,
+            "exp_jawOpen": 0,
+            "exp_eyeBlinkRight": 0
+          },
+          "time": 0,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "localFeaturesChanged": [
         "brow",
         "eyes",
         "cheeks",
         "mouth",
-        "jaw"
+        "jaw",
+        "back"
       ],
       "visibleModelChange": true,
       "loopCloses": true,
@@ -580,59 +1227,159 @@
           "file": "wink-t5.00.png"
         }
       ],
-      "labels": 5,
+      "labels": 8,
       "pass": true
     },
     {
       "id": "laughter",
       "rest": {
-        "hash": 825228396,
+        "hash": 3901948176,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 4266809741,
-          "eyes": 378126549,
-          "cheeks": 2722995259,
-          "mouth": 2344808688,
-          "jaw": 2722995259
+          "brow": 2762303073,
+          "eyes": 3052434951,
+          "cheeks": 2122793063,
+          "mouth": 1868966996,
+          "jaw": 704119579,
+          "chest": 2327629426,
+          "back": 1326401868,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": false
+        "exactNeutralMatch": false,
+        "poseState": {
+          "amount": 0,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.009991526865288187,
+          "rightAperture": 0.009986049267599413,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_mouthSmileLeft": 0,
+            "exp_mouthSmileRight": 0,
+            "exp_cheekSquintLeft": 0,
+            "exp_cheekSquintRight": 0,
+            "exp_eyeSquintLeft": 0,
+            "exp_eyeSquintRight": 0,
+            "exp_eyeBlinkLeft": 0,
+            "exp_eyeBlinkRight": 0,
+            "exp_jawOpen": 0,
+            "exp_mouthUpperUpLeft": 0,
+            "exp_mouthUpperUpRight": 0
+          },
+          "time": 0,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "peak": {
-        "hash": 21623505,
+        "hash": 999924024,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 758853373,
-          "eyes": 2523344492,
-          "cheeks": 919112960,
-          "mouth": 926595631,
-          "jaw": 919112960
+          "brow": 2697628212,
+          "eyes": 1531982831,
+          "cheeks": 2872816695,
+          "mouth": 3696905129,
+          "jaw": 2936178078,
+          "chest": 2327629426,
+          "back": 4274985779,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": false
+        "exactNeutralMatch": false,
+        "poseState": {
+          "amount": 1,
+          "leftEyeOpen": 0.7227936663209878,
+          "rightEyeOpen": 0.7226416116604456,
+          "leftAperture": 0.007221812335106296,
+          "rightAperture": 0.007216334736858653,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0.3,
+          "smile": 0.9,
+          "brow": 0,
+          "morphs": {
+            "exp_mouthSmileLeft": 0.9,
+            "exp_mouthSmileRight": 0.9,
+            "exp_cheekSquintLeft": 0.28,
+            "exp_cheekSquintRight": 0.28,
+            "exp_eyeSquintLeft": 0.3,
+            "exp_eyeSquintRight": 0.3,
+            "exp_eyeBlinkLeft": 0.12,
+            "exp_eyeBlinkRight": 0.12,
+            "exp_jawOpen": 0.3,
+            "exp_mouthUpperUpLeft": 0.4,
+            "exp_mouthUpperUpRight": 0.4
+          },
+          "time": 2.5,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "end": {
-        "hash": 825228396,
+        "hash": 3901948176,
         "finite": true,
-        "meshCount": 55,
-        "vertices": 163340,
+        "meshCount": 10,
+        "vertices": 73071,
+        "posedVertices": 14517,
         "featureHashes": {
-          "brow": 4266809741,
-          "eyes": 378126549,
-          "cheeks": 2722995259,
-          "mouth": 2344808688,
-          "jaw": 2722995259
+          "brow": 2762303073,
+          "eyes": 3052434951,
+          "cheeks": 2122793063,
+          "mouth": 1868966996,
+          "jaw": 704119579,
+          "chest": 2327629426,
+          "back": 1326401868,
+          "pelvis": 1174751523
         },
-        "exactNeutralMatch": true
+        "exactNeutralMatch": true,
+        "poseState": {
+          "amount": 0,
+          "leftEyeOpen": 1,
+          "rightEyeOpen": 1,
+          "leftAperture": 0.009991526865288187,
+          "rightAperture": 0.009986049267599413,
+          "apertureUnits": "metres",
+          "leftIrisVisible": true,
+          "rightIrisVisible": true,
+          "jawOpen": 0,
+          "smile": 0,
+          "brow": 0,
+          "morphs": {
+            "exp_mouthSmileLeft": 0,
+            "exp_mouthSmileRight": 0,
+            "exp_cheekSquintLeft": 0,
+            "exp_cheekSquintRight": 0,
+            "exp_eyeSquintLeft": 0,
+            "exp_eyeSquintRight": 0,
+            "exp_eyeBlinkLeft": 0,
+            "exp_eyeBlinkRight": 0,
+            "exp_jawOpen": 0,
+            "exp_mouthUpperUpLeft": 0,
+            "exp_mouthUpperUpRight": 0
+          },
+          "time": 0,
+          "skinning": true,
+          "identity": "shared-adult-female"
+        }
       },
       "localFeaturesChanged": [
         "brow",
         "eyes",
         "cheeks",
         "mouth",
-        "jaw"
+        "jaw",
+        "back"
       ],
       "visibleModelChange": true,
       "loopCloses": true,
@@ -663,7 +1410,7 @@
           "file": "laughter-t5.00.png"
         }
       ],
-      "labels": 5,
+      "labels": 8,
       "pass": true
     }
   ],
@@ -675,6 +1422,12 @@
     "winkRecoversBothEyes": true,
     "selectionAndExplanation": true,
     "frameSelection": true,
+    "fullBodyButton": true,
+    "backHairFades": true,
+    "anatomySelections": true,
+    "bodyHighlightsVisible": true,
+    "backHairRestores": true,
+    "portraitButtonRestoresView": true,
     "hideLabels": true,
     "scrubPauses": true,
     "restartRestoresStart": true,
@@ -690,13 +1443,79 @@
     "onlyLocalRequests": true
   },
   "errors": [],
+  "anatomyRegions": [
+    {
+      "id": "chest",
+      "selected": true,
+      "fullBody": true,
+      "visibleOverlay": true,
+      "sourceFaces": 960,
+      "anchorError": 0.0020000000000000543,
+      "conforms": true,
+      "explanation": true,
+      "renderedHighlight": {
+        "changedPixels": 6270,
+        "mintPixels": 4891,
+        "pass": true
+      },
+      "labelVisible": true
+    },
+    {
+      "id": "back",
+      "selected": true,
+      "fullBody": true,
+      "visibleOverlay": true,
+      "sourceFaces": 994,
+      "anchorError": 0.0019999999999999745,
+      "conforms": true,
+      "explanation": true,
+      "renderedHighlight": {
+        "changedPixels": 11752,
+        "mintPixels": 145,
+        "pass": true
+      },
+      "labelVisible": true
+    },
+    {
+      "id": "pelvis",
+      "selected": true,
+      "fullBody": true,
+      "visibleOverlay": true,
+      "sourceFaces": 744,
+      "anchorError": 0.0019999999999999944,
+      "conforms": true,
+      "explanation": true,
+      "renderedHighlight": {
+        "changedPixels": 5930,
+        "mintPixels": 5196,
+        "pass": true
+      },
+      "labelVisible": true
+    }
+  ],
   "sources": {
-    "expressions/app.mjs": "50d93efb3ecc853f25602cb2122dd783d6c84807d3c04a60b02e43f55e679cdc",
-    "expressions/face.mjs": "818b210672e02b5bfaf0e6de14f647f820f26005e6d5a06368466cb25baf2ae7",
-    "expressions/face-detail.mjs": "94cbd87f3c37aa86b768e919b7d1dcd83bf577f35b5d4ac4f3dfd34c33cf45a1",
+    "expressions/index.html": "d7b31a055afc9a09c9f9d2fe3b71758e1ee902e21cb04c974b68763484025114",
+    "expressions/app.mjs": "4e0ba671e28bb7e1b1ede5cc48fc06bb5d8d37537ce4fb3617c69fb4a23acd10",
+    "expressions/character-face.mjs": "32c151408c2efad062a7b6732319873435d54eb6ba2010a9ad59c6c1406ec365",
     "expressions/studio.mjs": "d34b2e1a1e9561599fe1f9a504b0c2bbf911889a6bd51a1384f3cd88ac048d45",
-    "expressions/style.css": "139850d4f1ed7b73a1381fcb2aafffa29b36431e5fce91471080969a3b047dc2",
-    "three/geometry.mjs": "aa62a681ad55d4665ced401459c8aacf55fa72868aa1e09f89c25ab0c57c737d"
+    "expressions/style.css": "4186f93ae074519f6c0e244bb81f9feaad176e0304a671713e1b8abc443fac88",
+    "three/style.css": "86ef4e8eb7fa244d681f2e9a934760fb6641d8ca2e03b182f3c93dff78112376",
+    "three/character/character.mjs": "2aaf55f4cf2d18475817780ba4e4c9114227c31642b1395422743008b336b55b",
+    "three/character/materials.mjs": "ad15581446fbcb0e079f55af4e6b633a298cc60176465b1f571099fd9b30d229",
+    "three/character/regions.mjs": "4fd014da445966949d867d4f71f18fe19a7f0fef5648dc7643e53459c1fc6139",
+    "three/character/subdivide-hair.mjs": "fd095a33b1700d6abc220e8ff8bb825869f90ec0f3671bfd6d160ef75208c14a",
+    "three/character/assets/adult-female-source.glb": "b0fae3610eef39a6cdc9c56d9c8bccc0cd9bcc1cf346ae1d9bfa121e5a86e1fe",
+    "three/character/assets/hair-long.glb": "d340fff458f920dd16dcc80493a1a33207b00c6bbfb08c4c53aba54704a78818",
+    "three/character/assets/body-joints.json": "47c40fcaeb9f089f0f32ba781e2a0ac7d7a925a47b6db3c46102f0091a53a839",
+    "three/runtime/camera-rig.mjs": "1fb02cf51badcd0deb67acec9ea2f0b3bbe37598721e036532c34b497ac01211",
+    "three/runtime/motion.mjs": "da2c372951e868a257e1e0764a48f7fa9caa9e70a8ffed70338cfa52662e675e",
+    "three/vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+    "three/vendor/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+    "three/vendor/addons/controls/OrbitControls.js": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+    "three/vendor/addons/loaders/GLTFLoader.js": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+    "three/vendor/addons/utils/SkeletonUtils.js": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+    "three/vendor/addons/utils/BufferGeometryUtils.js": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+    "scripts/check-expressions.mjs": "612dc4e97848eaedea049c3851b2785c6fd51ea3d1d24e3edad79acae9cb2e05"
   },
   "pass": true
 }

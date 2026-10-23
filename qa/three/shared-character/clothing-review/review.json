@@ -1,0 +1,51 @@
+{
+  "reviewedAt": "2026-10-23T11:11:49.863Z",
+  "scope": "Read-only rendered review of all five FORM studies at rest and peak in frontal, profile, and three-quarter views; three closer full-body peak views.",
+  "reviewedFrames": [
+    "arm-front-peak.png",
+    "arm-front-rest.png",
+    "arm-side-peak.png",
+    "arm-side-rest.png",
+    "arm-threequarter-peak.png",
+    "arm-threequarter-rest.png",
+    "body-close-front-peak.png",
+    "body-close-side-peak.png",
+    "body-close-threequarter-peak.png",
+    "body-front-peak.png",
+    "body-front-rest.png",
+    "body-side-peak.png",
+    "body-side-rest.png",
+    "body-threequarter-peak.png",
+    "body-threequarter-rest.png",
+    "foot-front-peak.png",
+    "foot-front-rest.png",
+    "foot-side-peak.png",
+    "foot-side-rest.png",
+    "foot-threequarter-peak.png",
+    "foot-threequarter-rest.png",
+    "hand-front-peak.png",
+    "hand-front-rest.png",
+    "hand-side-peak.png",
+    "hand-side-rest.png",
+    "hand-threequarter-peak.png",
+    "hand-threequarter-rest.png",
+    "leg-front-peak.png",
+    "leg-front-rest.png",
+    "leg-side-peak.png",
+    "leg-side-rest.png",
+    "leg-threequarter-peak.png",
+    "leg-threequarter-rest.png"
+  ],
+  "findings": [
+    "Continuous shoulders, elbows, wrists, hips, knees, ankles and all five digits were visible through the sampled motions.",
+    "The revised neckline and sleeve transitions are substantially cleaner, without the prior broad serrated cutouts.",
+    "The dark middle-fingertip albedo artifact is resolved in the sampled hand frames.",
+    "The full-body overview retains all anatomy in frame; close zoom intentionally crops the feet.",
+    "Live body playback averaged 12.21 ms across the sampled render frames with 18 draw calls and 84622 rendered triangles, without browser errors."
+  ],
+  "remaining": [
+    "Small triangular skin notches remain in the outer shorts hem in profile and three-quarter views; a small stepped shoulder/back neckline notch is visible during the hand pose. Root was notified before final freeze.",
+    "Free orbit around the attached hand may bring adjacent face/shoulder geometry behind the fixed headline. The default hand composition leaves the headline clear."
+  ],
+  "limits": "Sampled rendered frames and a short live performance observation; not a clinical anatomy validation or continuous inspection of every frame. Source materials were still being refined."
+}

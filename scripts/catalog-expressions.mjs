@@ -1,7 +1,7 @@
 import { writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { ROOT } from './serve.mjs';
-import { createFace } from '../expressions/face.mjs';
+import { getExpressionMetadata } from '../expressions/character-face.mjs';
 
 const actions={
  joy:{reference:'105196',prompt:'Raise the mouth corners into a quiet smile. Lift the cheeks and soften the lower eyelids together; keep the upper lip and chin volumes coherent. Let the face settle gently back to neutral.'},
@@ -13,36 +13,42 @@ const actions={
  wink:{reference:'105203',prompt:'Close one eyelid aperture fully, hide the iris behind the lid, lift the same cheek and add a small asymmetric smile. Keep the opposite eye open; reopen the closed eye smoothly before recovering neutral.'},
  laughter:{reference:'105202',prompt:'Open a broad smile with raised cheeks, softened eyes and a visible jaw release. Add a restrained head lift. Make the mouth and lips remain convincing from the profile camera, and return to the shared neutral portrait.'}
 };
-const base='Use the two supplied front/profile portrait references as the primary appearance guide. Create an original adult brunette woman as a native Three.js portrait, with a softly tapered oval face, rounded chin, refined nasal bridge and alae, volumetric rose lips, structured ears and a natural neck. Keep the eyes proportional to the face, with hazel irises, attached eyelid rims, curved lashes and natural brows. Give the swept brunette hair a continuous silhouette, gathered low bun, coherent fine strands and a few face-framing tendrils. Use warm skin with restrained regional color variation and microtexture, soft studio reflections, refined highlights and a green crewneck. Keep the same identity across every expression. Animate exactly five seconds: neutral, preparation, a readable expression, a short hold, recovery and the identical neutral endpoint. Coordinate brow, eyelid, cheek, lip and jaw geometry. Preserve clean occlusion, anatomical attachments and clean silhouettes from front, three-quarter and profile views. Provide selectable facial features, source-backed explanatory labels, a seekable timeline and a guided camera that yields immediately to manual orbit. ';
-const studies=Object.entries(actions).map(([id,a])=>{const m=createFace(id);return{id,title:m.title,duration:5,view:`index.html#${id}`,source:'face.mjs',svgReferenceID:a.reference,prompt:base+a.prompt,beats:m.beats,parts:m.parts.map(({id,name,description})=>({id,name,description}))};});
-await writeFile(resolve(ROOT,'expressions/manifest.json'),JSON.stringify({title:'MUSE — The language of a face',renderer:'Three.js 0.186.1',duration:5,edition:2,identity:'One original adult brunette woman, modeled consistently across all views and expressions.',appearanceReferences:['User-supplied paired front/profile laughter portrait, 23 October 2026','User-supplied paired front/profile surprise portrait, 23 October 2026'],studies},null,2)+'\n');
+const base='Use the shared licensed CC0 MakeHuman-derived skinned character as the foundation. Choose one original adult female identity with a delicate jaw, softly rounded cheeks, refined nose, full lips, natural eyelid geometry, expressive blue eyes and blonde hair. Use the same face, body proportions, rig and neutral anatomical bodysuit in MUSE and FORM. Retain continuous shoulders, torso, limbs, hands and feet for the Full body view. Preserve the charcoal background, serif interface, mint region overlays and soft studio lighting. Animate the face with the official CC0 facial targets transferred onto the original topology; carry brows, lashes, lips, oral surfaces, teeth and tongue with their corresponding deformations. Keep each animation exactly five seconds with one shared neutral pose, readable preparation, a held expression and smooth recovery. Inspect front, profile and three-quarter views. Selected brow, eye, cheek, mouth, jaw, Pectoralis, Back and Pelvis regions must conform to the evaluated body surface with attached labels. Manual orbit interrupts the guided camera. ';
+const method='Licensed CC0 skinned GLB with one locally selected adult identity; 52 official MakeHuman facial units transferred by source-vertex correspondence with accessory bindings and normal deltas; coordinated authored morph weights and small skeletal head gestures. No generated portrait is used as a flat image plane.';
+const studies=Object.entries(actions).map(([id,a])=>{const m=getExpressionMetadata(id);return{id,title:m.title,duration:5,view:`index.html#${id}`,source:'character-face.mjs',model:'../three/character/assets/adult-female-source.glb',svgReferenceID:a.reference,prompt:base+a.prompt,method,beats:m.beats,parts:m.parts};});
+await writeFile(resolve(ROOT,'expressions/manifest.json'),JSON.stringify({title:'MUSE — The language of a face',renderer:'Three.js 0.186.1',duration:5,edition:3,identity:'One original adult blonde woman with blue eyes, shared with FORM.',appearanceReferences:['User-supplied paired front/profile laughter and surprise portraits','Subsequent user direction: adult blonde female character with blue eyes, inspired by Sydney Sweeney; original asset-based identity rather than a scan or exact likeness'],assetLicense:'CC0-1.0',assetProvenance:'../three/character/assets/README.md',studies},null,2)+'\n');
 await writeFile(resolve(ROOT,'expressions/README.md'),`# MUSE — The language of a face
 
-A separate Three.js facial-expression explorer alongside [FORM / Anatomy](../three/index.html). One original adult woman performs **eight five-second studies**: joy, sadness, anger, fear, surprise, disgust, wink and laughter. The accepted SVG collection remains unchanged.
+**Eight five-second facial-expression studies** of the same adult female character used in [FORM](../three/index.html): joy, sadness, anger, fear, surprise, disgust, wink and laughter. The licensed skinned GLB provides organic human topology; local identity choices give her blonde hair, blue eyes and a neutral anatomical bodysuit. The accepted 48 SVGs remain unchanged.
 
-[Open MUSE](index.html) · [Portable source bundle](../exports/form-and-muse-threejs.zip) · [Facial anatomy sources](SOURCES.md)
+[Open MUSE](index.html) · [Portable source bundle](../exports/form-and-muse-threejs.zip) · [Character assets and license](../three/character/assets/README.md) · [Facial anatomy notes](SOURCES.md)
 
 ## Run locally
 
-From the project root, run \`npm start\` and open **http://127.0.0.1:4173/expressions/**. All browser dependencies are included locally in the sibling three/ directory. Keep expressions/ and three/ together and serve over HTTP.
+From the project root, run \`npm start\` and open **http://127.0.0.1:4173/expressions/**. The engine, character GLBs, embedded maps and supporting data are local. Keep expressions/ and three/ together and serve over HTTP.
 
 ## Inspect the movement
 
-Choose an expression and follow its five-second action. Pause, restart or scrub any pose; select a label or facial feature to read its role. Drag to orbit, use Front or Profile, or frame a selected feature. Manual camera gestures stop guidance; explicitly enable Guided camera to resume it. Reduced motion starts paused, and hidden tabs stop advancing.
+Choose an expression, then play, pause, restart or scrub any moment. The brow, lid, cheek, lip and jaw targets coordinate around one neutral identity. A wink closes the actual lid aperture over the iris. The jaw releases with its mouth interior, lower teeth and tongue.
 
-The names describe authored acting poses. This illustrated portrait is not a scan, a clinical anatomical model, or a system for inferring internal emotion. Highlights mark the selected feature; they do not show measured muscle activation.
+Use **Portrait** for facial acting or **Full body** to inspect the complete character. Selecting **Pectoralis region**, **Back** or **Pelvis** also opens the body view. Mint highlights reuse the body’s surface triangles, and labels follow the posed skin. Selecting Back temporarily fades the long hair to reveal the surface beneath it; selecting another region restores the hair. Select a feature and frame it, or use Front, Profile and manual orbit. Manual gestures stop camera guidance; enable Guided camera to resume it. Reduced motion starts paused, and hidden tabs stop advancing.
+
+The expression names describe authored acting poses, not diagnoses or inferred inner feelings. This is an original asset-based character, not a scan of a celebrity or a clinical anatomical model. Region overlays show selection, not measured muscle activity. Hair uses textured geometry and skin uses a restrained diffuse-wrap approximation; the model is intended for interactive illustration rather than photographic likeness. [Source and material limits](../three/character/assets/README.md).
 
 ## Source and reproduction
 
-- [face.mjs](face.mjs): native portrait geometry, features and coordinated expression poses.
-- [face-detail.mjs](face-detail.mjs): native hair, facial detail and portrait materials.
-- [studio.mjs](studio.mjs): locally generated studio environment and soft portrait lighting.
-- [app.mjs](app.mjs): renderer, camera, selection, anchored labels and five-second playback.
-- [manifest.json](manifest.json): complete reproducible prompts, phases and feature descriptions.
-- [Shared Three.js engine](../three/vendor/LICENSE): bundled MIT-licensed engine and controls.
-- [Browser checks](../qa/expressions/checks.json), [unpaused playback](../qa/expressions/playback.json) and [visual review](../qa/expressions/art-review.json).
+- [character-face.mjs](character-face.mjs): the eight expression recipes, five-second timing, body regions and metadata.
+- [Shared character loader](../three/character/character.mjs): fixed identity, skeleton fitting, GLB loading and character instances.
+- [Character materials](../three/character/materials.mjs): skin, blue eyes, blonde hair, mouth interior and clothing.
+- [Surface regions](../three/character/regions.mjs): conforming selection, moving labels and posed picking.
+- [Character GLB](../three/character/assets/adult-female-source.glb) and [source/licensing record](../three/character/assets/README.md).
+- [Expression transfer builder](../scripts/build-character-expressions.py): independently authored data conversion from the official CC0 face-unit pack, with normal deltas and accessory bindings. Rebuilding requires Python, NumPy and SciPy.
+- [studio.mjs](studio.mjs): local studio environment and portrait lights.
+- [app.mjs](app.mjs): renderer, portrait/body framing, controls, selection and playback.
+- [manifest.json](manifest.json): complete prompts, source IDs, phases and part descriptions.
+- [Three.js license](../three/vendor/LICENSE), [browser checks](../qa/expressions/checks.json), [unpaused playback](../qa/expressions/playback.json) and [visual review](../qa/expressions/art-review.json).
 
-Repository maintenance commands (install the pinned dependencies with \`npm ci\` first):
+The CC0 body and hair originate in MakeHuman system assets exported by Kasper Olesen’s CharacterCreator. The additional 52 facial units are by Mika Suominen and supplied by the MakeHuman Community under CC0. The source GLB retains the original proportion targets; the runtime bakes a single adult identity and keeps the expression/blink/gaze targets needed for interaction. CharacterCreator’s GPL generator/runtime code is not imported into the application.
 
 ~~~sh
 npm run catalog:expressions
@@ -51,7 +57,9 @@ npm run playback:expressions
 npm run bundle:three
 ~~~
 
+The preceding procedural portrait and complete earlier bundle are preserved in [archive/procedural-v3](../archive/procedural-v3). Older appearance references inform the art direction; they are not redistributed as scene assets.
+
 ## Corpus prompts
 
-${studies.map(s=>`### ${s.id} — ${s.title}\n\n[Open expression](${s.view}) · [Editable portrait](${s.source})${s.svgReferenceID?` · [SVG acting reference](../corpus/animated/${s.svgReferenceID}.svg)`:''}\n\n${s.prompt}\n\n**Action:** ${s.beats.map(b=>`${b.label}: ${b.description}`).join(' ')}\n`).join('\n')}`);
-console.log('Cataloged eight facial-expression studies with prompts, source links and movement phases.');
+${studies.map(s=>`### ${s.id} — ${s.title}\n\n[Open expression](${s.view}) · [Acting source](${s.source}) · [Shared character GLB](${s.model})${s.svgReferenceID?` · [SVG acting reference](../corpus/animated/${s.svgReferenceID}.svg)`:''}\n\n${s.prompt}\n\n**Method:** ${s.method}\n\n**Action:** ${s.beats.map(b=>`${b.label}: ${b.description}`).join(' ')}\n`).join('\n')}`);
+console.log('Cataloged eight shared-character expression studies from model metadata.');

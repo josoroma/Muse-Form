@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Hair_long01",
+    "finite": true,
+    "maxDiff": 0.004900943130548806,
+    "iterations": 2,
+    "inputVertices": 3312,
+    "inputTriangles": 4108,
+    "passes": [
+      {
+        "vertices": 10700,
+        "triangles": 16432,
+        "weldedVertices": 74,
+        "heldBoundaryVertices": 2334,
+        "nonManifoldVertices": 0
+      },
+      {
+        "vertices": 37800,
+        "triangles": 65728,
+        "weldedVertices": 133,
+        "heldBoundaryVertices": 4668,
+        "nonManifoldVertices": 0
+      }
+    ],
+    "elapsedMs": 155.5
+  }
+]

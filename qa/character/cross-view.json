@@ -1,0 +1,32 @@
+{
+  "scope": "Actual FORM full-body neutral and MUSE joy neutral compared in Chrome",
+  "sameBakedIdentity": true,
+  "maxPosedDifferenceMetres": 0,
+  "views": [
+    {
+      "bones": 53,
+      "identity": "shared-adult-female",
+      "mesh": true,
+      "localAssets": [
+        "http://127.0.0.1:4173/three/character/assets/adult-female-source.glb",
+        "http://127.0.0.1:4173/three/character/assets/hair-long.glb"
+      ],
+      "view": "three",
+      "vertices": 14517,
+      "bakedGeometrySHA256": "0f941c40b0b6149bc34848ef7f08057720d8603595a8379468492873d7213d86"
+    },
+    {
+      "bones": 53,
+      "identity": "shared-adult-female",
+      "mesh": true,
+      "localAssets": [
+        "http://127.0.0.1:4173/three/character/assets/adult-female-source.glb",
+        "http://127.0.0.1:4173/three/character/assets/hair-long.glb"
+      ],
+      "view": "expressions",
+      "vertices": 14517,
+      "bakedGeometrySHA256": "0f941c40b0b6149bc34848ef7f08057720d8603595a8379468492873d7213d86"
+    }
+  ],
+  "pass": true
+}

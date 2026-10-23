@@ -1,0 +1,242 @@
+{
+  "testedArtifact": "exports/form-and-muse-threejs.zip",
+  "extracted": "/var/folders/46/br4h6sv561q33ld7c_720shm0000gn/T/storytelling-skinned-final-x7na8ao5",
+  "scope": "Fresh extracted portable application and bundled skill; every FORM and MUSE study plus bidirectional navigation and preserved SVG galleries.",
+  "results": [
+    {
+      "base": "",
+      "view": "three",
+      "study": "body",
+      "skinned": true,
+      "bones": 53,
+      "parts": 6
+    },
+    {
+      "base": "",
+      "view": "three",
+      "study": "arm",
+      "skinned": true,
+      "bones": 53,
+      "parts": 4
+    },
+    {
+      "base": "",
+      "view": "three",
+      "study": "hand",
+      "skinned": true,
+      "bones": 53,
+      "parts": 7
+    },
+    {
+      "base": "",
+      "view": "three",
+      "study": "leg",
+      "skinned": true,
+      "bones": 53,
+      "parts": 4
+    },
+    {
+      "base": "",
+      "view": "three",
+      "study": "foot",
+      "skinned": true,
+      "bones": 53,
+      "parts": 4
+    },
+    {
+      "base": "",
+      "navigation": true
+    },
+    {
+      "base": "",
+      "view": "expressions",
+      "study": "joy",
+      "skinned": true,
+      "bones": 53,
+      "parts": 8
+    },
+    {
+      "base": "",
+      "view": "expressions",
+      "study": "sadness",
+      "skinned": true,
+      "bones": 53,
+      "parts": 8
+    },
+    {
+      "base": "",
+      "view": "expressions",
+      "study": "anger",
+      "skinned": true,
+      "bones": 53,
+      "parts": 8
+    },
+    {
+      "base": "",
+      "view": "expressions",
+      "study": "fear",
+      "skinned": true,
+      "bones": 53,
+      "parts": 8
+    },
+    {
+      "base": "",
+      "view": "expressions",
+      "study": "surprise",
+      "skinned": true,
+      "bones": 53,
+      "parts": 8
+    },
+    {
+      "base": "",
+      "view": "expressions",
+      "study": "disgust",
+      "skinned": true,
+      "bones": 53,
+      "parts": 8
+    },
+    {
+      "base": "",
+      "view": "expressions",
+      "study": "wink",
+      "skinned": true,
+      "bones": 53,
+      "parts": 8
+    },
+    {
+      "base": "",
+      "view": "expressions",
+      "study": "laughter",
+      "skinned": true,
+      "bones": 53,
+      "parts": 8
+    },
+    {
+      "base": "",
+      "navigation": true
+    },
+    {
+      "base": "",
+      "SVGGalleryImages": 24
+    },
+    {
+      "base": "/skills/seven-second-storytelling/assets",
+      "view": "three",
+      "study": "body",
+      "skinned": true,
+      "bones": 53,
+      "parts": 6
+    },
+    {
+      "base": "/skills/seven-second-storytelling/assets",
+      "view": "three",
+      "study": "arm",
+      "skinned": true,
+      "bones": 53,
+      "parts": 4
+    },
+    {
+      "base": "/skills/seven-second-storytelling/assets",
+      "view": "three",
+      "study": "hand",
+      "skinned": true,
+      "bones": 53,
+      "parts": 7
+    },
+    {
+      "base": "/skills/seven-second-storytelling/assets",
+      "view": "three",
+      "study": "leg",
+      "skinned": true,
+      "bones": 53,
+      "parts": 4
+    },
+    {
+      "base": "/skills/seven-second-storytelling/assets",
+      "view": "three",
+      "study": "foot",
+      "skinned": true,
+      "bones": 53,
+      "parts": 4
+    },
+    {
+      "base": "/skills/seven-second-storytelling/assets",
+      "navigation": true
+    },
+    {
+      "base": "/skills/seven-second-storytelling/assets",
+      "view": "expressions",
+      "study": "joy",
+      "skinned": true,
+      "bones": 53,
+      "parts": 8
+    },
+    {
+      "base": "/skills/seven-second-storytelling/assets",
+      "view": "expressions",
+      "study": "sadness",
+      "skinned": true,
+      "bones": 53,
+      "parts": 8
+    },
+    {
+      "base": "/skills/seven-second-storytelling/assets",
+      "view": "expressions",
+      "study": "anger",
+      "skinned": true,
+      "bones": 53,
+      "parts": 8
+    },
+    {
+      "base": "/skills/seven-second-storytelling/assets",
+      "view": "expressions",
+      "study": "fear",
+      "skinned": true,
+      "bones": 53,
+      "parts": 8
+    },
+    {
+      "base": "/skills/seven-second-storytelling/assets",
+      "view": "expressions",
+      "study": "surprise",
+      "skinned": true,
+      "bones": 53,
+      "parts": 8
+    },
+    {
+      "base": "/skills/seven-second-storytelling/assets",
+      "view": "expressions",
+      "study": "disgust",
+      "skinned": true,
+      "bones": 53,
+      "parts": 8
+    },
+    {
+      "base": "/skills/seven-second-storytelling/assets",
+      "view": "expressions",
+      "study": "wink",
+      "skinned": true,
+      "bones": 53,
+      "parts": 8
+    },
+    {
+      "base": "/skills/seven-second-storytelling/assets",
+      "view": "expressions",
+      "study": "laughter",
+      "skinned": true,
+      "bones": 53,
+      "parts": 8
+    },
+    {
+      "base": "/skills/seven-second-storytelling/assets",
+      "navigation": true
+    },
+    {
+      "base": "/skills/seven-second-storytelling/assets",
+      "SVGGalleryImages": 24
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "pass": true
+}

@@ -5,435 +5,435 @@
       "id": "body",
       "frames": [
         {
-          "elapsed": 0.727,
-          "time": 0.03339999999999943,
+          "elapsed": 0.273,
+          "time": 0.08000000000000007,
           "camera": [
-            10.852382002482214,
-            8.081519147807635,
-            17.70492119469131
+            1.3879862389453685,
+            1.1352671168305721,
+            3.318528981140363
           ],
-          "hash": "c9ac0249150c56cfae9913240cd0e414c3916d6a23987964dfd3d3e6f54572d9",
+          "hash": "85bd1974594845541ecb88403978eed7960f4d811129bbe1440e84eddc7d9671",
           "playing": true
         },
         {
-          "elapsed": 1.663,
-          "time": 1.0500000000000016,
+          "elapsed": 1.156,
+          "time": 1.0966000000000093,
           "camera": [
-            12.960287661056086,
-            8.081519147807635,
-            16.228031539862116
+            1.767280903725706,
+            1.1352671168305721,
+            3.140485086874578
           ],
-          "hash": "34d345843537eedb7f04e93ce299483424e56bfb94d2999cb8078d9fcdbc6ca9",
+          "hash": "0626dd59c3eb8042c805241fa0aa30e828c00469274b13aca93f377a088a670e",
           "playing": true
         },
         {
-          "elapsed": 2.649,
-          "time": 2.050000000000007,
+          "elapsed": 2.143,
+          "time": 2.096600000000022,
           "camera": [
-            11.999745119741647,
-            8.081519147807635,
-            16.951786564356773
+            1.5564619929217467,
+            1.1352671168305721,
+            3.2464715988582165
           ],
-          "hash": "1fa8c0082ea5b69c1895e984aa7a01842621cc9ad9e916afe1f148009631668a",
+          "hash": "d6c271af7fba8aa6d9ca198a6140e920f9ff1c26109a0a5222eefe7d9d7577d5",
           "playing": true
         },
         {
-          "elapsed": 3.65,
-          "time": 3.0498999999999956,
+          "elapsed": 3.142,
+          "time": 3.096600000000036,
           "camera": [
-            9.194889448113257,
-            8.081519147807635,
-            18.607711707930065
+            1.035332112888276,
+            1.1352671168305721,
+            3.4363633059594267
           ],
-          "hash": "d6b931b5285e95e63ba409ab481f214a860ba261aca073ae166d9b7f0e63e434",
+          "hash": "def88cbe5940a408df740788f089add700d046c4a01acb5adaa94eef23c67493",
           "playing": true
         },
         {
-          "elapsed": 4.659,
-          "time": 4.04989999999999,
+          "elapsed": 4.156,
+          "time": 4.096500000000049,
           "camera": [
-            8.456186543814395,
-            8.081519147807635,
-            18.947139449896838
+            0.9315316228999733,
+            1.1352671168305721,
+            3.463086825912
           ],
-          "hash": "50e9bf19846097589658757e0573ff98e4bcdd0e0f19a1f438857df2eaf84ac1",
+          "hash": "ce5c4bf847ada780aa8d0001c3aa83ff715a7f3cd20e52c64197afda7a71fcc5",
           "playing": true
         },
         {
-          "elapsed": 5.553,
-          "time": 4.949800000000003,
+          "elapsed": 5.042,
+          "time": 4.9965000000000614,
           "camera": [
-            10.601898330661589,
-            8.081519147807635,
-            17.854709119989447
+            1.3415087456365378,
+            1.1352671168305721,
+            3.3365486414976306
           ],
-          "hash": "38e1a2815106e7eecf355c175069e1194d8b683fb75608152a5acad7b4dc983d",
+          "hash": "bfe689f8ecd90766f9a787f41493e09a73f6e83f29b64beff0d1ea83e0d08801",
           "playing": true
         },
         {
-          "elapsed": 6.228,
-          "time": 0.6164000000000076,
+          "elapsed": 5.642,
+          "time": 0.5964000000000667,
           "camera": [
-            12.368002434899031,
-            8.081519147807635,
-            16.68503654732179
+            1.6405403322393508,
+            1.1352671168305721,
+            3.206393101543576
           ],
-          "hash": "41eb9b56c71255eb7fdd693c0dffdec86d7da4728a29563558f669d57c4059ba",
+          "hash": "22fc2bc921abb5b818970cddddd223a0a76554acec29d28d3df7f1a969e5b423",
           "playing": true
         }
       ],
       "distinctFrames": 7,
       "cameraChanges": 7,
       "loopObserved": true,
-      "scope": "Sampled unpaused browser playback for more than one five-second cycle, with no seeking between samples.",
+      "scope": "Sampled unpaused browser playback for more than one five-second cycle, with no seeking between samples. Loop detection uses an actual decreasing-time boundary rather than assuming a screenshot lands before the boundary.",
       "pass": true
     },
     {
       "id": "arm",
       "frames": [
         {
-          "elapsed": 0.175,
-          "time": 0.03329999999999966,
+          "elapsed": 0.193,
+          "time": 0.016600000000000392,
           "camera": [
-            10.048207655601063,
-            4.372072952441241,
-            15.394005849329991
+            0.6205454157657803,
+            1.3127012813799666,
+            1.4203465156242343
           ],
-          "hash": "a1e18f8b48f7c602643fe3e4375ac3f444d7093a097b9a2ea8710398f153efdd",
+          "hash": "a89a052592f61ab31ba75fd2abc02a603bbe7c314e4071cbd260a39106d517f6",
           "playing": true
         },
         {
-          "elapsed": 1.176,
-          "time": 1.0799000000000092,
+          "elapsed": 1.159,
+          "time": 1.0798000000000112,
           "camera": [
-            11.749880475924549,
-            4.372072952441241,
-            13.972786291772785
+            0.7852918409385183,
+            1.3127012813799666,
+            1.3580867274767774
           ],
-          "hash": "901fd6c22f91316c57639174248b04a37c9a0ee29e5f428ee80c4611211b9d61",
+          "hash": "32216be45cf11286f97f8dd7d6632da9b8d14f76af43f92731106b28bc692e45",
           "playing": true
         },
         {
-          "elapsed": 2.176,
-          "time": 2.07990000000002,
+          "elapsed": 2.143,
+          "time": 2.0798000000000147,
           "camera": [
-            10.911744166332861,
-            4.372072952441241,
-            14.720085007224075
+            0.7047890120109127,
+            1.3127012813799666,
+            1.391661656182453
           ],
-          "hash": "d665ce62e7c5fc67f204c8cf915b3b1d82dc27f535042cf0be59877f72c63149",
+          "hash": "a72250850c3d568d6d3006e9ec02b4f299d444ec7f59a7abb47bd757889d2664",
           "playing": true
         },
         {
-          "elapsed": 3.195,
-          "time": 3.0799000000000056,
+          "elapsed": 3.159,
+          "time": 3.079800000000004,
           "camera": [
-            8.6453469780626,
-            4.372072952441241,
-            16.31474414665193
+            0.497861093891105,
+            1.3127012813799666,
+            1.451191091502838
           ],
-          "hash": "7f85f05323e200acc36dadef239f596c4107a8a83874b88336c023c0d455741e",
+          "hash": "02e717ba5cbb5521e5b695b7255dab38560983ab55e41ff062d0b338b252cc0f",
           "playing": true
         },
         {
-          "elapsed": 4.193,
-          "time": 4.079799999999995,
+          "elapsed": 4.141,
+          "time": 4.079699999999988,
           "camera": [
-            8.130153907839382,
-            4.372072952441241,
-            16.605503967009547
+            0.45261904763153227,
+            1.3127012813799666,
+            1.459459834114987
           ],
-          "hash": "c42ad1a4b6090839290d51ff48aedbe5526e820109579d446e066b9de03554ae",
+          "hash": "75247a6217994bf48ffa9b07a20907c48450ec1370f53da5bc531a7b8f6c0400",
           "playing": true
         },
         {
-          "elapsed": 5.102,
-          "time": 4.979799999999997,
+          "elapsed": 5.042,
+          "time": 4.979700000000001,
           "camera": [
-            9.918978999052209,
-            4.372072952441241,
-            15.487369944339704
+            0.6123601300018624,
+            1.3127012813799666,
+            1.422799198597829
           ],
-          "hash": "bcd4fad1fc29a777606004f0a88771a61363018101b9cb165c088ed07825d994",
+          "hash": "526f676d7244b170f12e94593fee7aae8c8eb34eca6888e03540cc9c01c93703",
           "playing": true
         },
         {
-          "elapsed": 5.725,
-          "time": 0.5964000000000045,
+          "elapsed": 5.641,
+          "time": 0.579700000000007,
           "camera": [
-            11.231734098454767,
-            4.372072952441241,
-            14.4464625580462
+            0.7325686211111269,
+            1.3127012813799666,
+            1.3807805124768302
           ],
-          "hash": "e0568cf35c7abacbdb3c29a75ae2effe296dce3834feaf2fa1fa7b23330c44e0",
+          "hash": "eabff3c4f1e5c0a1e91c44bbe7df5984cffd866a560e2d5a3a56e5008ca7242f",
           "playing": true
         }
       ],
       "distinctFrames": 7,
       "cameraChanges": 7,
       "loopObserved": true,
-      "scope": "Sampled unpaused browser playback for more than one five-second cycle, with no seeking between samples.",
+      "scope": "Sampled unpaused browser playback for more than one five-second cycle, with no seeking between samples. Loop detection uses an actual decreasing-time boundary rather than assuming a screenshot lands before the boundary.",
       "pass": true
     },
     {
       "id": "hand",
       "frames": [
         {
-          "elapsed": 0.494,
-          "time": 0.016599999999998616,
+          "elapsed": 0.198,
+          "time": 0.016700000000001047,
           "camera": [
-            5.20570761355791,
-            3.4361317595040246,
-            10.862090429007301
+            0.3571995039350065,
+            1.427925515454956,
+            0.5643851082361612
           ],
-          "hash": "28780bb2996258a3965e114a84142f70e0c0bbb22a3b29c246b921d97f584cdb",
+          "hash": "022548479c23747911e1ba706b67be5996dd9053f55f9357450b745ba991999f",
           "playing": true
         },
         {
-          "elapsed": 1.6,
-          "time": 1.0632000000000055,
+          "elapsed": 1.15,
+          "time": 1.0967000000000127,
           "camera": [
-            6.498719615162326,
-            3.4361317595040246,
-            10.018306838840985
+            0.41644012500172467,
+            1.427925515454956,
+            0.5690579437122661
           ],
-          "hash": "b4362300c763107b103efb89f548decc0c37e44cd21d1cd69f1e035f019cfd75",
+          "hash": "e9be87c1b2bed08806c1a8b548149998bfa3535b7150053a91341794fb79cf86",
           "playing": true
         },
         {
-          "elapsed": 2.484,
-          "time": 2.079800000000011,
+          "elapsed": 2.148,
+          "time": 2.0967000000000233,
           "camera": [
-            5.875954180769042,
-            3.4361317595040246,
-            10.455416592064545
+            0.38576243881782124,
+            1.427925515454956,
+            0.56763937999365
           ],
-          "hash": "a8f80cdffacbe2b47020cc94bcb664a19854642cc9dbbeb51adabeb22de0a193",
+          "hash": "0ebf4084abac4796b970d4a76b0d53b01e42d185a518317fa1968d8e000e0a2f",
           "playing": true
         },
         {
-          "elapsed": 3.477,
-          "time": 3.063100000000002,
+          "elapsed": 3.154,
+          "time": 3.096700000000009,
           "camera": [
-            4.232340869890081,
-            3.4361317595040246,
-            11.349932577938723
+            0.3145473920811108,
+            1.427925515454956,
+            0.555955255204255
           ],
-          "hash": "e9a89c1b3ded5884f2c7b2a163a5d8e042b5233cffd4839b17fdc5564032a9f8",
+          "hash": "bd6816d6e67760f3571c47bf28b531b36b7b1197fbdcef6e623267742c3b4ca8",
           "playing": true
         },
         {
-          "elapsed": 4.486,
-          "time": 4.079799999999992,
+          "elapsed": 4.15,
+          "time": 4.096499999999999,
           "camera": [
-            3.835460043159072,
-            3.4361317595040246,
-            11.517294075108845
+            0.3010754191745946,
+            1.427925515454956,
+            0.5523704883918005
           ],
-          "hash": "9050d4275d62015fdd051b97af5c0c602143c0bcacb288015716595008db6371",
+          "hash": "b61c0b8b33a076429a21e9a955d02dd1cd19057fde7aee49251882370d1557be",
           "playing": true
         },
         {
-          "elapsed": 5.368,
-          "time": 4.963100000000004,
+          "elapsed": 5.049,
+          "time": 4.996500000000001,
           "camera": [
-            5.110308074203896,
-            3.4361317595040246,
-            10.915059938876546
+            0.3556450903858255,
+            1.427925515454956,
+            0.564153791203625
           ],
-          "hash": "d8d498727b0330858ccee2c02729e055b062acabeac1ad593cec3ddc8817273a",
+          "hash": "8475bb84dfdecf108bf6bacdbe8d3ec0cce0c8c1b7f0b824b8153a445dd15a65",
           "playing": true
         },
         {
-          "elapsed": 5.976,
-          "time": 0.5797000000000079,
+          "elapsed": 5.647,
+          "time": 0.5965000000000069,
           "camera": [
-            6.09427052601835,
-            3.4361317595040246,
-            10.309080059559612
+            0.3978667503332021,
+            1.427925515454956,
+            0.5684542559047365
           ],
-          "hash": "fb6f4201df4fbd128c7946457bdca601ba9cc4a55cdd30b54634bf92bd447e8c",
+          "hash": "0f0f10b3adc600e7d62eef20f1e65eddd76ed0171aa80c17863e5e0baa1b803f",
           "playing": true
         }
       ],
       "distinctFrames": 7,
       "cameraChanges": 7,
       "loopObserved": true,
-      "scope": "Sampled unpaused browser playback for more than one five-second cycle, with no seeking between samples.",
+      "scope": "Sampled unpaused browser playback for more than one five-second cycle, with no seeking between samples. Loop detection uses an actual decreasing-time boundary rather than assuming a screenshot lands before the boundary.",
       "pass": true
     },
     {
       "id": "leg",
       "frames": [
         {
-          "elapsed": 0.151,
-          "time": 0.016599999999998616,
+          "elapsed": 0.181,
+          "time": 0.016700000000001047,
           "camera": [
-            10.324825546611985,
-            6.154298330271068,
-            13.930548025278549
+            0.9537076806046855,
+            0.6786509199778119,
+            1.6626626506053717
           ],
-          "hash": "6ef7ce1e0971e7efa8703aa98150ece42d04d4408cd6f0ea919d5c5150f8e0f8",
+          "hash": "6132d47d5e471603d4c1d239b07be057258b079ad646906d8df3f751633f9823",
           "playing": true
         },
         {
-          "elapsed": 1.178,
-          "time": 1.0965000000000087,
+          "elapsed": 1.16,
+          "time": 1.0800000000000116,
           "camera": [
-            12.096699834386184,
-            6.154298330271068,
-            12.420625044779802
+            1.16004078807867,
+            0.6786509199778119,
+            1.5363298820705702
           ],
-          "hash": "a7e2b1662d6d0a7f61647d45e45e594dd2f7b89f2000f8e1875b56419c62ada5",
+          "hash": "4b0e56a31f3fe0175908500cb84a548d3bde5b343d715051d1397b26aba02a0c",
           "playing": true
         },
         {
-          "elapsed": 2.12,
-          "time": 2.0965000000000185,
+          "elapsed": 2.145,
+          "time": 2.080000000000023,
           "camera": [
-            11.207418133323854,
-            6.154298330271068,
-            13.229817926458066
+            1.0599600323127634,
+            0.6786509199778119,
+            1.6023556959454308
           ],
-          "hash": "cd8432892f2c2557d991012fde6649fb4c7ada3f49dd0a9af47522c3ece650a6",
+          "hash": "8079edd4faa68269e21ce49e4de469dbed55c00bd55af5ea99652aa95041e80f",
           "playing": true
         },
         {
-          "elapsed": 3.145,
-          "time": 3.096400000000008,
+          "elapsed": 3.146,
+          "time": 3.0800000000000054,
           "camera": [
-            8.909866289770875,
-            6.154298330271068,
-            14.876628643331738
+            0.7959833517202307,
+            0.6786509199778119,
+            1.735833747406854
           ],
-          "hash": "120d1083891256b1101cd8ca1c6c9aa9e0901314b353d72d4472b9035f8e00b9",
+          "hash": "2ae8dd37a819b080fad91f6d57f0f8c8a908ef05528de6ff8c1623e96c781b1b",
           "playing": true
         },
         {
-          "elapsed": 4.144,
-          "time": 4.096399999999996,
+          "elapsed": 4.146,
+          "time": 4.079899999999995,
           "camera": [
-            8.436478158216843,
-            6.154298330271068,
-            15.150462209597588
+            0.7371166202173778,
+            0.6786509199778119,
+            1.758586651648645
           ],
-          "hash": "83feebbc975d5c28c2b7d00f2f6a034bb5972fd9a5f631dbc88de80fae4f1e96",
+          "hash": "60ced9ce07d2262c082199922b33f730ddee3ab9233437024512d94e2264a1df",
           "playing": true
         },
         {
-          "elapsed": 5.02,
-          "time": 4.996400000000001,
+          "elapsed": 5.047,
+          "time": 4.979900000000001,
           "camera": [
-            10.275328649675236,
-            6.154298330271068,
-            13.967149600164966
+            0.9433191613455011,
+            0.6786509199778119,
+            1.668060735165869
           ],
-          "hash": "a35e5c78122549606876e1a6201c257dde7579466e6f6cfcda992efabe40f308",
+          "hash": "fa77185458bc3e183da0fb9ebb516cb7ffdc1e3110cdde5893897cf1975910b0",
           "playing": true
         },
         {
-          "elapsed": 5.638,
-          "time": 0.596400000000008,
+          "elapsed": 5.646,
+          "time": 0.5799000000000083,
           "camera": [
-            11.56497869024556,
-            6.154298330271068,
-            12.917939167571724
+            1.094743322559855,
+            0.6786509199778119,
+            1.5804810531373126
           ],
-          "hash": "7d42bfb353878cd92b60b3e88bd59b7731680ddcc679adfd37b0ac6cf9dff7a4",
+          "hash": "34f43f3274f5568c98f2d38b3648da9cfbf937c6d1c9e3a461898228fe1bfa0f",
           "playing": true
         }
       ],
       "distinctFrames": 7,
       "cameraChanges": 7,
       "loopObserved": true,
-      "scope": "Sampled unpaused browser playback for more than one five-second cycle, with no seeking between samples.",
+      "scope": "Sampled unpaused browser playback for more than one five-second cycle, with no seeking between samples. Loop detection uses an actual decreasing-time boundary rather than assuming a screenshot lands before the boundary.",
       "pass": true
     },
     {
       "id": "foot",
       "frames": [
         {
-          "elapsed": 0.149,
-          "time": 0.016599999999998616,
+          "elapsed": 0.202,
+          "time": 0.016700000000001047,
           "camera": [
-            4.138671739960784,
-            3.6912360558783197,
-            5.656894349518062
+            0.518127073737426,
+            0.2647312191107048,
+            0.576671666070961
           ],
-          "hash": "5f3f250178b1cd86586d403c27e0e3d288de0fd3635e6e75dad1960d6db99b28",
+          "hash": "a05685436395404962483084e7a0033784c36ed358fb08ead9daed837700f416",
           "playing": true
         },
         {
-          "elapsed": 1.12,
-          "time": 1.0965000000000042,
+          "elapsed": 1.166,
+          "time": 1.0967000000000127,
           "camera": [
-            4.80658783745111,
-            3.6912360558783197,
-            5.054575197704577
+            0.5795977051958786,
+            0.2647312191107048,
+            0.526871173758359
           ],
-          "hash": "9dbe3b09bd537316be4a114333f94906e6f9042442746df5ad46ce3550234e5d",
+          "hash": "d2eedc7b6a6a25351ebbd7ca992e5aba4726509014a5caa7fdb36bd94ee44cf1",
           "playing": true
         },
         {
-          "elapsed": 2.117,
-          "time": 2.096500000000006,
+          "elapsed": 2.152,
+          "time": 2.0799000000000234,
           "camera": [
-            4.4719258792003895,
-            3.6912360558783197,
-            5.376714626010254
+            0.5498591743562657,
+            0.2647312191107048,
+            0.5526759127245751
           ],
-          "hash": "182a90e417a3212b928f2111c52058ebcd8231c42c332346b2b2e5c4d4709dbe",
+          "hash": "2702fb83f56d3eb149c3af3f0c38e6cf1a5efdf9238e3947bd38f5b6945dcd27",
           "playing": true
         },
         {
-          "elapsed": 3.125,
-          "time": 3.096399999999992,
+          "elapsed": 3.153,
+          "time": 3.0965000000000114,
           "camera": [
-            3.602482008745522,
-            3.6912360558783197,
-            6.037595362754425
+            0.4692385805070329,
+            0.2647312191107048,
+            0.607629725495796
           ],
-          "hash": "ff16f44b12104a91946942900212ccec79d98082a26b41cdf77d0d7f2567a5f8",
+          "hash": "05f08c8cc3e550134b252940480857ba4df1a0f4f93c18a7366dd261ccb74a30",
           "playing": true
         },
         {
-          "elapsed": 4.181,
-          "time": 4.096399999999981,
+          "elapsed": 4.152,
+          "time": 4.096499999999999,
           "camera": [
-            3.4226320030368567,
-            3.6912360558783197,
-            6.148477342086518
+            0.45293403420742717,
+            0.2647312191107048,
+            0.6165277156614669
           ],
-          "hash": "e77cc9f096663491885688604db7ee4d06ea0ee6123c3ecc43aa8ed02307a932",
+          "hash": "24fc5eea7a02fa16dc2128c1867c16e0b29640af34410477ed580786e5f519e8",
           "playing": true
         },
         {
-          "elapsed": 5.05,
-          "time": 4.99639999999998,
+          "elapsed": 5.052,
+          "time": 4.996500000000008,
           "camera": [
-            4.119953210583039,
-            3.6912360558783197,
-            5.67156591654249
+            0.516414485687418,
+            0.2647312191107048,
+            0.5778734427718724
           ],
-          "hash": "cefa6f6921541783206a9bae726c32721004fde84a5f6a083c2dbbe91adaf730",
+          "hash": "8943f926d9f79d73d6c2d6b473023e321a6968bb64104d0a45ca2bf91101908f",
           "playing": true
         },
         {
-          "elapsed": 5.626,
-          "time": 0.5963999999999867,
+          "elapsed": 5.652,
+          "time": 0.5964000000000151,
           "camera": [
-            4.606632156646668,
-            3.6912360558783197,
-            5.252395247102401
+            0.5611090862419026,
+            0.2647312191107048,
+            0.543321252912555
           ],
-          "hash": "2a87f90dd251ade00532fdd4b63e6a7e421def792bbb9bde4d26158915a950c5",
+          "hash": "bd5177559016aa8eebf71922016d152d5dc8f3df67a8accc76cfb05089a826a6",
           "playing": true
         }
       ],
       "distinctFrames": 7,
       "cameraChanges": 7,
       "loopObserved": true,
-      "scope": "Sampled unpaused browser playback for more than one five-second cycle, with no seeking between samples.",
+      "scope": "Sampled unpaused browser playback for more than one five-second cycle, with no seeking between samples. Loop detection uses an actual decreasing-time boundary rather than assuming a screenshot lands before the boundary.",
       "pass": true
     }
   ],

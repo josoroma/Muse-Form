@@ -1,9 +1,9 @@
 import * as THREE from 'three';
 import { createCameraRig } from './runtime/camera-rig.mjs';
 import { createTransport } from './runtime/motion.mjs';
-import { createBody, createArm } from './upper-body.mjs';
-import { createHand } from './hand.mjs';
-import { createLeg, createFoot } from './lower-limb.mjs';
+import { loadCharacter } from './character/character.mjs';
+import { createBody, createArm, createHand, createLeg, createFoot } from './character/anatomy.mjs';
+import { createPortraitStudio } from '../expressions/studio.mjs';
 
 const $ = id => document.getElementById(id);
 const factories = { body: createBody, arm: createArm, hand: createHand, leg: createLeg, foot: createFoot };
@@ -18,20 +18,20 @@ const raycaster = new THREE.Raycaster(), pointer = new THREE.Vector2(), world = 
 let rig;
 
 try {
+  await loadCharacter();
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
   renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
-  renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.32;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
   renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.domElement.tabIndex = 0;
   renderer.domElement.setAttribute('aria-label', '3D anatomy. Drag to orbit, scroll to zoom, arrows to rotate, plus or minus to zoom, Home for overview.');
   $('canvas-host').append(renderer.domElement);
   renderer.domElement.addEventListener('webglcontextlost', event => { event.preventDefault(); transport.pause(); $('fallback').hidden = false; });
-  scene.add(new THREE.HemisphereLight(0xcce0df, 0x30312c, 2.1));
-  const key = new THREE.DirectionalLight(0xffedd5, 4.0); key.position.set(-7, 12, 9); scene.add(key);
-  key.castShadow = true; key.shadow.mapSize.set(2048, 2048); key.shadow.camera.left = -12; key.shadow.camera.right = 12; key.shadow.camera.top = 14; key.shadow.camera.bottom = -10; key.shadow.normalBias = .035; key.shadow.bias = -.00012;
-  const rim = new THREE.DirectionalLight(0x79afbc, 3.0); rim.position.set(7, 7, -6); scene.add(rim);
-  const fill = new THREE.DirectionalLight(0xb9c4f1, .65); fill.position.set(0, 4, 8); scene.add(fill);
+  const studio = createPortraitStudio(renderer, scene);
+  studio.key.position.set(-2.5, 3.8, 4.5); studio.key.target.position.set(0, .9, 0);
+  Object.assign(studio.key.shadow.camera, { left: -1.4, right: 1.4, top: 2, bottom: -1.4, near: .1, far: 12 });
+  studio.key.shadow.normalBias = .001; studio.key.shadow.bias = -.00004; studio.key.shadow.camera.updateProjectionMatrix();
   const stage = new THREE.Group(); scene.add(stage);
   const floor = new THREE.Mesh(new THREE.PlaneGeometry(100, 100), new THREE.ShadowMaterial({ opacity: .24 }));
   floor.rotation.x = -Math.PI / 2; floor.receiveShadow = true; floor.position.y = -.025; stage.add(floor);
@@ -40,7 +40,7 @@ try {
   const cross = new THREE.Group();stage.add(cross);
   for(const axis of [0,1]) {const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(axis?0:-1.3,0,axis?-1.3:0),new THREE.Vector3(axis?0:1.3,0,axis?1.3:0)]),new THREE.LineDashedMaterial({color:0x456059,transparent:true,opacity:.2,dashSize:.07,gapSize:.10}));line.computeLineDistances();cross.add(line);}cross.position.y=-.018;
   camera.position.set(12, 9, 20);
-  rig = createCameraRig(camera, renderer.domElement, { target:[0,4.5,0], radius:6, minDistance:1, maxDistance:60, reducedMotion:reduced.matches, onUserIntent: manual });
+  rig = createCameraRig(camera, renderer.domElement, { target:[0,.85,0], radius:1.3, minDistance:.10, maxDistance:12, reducedMotion:reduced.matches, onUserIntent: manual });
 
   function resize() {
     const { width, height } = $('viewport').getBoundingClientRect(); renderer.setSize(width, height, false); camera.aspect = width / height; camera.updateProjectionMatrix();
@@ -50,16 +50,16 @@ try {
   new ResizeObserver(resize).observe($('viewport'));
   function modelInfo(model) {
     model.group.updateMatrixWorld(true);
-    const bounds = new THREE.Box3().setFromObject(model.group), center = bounds.getCenter(new THREE.Vector3()), size = bounds.getSize(new THREE.Vector3());
+    const bounds = model.fullBounds || new THREE.Box3().setFromObject(model.group), center = bounds.getCenter(new THREE.Vector3()), size = bounds.getSize(new THREE.Vector3());
     return { bounds, center, size, radius: size.length() / 2 };
   }
-  function overview(duration = .7, makeManual = true) {
+  function overview(duration = .7, makeManual = true, viewDirection = null) {
     if(!active)return;
     if(makeManual) manual();
     const bounds=active.motionBounds||modelInfo(active).bounds;
     const center=bounds.getCenter(new THREE.Vector3()),size=bounds.getSize(new THREE.Vector3());
     const mobile=innerWidth<760;
-    const direction=new THREE.Vector3(...active.camera.position).sub(new THREE.Vector3(...active.camera.target)).normalize();
+    const direction=viewDirection?new THREE.Vector3(...viewDirection).normalize():new THREE.Vector3(...active.camera.position).sub(new THREE.Vector3(...active.camera.target)).normalize();
     // Fit the height and width independently, retaining useful space above the study.
     const right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),direction).normalize(),up=new THREE.Vector3().crossVectors(direction,right).normalize();
     const tanV=Math.tan(THREE.MathUtils.degToRad(camera.fov/2)),tanH=tanV*camera.aspect;
@@ -68,9 +68,9 @@ try {
       const d=new THREE.Vector3(x,y,z).sub(center),depth=d.dot(direction);
       distance=Math.max(distance,depth+Math.abs(d.dot(right))/tanH,depth+Math.abs(d.dot(up))/tanV);
     }
-    distance*=mobile?1.34:1.18;
+    distance*=mobile?1.34:study==='body'?1.08:1.18;
     const target=center.clone(); target.y+=size.y*(mobile?.06:.025);
-    camera.near=.03;camera.far=150;camera.updateProjectionMatrix();
+    camera.near=.005;camera.far=30;camera.updateProjectionMatrix();
     rig.controls.cursor.copy(target);rig.controls.maxTargetRadius=Math.max(2,size.length());
     rig.focus({position:target.clone().addScaledVector(direction,distance).toArray(),target:target.toArray(),duration});
     active.baseCamera={position:target.clone().addScaledVector(direction,distance),target};
@@ -85,7 +85,8 @@ try {
     camera.lookAt(base.target);camera.updateMatrixWorld();
   }
   function updateHighlight() {
-    for(const mesh of meshes) for(const mat of Array.isArray(mesh.material)?mesh.material:[mesh.material]) {
+    if(active.setSelection)active.setSelection(selected);
+    else for(const mesh of meshes) for(const mat of Array.isArray(mesh.material)?mesh.material:[mesh.material]) {
       if(!mat.userData.baseColor)continue;
       const isSelected=selected&&mesh.userData.partId===selected;
       mat.color.copy(mat.userData.baseColor);
@@ -113,10 +114,10 @@ try {
     }
     active.update(0);active.group.updateMatrixWorld(true);previousPoseTime=0;
     ({bounds:modelBounds,radius}=modelInfo(active));
-    floor.position.y=modelBounds.min.y-.025;ring.position.y=floor.position.y+.005;cross.position.y=floor.position.y+.006;
+    floor.position.y=.0005;ring.position.y=.001;cross.position.y=.0012;
     const span=Math.max(modelBounds.max.x-modelBounds.min.x,modelBounds.max.z-modelBounds.min.z)*.85;
     ring.scale.setScalar(span);cross.scale.setScalar(span);ring.position.x=cross.position.x=0;
-    meshes=[];active.group.traverse(obj=>{if(obj.isMesh){meshes.push(obj);obj.castShadow=obj.receiveShadow=true;for(const mat of Array.isArray(obj.material)?obj.material:[obj.material]){if(mat.color&&!mat.userData.baseColor)mat.userData.baseColor=mat.color.clone();}}});
+    meshes=active.pickingMeshes||[];active.group.traverse(obj=>{if(obj.isMesh){if(!active.pickingMeshes&&!obj.userData.surfaceOverlay)meshes.push(obj);obj.castShadow=!obj.userData.noShadow&&!obj.userData.noCastShadow&&!obj.userData.surfaceOverlay;obj.receiveShadow=!obj.userData.noShadow&&!obj.userData.surfaceOverlay;for(const mat of Array.isArray(obj.material)?obj.material:[obj.material]){if(mat.color&&!mat.userData.baseColor)mat.userData.baseColor=mat.color.clone();}}});
     $('scene-number').textContent=`STUDY ${String(keys.indexOf(id)+1).padStart(2,'0')} / ${active.subtitle.toUpperCase()}`;
     $('scene-title').textContent=active.title;
     document.querySelectorAll('[data-study]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.study===id)));
@@ -158,7 +159,7 @@ try {
       l.dot.setAttribute('cx',px);l.dot.setAttribute('cy',py);
       // Dim labels anchored behind the visible surface instead of claiming an exposed structure.
       const direction=world.clone().sub(camera.position),distance=direction.length();raycaster.set(camera.position,direction.normalize());
-      const hit=raycaster.intersectObjects(meshes,false)[0];const occluded=hit&&hit.distance<distance-radius*.025&&hit.object.userData.partId!==l.part.id;
+      const hit=raycaster.intersectObjects(meshes,false)[0];const hitId=hit&&(active.resolveHit?.(hit)||hit.object.userData.partId);const occluded=hit&&hit.distance<distance-.004&&hitId!==l.part.id;
       l.button.style.opacity=occluded?'.48':'1';l.path.style.opacity=occluded?'.25':'.7';
     }
   }
@@ -185,8 +186,8 @@ try {
   $('guided').onchange=()=>{if($('guided').checked){rig.cancelShot();cameraOwner='guided';$('camera-status').textContent='Guided view';overview(0,false);}else manual();render();};
   $('show-labels').onchange=()=>render();
   $('overview').onclick=()=>overview();$('zoom-in').onclick=()=>{rig.zoomBy(1.2);render();};$('zoom-out').onclick=()=>{rig.zoomBy(1/1.2);render();};
-  for(const [id,dir] of [['front',[0,.14,1]],['side',[1,.16,0]]])$(id).onclick=()=>{manual();const bounds=active.motionBounds||modelInfo(active).bounds,center=bounds.getCenter(new THREE.Vector3()),r=bounds.getSize(new THREE.Vector3()).length()/2;rig.fit({center:center.toArray(),radius:r*.90,direction:dir,duration:.7});};
-  $('focus').onclick=()=>{const part=active.parts.find(p=>p.id===selected);if(!part)return;manual();const bounds=new THREE.Box3().setFromObject(part.object),center=bounds.getCenter(new THREE.Vector3());const r=Math.max(.45,bounds.getSize(new THREE.Vector3()).length()*.55);rig.fit({center:center.toArray(),radius:Math.min(r,radius*.75),duration:.8});};
+  for(const [id,dir] of [['front',[0,.03,1]],['side',[1,.03,0]]])$(id).onclick=()=>overview(.7,true,dir);
+  $('focus').onclick=()=>{const part=active.parts.find(p=>p.id===selected);if(!part)return;manual();const bounds=part.getBounds?.()||new THREE.Box3().setFromObject(part.object),center=bounds.getCenter(new THREE.Vector3());const r=Math.max(.035,bounds.getSize(new THREE.Vector3()).length()*.55);rig.fit({center:center.toArray(),radius:Math.min(r,radius*.75),duration:.8});};
   $('clear-selection').onclick=()=>selectPart('');document.querySelectorAll('[data-study]').forEach(b=>b.onclick=()=>setStudy(b.dataset.study));
   $('about').onclick=()=>$('about-dialog').showModal();$('close-about').onclick=()=>$('about-dialog').close();
   let down;
@@ -194,7 +195,7 @@ try {
   renderer.domElement.addEventListener('pointerup',e=>{
     if(!down||Math.hypot(e.clientX-down.x,e.clientY-down.y)>5)return;
     const rect=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1);raycaster.setFromCamera(pointer,camera);
-    const hit=raycaster.intersectObjects(meshes,false).find(h=>h.object.userData.partId&&active.parts.some(p=>p.id===h.object.userData.partId));if(hit)selectPart(hit.object.userData.partId);
+    const hit=raycaster.intersectObjects(meshes,false)[0];const id=hit&&(active.resolveHit?.(hit)||hit.object.userData.partId);if(id&&active.parts.some(p=>p.id===id))selectPart(id);
   });
   renderer.domElement.addEventListener('keydown',e=>{
     if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)){e.preventDefault();manual();const offset=camera.position.clone().sub(rig.controls.target);if(e.key==='ArrowLeft'||e.key==='ArrowRight')offset.applyAxisAngle(new THREE.Vector3(0,1,0),e.key==='ArrowLeft'?-.12:.12);else offset.applyAxisAngle(new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld,0),e.key==='ArrowUp'?-.08:.08);camera.position.copy(rig.controls.target).add(offset);rig.controls.update();render();}

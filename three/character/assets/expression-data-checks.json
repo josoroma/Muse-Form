@@ -1,0 +1,167 @@
+{
+  "finite": true,
+  "allMorphCountsAgree": true,
+  "neutralDefaults": true,
+  "meshes": [
+    {
+      "mesh": "base",
+      "primitive": 0,
+      "exp_eyeBlinkLeft": {
+        "active": 747,
+        "maxMM": 12.613
+      },
+      "exp_jawOpen": {
+        "active": 2339,
+        "maxMM": 38.738
+      },
+      "exp_mouthSmileLeft": {
+        "active": 1697,
+        "maxMM": 18.682
+      },
+      "exp_browDownLeft": {
+        "active": 524,
+        "maxMM": 6.952
+      }
+    },
+    {
+      "mesh": "Eyebrows",
+      "primitive": 0,
+      "exp_eyeBlinkLeft": {
+        "active": 41,
+        "maxMM": 3.618
+      },
+      "exp_jawOpen": {
+        "active": 24,
+        "maxMM": 0.381
+      },
+      "exp_mouthSmileLeft": {
+        "active": 12,
+        "maxMM": 0.374
+      },
+      "exp_browDownLeft": {
+        "active": 83,
+        "maxMM": 5.529
+      }
+    },
+    {
+      "mesh": "Eyelashes",
+      "primitive": 0,
+      "exp_eyeBlinkLeft": {
+        "active": 65,
+        "maxMM": 15.521
+      },
+      "exp_jawOpen": {
+        "active": 0,
+        "maxMM": 0.0
+      },
+      "exp_mouthSmileLeft": {
+        "active": 58,
+        "maxMM": 0.245
+      },
+      "exp_browDownLeft": {
+        "active": 74,
+        "maxMM": 1.005
+      }
+    },
+    {
+      "mesh": "Eyes",
+      "primitive": 0,
+      "exp_eyeBlinkLeft": {
+        "active": 0,
+        "maxMM": 0.0
+      },
+      "exp_jawOpen": {
+        "active": 0,
+        "maxMM": 0.0
+      },
+      "exp_mouthSmileLeft": {
+        "active": 0,
+        "maxMM": 0.0
+      },
+      "exp_browDownLeft": {
+        "active": 0,
+        "maxMM": 0.0
+      }
+    },
+    {
+      "mesh": "Eyes",
+      "primitive": 1,
+      "exp_eyeBlinkLeft": {
+        "active": 0,
+        "maxMM": 0.0
+      },
+      "exp_jawOpen": {
+        "active": 0,
+        "maxMM": 0.0
+      },
+      "exp_mouthSmileLeft": {
+        "active": 0,
+        "maxMM": 0.0
+      },
+      "exp_browDownLeft": {
+        "active": 0,
+        "maxMM": 0.0
+      }
+    },
+    {
+      "mesh": "Eyes",
+      "primitive": 2,
+      "exp_eyeBlinkLeft": {
+        "active": 0,
+        "maxMM": 0.0
+      },
+      "exp_jawOpen": {
+        "active": 0,
+        "maxMM": 0.0
+      },
+      "exp_mouthSmileLeft": {
+        "active": 0,
+        "maxMM": 0.0
+      },
+      "exp_browDownLeft": {
+        "active": 0,
+        "maxMM": 0.0
+      }
+    },
+    {
+      "mesh": "Teeth",
+      "primitive": 0,
+      "exp_eyeBlinkLeft": {
+        "active": 0,
+        "maxMM": 0.0
+      },
+      "exp_jawOpen": {
+        "active": 2180,
+        "maxMM": 30.256
+      },
+      "exp_mouthSmileLeft": {
+        "active": 0,
+        "maxMM": 0.0
+      },
+      "exp_browDownLeft": {
+        "active": 0,
+        "maxMM": 0.0
+      }
+    },
+    {
+      "mesh": "Tongue",
+      "primitive": 0,
+      "exp_eyeBlinkLeft": {
+        "active": 0,
+        "maxMM": 0.0
+      },
+      "exp_jawOpen": {
+        "active": 253,
+        "maxMM": 28.144
+      },
+      "exp_mouthSmileLeft": {
+        "active": 0,
+        "maxMM": 0.0
+      },
+      "exp_browDownLeft": {
+        "active": 0,
+        "maxMM": 0.0
+      }
+    }
+  ]
+}
