@@ -28,6 +28,8 @@ Use hierarchical pivots for finger segments and rigid limb motion, with localize
 
 For the hand study, skin should remain continuous across the palm, knuckles and finger bends. Place nail plates within the distal dorsal beds, carried by the same joint deformation; check their borders against the surrounding skin through the grasp. Surface creases explain joints without exposing separate capsule seams.
 
+Inspect the lateral little digit from below and in profile. A toe root must enter the metatarsal volume and remain joined during heel rise; a pinky root must join the hypothenar side of the palm without a visible cap or floating cylinder. Check the user's screenshots to distinguish a little toe from a little finger, and preserve the established gesture while repairing the actual attachment.
+
 For full-body assembly, use explicit wrist/hip attachment anchors and check both sides after mirroring. Framing should include the union of the motion extremes, including depth in camera space, with room for labels. Test the moving scene before choosing its default camera.
 
 ## Labels and camera

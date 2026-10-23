@@ -35,8 +35,12 @@ try {
       await pose(t);const file=`${id}-${t===0?'rest':t===2.5?'peak':`t${t.toFixed(2)}`}.png`;
       await page.screenshot({path:resolve(dir,file),fullPage:true});frames.push({time:t,file});
     }
-    for(const view of ['front','side']){
-      await page.locator(`#${view}`).click();
+    for(const view of ['front','threequarter','side']){
+      await page.locator(`#${view==='threequarter'?'front':view}`).click();
+      if(view==='threequarter'){
+        await page.locator('canvas').focus();
+        for(let i=0;i<6;i++)await page.keyboard.press('ArrowRight');
+      }
       for(const t of [0,2.5]){await pose(t);const file=`${id}-${view}-${t===0?'rest':'peak'}.png`;await page.locator('#viewport').screenshot({path:resolve(dir,file)});}
     }
     await page.locator('#overview').click();
@@ -81,7 +85,7 @@ try {
   report.interactions.mobileLabelsInside=await mobile.evaluate(()=>{const r=document.getElementById('viewport').getBoundingClientRect(),labels=[...document.querySelectorAll('.annotation')].filter(b=>!b.hidden);return labels.length>=2&&labels.every(b=>{const q=b.getBoundingClientRect();return q.left>=r.left&&q.right<=r.right&&q.top>=r.top&&q.bottom<=r.bottom;});});
   await mobile.locator('[data-study="surprise"]').click();await mobile.evaluate(()=>atlas.seek(2.5));await mobile.screenshot({path:resolve(dir,'mobile-surprise.png'),fullPage:true});await mobile.close();
   report.interactions.onlyLocalRequests=requests.every(r=>r.startsWith(url)||r.startsWith('data:'));
-  report.sources={};for(const file of ['expressions/app.mjs','expressions/face.mjs','expressions/style.css','three/geometry.mjs'])report.sources[file]=createHash('sha256').update(await readFile(resolve(ROOT,file))).digest('hex');
+  report.sources={};for(const file of ['expressions/app.mjs','expressions/face.mjs','expressions/face-detail.mjs','expressions/studio.mjs','expressions/style.css','three/geometry.mjs'])report.sources[file]=createHash('sha256').update(await readFile(resolve(ROOT,file))).digest('hex');
   report.pass=report.scenes.every(s=>s.pass)&&Object.values(report.interactions).every(Boolean)&&errors.length===0;
   await writeFile(resolve(dir,'checks.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({interactions:report.interactions,errors,pass:report.pass},null,2));if(!report.pass)process.exitCode=1;
 } finally {await browser.close();await new Promise(resolve=>server.close(resolve));}

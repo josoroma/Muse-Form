@@ -1,54 +1,51 @@
 {
-  "bundle": "exports/form-and-muse-threejs.zip",
-  "expressions": [
-    {
-      "id": "joy",
-      "parts": 5,
-      "rendered": true
-    },
-    {
-      "id": "sadness",
-      "parts": 5,
-      "rendered": true
-    },
-    {
-      "id": "anger",
-      "parts": 5,
-      "rendered": true
-    },
-    {
-      "id": "fear",
-      "parts": 5,
-      "rendered": true
-    },
-    {
-      "id": "surprise",
-      "parts": 5,
-      "rendered": true
-    },
-    {
-      "id": "disgust",
-      "parts": 5,
-      "rendered": true
-    },
-    {
-      "id": "wink",
-      "parts": 5,
-      "rendered": true
-    },
-    {
-      "id": "laughter",
-      "parts": 5,
-      "rendered": true
-    }
-  ],
+  "checkedOn": "2026-10-23",
+  "unchangedSVGCount": 48,
+  "originalFORMBundlePreserved": true,
+  "priorCombinedBundleArchived": true,
+  "currentSourceHashesMatchChecksAndReviews": true,
+  "installedAndBundledModelSourcesMatch": true,
+  "noMP4InNewPackages": true,
+  "archiveCRCValid": true,
+  "extractedPath": "/var/folders/46/br4h6sv561q33ld7c_720shm0000gn/T/storytelling-release-v2-i5vb3l2i",
+  "bundle": {
+    "expressions": [
+      "joy",
+      "sadness",
+      "anger",
+      "fear",
+      "surprise",
+      "disgust",
+      "wink",
+      "laughter"
+    ],
+    "form": [
+      "hand",
+      "foot"
+    ],
+    "navigationToSVGGallery": true,
+    "galleryCount": 24
+  },
+  "installedSkill": {
+    "expressions": [
+      "joy",
+      "sadness",
+      "anger",
+      "fear",
+      "surprise",
+      "disgust",
+      "wink",
+      "laughter"
+    ],
+    "form": [
+      "hand",
+      "foot"
+    ],
+    "navigationToSVGGallery": true,
+    "galleryCount": 24
+  },
   "errors": [],
-  "bundleHand": true,
-  "bundleSvgGallery": true,
-  "portableSkillFace": true,
-  "portableSkillAnatomy": true,
-  "portableSkillSvg": true,
-  "galleryMobileNoOverflow": true,
-  "localRequestsOnly": true,
+  "badResponses": [],
+  "onlyLocalRequests": true,
   "pass": true
 }

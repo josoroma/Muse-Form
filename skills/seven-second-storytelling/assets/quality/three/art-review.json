@@ -33,20 +33,21 @@
     ],
     "mobileViewportWidth": 390,
     "method": "Inspected rendered pose frames and contact sheets, then seven screenshots sampled from unpaused browser playback per study across one loop boundary. Automated checks independently measure model geometry, camera, controls and layout. This is sampled self-review, not a continuous frame-by-frame or independent clinical validation.",
-    "revisionReview": "Rechecked all five studies in fresh unpaused playback contact sheets. Rechecked the revised hand at front/back/side, rest and peak, plus its attachment in the arm and full-body views. Earlier findings for the unchanged limb geometry are retained."
+    "revisionReview": "Rechecked all five studies in fresh unpaused playback samples. Inspected the repaired foot at front, lateral, medial, three-quarter and underside at rest/rise; inspected the ankle/leg and mirrored body attachments. Independently checked existing hand pinky from front, side and back through grasp; its continuous attachment was already sound and hand.mjs is unchanged."
   },
   "sources": {
     "three/app.mjs": "01e2b2962b4125b71de3dd342c5fa5765d9237fc248a1dec24e8546492d028a3",
     "three/geometry.mjs": "aa62a681ad55d4665ced401459c8aacf55fa72868aa1e09f89c25ab0c57c737d",
     "three/upper-body.mjs": "52dd687512f0770ff1b8cd90ee95e8826c60e73d2fa05dd0a1a76415e6983df6",
     "three/hand.mjs": "34eedb511671159c18d6840b7971da4cb34593d8b46dd638003dbd4989a40216",
-    "three/lower-limb.mjs": "27a5cc0d4571b452a306a375bbd369d10dc5f825464080b27a223b78097bb344"
+    "three/lower-limb.mjs": "ea692a0a9e1344c374aa16ac52e26b42def2e98b20a1c51a49b2fcf8e949fd4d"
   },
   "globalRepairs": [
     "Removed clipping from the anatomical structure button lists.",
     "Computed camera framing from the motion envelope including camera-space depth.",
     "Preserved explicit camera ownership: manual gestures stop guidance.",
-    "Front and Side frame the complete motion envelope, so an opening hand remains inside the view."
+    "Front and Side frame the complete motion envelope, so an opening hand remains inside the view.",
+    "Replaced separate toe root shells with one continuous forefoot/toe surface and shared normals, including the lateral fifth-toe attachment pictured by the user."
   ],
   "studies": [
     {
@@ -122,7 +123,8 @@
         "Shaped a metacarpal dome, graduated fingers and integrated nail beds.",
         "Smoothed joint bending through grasp and release and repaired semantic-region edge topology.",
         "Verified exact 0/5 geometry and normals, finite positions, independent instances and 0 unmatched surface edges.",
-        "Reviewed front/back/side silhouettes, mobile framing and arm/body attachments."
+        "Reviewed front/back/side silhouettes, mobile framing and arm/body attachments.",
+        "Rechecked the pinky attachment from front/back/lateral at rest and grasp; no detached root found and hand source preserved."
       ],
       "observations": "The digits curl through continuous joints, with a connected thumb web and palm. The nail beds sit within the finger surfaces. The soft grasp remains readable during the guided camera move.",
       "inspectedPoseFrames": [
@@ -155,7 +157,8 @@
       "repairsAndChecks": [
         "Rebuilt the lower ankle, Achilles, heel and instep as one continuous loft.",
         "Removed a folded forefoot transition and shortened disproportionate toes.",
-        "Kept the foot planted as the knee advances and the thigh loads."
+        "Kept the foot planted as the knee advances and the thigh loads.",
+        "Matched the revised fused foot surface and ankle normals to the existing shin."
       ],
       "observations": "The knee loading and recovery are visible, with a grounded foot and continuous ankle contour. Thigh and calf masses remain legible under the selected-region tint.",
       "inspectedPoseFrames": [
@@ -179,7 +182,8 @@
       "playbackContactSheet": "leg-live-contact.jpg",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true
+      "unpausedPlaybackPass": true,
+      "additionalEvidence": "revision-v3/"
     },
     {
       "id": "foot",
@@ -188,9 +192,12 @@
         "Replaced the intersecting ankle cylinder with a continuous ankle-to-foot surface.",
         "Repaired forefoot topology and toe proportions.",
         "Framed the union of animated poses in camera space, including depth, to avoid clipping.",
-        "Renamed the broad base selection Foot contour and chose Dorsum of foot as the default highlight."
+        "Renamed the broad base selection Foot contour and chose Dorsum of foot as the default highlight.",
+        "Fused all five toes and forefoot into a closed surface with zero unmatched mesh edges.",
+        "Removed the visible lateral toe gap and exposed root cap during heel rise.",
+        "Reprojected nail margins and joint creases onto the deforming skin; retained selectable regions and focused bounds."
       ],
-      "observations": "Heel rise is visible against the support circle; the forefoot and toe tips remain supported. Ankle and toes stay within the reviewed camera frames.",
+      "observations": "All five toes join the forefoot continuously in reviewed front, side, oblique and underside views. The little toe remains short, aligned and attached during heel rise. The shape is an illustrative surface model, not a scan.",
       "inspectedPoseFrames": [
         "foot-rest.png",
         "foot-t0.65.png",
@@ -212,7 +219,9 @@
       "playbackContactSheet": "foot-live-contact.jpg",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true
+      "unpausedPlaybackPass": true,
+      "additionalEvidence": "revision-v3/review.json",
+      "topologyAndTimingEvidence": "revision-v3/model-checks.json"
     }
   ],
   "limitations": [
@@ -222,6 +231,6 @@
     "The scene animation and camera are editable JavaScript, not exported FBX/GLB/BVH clips."
   ],
   "pass": true,
-  "reviewedOn": "2026-10-22",
-  "revision": "Continuous hand surface and shared FORM / MUSE navigation"
+  "reviewedOn": "2026-10-23",
+  "revision": "Continuous forefoot and toe roots; preserved hand geometry"
 }

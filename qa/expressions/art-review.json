@@ -1,11 +1,11 @@
 {
-  "edition": "MUSE \u2014 native Three.js facial expressions",
-  "reviewedOn": "2026-10-22",
+  "edition": "MUSE — reference-led native portrait revision 2",
+  "reviewedOn": "2026-10-23",
   "durationSeconds": 5,
   "reviewers": [
-    "Primary agent: pose, profile, mobile and unpaused playback sample review",
-    "Peer agent: all eight peak portraits, surprise profile, source wording and live scene review",
-    "Model author: repeated silhouette, surface, aperture and profile corrections"
+    "Primary agent: supplied reference comparison, all peak views, mobile framing and unpaused playback samples",
+    "Peer agent: all eight front/three-quarter/profile peaks on frozen source and live wink/laughter",
+    "Model author: repeated geometry repairs, exact endpoint validation and all eight six-pose sequences"
   ],
   "scope": {
     "authoredPoseTimes": [
@@ -30,22 +30,30 @@
       1080
     ],
     "mobileWidth": 390,
-    "method": "Reviewed rendered six-pose sequences, all eight front and profile peaks, mobile wink and surprise layouts, and seven screenshots from uninterrupted playback of each expression across a loop boundary. The final wink closure was inspected again after its targeted repair. Sampled visual review is not continuous frame-by-frame or clinical validation."
+    "method": "Reviewed all eight expressions at six authored times, front/three-quarter/profile rest and peaks, mobile wink/surprise layouts, and seven screenshots per expression sampled from uninterrupted browser playback across a loop boundary. Inspected the eyes, teeth, nose, hair boundary, jaw and ear/profile join closely. Source hashes refer to the final frozen modules. This is sampled visual review, not continuous frame-by-frame or clinical validation.",
+    "views": [
+      "front",
+      "three-quarter",
+      "profile"
+    ]
   },
   "sources": {
-    "expressions/app.mjs": "02317bee997454eb01b00b6d47e8112fec7d9b98c22d764be2d338e6ca486f26",
-    "expressions/face.mjs": "5ddccf38de0e9b8ae53e626121d3118ed5b879d68d1a03e57c4359c32651f14f",
+    "expressions/app.mjs": "50d93efb3ecc853f25602cb2122dd783d6c84807d3c04a60b02e43f55e679cdc",
+    "expressions/face.mjs": "818b210672e02b5bfaf0e6de14f647f820f26005e6d5a06368466cb25baf2ae7",
+    "expressions/face-detail.mjs": "94cbd87f3c37aa86b768e919b7d1dcd83bf577f35b5d4ac4f3dfd34c33cf45a1",
+    "expressions/studio.mjs": "d34b2e1a1e9561599fe1f9a504b0c2bbf911889a6bd51a1384f3cd88ac048d45",
     "expressions/style.css": "139850d4f1ed7b73a1381fcb2aafffa29b36431e5fce91471080969a3b047dc2",
     "three/geometry.mjs": "aa62a681ad55d4665ced401459c8aacf55fa72868aa1e09f89c25ab0c57c737d"
   },
   "repairs": [
-    "Smoothed adaptive facial surface normals and removed visible shading bands.",
-    "Refined the crown, brow orientation, eye rims, chin and hair silhouette.",
-    "Deformed the rear jaw shell and upper neck with the front face to close the profile gap during jaw opening.",
-    "Recessed and smoothed the dental arc; hid it for the rounded surprise aperture.",
-    "Repaired the fully closed wink boundary with a joined lid surface and clean crease.",
-    "Balanced portrait lighting and framed the portrait consistently in desktop, mobile, front and profile views.",
-    "Measured actual eyelid aperture and visibility; labeled jaw movement as an authored release percentage."
+    "Reshaped the facial silhouette, rounded chin, cheek planes, nasal bridge and tip while keeping one neutral identity.",
+    "Reduced resting eye aperture, modeled eyelid rims, added hazel irises, fine brows and lashes that follow eye closure.",
+    "Added volumetric rose lips, individual upper tooth crowns, separated nostril apertures and a sculpted ear concha.",
+    "Removed dental protrusions and hid the upper crowns in the rounded surprise aperture.",
+    "Repaired the jagged side-head seam by resolving surface derivatives at the oval boundary.",
+    "Rebuilt swept brunette hair with a low bun, fine native strands and face-framing tendrils; removed the old rectangular lower hair edge.",
+    "Added rest-anchored skin/lip microdetail and restrained color variation, plus a local softbox environment and portrait lights.",
+    "Refined neck taper, collar closure and portrait framing for desktop and mobile."
   ],
   "studies": [
     {
@@ -57,7 +65,8 @@
       "profilePeak": "joy-side-peak.png",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true
+      "unpausedPlaybackPass": true,
+      "threeQuarterPeak": "joy-threequarter-peak.png"
     },
     {
       "id": "sadness",
@@ -68,7 +77,8 @@
       "profilePeak": "sadness-side-peak.png",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true
+      "unpausedPlaybackPass": true,
+      "threeQuarterPeak": "sadness-threequarter-peak.png"
     },
     {
       "id": "anger",
@@ -79,7 +89,8 @@
       "profilePeak": "anger-side-peak.png",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true
+      "unpausedPlaybackPass": true,
+      "threeQuarterPeak": "anger-threequarter-peak.png"
     },
     {
       "id": "fear",
@@ -90,18 +101,20 @@
       "profilePeak": "fear-side-peak.png",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true
+      "unpausedPlaybackPass": true,
+      "threeQuarterPeak": "fear-threequarter-peak.png"
     },
     {
       "id": "surprise",
       "acceptedForIllustratedExplorer": true,
-      "observations": "The rounded mouth opening and raised brows remain readable from the front and profile; the jaw remains connected to the back of the head.",
+      "observations": "Raised brows, widened apertures and a rounded mouth distinguish surprise. Upper crowns remain hidden in this pose; the jaw and rear head stay joined in profile.",
       "poseContactSheet": "surprise-contact.jpg",
       "playbackContactSheet": "surprise-live-contact.jpg",
       "profilePeak": "surprise-side-peak.png",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true
+      "unpausedPlaybackPass": true,
+      "threeQuarterPeak": "surprise-threequarter-peak.png"
     },
     {
       "id": "disgust",
@@ -112,7 +125,8 @@
       "profilePeak": "disgust-side-peak.png",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true
+      "unpausedPlaybackPass": true,
+      "threeQuarterPeak": "disgust-threequarter-peak.png"
     },
     {
       "id": "wink",
@@ -123,24 +137,41 @@
       "profilePeak": "wink-side-peak.png",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true
+      "unpausedPlaybackPass": true,
+      "threeQuarterPeak": "wink-threequarter-peak.png"
     },
     {
       "id": "laughter",
       "acceptedForIllustratedExplorer": true,
-      "observations": "The jaw opens more broadly than joy, with raised cheeks, narrowing eyes and a slight head lift.",
+      "observations": "Lifted cheeks and narrowed lids accompany the broad mouth opening. Individual upper teeth remain behind the lips and do not emerge through the chin in reviewed views.",
       "poseContactSheet": "laughter-contact.jpg",
       "playbackContactSheet": "laughter-live-contact.jpg",
       "profilePeak": "laughter-side-peak.png",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true
+      "unpausedPlaybackPass": true,
+      "threeQuarterPeak": "laughter-threequarter-peak.png"
     }
   ],
   "limitations": [
     "An original stylized adult woman, not a scanned or photorealistic portrait.",
     "Expression presets are authored acting interpretations, not emotion recognition or diagnostic facial analysis.",
-    "Surface deformations illustrate feature coordination; they do not simulate individual biological muscle fibers."
+    "Surface deformations illustrate feature coordination; they do not simulate individual biological muscle fibers.",
+    "Fine skin and hair detail are generated from native geometry and shaders; no photographs or image planes supply the rendered character."
   ],
-  "pass": true
+  "pass": true,
+  "appearanceReferences": [
+    "User-supplied paired laughter front/profile portrait, 23 October 2026",
+    "User-supplied paired surprise front/profile portrait, 23 October 2026"
+  ],
+  "referenceMatch": {
+    "status": "Improved stylized interpretation; does not reach the supplied references’ lifelike cinematic finish.",
+    "remainingDifferences": [
+      "Simplified smooth facial planes and skin response.",
+      "Regular procedural hair groom and graphic lip edges.",
+      "Simplified ear and neck forms."
+    ],
+    "claim": "Accepted as a functioning illustrated expression explorer, not certified as photorealistic or an exact likeness."
+  },
+  "passMeaning": "No unresolved runtime, attachment, occlusion or loop defect found in the stated sample scope; this is not a photorealism score."
 }

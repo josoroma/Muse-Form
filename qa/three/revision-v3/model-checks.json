@@ -1,0 +1,83 @@
+{
+  "sources": {
+    "three/lower-limb.mjs": "ea692a0a9e1344c374aa16ac52e26b42def2e98b20a1c51a49b2fcf8e949fd4d",
+    "three/hand.mjs": "34eedb511671159c18d6840b7971da4cb34593d8b46dd638003dbd4989a40216"
+  },
+  "models": [
+    {
+      "name": "foot",
+      "buildMs": 3211.6465000000003,
+      "uniqueVertices": 38566,
+      "triangles": 77128,
+      "finite": true,
+      "exactEndpoint": true,
+      "reverseSeek": true,
+      "motion": true,
+      "medianUpdateMs": 1.153291999999965,
+      "p95UpdateMs": 1.292084000000159
+    },
+    {
+      "name": "leg",
+      "buildMs": 3080.9735000000005,
+      "uniqueVertices": 47548,
+      "triangles": 93972,
+      "finite": true,
+      "exactEndpoint": true,
+      "reverseSeek": true,
+      "motion": true,
+      "medianUpdateMs": 8.297083000000384,
+      "p95UpdateMs": 8.560625000000073
+    },
+    {
+      "name": "body",
+      "buildMs": 4281.636458,
+      "uniqueVertices": 354367,
+      "triangles": 475012,
+      "finite": true,
+      "exactEndpoint": true,
+      "reverseSeek": true,
+      "motion": true,
+      "medianUpdateMs": 26.116541999999754,
+      "p95UpdateMs": 28.369124999999258
+    }
+  ],
+  "footTopology": {
+    "edges": 115692,
+    "unmatched": 0
+  },
+  "cachedFootBuildMs": 15.992749999999887,
+  "independentInstances": true,
+  "pass": true,
+  "distalPadContact": [
+    {
+      "toe": 1,
+      "contactVertices": 16,
+      "maxDisplacement": 0.0000033423224836825003,
+      "minimumPadHeight": 0.01738280989229679
+    },
+    {
+      "toe": 2,
+      "contactVertices": 22,
+      "maxDisplacement": 1.6727549033706612e-7,
+      "minimumPadHeight": 0.014389850199222565
+    },
+    {
+      "toe": 3,
+      "contactVertices": 18,
+      "maxDisplacement": 0.00004926206755619368,
+      "minimumPadHeight": 0.014858776703476906
+    },
+    {
+      "toe": 4,
+      "contactVertices": 15,
+      "maxDisplacement": 0.000736373534150054,
+      "minimumPadHeight": 0.014041779562830925
+    },
+    {
+      "toe": 5,
+      "contactVertices": 14,
+      "maxDisplacement": 0.015892370002562724,
+      "minimumPadHeight": 0.012472419999539852
+    }
+  ]
+}

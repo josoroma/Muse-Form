@@ -40,6 +40,8 @@ Keep eyelids in contact with the eyeball as their aperture changes. A closed eye
 
 ## Three.js references
 
+The 23 October 2026 portrait revision uses the user's two supplied paired front/profile images (laughter and surprise) as its primary appearance references. Their warm complexion, oval facial proportions, hazel eyes, swept brunette hair, gathered bun and green crewneck guide the authored geometry and materials. The references are not embedded as image planes or redistributed in this corpus. All views and expressions share one modeled identity.
+
 The local engine is pinned to **Three.js 0.186.1**. Original JavaScript supplies the portrait geometry and expression poses; no external portrait mesh, textbook illustration or photographed face is reproduced.
 
 - [BufferGeometry](https://threejs.org/docs/pages/BufferGeometry.html) documents vertex data, morph attributes, normals and bounds. Deformation needs appropriate normal and bound updates.

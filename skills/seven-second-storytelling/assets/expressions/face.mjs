@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {createPortraitMaterials, createHair, createFeatureHairs, captureRestPositions} from './face-detail.mjs';
 
 /**
  * An original procedural portrait. The face is a continuous, locally sculpted
@@ -22,8 +23,10 @@ const smooth = t => { t = clamp(t, 0, 1); return t * t * (3 - 2 * t); };
 const gauss = (x, m, s) => Math.exp(-(((x - m) / s) ** 2));
 const skinColor = 0xc4aca0;
 const tau = Math.PI * 2;
-const EYE_Y = 3.79, EYE_X = .435, EYE_W = .305, MOUTH_Y = 2.925, MOUTH_W = .365;
-const WIDTHS = [[2.15,.14],[2.23,.36],[2.39,.59],[2.62,.78],[2.90,.90],[3.20,1.01],[3.52,1.06],[3.86,1.055],[4.20,1.02],[4.52,.96],[4.80,.79],[5.04,.46],[5.15,.025]];
+const EYE_Y = 3.79, EYE_X = .435, EYE_W = .25, MOUTH_Y = 2.94, MOUTH_W = .375;
+const WIDTHS = [[2.15,.20],[2.23,.36],[2.39,.55],[2.62,.72],[2.90,.84],[3.20,.97],[3.48,1.055],[3.72,1.045],[3.98,1.005],[4.22,1.015],[4.52,.965],[4.80,.79],[5.04,.46],[5.15,.025]];
+const DEPTHS = [[2.15,.05],[2.30,.25],[2.50,.53],[2.72,.64],[2.95,.65],[3.20,.64],[3.48,.64],[3.79,.68],[4.10,.72],[4.52,.69],[4.80,.48],[5.15,.02]];
+const NOSE = [[3.12,0],[3.20,.075],[3.27,.30],[3.35,.39],[3.43,.34],[3.62,.235],[3.82,.175],[4.04,.07],[4.20,0]];
 
 function profile(y, rows=WIDTHS) {
   let i = 0; while (i < rows.length - 2 && y > rows[i+1][0]) i++;
@@ -33,17 +36,26 @@ function profile(y, rows=WIDTHS) {
 }
 function front(x,y) {
   const w=profile(y), edge=Math.sqrt(Math.max(0,1-(x/w)**2));
-  const taper=1-.72*(1-smooth((y-2.15)/.52))-.94*smooth((y-4.52)/.63);
-  const base=.055 + (.67+.05*gauss(y,4.4,.6))*edge*taper;
+  const base=.055+profile(y,DEPTHS)*edge;
   let z=base;
-  z += .15*gauss(x,0,.33)*gauss(y,2.39,.25); // chin pad
-  z += .102*(gauss(x,.56,.33)+gauss(x,-.56,.33))*gauss(y,3.43,.35); // malar planes
-  z -= .09*(gauss(x,EYE_X,.30)+gauss(x,-EYE_X,.30))*gauss(y,EYE_Y,.22); // orbital recesses
-  z += .18*gauss(x,0,.145)*gauss(y,3.76,.43); // nasal bridge
-  z += .265*gauss(x,0,.17)*gauss(y,3.38,.22); // nose tip blended into bridge
-  z += .065*(gauss(x,.17,.10)+gauss(x,-.17,.10))*gauss(y,3.30,.115); // nose wings
-  z += .045*gauss(x,0,.12)*gauss(y,3.09,.13);
-  z += .055*gauss(x,0,.45)*gauss(y,MOUTH_Y,.18);
+  z += .125*gauss(x,0,.35)*gauss(y,2.47,.19); // rounded mental prominence
+  z += .155*(gauss(x,.61,.30)+gauss(x,-.61,.30))*gauss(y,3.43,.30); // forward malar planes
+  z -= .035*(gauss(x,.66,.24)+gauss(x,-.66,.24))*gauss(y,3.02,.23); // quiet buccal hollow
+  z += .035*(gauss(x,.44,.31)+gauss(x,-.44,.31))*gauss(y,4.04,.14); // supraorbital ridge
+  // A narrow nasal bridge, projecting rounded tip, separate alae and columella.
+  const nasalWidth=.104+.055*gauss(y,3.36,.17);
+  if(y>3.12&&y<4.20)z+=profile(y,NOSE)*smooth((y-3.12)/.08)*smooth((4.20-y)/.10)*gauss(x,0,nasalWidth);
+  z += .115*(gauss(x,.17,.095)+gauss(x,-.17,.095))*gauss(y,3.285,.105);
+  z += .075*gauss(x,0,.060)*gauss(y,3.225,.10);
+  z += .045*gauss(x,0,.17)*gauss(y,3.17,.085);
+  // Orbital skin follows the globe; the rims have volume rather than an outline.
+  for(const side of[-1,1]){
+    const dx=x-side*EYE_X,dy=y-EYE_Y;
+    z+=.052*gauss(dx,0,.31)*gauss(dy,0,.24);
+  }
+  z += .025*(gauss(x,.065,.04)+gauss(x,-.065,.04))*gauss(y,3.105,.115); // philtral columns
+  z -= .012*gauss(x,0,.04)*gauss(y,3.095,.10);
+  z += .050*gauss(x,0,.39)*gauss(y,MOUTH_Y,.18); // orbicular muzzle volume
   // Every sculpted landmark returns to the shared side boundary. Without this
   // compact fade, the chin pad would leave a slit against the posterior shell.
   return base+(z-base)*smooth(edge*4);
@@ -82,27 +94,29 @@ function setLine(l,sample) {
 
 function eyeEdge(side,t,upper) {
   const x=side*EYE_X+(t*2-1)*EYE_W;
-  const s=Math.pow(Math.sin(Math.PI*t),.83), cant=(t*2-1)*side*.022;
-  return [x,EYE_Y+cant+(upper?.105:-.068)*s];
+  const u=side>0?t:1-t, s=Math.pow(Math.sin(Math.PI*t),.83), cant=(u*2-1)*.023;
+  return [x,EYE_Y+cant+(upper?.095:-.065)*s*(upper?1+.13*Math.cos(Math.PI*u):1)];
 }
 function mouthEdge(t,upper) {
   const u=t*2-1,x=u*MOUTH_W,s=Math.max(0,1-u*u);
-  const cupid=.014*gauss(Math.abs(u),.28,.18)-.004*gauss(u,0,.15);
-  return [x,MOUTH_Y+(upper?.014*s+cupid:-.015*s)];
+  const cupid=.008*gauss(Math.abs(u),.28,.20)-.004*gauss(u,0,.16);
+  return [x,MOUTH_Y+(upper?.010*s+cupid:-.010*s)];
 }
+function nostrilEdge(side,t){const a=t*tau,x=side*(.145+.041*Math.cos(a)),y=3.247+.016*Math.sin(a)+side*.10*(x-side*.133);return[x,y];}
 function pointInEye(x,y) { return Math.abs(x)> .12&&Math.abs(x)<.76&&Math.abs(y-EYE_Y)<.16; }
 
-/** Triangulate the skin with three real apertures, then refine its interior. */
+/** Triangulate the skin with real eye, mouth and nostril apertures, then refine its interior. */
 function faceTopology() {
   const shape=new THREE.Shape(), outline=[];
-  for(let i=0;i<=80;i++){const y=2.15+3*i/80;outline.push(new THREE.Vector2(profile(y),y));}
-  for(let i=80;i>=0;i--){const y=2.15+3*i/80;outline.push(new THREE.Vector2(-profile(y),y));}
+  for(let i=0;i<=80;i++){const y=2.30+2.85*i/80;outline.push(new THREE.Vector2(profile(y),y));}
+  for(let i=80;i>=0;i--){const y=2.30+2.85*i/80;outline.push(new THREE.Vector2(-profile(y),y));}
   shape.setFromPoints(outline);
   for(const side of [-1,1]){
     const pts=[];for(let i=0;i<=30;i++)pts.push(new THREE.Vector2(...eyeEdge(side,i/30,true)));for(let i=29;i>=1;i--)pts.push(new THREE.Vector2(...eyeEdge(side,i/30,false)));
     shape.holes.push(new THREE.Path(pts));
   }
   const mouth=[];for(let i=0;i<=40;i++)mouth.push(new THREE.Vector2(...mouthEdge(i/40,true)));for(let i=39;i>=1;i--)mouth.push(new THREE.Vector2(...mouthEdge(i/40,false)));shape.holes.push(new THREE.Path(mouth));
+  for(const side of[-1,1])shape.holes.push(new THREE.Path(Array.from({length:40},(_,i)=>new THREE.Vector2(...nostrilEdge(side,i/40)))));
   const raw=new THREE.ShapeGeometry(shape), rawP=raw.attributes.position, rawI=raw.index.array;
   const points=[],map=new Map();let indices=[];
   function add(p){const key=p.map(x=>x.toFixed(6)).join(',');if(!map.has(key)){map.set(key,points.length);points.push(p);}return map.get(key);}
@@ -114,7 +128,7 @@ function faceTopology() {
     const mids=new Map();
     for(let i=0;i<indices.length;i+=3)for(let k=0;k<3;k++){
       const a=indices[i+k],b=indices[i+(k+1)%3],pa=points[a],pb=points[b],edgeKey=key(a,b);
-      if(!mids.has(edgeKey)&&(pa[0]-pb[0])**2+(pa[1]-pb[1])**2>.065**2)mids.set(edgeKey,add([(pa[0]+pb[0])/2,(pa[1]+pb[1])/2]));
+      if(!mids.has(edgeKey)&&(pa[0]-pb[0])**2+(pa[1]-pb[1])**2>((pa[1]+pb[1])*.5>2.75&&(pa[1]+pb[1])*.5<4.18&&Math.abs((pa[0]+pb[0])*.5)<.85?.038:.065)**2)mids.set(edgeKey,add([(pa[0]+pb[0])/2,(pa[1]+pb[1])/2]));
     }
     if(!mids.size)break;
     const next=[];
@@ -142,7 +156,7 @@ export function createFace(expressionId='joy') {
   if(!EXPRESSIONS[expressionId])expressionId='joy';
   const spec=EXPRESSIONS[expressionId],group=new THREE.Group();group.name=`Portrait · ${expressionId}`;
   const bust=new THREE.Group(),head=new THREE.Group();group.add(bust,head);
-  const skin=mat(skinColor),hairMat=mat(0x302b2b,.88),browMat=mat(0x51413c,.88),lipMat=mat(0x9c6c66,.68),eyeWhite=mat(0xcac1b0,.5),irisMat=mat(0x60746a,.55),pupilMat=mat(0x171d1b,.44);
+  const materials=createPortraitMaterials(),skin=materials.skin,browMat=mat(0x49332b,.88),lipMat=materials.lip,eyeWhite=materials.sclera,irisMat=materials.iris,pupilMat=materials.pupil;
   const regions={brow:new THREE.Group(),eyes:new THREE.Group(),cheeks:new THREE.Group(),mouth:new THREE.Group(),jaw:new THREE.Group()};Object.values(regions).forEach(r=>head.add(r));
   const parts=[];
   function part(id,name,description,location){const a=new THREE.Object3D();a.position.fromArray(location);regions[id].add(a);parts.push({id,name,description,object:regions[id],anchor:a});}
@@ -154,48 +168,39 @@ export function createFace(expressionId='joy') {
 
   // A quiet clothed shoulder base and a neck that enters beneath the jaw.
   const garment=reverse(gridGeometry(96,45)),cloth=mat(0x425956,.94);
-  const dressRows=[[0,1.42],[.12,1.75],[.45,1.93],[.76,1.83],[1.05,1.42],[1.30,.91],[1.55,.47],[1.62,.425]];
-  setGrid(garment,96,45,(u,v)=>{const y=v*1.62,w=profile(y,dressRows),a=u*tau;return[w*Math.cos(a),y,.025+(.40+.21*(1-v))*Math.sin(a)];});makeMesh(bust,garment,cloth);
-  const neck=reverse(gridGeometry(72,32));setGrid(neck,72,32,(u,v)=>{const y=1.55+v*1.16,w=.39+.09*v+.04*Math.sin(v*Math.PI),a=u*tau;return[w*Math.cos(a),y,-.09+.36*Math.sin(a)];});makeMesh(bust,neck,skin.clone());
-  const neckline=line(bust,0x8a9c90,.5);setLine(neckline,t=>{const a=t*tau;return[.426*Math.cos(a),1.62,.025+.40*Math.sin(a)];});
+  const dressRows=[[0,1.42],[.12,1.75],[.45,1.93],[.76,1.83],[1.05,1.42],[1.30,.91],[1.55,.55],[1.62,.50]];
+  setGrid(garment,96,45,(u,v)=>{const y=v*1.62,w=profile(y,dressRows),a=u*tau;return[w*Math.cos(a),y,.025-.14*v*v+(.44+.17*(1-v))*Math.sin(a)];});makeMesh(bust,garment,cloth);
+  const neck=reverse(gridGeometry(72,32));setGrid(neck,72,32,(u,v)=>{const y=1.55+v*1.16,w=.440+.012*v+.060*Math.exp(-v*5)-.032*Math.sin(Math.PI*v),a=u*tau;const x=w*Math.cos(a),tendon=.013*(gauss(x,.24+.14*v,.07)+gauss(x,-.24-.14*v,.07))*Math.max(0,Math.sin(a))*Math.sin(Math.PI*v);return[x,y,-.10+(.36-.015*v-.025*Math.sin(Math.PI*v))*Math.sin(a)+tendon];});makeMesh(bust,neck,skin.clone());
+  const collar=reverse(gridGeometry(72,5));setGrid(collar,72,5,(u,v)=>{const a=u*tau,w=THREE.MathUtils.lerp(.500,.475,v),d=THREE.MathUtils.lerp(.44,.352,v);return[w*Math.cos(a),1.619-.025*v,-.115+d*Math.sin(a)];});makeMesh(bust,collar,cloth.clone());
+  const neckline=line(bust,0x8a9c90,.5);setLine(neckline,t=>{const a=t*tau;return[.501*Math.cos(a),1.62,-.115+.44*Math.sin(a)];});
 
   const topo=faceTopology(),whole=topo.geometry;
   const buckets={cheeks:[],jaw:[]};for(let i=0;i<topo.indices.length;i+=3){const yy=(topo.points[topo.indices[i]][1]+topo.points[topo.indices[i+1]][1]+topo.points[topo.indices[i+2]][1])/3;buckets[yy<2.69?'jaw':'cheeks'].push(...topo.indices.slice(i,i+3));}
   const faceMeshes=[];for(const [id,indices]of Object.entries(buckets)){const g=new THREE.BufferGeometry();g.setAttribute('position',whole.attributes.position);g.setAttribute('normal',whole.attributes.normal);g.setIndex(indices);faceMeshes.push(makeMesh(regions[id],g,skin.clone(),id));}
-  const back=gridGeometry(96,80);setGrid(back,96,80,(u,v)=>{const y=2.15+3*v,w=profile(y),a=Math.PI/2+u*Math.PI;return[w*Math.sin(a),y,.055+.86*Math.cos(a)*Math.sqrt(Math.max(0,1-((y-3.65)/1.55)**2))];});makeMesh(head,back,skin.clone());
+  const back=gridGeometry(96,80);setGrid(back,96,80,(u,v)=>{const y=2.30+2.85*v,w=profile(y),a=Math.PI/2+u*Math.PI;return[w*Math.sin(a),y,.055+.86*Math.cos(a)*Math.sqrt(Math.max(0,1-((y-3.65)/1.55)**2))];});makeMesh(head,back,skin.clone());
   const backRest=Float32Array.from(back.attributes.position.array),neckRest=Float32Array.from(neck.attributes.position.array);
 
-  // Ears are restrained volumes behind the cheek silhouette, with one helix line.
+  // The helix, concha, antihelix and soft lobe are one sculpted auricular surface.
   for(const side of [-1,1]){
-    const ear=makeMesh(head,new THREE.SphereGeometry(1,40,30),skin.clone());ear.position.set(side*1.035,3.53,.025);ear.scale.set(.19,.32,.12);ear.rotation.z=-side*.12;
-    const helix=line(head,0x866f65,.42);setLine(helix,t=>{const a=-1.3+t*4.9;return[side*(1.06+.105*Math.cos(a)),3.54+.232*Math.sin(a),.117];});
+    const ear=gridGeometry(96,32);if(side<0)reverse(ear);
+    setGrid(ear,96,32,(u,v)=>{
+      const a=u*tau,r=v,y=3.49+(.315+.015*Math.sin(a))*r*Math.sin(a),z=-.035+.173*r*Math.cos(a)+.025*Math.sin(a);
+      const yy=y-3.49,zz=z+.035;
+      const rim=.079*gauss(r,.83,.13)*(1-.23*gauss(a,Math.PI*1.5,.5));
+      const antihelix=.034*gauss(zz,-.034+.035*Math.sin(yy*5),.033)*gauss(yy,.025,.23);
+      const fork=.026*gauss(zz,.015+.32*Math.max(0,yy),.035)*gauss(yy,.16,.12);
+      const concha=-.026*gauss(zz,.045,.065)*gauss(yy,-.055,.105),lobe=.022*gauss(a,Math.PI*1.5,.65)*gauss(r,.75,.28);
+      const x=side*(1.01+(.055+rim+antihelix+fork+concha+lobe)*smooth((1-r)/.13));return[x,y,z];
+    });makeMesh(head,ear,skin.clone());
+    const tragus=makeMesh(head,new THREE.SphereGeometry(1,24,18),skin.clone());tragus.position.set(side*1.097,3.45,.087);tragus.scale.set(.040,.074,.040);
   }
 
-  // One swept scalp cap. The uneven front hairline and curved comb paths retain
-  // a sculptural silhouette without hundreds of noisy individual strands.
-  function hairPoint(u,v){
-    const a=u*tau,s=Math.sin(a),c=Math.cos(a),frontness=Math.max(0,c);
-    const bottom=2.62+1.98*Math.pow(frontness,.72)+.055*s*frontness;
-    const y=5.24-(5.24-bottom)*v;
-    const shape=Math.sqrt(Math.max(.0001,1-((y-3.68)/1.60)**2));
-    const width=1.14*shape+.035*Math.sin(Math.PI*v),depth=.94*shape;
-    const x=width*s;
-    const z=c>0&&y<=5.15&&Math.abs(x)<profile(y)?Math.max(.015+depth*c,front(x,y)+.035):.015+depth*c;
-    return[x,y,z];
-  }
-  const hair=reverse(gridGeometry(144,64));setGrid(hair,144,64,hairPoint);makeMesh(head,hair,hairMat);
-  // A gathered low bun completes the back view, with no hair crossing the eyes.
-  const bun=makeMesh(head,new THREE.SphereGeometry(1,56,40),hairMat.clone());bun.position.set(.08,3.10,-.91);bun.scale.set(.64,.63,.42);
-  for(let k=0;k<11;k++){
-    const strand=line(head,0x71645b,k%3===0?.36:.21);
-    const end=(k-5)*.060;
-    setLine(strand,t=>{const u=(end+.20*(1-t)*(1-t)+1)%1,v=.18+t*.815,p=hairPoint(u,v);p[0]*=1.004;p[2]=.015+(p[2]-.015)*1.005;p[1]+=.005;return p;});
-  }
+  const hairDetail=createHair({parent:head,profile,front});
 
   let pose={g:0};
   function coordinates(x,y){
     const g=pose.g;
-    let px=x,py=y;
+    let px=x,py=y+.09*gauss(y,2.30,.40)*Math.pow(clamp(Math.abs(x)/profile(y),0,1),1.6);
     const jawInfluence=1-smooth((y-2.34)/.91),jawDrop=spec.open*g*.57;
     py-=jawDrop*jawInfluence;
     // The mouth influence is compact: teeth and nose never stretch with it.
@@ -236,12 +241,14 @@ export function createFace(expressionId='joy') {
   for(const state of[{g:0,wink:0},{g:1,wink:0},{g:0,wink:1},{g:1,wink:1}]){
     pose=state;const p=new Float32Array(topo.points.length*3),dx=new Float32Array(p.length),dy=new Float32Array(p.length),e=.0008;
     for(let i=0;i<topo.points.length;i++){
-      const[x,y]=topo.points[i],q=coordinates(x,y),x0=coordinates(x-e,y),x1=coordinates(x+e,y),y0=coordinates(x,y-e),y1=coordinates(x,y+e),j=i*3;
+      const[x,y]=topo.points[i],q=coordinates(x,y),ratio=clamp(x/profile(y),-.999999,.999999),theta=Math.asin(ratio),rim=Math.abs(ratio)>.85;
+      const x0=rim?coordinates(profile(y)*Math.sin(theta-e),y):coordinates(x-e,y),x1=rim?coordinates(profile(y)*Math.sin(theta+e),y):coordinates(x+e,y);
+      const y0=rim?coordinates(profile(y-e)*Math.sin(theta),y-e):coordinates(x,y-e),y1=rim?coordinates(profile(y+e)*Math.sin(theta),y+e):coordinates(x,y+e),j=i*3;
       for(let k=0;k<3;k++){p[j+k]=q[k];dx[j+k]=x1[k]-x0[k];dy[j+k]=y1[k]-y0[k];}
     }
     faceFields.push({p,dx,dy});
     const posterior=new Float32Array(backRest.length);
-    for(let i=0;i<backRest.length;i+=3){const x=backRest[i],y=backRest[i+1],q=coordinates(x,y);posterior[i]=q[0];posterior[i+1]=q[1];posterior[i+2]=backRest[i+2]+q[2]-front(x,y);}
+    for(let i=0;i<backRest.length;i+=3){const x=backRest[i],y=backRest[i+1],q=coordinates(x,y);posterior[i]=q[0];posterior[i+1]=q[1]+.27*(1-smooth((y-2.3)/.90))*clamp((.055-backRest[i+2])/.7,0,1);posterior[i+2]=backRest[i+2]+q[2]-front(x,y);}
     backFields.push(posterior);
   }
   for(let f=1;f<4;f++)for(const key of['p','dx','dy'])for(let i=0;i<faceFields[f][key].length;i++)faceFields[f][key][i]-=faceFields[0][key][i];
@@ -253,6 +260,7 @@ export function createFace(expressionId='joy') {
   const eyeRecords=[];
   for(const side of [-1,1]){
     const white=gridGeometry(48,20),iris=reverse(gridGeometry(64,8)),pupil=reverse(gridGeometry(48,4));
+    for(const[g,nx,ny]of[[iris,64,8],[pupil,48,4]]){const uv=[];for(let j=0;j<=ny;j++)for(let i=0;i<=nx;i++)uv.push(i/nx,j/ny);g.setAttribute('uv',new THREE.Float32BufferAttribute(uv,2));}
     const wm=makeMesh(regions.eyes,white,eyeWhite.clone(),'eyes'),im=makeMesh(regions.eyes,iris,irisMat.clone(),'eyes'),pm=makeMesh(regions.eyes,pupil,pupilMat.clone(),'eyes');
     // Small modeled glints are restrained enough to keep the stone portrait quiet.
     const glint=makeMesh(regions.eyes,new THREE.SphereGeometry(.015,12,8),mat(0xf7f0dd,.2),'eyes');
@@ -261,14 +269,28 @@ export function createFace(expressionId='joy') {
     upper.userData.partId=lower.userData.partId='eyes';
     const brow=gridGeometry(48,3);if(side<0)reverse(brow);makeMesh(regions.brow,brow,browMat.clone(),'brow');
     const upperLid=gridGeometry(48,5),lowerLid=reverse(gridGeometry(48,5)),upperLidMesh=makeMesh(regions.eyes,upperLid,skin.clone(),'eyes'),lowerLidMesh=makeMesh(regions.eyes,lowerLid,skin.clone(),'eyes');
+    const crease=line(regions.eyes,0x80645b,.22);
     const closedLid=gridGeometry(48,8),closedLidMesh=makeMesh(regions.eyes,closedLid,skin.clone(),'eyes');closedLidMesh.name='Joined upper and lower lid surface';
-    eyeRecords.push({side,white,iris,pupil,wm,im,pm,glint,upper,lower,brow,upperLid,lowerLid,upperLidMesh,lowerLidMesh,closedLid,closedLidMesh});
+    eyeRecords.push({side,white,iris,pupil,wm,im,pm,glint,upper,lower,brow,upperLid,lowerLid,upperLidMesh,lowerLidMesh,closedLid,closedLidMesh,crease});
   }
+  const featureHairs=createFeatureHairs({parent:head,
+    sampleBrow:(side,t)=>{const x=THREE.MathUtils.lerp(side*.18,side*.79,t),y=4.045+.085*Math.sin(Math.PI*t)-.035*t;return transformFeature(x,y,.016);},
+    sampleLid:(side,t)=>transformFeature(...eyeEdge(side,side<0?1-t:t,true),.016)
+  });
   const upperLip=gridGeometry(64,9),lowerLip=reverse(gridGeometry(64,9));makeMesh(regions.mouth,upperLip,lipMat.clone(),'mouth');makeMesh(regions.mouth,lowerLip,lipMat.clone(),'mouth');
   const cavity=gridGeometry(64,20);makeMesh(regions.mouth,cavity,mat(0x382927,.95),'mouth');
-  const teeth=reverse(gridGeometry(48,3)),teethMesh=makeMesh(regions.mouth,teeth,mat(0xdfd4bc,.52),'mouth');
+  const teeth=[];
+  for(const lower of[false,true])for(let k=-4;k<4;k++){
+    const rank=k<0?-k-1:k,w=[.104,.086,.075,.064][rank]*(lower?.91:1),h=[.125,.118,.113,.103][rank]*(lower?.84:1),radius=.012;
+    const shape=new THREE.Shape();shape.moveTo(-w/2+radius,0);shape.lineTo(w/2-radius,0);shape.quadraticCurveTo(w/2,0,w/2,radius);shape.lineTo(w/2,h-radius);shape.quadraticCurveTo(w/2,h,w/2-radius,h);shape.lineTo(-w/2+radius,h);shape.quadraticCurveTo(-w/2,h,-w/2,h-radius);shape.lineTo(-w/2,radius);shape.quadraticCurveTo(-w/2,0,-w/2+radius,0);
+    const geometry=new THREE.ExtrudeGeometry(shape,{depth:.027,bevelEnabled:true,bevelSize:.006,bevelThickness:.006,bevelSegments:3,steps:1,curveSegments:8});
+    const centers=[.054,.151,.235,.307],x=Math.sign(k+.5)*centers[rank]*(lower?.94:1),z=.625-.55*x*x;
+    const mesh=makeMesh(regions.mouth,geometry,mat(0xd7cbb8,.43),'mouth');mesh.name=`${lower?'Lower':'Upper'} tooth ${k+5}`;mesh.rotation.y=-x*.65;
+    teeth.push({mesh,lower,x,z,y:MOUTH_Y+(lower?-.173:.020)+.040*(x/.32)**2});
+  }
+  const tongue=makeMesh(regions.mouth,new THREE.SphereGeometry(1,40,24),mat(0x92554e,.65),'mouth');tongue.scale.set(.24,.058,.052);
   const lipLine=line(regions.mouth,0x60433d,.5);lipLine.userData.partId='mouth';
-  const nostrils=[];for(const side of[-1,1]){const l=line(head,0x71564d,.72);nostrils.push({l,side});}
+  const nostrils=[];for(const side of[-1,1]){const cavity=gridGeometry(48,8);if(side>0)reverse(cavity);const mesh=makeMesh(head,cavity,mat(0x4a2925,.9));nostrils.push({cavity,mesh,side});}
 
   function update(tSeconds){
     const g=actionAt(tSeconds);
@@ -282,6 +304,7 @@ export function createFace(expressionId='joy') {
       const dy0=rest.dy[j]+g*act.dy[j]+w*wink.dy[j]+gw*cross.dy[j],dy1=rest.dy[j+1]+g*act.dy[j+1]+w*wink.dy[j+1]+gw*cross.dy[j+1],dy2=rest.dy[j+2]+g*act.dy[j+2]+w*wink.dy[j+2]+gw*cross.dy[j+2];
       const nx=dx1*dy2-dx2*dy1,ny=dx2*dy0-dx0*dy2,nz=dx0*dy1-dx1*dy0,length=Math.hypot(nx,ny,nz)||1;
       normals.setXYZ(i,nx/length,ny/length,nz/length);
+      const [sx,sy]=topo.points[i];if(Math.abs(sx)/profile(sy)>.9999){const side=Math.sign(sx),e=.0008,q0=coordinates(side*profile(sy-e),sy-e),q1=coordinates(side*profile(sy+e),sy+e),tx=q1[0]-q0[0],ty=q1[1]-q0[1],l=Math.hypot(tx,ty);normals.setXYZ(i,side*ty/l,-side*tx/l,0);}
     }
     a.needsUpdate=true;normals.needsUpdate=true;whole.computeBoundingBox();whole.computeBoundingSphere();
     for(const m of faceMeshes){m.geometry.setAttribute('normal',whole.attributes.normal);m.geometry.computeBoundingBox();m.geometry.computeBoundingSphere();}
@@ -289,24 +312,26 @@ export function createFace(expressionId='joy') {
     for(let i=0;i<backP.array.length;i++)backP.array[i]=backFields[0][i]+g*backFields[1][i]+w*backFields[2][i]+gw*backFields[3][i];
     backP.needsUpdate=true;back.computeVertexNormals();back.computeBoundingBox();back.computeBoundingSphere();
     for(let j=0;j<=80;j++)for(const i of[0,96]){
-      const index=j*97+i,x=backRest[index*3],y=backRest[index*3+1],e=.0008,x0=coordinates(x-e,y),x1=coordinates(x+e,y),y0=coordinates(x,y-e),y1=coordinates(x,y+e);
-      const dx=new THREE.Vector3(x1[0]-x0[0],x1[1]-x0[1],x1[2]-x0[2]),dy=new THREE.Vector3(y1[0]-y0[0],y1[1]-y0[1],y1[2]-y0[2]),n=dx.cross(dy).normalize();back.attributes.normal.setXYZ(index,n.x,n.y,n.z);
+      const index=j*97+i,x=backRest[index*3],y=backRest[index*3+1],e=.0008,side=Math.sign(x),q0=coordinates(side*profile(y-e),y-e),q1=coordinates(side*profile(y+e),y+e),dx=q1[0]-q0[0],dy=q1[1]-q0[1],l=Math.hypot(dx,dy);
+      back.attributes.normal.setXYZ(index,side*dy/l,-side*dx/l,0);
     }
     back.attributes.normal.needsUpdate=true;
     const neckP=neck.attributes.position;for(let i=0;i<neckP.count;i++){const j=i*3;neckP.setXYZ(i,neckRest[j],neckRest[j+1]-spec.open*g*.42*smooth((neckRest[j+1]-1.7)/.95),neckRest[j+2]);}neckP.needsUpdate=true;neck.computeVertexNormals();neck.computeBoundingBox();neck.computeBoundingSphere();
     for(const eye of eyeRecords){
       const {side}=eye;
       function edge(t,upper){return transformFeature(...eyeEdge(side,t,upper),.008);}
-      function whitePoint(u,v){const lo=edge(u,false),hi=edge(u,true),bulge=.055*Math.sin(Math.PI*u)*Math.sin(Math.PI*v);return[lo[0],THREE.MathUtils.lerp(lo[1],hi[1],v),THREE.MathUtils.lerp(lo[2],hi[2],v)+bulge];}
+      function whitePoint(u,v){const lo=edge(u,false),hi=edge(u,true),y=THREE.MathUtils.lerp(lo[1],hi[1],v),boundary=THREE.MathUtils.lerp(lo[2],hi[2],v),globe=.455+Math.sqrt(Math.max(.0025,.329**2-(lo[0]-side*EYE_X)**2-(y-EYE_Y)**2));return[lo[0],y,THREE.MathUtils.lerp(boundary,globe,Math.pow(Math.sin(Math.PI*u)*Math.sin(Math.PI*v),.55))];}
       setGrid(eye.white,48,20,whitePoint);
       const lo=edge(.5,false),hi=edge(.5,true),aperture=hi[1]-lo[1];
-      const centerX=side*EYE_X,centerY=EYE_Y;
+      const centerX=side*EYE_X,centerY=EYE_Y+.020;
       function irisPoint(u,v,radius,dz){
         const angle=u*tau,r=v*radius,xx=centerX+Math.cos(angle)*r,rel=clamp((xx-(centerX-EYE_W))/(EYE_W*2),.001,.999),low=edge(rel,false),high=edge(rel,true);
         const yy=clamp(centerY+Math.sin(angle)*r,low[1]+.002,Math.max(low[1]+.002,high[1]-.002));
         const vv=clamp((yy-low[1])/Math.max(.001,high[1]-low[1]),0,1),p=whitePoint(rel,vv);p[1]=yy;p[2]+=dz;return p;
       }
-      setGrid(eye.iris,64,8,(u,v)=>irisPoint(u,v,.088,.004));setGrid(eye.pupil,48,4,(u,v)=>irisPoint(u,v,.039,.008));
+      for(const[geo,nx,ny,radius,dz]of[[eye.iris,64,8,.112,.004],[eye.pupil,48,4,.042,.008]]){
+        const uv=geo.attributes.uv;setGrid(geo,nx,ny,(u,v)=>{const p=irisPoint(u,v,radius,dz),dx=p[0]-centerX,dy=p[1]-centerY;uv.setXY(Math.round(v*ny)*(nx+1)+Math.round(u*nx),((Math.atan2(dy,dx)/tau)%1+1)%1,Math.hypot(dx,dy)/radius);return p;});uv.needsUpdate=true;
+      }
       // The iris is clipped by the moving aperture; collapsed boundary
       // triangles must not create dark normal spikes at nearly closed lids.
       for(const geo of[eye.iris,eye.pupil]){const n=geo.attributes.normal;for(let i=0;i<n.count;i++)n.setXYZ(i,0,0,1);n.needsUpdate=true;}
@@ -316,43 +341,39 @@ export function createFace(expressionId='joy') {
       setGrid(eye.closedLid,48,8,(u,v)=>{
         const p=edge(u,true),s=Math.pow(Math.sin(Math.PI*u),.6);p[0]+=(u*2-1)*.050;p[1]+=(v-.5)*.11*s;p[2]+=.052+.004*Math.sin(Math.PI*v)*s;return p;
       });
-      const gp=irisPoint(.34,.55,.088,.014);eye.glint.position.set(...gp);eye.glint.scale.setScalar(aperture<.07?.6:1);
+      const gp=irisPoint(.34,.55,.112,.014);eye.glint.position.set(...gp);eye.glint.scale.setScalar(aperture<.07?.6:1);
       setLine(eye.upper,t=>{const p=edge(aperture<.018?.015+.97*t:t,true);p[2]+=aperture<.018?.065:.007;return p;});setLine(eye.lower,t=>edge(t,false));
       for(const[geometry,upper]of[[eye.upperLid,true],[eye.lowerLid,false]])setGrid(geometry,48,5,(u,v)=>{
-        const[x,y]=eyeEdge(side,u,upper),s=Math.pow(Math.sin(Math.PI*u),.7),offset=(upper?1:-1)*v*(upper?.048:.033)*s;
-        return transformFeature(x,y+offset,.009+.012*Math.sin(Math.PI*v)*s);
+        const[x,y]=eyeEdge(side,u,upper),s=Math.pow(Math.sin(Math.PI*u),.7),offset=(upper?1:-1)*v*(upper?.073:.041)*s;
+        return transformFeature(x,y+offset,.006+.014*Math.sin(Math.PI*v)*s);
       });
+      setLine(eye.crease,t=>{const[x,y]=eyeEdge(side,t,true),s=Math.sin(Math.PI*t);return transformFeature(x,y+.078*s,.008);});
       setGrid(eye.brow,48,3,(u,v)=>{
         const inner=side*.18,outer=side*.79,x=THREE.MathUtils.lerp(inner,outer,u);
-        const y=4.055+.082*Math.sin(Math.PI*u)-.045*u;
-        const thickness=(.029+.027*Math.sin(Math.PI*u))*(1-.74*Math.pow(u,3));
+        const y=4.045+.085*Math.sin(Math.PI*u)-.035*u;
+        const thickness=(.044+.036*Math.sin(Math.PI*u))*(1-.78*Math.pow(u,3))*smooth(u/.075)*Math.pow(1-u,.20);
         return transformFeature(x,y+(v-.5)*thickness,.013);
       });
     }
     function lipPoint(t,v,upper){
       const [x,y]=mouthEdge(t,upper),u=t*2-1,s=Math.max(0,1-u*u);
-      const thickness=(upper?.055:.063)*Math.pow(s,.68);
-      const p=transformFeature(x,y+(upper?1:-1)*v*thickness,.008+.023*Math.sin(Math.PI*v)*Math.pow(s,.7));
+      const thickness=(upper?.075+.025*gauss(Math.abs(u),.28,.20)-.010*gauss(u,0,.15):.108)*Math.pow(s,.68);
+      const p=transformFeature(x,y+(upper?1:-1)*v*thickness,Math.pow(s,.7)*(.008*(1-v)+(upper?.032:.042)*Math.sin(Math.PI*v)));
       return p;
     }
     setGrid(upperLip,64,9,(u,v)=>lipPoint(u,v,true));setGrid(lowerLip,64,9,(u,v)=>lipPoint(u,v,false));
-    setGrid(cavity,64,20,(u,v)=>{const lo=lipPoint(u,0,false),hi=lipPoint(u,0,true);return[THREE.MathUtils.lerp(lo[0],hi[0],v),THREE.MathUtils.lerp(lo[1],hi[1],v),Math.min(lo[2],hi[2])-.018-.06*Math.sin(Math.PI*v)];});
-    setGrid(teeth,48,3,(u,v)=>{
-      const t=.12+.76*u,hi=lipPoint(t,0,true),lo=lipPoint(t,0,false),mid=lipPoint(.5,0,true),open=Math.max(0,hi[1]-lo[1]);
-      const upper=Math.min(hi[1]-.009,mid[1]-.024+.025*(2*u-1)**2);
-      const lower=Math.max(lo[1]+.008,upper-Math.min(.068,open*.32));
-      return[hi[0],THREE.MathUtils.lerp(upper,lower,v),hi[2]-.033];
-    });teethMesh.visible=spec.open*g>.06&&expressionId!=='surprise';
+    setGrid(cavity,64,20,(u,v)=>{const lo=lipPoint(u,0,false),hi=lipPoint(u,0,true);return[THREE.MathUtils.lerp(lo[0],hi[0],v),THREE.MathUtils.lerp(lo[1],hi[1],v),Math.min(lo[2],hi[2])-.035-.23*Math.sin(Math.PI*v)];});
+    for(const tooth of teeth){tooth.mesh.position.set(tooth.x,tooth.y-(tooth.lower?spec.open*g*.70:0),tooth.z);tooth.mesh.visible=!tooth.lower&&expressionId!=='surprise'&&spec.open*g>.028;}
+    tongue.position.set(0,MOUTH_Y-.15-spec.open*g*.43,.638);tongue.visible=spec.open*g>.12;
     setLine(lipLine,t=>{const p=lipPoint(t,0,true);p[2]+=.002;return p;});lipLine.material.opacity=.40*(1-g*Math.min(1,spec.open*8));
-    for(const{l,side}of nostrils)setLine(l,t=>{
-      const x=side*(.095+t*.095),y=3.285+.018*Math.sin(Math.PI*t)+(spec.sneer||0)*g*gauss(side,-1,1)*.25;
-      return transformFeature(x,y,.009);
-    });
+    for(const{cavity,side}of nostrils)setGrid(cavity,48,8,(u,v)=>{const[x,y]=nostrilEdge(side,u),cx=side*.145,cy=3.247,p=coordinates(THREE.MathUtils.lerp(cx,x,v),THREE.MathUtils.lerp(cy,y,v));p[2]-=.006+.045*(1-v*v);return p;});
     for(const p of parts){const base={brow:[-.47,4.13,.69],eyes:[.47,3.81,.72],cheeks:[-.67,3.45,.73],mouth:[.36,2.94,.79],jaw:[.38,2.47,.64]}[p.id];const loc=coordinates(base[0],base[1]);p.anchor.position.set(loc[0],loc[1],loc[2]+.025);}
     head.rotation.z=spec.tilt*g;head.rotation.y=(spec.wink?-.025:spec.sneer?.02:0)*g;head.rotation.x=expressionId==='laughter'?-.045*g:0;
+    featureHairs.update();
     group.updateMatrixWorld(true);
   }
   update(0);
+  group.traverse(o=>{if(o.isMesh)captureRestPositions(o.geometry);});
   const bounds=new THREE.Box3().setFromObject(group);
   return{
     group,parts,update,expressionId,bounds:{min:bounds.min.toArray(),max:bounds.max.toArray()},

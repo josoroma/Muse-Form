@@ -1,0 +1,512 @@
+{
+  "title": "MUSE — The language of a face",
+  "renderer": "Three.js 0.186.1",
+  "duration": 5,
+  "identity": "An original adult woman, procedurally sculpted for this collection.",
+  "studies": [
+    {
+      "id": "joy",
+      "title": "A quiet joy",
+      "duration": 5,
+      "view": "index.html#joy",
+      "source": "face.mjs",
+      "svgReferenceID": "105196",
+      "prompt": "Create an original elegant adult woman as a native Three.js sculptural portrait, with balanced facial proportions, a continuous modeled face, swept hair, actual eye and mouth openings, and a modest clothed shoulder bust. Use quiet warm porcelain surfaces, restrained lips and irises, and a dark studio stage. Keep the same identity across every expression. Animate exactly five seconds: neutral, preparation, a readable expression, a short hold, recovery and the identical neutral endpoint. Coordinate brow, eyelid, cheek, lip and jaw geometry. Preserve clean occlusion, anatomical attachments and clean silhouettes from front, three-quarter and profile views. Provide selectable facial features, source-backed explanatory labels, a seekable timeline and a guided camera that yields immediately to manual orbit. Raise the mouth corners into a quiet smile. Lift the cheeks and soften the lower eyelids together; keep the upper lip and chin volumes coherent. Let the face settle gently back to neutral.",
+      "beats": [
+        {
+          "time": 0,
+          "label": "Presence",
+          "description": "A quiet neutral portrait establishes the same identity across every expression."
+        },
+        {
+          "time": 0.52,
+          "label": "Gather",
+          "description": "The first changes begin around the eyes and mouth, with the surrounding face following."
+        },
+        {
+          "time": 2.08,
+          "label": "Smile",
+          "description": "The mouth corners lift and widen while the cheeks rise into the lower lids."
+        },
+        {
+          "time": 2.9,
+          "label": "Release",
+          "description": "The features recover together without changing the identity or resetting abruptly."
+        },
+        {
+          "time": 4.65,
+          "label": "Rest",
+          "description": "The original neutral pose returns and holds through the matching five-second endpoint."
+        }
+      ],
+      "parts": [
+        {
+          "id": "brow",
+          "name": "Brow & forehead",
+          "description": "The brows rise, lower and change their medial angle. These surface gestures suggest the action of the forehead and brow region; they are authored expression poses."
+        },
+        {
+          "id": "eyes",
+          "name": "Eyelids & gaze",
+          "description": "Upper and lower lid margins change the visible aperture around the eyes. A closed lid covers the iris; the eyeball itself does not shrink."
+        },
+        {
+          "id": "cheeks",
+          "name": "Cheek region",
+          "description": "The cheeks rise toward the lower lids in a smile and join the upper lip in a nose-wrinkle gesture. The portrait shows surface motion, not isolated internal muscles."
+        },
+        {
+          "id": "mouth",
+          "name": "Lips & mouth corners",
+          "description": "The corners lift, lower, stretch or draw inward. Lip contours remain attached to the surrounding face as the opening changes."
+        },
+        {
+          "id": "jaw",
+          "name": "Jaw & chin",
+          "description": "An authored jaw release lowers the chin and lower lip together. The lower face returns to the same neutral geometry at the end of the five-second cycle."
+        }
+      ]
+    },
+    {
+      "id": "sadness",
+      "title": "A tender sadness",
+      "duration": 5,
+      "view": "index.html#sadness",
+      "source": "face.mjs",
+      "svgReferenceID": "105197",
+      "prompt": "Create an original elegant adult woman as a native Three.js sculptural portrait, with balanced facial proportions, a continuous modeled face, swept hair, actual eye and mouth openings, and a modest clothed shoulder bust. Use quiet warm porcelain surfaces, restrained lips and irises, and a dark studio stage. Keep the same identity across every expression. Animate exactly five seconds: neutral, preparation, a readable expression, a short hold, recovery and the identical neutral endpoint. Coordinate brow, eyelid, cheek, lip and jaw geometry. Preserve clean occlusion, anatomical attachments and clean silhouettes from front, three-quarter and profile views. Provide selectable facial features, source-backed explanatory labels, a seekable timeline and a guided camera that yields immediately to manual orbit. Raise the inner eyebrows while the outer brows relax. Turn the mouth corners slightly downward, soften the eyelids and lower the chin just enough to support a tender, restrained acting pose.",
+      "beats": [
+        {
+          "time": 0,
+          "label": "Presence",
+          "description": "A quiet neutral portrait establishes the same identity across every expression."
+        },
+        {
+          "time": 0.52,
+          "label": "Gather",
+          "description": "The first changes begin around the eyes and mouth, with the surrounding face following."
+        },
+        {
+          "time": 2.08,
+          "label": "Feel",
+          "description": "The inner brows rise and draw together; the mouth corners fall and the gaze softens."
+        },
+        {
+          "time": 2.9,
+          "label": "Release",
+          "description": "The features recover together without changing the identity or resetting abruptly."
+        },
+        {
+          "time": 4.65,
+          "label": "Rest",
+          "description": "The original neutral pose returns and holds through the matching five-second endpoint."
+        }
+      ],
+      "parts": [
+        {
+          "id": "brow",
+          "name": "Brow & forehead",
+          "description": "The brows rise, lower and change their medial angle. These surface gestures suggest the action of the forehead and brow region; they are authored expression poses."
+        },
+        {
+          "id": "eyes",
+          "name": "Eyelids & gaze",
+          "description": "Upper and lower lid margins change the visible aperture around the eyes. A closed lid covers the iris; the eyeball itself does not shrink."
+        },
+        {
+          "id": "cheeks",
+          "name": "Cheek region",
+          "description": "The cheeks rise toward the lower lids in a smile and join the upper lip in a nose-wrinkle gesture. The portrait shows surface motion, not isolated internal muscles."
+        },
+        {
+          "id": "mouth",
+          "name": "Lips & mouth corners",
+          "description": "The corners lift, lower, stretch or draw inward. Lip contours remain attached to the surrounding face as the opening changes."
+        },
+        {
+          "id": "jaw",
+          "name": "Jaw & chin",
+          "description": "An authored jaw release lowers the chin and lower lip together. The lower face returns to the same neutral geometry at the end of the five-second cycle."
+        }
+      ]
+    },
+    {
+      "id": "anger",
+      "title": "Contained anger",
+      "duration": 5,
+      "view": "index.html#anger",
+      "source": "face.mjs",
+      "svgReferenceID": "105198",
+      "prompt": "Create an original elegant adult woman as a native Three.js sculptural portrait, with balanced facial proportions, a continuous modeled face, swept hair, actual eye and mouth openings, and a modest clothed shoulder bust. Use quiet warm porcelain surfaces, restrained lips and irises, and a dark studio stage. Keep the same identity across every expression. Animate exactly five seconds: neutral, preparation, a readable expression, a short hold, recovery and the identical neutral endpoint. Coordinate brow, eyelid, cheek, lip and jaw geometry. Preserve clean occlusion, anatomical attachments and clean silhouettes from front, three-quarter and profile views. Provide selectable facial features, source-backed explanatory labels, a seekable timeline and a guided camera that yields immediately to manual orbit. Draw the eyebrows down and inward, narrow the eyelid openings and press the lips. Preserve a composed face with readable tension, avoiding grotesque distortion or detached brow shapes.",
+      "beats": [
+        {
+          "time": 0,
+          "label": "Presence",
+          "description": "A quiet neutral portrait establishes the same identity across every expression."
+        },
+        {
+          "time": 0.52,
+          "label": "Gather",
+          "description": "The first changes begin around the eyes and mouth, with the surrounding face following."
+        },
+        {
+          "time": 2.08,
+          "label": "Focus",
+          "description": "The inner brows draw down toward the bridge; the lids narrow and the lips press together."
+        },
+        {
+          "time": 2.9,
+          "label": "Release",
+          "description": "The features recover together without changing the identity or resetting abruptly."
+        },
+        {
+          "time": 4.65,
+          "label": "Rest",
+          "description": "The original neutral pose returns and holds through the matching five-second endpoint."
+        }
+      ],
+      "parts": [
+        {
+          "id": "brow",
+          "name": "Brow & forehead",
+          "description": "The brows rise, lower and change their medial angle. These surface gestures suggest the action of the forehead and brow region; they are authored expression poses."
+        },
+        {
+          "id": "eyes",
+          "name": "Eyelids & gaze",
+          "description": "Upper and lower lid margins change the visible aperture around the eyes. A closed lid covers the iris; the eyeball itself does not shrink."
+        },
+        {
+          "id": "cheeks",
+          "name": "Cheek region",
+          "description": "The cheeks rise toward the lower lids in a smile and join the upper lip in a nose-wrinkle gesture. The portrait shows surface motion, not isolated internal muscles."
+        },
+        {
+          "id": "mouth",
+          "name": "Lips & mouth corners",
+          "description": "The corners lift, lower, stretch or draw inward. Lip contours remain attached to the surrounding face as the opening changes."
+        },
+        {
+          "id": "jaw",
+          "name": "Jaw & chin",
+          "description": "An authored jaw release lowers the chin and lower lip together. The lower face returns to the same neutral geometry at the end of the five-second cycle."
+        }
+      ]
+    },
+    {
+      "id": "fear",
+      "title": "A moment of fear",
+      "duration": 5,
+      "view": "index.html#fear",
+      "source": "face.mjs",
+      "svgReferenceID": "105199",
+      "prompt": "Create an original elegant adult woman as a native Three.js sculptural portrait, with balanced facial proportions, a continuous modeled face, swept hair, actual eye and mouth openings, and a modest clothed shoulder bust. Use quiet warm porcelain surfaces, restrained lips and irises, and a dark studio stage. Keep the same identity across every expression. Animate exactly five seconds: neutral, preparation, a readable expression, a short hold, recovery and the identical neutral endpoint. Coordinate brow, eyelid, cheek, lip and jaw geometry. Preserve clean occlusion, anatomical attachments and clean silhouettes from front, three-quarter and profile views. Provide selectable facial features, source-backed explanatory labels, a seekable timeline and a guided camera that yields immediately to manual orbit. Raise and draw together the brows, widen the eyes, stretch the mouth corners slightly sideways and part the lips with a small jaw release. Coordinate the features so this differs clearly from surprise.",
+      "beats": [
+        {
+          "time": 0,
+          "label": "Presence",
+          "description": "A quiet neutral portrait establishes the same identity across every expression."
+        },
+        {
+          "time": 0.52,
+          "label": "Gather",
+          "description": "The first changes begin around the eyes and mouth, with the surrounding face following."
+        },
+        {
+          "time": 2.08,
+          "label": "Startle",
+          "description": "Raised inner brows and widened eyes accompany a stretched, slightly open mouth."
+        },
+        {
+          "time": 2.9,
+          "label": "Release",
+          "description": "The features recover together without changing the identity or resetting abruptly."
+        },
+        {
+          "time": 4.65,
+          "label": "Rest",
+          "description": "The original neutral pose returns and holds through the matching five-second endpoint."
+        }
+      ],
+      "parts": [
+        {
+          "id": "brow",
+          "name": "Brow & forehead",
+          "description": "The brows rise, lower and change their medial angle. These surface gestures suggest the action of the forehead and brow region; they are authored expression poses."
+        },
+        {
+          "id": "eyes",
+          "name": "Eyelids & gaze",
+          "description": "Upper and lower lid margins change the visible aperture around the eyes. A closed lid covers the iris; the eyeball itself does not shrink."
+        },
+        {
+          "id": "cheeks",
+          "name": "Cheek region",
+          "description": "The cheeks rise toward the lower lids in a smile and join the upper lip in a nose-wrinkle gesture. The portrait shows surface motion, not isolated internal muscles."
+        },
+        {
+          "id": "mouth",
+          "name": "Lips & mouth corners",
+          "description": "The corners lift, lower, stretch or draw inward. Lip contours remain attached to the surrounding face as the opening changes."
+        },
+        {
+          "id": "jaw",
+          "name": "Jaw & chin",
+          "description": "An authored jaw release lowers the chin and lower lip together. The lower face returns to the same neutral geometry at the end of the five-second cycle."
+        }
+      ]
+    },
+    {
+      "id": "surprise",
+      "title": "Open wonder",
+      "duration": 5,
+      "view": "index.html#surprise",
+      "source": "face.mjs",
+      "svgReferenceID": "105200",
+      "prompt": "Create an original elegant adult woman as a native Three.js sculptural portrait, with balanced facial proportions, a continuous modeled face, swept hair, actual eye and mouth openings, and a modest clothed shoulder bust. Use quiet warm porcelain surfaces, restrained lips and irises, and a dark studio stage. Keep the same identity across every expression. Animate exactly five seconds: neutral, preparation, a readable expression, a short hold, recovery and the identical neutral endpoint. Coordinate brow, eyelid, cheek, lip and jaw geometry. Preserve clean occlusion, anatomical attachments and clean silhouettes from front, three-quarter and profile views. Provide selectable facial features, source-backed explanatory labels, a seekable timeline and a guided camera that yields immediately to manual orbit. Lift both brows, open both eyelid apertures and lower the jaw into a rounded mouth opening. Maintain a convincing mouth cavity and attached lip, chin and cheek surfaces through the strongest pose.",
+      "beats": [
+        {
+          "time": 0,
+          "label": "Presence",
+          "description": "A quiet neutral portrait establishes the same identity across every expression."
+        },
+        {
+          "time": 0.52,
+          "label": "Gather",
+          "description": "The first changes begin around the eyes and mouth, with the surrounding face following."
+        },
+        {
+          "time": 2.08,
+          "label": "Wonder",
+          "description": "Both brows lift, the upper lids rise and the jaw opens beneath a rounded mouth."
+        },
+        {
+          "time": 2.9,
+          "label": "Release",
+          "description": "The features recover together without changing the identity or resetting abruptly."
+        },
+        {
+          "time": 4.65,
+          "label": "Rest",
+          "description": "The original neutral pose returns and holds through the matching five-second endpoint."
+        }
+      ],
+      "parts": [
+        {
+          "id": "brow",
+          "name": "Brow & forehead",
+          "description": "The brows rise, lower and change their medial angle. These surface gestures suggest the action of the forehead and brow region; they are authored expression poses."
+        },
+        {
+          "id": "eyes",
+          "name": "Eyelids & gaze",
+          "description": "Upper and lower lid margins change the visible aperture around the eyes. A closed lid covers the iris; the eyeball itself does not shrink."
+        },
+        {
+          "id": "cheeks",
+          "name": "Cheek region",
+          "description": "The cheeks rise toward the lower lids in a smile and join the upper lip in a nose-wrinkle gesture. The portrait shows surface motion, not isolated internal muscles."
+        },
+        {
+          "id": "mouth",
+          "name": "Lips & mouth corners",
+          "description": "The corners lift, lower, stretch or draw inward. Lip contours remain attached to the surrounding face as the opening changes."
+        },
+        {
+          "id": "jaw",
+          "name": "Jaw & chin",
+          "description": "An authored jaw release lowers the chin and lower lip together. The lower face returns to the same neutral geometry at the end of the five-second cycle."
+        }
+      ]
+    },
+    {
+      "id": "disgust",
+      "title": "A passing distaste",
+      "duration": 5,
+      "view": "index.html#disgust",
+      "source": "face.mjs",
+      "svgReferenceID": null,
+      "prompt": "Create an original elegant adult woman as a native Three.js sculptural portrait, with balanced facial proportions, a continuous modeled face, swept hair, actual eye and mouth openings, and a modest clothed shoulder bust. Use quiet warm porcelain surfaces, restrained lips and irises, and a dark studio stage. Keep the same identity across every expression. Animate exactly five seconds: neutral, preparation, a readable expression, a short hold, recovery and the identical neutral endpoint. Coordinate brow, eyelid, cheek, lip and jaw geometry. Preserve clean occlusion, anatomical attachments and clean silhouettes from front, three-quarter and profile views. Provide selectable facial features, source-backed explanatory labels, a seekable timeline and a guided camera that yields immediately to manual orbit. Lift the upper lip asymmetrically, tighten the nose and lower brow region, and gently narrow the eyes. Use a fleeting, restrained recoil with a coherent nasal and cheek surface.",
+      "beats": [
+        {
+          "time": 0,
+          "label": "Presence",
+          "description": "A quiet neutral portrait establishes the same identity across every expression."
+        },
+        {
+          "time": 0.52,
+          "label": "Gather",
+          "description": "The first changes begin around the eyes and mouth, with the surrounding face following."
+        },
+        {
+          "time": 2.08,
+          "label": "Recoil",
+          "description": "The upper lip rises asymmetrically and the nose wings lift; the eyes narrow with the cheek."
+        },
+        {
+          "time": 2.9,
+          "label": "Release",
+          "description": "The features recover together without changing the identity or resetting abruptly."
+        },
+        {
+          "time": 4.65,
+          "label": "Rest",
+          "description": "The original neutral pose returns and holds through the matching five-second endpoint."
+        }
+      ],
+      "parts": [
+        {
+          "id": "brow",
+          "name": "Brow & forehead",
+          "description": "The brows rise, lower and change their medial angle. These surface gestures suggest the action of the forehead and brow region; they are authored expression poses."
+        },
+        {
+          "id": "eyes",
+          "name": "Eyelids & gaze",
+          "description": "Upper and lower lid margins change the visible aperture around the eyes. A closed lid covers the iris; the eyeball itself does not shrink."
+        },
+        {
+          "id": "cheeks",
+          "name": "Cheek region",
+          "description": "The cheeks rise toward the lower lids in a smile and join the upper lip in a nose-wrinkle gesture. The portrait shows surface motion, not isolated internal muscles."
+        },
+        {
+          "id": "mouth",
+          "name": "Lips & mouth corners",
+          "description": "The corners lift, lower, stretch or draw inward. Lip contours remain attached to the surrounding face as the opening changes."
+        },
+        {
+          "id": "jaw",
+          "name": "Jaw & chin",
+          "description": "An authored jaw release lowers the chin and lower lip together. The lower face returns to the same neutral geometry at the end of the five-second cycle."
+        }
+      ]
+    },
+    {
+      "id": "wink",
+      "title": "A knowing wink",
+      "duration": 5,
+      "view": "index.html#wink",
+      "source": "face.mjs",
+      "svgReferenceID": "105203",
+      "prompt": "Create an original elegant adult woman as a native Three.js sculptural portrait, with balanced facial proportions, a continuous modeled face, swept hair, actual eye and mouth openings, and a modest clothed shoulder bust. Use quiet warm porcelain surfaces, restrained lips and irises, and a dark studio stage. Keep the same identity across every expression. Animate exactly five seconds: neutral, preparation, a readable expression, a short hold, recovery and the identical neutral endpoint. Coordinate brow, eyelid, cheek, lip and jaw geometry. Preserve clean occlusion, anatomical attachments and clean silhouettes from front, three-quarter and profile views. Provide selectable facial features, source-backed explanatory labels, a seekable timeline and a guided camera that yields immediately to manual orbit. Close one eyelid aperture fully, hide the iris behind the lid, lift the same cheek and add a small asymmetric smile. Keep the opposite eye open; reopen the closed eye smoothly before recovering neutral.",
+      "beats": [
+        {
+          "time": 0,
+          "label": "Presence",
+          "description": "A quiet neutral portrait establishes the same identity across every expression."
+        },
+        {
+          "time": 0.52,
+          "label": "Gather",
+          "description": "The first changes begin around the eyes and mouth, with the surrounding face following."
+        },
+        {
+          "time": 2.08,
+          "label": "Wink",
+          "description": "One aperture closes fully over its iris. The same cheek lifts into a small asymmetric smile."
+        },
+        {
+          "time": 2.9,
+          "label": "Release",
+          "description": "The features recover together without changing the identity or resetting abruptly."
+        },
+        {
+          "time": 4.65,
+          "label": "Rest",
+          "description": "The original neutral pose returns and holds through the matching five-second endpoint."
+        }
+      ],
+      "parts": [
+        {
+          "id": "brow",
+          "name": "Brow & forehead",
+          "description": "The brows rise, lower and change their medial angle. These surface gestures suggest the action of the forehead and brow region; they are authored expression poses."
+        },
+        {
+          "id": "eyes",
+          "name": "Eyelids & gaze",
+          "description": "Upper and lower lid margins change the visible aperture around the eyes. A closed lid covers the iris; the eyeball itself does not shrink."
+        },
+        {
+          "id": "cheeks",
+          "name": "Cheek region",
+          "description": "The cheeks rise toward the lower lids in a smile and join the upper lip in a nose-wrinkle gesture. The portrait shows surface motion, not isolated internal muscles."
+        },
+        {
+          "id": "mouth",
+          "name": "Lips & mouth corners",
+          "description": "The corners lift, lower, stretch or draw inward. Lip contours remain attached to the surrounding face as the opening changes."
+        },
+        {
+          "id": "jaw",
+          "name": "Jaw & chin",
+          "description": "An authored jaw release lowers the chin and lower lip together. The lower face returns to the same neutral geometry at the end of the five-second cycle."
+        }
+      ]
+    },
+    {
+      "id": "laughter",
+      "title": "Uncontained delight",
+      "duration": 5,
+      "view": "index.html#laughter",
+      "source": "face.mjs",
+      "svgReferenceID": "105202",
+      "prompt": "Create an original elegant adult woman as a native Three.js sculptural portrait, with balanced facial proportions, a continuous modeled face, swept hair, actual eye and mouth openings, and a modest clothed shoulder bust. Use quiet warm porcelain surfaces, restrained lips and irises, and a dark studio stage. Keep the same identity across every expression. Animate exactly five seconds: neutral, preparation, a readable expression, a short hold, recovery and the identical neutral endpoint. Coordinate brow, eyelid, cheek, lip and jaw geometry. Preserve clean occlusion, anatomical attachments and clean silhouettes from front, three-quarter and profile views. Provide selectable facial features, source-backed explanatory labels, a seekable timeline and a guided camera that yields immediately to manual orbit. Open a broad smile with raised cheeks, softened eyes and a visible jaw release. Add a restrained head lift. Make the mouth and lips remain convincing from the profile camera, and return to the shared neutral portrait.",
+      "beats": [
+        {
+          "time": 0,
+          "label": "Presence",
+          "description": "A quiet neutral portrait establishes the same identity across every expression."
+        },
+        {
+          "time": 0.52,
+          "label": "Gather",
+          "description": "The first changes begin around the eyes and mouth, with the surrounding face following."
+        },
+        {
+          "time": 2.08,
+          "label": "Laugh",
+          "description": "The jaw releases beneath an open smile; lifted cheeks narrow both eyes and the head rises gently."
+        },
+        {
+          "time": 2.9,
+          "label": "Release",
+          "description": "The features recover together without changing the identity or resetting abruptly."
+        },
+        {
+          "time": 4.65,
+          "label": "Rest",
+          "description": "The original neutral pose returns and holds through the matching five-second endpoint."
+        }
+      ],
+      "parts": [
+        {
+          "id": "brow",
+          "name": "Brow & forehead",
+          "description": "The brows rise, lower and change their medial angle. These surface gestures suggest the action of the forehead and brow region; they are authored expression poses."
+        },
+        {
+          "id": "eyes",
+          "name": "Eyelids & gaze",
+          "description": "Upper and lower lid margins change the visible aperture around the eyes. A closed lid covers the iris; the eyeball itself does not shrink."
+        },
+        {
+          "id": "cheeks",
+          "name": "Cheek region",
+          "description": "The cheeks rise toward the lower lids in a smile and join the upper lip in a nose-wrinkle gesture. The portrait shows surface motion, not isolated internal muscles."
+        },
+        {
+          "id": "mouth",
+          "name": "Lips & mouth corners",
+          "description": "The corners lift, lower, stretch or draw inward. Lip contours remain attached to the surrounding face as the opening changes."
+        },
+        {
+          "id": "jaw",
+          "name": "Jaw & chin",
+          "description": "An authored jaw release lowers the chin and lower lip together. The lower face returns to the same neutral geometry at the end of the five-second cycle."
+        }
+      ]
+    }
+  ]
+}

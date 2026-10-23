@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { createCameraRig } from '../three/runtime/camera-rig.mjs';
 import { createTransport } from '../three/runtime/motion.mjs';
 import { createFace } from './face.mjs';
+import { createPortraitStudio } from './studio.mjs';
 
 const $ = id => document.getElementById(id);
 const factories = Object.fromEntries(['joy','sadness','anger','fear','surprise','disgust','wink','laughter'].map(id=>[id,()=>createFace(id)]));
@@ -25,11 +26,7 @@ try {
   renderer.domElement.setAttribute('aria-label', '3D facial expression. Drag to orbit, scroll to zoom, arrows to rotate, plus or minus to zoom, Home for overview.');
   $('canvas-host').append(renderer.domElement);
   renderer.domElement.addEventListener('webglcontextlost', event => { event.preventDefault(); transport.pause(); $('fallback').hidden = false; });
-  scene.add(new THREE.HemisphereLight(0xf4e6db, 0x62525b, 1.65));
-  const key = new THREE.DirectionalLight(0xffe7d8, 3.2); key.position.set(-5, 7, 10); scene.add(key);
-  key.castShadow = true; key.shadow.mapSize.set(2048, 2048); key.shadow.camera.left = -12; key.shadow.camera.right = 12; key.shadow.camera.top = 14; key.shadow.camera.bottom = -10; key.shadow.normalBias = .035; key.shadow.bias = -.00012;
-  const rim = new THREE.DirectionalLight(0x9caebc, 1.5); rim.position.set(7, 7, -6); scene.add(rim);
-  const fill = new THREE.DirectionalLight(0xe8deea, 1.25); fill.position.set(4, 3.5, 9); scene.add(fill);
+  createPortraitStudio(renderer, scene);
   const stage = new THREE.Group(); stage.visible=false; scene.add(stage);
   const floor = new THREE.Mesh(new THREE.PlaneGeometry(100, 100), new THREE.ShadowMaterial({ opacity: .24 }));
   floor.rotation.x = -Math.PI / 2; floor.receiveShadow = true; floor.position.y = -.025; stage.add(floor);
@@ -56,7 +53,7 @@ try {
     if(makeManual) manual();
     const bounds=(active.motionBounds||modelInfo(active).bounds).clone();
     // A portrait composition crops the clothed shoulder base, keeping facial acting large.
-    bounds.min.y=Math.max(bounds.min.y,innerWidth<760?1.0:1.1);
+    bounds.min.y=Math.max(bounds.min.y,innerWidth<760?1.35:1.60);
     bounds.min.x=Math.max(bounds.min.x,-1.24);bounds.max.x=Math.min(bounds.max.x,1.24);
     const center=bounds.getCenter(new THREE.Vector3()),size=bounds.getSize(new THREE.Vector3());
     const mobile=innerWidth<760;
@@ -69,7 +66,7 @@ try {
       const d=new THREE.Vector3(x,y,z).sub(center),depth=d.dot(direction);
       distance=Math.max(distance,depth+Math.abs(d.dot(right))/tanH,depth+Math.abs(d.dot(up))/tanV);
     }
-    distance*=mobile?1.34:1.18;
+    distance*=mobile?1.23:1.10;
     const target=center.clone(); target.y+=size.y*(mobile?.06:.025);
     camera.near=.03;camera.far=150;camera.updateProjectionMatrix();
     rig.controls.cursor.copy(target);rig.controls.maxTargetRadius=Math.max(2,size.length());
@@ -117,7 +114,7 @@ try {
     floor.position.y=modelBounds.min.y-.025;ring.position.y=floor.position.y+.005;cross.position.y=floor.position.y+.006;
     const span=Math.max(modelBounds.max.x-modelBounds.min.x,modelBounds.max.z-modelBounds.min.z)*.85;
     ring.scale.setScalar(span);cross.scale.setScalar(span);ring.position.x=cross.position.x=0;
-    meshes=[];active.group.traverse(obj=>{if(obj.isMesh){meshes.push(obj);obj.castShadow=obj.receiveShadow=true;for(const mat of Array.isArray(obj.material)?obj.material:[obj.material]){if(mat.color&&!mat.userData.baseColor)mat.userData.baseColor=mat.color.clone();}}});
+    meshes=[];active.group.traverse(obj=>{if(obj.isMesh){meshes.push(obj);obj.castShadow=obj.receiveShadow=!obj.userData.noShadow;for(const mat of Array.isArray(obj.material)?obj.material:[obj.material]){if(mat.color&&!mat.userData.baseColor)mat.userData.baseColor=mat.color.clone();}}});
     $('scene-number').textContent=`EXPRESSION ${String(keys.indexOf(id)+1).padStart(2,'0')} / ${active.subtitle.toUpperCase()}`;
     $('scene-title').textContent=active.title;
     document.querySelectorAll('[data-study]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.study===id)));

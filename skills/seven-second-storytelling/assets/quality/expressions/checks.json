@@ -5,44 +5,44 @@
     {
       "id": "joy",
       "rest": {
-        "hash": 3214397767,
+        "hash": 825228396,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 4140470249,
-          "eyes": 3743005265,
-          "cheeks": 817069079,
-          "mouth": 292294913,
-          "jaw": 817069079
+          "brow": 4266809741,
+          "eyes": 378126549,
+          "cheeks": 2722995259,
+          "mouth": 2344808688,
+          "jaw": 2722995259
         },
         "exactNeutralMatch": false
       },
       "peak": {
-        "hash": 504027875,
+        "hash": 3357722180,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 1433990349,
-          "eyes": 600816274,
-          "cheeks": 3668659189,
-          "mouth": 2517757311,
-          "jaw": 3668659189
+          "brow": 2868637517,
+          "eyes": 4007555896,
+          "cheeks": 1680555204,
+          "mouth": 3957215890,
+          "jaw": 1680555204
         },
         "exactNeutralMatch": false
       },
       "end": {
-        "hash": 3214397767,
+        "hash": 825228396,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 4140470249,
-          "eyes": 3743005265,
-          "cheeks": 817069079,
-          "mouth": 292294913,
-          "jaw": 817069079
+          "brow": 4266809741,
+          "eyes": 378126549,
+          "cheeks": 2722995259,
+          "mouth": 2344808688,
+          "jaw": 2722995259
         },
         "exactNeutralMatch": true
       },
@@ -88,44 +88,44 @@
     {
       "id": "sadness",
       "rest": {
-        "hash": 3214397767,
+        "hash": 825228396,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 4140470249,
-          "eyes": 3743005265,
-          "cheeks": 817069079,
-          "mouth": 292294913,
-          "jaw": 817069079
+          "brow": 4266809741,
+          "eyes": 378126549,
+          "cheeks": 2722995259,
+          "mouth": 2344808688,
+          "jaw": 2722995259
         },
         "exactNeutralMatch": false
       },
       "peak": {
-        "hash": 411915585,
+        "hash": 2207832513,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 905918497,
-          "eyes": 3706544491,
-          "cheeks": 397461686,
-          "mouth": 780923130,
-          "jaw": 397461686
+          "brow": 1168180137,
+          "eyes": 14022271,
+          "cheeks": 2894529880,
+          "mouth": 673015589,
+          "jaw": 2894529880
         },
         "exactNeutralMatch": false
       },
       "end": {
-        "hash": 3214397767,
+        "hash": 825228396,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 4140470249,
-          "eyes": 3743005265,
-          "cheeks": 817069079,
-          "mouth": 292294913,
-          "jaw": 817069079
+          "brow": 4266809741,
+          "eyes": 378126549,
+          "cheeks": 2722995259,
+          "mouth": 2344808688,
+          "jaw": 2722995259
         },
         "exactNeutralMatch": true
       },
@@ -171,44 +171,44 @@
     {
       "id": "anger",
       "rest": {
-        "hash": 3214397767,
+        "hash": 825228396,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 4140470249,
-          "eyes": 3743005265,
-          "cheeks": 817069079,
-          "mouth": 292294913,
-          "jaw": 817069079
+          "brow": 4266809741,
+          "eyes": 378126549,
+          "cheeks": 2722995259,
+          "mouth": 2344808688,
+          "jaw": 2722995259
         },
         "exactNeutralMatch": false
       },
       "peak": {
-        "hash": 3043444945,
+        "hash": 1058618420,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 1864728633,
-          "eyes": 886280897,
-          "cheeks": 1502594742,
-          "mouth": 3520005079,
-          "jaw": 1502594742
+          "brow": 3402391941,
+          "eyes": 4019023763,
+          "cheeks": 3400644045,
+          "mouth": 2918484642,
+          "jaw": 3400644045
         },
         "exactNeutralMatch": false
       },
       "end": {
-        "hash": 3214397767,
+        "hash": 825228396,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 4140470249,
-          "eyes": 3743005265,
-          "cheeks": 817069079,
-          "mouth": 292294913,
-          "jaw": 817069079
+          "brow": 4266809741,
+          "eyes": 378126549,
+          "cheeks": 2722995259,
+          "mouth": 2344808688,
+          "jaw": 2722995259
         },
         "exactNeutralMatch": true
       },
@@ -254,44 +254,44 @@
     {
       "id": "fear",
       "rest": {
-        "hash": 3214397767,
+        "hash": 825228396,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 4140470249,
-          "eyes": 3743005265,
-          "cheeks": 817069079,
-          "mouth": 292294913,
-          "jaw": 817069079
+          "brow": 4266809741,
+          "eyes": 378126549,
+          "cheeks": 2722995259,
+          "mouth": 2344808688,
+          "jaw": 2722995259
         },
         "exactNeutralMatch": false
       },
       "peak": {
-        "hash": 3110171542,
+        "hash": 2109439761,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 21199401,
-          "eyes": 2692785298,
-          "cheeks": 3347287661,
-          "mouth": 1272320242,
-          "jaw": 3347287661
+          "brow": 3326914501,
+          "eyes": 3429737476,
+          "cheeks": 1137272515,
+          "mouth": 2828230397,
+          "jaw": 1137272515
         },
         "exactNeutralMatch": false
       },
       "end": {
-        "hash": 3214397767,
+        "hash": 825228396,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 4140470249,
-          "eyes": 3743005265,
-          "cheeks": 817069079,
-          "mouth": 292294913,
-          "jaw": 817069079
+          "brow": 4266809741,
+          "eyes": 378126549,
+          "cheeks": 2722995259,
+          "mouth": 2344808688,
+          "jaw": 2722995259
         },
         "exactNeutralMatch": true
       },
@@ -337,44 +337,44 @@
     {
       "id": "surprise",
       "rest": {
-        "hash": 3214397767,
+        "hash": 825228396,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 4140470249,
-          "eyes": 3743005265,
-          "cheeks": 817069079,
-          "mouth": 292294913,
-          "jaw": 817069079
+          "brow": 4266809741,
+          "eyes": 378126549,
+          "cheeks": 2722995259,
+          "mouth": 2344808688,
+          "jaw": 2722995259
         },
         "exactNeutralMatch": false
       },
       "peak": {
-        "hash": 4273790247,
+        "hash": 2505153593,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 2026388933,
-          "eyes": 1493648095,
-          "cheeks": 2636693183,
-          "mouth": 4085911764,
-          "jaw": 2636693183
+          "brow": 139332437,
+          "eyes": 4150976383,
+          "cheeks": 2167782078,
+          "mouth": 3583259329,
+          "jaw": 2167782078
         },
         "exactNeutralMatch": false
       },
       "end": {
-        "hash": 3214397767,
+        "hash": 825228396,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 4140470249,
-          "eyes": 3743005265,
-          "cheeks": 817069079,
-          "mouth": 292294913,
-          "jaw": 817069079
+          "brow": 4266809741,
+          "eyes": 378126549,
+          "cheeks": 2722995259,
+          "mouth": 2344808688,
+          "jaw": 2722995259
         },
         "exactNeutralMatch": true
       },
@@ -420,44 +420,44 @@
     {
       "id": "disgust",
       "rest": {
-        "hash": 3214397767,
+        "hash": 825228396,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 4140470249,
-          "eyes": 3743005265,
-          "cheeks": 817069079,
-          "mouth": 292294913,
-          "jaw": 817069079
+          "brow": 4266809741,
+          "eyes": 378126549,
+          "cheeks": 2722995259,
+          "mouth": 2344808688,
+          "jaw": 2722995259
         },
         "exactNeutralMatch": false
       },
       "peak": {
-        "hash": 3806655204,
+        "hash": 1394449664,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 3332867813,
-          "eyes": 958332591,
-          "cheeks": 387693403,
-          "mouth": 1054173367,
-          "jaw": 387693403
+          "brow": 15873005,
+          "eyes": 3643225325,
+          "cheeks": 4215185905,
+          "mouth": 542342485,
+          "jaw": 4215185905
         },
         "exactNeutralMatch": false
       },
       "end": {
-        "hash": 3214397767,
+        "hash": 825228396,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 4140470249,
-          "eyes": 3743005265,
-          "cheeks": 817069079,
-          "mouth": 292294913,
-          "jaw": 817069079
+          "brow": 4266809741,
+          "eyes": 378126549,
+          "cheeks": 2722995259,
+          "mouth": 2344808688,
+          "jaw": 2722995259
         },
         "exactNeutralMatch": true
       },
@@ -503,44 +503,44 @@
     {
       "id": "wink",
       "rest": {
-        "hash": 3214397767,
+        "hash": 825228396,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 4140470249,
-          "eyes": 3743005265,
-          "cheeks": 817069079,
-          "mouth": 292294913,
-          "jaw": 817069079
+          "brow": 4266809741,
+          "eyes": 378126549,
+          "cheeks": 2722995259,
+          "mouth": 2344808688,
+          "jaw": 2722995259
         },
         "exactNeutralMatch": false
       },
       "peak": {
-        "hash": 1429351200,
+        "hash": 2177913844,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 284763642,
-          "eyes": 55249320,
-          "cheeks": 1351045255,
-          "mouth": 1015900873,
-          "jaw": 1351045255
+          "brow": 28683117,
+          "eyes": 696767414,
+          "cheeks": 2241205778,
+          "mouth": 37318946,
+          "jaw": 2241205778
         },
         "exactNeutralMatch": false
       },
       "end": {
-        "hash": 3214397767,
+        "hash": 825228396,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 4140470249,
-          "eyes": 3743005265,
-          "cheeks": 817069079,
-          "mouth": 292294913,
-          "jaw": 817069079
+          "brow": 4266809741,
+          "eyes": 378126549,
+          "cheeks": 2722995259,
+          "mouth": 2344808688,
+          "jaw": 2722995259
         },
         "exactNeutralMatch": true
       },
@@ -586,44 +586,44 @@
     {
       "id": "laughter",
       "rest": {
-        "hash": 3214397767,
+        "hash": 825228396,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 4140470249,
-          "eyes": 3743005265,
-          "cheeks": 817069079,
-          "mouth": 292294913,
-          "jaw": 817069079
+          "brow": 4266809741,
+          "eyes": 378126549,
+          "cheeks": 2722995259,
+          "mouth": 2344808688,
+          "jaw": 2722995259
         },
         "exactNeutralMatch": false
       },
       "peak": {
-        "hash": 1211241894,
+        "hash": 21623505,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 343612265,
-          "eyes": 718786071,
-          "cheeks": 2029476516,
-          "mouth": 1245002022,
-          "jaw": 2029476516
+          "brow": 758853373,
+          "eyes": 2523344492,
+          "cheeks": 919112960,
+          "mouth": 926595631,
+          "jaw": 919112960
         },
         "exactNeutralMatch": false
       },
       "end": {
-        "hash": 3214397767,
+        "hash": 825228396,
         "finite": true,
-        "meshCount": 29,
-        "vertices": 69483,
+        "meshCount": 55,
+        "vertices": 163340,
         "featureHashes": {
-          "brow": 4140470249,
-          "eyes": 3743005265,
-          "cheeks": 817069079,
-          "mouth": 292294913,
-          "jaw": 817069079
+          "brow": 4266809741,
+          "eyes": 378126549,
+          "cheeks": 2722995259,
+          "mouth": 2344808688,
+          "jaw": 2722995259
         },
         "exactNeutralMatch": true
       },
@@ -691,8 +691,10 @@
   },
   "errors": [],
   "sources": {
-    "expressions/app.mjs": "02317bee997454eb01b00b6d47e8112fec7d9b98c22d764be2d338e6ca486f26",
-    "expressions/face.mjs": "5ddccf38de0e9b8ae53e626121d3118ed5b879d68d1a03e57c4359c32651f14f",
+    "expressions/app.mjs": "50d93efb3ecc853f25602cb2122dd783d6c84807d3c04a60b02e43f55e679cdc",
+    "expressions/face.mjs": "818b210672e02b5bfaf0e6de14f647f820f26005e6d5a06368466cb25baf2ae7",
+    "expressions/face-detail.mjs": "94cbd87f3c37aa86b768e919b7d1dcd83bf577f35b5d4ac4f3dfd34c33cf45a1",
+    "expressions/studio.mjs": "d34b2e1a1e9561599fe1f9a504b0c2bbf911889a6bd51a1384f3cd88ac048d45",
     "expressions/style.css": "139850d4f1ed7b73a1381fcb2aafffa29b36431e5fce91471080969a3b047dc2",
     "three/geometry.mjs": "aa62a681ad55d4665ced401459c8aacf55fa72868aa1e09f89c25ab0c57c737d"
   },

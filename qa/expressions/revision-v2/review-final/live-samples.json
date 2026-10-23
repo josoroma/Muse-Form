@@ -1,0 +1,218 @@
+[
+  {
+    "id": "wink",
+    "target": 0,
+    "time": 0,
+    "playing": true,
+    "pose": {
+      "amount": 0,
+      "leftEyeOpen": 1,
+      "rightEyeOpen": 1,
+      "leftAperture": 0.15999984741210938,
+      "rightAperture": 0.15999984741210938,
+      "leftIrisVisible": true,
+      "rightIrisVisible": true,
+      "jawOpen": 0,
+      "smile": 0,
+      "brow": 0
+    }
+  },
+  {
+    "id": "wink",
+    "target": 0.9,
+    "time": 1.3667000000000051,
+    "playing": true,
+    "pose": {
+      "amount": 0.5639782884894644,
+      "leftEyeOpen": 0.1822314816902766,
+      "rightEyeOpen": 0.9548817369208429,
+      "leftAperture": 0.02958226203918457,
+      "rightAperture": 0.15865039825439453,
+      "leftIrisVisible": true,
+      "rightIrisVisible": true,
+      "jawOpen": 0.014099457212236611,
+      "smile": 0.36658588751815185,
+      "brow": 0.014099457212236611
+    }
+  },
+  {
+    "id": "wink",
+    "target": 2.3,
+    "time": 3.3332000000000086,
+    "playing": true,
+    "pose": {
+      "amount": 0.8465051997174988,
+      "leftEyeOpen": 0,
+      "rightEyeOpen": 0.9322795840226001,
+      "leftAperture": 0,
+      "rightAperture": 0.1579744815826416,
+      "leftIrisVisible": false,
+      "rightIrisVisible": true,
+      "jawOpen": 0.02116262999293747,
+      "smile": 0.5502283798163743,
+      "brow": 0.02116262999293747
+    }
+  },
+  {
+    "id": "wink",
+    "target": 3.4,
+    "time": 4.999900000000025,
+    "playing": true,
+    "pose": {
+      "amount": 0,
+      "leftEyeOpen": 1,
+      "rightEyeOpen": 1,
+      "leftAperture": 0.15999984741210938,
+      "rightAperture": 0.15999984741210938,
+      "leftIrisVisible": true,
+      "rightIrisVisible": true,
+      "jawOpen": 0,
+      "smile": 0,
+      "brow": 0
+    }
+  },
+  {
+    "id": "wink",
+    "target": 4.5,
+    "time": 1.6665000000000285,
+    "playing": true,
+    "pose": {
+      "amount": 0.8264693307451241,
+      "leftEyeOpen": 0,
+      "rightEyeOpen": 0.93388245354039,
+      "leftAperture": 0,
+      "rightAperture": 0.15802240371704102,
+      "leftIrisVisible": false,
+      "rightIrisVisible": true,
+      "jawOpen": 0.020661733268628104,
+      "smile": 0.5372050649843306,
+      "brow": 0.020661733268628104
+    }
+  },
+  {
+    "id": "wink",
+    "target": 5.4,
+    "time": 3.1497000000000153,
+    "playing": true,
+    "pose": {
+      "amount": 0.9447322985321918,
+      "leftEyeOpen": 0,
+      "rightEyeOpen": 0.9244214161174247,
+      "leftAperture": 0,
+      "rightAperture": 0.15773940086364746,
+      "leftIrisVisible": false,
+      "rightIrisVisible": true,
+      "jawOpen": 0.023618307463304795,
+      "smile": 0.6140759940459246,
+      "brow": 0.023618307463304795
+    }
+  },
+  {
+    "id": "laughter",
+    "target": 0,
+    "time": 0,
+    "playing": true,
+    "pose": {
+      "amount": 0,
+      "leftEyeOpen": 1,
+      "rightEyeOpen": 1,
+      "leftAperture": 0.15999984741210938,
+      "rightAperture": 0.15999984741210938,
+      "leftIrisVisible": true,
+      "rightIrisVisible": true,
+      "jawOpen": 0,
+      "smile": 0,
+      "brow": 0
+    }
+  },
+  {
+    "id": "laughter",
+    "target": 0.9,
+    "time": 1.233200000000009,
+    "playing": true,
+    "pose": {
+      "amount": 0.43592626183854255,
+      "leftEyeOpen": 0.681773828857864,
+      "rightEyeOpen": 0.681773828857864,
+      "leftAperture": 0.11658883094787598,
+      "rightAperture": 0.11658883094787598,
+      "leftIrisVisible": true,
+      "rightIrisVisible": true,
+      "jawOpen": 0.15257419164348987,
+      "smile": 0.5885004534820325,
+      "brow": 0.01525741916434899
+    }
+  },
+  {
+    "id": "laughter",
+    "target": 2.3,
+    "time": 3.1331999999999933,
+    "playing": true,
+    "pose": {
+      "amount": 0.9514602200323757,
+      "leftEyeOpen": 0.3054340393763657,
+      "rightEyeOpen": 0.3054340393763657,
+      "leftAperture": 0.06524991989135742,
+      "rightAperture": 0.06524991989135742,
+      "leftIrisVisible": true,
+      "rightIrisVisible": true,
+      "jawOpen": 0.3330110770113315,
+      "smile": 1.2844712970437073,
+      "brow": 0.033301107701133155
+    }
+  },
+  {
+    "id": "laughter",
+    "target": 3.4,
+    "time": 4.733099999999993,
+    "playing": true,
+    "pose": {
+      "amount": 0,
+      "leftEyeOpen": 1,
+      "rightEyeOpen": 1,
+      "leftAperture": 0.15999984741210938,
+      "rightAperture": 0.15999984741210938,
+      "leftIrisVisible": true,
+      "rightIrisVisible": true,
+      "jawOpen": 0,
+      "smile": 0,
+      "brow": 0
+    }
+  },
+  {
+    "id": "laughter",
+    "target": 4.5,
+    "time": 1.3331000000000044,
+    "playing": true,
+    "pose": {
+      "amount": 0.5318078183787065,
+      "leftEyeOpen": 0.6117802925835443,
+      "rightEyeOpen": 0.6117802925835443,
+      "leftAperture": 0.1070406436920166,
+      "rightAperture": 0.1070406436920166,
+      "leftIrisVisible": true,
+      "rightIrisVisible": true,
+      "jawOpen": 0.18613273643254727,
+      "smile": 0.7179405548112539,
+      "brow": 0.01861327364325473
+    }
+  },
+  {
+    "id": "laughter",
+    "target": 5.4,
+    "time": 2.716399999999995,
+    "playing": true,
+    "pose": {
+      "amount": 1,
+      "leftEyeOpen": 0.27,
+      "rightEyeOpen": 0.27,
+      "leftAperture": 0.060416221618652344,
+      "rightAperture": 0.060416221618652344,
+      "leftIrisVisible": true,
+      "rightIrisVisible": true,
+      "jawOpen": 0.35,
+      "smile": 1.35,
+      "brow": 0.035
+    }
+  }
+]

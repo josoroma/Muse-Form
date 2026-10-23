@@ -5,10 +5,10 @@
     {
       "id": "body",
       "rest": {
-        "hash": 750838933,
+        "hash": 3501037403,
         "finite": true,
-        "meshCount": 80,
-        "vertices": 978835,
+        "meshCount": 82,
+        "vertices": 1640515,
         "featureHashes": {
           "pelvis": 3177508975,
           "back": 2563464879,
@@ -19,15 +19,15 @@
           "head": 135364362,
           "support-arm": 2851321911,
           "reach-arm": 2851321911,
-          "support-legs": 821947965
+          "support-legs": 315235953
         },
         "exactNeutralMatch": false
       },
       "peak": {
-        "hash": 3332924732,
+        "hash": 1424513026,
         "finite": true,
-        "meshCount": 80,
-        "vertices": 978835,
+        "meshCount": 82,
+        "vertices": 1640515,
         "featureHashes": {
           "pelvis": 3177508975,
           "back": 2563464879,
@@ -38,15 +38,15 @@
           "head": 135364362,
           "support-arm": 2851321911,
           "reach-arm": 171871492,
-          "support-legs": 821947965
+          "support-legs": 315235953
         },
         "exactNeutralMatch": false
       },
       "end": {
-        "hash": 750838933,
+        "hash": 3501037403,
         "finite": true,
-        "meshCount": 80,
-        "vertices": 978835,
+        "meshCount": 82,
+        "vertices": 1640515,
         "featureHashes": {
           "pelvis": 3177508975,
           "back": 2563464879,
@@ -57,7 +57,7 @@
           "head": 135364362,
           "support-arm": 2851321911,
           "reach-arm": 2851321911,
-          "support-legs": 821947965
+          "support-legs": 315235953
         },
         "exactNeutralMatch": true
       },
@@ -257,16 +257,17 @@
     {
       "id": "leg",
       "rest": {
-        "hash": 1633932997,
+        "hash": 721009609,
         "finite": true,
-        "meshCount": 16,
-        "vertices": 26416,
+        "meshCount": 17,
+        "vertices": 357256,
         "featureHashes": {
-          "leg-midfoot": 2491728078,
-          "leg-heel": 2942594033,
-          "leg-instep": 436693186,
-          "leg-forefoot": 2249818324,
-          "leg-toes": 1765623953,
+          "leg-ankle": 4176211585,
+          "leg-midfoot": 4176211585,
+          "leg-heel": 4176211585,
+          "leg-instep": 4176211585,
+          "leg-forefoot": 4176211585,
+          "leg-toes": 2145325393,
           "leg-contour": 3081051492,
           "leg-quadriceps": 3080141828,
           "leg-patella": 2119812671,
@@ -277,16 +278,17 @@
         "exactNeutralMatch": false
       },
       "peak": {
-        "hash": 4113407361,
+        "hash": 1270523615,
         "finite": true,
-        "meshCount": 16,
-        "vertices": 26416,
+        "meshCount": 17,
+        "vertices": 357256,
         "featureHashes": {
-          "leg-midfoot": 1699375525,
-          "leg-heel": 69048403,
-          "leg-instep": 4198110501,
-          "leg-forefoot": 2249818324,
-          "leg-toes": 1765623953,
+          "leg-ankle": 3905607963,
+          "leg-midfoot": 3905607963,
+          "leg-heel": 3905607963,
+          "leg-instep": 3905607963,
+          "leg-forefoot": 3905607963,
+          "leg-toes": 3282116291,
           "leg-contour": 1134975576,
           "leg-quadriceps": 3806988571,
           "leg-patella": 3528593906,
@@ -297,16 +299,17 @@
         "exactNeutralMatch": false
       },
       "end": {
-        "hash": 1633932997,
+        "hash": 721009609,
         "finite": true,
-        "meshCount": 16,
-        "vertices": 26416,
+        "meshCount": 17,
+        "vertices": 357256,
         "featureHashes": {
-          "leg-midfoot": 2491728078,
-          "leg-heel": 2942594033,
-          "leg-instep": 436693186,
-          "leg-forefoot": 2249818324,
-          "leg-toes": 1765623953,
+          "leg-ankle": 4176211585,
+          "leg-midfoot": 4176211585,
+          "leg-heel": 4176211585,
+          "leg-instep": 4176211585,
+          "leg-forefoot": 4176211585,
+          "leg-toes": 2145325393,
           "leg-contour": 3081051492,
           "leg-quadriceps": 3080141828,
           "leg-patella": 2119812671,
@@ -345,65 +348,65 @@
           "file": "leg-t5.00.png"
         }
       ],
-      "labels": 11,
+      "labels": 12,
       "pass": true
     },
     {
       "id": "foot",
       "rest": {
-        "hash": 3048637490,
+        "hash": 3863885667,
         "finite": true,
-        "meshCount": 11,
-        "vertices": 15143,
+        "meshCount": 10,
+        "vertices": 385660,
         "featureHashes": {
-          "foot-midfoot": 514805225,
-          "foot-heel": 2942594033,
-          "foot-instep": 436693186,
-          "foot-forefoot": 2249818324,
-          "foot-ankle": 1925516654,
-          "foot-toe-1": 2110215862,
-          "foot-toe-2": 2584051131,
-          "foot-toe-3": 3917066937,
-          "foot-toe-4": 374965977,
-          "foot-toe-5": 4248745148
+          "foot-ankle": 2488384079,
+          "foot-midfoot": 2488384079,
+          "foot-heel": 2488384079,
+          "foot-instep": 2488384079,
+          "foot-forefoot": 2488384079,
+          "foot-toe-1": 2488384079,
+          "foot-toe-2": 2488384079,
+          "foot-toe-3": 2488384079,
+          "foot-toe-4": 2488384079,
+          "foot-toe-5": 2488384079
         },
         "exactNeutralMatch": false
       },
       "peak": {
-        "hash": 2814799266,
+        "hash": 839653374,
         "finite": true,
-        "meshCount": 11,
-        "vertices": 15143,
+        "meshCount": 10,
+        "vertices": 385660,
         "featureHashes": {
-          "foot-midfoot": 514805225,
-          "foot-heel": 2942594033,
-          "foot-instep": 436693186,
-          "foot-forefoot": 2249818324,
-          "foot-ankle": 1925516654,
-          "foot-toe-1": 4266346843,
-          "foot-toe-2": 787843958,
-          "foot-toe-3": 352419063,
-          "foot-toe-4": 2409861362,
-          "foot-toe-5": 2615257698
+          "foot-ankle": 1430129358,
+          "foot-midfoot": 1430129358,
+          "foot-heel": 1430129358,
+          "foot-instep": 1430129358,
+          "foot-forefoot": 1430129358,
+          "foot-toe-1": 1430129358,
+          "foot-toe-2": 1430129358,
+          "foot-toe-3": 1430129358,
+          "foot-toe-4": 1430129358,
+          "foot-toe-5": 1430129358
         },
         "exactNeutralMatch": false
       },
       "end": {
-        "hash": 3048637490,
+        "hash": 3863885667,
         "finite": true,
-        "meshCount": 11,
-        "vertices": 15143,
+        "meshCount": 10,
+        "vertices": 385660,
         "featureHashes": {
-          "foot-midfoot": 514805225,
-          "foot-heel": 2942594033,
-          "foot-instep": 436693186,
-          "foot-forefoot": 2249818324,
-          "foot-ankle": 1925516654,
-          "foot-toe-1": 2110215862,
-          "foot-toe-2": 2584051131,
-          "foot-toe-3": 3917066937,
-          "foot-toe-4": 374965977,
-          "foot-toe-5": 4248745148
+          "foot-ankle": 2488384079,
+          "foot-midfoot": 2488384079,
+          "foot-heel": 2488384079,
+          "foot-instep": 2488384079,
+          "foot-forefoot": 2488384079,
+          "foot-toe-1": 2488384079,
+          "foot-toe-2": 2488384079,
+          "foot-toe-3": 2488384079,
+          "foot-toe-4": 2488384079,
+          "foot-toe-5": 2488384079
         },
         "exactNeutralMatch": true
       },
@@ -464,7 +467,7 @@
     "three/geometry.mjs": "aa62a681ad55d4665ced401459c8aacf55fa72868aa1e09f89c25ab0c57c737d",
     "three/upper-body.mjs": "52dd687512f0770ff1b8cd90ee95e8826c60e73d2fa05dd0a1a76415e6983df6",
     "three/hand.mjs": "34eedb511671159c18d6840b7971da4cb34593d8b46dd638003dbd4989a40216",
-    "three/lower-limb.mjs": "27a5cc0d4571b452a306a375bbd369d10dc5f825464080b27a223b78097bb344"
+    "three/lower-limb.mjs": "ea692a0a9e1344c374aa16ac52e26b42def2e98b20a1c51a49b2fcf8e949fd4d"
   },
   "pass": true
 }

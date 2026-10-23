@@ -1,0 +1,34 @@
+{
+  "scope": "Little-toe / continuous forefoot attachment repair; preserved existing hand geometry",
+  "changedSources": [
+    "three/lower-limb.mjs"
+  ],
+  "archive": "archive/three-v2/lower-limb.mjs",
+  "sourceHashes": {
+    "three/lower-limb.mjs": "ea692a0a9e1344c374aa16ac52e26b42def2e98b20a1c51a49b2fcf8e949fd4d",
+    "three/hand.mjs": "34eedb511671159c18d6840b7971da4cb34593d8b46dd638003dbd4989a40216"
+  },
+  "method": "Original parametric foot and toe volumes are fused into one closed skin mesh; smooth field unions create metatarsal webs and a broad plantar support. Semantic regions share vertices and smooth normals. Cached immutable rest topology supplies independent pose buffers. The root-to-contact blend and its deformation Jacobian carry skin normals and projected nail/crease lines through the five-second heel rise.",
+  "repairs": [
+    "Removed disconnected lateral toe and exposed proximal tube cap.",
+    "Replaced overlapping toe/forefoot shells with continuous manifold geometry.",
+    "Kept the little toe short and distinct while joining its plantar and dorsal base to the metatarsals.",
+    "Matched the leg-edition ankle contour and normals to the existing shin loft.",
+    "Computed per-region bounds from indexed vertices for local focus and picking.",
+    "Preserved the five-second action, exact endpoints and independent mirrored body instances."
+  ],
+  "visualReview": {
+    "renderer": "Chrome WebGL / Three.js 0.186.1; actual imported source models under FORM-style lighting",
+    "views": "Foot: front, lateral, medial, quarter and underside at 0 and 2.5 seconds; fifth toe selected at both poses. Leg: whole form and close ankle/foot at both poses. Full body: mirrored feet close at both poses. Existing hand: front, lateral and back at both poses.",
+    "observations": [
+      "Little toe joins the lateral forefoot without a gap or separate cap at rest and rise.",
+      "Five toes remain legible in front, side and underside views; the broad forefoot supports their roots.",
+      "Toe nail margins remain attached to the skin, with restrained joint creases.",
+      "No holes appear at leg/foot or mirrored full-body attachments.",
+      "Existing hand pinky is continuous into the palm at rest and full grasp; hand source was left unchanged."
+    ],
+    "playback": "Executed an actual 5.15-second requestAnimationFrame foot loop (159 rendered frames); visual judgment used the rendered rest/peak/multiview samples, rather than claiming continuous human review."
+  },
+  "checks": "model-checks.json",
+  "notes": "Procedural illustrative surface anatomy; no external scan/model assets. No SVG changes or MP4 output."
+}

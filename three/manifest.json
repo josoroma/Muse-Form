@@ -286,19 +286,24 @@
           "description": "The Achilles tendon continues the calf toward its attachment on the heel."
         },
         {
+          "id": "leg-ankle",
+          "name": "Ankle region",
+          "description": "The ankle narrows above the heel, with its surface continuing into the dorsum."
+        },
+        {
           "id": "leg-midfoot",
           "name": "Foot contour",
-          "description": "The continuous foot surface connects heel, midfoot and forefoot. Its medial arch rises between the heel and the ball of the foot."
+          "description": "A continuous skin surface joins heel, arch, metatarsal support and all five toes."
         },
         {
           "id": "leg-heel",
           "name": "Calcaneal region",
-          "description": "The heel rises as the body rolls over the supporting forefoot."
+          "description": "The heel rises as the foot rolls over the supporting forefoot."
         },
         {
           "id": "leg-instep",
           "name": "Dorsum of foot",
-          "description": "The instep slopes from the ankle toward the metatarsals."
+          "description": "The instep slopes continuously from the ankle toward the metatarsals."
         },
         {
           "id": "leg-forefoot",
@@ -308,7 +313,7 @@
         {
           "id": "leg-toes",
           "name": "Phalanges",
-          "description": "Five toes provide distinct contact points; the great toe is broader and the outer toes shorten."
+          "description": "Five toes continue from one forefoot surface; the great toe is broader and the outer toes shorten."
         }
       ],
       "beats": [
@@ -346,28 +351,28 @@
         "105222",
         "105223"
       ],
-      "prompt": "Build an original Three.js foot with one smooth ankle-to-heel-to-instep surface, a visible medial arch, metatarsal support and five separately formed toes with natural length hierarchy. Use restrained nail margins and joint creases. Animate a five-second heel rise of about 21 degrees around the ball of the foot, hold, and lower; toe tips remain supported while the proximal toes extend. Avoid a cylindrical ankle intersecting a shoe-like foot, folded loft surfaces, floating toes or drifting labels. Provide selectable dorsum, heel, ankle, forefoot and toe regions. Frame the union of all poses so toes and ankle remain visible throughout the guided camera arc.",
+      "prompt": "Build an original Three.js foot with one smooth ankle-to-heel-to-instep surface, a visible medial arch, metatarsal support and five separately formed toes with natural length hierarchy. Use restrained nail margins and joint creases. Animate a five-second heel rise of about 21 degrees around the ball of the foot, hold, and lower; toe tips remain supported while the proximal toes extend. Blend the little toe into the lateral metatarsal volume and keep its root attached from front, side and below throughout the heel rise. Avoid a cylindrical ankle intersecting a shoe-like foot, folded loft surfaces, floating toes or drifting labels. Provide selectable dorsum, heel, ankle, forefoot and toe regions. Frame the union of all poses so toes and ankle remain visible throughout the guided camera arc.",
       "method": "Original procedural Three.js surface geometry and authored deterministic joint/mesh animation; no external model or scanned anatomy.",
       "parts": [
         {
           "id": "foot-ankle",
           "name": "Ankle region",
-          "description": "The ankle narrows above the heel, with the malleoli defining its side contours."
+          "description": "The ankle narrows above the heel, with its surface continuing into the dorsum."
         },
         {
           "id": "foot-midfoot",
           "name": "Foot contour",
-          "description": "The continuous foot surface connects heel, midfoot and forefoot. Its medial arch rises between the heel and the ball of the foot."
+          "description": "A continuous skin surface joins heel, arch, metatarsal support and all five toes."
         },
         {
           "id": "foot-heel",
           "name": "Calcaneal region",
-          "description": "The heel rises as the body rolls over the supporting forefoot."
+          "description": "The heel rises as the foot rolls over the supporting forefoot."
         },
         {
           "id": "foot-instep",
           "name": "Dorsum of foot",
-          "description": "The instep slopes from the ankle toward the metatarsals."
+          "description": "The instep slopes continuously from the ankle toward the metatarsals."
         },
         {
           "id": "foot-forefoot",
@@ -382,22 +387,22 @@
         {
           "id": "foot-toe-2",
           "name": "Second toe",
-          "description": "The smaller toes each have three phalanges; their lengths step down toward the lateral border."
+          "description": "The smaller toes continue from a shared metatarsal web; their distal pads stay planted as the heel rises."
         },
         {
           "id": "foot-toe-3",
           "name": "Third toe",
-          "description": "The smaller toes each have three phalanges; their lengths step down toward the lateral border."
+          "description": "The smaller toes continue from a shared metatarsal web; their distal pads stay planted as the heel rises."
         },
         {
           "id": "foot-toe-4",
           "name": "Fourth toe",
-          "description": "The smaller toes each have three phalanges; their lengths step down toward the lateral border."
+          "description": "The smaller toes continue from a shared metatarsal web; their distal pads stay planted as the heel rises."
         },
         {
           "id": "foot-toe-5",
           "name": "Fifth toe",
-          "description": "The smaller toes each have three phalanges; their lengths step down toward the lateral border."
+          "description": "The smaller toes continue from a shared metatarsal web; their distal pads stay planted as the heel rises."
         }
       ],
       "beats": [

@@ -105,83 +105,98 @@ const TOES=[
   {x:-.125,z:1.05,l:.80,w:.127,h:.142,name:'Second toe'},
   {x:.145,z:1.04,l:.70,w:.116,h:.133,name:'Third toe'},
   {x:.385,z:.95,l:.57,w:.103,h:.123,name:'Fourth toe'},
-  {x:.585,z:.79,l:.45,w:.092,h:.111,name:'Fifth toe'}
+  {x:.56,z:.78,l:.50,w:.101,h:.119,rootLift:.018,name:'Fifth toe'}
 ];
 function toeSurface(toe,u,theta) {
   u=THREE.MathUtils.clamp(u,0,1);
   const tip=Math.sqrt(Math.max(.0001,1-((Math.max(0,u-.64))/.36)**2));
   const taper=(1-.20*u)*(u<.09 ? .88+.12*smooth(u/.09) : 1)*tip;
-  const centerY=toe.h+.012-.016*u-.012*Math.sin(Math.PI*u);
+  const centerY=toe.h+.012-.016*u-.012*Math.sin(Math.PI*u)+(toe.rootLift||0)*(1-smooth((u-.25)/.55));
   return new THREE.Vector3(toe.x+Math.sin(theta)*toe.w*taper,Math.max(.012,centerY+Math.cos(theta)*toe.h*taper),toe.z+toe.l*u);
 }
+// One watertight skin replaces the intersecting forefoot and separate toe tubes.
+// Immutable rest topology is cached; every assembled foot owns its pose buffers.
+const footTemplates=new Map();
+function footDistanceSampler(ankleHeight){
+  const source=surfaceMesh((u,v)=>footSurface(u,v,0,ankleHeight),[0,1,0,TAU],76,56,true);
+  const positions=source.geometry.attributes.position, normals=source.geometry.attributes.normal, indices=source.geometry.index.array, triangles=[];
+  const add=(a,b,c,n)=>{const box=new THREE.Box3().setFromPoints([a,b,c]);triangles.push({triangle:new THREE.Triangle(a,b,c),normal:n,box,center:box.getCenter(new THREE.Vector3())});};
+  for(let i=0;i<indices.length;i+=3){const ids=[indices[i],indices[i+1],indices[i+2]],v=ids.map(j=>new THREE.Vector3().fromBufferAttribute(positions,j));const n=ids.reduce((s,j)=>s.add(new THREE.Vector3().fromBufferAttribute(normals,j)),new THREE.Vector3()).normalize();add(...v,n);}
+  for(const u of[0,1]){const center=footSurface(u,0,0,ankleHeight).add(footSurface(u,Math.PI,0,ankleHeight)).multiplyScalar(.5);for(let j=0;j<56;j++)add(center.clone(),footSurface(u,TAU*j/56,0,ankleHeight),footSurface(u,TAU*(j+1)/56,0,ankleHeight),new THREE.Vector3(0,u===0?1:0,u===1?1:0));}
+  function build(items){const box=new THREE.Box3();for(const t of items)box.union(t.box);if(items.length<=10)return{box,items};const size=box.getSize(new THREE.Vector3()),axis=size.x>size.y&&size.x>size.z?'x':size.y>size.z?'y':'z';items.sort((a,b)=>a.center[axis]-b.center[axis]);const mid=items.length>>1;return{box,left:build(items.slice(0,mid)),right:build(items.slice(mid))};}
+  const root=build(triangles),point=new THREE.Vector3(),closest=new THREE.Vector3(),delta=new THREE.Vector3();let best,sign;
+  function boxDistance(box){let d=0;for(const k of['x','y','z']){const v=point[k]<box.min[k]?box.min[k]-point[k]:point[k]>box.max[k]?point[k]-box.max[k]:0;d+=v*v;}return d;}
+  function visit(node){if(boxDistance(node.box)>best)return;if(node.items){for(const t of node.items){t.triangle.closestPointToPoint(point,closest);const distance=point.distanceToSquared(closest);if(distance<best){best=distance;sign=delta.copy(point).sub(closest).dot(t.normal)<0?-1:1;}}return;}const a=boxDistance(node.left.box),b=boxDistance(node.right.box);if(a<b){visit(node.left);visit(node.right);}else{visit(node.right);visit(node.left);}}
+  source.geometry.dispose();source.material.dispose();
+  return(x,y,z)=>{point.set(x,y,z);best=Infinity;sign=1;visit(root);return Math.sqrt(best)*sign;};
+}
+function toeDistance(toe,x,y,z){
+  const u=THREE.MathUtils.clamp((z-toe.z)/toe.l,0,1),p=toeSurface(toe,u,0),q=toeSurface(toe,u,Math.PI),cy=(p.y+q.y)*.5,ry=Math.max(.001,(p.y-q.y)*.5),rx=Math.max(.001,toeSurface(toe,u,Math.PI/2).x-toe.x);
+  let radial=(Math.hypot((x-toe.x)/rx,(y-cy)/ry)-1)*Math.min(rx,ry);
+  if(z<toe.z)radial=Math.max(radial,toe.z-z);if(z>toe.z+toe.l)radial=Math.max(radial,z-toe.z-toe.l);
+  return radial;
+}
+function footTemplate(ankleHeight){
+  if(footTemplates.has(ankleHeight))return footTemplates.get(ankleHeight);
+  const rawBodyDistance=footDistanceSampler(ankleHeight);
+  function bodyDistance(x,y,z){
+    if(y<.89){const shell=rawBodyDistance(x,y,z),pad=(Math.sqrt((x/.66)**4+((z-.79)/.34)**4+((y-.175)/.163)**2)-1)*.13,h=Math.max(.055-Math.abs(shell-pad),0)/.055;return Math.min(shell,pad)-h*h*.055*.25;}
+    let rx,rz,cz;
+    if(ankleHeight<1.5){[rx,rz,cz]=interpolate(LEG_RINGS,y);}
+    else{let lo=0,hi=.27;for(let n=0;n<16;n++){const u=(lo+hi)/2,r=interpolate(FOOT_RINGS,u);if((r[1]+r[3])/2>y)lo=u;else hi=u;}const r=interpolate(FOOT_RINGS,(lo+hi)/2);rx=r[0];rz=(r[2]-r[4])/2;cz=(r[2]+r[4])/2;}
+    const radial=(Math.hypot(x/rx,(z-cz)/rz)-1)*Math.min(rx,rz),d=Math.max(radial,y-ankleHeight),blend=smooth((y-.89)/.16);return blend===1?d:THREE.MathUtils.lerp(rawBodyDistance(x,y,z),d,blend);
+  }
+  const smoothMin=(a,b,k)=>{const h=Math.max(k-Math.abs(a-b),0)/k;return Math.min(a,b)-h*h*k*.25;};
+  let lastFollow=1;
+  function field(x,y,z){const distances=[bodyDistance(x,y,z),...TOES.map(toe=>toeDistance(toe,x,y,z))],lowest=Math.min(...distances),weights=distances.map(d=>Math.exp(-(d-lowest)/.025)),total=weights.reduce((a,b)=>a+b,0);let follow=weights[0],d=distances[0];TOES.forEach((toe,j)=>{d=smoothMin(d,distances[j+1],.072*(1-smooth((z-toe.z-.26)/.30))+.008);follow+=weights[j+1]*(1-smooth(((z-toe.z)/toe.l-.18)/.48));});lastFollow=follow/total;return Math.max(.012-y,y-ankleHeight,d);}
+  const step=.035,min=[-.78,-.03,-1.13],nx=47,ny=Math.ceil((ankleHeight+.07)/step)+1,nz=90,count=nx*ny*nz,values=new Float32Array(count),follows=new Float32Array(count),grid=new Float32Array(count*3),index=(x,y,z)=>x+nx*(y+ny*z);
+  for(let z=0;z<nz;z++)for(let y=0;y<ny;y++)for(let x=0;x<nx;x++){const i=index(x,y,z),p=[min[0]+x*step,min[1]+y*step,min[2]+z*step];grid.set(p,i*3);values[i]=field(...p);follows[i]=lastFollow;}
+  function sampled(data,x,y,z){const q=[x,y,z].map((v,k)=>THREE.MathUtils.clamp((v-min[k])/step,0,[nx,ny,nz][k]-1.000001)),a=q.map(Math.floor),f=q.map((v,k)=>v-a[k]);let value=0;for(let dz=0;dz<2;dz++)for(let dy=0;dy<2;dy++)for(let dx=0;dx<2;dx++)value+=data[index(a[0]+dx,a[1]+dy,a[2]+dz)]*(dx?f[0]:1-f[0])*(dy?f[1]:1-f[1])*(dz?f[2]:1-f[2]);return value;}
+  const vertices=[],triangles=[],edgeVertices=new Map(),corners=[[0,0,0],[1,0,0],[1,1,0],[0,1,0],[0,0,1],[1,0,1],[1,1,1],[0,1,1]],tetrahedra=[[0,5,1,6],[0,1,2,6],[0,2,3,6],[0,3,7,6],[0,7,4,6],[0,4,5,6]],tetraEdges=[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]];
+  function edgeVertex(a,b){const key=a<b?`${a}:${b}`:`${b}:${a}`;if(edgeVertices.has(key))return edgeVertices.get(key);const t=values[a]/(values[a]-values[b]),i=vertices.length/3;for(let c=0;c<3;c++)vertices.push(THREE.MathUtils.lerp(grid[a*3+c],grid[b*3+c],t));edgeVertices.set(key,i);return i;}
+  const va=new THREE.Vector3(),vb=new THREE.Vector3();
+  for(let z=0;z<nz-1;z++)for(let y=0;y<ny-1;y++)for(let x=0;x<nx-1;x++){const cube=corners.map(c=>index(x+c[0],y+c[1],z+c[2]));if(cube.every(i=>values[i]>0)||cube.every(i=>values[i]<=0))continue;for(const tet of tetrahedra){const ids=tet.map(i=>cube[i]),inside=ids.filter(i=>values[i]<=0),outside=ids.filter(i=>values[i]>0);if(!inside.length||!outside.length)continue;const poly=[];for(const[a,b]of tetraEdges)if((values[ids[a]]<=0)!==(values[ids[b]]<=0))poly.push(edgeVertex(ids[a],ids[b]));const center=new THREE.Vector3();poly.forEach(i=>center.add(new THREE.Vector3().fromArray(vertices,i*3)));center.divideScalar(poly.length);const inward=new THREE.Vector3(),outward=new THREE.Vector3();inside.forEach(i=>inward.add(new THREE.Vector3().fromArray(grid,i*3)));outside.forEach(i=>outward.add(new THREE.Vector3().fromArray(grid,i*3)));const normal=outward.divideScalar(outside.length).sub(inward.divideScalar(inside.length)).normalize(),u=new THREE.Vector3().fromArray(vertices,poly[0]*3).sub(center).normalize(),v=new THREE.Vector3().crossVectors(normal,u).normalize();poly.sort((a,b)=>{va.fromArray(vertices,a*3).sub(center);vb.fromArray(vertices,b*3).sub(center);return Math.atan2(va.dot(v),va.dot(u))-Math.atan2(vb.dot(v),vb.dot(u));});for(let i=1;i+1<poly.length;i++)triangles.push(poly[0],poly[i],poly[i+1]);}}
+  // Relax the extraction lattice before semantic cuts. Alternating coefficients
+  // remove voxel facets without visibly shrinking the authored toe volumes.
+  const neighbors=Array.from({length:vertices.length/3},()=>new Set());for(let i=0;i<triangles.length;i+=3)for(const[a,b]of[[0,1],[1,2],[2,0]]){neighbors[triangles[i+a]].add(triangles[i+b]);neighbors[triangles[i+b]].add(triangles[i+a]);}
+  for(let pass=0;pass<4;pass++)for(const amount of[.40,-.37]){const old=vertices.slice();for(let i=0;i<neighbors.length;i++){const list=neighbors[i];if(!list.size)continue;for(let k=0;k<3;k++){let mean=0;for(const j of list)mean+=old[j*3+k];vertices[i*3+k]=THREE.MathUtils.lerp(old[i*3+k],mean/list.size,amount);}}}
+  // The leg edition meets its unchanged shin loft on the exact same contour.
+  if(ankleHeight<1.5)for(let i=0;i<vertices.length;i+=3){const x=vertices[i],y=vertices[i+1],z=vertices[i+2];if(y<ankleHeight-.08)continue;const[rx,rz,cz]=interpolate(LEG_RINGS,y),radial=Math.hypot(x/rx,(z-cz)/rz);if(radial<.88)continue;const theta=Math.atan2(x/rx,(z-cz)/rz),p=legSurface(y,theta),w=smooth((y-ankleHeight+.08)/.05);vertices[i]=THREE.MathUtils.lerp(x,p.x,w);vertices[i+2]=THREE.MathUtils.lerp(z,p.z,w);}
+  const region=new Map(['ankle','midfoot','heel','instep','forefoot',...TOES.map((_,i)=>`toe-${i+1}`)].map(id=>[id,[]])),cutCache=new Map(),sample=i=>new THREE.Vector3().fromArray(vertices,i*3);
+  function split(poly,fn,key){const yes=[],no=[];for(let i=0;i<poly.length;i++){const a=poly[(i+poly.length-1)%poly.length],b=poly[i],da=fn(sample(a)),db=fn(sample(b));if((da<=0)!==(db<=0)){const cacheKey=`${key}:${Math.min(a,b)}:${Math.max(a,b)}`;let c=cutCache.get(cacheKey);if(c===undefined){let lo=0,hi=1;for(let k=0;k<22;k++){const t=(lo+hi)/2,d=fn(sample(a).lerp(sample(b),t));if((d<=0)===(da<=0))lo=t;else hi=t;}c=vertices.length/3;vertices.push(...sample(a).lerp(sample(b),(lo+hi)/2).toArray());cutCache.set(cacheKey,c);}yes.push(c);no.push(c);}(db<=0?yes:no).push(b);}return[yes,no];}
+  const emit=(poly,id)=>{for(let i=1;i+1<poly.length;i++)region.get(id).push(poly[0],poly[i],poly[i+1]);};
+  const regions=[...TOES.map((toe,i)=>[`toe-${i+1}`,p=>Math.max(toe.z+.18-p.z,Math.abs(p.x-toe.x)-toe.w*1.2)]),['ankle',p=>.99-p.y],['heel',p=>Math.max(p.z+.66,p.y-.88)],['instep',p=>Math.max(.34-p.y,p.z-.72)],['forefoot',p=>.76-p.z]];
+  for(let i=0;i<triangles.length;i+=3){let remainder=triangles.slice(i,i+3);for(const[id,fn]of regions){if(remainder.length<3)break;const[yes,no]=split(remainder,fn,id);emit(yes,id);remainder=no;}emit(remainder,'midfoot');}
+  // Region boundaries share vertices; split any later cut on its opposing face.
+  const edgeKey=(a,b)=>a<b?`${a}:${b}`:`${b}:${a}`;
+  for(let pass=0;pass<2;pass++){const counts=new Map();for(const faces of region.values())for(let i=0;i<faces.length;i+=3)for(const[a,b]of[[0,1],[1,2],[2,0]]){const key=edgeKey(faces[i+a],faces[i+b]);counts.set(key,(counts.get(key)||0)+1);}const boundary=[...counts].filter(([,n])=>n===1).map(([key])=>key.split(':').map(Number)),boundaryVertices=[...new Set(boundary.flat())],splits=new Map();for(const[a,b]of boundary){const pa=sample(a),pb=sample(b),ab=pb.clone().sub(pa),length=ab.lengthSq(),middle=[];for(const c of boundaryVertices){if(c===a||c===b)continue;const pc=sample(c),t=pc.clone().sub(pa).dot(ab)/length;if(t<=1e-5||t>=1-1e-5)continue;if(pc.distanceToSquared(pa.clone().addScaledVector(ab,t))<1e-12)middle.push([t,c]);}if(middle.length)splits.set(edgeKey(a,b),middle.sort((x,y)=>x[0]-y[0]).map(v=>v[1]));}if(!splits.size)break;for(const[id,source]of region){const replacement=[];for(let i=0;i<source.length;i+=3){const tri=source.slice(i,i+3),polygon=[];let changed=false;for(let j=0;j<3;j++){const a=tri[j],b=tri[(j+1)%3];polygon.push(a);const add=splits.get(edgeKey(a,b));if(add){changed=true;polygon.push(...(a<b?add:[...add].reverse()));}}if(!changed){replacement.push(...tri);continue;}const center=vertices.length/3;for(let axis=0;axis<3;axis++)vertices.push((vertices[tri[0]*3+axis]+vertices[tri[1]*3+axis]+vertices[tri[2]*3+axis])/3);for(let j=0;j<polygon.length;j++)replacement.push(center,polygon[j],polygon[(j+1)%polygon.length]);}region.set(id,replacement);}}
+  const normals=[],weights=[],weightGradients=[];
+  for(let i=0;i<vertices.length;i+=3){const x=vertices[i],y=vertices[i+1],z=vertices[i+2],e=.025,n=new THREE.Vector3(sampled(values,x+e,y,z)-sampled(values,x-e,y,z),sampled(values,x,y+e,z)-sampled(values,x,y-e,z),sampled(values,x,y,z+e)-sampled(values,x,y,z-e)).normalize();if(ankleHeight<1.5&&y>ankleHeight-.10){const[rx,rz,cz]=interpolate(LEG_RINGS,y);if(Math.hypot(x/rx,(z-cz)/rz)>.88){const theta=Math.atan2(x/rx,(z-cz)/rz),a=legSurface(y,theta+.001).sub(legSurface(y,theta-.001)),b=legSurface(y+.001,theta).sub(legSurface(y-.001,theta)),desired=a.cross(b).normalize();n.lerp(desired,smooth((y-ankleHeight+.10)/.07)).normalize();}}normals.push(...n.toArray());weights.push(sampled(follows,x,y,z));weightGradients.push((sampled(follows,x+e,y,z)-sampled(follows,x-e,y,z))/(2*e),(sampled(follows,x,y+e,z)-sampled(follows,x,y-e,z))/(2*e),(sampled(follows,x,y,z+e)-sampled(follows,x,y,z-e))/(2*e));}
+  const result={vertices:Float32Array.from(vertices),normals:Float32Array.from(normals),weights:Float32Array.from(weights),weightGradients:Float32Array.from(weightGradients),region,followAt:(x,y,z)=>sampled(follows,x,y,z),surfaceY:(x,z)=>{let high=.8,low=.02;for(let y=.78;y>.01;y-=.02){if(sampled(values,x,y,z)<=0){low=y;high=y+.02;break;}}for(let i=0;i<20;i++){const y=(low+high)/2;if(sampled(values,x,y,z)>0)high=y;else low=y;}return(low+high)/2;}};footTemplates.set(ankleHeight,result);return result;
+}
 function makeFoot(prefix='foot',ankleHeight=1.70) {
-  const group=new THREE.Group(), bodyPivot=new THREE.Group();
-  group.add(bodyPivot);
-  bodyPivot.position.set(0,.24,1.00);
-  const body=new THREE.Group();body.position.set(0,-.24,-1.00);bodyPivot.add(body);
-  const parts=[];
-  const shell=surfaceMesh((u,v)=>footSurface(u,v,0,ankleHeight),[0,1,0,TAU],90,64,true);
-  parts.push(part(body,`${prefix}-midfoot`,'Foot contour','The continuous foot surface connects heel, midfoot and forefoot. Its medial arch rises between the heel and the ball of the foot.',shell,[-.48,.35,-.12]));
-  const heel=surfaceMesh((u,v)=>footSurface(u,v,.003,ankleHeight),[.27,.50,Math.PI*.55,Math.PI*1.45],22,32,true);
-  parts.push(part(body,`${prefix}-heel`,'Calcaneal region','The heel rises as the body rolls over the supporting forefoot.',heel,[.20,.45,-1.11]));
-  const dorsum=surfaceMesh((u,v)=>footSurface(u,v,.003,ankleHeight),[.29,.80,-.92,.92],30,28,true);
-  parts.push(part(body,`${prefix}-instep`,'Dorsum of foot','The instep slopes from the ankle toward the metatarsals.',dorsum,[.05,.73,-.08]));
-  const ball=surfaceMesh((u,v)=>footSurface(u,v,.003,ankleHeight),[.80,.96,Math.PI*.38,Math.PI*1.62],15,36,true);
-  parts.push(part(body,`${prefix}-forefoot`,'Metatarsal support','The ball of the foot carries the support as the heel lifts.',ball,[.54,.28,.91]));
-  const toes=[], toeMeshes=[];
-  TOES.forEach((toe,i)=>{
-    const m=surfaceMesh((u,v)=>toeSurface(toe,u,v),[0,1,0,TAU],30,32,true);
-    toeMeshes.push(m);
-    const p=part(group,`${prefix}-toe-${i+1}`,toe.name,i===0?'The great toe has two phalanges and a broad supporting pad.':'The smaller toes each have three phalanges; their lengths step down toward the lateral border.',m,[toe.x,.36,toe.z+toe.l*.67]);
-    toes.push(p);
-    // A single dorsal joint crease and a fine nail margin supply scale without noise.
-    const crease=[];
-    for(let n=0;n<=12;n++) {
-      const theta=-1.0+2*n/12;
-      const p=toeSurface(toe,i===0?.56:.48,theta);
-      p.y+=.004; crease.push(p.toArray());
-    }
-    arc(group,crease);
-    const nail=[];
-    for(let n=0;n<=32;n++) {
-      const a=TAU*n/32;
-      const u=.78+.115*Math.cos(a), x=toe.x+toe.w*.57*Math.sin(a);
-      const p=toeSurface(toe,u,Math.asin(THREE.MathUtils.clamp((x-toe.x)/(toe.w*(1-.20*u)), -.9,.9)));
-      p.y+=.006; nail.push(p.toArray());
-    }
-    arc(group,nail);
-  });
-  const toesGroup=new THREE.Group();
-  // A semantic collection for a leg view; the isolated foot lists all five digits.
-  for(const p of toes) {group.remove(p.object);toesGroup.add(p.object);}
-  group.add(toesGroup);
-  const toePart={id:`${prefix}-toes`,name:'Phalanges',description:'Five toes provide distinct contact points; the great toe is broader and the outer toes shorten.',object:toesGroup,anchor:marker(group,[-.18,.40,1.78])};
-  function update(angle) {
-    bodyPivot.rotation.x=angle;
-    // Toe tips stay in contact. Their short proximal region follows the rolling ball.
-    const c=Math.cos(angle),s=Math.sin(angle);
-    for(const mesh of toeMeshes) {
-      const rest=mesh.userData.restPositions, dst=mesh.geometry.attributes.position.array;
-      const toe=TOES[toeMeshes.indexOf(mesh)];
-      for(let i=0;i<rest.length;i+=3) {
-        const x=rest[i], y=rest[i+1], z=rest[i+2];
-        const u=(z-toe.z)/toe.l, w=1-smooth(u/.43);
-        const Y=(y-.24)*c-(z-1)*s+.24, Z=(y-.24)*s+(z-1)*c+1;
-        dst[i]=x; dst[i+1]=Math.max(.012,THREE.MathUtils.lerp(y,Y,w));dst[i+2]=THREE.MathUtils.lerp(z,Z,w);
-      }
-      mesh.geometry.attributes.position.needsUpdate=true;
-      mesh.geometry.computeVertexNormals();
-    }
+  const template=footTemplate(ankleHeight),group=new THREE.Group(),body=new THREE.Group(),bodyPivot=new THREE.Group(),toesGroup=new THREE.Group();group.add(body,bodyPivot,toesGroup);
+  const positions=new THREE.Float32BufferAttribute(template.vertices.slice(),3),normals=new THREE.Float32BufferAttribute(template.normals.slice(),3),geometries=[],parts=[],toes=[],anchors=[];
+  const specs=[['ankle','Ankle region','The ankle narrows above the heel, with its surface continuing into the dorsum.',[.27,1.15,-.65]],['midfoot','Foot contour','A continuous skin surface joins heel, arch, metatarsal support and all five toes.',[-.48,.35,-.12]],['heel','Calcaneal region','The heel rises as the foot rolls over the supporting forefoot.',[.20,.45,-1.06]],['instep','Dorsum of foot','The instep slopes continuously from the ankle toward the metatarsals.',[.05,.73,-.08]],['forefoot','Metatarsal support','The ball of the foot carries the support as the heel lifts.',[.54,.28,.91]],...TOES.map((toe,i)=>[`toe-${i+1}`,toe.name,i===0?'The great toe has two phalanges and a broad supporting pad.':'The smaller toes continue from a shared metatarsal web; their distal pads stay planted as the heel rises.',[toe.x,.36,toe.z+toe.l*.67]])];
+  for(const[id,name,description,position]of specs){const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',positions);geometry.setAttribute('normal',normals);geometry.setIndex(template.region.get(id));geometry.userData.vertices=[...new Set(geometry.index.array)];geometry.boundingBox=new THREE.Box3();for(const i of geometry.userData.vertices)geometry.boundingBox.expandByPoint(new THREE.Vector3().fromBufferAttribute(positions,i));geometry.boundingSphere=geometry.boundingBox.getBoundingSphere(new THREE.Sphere());geometries.push(geometry);const mesh=new THREE.Mesh(geometry,mat());mesh.castShadow=mesh.receiveShadow=true;mesh.userData.partId=`${prefix}-${id}`;const owner=id.startsWith('toe-')?toesGroup:body;owner.add(mesh);const p={id:`${prefix}-${id}`,name,description,object:mesh,anchor:marker(group,position)};(id.startsWith('toe-')?toes:parts).push(p);anchors.push([p.anchor,new THREE.Vector3(...position)]);}
+  const toePart={id:`${prefix}-toes`,name:'Phalanges',description:'Five toes continue from one forefoot surface; the great toe is broader and the outer toes shorten.',object:toesGroup,anchor:marker(group,[-.18,.40,1.78])};anchors.push([toePart.anchor,toePart.anchor.position.clone()]);
+  const details=[];
+  for(const toe of TOES){for(const kind of['crease','nail']){if(kind==='crease'&&toe===TOES[4])continue;const points=[];for(let n=0;n<=32;n++){const a=TAU*n/32,u=kind==='crease'?.52:.79+.105*Math.cos(a),theta=kind==='crease'?-1+2*n/32:Math.asin(.55*Math.sin(a)),p=toeSurface(toe,u,theta);p.y=template.surfaceY(p.x,p.z)+.0025;points.push(p.toArray());}const line=arc(group,points);details.push({line,toe,rest:Float32Array.from(line.geometry.attributes.position.array)});}}
+  function followAt(p){let nearest=TOES[0],distance=Infinity;for(const toe of TOES){const d=Math.abs(p.x-toe.x);if(d<distance){nearest=toe;distance=d;}}return 1-smooth(((p.z-nearest.z)/nearest.l-.18)/.48);}
+  function rollPoint(x,y,z,w,angle){const c=Math.cos(angle),s=Math.sin(angle),Y=(y-.24)*c-(z-1)*s+.24,Z=(y-.24)*s+(z-1)*c+1;return new THREE.Vector3(x,Math.max(.012,THREE.MathUtils.lerp(y,Y,w)),THREE.MathUtils.lerp(z,Z,w));}
+  let lastMode='',lastValue=NaN;
+  function deform(mode,value){if(mode===lastMode&&value===lastValue)return;lastMode=mode;lastValue=value;const src=template.vertices;
+    for(let i=0;i<positions.count;i++){const j=i*3,p=mode==='roll'?rollPoint(src[j],src[j+1],src[j+2],template.weights[i],value):bendPoint(src[j],src[j+1],src[j+2],value);positions.setXYZ(i,p.x,p.y,p.z);}
+    positions.needsUpdate=true;
+    // The cofactor of the roll Jacobian transports the common rest normals.
+    // It includes the root/contact blend gradient, without per-frame remeshing.
+    const n=new THREE.Vector3(),u=new THREE.Vector3(),v=new THREE.Vector3(),a=new THREE.Vector3(),b=new THREE.Vector3(),c=Math.cos(value),sn=Math.sin(value),eps=.0004;
+    for(let i=0;i<normals.count;i++){const j=i*3;n.fromArray(template.normals,j);if(value!==0){const x=src[j],y=src[j+1],z=src[j+2];if(mode==='roll'){const w=template.weights[i],dy=(y-.24)*c-(z-1)*sn+.24-y,dz=(y-.24)*sn+(z-1)*c+1-z,gx=template.weightGradients[j],gy=template.weightGradients[j+1],gz=template.weightGradients[j+2],a=dy*gx,b=1+w*(c-1)+dy*gy,q=-w*sn+dy*gz,d=dz*gx,e=w*sn+dz*gy,f=1+w*(c-1)+dz*gz,det=b*f-q*e;n.set(det*n.x+(q*d-a*f)*n.y+(a*e-b*d)*n.z,f*n.y-e*n.z,-q*n.y+b*n.z).normalize();}else{u.set(Math.abs(n.y)<.9?0:1,Math.abs(n.y)<.9?1:0,0).cross(n).normalize();v.crossVectors(n,u);const p=bendPoint(x,y,z,value);a.copy(bendPoint(x+eps*u.x,y+eps*u.y,z+eps*u.z,value)).sub(p);b.copy(bendPoint(x+eps*v.x,y+eps*v.y,z+eps*v.z,value)).sub(p);n.crossVectors(a,b).normalize();}}normals.setXYZ(i,n.x,n.y,n.z);}normals.needsUpdate=true;
+    for(const geometry of geometries){geometry.boundingBox.makeEmpty();for(const i of geometry.userData.vertices)geometry.boundingBox.expandByPoint(a.fromBufferAttribute(positions,i));geometry.boundingBox.getBoundingSphere(geometry.boundingSphere);}
+    for(const[anchor,p]of anchors)anchor.position.copy(mode==='roll'?rollPoint(p.x,p.y,p.z,p.z<.8?1:followAt(p),value):bendPoint(p.x,p.y,p.z,value));
+    for(const{line,toe,rest}of details){const dst=line.geometry.attributes.position;for(let i=0;i<dst.count;i++){const j=i*3,w=template.followAt(rest[j],rest[j+1],rest[j+2]),p=mode==='roll'?rollPoint(rest[j],rest[j+1],rest[j+2],w,value):bendPoint(rest[j],rest[j+1],rest[j+2],value);dst.setXYZ(i,p.x,p.y,p.z);}dst.needsUpdate=true;line.geometry.computeBoundingSphere();}
   }
-  function bendAnkle(amount) {
-    body.traverse(mesh=>{
-      if(!mesh.isMesh||!mesh.userData.restPositions)return;
-      const src=mesh.userData.restPositions,dst=mesh.geometry.attributes.position.array;
-      for(let i=0;i<src.length;i+=3){const p=bendPoint(src[i],src[i+1],src[i+2],amount);dst[i]=p.x;dst[i+1]=p.y;dst[i+2]=p.z;}
-      mesh.geometry.attributes.position.needsUpdate=true;mesh.geometry.computeVertexNormals();mesh.geometry.computeBoundingSphere();
-    });
-  }
-  return {group,parts,toes,toePart,update,bendAnkle,bodyPivot,body};
+  return {group,parts,toes,toePart,update:angle=>deform('roll',angle),bendAnkle:amount=>deform('bend',amount),bodyPivot,body};
 }
 
 const LEG_RINGS=[
@@ -278,16 +293,11 @@ export function createLeg() {
 
 export function createFoot() {
   const foot=makeFoot('foot');
-  const ankle=surfaceMesh((u,theta)=>footSurface(u,theta,.003),[0,.23,0,TAU],36,48,true);
-  const anklePart=part(foot.body,'foot-ankle','Ankle region','The ankle narrows above the heel, with the malleoli defining its side contours.',ankle,[.27,1.15,-.65]);
-  const cap=new THREE.Mesh(new THREE.CircleGeometry(1,48),mat());
-  cap.rotation.x=-Math.PI/2;cap.scale.set(.29,.31,1);cap.position.set(0,1.70,-.62);
-  foot.body.add(cap);tag(cap,'foot-ankle');
   let last=-1;
   function update(t) {const q=action(t);if(Math.abs(q-last)<1e-7)return;last=q;foot.update(q*.36);}
   update(0);
   return {
-    group:foot.group,parts:[anklePart,...foot.parts,...foot.toes],update,
+    group:foot.group,parts:[...foot.parts,...foot.toes],update,
     camera:{target:[0,.66,.15],position:[5.2,3.8,6.8]},
     title:'From heel to forefoot',subtitle:'The foot · a controlled rise over a stable base',
     beats:[

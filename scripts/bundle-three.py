@@ -10,8 +10,8 @@ files=['index.html','gallery.mjs','style.css','corpus/manifest.json','scripts/se
        'scripts/build-three.mjs','scripts/catalog-three.mjs','scripts/check-three.mjs',
        'scripts/playback-three.mjs','scripts/bundle-three.py','package-lock.json',
        'scripts/catalog-expressions.mjs','scripts/check-expressions.mjs','scripts/playback-expressions.mjs',
-       'qa/three/checks.json','qa/three/playback.json','qa/three/art-review.json','qa/three/hand-peak.png',
-       'qa/expressions/checks.json','qa/expressions/playback.json','qa/expressions/art-review.json',
+       'qa/three/checks.json','qa/three/playback.json','qa/three/art-review.json','qa/three/hand-peak.png','qa/three/foot-peak.png',
+       'qa/expressions/checks.json','qa/expressions/playback.json','qa/expressions/art-review.json','qa/expressions/laughter-front-peak.png','qa/expressions/surprise-side-peak.png',
        ]
 package=json.loads((ROOT/'package.json').read_text())
 package['scripts']={k:v for k,v in package['scripts'].items() if k=='start' or k.endswith((':three',':expressions'))}
