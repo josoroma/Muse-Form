@@ -1,4 +1,4 @@
 interface:
   display_name: "Illustrated motion · SVG & Three.js"
-  short_description: "Hairline SVGs and expressive Three.js anatomy"
-  default_prompt: "Use $seven-second-storytelling to create expressive five-second illustrated motion: static and animated Hairline-inspired SVGs by default, or a separate interactive anatomy explorer when I request Three.js, with inspected playback and source-linked explanations."
+  short_description: "Hairline SVGs, 3D anatomy and facial acting"
+  default_prompt: "Use $seven-second-storytelling to create expressive five-second motion: Hairline-inspired static and animated SVGs by default, or separate Three.js anatomy and facial-acting views when requested, preserving the SVG collection and inspecting the actual geometry and playback."

@@ -1,14 +1,17 @@
 import * as THREE from 'three';
 
+// Shared immutable rest topology; every instance owns its deformed attributes.
+let fusedHandTemplate=null;
+
 /** Original procedural surface study. Units are proportions, not clinical measurements. */
 export function createHand() {
   const group = new THREE.Group();
   group.name = 'Articulated hand · palmar study';
   const parts = [];
+  let fusedActive=false;
   const skin = new THREE.MeshStandardMaterial({ color: 0x899b9b, roughness: 0.68, metalness: 0.12 });
   const nailMaterial = new THREE.MeshStandardMaterial({ color: 0x899b9b, roughness: 0.9, metalness: 0.1 });
   const creaseMaterial = new THREE.LineBasicMaterial({ color: 0x465d60, transparent: true, opacity: 0.48 });
-  const sphere = new THREE.SphereGeometry(1, 32, 24);
   let palmSurface = null;
   const surfaceRay = new THREE.Raycaster();
 
@@ -17,13 +20,6 @@ export function createHand() {
     m.castShadow = true;
     m.receiveShadow = true;
     parent.add(m);
-    return m;
-  }
-  function volume(parent, position, scale, rotation = 0, material = skin) {
-    const m = mesh(sphere, parent, material);
-    m.position.set(...position);
-    m.scale.set(...scale);
-    m.rotation.z = rotation;
     return m;
   }
   function curve(parent, points, opacity = 0.48) {
@@ -110,6 +106,11 @@ export function createHand() {
     palmPositions.setZ(i,z+.112*a+.045*b);
     thenarWeights[i]=a;
   }
+  const palmSections=[];
+  for(let ring=0;ring<=96;ring++){
+    const i=ring*65;
+    palmSections.push({y:palmPositions.getY(i),center:(palmPositions.getX(i)+palmPositions.getX(i+32))/2,rx:(palmPositions.getX(i)-palmPositions.getX(i+32))/2,front:palmPositions.getZ(i+16),back:-palmPositions.getZ(i+48)});
+  }
   // Split triangles along the anatomical patch boundary, so highlight edges follow
   // a smooth contour instead of selecting jagged whole triangles. Both regions use
   // exactly the same boundary vertices: one surface, with no overlay or z fighting.
@@ -187,91 +188,282 @@ export function createHand() {
   curve(thenar, [[-0.67,0.94,0.272],[-0.44,0.76,0.410],[-0.28,0.47,0.426],[-0.27,0.18,0.390],[-0.37,-0.09,0.303]],0.43);
   part('thenar', 'Thenar eminence', 'This muscular pad at the thumb base supports opposition: the thumb turns toward the finger pads to shape a grasp.', thenar, [-0.50,0.43,0.46]);
 
-  function segment(parent, length, radius, depth, terminal = false) {
-    const rows = terminal ? [
-      [-0.085,radius*0.82,depth*0.82], [0,radius,depth],
-      [length*0.23,radius*0.98,depth*1.03,0,0.008],
-      [length*0.57,radius*0.90,depth*0.99,0,0.014],
-      [length*0.81,radius*0.74,depth*0.82,0,0.022],
-      [length*0.96,radius*0.38,depth*0.43,0,0.021],
-      [length,radius*0.02,depth*0.02,0,0.02]
-    ] : [
-      [-0.11,radius*0.90,depth*0.90], [0,radius,depth],
-      [length*0.20,radius*0.985,depth*1.015],
-      [length*0.52,radius*0.91,depth*0.96,0,0.008],
-      [length*0.81,radius*0.86,depth*0.89],
-      [length,radius*0.82,depth*0.85],
-      [length+0.07,radius*0.48,depth*0.49]
+  // A digit is one continuous skin tube. The centerline preserves phalangeal
+  // lengths and rounds only a small zone around each anatomical joint.
+  function continuousDigit(spec) {
+    const object=new THREE.Group();
+    object.name=`${spec.name} · continuous articulated skin`;
+    object.position.set(...spec.position);
+    group.add(object);
+    const [proximal,middle,distal]=spec.l,total=proximal+middle+distal;
+    const start=spec.thumb?-.68:-.58;
+    const anchor=new THREE.Object3D();anchor.name=`${spec.name} label`;object.add(anchor);
+    const joints=[new THREE.Object3D(),new THREE.Object3D(),new THREE.Object3D()];
+    joints.forEach((j,i)=>{j.name=`${spec.name} · ${(spec.thumb?['CMC','MCP','IP']:['MCP','PIP','DIP'])[i]}`;object.add(j);});
+    const capLength=distal*.30,capStart=total-capLength;
+    const profile=[
+      [start,.001,.001],[start+.14,.72,.76],[-.29,spec.thumb?1.19:1.065,spec.thumb?1.18:1.04],
+      [0,1.035,1.025],[proximal*.34,.965,.975],[proximal*.68,.895,.925],
+      [proximal,.905,.945],[proximal+middle*.36,.82,.875],
+      [proximal+middle*.72,.77,.825],[proximal+middle,.775,.835],
+      [total-distal*.56,.74,.825],[capStart,.66,.76]
     ];
-    mesh(loft(rows, 32, 32), parent);
-    volume(parent, [0,0,0], [radius*0.985,depth*1.07,depth*0.99]);
-    curve(parent, [[-radius*.72,0.08,depth*.72],[-radius*.35,0.06,depth*.965],[0,0.055,depth*1.025],[radius*.38,0.06,depth*.96],[radius*.73,0.08,depth*.71]],0.40);
-    if (terminal) {
-      // A thin curved dorsal nail shell follows the distal pad instead of a flat label rectangle.
-      const nail = volume(parent, [0,length*0.55,-depth*0.89], [radius*0.69,length*0.27,0.027], 0, nailMaterial);
-      nail.name = 'Dorsal nail plate';
-      curve(parent, [[-radius*.58,length*.34,-depth*.93],[0,length*.28,-depth*1.04],[radius*.58,length*.34,-depth*.93]],0.22);
+    function profileAt(s){
+      if(s>=capStart){
+        const u=THREE.MathUtils.clamp((s-capStart)/capLength,0,1),round=Math.sqrt(Math.max(0,1-u*u));
+        return[spec.r*.66*round,spec.d*.76*round];
+      }
+      for(let i=1;i<profile.length;i++)if(s<=profile[i][0]){
+        const a=profile[i-1],b=profile[i],before=profile[Math.max(0,i-2)],after=profile[Math.min(profile.length-1,i+1)];
+        const q=THREE.MathUtils.clamp((s-a[0])/(b[0]-a[0]),0,1),q2=q*q,q3=q2*q,span=b[0]-a[0];
+        const value=k=>{
+          const m0=(b[k]-before[k])/(b[0]-before[0]),m1=(after[k]-a[k])/(after[0]-a[0]);
+          return Math.max(0,(2*q3-3*q2+1)*a[k]+(q3-2*q2+q)*span*m0+(-2*q3+3*q2)*b[k]+(q3-q2)*span*m1);
+        };
+        return[value(1)*spec.r,value(2)*spec.d];
+      }
+      return[0,0];
     }
+    const stations=256,ys=new Float64Array(stations+1),zs=new Float64Array(stations+1);
+    let current=[0,0,0];
+    const bendAngle=(s)=>current[0]*THREE.MathUtils.smoothstep(s,-.11,.22)+current[1]*THREE.MathUtils.smoothstep(s,proximal-.14,proximal+.14)+current[2]*THREE.MathUtils.smoothstep(s,proximal+middle-.105,proximal+middle+.105);
+    function locate(s,phi=0,offset=0){
+      const index=THREE.MathUtils.clamp((s-start)/(total-start)*stations,0,stations),a=Math.min(stations-1,Math.floor(index)),q=index-a;
+      const y=THREE.MathUtils.lerp(ys[a],ys[a+1],q),z=THREE.MathUtils.lerp(zs[a],zs[a+1],q),angle=bendAngle(s);
+      const [rx,rz]=profileAt(s),sin=Math.sin(phi),cos=Math.cos(phi);
+      const palmar=Math.max(0,sin);
+      const crease=(Math.exp(-(((s-proximal)/.028)**2))+Math.exp(-(((s-proximal-middle)/.024)**2)))*.006*(.4+current[1]);
+      const thickness=rz*Math.sign(sin)*Math.pow(Math.abs(sin),.92)-crease*palmar**8+offset;
+      return[rx*Math.sign(cos)*Math.pow(Math.abs(cos),.96),y-thickness*Math.sin(angle),z+thickness*Math.cos(angle)];
+    }
+    function deform(anglesIn){
+      current=anglesIn;
+      ys[0]=start;zs[0]=0;
+      const ds=(total-start)/stations;
+      for(let i=1;i<=stations;i++){
+        const mid=start+(i-.5)*ds,a=bendAngle(mid);
+        ys[i]=ys[i-1]+Math.cos(a)*ds;zs[i]=zs[i-1]+Math.sin(a)*ds;
+      }
+      anchor.position.set(...locate(total-distal*.46,Math.PI/2,.03));
+      joints.forEach((joint,i)=>{const s=[0,proximal,proximal+middle][i];const p=locate(s,0);joint.position.set(0,p[1],p[2]);joint.rotation.x=bendAngle(s);});
+    }
+    deform([0,0,0]);
+    function deformPoint(p){
+      const index=THREE.MathUtils.clamp((p.y-start)/(total-start)*stations,0,stations),a=Math.min(stations-1,Math.floor(index)),q=index-a;
+      const angle=bendAngle(p.y),y=THREE.MathUtils.lerp(ys[a],ys[a+1],q),z=THREE.MathUtils.lerp(zs[a],zs[a+1],q);
+      return p.set(p.x,y-p.z*Math.sin(angle),z+p.z*Math.cos(angle));
+    }
+    function sampleData(s){
+      const index=THREE.MathUtils.clamp((s-start)/(total-start)*stations,0,stations),a=Math.min(stations-1,Math.floor(index));
+      return{a,q:index-a,angle:[THREE.MathUtils.smoothstep(s,-.11,.22),THREE.MathUtils.smoothstep(s,proximal-.14,proximal+.14),THREE.MathUtils.smoothstep(s,proximal+middle-.105,proximal+middle+.105)]};
+    }
+    return{object,anchor,deform,joints,spec,locate,profileAt,total,start,deformPoint,angleAt:bendAngle,sampleData,ys,zs,get angles(){return current;}};
   }
 
-  const fingers = [];
-  const fingerSpecs = [
-    {id:'index',name:'Index finger',x:-0.58,y:1.51,l:[0.89,0.65,0.56],r:0.205,d:0.178,splay:0.055,delay:0.05},
-    {id:'middle',name:'Middle finger',x:-0.095,y:1.66,l:[1.01,0.75,0.59],r:0.216,d:0.184,splay:0.005,delay:0},
-    {id:'ring',name:'Ring finger',x:0.38,y:1.52,l:[0.94,0.69,0.56],r:0.200,d:0.171,splay:-0.045,delay:0.03},
-    {id:'little',name:'Little finger',x:0.79,y:1.27,l:[0.72,0.51,0.47],r:0.165,d:0.147,splay:-0.12,delay:0.09},
+  const fingers=[];
+  const fingerSpecs=[
+    {id:'index',name:'Index finger',position:[-.58,1.51,0],l:[.89,.65,.56],r:.225,d:.185,splay:.055,delay:.05},
+    {id:'middle',name:'Middle finger',position:[-.095,1.66,0],l:[1.01,.75,.59],r:.235,d:.194,splay:.005,delay:0},
+    {id:'ring',name:'Ring finger',position:[.38,1.52,0],l:[.94,.69,.56],r:.216,d:.180,splay:-.045,delay:.03},
+    {id:'little',name:'Little finger',position:[.79,1.27,0],l:[.72,.51,.47],r:.179,d:.154,splay:-.12,delay:.09},
   ];
-  for (const spec of fingerSpecs) {
-    const base = new THREE.Group();
-    base.name = `${spec.name} · metacarpophalangeal joint`;
-    base.position.set(spec.x,spec.y,0);
-    base.rotation.z = spec.splay;
-    group.add(base);
-    segment(base,spec.l[0],spec.r,spec.d);
-    const pip = new THREE.Group();
-    pip.name = `${spec.name} · proximal interphalangeal joint`;
-    pip.position.y = spec.l[0];
-    base.add(pip);
-    segment(pip,spec.l[1],spec.r*.81,spec.d*.84);
-    const dip = new THREE.Group();
-    dip.name = `${spec.name} · distal interphalangeal joint`;
-    dip.position.y = spec.l[1];
-    pip.add(dip);
-    segment(dip,spec.l[2],spec.r*.70,spec.d*.75,true);
-    fingers.push({base,pip,dip,spec});
-    const anchor = new THREE.Object3D();
-    anchor.position.set(0,spec.l[2]*0.56,spec.d*.9);
-    dip.add(anchor);
-    base.traverse(child=>{if(child.isMesh||child.isLine)child.userData.partId=spec.id;});
-    parts.push({id:spec.id,name:spec.name,description:`Three linked phalanges flex at the knuckle and two interphalangeal joints. ${spec.id==='middle'?'The longest digit leads the relaxed grasp.':spec.id==='little'?'The little finger closes slightly later and helps cup the ulnar side of the palm.':'The fingertip follows an arc toward the palm while the joint chain preserves segment length.'}`,object:base,anchor});
+  for(const spec of fingerSpecs){
+    const finger=continuousDigit(spec);fingers.push(finger);
+    parts.push({id:spec.id,name:spec.name,description:`Three phalanges articulate beneath one continuous skin surface. ${spec.id==='middle'?'The longest digit leads the relaxed grasp.':spec.id==='little'?'The little finger closes slightly later to support the cupped palm.':'The pad follows a joint-controlled arc toward the palm, with a conforming nail bed on the dorsal surface.'}`,object:finger.object,anchor:finger.anchor});
   }
-  // Small interdigital webs overlap only the stationary bases, never bridge the moving tips.
-  for (const [x,y,scale] of [[-0.34,1.48,0.21],[0.15,1.47,0.20],[0.60,1.26,0.20]]) {
-    volume(palm,[x,y,-0.015],[scale,0.18,0.18]);
-  }
-  palm.traverse(child=>{if(child.isMesh||child.isLine)child.userData.partId='palm';});
 
-  const thumb = new THREE.Group();
-  thumb.name = 'Thumb · saddle and opposition';
-  thumb.position.set(-0.75,0.41,0.10);
-  group.add(thumb);
-  // The metacarpal root remains nestled in the thenar volume through the full motion.
-  segment(thumb,0.61,0.255,0.215);
-  const thumbMcp = new THREE.Group();
-  thumbMcp.name = 'Thumb · metacarpophalangeal joint';
-  thumbMcp.position.y = 0.61;
-  thumb.add(thumbMcp);
-  segment(thumbMcp,0.56,0.225,0.19);
-  const thumbIp = new THREE.Group();
-  thumbIp.name = 'Thumb · interphalangeal joint';
-  thumbIp.position.y = 0.56;
-  thumbMcp.add(thumbIp);
-  segment(thumbIp,0.55,0.198,0.174,true);
-  const thumbAnchor = new THREE.Object3D();
-  thumbAnchor.position.set(0,0.28,0.19);
-  thumbIp.add(thumbAnchor);
-  thumb.traverse(child=>{if(child.isMesh||child.isLine)child.userData.partId='thumb';});
-  parts.push({id:'thumb',name:'Thumb opposition',description:'The thumb has two phalanges beyond its metacarpal. Its saddle-base motion turns the pad across the palm as the fingers flex, then returns to the open hand.',object:thumb,anchor:thumbAnchor});
+  const thumb=continuousDigit({id:'thumb',name:'Thumb',thumb:true,position:[-.73,.42,.08],l:[.61,.56,.55],r:.274,d:.224});
+  parts.push({id:'thumb',name:'Thumb opposition',description:'Two phalanges continue from the thumb metacarpal. A broad saddle base turns its pad across the palm as the fingers flex; the skin and nail bed follow the same continuous surface.',object:thumb.object,anchor:thumb.anchor});
+
+  function createFusedSkin(){
+    const rigs=[...fingers,thumb];
+    for(const rig of rigs){rig.object.updateMatrix();rig.inverseRest=rig.object.matrix.clone().invert();}
+    function local(p,rig){return p.clone().applyMatrix4(rig.inverseRest);}
+    function digitField(p,rig){
+      const v=local(p,rig),s=v.y;
+      if(s<rig.start)return Math.hypot(v.x,s-rig.start,v.z);
+      if(s>rig.total)return Math.hypot(v.x,s-rig.total,v.z);
+      const [rx,rz]=rig.profileAt(s),x=Math.max(.002,rx),z=Math.max(.002,rz);
+      return(Math.hypot(v.x/x,v.z/z)-1)*Math.min(x,z);
+    }
+    function palmField(p){
+      const x=p.x+.025,y=p.y-1.05,z=p.z,rxTop=.94,ryTop=.65,rzTop=.285;
+      const k0=Math.hypot(x/rxTop,y/ryTop,z/rzTop),k1=Math.hypot(x/(rxTop*rxTop),y/(ryTop*ryTop),z/(rzTop*rzTop));
+      const dome=k0*(k0-1)/Math.max(k1,.001);
+      if(p.y>=1.3)return dome;
+      let lo=0,hi=palmSections.length-1;
+      while(hi-lo>1){const mid=(lo+hi)>>1;if(palmSections[mid].y<p.y)lo=mid;else hi=mid;}
+      const a=palmSections[lo],b=palmSections[hi],q=THREE.MathUtils.clamp((p.y-a.y)/(b.y-a.y),0,1);
+      const rx=Math.max(.001,THREE.MathUtils.lerp(a.rx,b.rx,q)),center=THREE.MathUtils.lerp(a.center,b.center,q);
+      const rz=Math.max(.001,THREE.MathUtils.lerp(p.z>=0?a.front:a.back,p.z>=0?b.front:b.back,q));
+      let radial=(Math.hypot((p.x-center)/rx,p.z/rz)-1)*Math.min(rx,rz);
+      if(p.y<a.y||p.y>b.y)radial=Math.max(radial,Math.min(Math.abs(p.y-a.y),Math.abs(p.y-b.y)));
+      return THREE.MathUtils.lerp(radial,dome,THREE.MathUtils.smoothstep(p.y,.85,1.3));
+    }
+    const smoothMin=(a,b,k)=>{const h=Math.max(k-Math.abs(a-b),0)/k;return Math.min(a,b)-h*h*k*.25;};
+    function field(p){
+      let d=palmField(p),k=.03+.13*(1-THREE.MathUtils.smoothstep(p.y,1.35,2.05));
+      for(const rig of rigs)d=smoothMin(d,digitField(p,rig),k);
+      return d;
+    }
+    let vertices,region;
+    if(fusedHandTemplate){vertices=Array.from(fusedHandTemplate.vertices);region=fusedHandTemplate.region;}
+    else {
+    const min=new THREE.Vector3(-2.3,-1.22,-.5),step=.041,nx=92,ny=135,nz=33;
+    const count=nx*ny*nz,values=new Float32Array(count),grid=new Float32Array(count*3);
+    const index=(x,y,z)=>x+nx*(y+ny*z),point=new THREE.Vector3();
+    for(let z=0;z<nz;z++)for(let y=0;y<ny;y++)for(let x=0;x<nx;x++){
+      const i=index(x,y,z);point.set(min.x+x*step,min.y+y*step,min.z+z*step);grid.set(point.toArray(),i*3);values[i]=field(point);
+    }
+    vertices=[];const triangles=[],edgeVertices=new Map();
+    const corners=[[0,0,0],[1,0,0],[1,1,0],[0,1,0],[0,0,1],[1,0,1],[1,1,1],[0,1,1]];
+    const tetrahedra=[[0,5,1,6],[0,1,2,6],[0,2,3,6],[0,3,7,6],[0,7,4,6],[0,4,5,6]];
+    const tetraEdges=[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]];
+    function edgeVertex(a,b){
+      const key=a<b?`${a}:${b}`:`${b}:${a}`;
+      if(edgeVertices.has(key))return edgeVertices.get(key);
+      const t=values[a]/(values[a]-values[b]),i=vertices.length/3;
+      for(let c=0;c<3;c++)vertices.push(THREE.MathUtils.lerp(grid[a*3+c],grid[b*3+c],t));
+      edgeVertices.set(key,i);return i;
+    }
+    const va=new THREE.Vector3(),vb=new THREE.Vector3(),vc=new THREE.Vector3();
+    for(let z=0;z<nz-1;z++)for(let y=0;y<ny-1;y++)for(let x=0;x<nx-1;x++){
+      const cube=corners.map(c=>index(x+c[0],y+c[1],z+c[2]));
+      if(cube.every(i=>values[i]>0)||cube.every(i=>values[i]<=0))continue;
+      for(const tet of tetrahedra){
+        const ids=tet.map(i=>cube[i]),inside=ids.filter(i=>values[i]<=0),outside=ids.filter(i=>values[i]>0);
+        if(!inside.length||!outside.length)continue;
+        const poly=[];
+        for(const[a,b]of tetraEdges)if((values[ids[a]]<=0)!==(values[ids[b]]<=0))poly.push(edgeVertex(ids[a],ids[b]));
+        const center=new THREE.Vector3();poly.forEach(i=>center.add(new THREE.Vector3().fromArray(vertices,i*3)));center.divideScalar(poly.length);
+        const inward=new THREE.Vector3(),outward=new THREE.Vector3();inside.forEach(i=>inward.add(new THREE.Vector3().fromArray(grid,i*3)));outside.forEach(i=>outward.add(new THREE.Vector3().fromArray(grid,i*3)));
+        const normal=outward.divideScalar(outside.length).sub(inward.divideScalar(inside.length)).normalize();
+        const u=new THREE.Vector3().fromArray(vertices,poly[0]*3).sub(center).normalize(),v=new THREE.Vector3().crossVectors(normal,u).normalize();
+        poly.sort((a,b)=>{va.fromArray(vertices,a*3).sub(center);vb.fromArray(vertices,b*3).sub(center);return Math.atan2(va.dot(v),va.dot(u))-Math.atan2(vb.dot(v),vb.dot(u));});
+        for(let i=1;i+1<poly.length;i++)triangles.push(poly[0],poly[i],poly[i+1]);
+      }
+    }
+    // Separate highlight regions with shared, boundary-conforming vertices.
+    region=new Map(parts.map(p=>[p.id,{skin:[],nail:[]}]));const cutCache=new Map();
+    const sample=i=>new THREE.Vector3().fromArray(vertices,i*3);
+    function split(poly,fn,key){
+      const yes=[],no=[];
+      for(let i=0;i<poly.length;i++){
+        const a=poly[(i+poly.length-1)%poly.length],b=poly[i],da=fn(sample(a)),db=fn(sample(b));
+        if((da<=0)!==(db<=0)){
+          const cacheKey=`${key}:${Math.min(a,b)}:${Math.max(a,b)}`;let c=cutCache.get(cacheKey);
+          if(c===undefined){let lo=0,hi=1;for(let k=0;k<22;k++){const t=(lo+hi)/2;const d=fn(sample(a).lerp(sample(b),t));if((d<=0)===(da<=0))lo=t;else hi=t;}c=vertices.length/3;vertices.push(...sample(a).lerp(sample(b),(lo+hi)/2).toArray());cutCache.set(cacheKey,c);}
+          yes.push(c);no.push(c);
+        }
+        (db<=0?yes:no).push(b);
+      }
+      return[yes,no];
+    }
+    const emit=(poly,target)=>{for(let i=1;i+1<poly.length;i++)target.push(poly[0],poly[i],poly[i+1]);};
+    for(let i=0;i<triangles.length;i+=3){
+      let remainder=triangles.slice(i,i+3);
+      for(const rig of rigs){
+        if(remainder.length<3)break;
+        const pick=p=>{const v=local(p,rig),[rx,rz]=rig.profileAt(THREE.MathUtils.clamp(v.y,rig.start,rig.total));return Math.max(.035-v.y,Math.hypot(v.x/Math.max(.01,rx),v.z/Math.max(.01,rz))-1.45);};
+        const [selected,rest]=split(remainder,pick,rig.spec.id);remainder=rest;
+        if(selected.length<3)continue;
+        const nailFn=p=>{const v=local(p,rig),phi=Math.atan2(v.z/rig.spec.d,v.x/rig.spec.r);const angle=phi<0?phi+Math.PI*2:phi;const distal=rig.spec.l[2];return((v.y-rig.total+distal*.43)/(distal*.30))**4+((angle-Math.PI*1.5)/.78)**4-1;};
+        const[nailPoly,skinPoly]=split(selected,nailFn,`${rig.spec.id}-nail`);emit(nailPoly,region.get(rig.spec.id).nail);emit(skinPoly,region.get(rig.spec.id).skin);
+      }
+      if(remainder.length>=3){const[a,b]=split(remainder,p=>Math.max((p.x+.48)**2/.19+(p.y-.39)**2/.48-1,(.14-p.z)*6),'thenar');emit(a,region.get('thenar').skin);emit(b,region.get('palm').skin);}
+    }
+    // A later region cut can place a vertex on an earlier region's edge. Split
+    // that opposing face too, so deformation never opens a T-junction crack.
+    const edgeKey=(a,b)=>a<b?`${a}:${b}`:`${b}:${a}`;
+    for(let pass=0;pass<2;pass++){
+      const counts=new Map();
+      for(const r of region.values())for(const faces of[r.skin,r.nail])for(let i=0;i<faces.length;i+=3)for(const[a,b]of[[0,1],[1,2],[2,0]]){const key=edgeKey(faces[i+a],faces[i+b]);counts.set(key,(counts.get(key)||0)+1);}
+      const boundary=[...counts].filter(([,n])=>n===1).map(([key])=>key.split(':').map(Number));
+      const boundaryVertices=[...new Set(boundary.flat())],splits=new Map();
+      for(const[a,b]of boundary){
+        const pa=new THREE.Vector3().fromArray(vertices,a*3),pb=new THREE.Vector3().fromArray(vertices,b*3),ab=pb.clone().sub(pa),length=ab.lengthSq(),middle=[];
+        for(const c of boundaryVertices){if(c===a||c===b)continue;const pc=new THREE.Vector3().fromArray(vertices,c*3),t=pc.clone().sub(pa).dot(ab)/length;if(t<=1e-5||t>=1-1e-5)continue;if(pc.distanceToSquared(pa.clone().addScaledVector(ab,t))<1e-12)middle.push([t,c]);}
+        if(middle.length)splits.set(edgeKey(a,b),middle.sort((x,y)=>x[0]-y[0]).map(v=>v[1]));
+      }
+      if(!splits.size)break;
+      for(const r of region.values())for(const type of['skin','nail']){
+        const source=r[type],replacement=[];
+        for(let i=0;i<source.length;i+=3){
+          const tri=source.slice(i,i+3),polygon=[];let changed=false;
+          for(let j=0;j<3;j++){const a=tri[j],b=tri[(j+1)%3];polygon.push(a);const add=splits.get(edgeKey(a,b));if(add){changed=true;polygon.push(...(a<b?add:[...add].reverse()));}}
+          if(!changed){replacement.push(...tri);continue;}
+          const center=vertices.length/3;for(let axis=0;axis<3;axis++)vertices.push((vertices[tri[0]*3+axis]+vertices[tri[1]*3+axis]+vertices[tri[2]*3+axis])/3);
+          for(let j=0;j<polygon.length;j++)replacement.push(center,polygon[j],polygon[(j+1)%polygon.length]);
+        }
+        r[type]=replacement;
+      }
+    }
+    }
+    const sample=i=>new THREE.Vector3().fromArray(vertices,i*3);
+    const full=new THREE.BufferGeometry();full.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));
+    full.setIndex([...region.values()].flatMap(r=>[...r.skin,...r.nail]));full.computeVertexNormals();
+    const positions=full.attributes.position;
+    // Blend skin ownership through the root web rather than detaching a rigid digit.
+    function binding(p){
+      const distances=[palmField(p),...rigs.map(r=>digitField(p,r))],lowest=Math.min(...distances),weights=distances.map(d=>Math.exp(-(d-lowest)/.036)),sum=weights.reduce((a,b)=>a+b,0);
+      const e=.006,n=new THREE.Vector3(
+        field(p.clone().add(new THREE.Vector3(e,0,0)))-field(p.clone().add(new THREE.Vector3(-e,0,0))),
+        field(p.clone().add(new THREE.Vector3(0,e,0)))-field(p.clone().add(new THREE.Vector3(0,-e,0))),
+        field(p.clone().add(new THREE.Vector3(0,0,e)))-field(p.clone().add(new THREE.Vector3(0,0,-e)))
+      ).normalize();
+      return{p:p.clone(),normal:n,weights:weights.map(w=>w/sum),local:rigs.map(r=>local(p,r)),samples:rigs.map(r=>r.sampleData(local(p,r).y)),localNormal:rigs.map(r=>n.clone().applyMatrix3(new THREE.Matrix3().setFromMatrix4(r.inverseRest)))};
+    }
+    const bindings=fusedHandTemplate?.bindings||Array.from({length:positions.count},(_,i)=>binding(sample(i)));
+    full.setAttribute('normal',new THREE.Float32BufferAttribute(bindings.flatMap(b=>b.normal.toArray()),3));
+    if(!fusedHandTemplate)fusedHandTemplate={vertices:Float32Array.from(vertices),region,bindings};
+    for(const rig of rigs)rig.currentNormalMatrix=new THREE.Matrix3();
+    const oldMeshes=[];group.traverse(o=>{if(o.isMesh)oldMeshes.push(o);});oldMeshes.forEach(o=>o.removeFromParent());
+    const geometries=[];
+    for(const partInfo of parts){
+      const entries=region.get(partInfo.id),g=new THREE.BufferGeometry();g.setAttribute('position',positions);g.setAttribute('normal',full.attributes.normal);g.setIndex([...entries.skin,...entries.nail]);
+      g.addGroup(0,entries.skin.length,0);if(entries.nail.length)g.addGroup(entries.skin.length,entries.nail.length,1);
+      const nail=nailMaterial.clone();nail.color.set(0x95a5a3);nail.roughness=.84;
+      const m=new THREE.Mesh(g,[skin.clone(),nail]);m.userData.partId=partInfo.id;m.castShadow=m.receiveShadow=true;
+      const owner=new THREE.Group();owner.name=`${partInfo.name} · unified skin region`;owner.add(m);group.add(owner);partInfo.object=owner;g.userData.vertices=[...new Set(g.index.array)];geometries.push(g);
+    }
+    // Reproject the quiet palm creases onto the unified surface, then bind them to it.
+    const rayMesh=new THREE.Mesh(full,skin),lineBindings=[];rayMesh.updateMatrixWorld(true);
+    let lineNumber=0;
+    group.traverse(o=>{if(o.isLine){
+      let items=fusedHandTemplate.lineBindings?.[lineNumber++];
+      if(!items){items=[];const a=o.geometry.attributes.position;for(let i=0;i<a.count;i++){const p=new THREE.Vector3().fromBufferAttribute(a,i),sign=p.z<0?-1:1;surfaceRay.set(new THREE.Vector3(p.x,p.y,sign*3),new THREE.Vector3(0,0,-sign));const hit=surfaceRay.intersectObject(rayMesh)[0];if(hit)p.z=hit.point.z+sign*.003;items.push(binding(p));}}
+      lineBindings.push({geometry:o.geometry,items});
+    }});
+    if(!fusedHandTemplate.lineBindings)fusedHandTemplate.lineBindings=lineBindings.map(b=>b.items);
+    const out=new THREE.Vector3(),q=new THREE.Vector3();
+    function apply(item){
+      out.copy(item.p).multiplyScalar(item.weights[0]);
+      for(let i=0;i<rigs.length;i++){const weight=item.weights[i+1];if(weight<.0005)continue;const rig=rigs[i];q.copy(item.local[i]);rig.deformPoint(q);q.applyMatrix4(rig.object.matrix);out.addScaledVector(q,weight);}
+      return out;
+    }
+    function updateSkin(){
+      rigs.forEach(r=>{r.object.updateMatrix();r.currentNormalMatrix.setFromMatrix4(r.object.matrix);});
+      const posArray=positions.array,normals=full.attributes.normal,normArray=normals.array;
+      for(let j=0;j<bindings.length;j++){
+        const item=bindings[j],w0=item.weights[0];
+        let px=item.p.x*w0,py=item.p.y*w0,pz=item.p.z*w0,nx=item.normal.x*w0,ny=item.normal.y*w0,nz=item.normal.z*w0;
+        for(let i=0;i<rigs.length;i++){
+          const weight=item.weights[i+1];if(weight<.0005)continue;
+          const rig=rigs[i],sample=item.samples[i],angles=rig.angles,angle=sample.angle[0]*angles[0]+sample.angle[1]*angles[1]+sample.angle[2]*angles[2];
+          const c=Math.cos(angle),sn=Math.sin(angle),v=item.local[i],n=item.localNormal[i],a=sample.a,f=sample.q;
+          const y=rig.ys[a]*(1-f)+rig.ys[a+1]*f-v.z*sn,z=rig.zs[a]*(1-f)+rig.zs[a+1]*f+v.z*c,m=rig.object.matrix.elements;
+          px+=(m[0]*v.x+m[4]*y+m[8]*z+m[12])*weight;py+=(m[1]*v.x+m[5]*y+m[9]*z+m[13])*weight;pz+=(m[2]*v.x+m[6]*y+m[10]*z+m[14])*weight;
+          const dy=n.y*c-n.z*sn,dz=n.y*sn+n.z*c;
+          nx+=(m[0]*n.x+m[4]*dy+m[8]*dz)*weight;ny+=(m[1]*n.x+m[5]*dy+m[9]*dz)*weight;nz+=(m[2]*n.x+m[6]*dy+m[10]*dz)*weight;
+        }
+        const length=Math.hypot(nx,ny,nz)||1,k=j*3;posArray[k]=px;posArray[k+1]=py;posArray[k+2]=pz;normArray[k]=nx/length;normArray[k+1]=ny/length;normArray[k+2]=nz/length;
+      }
+      positions.needsUpdate=true;normals.needsUpdate=true;
+      for(const g of geometries){const box=new THREE.Box3();for(const i of g.userData.vertices)box.expandByPoint(q.fromBufferAttribute(positions,i));g.boundingBox=box;g.boundingSphere=box.getBoundingSphere(new THREE.Sphere());}
+      for(const{geometry,items}of lineBindings){const p=geometry.attributes.position;items.forEach((item,i)=>{const v=apply(item);p.setXYZ(i,v.x,v.y,v.z);});p.needsUpdate=true;geometry.computeBoundingSphere();}
+    }
+    fusedActive=true;return{update:updateSkin};
+  }
 
   const ease = x => { const q = THREE.MathUtils.clamp(x,0,1); return q*q*(3-2*q); };
   function grasp(t) {
@@ -282,28 +474,30 @@ export function createHand() {
     if(phase<4.62)return 1-ease((phase-2.85)/1.77);
     return 0;
   }
+  let fusedSkin=null;
   function update(tSeconds) {
     const g = grasp(tSeconds);
-    for(const {base,pip,dip,spec} of fingers) {
-      const f = ease((g-spec.delay)/(1-spec.delay));
-      base.rotation.x = 0.035 + f*(spec.id==='little'?0.92:1.04);
-      base.rotation.z = spec.splay*(1-f*.72);
-      pip.rotation.x = 0.055+f*0.98;
-      dip.rotation.x = 0.045+f*0.62;
+    for(const finger of fingers){
+      const {spec}=finger,f=ease((g-spec.delay)/(1-spec.delay));
+      finger.object.rotation.z=spec.splay*(1-f*.72);
+      finger.deform([.035+f*(spec.id==='little'?.92:1.04),.055+f*.98,.045+f*.62]);
     }
-    thumb.rotation.set(0.12+g*0.08, -0.18-g*0.36, 0.82-g*1.22, 'XYZ');
-    thumbMcp.rotation.x=0.10+g*0.47;
-    thumbMcp.rotation.z=-g*0.12;
-    thumbIp.rotation.x=0.08+g*0.44;
+    thumb.object.rotation.set(.12+g*.08,-.18-g*.36,.82-g*1.22,'XYZ');
+    thumb.deform([0,.10+g*.47,.08+g*.44]);
+    if(!fusedActive){
     for(let i=0;i<palmPositions.count;i++)palmPositions.array[i*3+2]=palmRest[i*3+2]+g*.014*thenarWeights[i];
     palmPositions.needsUpdate=true;
     palmGeometry.computeVertexNormals();
+    }
+    fusedSkin?.update();
     group.updateMatrixWorld(true);
   }
   const wristAnchor = new THREE.Object3D();
   wristAnchor.name = 'Wrist attachment';
   wristAnchor.position.set(0.03,-1.08,-0.04);
   group.add(wristAnchor);
+  update(0);
+  fusedSkin=createFusedSkin();
   update(0);
   const restBounds = new THREE.Box3().setFromObject(group);
   return {

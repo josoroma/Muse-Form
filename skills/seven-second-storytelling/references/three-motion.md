@@ -4,9 +4,11 @@ Use this mode when the user requests Three.js, a real 3D anatomy scene, or inter
 
 ## Reusable explorer
 
-Start with [assets/three/index.html](../assets/three/index.html). Copy the entire `assets/three/` folder when adapting it, preserving its local module paths, import map, bundled Three.js files and license. Serve it over local HTTP rather than opening ES modules with `file://`.
+Start with [FORM](../assets/three/index.html) for anatomy or [MUSE](../assets/expressions/index.html) for facial acting. They remain separate views. Copy `assets/three/` and `assets/expressions/` as siblings when delivering MUSE: its import map, stylesheet and runtime refer to `../three/`. Preserve the engine files, relative paths and license. FORM can be adapted independently when facial acting is outside the request. Serve over local HTTP rather than opening ES modules with `file://`.
 
 The supplied edition contains five studies: full-body reach, elbow flexion, hand closing/opening, loaded leg bend, and foot heel raise. Reuse only the requested scenes. Its original procedural surfaces are illustrative, not scanned anatomy or a validated biomechanical model. [SOURCES.md](../assets/three/SOURCES.md) contains source-backed label wording and scope.
+
+MUSE adds eight expressions on one original adult woman: joy, sadness, anger, fear, surprise, disgust, wink and laughter. Its geometry and review requirements are described in [facial acting](facial-expression.md). The expression names identify authored performance choices rather than inferred emotions in a real person.
 
 - `upper-body.mjs`: `createBody()` and `createArm()`.
 - `hand.mjs`: `createHand()`, joint chains and wrist attachment.
@@ -23,6 +25,8 @@ Each study exposes a `group`, `parts`, `update(tSeconds)`, camera suggestion, ex
 Build recognizable volumes before adding explanatory overlays. Use smooth continuous profiles, resolved joint transitions and quiet surface landmarks. Inspect normals and silhouettes from front, side and three-quarter views; smooth lighting cannot hide a broken form. Update geometry bounds after deformation when needed for framing, picking or culling.
 
 Use hierarchical pivots for finger segments and rigid limb motion, with localized surface deformation where a continuous contour crosses a joint. Derive every pose from stored rest geometry and the requested time; do not accumulate rotations or deformation frame by frame. Keep bone lengths credible, finger webs intact, the thumb base attached and held objects in their grip. A heel raise keeps the supporting forefoot connected to the ground. Muscle fullness may clarify motion, but should not imply measured force or activation.
+
+For the hand study, skin should remain continuous across the palm, knuckles and finger bends. Place nail plates within the distal dorsal beds, carried by the same joint deformation; check their borders against the surrounding skin through the grasp. Surface creases explain joints without exposing separate capsule seams.
 
 For full-body assembly, use explicit wrist/hip attachment anchors and check both sides after mirroring. Framing should include the union of the motion extremes, including depth in camera space, with room for labels. Test the moving scene before choosing its default camera.
 

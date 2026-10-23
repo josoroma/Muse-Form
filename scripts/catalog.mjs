@@ -39,7 +39,9 @@ The collection uses [Hairline-inspired](https://github.com/lucasmarkes/hairline)
 
 ## Three.js anatomy edition
 
-[Open FORM](three/index.html) to explore five real 3D studies: full body, arm, hand, leg and foot. Each has a five-second joint-driven movement, a guided camera that yields to manual orbit, selectable surface regions and anchored explanatory labels. [3D source and prompts](three/README.md) · [Portable explorer bundle](exports/form-anatomy-threejs.zip). The accepted SVGs remain available below.
+[Open FORM](three/index.html) to explore five real 3D studies: full body, arm, hand, leg and foot. Each has a five-second joint-driven movement, a guided camera that yields to manual orbit, selectable surface regions and anchored explanatory labels. [3D source and prompts](three/README.md).
+
+[Open MUSE](expressions/index.html) for a separate facial-expression view: one original adult woman, eight five-second acting studies, articulated features and portrait camera controls. [Expression prompts and source](expressions/README.md) · [Portable FORM + MUSE bundle](exports/form-and-muse-threejs.zip). The accepted SVGs remain available below.
 
 ![Static drawing corpus](qa/motion-five/corpus-contact.jpg)
 

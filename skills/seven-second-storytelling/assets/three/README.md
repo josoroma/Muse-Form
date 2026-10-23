@@ -2,13 +2,13 @@
 
 Five original Three.js anatomy studies: **full body, arm, hand, leg and foot**. Each has a five-second movement, editable native 3D geometry, selectable structures, explanatory labels and an interruptible guided camera.
 
-[Open the explorer](index.html) · [Existing SVG collection](../index.html)
+[Open the explorer](index.html) · [Existing SVG collection](../index.html) · [MUSE / Expressions](../expressions/index.html)
 
 ![Hand at the grasp pose](../quality/three/hand-peak.png)
 
 ## Run locally
 
-From this skill’s `assets/` directory, run `python3 -m http.server 4173 --bind 127.0.0.1` and open http://127.0.0.1:4173/three/. All browser dependencies are bundled locally. Keep the entire `assets/` folder together so the SVG collection and review links remain available.
+From this skill’s assets/ directory, run `python3 -m http.server 4173 --bind 127.0.0.1` and open http://127.0.0.1:4173/three/. Keep the entire assets/ folder together: the portrait and anatomy views share local modules, and the SVG corpus remains linked.
 
 ## Inspect the movement
 
@@ -34,7 +34,7 @@ The models are sculptural anatomical illustrations, not scans or validated biome
 
 The camera and timeline helpers in runtime/ were adapted from the locally supplied Taster skill. They are included here so the explorer runs independently. Three.js is pinned to 0.186.1; build:three copies the required engine and OrbitControls files with their license.
 
-The catalog and browser-check commands belong to the source repository. This portable skill includes the editable model modules, complete prompts, local engine and the resulting review records.
+The catalog and browser-check commands belong to the source repository. This portable skill includes editable model modules, complete prompts, the local engine and review records.
 
 [Browser checks](../quality/three/checks.json) record actual mesh motion, exact 0/5 geometry, reverse seeking, camera interruption, selection, playback, reduced motion and mobile layout. [Automatic playback samples](../quality/three/playback.json) cover model and camera motion across the loop boundary. [Visual review](../quality/three/art-review.json) records inspected frames and concrete repairs. No continuous frame-by-frame review is claimed.
 

@@ -10,14 +10,17 @@ const errors=[],requests=[],report={renderer:'Three.js 0.186.1 / Chrome WebGL',d
 const page=await browser.newPage({viewport:{width:1440,height:1080},deviceScaleFactor:1,reducedMotion:'reduce'});
 page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});page.on('request',r=>requests.push(r.url()));
 async function pose(time){return page.evaluate(t=>{
-  atlas.seek(t);const values=[];let finite=true,meshCount=0,vertices=0;
+  atlas.seek(t);const values=[],exact=[],featureHashes={};let finite=true,meshCount=0,vertices=0;
   atlas.model.group.updateMatrixWorld(true);
   atlas.model.group.traverse(o=>{
     values.push(...o.matrixWorld.elements.map(x=>Math.round(x*1e5)));
-    if(o.isMesh){meshCount++;const a=o.geometry.attributes.position;vertices+=a.count;for(let i=0;i<a.array.length;i++){const n=a.array[i];if(!Number.isFinite(n))finite=false;values.push(Math.round(n*1e5));}}
+    exact.push(...o.matrixWorld.elements);
+    if(o.isMesh){meshCount++;const a=o.geometry.attributes.position;vertices+=a.count;const id=o.userData.partId;let h=featureHashes[id]??2166136261;const bits=new Uint32Array(a.array.buffer,a.array.byteOffset,a.array.length);for(let i=0;i<a.array.length;i++){const n=a.array[i];if(!Number.isFinite(n))finite=false;values.push(Math.round(n*1e5));exact.push(n);h=Math.imul(h^bits[i],16777619);}if(id)featureHashes[id]=h>>>0;}
   });
   let hash=2166136261;for(const n of values){hash^=n;hash=Math.imul(hash,16777619);}
-  return{hash:hash>>>0,finite,meshCount,vertices};
+  if(t===0)window.__neutralGeometry=exact;
+  const exactNeutralMatch=t===5&&exact.length===window.__neutralGeometry?.length&&exact.every((n,i)=>n===window.__neutralGeometry[i]);
+  return{hash:hash>>>0,finite,meshCount,vertices,featureHashes,exactNeutralMatch};
 },time);}
 try {
   await page.goto(`${url}/three/`);await page.waitForFunction(()=>window.atlas);
@@ -31,8 +34,8 @@ try {
       await pose(t);const file=`${id}-${t===0?'rest':t===2.5?'peak':`t${t.toFixed(2)}`}.png`;
       await page.screenshot({path:resolve(dir,file),fullPage:true});frames.push({time:t,file});
     }
-    const sceneReport={id,rest,peak,end,visibleModelChange:rest.hash!==peak.hash,loopCloses:rest.hash===end.hash,deterministicReverseSeek:seekA.hash===seekB.hash,frames,labels:await page.locator('#parts button').count()};
-    sceneReport.pass=rest.finite&&peak.finite&&end.finite&&rest.meshCount>10&&sceneReport.visibleModelChange&&sceneReport.loopCloses&&sceneReport.deterministicReverseSeek;
+    const sceneReport={id,rest,peak,end,visibleModelChange:rest.hash!==peak.hash,loopCloses:end.exactNeutralMatch,deterministicReverseSeek:seekA.hash===seekB.hash,frames,labels:await page.locator('#parts button').count()};
+    sceneReport.pass=rest.finite&&peak.finite&&end.finite&&rest.meshCount>=1&&rest.vertices>1000&&sceneReport.visibleModelChange&&sceneReport.loopCloses&&sceneReport.deterministicReverseSeek;
     report.scenes.push(sceneReport);console.log(`${sceneReport.pass?'PASS':'FAIL'} ${id}: actual mesh motion, loop closure, reverse seek; ${sceneReport.labels} selectable structures.`);
   }
   await page.locator('[data-study="hand"]').click();await page.locator('#parts button[data-part="thumb"]').click();

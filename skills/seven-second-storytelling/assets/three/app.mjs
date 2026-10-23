@@ -185,7 +185,7 @@ try {
   $('guided').onchange=()=>{if($('guided').checked){rig.cancelShot();cameraOwner='guided';$('camera-status').textContent='Guided view';overview(0,false);}else manual();render();};
   $('show-labels').onchange=()=>render();
   $('overview').onclick=()=>overview();$('zoom-in').onclick=()=>{rig.zoomBy(1.2);render();};$('zoom-out').onclick=()=>{rig.zoomBy(1/1.2);render();};
-  for(const [id,dir] of [['front',[0,.14,1]],['side',[1,.16,0]]])$(id).onclick=()=>{manual();const {center,radius:r}=modelInfo(active);rig.fit({center:center.toArray(),radius:r*.83,direction:dir,duration:.7});};
+  for(const [id,dir] of [['front',[0,.14,1]],['side',[1,.16,0]]])$(id).onclick=()=>{manual();const bounds=active.motionBounds||modelInfo(active).bounds,center=bounds.getCenter(new THREE.Vector3()),r=bounds.getSize(new THREE.Vector3()).length()/2;rig.fit({center:center.toArray(),radius:r*.90,direction:dir,duration:.7});};
   $('focus').onclick=()=>{const part=active.parts.find(p=>p.id===selected);if(!part)return;manual();const bounds=new THREE.Box3().setFromObject(part.object),center=bounds.getCenter(new THREE.Vector3());const r=Math.max(.45,bounds.getSize(new THREE.Vector3()).length()*.55);rig.fit({center:center.toArray(),radius:Math.min(r,radius*.75),duration:.8});};
   $('clear-selection').onclick=()=>selectPart('');document.querySelectorAll('[data-study]').forEach(b=>b.onclick=()=>setStudy(b.dataset.study));
   $('about').onclick=()=>$('about-dialog').showModal();$('close-about').onclick=()=>$('about-dialog').close();

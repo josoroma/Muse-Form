@@ -17,7 +17,10 @@
     "catalog:three": "node scripts/catalog-three.mjs",
     "check:three": "node scripts/check-three.mjs",
     "playback:three": "node scripts/playback-three.mjs",
-    "bundle:three": "python3 scripts/bundle-three.py"
+    "bundle:three": "python3 scripts/bundle-three.py",
+    "catalog:expressions": "node scripts/catalog-expressions.mjs",
+    "check:expressions": "node scripts/check-expressions.mjs",
+    "playback:expressions": "node scripts/playback-expressions.mjs"
   },
   "devDependencies": {
     "playwright-core": "1.64.1"

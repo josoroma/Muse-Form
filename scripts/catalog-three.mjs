@@ -23,7 +23,7 @@ const readme=`# FORM — Anatomy in motion
 
 Five original Three.js anatomy studies: **full body, arm, hand, leg and foot**. Each has a five-second movement, editable native 3D geometry, selectable structures, explanatory labels and an interruptible guided camera.
 
-[Open the explorer](index.html) · [Portable source bundle](../exports/form-anatomy-threejs.zip) · [Existing SVG collection](../index.html)
+[Open the explorer](index.html) · [Portable source bundle](../exports/form-and-muse-threejs.zip) · [Existing SVG collection](../index.html) · [MUSE / Expressions](../expressions/index.html)
 
 ![Hand at the grasp pose](../qa/three/hand-peak.png)
 

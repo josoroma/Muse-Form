@@ -1,0 +1,146 @@
+{
+  "edition": "MUSE \u2014 native Three.js facial expressions",
+  "reviewedOn": "2026-10-22",
+  "durationSeconds": 5,
+  "reviewers": [
+    "Primary agent: pose, profile, mobile and unpaused playback sample review",
+    "Peer agent: all eight peak portraits, surprise profile, source wording and live scene review",
+    "Model author: repeated silhouette, surface, aperture and profile corrections"
+  ],
+  "scope": {
+    "authoredPoseTimes": [
+      0,
+      0.65,
+      1.5,
+      2.5,
+      3.75,
+      5
+    ],
+    "unpausedElapsedTargets": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      4.9,
+      5.5
+    ],
+    "desktopViewport": [
+      1440,
+      1080
+    ],
+    "mobileWidth": 390,
+    "method": "Reviewed rendered six-pose sequences, all eight front and profile peaks, mobile wink and surprise layouts, and seven screenshots from uninterrupted playback of each expression across a loop boundary. The final wink closure was inspected again after its targeted repair. Sampled visual review is not continuous frame-by-frame or clinical validation."
+  },
+  "sources": {
+    "expressions/app.mjs": "02317bee997454eb01b00b6d47e8112fec7d9b98c22d764be2d338e6ca486f26",
+    "expressions/face.mjs": "5ddccf38de0e9b8ae53e626121d3118ed5b879d68d1a03e57c4359c32651f14f",
+    "expressions/style.css": "139850d4f1ed7b73a1381fcb2aafffa29b36431e5fce91471080969a3b047dc2",
+    "three/geometry.mjs": "aa62a681ad55d4665ced401459c8aacf55fa72868aa1e09f89c25ab0c57c737d"
+  },
+  "repairs": [
+    "Smoothed adaptive facial surface normals and removed visible shading bands.",
+    "Refined the crown, brow orientation, eye rims, chin and hair silhouette.",
+    "Deformed the rear jaw shell and upper neck with the front face to close the profile gap during jaw opening.",
+    "Recessed and smoothed the dental arc; hid it for the rounded surprise aperture.",
+    "Repaired the fully closed wink boundary with a joined lid surface and clean crease.",
+    "Balanced portrait lighting and framed the portrait consistently in desktop, mobile, front and profile views.",
+    "Measured actual eyelid aperture and visibility; labeled jaw movement as an authored release percentage."
+  ],
+  "studies": [
+    {
+      "id": "joy",
+      "acceptedForIllustratedExplorer": true,
+      "observations": "Mouth corners and cheeks lift together; the eyes soften and the dental arc stays behind the lips.",
+      "poseContactSheet": "joy-contact.jpg",
+      "playbackContactSheet": "joy-live-contact.jpg",
+      "profilePeak": "joy-side-peak.png",
+      "exactGeometryLoop": true,
+      "reverseSeeking": true,
+      "unpausedPlaybackPass": true
+    },
+    {
+      "id": "sadness",
+      "acceptedForIllustratedExplorer": true,
+      "observations": "The inner brows lift, the lids lower, and the mouth corners descend without changing the portrait identity.",
+      "poseContactSheet": "sadness-contact.jpg",
+      "playbackContactSheet": "sadness-live-contact.jpg",
+      "profilePeak": "sadness-side-peak.png",
+      "exactGeometryLoop": true,
+      "reverseSeeking": true,
+      "unpausedPlaybackPass": true
+    },
+    {
+      "id": "anger",
+      "acceptedForIllustratedExplorer": true,
+      "observations": "The brows draw inward while the eyes narrow and the lips press into a firmer line.",
+      "poseContactSheet": "anger-contact.jpg",
+      "playbackContactSheet": "anger-live-contact.jpg",
+      "profilePeak": "anger-side-peak.png",
+      "exactGeometryLoop": true,
+      "reverseSeeking": true,
+      "unpausedPlaybackPass": true
+    },
+    {
+      "id": "fear",
+      "acceptedForIllustratedExplorer": true,
+      "observations": "Wide eyelids and a stretched mouth separate the expression from surprise.",
+      "poseContactSheet": "fear-contact.jpg",
+      "playbackContactSheet": "fear-live-contact.jpg",
+      "profilePeak": "fear-side-peak.png",
+      "exactGeometryLoop": true,
+      "reverseSeeking": true,
+      "unpausedPlaybackPass": true
+    },
+    {
+      "id": "surprise",
+      "acceptedForIllustratedExplorer": true,
+      "observations": "The rounded mouth opening and raised brows remain readable from the front and profile; the jaw remains connected to the back of the head.",
+      "poseContactSheet": "surprise-contact.jpg",
+      "playbackContactSheet": "surprise-live-contact.jpg",
+      "profilePeak": "surprise-side-peak.png",
+      "exactGeometryLoop": true,
+      "reverseSeeking": true,
+      "unpausedPlaybackPass": true
+    },
+    {
+      "id": "disgust",
+      "acceptedForIllustratedExplorer": true,
+      "observations": "An asymmetric upper-lip and nose lift provide a distinct acting pose.",
+      "poseContactSheet": "disgust-contact.jpg",
+      "playbackContactSheet": "disgust-live-contact.jpg",
+      "profilePeak": "disgust-side-peak.png",
+      "exactGeometryLoop": true,
+      "reverseSeeking": true,
+      "unpausedPlaybackPass": true
+    },
+    {
+      "id": "wink",
+      "acceptedForIllustratedExplorer": true,
+      "observations": "One eyelid closes completely with a clean crease, its iris disappears, and the other eye remains open. Both eyes recover at the loop boundary.",
+      "poseContactSheet": "wink-contact.jpg",
+      "playbackContactSheet": "wink-live-contact.jpg",
+      "profilePeak": "wink-side-peak.png",
+      "exactGeometryLoop": true,
+      "reverseSeeking": true,
+      "unpausedPlaybackPass": true
+    },
+    {
+      "id": "laughter",
+      "acceptedForIllustratedExplorer": true,
+      "observations": "The jaw opens more broadly than joy, with raised cheeks, narrowing eyes and a slight head lift.",
+      "poseContactSheet": "laughter-contact.jpg",
+      "playbackContactSheet": "laughter-live-contact.jpg",
+      "profilePeak": "laughter-side-peak.png",
+      "exactGeometryLoop": true,
+      "reverseSeeking": true,
+      "unpausedPlaybackPass": true
+    }
+  ],
+  "limitations": [
+    "An original stylized adult woman, not a scanned or photorealistic portrait.",
+    "Expression presets are authored acting interpretations, not emotion recognition or diagnostic facial analysis.",
+    "Surface deformations illustrate feature coordination; they do not simulate individual biological muscle fibers."
+  ],
+  "pass": true
+}

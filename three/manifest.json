@@ -189,27 +189,27 @@
         {
           "id": "index",
           "name": "Index finger",
-          "description": "Three linked phalanges flex at the knuckle and two interphalangeal joints. The fingertip follows an arc toward the palm while the joint chain preserves segment length."
+          "description": "Three phalanges articulate beneath one continuous skin surface. The pad follows a joint-controlled arc toward the palm, with a conforming nail bed on the dorsal surface."
         },
         {
           "id": "middle",
           "name": "Middle finger",
-          "description": "Three linked phalanges flex at the knuckle and two interphalangeal joints. The longest digit leads the relaxed grasp."
+          "description": "Three phalanges articulate beneath one continuous skin surface. The longest digit leads the relaxed grasp."
         },
         {
           "id": "ring",
           "name": "Ring finger",
-          "description": "Three linked phalanges flex at the knuckle and two interphalangeal joints. The fingertip follows an arc toward the palm while the joint chain preserves segment length."
+          "description": "Three phalanges articulate beneath one continuous skin surface. The pad follows a joint-controlled arc toward the palm, with a conforming nail bed on the dorsal surface."
         },
         {
           "id": "little",
           "name": "Little finger",
-          "description": "Three linked phalanges flex at the knuckle and two interphalangeal joints. The little finger closes slightly later and helps cup the ulnar side of the palm."
+          "description": "Three phalanges articulate beneath one continuous skin surface. The little finger closes slightly later to support the cupped palm."
         },
         {
           "id": "thumb",
           "name": "Thumb opposition",
-          "description": "The thumb has two phalanges beyond its metacarpal. Its saddle-base motion turns the pad across the palm as the fingers flex, then returns to the open hand."
+          "description": "Two phalanges continue from the thumb metacarpal. A broad saddle base turns its pad across the palm as the fingers flex; the skin and nail bed follow the same continuous surface."
         }
       ],
       "beats": [

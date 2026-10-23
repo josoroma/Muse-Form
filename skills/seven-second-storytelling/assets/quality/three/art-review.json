@@ -32,19 +32,21 @@
       960
     ],
     "mobileViewportWidth": 390,
-    "method": "Inspected rendered pose frames and contact sheets, then seven screenshots sampled from unpaused browser playback per study across one loop boundary. Automated checks independently measure model geometry, camera, controls and layout. This is sampled self-review, not a continuous frame-by-frame or independent clinical validation."
+    "method": "Inspected rendered pose frames and contact sheets, then seven screenshots sampled from unpaused browser playback per study across one loop boundary. Automated checks independently measure model geometry, camera, controls and layout. This is sampled self-review, not a continuous frame-by-frame or independent clinical validation.",
+    "revisionReview": "Rechecked all five studies in fresh unpaused playback contact sheets. Rechecked the revised hand at front/back/side, rest and peak, plus its attachment in the arm and full-body views. Earlier findings for the unchanged limb geometry are retained."
   },
   "sources": {
-    "three/app.mjs": "a7fd2fe0d52ca7e896c29a983e559aa126244155d0fa2737762b4cc290dc2e88",
+    "three/app.mjs": "01e2b2962b4125b71de3dd342c5fa5765d9237fc248a1dec24e8546492d028a3",
     "three/geometry.mjs": "aa62a681ad55d4665ced401459c8aacf55fa72868aa1e09f89c25ab0c57c737d",
     "three/upper-body.mjs": "52dd687512f0770ff1b8cd90ee95e8826c60e73d2fa05dd0a1a76415e6983df6",
-    "three/hand.mjs": "4fe9891801f2c056a0b5821a77db75124fdb196fb7ee80ab1f1b4576443d7ee1",
+    "three/hand.mjs": "34eedb511671159c18d6840b7971da4cb34593d8b46dd638003dbd4989a40216",
     "three/lower-limb.mjs": "27a5cc0d4571b452a306a375bbd369d10dc5f825464080b27a223b78097bb344"
   },
   "globalRepairs": [
     "Removed clipping from the anatomical structure button lists.",
     "Computed camera framing from the motion envelope including camera-space depth.",
-    "Preserved explicit camera ownership: manual gestures stop guidance."
+    "Preserved explicit camera ownership: manual gestures stop guidance.",
+    "Front and Side frame the complete motion envelope, so an opening hand remains inside the view."
   ],
   "studies": [
     {
@@ -116,11 +118,13 @@
       "id": "hand",
       "acceptedForIllustratedExplorer": true,
       "repairsAndChecks": [
-        "Replaced a jagged thenar selection edge with a shared interpolated surface boundary.",
-        "Projected palm creases onto the modeled surface.",
-        "Inspected the graduated digits, thumb opposition, and linked grasp/release at rest and peak."
+        "Replaced stacked finger segments with one continuous watertight palm, thumb web and finger surface.",
+        "Shaped a metacarpal dome, graduated fingers and integrated nail beds.",
+        "Smoothed joint bending through grasp and release and repaired semantic-region edge topology.",
+        "Verified exact 0/5 geometry and normals, finite positions, independent instances and 0 unmatched surface edges.",
+        "Reviewed front/back/side silhouettes, mobile framing and arm/body attachments."
       ],
-      "observations": "Finger knuckles lead a soft grasp, the interphalangeal chains fold inward and the thumb turns across the palm. The thenar highlight follows a clean boundary.",
+      "observations": "The digits curl through continuous joints, with a connected thumb web and palm. The nail beds sit within the finger surfaces. The soft grasp remains readable during the guided camera move.",
       "inspectedPoseFrames": [
         "hand-rest.png",
         "hand-t0.65.png",
@@ -142,7 +146,8 @@
       "playbackContactSheet": "hand-live-contact.jpg",
       "exactGeometryLoop": true,
       "reverseSeeking": true,
-      "unpausedPlaybackPass": true
+      "unpausedPlaybackPass": true,
+      "additionalEvidence": "hand-v2/"
     },
     {
       "id": "leg",
@@ -216,5 +221,7 @@
     "The full-body model uses sculptural proportions rather than photorealistic skin or detailed dissection anatomy.",
     "The scene animation and camera are editable JavaScript, not exported FBX/GLB/BVH clips."
   ],
-  "pass": true
+  "pass": true,
+  "reviewedOn": "2026-10-22",
+  "revision": "Continuous hand surface and shared FORM / MUSE navigation"
 }

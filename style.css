@@ -11,3 +11,6 @@
 .card-number{padding:3px 5px;background:#f3eee2dd;border-radius:2px}
 .frame-note{gap:12px}
 @media(max-width:420px){.frame-note{font-size:7px}.frame-note span:last-child{font-size:7px}.transport{gap:7px}.transport .play{min-width:49px}.collection-heading>span{white-space:nowrap}.intro-note{font-size:12px}}
+
+.edition-links{display:flex;gap:26px;align-items:center}
+@media(max-width:760px){.masthead{height:auto;min-height:100px;flex-wrap:wrap;padding:17px 0;gap:15px}.edition-links{width:100%;justify-content:space-between;gap:12px}.edition-links .manual{font-size:10px}}

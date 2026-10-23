@@ -1,15 +1,15 @@
 ---
 name: seven-second-storytelling
-description: Create Hairline-inspired native SVG drawings and expressive five-second animations, or interactive Three.js anatomy studies when requested. Use for facial acting, articulated hands, limbs, muscle movement and illustrated characters; not ordinary UI animation.
+description: Create Hairline-inspired native SVG drawings and expressive five-second animations, or interactive Three.js anatomy and facial-expression studies when requested. Use for facial acting, articulated hands, limbs, muscle movement and illustrated characters; not ordinary UI animation.
 metadata:
-  short-description: "Hairline SVGs and expressive Three.js anatomy"
+  short-description: "Hairline SVGs, 3D anatomy and facial acting"
 ---
 
 # Illustrated motion
 
 Make the form worth keeping, then make its action clearly visible. Default to **static and animated native SVG with five-second loops**. An explicit Three.js request selects a separate interactive 3D edition with the same five-second motion default; preserve the accepted SVG corpus. The existing skill identifier is retained for compatibility and does not determine duration.
 
-Use Hairline-inspired contour discipline, meaningful interior marks, clear occlusion, negative space and one focal accent. Preserve believable anatomy and composition. For SVG work, read [drawing craft](references/drawing.md), [SVG motion](references/motion.md), and relevant examples from [the corpus index](references/corpus-index.md). For requested Three.js work, read [3D motion and interaction](references/three-motion.md); [the anatomy explorer](assets/three/index.html) supplies reusable models, camera controls and labels.
+Use Hairline-inspired contour discipline, meaningful interior marks, clear occlusion, negative space and one focal accent. Preserve believable anatomy and composition. For SVG work, read [drawing craft](references/drawing.md), [SVG motion](references/motion.md), and relevant examples from [the corpus index](references/corpus-index.md). For requested Three.js work, read [3D motion and interaction](references/three-motion.md). [FORM](assets/three/index.html) supplies body and limb studies; [MUSE](assets/expressions/index.html) supplies a separate adult portrait with eight expressions. Read [facial acting](references/facial-expression.md) when adapting that portrait.
 
 ## Observe and draw
 
@@ -28,8 +28,8 @@ Default to **exactly five seconds**, with matching start and end poses. Plan pre
 
 Author the responsible geometry:
 
-- **Expressions:** coordinate brows, lids, cheeks, lips and jaw. A blink needs an actual closing aperture, with iris geometry occluded beneath it. A wink also affects the cheek. Let the expression change visibly over time.
-- **Hands and fingers:** articulate from the correct digit bases and joints. Preserve the thumb saddle, palm volume, finger lengths and webbing. Use distinct finger timing when it serves the gesture.
+- **Expressions:** coordinate brows, lids, cheeks, lips and jaw while retaining one identity and shared neutral pose. A blink needs an actual closing aperture, with iris geometry occluded beneath it. A wink also affects the cheek. In 3D, deform the surrounding face with its features; inspect eye and mouth boundaries from oblique views.
+- **Hands and fingers:** articulate from the correct digit bases and joints. Preserve the thumb saddle, palm volume, finger lengths and webbing. Keep the skin continuous across joints and integrate nails into their distal beds. Use distinct finger timing when it serves the gesture.
 - **Muscles and limbs:** couple joint motion with relevant muscle-contour changes. Keep long-bone lengths credible, attachments continuous and supporting contacts fixed where appropriate.
 - **Stories:** move the character toward an intention. Coordinate the eyes/head, body, hands and held object; secondary props support the action.
 
@@ -54,6 +54,6 @@ Use semantic transforms and, for SVG, authored matching-topology path poses. Thr
 
 For SVG requests, deliver static and animated SVGs. For explicit Three.js requests, deliver the runnable HTML/JavaScript edition, its source models and explanatory sources; keep it separate from `corpus/svg` and `corpus/animated`. Do not generate or offer MP4s unless explicitly requested. QA snapshots are internal inspection evidence. Playback supports pause, restart, scrubbing and keyboard control, starts paused for reduced motion, and pauses when hidden.
 
-SVG project workflow: compose → catalog → check → playback → visual review and repair → verify → install-skill → bundle. Rebuild the catalog after changing review metadata. The portable skill contains the 48 SVGs, prompt manifest and separate `assets/three/` explorer; `storytelling-svgs.zip` remains SVG-only. Preserve the accepted edition before replacing animations; `archive/hairline-v3` preserves the drawings accepted before this motion revision. A 3D-only revision does not require recomposing untouched SVGs.
+SVG project workflow: compose → catalog → check → playback → visual review and repair → verify → install-skill → bundle. Rebuild the catalog after changing review metadata. The portable skill contains the 48 SVGs, prompt manifest and separate FORM/MUSE views; `storytelling-svgs.zip` remains SVG-only. Keep `assets/expressions/` beside `assets/three/`: MUSE imports FORM's engine, shared stylesheet and runtime. Preserve the accepted edition before replacing animations; `archive/hairline-v3` preserves the drawings accepted before this motion revision. A 3D-only revision does not require recomposing untouched SVGs.
 
 Split large corpora by subject family with disjoint source ownership. Main-agent review still resolves cross-family quality and motion issues. Disclose self-review and distinguish sampled inspection from continuous playback. [Research notes](references/sources.md) record the supplied motion projects; this collection adapts Hairline's drawing discipline rather than its isometric engine.

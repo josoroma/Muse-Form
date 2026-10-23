@@ -1,0 +1,54 @@
+{
+  "bundle": "exports/form-and-muse-threejs.zip",
+  "expressions": [
+    {
+      "id": "joy",
+      "parts": 5,
+      "rendered": true
+    },
+    {
+      "id": "sadness",
+      "parts": 5,
+      "rendered": true
+    },
+    {
+      "id": "anger",
+      "parts": 5,
+      "rendered": true
+    },
+    {
+      "id": "fear",
+      "parts": 5,
+      "rendered": true
+    },
+    {
+      "id": "surprise",
+      "parts": 5,
+      "rendered": true
+    },
+    {
+      "id": "disgust",
+      "parts": 5,
+      "rendered": true
+    },
+    {
+      "id": "wink",
+      "parts": 5,
+      "rendered": true
+    },
+    {
+      "id": "laughter",
+      "parts": 5,
+      "rendered": true
+    }
+  ],
+  "errors": [],
+  "bundleHand": true,
+  "bundleSvgGallery": true,
+  "portableSkillFace": true,
+  "portableSkillAnatomy": true,
+  "portableSkillSvg": true,
+  "galleryMobileNoOverflow": true,
+  "localRequestsOnly": true,
+  "pass": true
+}
