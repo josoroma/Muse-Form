@@ -1,0 +1,66 @@
+{
+  "status": "Final pose, interaction and playback checks passed; enlarged visual review completed. See review.json and check-history.json.",
+  "diagnosis": [
+    {
+      "issue": "Bright flat red mouth interior",
+      "isolatedSource": "Tongue mesh",
+      "evidence": [
+        "isolate-all.png",
+        "isolate-noTongue.png",
+        "isolate-onlyTongue.png"
+      ],
+      "finding": "Hiding the tongue reveals the already dark mouth cavity. The imported tongue proxy occupies too much of the lip aperture and is lit as an exposed front surface."
+    },
+    {
+      "issue": "Missing upper incisors and isolated lower tooth blocks",
+      "isolatedSource": "Teeth arch alignment to adult lip line",
+      "evidence": [
+        "isolate-onlyTeeth.png",
+        "isolate-noBody.png",
+        "assembly-surprise-contact.jpg"
+      ],
+      "finding": "Both complete dental arches exist. The maxillary edge is above the upper-lip opening, while the lower crowns project above the lower lip. Moving both arches and gingiva down together preserves the original bite and aligns the visible teeth with the lips."
+    },
+    {
+      "issue": "Triangular cheek lighting wedge during laughter",
+      "isolatedSource": "Summed individual morph normal deltas",
+      "finding": "Recomputing normals from exactly the same posed vertices removes the wedge without changing the .90 smile geometry. The implementation evaluates a private normal buffer from combined facial geometry, with exact authored neutral preservation."
+    }
+  ],
+  "repairs": [
+    "Lower both dental arches and their gingiva by 3.5 mm while retaining 32 connected crown components and all 58 motion targets.",
+    "Recess the tongue 12 mm, lower its floor 4 mm and fit its height to .75, transporting its morphs and recomputing smooth normals after one subdivision pass.",
+    "Use cleaner warm ivory enamel with reduced source gray patches; darken posterior teeth according to oral depth. Desaturate and darken the recessed tongue toward its root. These are declared local lighting approximations.",
+    "Keep all eight facial performance recipes. Evaluate combined facial normals only when morph weights change; weld UV seam contributions and keep private buffers independent of FORM, clothing and other MUSE instances."
+  ],
+  "inspection": {
+    "closeupViewport": [
+      1440,
+      1080
+    ],
+    "cameraZoom": 2.15,
+    "expressions": [
+      "joy",
+      "sadness",
+      "anger",
+      "fear",
+      "surprise",
+      "disgust",
+      "wink",
+      "laughter"
+    ],
+    "views": [
+      "front",
+      "quarter",
+      "side"
+    ],
+    "neutralViews": [
+      "front",
+      "quarter",
+      "side"
+    ],
+    "notes": "Current large facial captures show complete attached lips, upper incisor visibility in open poses, a recessed dark oral cavity and no bright tongue plate. The mouth remains stylized and does not claim clinical or photographic accuracy."
+  },
+  "diagnosticRecord": "refined-diagnostics.json",
+  "performanceRecord": "facial-normal-benchmark.json"
+}

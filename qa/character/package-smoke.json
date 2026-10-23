@@ -1,83 +1,109 @@
 {
   "testedArtifact": "exports/form-and-muse-threejs.zip",
-  "sha256": "fb16a53cc7162a3aadbc3606c68764f1b57803fdd5f1e949d52ca4b7c352d3f1",
+  "sha256": "b696872e4f3646e2f6b1d0ae8f8d01abcb568aadbbb5f411d6baed7d0e5521a1",
   "scope": "Fresh extracted application and bundled skill: FORM/MUSE launch and evaluate the refined shared facial and dental geometry at 2.5 s. Full scene/interaction/playback coverage is in the edition-specific checks.",
   "results": [
     {
       "base": "",
       "view": "three",
       "contour": {
-        "changedVertices": 6869,
+        "changedVertices": 9924,
         "maximumOffsetMetres": 0.0058406195768874875,
-        "method": "Fixed lower-face taper and rounded chin; transported morphs and normals"
+        "method": "Fixed soft facial contour: lower-jaw taper, rounded chin, subtle brow/nose refinement and upper-cheek fullness; transported morphs and normals"
       },
       "dental": {
         "upperCrowns": 16,
         "lowerCrowns": 16,
         "sourceVertices": 4494,
         "lowerHeightScale": 0.8,
+        "assemblyOffsetY": -0.0035,
         "vertices": 16068,
         "triangles": 28480
       },
       "bones": 53,
-      "phase": 2.5
+      "phase": 2.5,
+      "facialNormals": null,
+      "skinProgram": "muse-clean-complexion-v4"
     },
     {
       "base": "",
       "view": "expressions",
       "contour": {
-        "changedVertices": 6869,
+        "changedVertices": 9924,
         "maximumOffsetMetres": 0.0058406195768874875,
-        "method": "Fixed lower-face taper and rounded chin; transported morphs and normals"
+        "method": "Fixed soft facial contour: lower-jaw taper, rounded chin, subtle brow/nose refinement and upper-cheek fullness; transported morphs and normals"
       },
       "dental": {
         "upperCrowns": 16,
         "lowerCrowns": 16,
         "sourceVertices": 4494,
         "lowerHeightScale": 0.8,
+        "assemblyOffsetY": -0.0035,
         "vertices": 16068,
         "triangles": 28480
       },
       "bones": 53,
-      "phase": 2.5
+      "phase": 2.5,
+      "facialNormals": {
+        "updates": 2,
+        "skipped": 1,
+        "meanMs": 1.4000000059604645,
+        "maxMs": 2.699999988079071,
+        "vertices": 4273,
+        "triangles": 8138
+      },
+      "skinProgram": "muse-clean-complexion-v4"
     },
     {
       "base": "/skills/seven-second-storytelling/assets",
       "view": "three",
       "contour": {
-        "changedVertices": 6869,
+        "changedVertices": 9924,
         "maximumOffsetMetres": 0.0058406195768874875,
-        "method": "Fixed lower-face taper and rounded chin; transported morphs and normals"
+        "method": "Fixed soft facial contour: lower-jaw taper, rounded chin, subtle brow/nose refinement and upper-cheek fullness; transported morphs and normals"
       },
       "dental": {
         "upperCrowns": 16,
         "lowerCrowns": 16,
         "sourceVertices": 4494,
         "lowerHeightScale": 0.8,
+        "assemblyOffsetY": -0.0035,
         "vertices": 16068,
         "triangles": 28480
       },
       "bones": 53,
-      "phase": 2.5
+      "phase": 2.5,
+      "facialNormals": null,
+      "skinProgram": "muse-clean-complexion-v4"
     },
     {
       "base": "/skills/seven-second-storytelling/assets",
       "view": "expressions",
       "contour": {
-        "changedVertices": 6869,
+        "changedVertices": 9924,
         "maximumOffsetMetres": 0.0058406195768874875,
-        "method": "Fixed lower-face taper and rounded chin; transported morphs and normals"
+        "method": "Fixed soft facial contour: lower-jaw taper, rounded chin, subtle brow/nose refinement and upper-cheek fullness; transported morphs and normals"
       },
       "dental": {
         "upperCrowns": 16,
         "lowerCrowns": 16,
         "sourceVertices": 4494,
         "lowerHeightScale": 0.8,
+        "assemblyOffsetY": -0.0035,
         "vertices": 16068,
         "triangles": 28480
       },
       "bones": 53,
-      "phase": 2.5
+      "phase": 2.5,
+      "facialNormals": {
+        "updates": 2,
+        "skipped": 1,
+        "meanMs": 1.4000000059604645,
+        "maxMs": 2.5,
+        "vertices": 4273,
+        "triangles": 8138
+      },
+      "skinProgram": "muse-clean-complexion-v4"
     }
   ],
   "errors": [],

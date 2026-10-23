@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "scope": "ZIP CRC, no MP4, byte-identical final runtime in source skill, installed skill and both 3D/skill bundles; all 48 SVGs preserved. Extracted combined archive is subsequently opened in a browser.",
+  "modules": [
+    "expressions/facial-normals.mjs",
+    "expressions/character-face.mjs",
+    "expressions/studio.mjs",
+    "three/character/materials.mjs",
+    "three/character/facial-contour.mjs",
+    "three/character/dentition.mjs"
+  ],
+  "artifacts": [
+    {
+      "file": "form-and-muse-threejs.zip",
+      "bytes": 26546956,
+      "sha256": "b696872e4f3646e2f6b1d0ae8f8d01abcb568aadbbb5f411d6baed7d0e5521a1",
+      "crcPass": true
+    },
+    {
+      "file": "seven-second-storytelling.skill.zip",
+      "bytes": 9500616,
+      "sha256": "4fc721f6a6621138c0e482c738b4a713f6ab3fdef1c18004fb7367399579d22b",
+      "crcPass": true
+    },
+    {
+      "file": "storytelling-svgs.zip",
+      "bytes": 365519,
+      "sha256": "760b57f32335c5fcc7cd77302892e1a3f22f4d71d5d86e1e6abd66ff8f01d528",
+      "crcPass": true
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "scope": "Independent large neutral portrait diagnosis before further geometry changes",
+  "frames": [
+    {
+      "view": "front",
+      "position": [
+        0,
+        1.555,
+        0.56
+      ],
+      "target": [
+        0,
+        1.555,
+        0.1
+      ],
+      "file": "front.png"
+    },
+    {
+      "view": "threequarter",
+      "position": [
+        0.33,
+        1.555,
+        0.44
+      ],
+      "target": [
+        0,
+        1.555,
+        0.08
+      ],
+      "file": "threequarter.png"
+    },
+    {
+      "view": "profile",
+      "position": [
+        0.5,
+        1.555,
+        0.055
+      ],
+      "target": [
+        0,
+        1.555,
+        0.055
+      ],
+      "file": "profile.png"
+    }
+  ],
+  "sources": {
+    "three/character/character.mjs": "93ac686bba03ec206b7ec68f75c41fdc0649b9593986b9d97a6e0dd241a56407",
+    "three/character/facial-contour.mjs": "ef75bbca2bd43b5d451764f99b7a6ff59f7770a0e022fbcba947e0d3b5029913",
+    "three/character/materials.mjs": "e1f9ac1ab8583061629591e69204c03c477990c521169a59bdcd477d97f3f35e"
+  },
+  "largeFrames": [
+    {
+      "view": "front",
+      "position": [
+        0,
+        1.555,
+        0.44
+      ],
+      "target": [
+        0,
+        1.555,
+        0.1
+      ],
+      "file": "front-large.png"
+    },
+    {
+      "view": "threequarter",
+      "position": [
+        0.255,
+        1.555,
+        0.36
+      ],
+      "target": [
+        0,
+        1.555,
+        0.08
+      ],
+      "file": "threequarter-large.png"
+    },
+    {
+      "view": "profile",
+      "position": [
+        0.38,
+        1.555,
+        0.055
+      ],
+      "target": [
+        0,
+        1.555,
+        0.055
+      ],
+      "file": "profile-large.png"
+    }
+  ],
+  "note": "Large front frame places forehead-to-chin at roughly 500 native pixels; captured directly from the actual rendered canvas, without upscaling."
+}

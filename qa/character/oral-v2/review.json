@@ -1,0 +1,207 @@
+{
+  "edition": "MUSE \u2014 shared licensed skinned character revision 6: complexion, oral assembly and evaluated facial normals",
+  "reviewedAtUtc": "2026-10-23T13:22:41.241508+00:00",
+  "sources": {
+    "expressions/index.html": "d7b31a055afc9a09c9f9d2fe3b71758e1ee902e21cb04c974b68763484025114",
+    "expressions/app.mjs": "4e0ba671e28bb7e1b1ede5cc48fc06bb5d8d37537ce4fb3617c69fb4a23acd10",
+    "expressions/character-face.mjs": "5f6261b069ec79e01302c60771d036998ee37e13f72a4e9f8b1c0f1263dd5f11",
+    "expressions/facial-normals.mjs": "fd75aef696e0111448f8ba3890bbbc38a97d75239f6120f3f239ab27cac8f0ac",
+    "expressions/studio.mjs": "f2ca15fc5f5c49d8daa7bc6c28c8c77a11027d9148d21e541bcc0be1959630c2",
+    "expressions/style.css": "4186f93ae074519f6c0e244bb81f9feaad176e0304a671713e1b8abc443fac88",
+    "three/style.css": "86ef4e8eb7fa244d681f2e9a934760fb6641d8ca2e03b182f3c93dff78112376",
+    "three/character/character.mjs": "93ac686bba03ec206b7ec68f75c41fdc0649b9593986b9d97a6e0dd241a56407",
+    "three/character/materials.mjs": "d8920c99df164eac097cb364c41867c5f00ade9b8ca17f0f8968498d80705158",
+    "three/character/regions.mjs": "4fd014da445966949d867d4f71f18fe19a7f0fef5648dc7643e53459c1fc6139",
+    "three/character/subdivide-hair.mjs": "fd095a33b1700d6abc220e8ff8bb825869f90ec0f3671bfd6d160ef75208c14a",
+    "three/character/facial-contour.mjs": "298b1ba7158d952fe3ee9c8471da3a2a00358a40a870c391593ca47010ec4ea7",
+    "three/character/dentition.mjs": "6cb022c4744eb2adb8d031f8f526c7fc31bb5d3ab40f76b40a50b8e9b99c245d",
+    "three/character/assets/adult-female-source.glb": "b0fae3610eef39a6cdc9c56d9c8bccc0cd9bcc1cf346ae1d9bfa121e5a86e1fe",
+    "three/character/assets/hair-long.glb": "d340fff458f920dd16dcc80493a1a33207b00c6bbfb08c4c53aba54704a78818",
+    "three/character/assets/body-joints.json": "47c40fcaeb9f089f0f32ba781e2a0ac7d7a925a47b6db3c46102f0091a53a839",
+    "three/runtime/camera-rig.mjs": "1fb02cf51badcd0deb67acec9ea2f0b3bbe37598721e036532c34b497ac01211",
+    "three/runtime/motion.mjs": "da2c372951e868a257e1e0764a48f7fa9caa9e70a8ffed70338cfa52662e675e",
+    "three/vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+    "three/vendor/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+    "three/vendor/addons/controls/OrbitControls.js": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+    "three/vendor/addons/loaders/GLTFLoader.js": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+    "three/vendor/addons/utils/SkeletonUtils.js": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+    "three/vendor/addons/utils/BufferGeometryUtils.js": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+    "scripts/check-expressions.mjs": "ee10f2da034799075551c7e7cce608f6dbb725b1919b92f671fe3a75a0afb45c",
+    "scripts/playback-expressions.mjs": "994be7cc6663000b4ce74e83f7f5b78510501d37cdcaa99434e72e0b7da3b458"
+  },
+  "diagnosis": [
+    {
+      "issue": "Bright flat red mouth interior",
+      "isolatedSource": "Tongue mesh",
+      "evidence": [
+        "isolate-all.png",
+        "isolate-noTongue.png",
+        "isolate-onlyTongue.png"
+      ],
+      "finding": "Hiding the tongue reveals the already dark mouth cavity. The imported tongue proxy occupies too much of the lip aperture and is lit as an exposed front surface."
+    },
+    {
+      "issue": "Missing upper incisors and isolated lower tooth blocks",
+      "isolatedSource": "Teeth arch alignment to adult lip line",
+      "evidence": [
+        "isolate-onlyTeeth.png",
+        "isolate-noBody.png",
+        "assembly-surprise-contact.jpg"
+      ],
+      "finding": "Both complete dental arches exist. The maxillary edge is above the upper-lip opening, while the lower crowns project above the lower lip. Moving both arches and gingiva down together preserves the original bite and aligns the visible teeth with the lips."
+    },
+    {
+      "issue": "Triangular cheek lighting wedge during laughter",
+      "isolatedSource": "Summed individual morph normal deltas",
+      "finding": "Recomputing normals from exactly the same posed vertices removes the wedge without changing the .90 smile geometry. The implementation evaluates a private normal buffer from combined facial geometry, with exact authored neutral preservation."
+    }
+  ],
+  "implementedRepairs": [
+    "Lower both dental arches and their gingiva by 3.5 mm while retaining 32 connected crown components and all 58 motion targets.",
+    "Recess the tongue 12 mm, lower its floor 4 mm and fit its height to .75, transporting its morphs and recomputing smooth normals after one subdivision pass.",
+    "Use cleaner warm ivory enamel with reduced source gray patches; darken posterior teeth according to oral depth. Desaturate and darken the recessed tongue toward its root. These are declared local lighting approximations.",
+    "Keep all eight facial performance recipes. Evaluate combined facial normals only when morph weights change; weld UV seam contributions and keep private buffers independent of FORM, clothing and other MUSE instances."
+  ],
+  "largeCaptureScope": {
+    "closeupViewport": [
+      1440,
+      1080
+    ],
+    "cameraZoom": 2.15,
+    "expressions": [
+      "joy",
+      "sadness",
+      "anger",
+      "fear",
+      "surprise",
+      "disgust",
+      "wink",
+      "laughter"
+    ],
+    "views": [
+      "front",
+      "quarter",
+      "side"
+    ],
+    "neutralViews": [
+      "front",
+      "quarter",
+      "side"
+    ],
+    "notes": "Current large facial captures show complete attached lips, upper incisor visibility in open poses, a recessed dark oral cavity and no bright tongue plate. The mouth remains stylized and does not claim clinical or photographic accuracy.",
+    "peakCount": 24,
+    "neutralCount": 3,
+    "approximateFaceHeightPixels": 470,
+    "images": [
+      "refined-joy-front.png",
+      "refined-joy-quarter.png",
+      "refined-joy-side.png",
+      "refined-sadness-front.png",
+      "refined-sadness-quarter.png",
+      "refined-sadness-side.png",
+      "refined-anger-front.png",
+      "refined-anger-quarter.png",
+      "refined-anger-side.png",
+      "refined-fear-front.png",
+      "refined-fear-quarter.png",
+      "refined-fear-side.png",
+      "refined-surprise-front.png",
+      "refined-surprise-quarter.png",
+      "refined-surprise-side.png",
+      "refined-disgust-front.png",
+      "refined-disgust-quarter.png",
+      "refined-disgust-side.png",
+      "refined-wink-front.png",
+      "refined-wink-quarter.png",
+      "refined-wink-side.png",
+      "refined-laughter-front.png",
+      "refined-laughter-quarter.png",
+      "refined-laughter-side.png",
+      "refined-neutral-front.png",
+      "refined-neutral-quarter.png",
+      "refined-neutral-side.png"
+    ],
+    "imageSha256": {
+      "refined-joy-front.png": "f06dfb8e90d3809f3820c660e3edf652ad48b4a98a63ba083aca1210765bcb74",
+      "refined-joy-quarter.png": "3bc3d03adbfe25a4bc4502afe0931efe2f4bc2ba7122f7520274e6489dc95855",
+      "refined-joy-side.png": "bfb659279f9cd5d7894cfa3af55834021bbd53a736c8a8e5aa11c9fb8df7bd6a",
+      "refined-sadness-front.png": "8c16f8fced4cf469ff5d128da4240664a6ea3e9256abe92c6b56e4433e36f1a5",
+      "refined-sadness-quarter.png": "7cf47dd300ebaf506a57b8f7d3b58655f0d658aa73ec547ca6be9e0d0c75fcc9",
+      "refined-sadness-side.png": "a3e6c02362165a12171ccccfa550b9bcc26bc67a85be60ede125e010973a2b73",
+      "refined-anger-front.png": "7db57d1ad66b5f1bc3c6f130835232aa57a041e05ed35eec1f9f7c25a0cd2776",
+      "refined-anger-quarter.png": "0b15a2a2989f2b0bacb32a64404d3054aabf16c6494684ceca9383a941f7b6e4",
+      "refined-anger-side.png": "979e4136c7cc5cff38d943d26ea67a5b53aa1f66d60100a66f0f8936361109a3",
+      "refined-fear-front.png": "b29f984c814e5fcab70d72c4ae40c30823c94719b09486a7ab49be50ff75cd67",
+      "refined-fear-quarter.png": "dc5082f84b55e15af6fb78d30362d39e9718cced733acef79d374737014c7977",
+      "refined-fear-side.png": "c3a3b8682e8a95cf6aaedaa0b98c9b95c9a9eb42f6525b332c70cef488daadb3",
+      "refined-surprise-front.png": "f4b9697a181f069dd71daaad3eccc0a74a00656d26b876fbf59eb29b0e025631",
+      "refined-surprise-quarter.png": "71d67ad47d4defde31ff468b1203240a8a45fb3609f9edba999fc935299ce764",
+      "refined-surprise-side.png": "fae881e938e377f4eb11704df490be8bf0f5ce8ed678f9eaaebb563fbc2d008f",
+      "refined-disgust-front.png": "3420d5603eba2b1029b8a45819931c5de4ceed9f5dd20680369bfce267ae9f03",
+      "refined-disgust-quarter.png": "27e0cf77aa02bd586aa13b6af2a63ad4aacf694460bb98276e65a10dcc51bb11",
+      "refined-disgust-side.png": "48859f8dae097ed6ea117666683bb552fa91cb57cc7fd378b7e515fb09ddfb3d",
+      "refined-wink-front.png": "51613f0b259d502c8907fc50d64c59b91586dfb6dd86108844f4024cf98e6633",
+      "refined-wink-quarter.png": "72261611507a823e6891193da6e8b88680e0f26a004602be410447cfe3499f2d",
+      "refined-wink-side.png": "ed650a1d2e6c40721fe8d5845f467a458bb76a6e18b2a8961a19603f9afa9c33",
+      "refined-laughter-front.png": "8d541dfad5ab35690c13623cceae66f1ba3200548b46fd00dc3e993c7f2dd2be",
+      "refined-laughter-quarter.png": "86dc218e7008763eb7362f08293f70ead6321a7bedfd1d3526d6d4646cd88a23",
+      "refined-laughter-side.png": "4761abf274aae148640f4c7932d30afde98c72dd0ba58369c4bc4eae198ab3e9",
+      "refined-neutral-front.png": "f1dde43c8ac4d5d7c01669e43733fa8039dc3d40a08cd0366761545eb01a8189",
+      "refined-neutral-quarter.png": "9083b536fbd68aa198334942fe1949a9c8bb89ba4c8874ce87e26e1f84b10a59",
+      "refined-neutral-side.png": "cff05771e39783e47d79d46d6545b985fd2d6ae2339c0a05dad610461490e2ca"
+    },
+    "contactSheets": [
+      "refined-all-front.jpg",
+      "refined-all-quarter.jpg",
+      "refined-all-side.jpg"
+    ]
+  },
+  "observations": {
+    "joy": "A restrained cheek and corner lift softens the eyelids. The updated skin has quieter lower-face shading; the refined jaw stays connected in front, oblique and profile views and returns exactly to neutral.",
+    "sadness": "Inner brows rise and mouth corners lower, with a small gathered lower lip. The common jaw silhouette and smooth cheek shading are preserved through the peak and recovery.",
+    "anger": "Brows lower and draw together as the lids narrow and the lips firm. Teeth remain inside the mouth, and the held and recovery samples preserve the same adult facial identity.",
+    "fear": "Widened eyes sit above a laterally stretched opening. A restrained upper incisal band now sits behind the upper lip, with a darker recessed oral cavity instead of the flat bright tongue plate. In oblique view some posterior crowns remain visible, but they are attached to the dental arch rather than floating in front of the lips.",
+    "surprise": "Raised brows and widened eyes accompany a taller rounded mouth. The repositioned upper arch is visible as a narrow incisal band; lower central crowns are mostly covered, and the tongue no longer fills the opening as a bright red surface. Profile preserves a continuous lip/chin silhouette. The oblique mouth remains visibly stylized.",
+    "disgust": "Asymmetric upper-lip and nose-region lift remain readable with the small head turn. The repositioned dentition forms a narrow line within the lip opening without gross clipping in the sampled views.",
+    "wink": "The viewer-left lid closes over the iris and holds while the other eye stays open. The small half smile stays attached to the cheek; both eyes and authored neutral normals restore exactly at five seconds.",
+    "laughter": "The .90 smile retains its full corner and cheek lift, softened eyes and open jaw. Warm ivory upper crowns form a coherent curved row above the dark cavity. Evaluating combined facial normals removes the conspicuous triangular light wedge at the lateral mouth corner without weakening the smile. A naturalistic fold remains; this is an authored open-smile loop rather than spontaneous irregular laughter."
+  },
+  "normalCorrection": {
+    "evidence": [
+      "diagnostic-smile-normal-before.png",
+      "diagnostic-smile-normal-after.png"
+    ],
+    "method": "Identical .90 laughter positions; pre-skin normals evaluated from the combined facial deformation, with welded UV seams and authored-neutral-preserving deltas. Private normal attributes prevent source/clothing/other-instance changes.",
+    "finite": true,
+    "independent": true,
+    "neutralPreserved": true,
+    "allLoopAndReverseChecks": true
+  },
+  "validation": {
+    "poseAndInteractionRecord": "../../expressions/checks.json",
+    "scenesPassed": 8,
+    "interactionsPassed": 28,
+    "browserErrors": [],
+    "playbackRecord": "../../expressions/playback.json",
+    "automaticPlaybackPassed": 8,
+    "canonicalArtReview": "../../expressions/art-review.json",
+    "checkHistory": "check-history.json",
+    "performanceRecord": "facial-normal-benchmark.json",
+    "performanceCaveat": "Desktop Chrome with two viewport sizes, not measured on a phone."
+  },
+  "limitations": [
+    "The original CC0-derived adult identity is not a scan or exact likeness of Sydney Sweeney or the supplied reference portraits.",
+    "The result is an interactive stylized human character; it does not achieve the references\u2019 premium cinematic or photographic finish.",
+    "Hair uses subdivided textured cards. Broad highlight bands, a visibly grouped hairline and clumped lower tips remain; there is no individual-strand simulation.",
+    "Skin uses corrected embedded textures and diffuse-wrap shading rather than volumetric subsurface scattering. Some geometry, facial creases and clothing boundaries remain simplified.",
+    "The oral assembly now has visible upper crowns and a recessed tongue, but posterior teeth can still look prominent in oblique open-mouth views. Oral depth darkening is an approximation, not clinically accurate anatomy or traced light transport.",
+    "Expression presets are bounded artistic performances, without spontaneous microexpressions. Emotion names do not diagnose internal states.",
+    "Surface overlays indicate approximate anatomical regions. Back inspection fades hair but retains some tint from layered cards.",
+    "One earlier full check invocation produced NaN camera/label coordinates during framing/body controls. Two focused finite-bounds/camera reproductions and the complete final rerun passed without a runtime edit. The cause was not established; this report does not claim that a bounds bug was repaired.",
+    "Performance measurements used desktop Chrome at desktop and narrow mobile viewport sizes, not a physical mobile-device benchmark. The visual review covers stated poses/angles, not every possible orbit, zoom, device or frame."
+  ],
+  "pass": true,
+  "passMeaning": "Automated geometry/interactions/playback passed, and no detached facial feature, open wink aperture, gross clipping or loop discontinuity was found in the stated visual samples. This is not a photorealism or beauty score.",
+  "rootIndependentReview": "../portrait-v6/review.json",
+  "subsequentRuntimeChanges": "None after final capture/check/playback. Only QA reports/contact sheets changed."
+}

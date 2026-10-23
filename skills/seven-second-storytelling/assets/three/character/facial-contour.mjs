@@ -2,7 +2,7 @@ import * as THREE from 'three';
 
 const smooth = (a, b, x) => THREE.MathUtils.smoothstep(x, a, b);
 
-// A small, fixed lower-face sculpt in the source's native metre coordinates.
+// A restrained, fixed facial sculpt in the source's native metre coordinates.
 // The broad mandibular corners taper into a rounded chin; the lips, eyes and
 // cranial width keep their identity. This is baked once, never scaled per frame.
 function contour(x, y, z, out) {
@@ -12,7 +12,13 @@ function contour(x, y, z, out) {
   const jaw = front * lower * (.28 + .72 * flank);
   const chin = Math.exp(-(((y - 1.466) / .018) ** 2))
     * smooth(.075, .115, z) * (1 - smooth(.028, .052, Math.abs(x)));
-  return out.set(x * (1 - .105 * jaw - .075 * chin), y + .0024 * chin, z - .0007 * chin);
+  // Softer brow transition, restrained nasal width and a little upper-cheek
+  // fullness. The same field is applied to attached eyes, brows and lashes.
+  const brow = Math.exp(-(((y - 1.589) / .014) ** 2 + ((Math.abs(x) - .030) / .026) ** 2)) * smooth(.10, .134, z) * smooth(1.582, 1.588, y);
+  const nose = Math.exp(-(((y - 1.535) / .022) ** 2 + (x / .023) ** 2)) * smooth(.129, .150, z);
+  const nasalWidth = Math.exp(-(((y - 1.531) / .021) ** 2)) * (1 - smooth(.021, .036, Math.abs(x))) * smooth(.112, .140, z);
+  const cheek = Math.exp(-(((y - 1.537) / .021) ** 2 + ((Math.abs(x) - .047) / .020) ** 2)) * smooth(.090, .128, z);
+  return out.set(x * (1 - .105 * jaw - .075 * chin - .060 * nasalWidth), y + .0024 * chin + .0004 * cheek + .0006 * nose, z - .0007 * chin - .0014 * brow - .0005 * nose + .0010 * cheek);
 }
 
 export function refineFacialContour(scene) {
@@ -27,7 +33,7 @@ export function refineFacialContour(scene) {
     const positionTargets = geometry.morphAttributes.position || [], normalTargets = geometry.morphAttributes.normal || [];
     for (let i = 0; i < positions.count; i++) {
       at.fromBufferAttribute(positions, i);
-      if (at.y < 1.425 || at.y > 1.558 || at.z < .02) continue;
+      if (at.y < 1.425 || at.y > 1.635 || at.z < .02) continue;
       contour(at.x, at.y, at.z, base);
       const offset = at.distanceTo(base); if (offset < 1e-8) continue;
       // Transport expression displacements with the local sculpt derivative.
@@ -62,6 +68,6 @@ export function refineFacialContour(scene) {
     positions.needsUpdate = true; if (normals) normals.needsUpdate = true;
     geometry.computeBoundingBox(); geometry.computeBoundingSphere();
   });
-  scene.userData.facialContour = { changedVertices, maximumOffsetMetres: maximumOffset, method: 'Fixed lower-face taper and rounded chin; transported morphs and normals' };
+  scene.userData.facialContour = { changedVertices, maximumOffsetMetres: maximumOffset, method: 'Fixed soft facial contour: lower-jaw taper, rounded chin, subtle brow/nose refinement and upper-cheek fullness; transported morphs and normals' };
   return scene.userData.facialContour;
 }

@@ -5,13 +5,14 @@ import json, zipfile
 ROOT=Path(__file__).resolve().parents[1]
 out=ROOT/'exports/form-and-muse-threejs.zip'
 out.parent.mkdir(exist_ok=True)
-folders=['three','expressions','corpus/svg','corpus/animated','runtime','skills/seven-second-storytelling','archive/procedural-v3','archive/skinned-v4-before-face-refinement']
+folders=['three','expressions','corpus/svg','corpus/animated','runtime','skills/seven-second-storytelling','archive/procedural-v3','archive/skinned-v4-before-face-refinement','archive/skinned-v5-before-complexion']
 files=['index.html','gallery.mjs','style.css','corpus/manifest.json','scripts/serve.mjs',
        'scripts/build-three.mjs','scripts/build-character-expressions.py','scripts/catalog-three.mjs','scripts/check-three.mjs',
        'scripts/playback-three.mjs','scripts/bundle-three.py','package-lock.json',
        'scripts/catalog-expressions.mjs','scripts/check-expressions.mjs','scripts/playback-expressions.mjs','scripts/check-hair-subdivision.mjs',
        'qa/character/cross-view.json','qa/character/materials/review.json','qa/character/subdivision/asset-checks.json','qa/character/subdivision/synthetic-checks.json',
        'qa/character/face-refinement/review.json','qa/character/dental-refinement/review.json',
+       'qa/character/complexion/review.json','qa/character/oral-v2/review.json','qa/character/portrait-v6/review.json',
        'qa/three/checks.json','qa/three/playback.json','qa/three/art-review.json','qa/three/hand-peak.png','qa/three/foot-peak.png',
        'qa/expressions/checks.json','qa/expressions/playback.json','qa/expressions/art-review.json','qa/expressions/laughter-front-peak.png','qa/expressions/surprise-side-peak.png',
        ]

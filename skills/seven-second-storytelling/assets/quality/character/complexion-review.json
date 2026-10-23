@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-23",
+  "scope": "Actual close portrait material review of Skin and Eyebrow appearance. Shared studio lighting and fixed facial contours were updated by the root agent and inspected together with the final complexion. Dental and tongue changes have their own oral review.",
+  "sourceHashes": {
+    "three/character/materials.mjs": "d8920c99df164eac097cb364c41867c5f00ade9b8ca17f0f8968498d80705158",
+    "three/character/facial-contour.mjs": "298b1ba7158d952fe3ee9c8471da3a2a00358a40a870c391593ca47010ec4ea7",
+    "three/character/character.mjs": "93ac686bba03ec206b7ec68f75c41fdc0649b9593986b9d97a6e0dd241a56407",
+    "expressions/studio.mjs": "f2ca15fc5f5c49d8daa7bc6c28c8c77a11027d9148d21e541bcc0be1959630c2",
+    "three/character/assets/adult-female-source.glb": "b0fae3610eef39a6cdc9c56d9c8bccc0cd9bcc1cf346ae1d9bfa121e5a86e1fe"
+  },
+  "skinBlockHashes": {
+    "before": "763afff4e5089cb3b73381403c2a55daa65b496aff0a2d49b6b623a4e1427f9a",
+    "after": "a01ae032f24c46f00eb042de7afd1c4d991f1eb63b5a96ce42ba024825a0f102"
+  },
+  "sourceMapInspection": {
+    "source": "Embedded Skin maps from the licensed adult-female-source.glb; no new bitmap assets were created",
+    "albedoSHA256": "b1e3d39adcbfac6f4ca0626a0ebef96637da7525ff8cd1c3f89db61041b7275d",
+    "normalSHA256": "44ce628cb60d1dc245aa78fa361c633a5457177957598c351cc22ed023f924cb",
+    "findings": [
+      "Source albedo contains broad gray/brown mottling and baked shading on lower cheeks, chin and neck.",
+      "The normal map adds dense fine pore relief, but removing normals alone barely changed the beard-like visual impression.",
+      "Removing albedo in the same browser scene removed the mottling, identifying photographic color variation as the principal cause."
+    ]
+  },
+  "repairs": [
+    "Separated fine source texture from broad photographic coloration with a mip-level sample; removed most gray/green head and neck variation.",
+    "Applied an even warm complexion with subdued fine residual texture and a very small rosy cheek variation.",
+    "Preserved local lip pigment and fine lid margins through rest-position masks that follow facial deformation; avoided preserving the photographic halo outside the lips.",
+    "Reduced facial normal contribution to 64% of the previous .15 strength while retaining the source pore pattern.",
+    "Blended the complexion treatment gradually through the neck and upper chest instead of introducing a head/neck color seam.",
+    "Softened eyebrows with a lighter brown tint and .82 alpha opacity; eyelashes were unchanged.",
+    "Reviewed the warmer studio fill and softer facial contour together with the final material."
+  ],
+  "capture": {
+    "browser": "Chrome with the project native Three.js renderer",
+    "viewportPixels": [
+      1172,
+      1000
+    ],
+    "faceHeightPixels": "Approximately 500\u2013550 in these enlarged captures; the facial region is larger than 450 pixels",
+    "setup": "Actual MUSE page, deterministic seeks, neutral/peak expressions, labels and UI headings hidden only in the QA browser, 1.65 camera zoom",
+    "isolation": [
+      "before-front.png",
+      "before-quarter.png",
+      "no-normal-front.png",
+      "no-normal-quarter.png",
+      "no-albedo-front.png",
+      "no-albedo-quarter.png",
+      "untextured-front.png",
+      "untextured-quarter.png"
+    ],
+    "final": [
+      "after-joy-front.png",
+      "after-joy-quarter.png",
+      "after-joy-profile.png",
+      "after-laughter-front.png",
+      "after-laughter-quarter.png",
+      "after-laughter-profile.png",
+      "after-surprise-front.png",
+      "after-surprise-quarter.png",
+      "after-surprise-profile.png"
+    ]
+  },
+  "observations": [
+    "Final neutral front and three-quarter views no longer show the gray/brown stippled lower-face patches.",
+    "Lips retain their pink pigment, lids remain distinct, and nostril depth still comes from the modeled shape and studio lighting.",
+    "Face, jaw and neck maintain a continuous warm complexion in the reviewed camera angles.",
+    "The final warmer fill preserves cheek and nasal volume without washing out the face.",
+    "Fine source texture remains deliberately restrained; no procedural grain or painted face image was added."
+  ],
+  "checks": {
+    "browserErrors": [],
+    "syntax": "node --check three/character/materials.mjs passed",
+    "fullSuites": "Not run by this material review; root owns final integrated checks."
+  },
+  "limits": [
+    "This is a stylized realtime skinned character, not a photoreal scan or digital double.",
+    "Before/after final images include the separately authored contour and studio changes; the no-albedo/no-normal captures isolate the texture diagnosis within one unchanged scene.",
+    "The nine still views establish the reviewed material appearance; full expression playback, mouth geometry and interactions are verified separately.",
+    "No artistic grades or photorealism certification are inferred from shader compilation or image differences."
+  ]
+}

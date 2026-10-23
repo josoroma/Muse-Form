@@ -1,0 +1,324 @@
+{
+  "status": "Historical review captured before the complexion/studio/brow-nose-cheek revision. Preserve its source hashes. Some canonical frame paths may now contain newer captures; do not treat historical paths as current image evidence.",
+  "review": {
+    "edition": "FORM — shared licensed adult-female character",
+    "revision": "Local jaw-contour and dentition refinement shared by FORM and MUSE",
+    "reviewedOn": "2026-10-23",
+    "durationSeconds": 5,
+    "reviewers": [
+      "FORM integration agent: scoped actual rendered comparison of the revised neutral face and full-body study; authored self-review rather than independent artistic or clinical certification."
+    ],
+    "scope": {
+      "change": "A separate smooth lower-jaw taper and modest rounded-chin refinement after identity baking, plus refined licensed dentition and enamel material.",
+      "visualStudies": [
+        "body"
+      ],
+      "neutralPortraitViews": [
+        "front",
+        "three-quarter",
+        "profile"
+      ],
+      "fullBodyViewPoseTimes": [
+        0,
+        1.5,
+        2.5
+      ],
+      "unpausedBodyElapsedTargets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        4.9,
+        5.5
+      ],
+      "desktopViewport": [
+        1440,
+        1080
+      ],
+      "playbackViewport": [
+        1280,
+        960
+      ],
+      "method": "Viewed the actual FORM and MUSE neutral portraits from front/profile/three-quarter (six images), the full-body front/profile/three-quarter at rest/intermediate/peak (nine images), and seven full-body unpaused playback samples. Compared the neutral contour with the pre-refinement baseline. Automatic FORM checks and playback were rerun for all five studies. The other limb images and contact sheets were regenerated but are not claimed as a new broad artistic review.",
+      "priorReviewStatus": "The earlier broad limb/mobile visual review is retained below as historical evidence with its original source hashes and observations. Its scope is not reassigned to this local facial revision."
+    },
+    "sources": {
+      "three/app.mjs": "aa6f9c2be90b21409a56417c410ae0f07ad4a59a1b8298c10e4b7ae14a9fcc3f",
+      "three/geometry.mjs": "aa62a681ad55d4665ced401459c8aacf55fa72868aa1e09f89c25ab0c57c737d",
+      "three/character/character.mjs": "93ac686bba03ec206b7ec68f75c41fdc0649b9593986b9d97a6e0dd241a56407",
+      "three/character/anatomy.mjs": "e3472489a0f5833764de0d74b8233ad079bcaf2ccdacb75836d255f67150844e",
+      "three/character/regions.mjs": "4fd014da445966949d867d4f71f18fe19a7f0fef5648dc7643e53459c1fc6139",
+      "three/character/materials.mjs": "e1f9ac1ab8583061629591e69204c03c477990c521169a59bdcd477d97f3f35e",
+      "three/character/subdivide-hair.mjs": "fd095a33b1700d6abc220e8ff8bb825869f90ec0f3671bfd6d160ef75208c14a",
+      "three/character/facial-contour.mjs": "ef75bbca2bd43b5d451764f99b7a6ff59f7770a0e022fbcba947e0d3b5029913",
+      "three/character/dentition.mjs": "f7b6ab631c5fa3359b35f208b61ff2850300c6df3b0871776e2beb4de32d3f8e",
+      "three/runtime/camera-rig.mjs": "1fb02cf51badcd0deb67acec9ea2f0b3bbe37598721e036532c34b497ac01211",
+      "three/runtime/motion.mjs": "da2c372951e868a257e1e0764a48f7fa9caa9e70a8ffed70338cfa52662e675e",
+      "expressions/studio.mjs": "d34b2e1a1e9561599fe1f9a504b0c2bbf911889a6bd51a1384f3cd88ac048d45",
+      "three/character/assets/adult-female-source.glb": "b0fae3610eef39a6cdc9c56d9c8bccc0cd9bcc1cf346ae1d9bfa121e5a86e1fe",
+      "three/character/assets/hair-long.glb": "d340fff458f920dd16dcc80493a1a33207b00c6bbfb08c4c53aba54704a78818",
+      "scripts/check-three.mjs": "107748b1004f04d84a6c3b06ced4e77db46d1f2d6ceb5cb1ef4881d9d1d0e24c",
+      "scripts/playback-three.mjs": "2d23b07a48cc351632b4f3a76650f60cef3b1b47ea66f57cd8329063b09b7aa9"
+    },
+    "assets": {
+      "three/character/assets/CC0-MakeHuman.txt": "f6089cba01cb570a24712b41ab8a586ccd3cc5ef53dc266ca50b95c288956d2c",
+      "three/character/assets/README.md": "f85c07863a92f6a7009ce337926d7e4119e565d8a4ec008f85604e825b5d7a24",
+      "three/character/assets/adult-female-source.glb": "b0fae3610eef39a6cdc9c56d9c8bccc0cd9bcc1cf346ae1d9bfa121e5a86e1fe",
+      "three/character/assets/body-joints.json": "47c40fcaeb9f089f0f32ba781e2a0ac7d7a925a47b6db3c46102f0091a53a839",
+      "three/character/assets/expression-data-checks.json": "554ad80370ec8a082c1a6aa4206085d34d61404da0f986df349d035432f607a4",
+      "three/character/assets/expression-transfer-report.json": "05422b1f25809d9f57ec87a49979f0fdde4b839b117723db564e249539127507",
+      "three/character/assets/gltf-validation.json": "8a4e2b7c8ef060e73c10b201ce35f5ad1413e61be840a0a7fdba9d4f7ff9c569",
+      "three/character/assets/hair-long.glb": "d340fff458f920dd16dcc80493a1a33207b00c6bbfb08c4c53aba54704a78818",
+      "three/character/assets/kblood-license-notes.md": "18af8d071bcb1cab2260263991ad49c314dc616facf7f33b0ab19bee78d4ec13",
+      "three/character/assets/makehuman-asset-licenses.json": "b18bbc7f45fe7c28bcf3b119f44f7b8425d3b4c871f99c694b181b5603f4758e",
+      "three/character/assets/makehuman-expression-inputs.zip": "3944971d2d8296d615f916653091b853f4333d34141d7b07077f8d7b6eb84239"
+    },
+    "observations": [
+      "The lower cheek and jaw silhouette tapers more gently than the earlier character while the upper cheeks, eyes, nose and mouth retain the same identity.",
+      "The chin remains rounded rather than pointed. Front, profile and three-quarter neutral views do not show excessive corner pinching, a new jaw-to-neck seam or the earlier native-only trial’s extra chin recession.",
+      "The same refined neutral body and dentition are instantiated in both applications: baked geometry hashes match and the maximum evaluated neutral body difference is exactly zero metres.",
+      "The full-body reach keeps a continuous neck/jaw attachment at rest, intermediate and peak, with readable head turning and planted feet. No additional body-pose or camera regression was observed in the inspected full-body samples.",
+      "Neutral mouth views do not expose enough dentition for a meaningful tooth-beauty judgment; detailed tooth and open-expression review belongs to the current MUSE/dental evidence."
+    ],
+    "inspectedNeutralPortraitFrames": [
+      "face-refinement/three-neutral-front.png",
+      "face-refinement/three-neutral-side.png",
+      "face-refinement/three-neutral-threequarter.png",
+      "face-refinement/expressions-neutral-front.png",
+      "face-refinement/expressions-neutral-side.png",
+      "face-refinement/expressions-neutral-threequarter.png"
+    ],
+    "inspectedFullBodyViewFrames": [
+      "body-front-rest.png",
+      "body-front-intermediate.png",
+      "body-front-peak.png",
+      "body-threequarter-rest.png",
+      "body-threequarter-intermediate.png",
+      "body-threequarter-peak.png",
+      "body-side-rest.png",
+      "body-side-intermediate.png",
+      "body-side-peak.png"
+    ],
+    "inspectedFullBodyPlaybackFrames": [
+      "body-live-0.0.png",
+      "body-live-1.0.png",
+      "body-live-2.0.png",
+      "body-live-3.0.png",
+      "body-live-4.0.png",
+      "body-live-4.9.png",
+      "body-live-5.5.png"
+    ],
+    "viewContactSheet": "body-views-contact.jpg",
+    "playbackContactSheet": "body-live-contact.jpg",
+    "automatedCoverage": {
+      "checks": "checks.json",
+      "playback": "playback.json",
+      "crossView": "../character/cross-view.json",
+      "studies": [
+        {
+          "id": "body",
+          "geometryFinite": true,
+          "exactGeometryLoop": true,
+          "reverseSeeking": true,
+          "unpausedPlaybackPass": true
+        },
+        {
+          "id": "arm",
+          "geometryFinite": true,
+          "exactGeometryLoop": true,
+          "reverseSeeking": true,
+          "unpausedPlaybackPass": true
+        },
+        {
+          "id": "hand",
+          "geometryFinite": true,
+          "exactGeometryLoop": true,
+          "reverseSeeking": true,
+          "unpausedPlaybackPass": true
+        },
+        {
+          "id": "leg",
+          "geometryFinite": true,
+          "exactGeometryLoop": true,
+          "reverseSeeking": true,
+          "unpausedPlaybackPass": true
+        },
+        {
+          "id": "foot",
+          "geometryFinite": true,
+          "exactGeometryLoop": true,
+          "reverseSeeking": true,
+          "unpausedPlaybackPass": true
+        }
+      ],
+      "interactions": {
+        "reducedMotionStartsPaused": true,
+        "sameSculptedIdentityAcrossStudies": true,
+        "pectoralBackPelvisPreserved": true,
+        "surfaceSelectionPreservesSkin": true,
+        "anchorsFollowPosedSurface": true,
+        "backSelectionRevealsSurface": true,
+        "clearSelectionRestoresHair": true,
+        "selectionAndExplanation": true,
+        "frameSelection": true,
+        "hideLabels": true,
+        "scrubPauses": true,
+        "restartRestoresStart": true,
+        "playPause": true,
+        "singlePassStopsAtFive": true,
+        "guidedCameraMoves": true,
+        "dragInterruptsGuidedCamera": true,
+        "keyboardOrbit": true,
+        "aboutAndSources": true,
+        "normalMotionAutoplays": true,
+        "mobileNoHorizontalOverflow": true,
+        "mobileLabelsInside": true,
+        "onlyLocalRequests": true
+      },
+      "browserErrors": [],
+      "crossViewSameBody": true,
+      "crossViewSameDentition": true,
+      "maxNeutralPosedDifferenceMetres": 0
+    },
+    "history": [
+      {
+        "status": "Historical broad review before this facial refinement; image filenames may now contain newer captures, so no historical frame path is asserted as current evidence.",
+        "revision": "Native GLB skin, five attached anatomical studies, long blonde hair, surface-conforming mint selections",
+        "reviewedOn": "2026-10-23",
+        "scope": {
+          "authoredPoseTimes": [
+            0,
+            0.65,
+            1.5,
+            2.5,
+            3.75,
+            5
+          ],
+          "views": [
+            "front",
+            "three-quarter",
+            "profile"
+          ],
+          "viewPoseTimes": [
+            0,
+            1.5,
+            2.5
+          ],
+          "unpausedElapsedTargets": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            4.9,
+            5.5
+          ],
+          "desktopViewport": [
+            1440,
+            1080
+          ],
+          "playbackViewport": [
+            1280,
+            960
+          ],
+          "mobileViewport": [
+            390,
+            844
+          ],
+          "mobilePoseTimes": [
+            0,
+            2.5
+          ],
+          "studies": [
+            "body",
+            "arm",
+            "hand",
+            "leg",
+            "foot"
+          ],
+          "method": "Reviewed actual browser screenshots and enlarged contact sheets: six authored poses and nine view/pose combinations per study, seven unpaused samples across a loop boundary per study, and mobile rest/peak for all five studies. Also inspected rear Back-selection/clear captures. Automated checks independently compare posed body vertices, bone matrices, shared identity, exact loop endpoints, reverse seeking, surface anchors, interactions and layout.",
+          "finalMaterialReview": "Final selected-region tint and Back-only hair fade were checked in refreshed browser pose/view/mobile captures. The preceding unpaused playback samples use identical geometry and motion; the last change affects selection materials only."
+        },
+        "sources": {
+          "three/app.mjs": "aa6f9c2be90b21409a56417c410ae0f07ad4a59a1b8298c10e4b7ae14a9fcc3f",
+          "three/geometry.mjs": "aa62a681ad55d4665ced401459c8aacf55fa72868aa1e09f89c25ab0c57c737d",
+          "three/character/character.mjs": "2aaf55f4cf2d18475817780ba4e4c9114227c31642b1395422743008b336b55b",
+          "three/character/anatomy.mjs": "e3472489a0f5833764de0d74b8233ad079bcaf2ccdacb75836d255f67150844e",
+          "three/character/regions.mjs": "4fd014da445966949d867d4f71f18fe19a7f0fef5648dc7643e53459c1fc6139",
+          "three/character/materials.mjs": "ad15581446fbcb0e079f55af4e6b633a298cc60176465b1f571099fd9b30d229",
+          "three/character/subdivide-hair.mjs": "fd095a33b1700d6abc220e8ff8bb825869f90ec0f3671bfd6d160ef75208c14a",
+          "three/runtime/camera-rig.mjs": "1fb02cf51badcd0deb67acec9ea2f0b3bbe37598721e036532c34b497ac01211",
+          "three/runtime/motion.mjs": "da2c372951e868a257e1e0764a48f7fa9caa9e70a8ffed70338cfa52662e675e",
+          "expressions/studio.mjs": "d34b2e1a1e9561599fe1f9a504b0c2bbf911889a6bd51a1384f3cd88ac048d45",
+          "three/character/assets/adult-female-source.glb": "b0fae3610eef39a6cdc9c56d9c8bccc0cd9bcc1cf346ae1d9bfa121e5a86e1fe",
+          "three/character/assets/hair-long.glb": "d340fff458f920dd16dcc80493a1a33207b00c6bbfb08c4c53aba54704a78818",
+          "three/style.css": "86ef4e8eb7fa244d681f2e9a934760fb6641d8ca2e03b182f3c93dff78112376",
+          "three/index.html": "ebe67dad32a611fd2088f3ddf2914c0adef7e09a5a5e0c8022150ce6f33fd423",
+          "scripts/check-three.mjs": "d134a48a1270e7fdc120d9bc8431cf80dd212a863aeb21189f0c1f26f2b6606c",
+          "scripts/playback-three.mjs": "2d23b07a48cc351632b4f3a76650f60cef3b1b47ea66f57cd8329063b09b7aa9"
+        },
+        "observations": [
+          {
+            "id": "body",
+            "observations": "One clothed adult female identity occupies the full-body study. Neck, shoulders, torso, hips and legs are continuous; the reaching arm and head counter-turn are visible while both feet stay planted. Front, profile and three-quarter views retain the same proportions. The Back selection reveals the upper-back mint surface through faded hair; clearing it restores the opaque hair.",
+            "repairsAndChecks": [
+              "Replaced primitive assemblies with the shared CC0 skinned adult-female character.",
+              "Preserved Pectoralis, Back and Pelvis as surface selections, including posed barycentric anchors.",
+              "Added explicit Back-only hair fade and exact material/shadow restoration on clearing."
+            ]
+          },
+          {
+            "id": "arm",
+            "observations": "The forearm rises through a clear elbow bend while the wrist and fingers stay attached. The shoulder flows into the upper arm without a separate sphere. Sleeve-crossing overlays remain smooth after increasing their offset above the suit. Close framing intentionally shows the connected torso; in mobile arm framing its adjacent head passes beneath the fixed title.",
+            "repairsAndChecks": [
+              "Uses the same continuous body mesh and anatomical arm chain.",
+              "Raised sleeve-crossing surface overlays to 1.7 mm so they render above the 1.2 mm garment shell."
+            ]
+          },
+          {
+            "id": "hand",
+            "observations": "The pinky emerges from the ulnar palm with a shorter proportion than its neighbors. All five digits remain attached through open, intermediate and curled poses; the finger chains bend at distinct joints and the thumb opposes across the palm. The front study isolates the requested hand; manual three-quarter rotation can bring the adjacent face behind the fixed title.",
+            "repairsAndChecks": [
+              "Uses the connected palm and finger topology from the licensed full-body mesh.",
+              "Authored staggered MCP/PIP/DIP curls and thumb opposition on native finger bones.",
+              "Preserved the hand presentation pose and independent digit selections."
+            ]
+          },
+          {
+            "id": "leg",
+            "observations": "Hip, knee, calf and ankle stay continuous during the shallow supported bend. Both feet remain planted as the body lowers. The quadriceps tint now crosses the shorts without the earlier triangular depth-conflict fragments; the side silhouette preserves the knee and heel relationships.",
+            "repairsAndChecks": [
+              "Shares one leg, hip and foot surface with the full character.",
+              "Maintains support by solving pelvis translation against the forefoot during the bend.",
+              "Raised thigh overlays above the suit to remove visible depth conflicts."
+            ]
+          },
+          {
+            "id": "foot",
+            "observations": "The heel rises and returns while the toes remain part of the same continuous forefoot. Front and oblique views show all five connected toes, including the small lateral toe. The ankle, instep and calf transition smoothly; toe support remains stable through the authored rise.",
+            "repairsAndChecks": [
+              "Uses the native connected ankle, heel, forefoot and toes.",
+              "Counter-rotates the toe joint during heel rise and restores the same endpoint pose."
+            ]
+          }
+        ],
+        "limitations": [
+          "This is an illustrative, adapted CC0 character mesh and authored skeletal animation, not a scan, a clinical anatomy model or a medically validated simulation.",
+          "The result has natural continuous human topology and textured PBR materials, but it is not a photoreal digital double or a verified likeness of Sydney Sweeney. Hair still uses textured cards rather than individually simulated strands.",
+          "Mint patches indicate semantic surface regions, not dissected muscles, quantified activation or simulated tissue mechanics.",
+          "Very close inspection can reveal source texture softness, card-based hair structure, garment edge aliasing and shadow-map resolution.",
+          "Some free-orbit limb views and mobile arm framing include adjacent head or torso beneath the fixed headline; the requested limb remains visible and controls remain usable.",
+          "Playback review samples screenshots across a loop boundary; it is not frame-by-frame inspection of every rendered frame or every possible camera angle."
+        ]
+      }
+    ],
+    "limitations": [
+      "The review covers the specified neutral views and sampled full-body motion, not every possible expression or orbit angle. The MUSE review separately addresses facial-expression extremes and visible teeth.",
+      "The character remains an adapted real-time CC0 mesh with card-based hair and finite texture/shadow resolution, not a photoreal digital double or a verified celebrity likeness.",
+      "Surface labels indicate illustrative regions, not exposed muscles or a medically validated model.",
+      "The previous broad review’s noted mobile arm/fixed-title overlap and manual oblique framing limitations remain outside this local facial change."
+    ],
+    "pass": true
+  }
+}

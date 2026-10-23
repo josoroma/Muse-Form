@@ -1,5 +1,5 @@
 {
-  "scope": "Actual FORM full-body neutral and MUSE joy neutral compared in Chrome after local jaw-contour and dental refinement",
+  "scope": "Actual FORM full-body neutral and MUSE joy neutral compared in Chrome after complexion, brow/nose/cheek contour, studio and dental refinements",
   "reviewedOn": "2026-10-23",
   "sameBakedIdentity": true,
   "sameDentition": true,
@@ -11,8 +11,8 @@
       "mesh": true,
       "vertices": 14517,
       "teethVertices": 16068,
-      "bakedGeometrySHA256": "cd533bec7602af5faa7b91140d51e9cbaf0cd251fb21edafa698799d4ea136b6",
-      "dentitionSHA256": "5751d44d5e18ec00d84894e20d6a78850691186575edef1d960bc097bb513299",
+      "bakedGeometrySHA256": "f5f2edb8ea119915d326cd7bfbd186808e4ec092231475ce436de3bc48e3fa14",
+      "dentitionSHA256": "b2a973bf77a5d56768f0e7b78eca07ca71226a6301545ec3d38828cfe236c0f8",
       "view": "three",
       "localAssets": [
         "http://127.0.0.1:4173/three/character/assets/adult-female-source.glb",
@@ -25,8 +25,8 @@
       "mesh": true,
       "vertices": 14517,
       "teethVertices": 16068,
-      "bakedGeometrySHA256": "cd533bec7602af5faa7b91140d51e9cbaf0cd251fb21edafa698799d4ea136b6",
-      "dentitionSHA256": "5751d44d5e18ec00d84894e20d6a78850691186575edef1d960bc097bb513299",
+      "bakedGeometrySHA256": "f5f2edb8ea119915d326cd7bfbd186808e4ec092231475ce436de3bc48e3fa14",
+      "dentitionSHA256": "b2a973bf77a5d56768f0e7b78eca07ca71226a6301545ec3d38828cfe236c0f8",
       "view": "expressions",
       "localAssets": [
         "http://127.0.0.1:4173/three/character/assets/adult-female-source.glb",
@@ -36,20 +36,22 @@
   ],
   "sources": {
     "three/character/character.mjs": "93ac686bba03ec206b7ec68f75c41fdc0649b9593986b9d97a6e0dd241a56407",
-    "three/character/facial-contour.mjs": "ef75bbca2bd43b5d451764f99b7a6ff59f7770a0e022fbcba947e0d3b5029913",
-    "three/character/dentition.mjs": "f7b6ab631c5fa3359b35f208b61ff2850300c6df3b0871776e2beb4de32d3f8e",
-    "three/character/materials.mjs": "e1f9ac1ab8583061629591e69204c03c477990c521169a59bdcd477d97f3f35e",
+    "three/character/facial-contour.mjs": "298b1ba7158d952fe3ee9c8471da3a2a00358a40a870c391593ca47010ec4ea7",
+    "three/character/dentition.mjs": "6cb022c4744eb2adb8d031f8f526c7fc31bb5d3ab40f76b40a50b8e9b99c245d",
+    "three/character/materials.mjs": "d8920c99df164eac097cb364c41867c5f00ade9b8ca17f0f8968498d80705158",
+    "expressions/studio.mjs": "f2ca15fc5f5c49d8daa7bc6c28c8c77a11027d9148d21e541bcc0be1959630c2",
     "three/character/assets/adult-female-source.glb": "b0fae3610eef39a6cdc9c56d9c8bccc0cd9bcc1cf346ae1d9bfa121e5a86e1fe",
     "three/character/assets/hair-long.glb": "d340fff458f920dd16dcc80493a1a33207b00c6bbfb08c4c53aba54704a78818"
   },
   "errors": [],
   "evidence": [
-    "../three/face-refinement/three-neutral-front.png",
-    "../three/face-refinement/three-neutral-side.png",
-    "../three/face-refinement/three-neutral-threequarter.png",
-    "../three/face-refinement/expressions-neutral-front.png",
-    "../three/face-refinement/expressions-neutral-side.png",
-    "../three/face-refinement/expressions-neutral-threequarter.png"
+    "../three/complexion-refinement/three-neutral-front.png",
+    "../three/complexion-refinement/three-neutral-side.png",
+    "../three/complexion-refinement/three-neutral-threequarter.png",
+    "../three/complexion-refinement/expressions-neutral-front.png",
+    "../three/complexion-refinement/expressions-neutral-side.png",
+    "../three/complexion-refinement/expressions-neutral-threequarter.png"
   ],
+  "captureMethod": "Actual native WebGL, 1440×1080 viewport at 1.5 devicePixelRatio, 1.7× camera zoom; FORM uses its native head focus and MUSE its native portrait framing. Interface annotations hidden for anatomical inspection only.",
   "pass": true
 }

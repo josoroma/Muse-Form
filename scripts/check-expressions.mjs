@@ -9,7 +9,7 @@ const {server,url}=await startServer();const browser=await openBrowser();
 const errors=[],requests=[],report={renderer:'Three.js 0.186.1 / Chrome WebGL',duration:5,geometryMethod:'Evaluated GLB skin and morph surface, bone matrices, morph weights and region source vertices; metres.',scenes:[],interactions:{},errors};
 const page=await browser.newPage({viewport:{width:1440,height:1080},deviceScaleFactor:1,reducedMotion:'reduce'});
 const sourceFiles=[
-  'expressions/index.html','expressions/app.mjs','expressions/character-face.mjs','expressions/studio.mjs','expressions/style.css',
+  'expressions/index.html','expressions/app.mjs','expressions/character-face.mjs','expressions/facial-normals.mjs','expressions/studio.mjs','expressions/style.css',
   'three/style.css','three/character/character.mjs','three/character/materials.mjs','three/character/regions.mjs','three/character/subdivide-hair.mjs',
   'three/character/facial-contour.mjs','three/character/dentition.mjs',
   'three/character/assets/adult-female-source.glb','three/character/assets/hair-long.glb','three/character/assets/body-joints.json',
@@ -29,6 +29,12 @@ async function pose(time){return page.evaluate(t=>{
   if(!posed)throw Error('MUSE must expose its evaluated skinned collision surface for geometric QA');
   const array=posed.geometry.attributes.position.array;
   for(const n of array){finite&&=Number.isFinite(n);exact.push(n);}
+  // Facial normals are evaluated from the combined morph pose in a private
+  // attribute. Check their determinism as well as the unchanged skin topology.
+  const normals=model.character.body.geometry.attributes.normal.array;
+  let normalHash=2166136261,finiteNormals=true;
+  for(const n of normals){finiteNormals&&=Number.isFinite(n);exact.push(n);normalHash=Math.imul(normalHash^Math.round(n*1e7),16777619);}
+  finite&&=finiteNormals;
   for(const part of model.parts){
     const ids=part.object.userData.sourceVertexIndices||[];let h=2166136261;
     for(const id of ids)for(let k=0;k<3;k++){const n=array[id*3+k];h=Math.imul(h^Math.round(n*1e7),16777619);}
@@ -41,7 +47,7 @@ async function pose(time){return page.evaluate(t=>{
   let hash=2166136261;for(const n of exact){hash=Math.imul(hash^Math.round(n*1e7),16777619);}
   if(t===0)window.__neutralGeometry=exact;
   const exactNeutralMatch=t===5&&exact.length===window.__neutralGeometry?.length&&exact.every((n,i)=>n===window.__neutralGeometry[i]);
-  return{hash:hash>>>0,finite,meshCount,vertices,posedVertices:array.length/3,featureHashes,exactNeutralMatch,poseState:model.poseState};
+  return{hash:hash>>>0,normalHash:normalHash>>>0,finiteNormals,finite,meshCount,vertices,posedVertices:array.length/3,featureHashes,exactNeutralMatch,poseState:model.poseState};
 },time);}
 try {
   await page.goto(`${url}/expressions/`);await page.waitForFunction(()=>window.atlas);
@@ -71,6 +77,20 @@ try {
   }
   report.interactions.sharedNeutralPortrait=new Set(report.scenes.map(s=>s.rest.hash)).size===1;
   report.interactions.distinctActingPoses=new Set(report.scenes.map(s=>s.peak.hash)).size===8;
+  const normalOwnership=await page.evaluate(async()=>{
+    const {createFace}=await import('/expressions/character-face.mjs');
+    const {createCharacter}=await import('/three/character/character.mjs');
+    const a=createFace('joy'),b=createFace('laughter'),shared=createCharacter();
+    const normal=a.character.body.geometry.attributes.normal,other=b.character.body.geometry.attributes.normal;
+    const source=shared.body.geometry.attributes.normal,neutral=normal.array.slice();
+    const neutralMatchesSource=neutral.every((n,i)=>n===source.array[i]);
+    a.update(2.5);const before=normal.array.slice();b.update(2.5);
+    const independent=normal!==other&&normal!==source&&normal!==a.character.suit.geometry.attributes.normal&&before.every((n,i)=>n===normal.array[i]);
+    a.update(5);const neutralRestored=neutral.every((n,i)=>n===normal.array[i]);
+    return{neutralMatchesSource,independent,neutralRestored};
+  });
+  report.interactions.privateFacialNormals=normalOwnership.independent;
+  report.interactions.neutralFacialNormalsPreserved=normalOwnership.neutralMatchesSource&&normalOwnership.neutralRestored;
   await page.locator('[data-study="wink"]').click();await pose(2.5);
   report.interactions.winkClosesOneEye=await page.evaluate(()=>{
     const p=atlas.model.poseState;

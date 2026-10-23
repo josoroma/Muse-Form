@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-23",
+  "scope": "Integrated enlarged browser review of the final complexion, studio light, fixed contour, dental assembly, tongue placement and combined-pose facial normals. This report covers neutral, surprise and laughter from front, profile and three-quarter views; all eight expressions and FORM are checked in their separate edition records.",
+  "sourceHashes": {
+    "expressions/character-face.mjs": "5f6261b069ec79e01302c60771d036998ee37e13f72a4e9f8b1c0f1263dd5f11",
+    "expressions/facial-normals.mjs": "fd75aef696e0111448f8ba3890bbbc38a97d75239f6120f3f239ab27cac8f0ac",
+    "expressions/studio.mjs": "f2ca15fc5f5c49d8daa7bc6c28c8c77a11027d9148d21e541bcc0be1959630c2",
+    "three/character/character.mjs": "93ac686bba03ec206b7ec68f75c41fdc0649b9593986b9d97a6e0dd241a56407",
+    "three/character/materials.mjs": "d8920c99df164eac097cb364c41867c5f00ade9b8ca17f0f8968498d80705158",
+    "three/character/facial-contour.mjs": "298b1ba7158d952fe3ee9c8471da3a2a00358a40a870c391593ca47010ec4ea7",
+    "three/character/dentition.mjs": "6cb022c4744eb2adb8d031f8f526c7fc31bb5d3ab40f76b40a50b8e9b99c245d"
+  },
+  "capture": {
+    "errors": [],
+    "scope": "Actual app at 1.7x camera zoom, 1.5 devicePixelRatio; UI text hidden for close anatomical inspection only"
+  },
+  "images": {
+    "final-joy-front.png": "7709917ff8f88a72f3c5ceee9394ae269a7a597f6acc2a836d1de090be0f3e84",
+    "final-joy-quarter.png": "b424df9477c9fd41dd2816f5584e30759d6e0fa6d78ab7260fd488fc405c3b48",
+    "final-joy-side.png": "e4a97a8fb32da5876886c649539d7c155b0d2301e9df608026ea7eb637b9eb50",
+    "final-laughter-front.png": "e78be3d8eff2db89dd59edfa698a827e84043a58fcf3afad29e0891f6d25fa11",
+    "final-laughter-quarter.png": "bf12b4becda53d71fe8ea0690e00ca5d1b1df3a7001af5d55e4c7b7113129cd0",
+    "final-laughter-side.png": "75ec469934f4b2783f1db1a3fe7c3cc27f4480bcef7525e52237fe3609d7181a",
+    "final-surprise-front.png": "b8344be2aa07cf9d95d4bfd71e5e6b0cdf297ae59a0b2fd8071a68389117a1eb",
+    "final-surprise-quarter.png": "dbbb6e0a7ba4c7b799fcc5776f2d9e7e65dfe99f4d1c57cf9ff0c1a96314f101",
+    "final-surprise-side.png": "7bf85d583f00206993f354db459bd2861aa4de44428d331800b310d2b7292d12"
+  },
+  "baseline": "The before-* captures route only the preserved prior runtime modules from archive/skinned-v5-before-complexion. Candidate and integrated-* captures are intermediate iterations, not the final review.",
+  "reviewedViews": [
+    "joy neutral: front, profile, three-quarter",
+    "surprise at 2.5 seconds: front, profile, three-quarter",
+    "laughter at 2.5 seconds: front, profile, three-quarter"
+  ],
+  "observations": [
+    "Face and neck now have a continuous warm complexion without the broad gray/brown patches that read as stubble in the previous version. Fine residual detail remains intentionally subdued.",
+    "Softer brow transition, narrower nasal base and restrained cheek fullness complement the existing tapered jaw and rounded chin. The profile retains chin projection and lip volume.",
+    "Upper incisors are visible at the upper lip instead of leaving the opening dominated by lower crowns and a bright tongue. The smile has individually separated rounded crowns and a darker mouth interior.",
+    "The recessed tongue no longer forms a flat red plate across surprise. Both dental arches retain their original attachment and expression targets.",
+    "The combined-pose normal correction removes the strong false triangular highlight at the smiling mouth corner without reducing the laughter pose.",
+    "Studio fill maintains soft cheek and neck transitions, while nostril, lid and lip structure remain readable."
+  ],
+  "limits": [
+    "This remains a stylized realtime licensed asset, not a photographic digital double; the unchanged textured hair and eyelashes remain apparent at enlarged inspection scale.",
+    "A small bright detail at the far clavicle silhouette is present in both archived and current three-quarter captures and is not claimed repaired.",
+    "Posterior teeth remain more exposed in oblique surprise views than from the front. Mouth darkening is an artistic shading approximation rather than traced oral light transport.",
+    "Still captures establish only the views actually listed. Deterministic timing, active playback, mobile and selection are recorded separately."
+  ],
+  "relatedReviews": [
+    "../complexion/review.json",
+    "../oral-v2/review.json",
+    "../cross-view.json",
+    "../../expressions/checks.json",
+    "../../expressions/playback.json",
+    "../../expressions/art-review.json",
+    "../../three/art-review.json"
+  ]
+}

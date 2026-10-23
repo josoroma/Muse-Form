@@ -20,10 +20,13 @@ The facial sources describe movement relationships, not a biomechanical solver. 
 
 Inspect the shared neutral portrait first, then every performance at its strongest pose and intermediate times, with labels and highlights both enabled and hidden. Include front, three-quarter and profile views, mobile size and the five-second return. Review actual browser playback after pose inspection; record the inspection performed rather than declaring quality from geometry counts.
 
+Also inspect actual enlarged browser portraits with the face at least 450 pixels high. Gallery thumbnails are insufficient for complexion, individual tooth proportions, gum/tongue placement and triangular shading artifacts. Separate baked albedo discoloration from lighting and normal-map relief before correcting skin. Preserve a fine texture and real facial shading while removing gray, beard-like patches; do not simply increase exposure. Verify the upper dental arch against the lip line and keep the tongue recessed on the oral floor so an open mouth has depth.
+
 - Eyelids remain attached to the face and follow the eye surface. Their aperture closes over the iris for a blink/wink, with no exposed pupil, bright strip, inverted lid or detached eye corner at closure.
 - Lips retain thickness, joined corners and their connection to the cheeks. Mouth opening reveals a cavity; it does not expose a solid facial sheet, floating teeth, crossed lips or a disconnected chin.
 - Review upper and lower tooth exposure together with the lips. Preserve separate, softly edged crowns and the gum attachment; avoid oversized lower incisors, glaring white strips and unnaturally even blocks. A narrower jaw needs a lateral contour adjustment, not simply a receding chin in profile.
 - Cheek and brow deformation blends into the surrounding face without tears, folds caused by bad topology, normal seams or fixed patches that contradict the action.
+- Compare a suspicious cheek crease with normals recomputed from the same posed positions. Additive morph normals can create a false triangular fold even when the surface geometry is sound; repair its shading without weakening the intended expression.
 - Neck, ears and hair remain attached through head movement. The same neutral mesh, proportions and material treatment identify the same woman in every tab.
 - Selection anchors follow the posed feature. Highlights do not hide boundary defects. Camera motion yields to manual inspection and frames the complete portrait through all extremes.
 

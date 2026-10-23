@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { loadCharacter, createCharacter } from '../three/character/character.mjs';
 import { createSurfaceRegions, createPosedSurfacePicker } from '../three/character/regions.mjs';
+import { createFacialNormalUpdater } from './facial-normals.mjs';
 
 export { loadCharacter };
 export const EXPRESSION_IDS = ['joy', 'sadness', 'anger', 'fear', 'surprise', 'disgust', 'wink', 'laughter'];
@@ -90,6 +91,7 @@ export function createFace(expressionId = 'joy') {
   for (const part of regions.parts) if (['chest', 'back', 'pelvis'].includes(part.id)) {
     part.object.material.color.setHex(0x59d8bd); part.object.material.opacity = .52;
   }
+  const facialNormals = createFacialNormalUpdater(body, regions.overlays);
   const picker = createPosedSurfacePicker(body);
   const triangleRegions = new Map();
   for (const overlay of regions.overlays) for (const f of overlay.userData.sourceFaceIndices) {
@@ -141,7 +143,7 @@ export function createFace(expressionId = 'joy') {
     rotateWorld('head', X, (spec.pitch || 0) * currentAmount);
     rotateWorld('head', Y, (spec.yaw || 0) * currentAmount);
     rotateWorld('head', Z, (spec.roll || 0) * currentAmount);
-    character.updateWorld(); regions.update(); group.updateMatrixWorld(true); picker.update();
+    facialNormals.update(); character.updateWorld(); regions.update(); group.updateMatrixWorld(true); picker.update();
   }
   update(0);
   const neutralGaps = lidPairs.map(aperture);

@@ -72,10 +72,40 @@ function preserveJawMotion(geometry, ids, oldPositions) {
 export function refineDentition(scene) {
   const reports = [];
   scene.traverse(mesh => {
+    if (mesh.isMesh && mesh.name === 'Tongue' && !mesh.userData.oralFloorRefined) {
+      const geometry = mesh.geometry.clone(), p = geometry.attributes.position;
+      // The imported proxy fills the parted lip aperture like an upright plate.
+      // Fit its dorsum into the oral floor: retain the full attached tongue and
+      // jaw targets, but reduce its height and recess it behind the dental arch.
+      for (let i = 0; i < p.count; i++) p.setXYZ(i, p.getX(i), 1.489 + (p.getY(i) - 1.489) * .75 - .004, p.getZ(i) - .012);
+      for (const target of geometry.morphAttributes.position || []) {
+        for (let i = 0; i < target.count; i++) target.setY(i, target.getY(i) * .75);
+      }
+      const refined = subdivideHairGeometry(geometry, { iterations: 1, strength: .45, preserveBoundaries: true });
+      geometry.dispose();
+      const base = refined.attributes.position, normal = smoothNormals(refined, base);
+      refined.setAttribute('normal', normal);
+      refined.morphAttributes.normal = (refined.morphAttributes.position || []).map(target => {
+        const posed = base.clone();
+        for (let i = 0; i < base.count; i++) posed.setXYZ(i, base.getX(i) + target.getX(i), base.getY(i) + target.getY(i), base.getZ(i) + target.getZ(i));
+        const n = smoothNormals(refined, posed), values = new Float32Array(base.count * 3);
+        for (let i = 0; i < base.count; i++) values.set([n.getX(i) - normal.getX(i), n.getY(i) - normal.getY(i), n.getZ(i) - normal.getZ(i)], i * 3);
+        return new THREE.BufferAttribute(values, 3);
+      });
+      delete refined.userData.hairSubdivision;
+      refined.computeBoundingBox(); refined.computeBoundingSphere();
+      mesh.geometry = refined; mesh.userData.oralFloorRefined = true;
+      reports.push({ mesh: 'Tongue', heightScale: .75, floorOffset: -.004, recession: -.012, vertices: base.count });
+    }
     if (!mesh.isMesh || mesh.name !== 'Teeth' || mesh.userData.dentitionRefined) return;
     const geometry = mesh.geometry.clone(), p = geometry.attributes.position;
     const source = p.clone(), jaw = geometry.morphAttributes.position?.[mesh.morphTargetDictionary?.exp_jawOpen];
-    const components = connectedComponents(geometry), report = { upperCrowns: 0, lowerCrowns: 0, sourceVertices: p.count, lowerHeightScale: .80 };
+    const components = connectedComponents(geometry), report = { upperCrowns: 0, lowerCrowns: 0, sourceVertices: p.count, lowerHeightScale: .80, assemblyOffsetY: -.0035 };
+    // Fit BOTH arches and their gingiva to the adult lip line. Moving only the
+    // visible lower crowns concealed the actual mismatch: the upper incisal
+    // edge was too high and the lower edge too exposed. A common fit preserves
+    // the original bite, individual crowns and upper/lower arch relationship.
+    for (let i = 0; i < p.count; i++) p.setY(i, p.getY(i) - .0035);
     for (const ids of components) {
       // Individual enamel crowns are separate small connected components;
       // the much larger gingiva/oral lining is excluded from crown resizing.

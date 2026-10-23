@@ -1,0 +1,48 @@
+{
+  "initialInvocation": {
+    "result": "failed",
+    "observedFailedInteractions": [
+      "frameSelection",
+      "fullBodyButton",
+      "bodyHighlightsVisible"
+    ],
+    "observedErrors": [
+      "SVG label path/circle coordinates contained NaN"
+    ],
+    "facialGeometryAndNormalTests": "passed"
+  },
+  "focusedFollowup": {
+    "result": "finite bounds and camera values, no browser errors",
+    "scope": [
+      "individual scene mesh/overlay bounds",
+      "all eight scenes followed by additional independent face instances",
+      "wink focus after switching studies"
+    ],
+    "bodyBounds": {
+      "min": [
+        -0.5327442817687986,
+        -0.019091826823540034,
+        -0.11561735785564249
+      ],
+      "max": [
+        0.5327442817687988,
+        1.7012206249237056,
+        0.3290551834106446
+      ]
+    },
+    "cameraAfterEyeFocus": [
+      0.04457837100755621,
+      1.5702686127883168,
+      0.4012565829454639
+    ]
+  },
+  "finalInvocation": {
+    "record": "../../expressions/checks.json",
+    "result": "passed",
+    "scenes": 8,
+    "interactions": 28,
+    "errors": []
+  },
+  "runtimeEditsBetweenInvocations": false,
+  "interpretation": "Transient failure not reproduced; root cause unestablished. No repaired-bounds claim."
+}

@@ -2,7 +2,7 @@ import * as THREE from 'three';
 
 // These are authored material settings for the CC0 glTF assets. No generator or
 // runtime code from CharacterCreator is used. Texture maps remain unmodified.
-const SKIN = '#c99880';
+const SKIN = '#cea38f';
 const HAIR = '#91816b';
 const IRIS = '#406d86';
 
@@ -21,7 +21,7 @@ function tint(material, color) {
 function skinMaterial(source) {
   const material = physicalFrom(source);
   tint(material, SKIN);
-  material.roughness = .58;
+  material.roughness = .56;
   material.metalness = 0;
   material.normalScale.set(.15, .15);
   material.ior = 1.4;
@@ -52,8 +52,34 @@ function skinMaterial(source) {
       vec3 evenSkin = mix( vec3( skinLuminance ), sampledDiffuseColor.rgb, 0.40 );
       evenSkin = mix( evenSkin, vec3( 0.62 ), 0.30 );
       sampledDiffuseColor.rgb = mix( sampledDiffuseColor.rgb, evenSkin, limbBalance * 0.8 );
+      // The photographic atlas contains gray/brown baked patches on cheeks and
+      // chin. Separate fine texture from that broad color variation; live studio
+      // lighting, not those patches, now describes the facial planes.
+      float complexion = smoothstep( 1.27, 1.43, vSkinRestPosition.y );
+      vec3 broadSkin = textureLod( map, vMapUv, 3.0 ).rgb;
+      vec3 fineSkin = clamp( sampledDiffuseColor.rgb - broadSkin, vec3( -0.075 ), vec3( 0.075 ) );
+      float broadLuminance = dot( broadSkin, vec3( 0.299, 0.587, 0.114 ) );
+      vec3 clearSkin = vec3( 0.69 ) + fineSkin * 0.24 + vec3( ( broadLuminance - 0.69 ) * 0.08 );
+      float cheekFlush = exp( -pow( ( abs( vSkinRestPosition.x ) - 0.049 ) / 0.030, 2.0 )
+        -pow( ( vSkinRestPosition.y - 1.543 ) / 0.033, 2.0 ) )
+        * smoothstep( 0.045, 0.105, vSkinRestPosition.z );
+      clearSkin *= mix( vec3( 1.0 ), vec3( 1.025, 0.985, 0.980 ), cheekFlush );
+      // Retain lip pigment and fine lid margins, not the dark photographic halo
+      // outside them. Rest coordinates make these masks follow every expression.
+      vec2 lipPoint = vec2( vSkinRestPosition.x / 0.034, ( vSkinRestPosition.y - 1.503 ) / 0.014 );
+      float lipArea = 1.0 - smoothstep( 0.82, 1.35, length( lipPoint ) );
+      float lipPigment = smoothstep( 0.045, 0.15, sampledDiffuseColor.r - sampledDiffuseColor.g );
+      vec2 eyePoint = vec2( ( abs( vSkinRestPosition.x ) - 0.0294 ) / 0.023, ( vSkinRestPosition.y - 1.565 ) / 0.009 );
+      float lidMargin = 1.0 - smoothstep( 0.82, 1.28, length( eyePoint ) );
+      float feature = max( lipArea * lipPigment, lidMargin * 0.68 );
+      sampledDiffuseColor.rgb = mix( sampledDiffuseColor.rgb, clearSkin, complexion * ( 1.0 - feature ) );
       diffuseColor *= sampledDiffuseColor;
     `);
+    const normalMap = THREE.ShaderChunk.normal_fragment_maps.replace(
+      'mapN.xy *= normalScale;',
+      'mapN.xy *= normalScale * mix( 1.0, 0.64, smoothstep( 1.30, 1.44, vSkinRestPosition.y ) );'
+    );
+    shader.fragmentShader = shader.fragmentShader.replace('#include <normal_fragment_maps>', normalMap);
     // The source skin atlas gives the inner mouth its own UV island in the lower
     // right. Gate by REST head height as finger islands share this UV neighborhood;
     // raising the posed hand must never make it acquire the mouth's shading.
@@ -68,7 +94,7 @@ function skinMaterial(source) {
       #endif
     `);
   };
-  material.customProgramCacheKey = () => 'muse-licensed-skin-wrap-v3';
+  material.customProgramCacheKey = () => 'muse-clean-complexion-v4';
   return material;
 }
 
@@ -146,39 +172,61 @@ export function tuneCharacterMaterials(scene) {
         material.transparent = true;
         material.depthWrite = false;
       } else if (name === 'Eyebrow' || name === 'Eyelash') {
-        tint(material, name === 'Eyebrow' ? '#66503b' : '#3a2e29');
+        tint(material, name === 'Eyebrow' ? '#75604b' : '#3a2e29');
         material.roughness = .84;
         material.specularIntensity = .08;
         material.alphaTest = .045;
-        material.opacity = name === 'Eyebrow' ? .88 : .84;
+        material.opacity = name === 'Eyebrow' ? .82 : .84;
         material.alphaToCoverage = false;
         material.transparent = true;
         material.depthWrite = false;
         material.side = THREE.DoubleSide;
       } else if (name === 'Teeth') {
-        material.color.set('#d7cdbc');
-        material.roughness = .30;
-        material.specularIntensity = .36;
+        material.color.set('#eee8dd');
+        material.roughness = .33;
+        material.specularIntensity = .30;
         material.envMapIntensity = .5;
         // Teeth and gingiva share one source texture. Keep ivory enamel while
         // reducing the bright red gum texels inside the recessed oral cavity.
         material.onBeforeCompile = shader => {
+          shader.vertexShader = shader.vertexShader.replace('#include <common>', '#include <common>\nvarying float vDentalDepth;');
+          shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', '#include <begin_vertex>\nvDentalDepth = position.z;');
+          shader.fragmentShader = shader.fragmentShader.replace('#include <common>', '#include <common>\nvarying float vDentalDepth;');
           const dentalMap = THREE.ShaderChunk.map_fragment.replace('diffuseColor *= sampledDiffuseColor;', `
             float gingiva = smoothstep( 0.025, 0.10, sampledDiffuseColor.r - max( sampledDiffuseColor.g, sampledDiffuseColor.b ) );
             // The source atlas includes strong painted gray patches on enamel.
             // Compress only the neutral enamel texels; retain recessed pink gums.
-            vec3 enamel = mix( vec3( 0.76, 0.76, 0.74 ), sampledDiffuseColor.rgb, 0.18 );
+            vec3 enamel = mix( vec3( 0.82, 0.82, 0.80 ), sampledDiffuseColor.rgb, 0.14 );
             sampledDiffuseColor.rgb = mix( enamel, sampledDiffuseColor.rgb * vec3( 0.43, 0.37, 0.38 ), gingiva );
+            // The posterior teeth sit deeper in the mouth. Attenuate that
+            // recessed light rather than lighting every molar like an incisor.
+            sampledDiffuseColor.rgb *= mix( 0.40, 1.0, smoothstep( 0.085, 0.132, vDentalDepth ) );
             diffuseColor *= sampledDiffuseColor;
           `);
           shader.fragmentShader = shader.fragmentShader.replace('#include <map_fragment>', dentalMap);
         };
-        material.customProgramCacheKey = () => 'muse-licensed-dental-v2';
+        material.customProgramCacheKey = () => 'muse-licensed-dental-v5';
       } else if (name === 'Tongue') {
-        material.color.set('#927575');
-        material.roughness = .5;
-        material.specularIntensity = .25;
-        material.envMapIntensity = .5;
+        material.color.set('#6b4a4c');
+        material.roughness = .72;
+        material.specularIntensity = .18;
+        material.envMapIntensity = .25;
+        // The tongue is a recessed oral floor, not a brightly lit red backdrop.
+        // Its existing texture/geometry remain; reduce baked red saturation and
+        // approximate the light falloff toward its physically recessed root.
+        material.onBeforeCompile = shader => {
+          shader.vertexShader = shader.vertexShader.replace('#include <common>', '#include <common>\nvarying float vTongueDepth;');
+          shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', '#include <begin_vertex>\nvTongueDepth = position.z;');
+          shader.fragmentShader = shader.fragmentShader.replace('#include <common>', '#include <common>\nvarying float vTongueDepth;');
+          const tongueMap = THREE.ShaderChunk.map_fragment.replace('diffuseColor *= sampledDiffuseColor;', `
+            float oralLuminance = dot( sampledDiffuseColor.rgb, vec3( 0.299, 0.587, 0.114 ) );
+            sampledDiffuseColor.rgb = mix( vec3( oralLuminance ), sampledDiffuseColor.rgb, 0.5 );
+            sampledDiffuseColor.rgb *= mix( 0.25, 0.68, smoothstep( 0.052, 0.115, vTongueDepth ) );
+            diffuseColor *= sampledDiffuseColor;
+          `);
+          shader.fragmentShader = shader.fragmentShader.replace('#include <map_fragment>', tongueMap);
+        };
+        material.customProgramCacheKey = () => 'muse-recessed-tongue-v1';
       }
       material.userData.surfaceRole = name.toLowerCase();
     }
