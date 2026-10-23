@@ -11,6 +11,7 @@ const page=await browser.newPage({viewport:{width:1440,height:1080},deviceScaleF
 const sourceFiles=[
   'expressions/index.html','expressions/app.mjs','expressions/character-face.mjs','expressions/studio.mjs','expressions/style.css',
   'three/style.css','three/character/character.mjs','three/character/materials.mjs','three/character/regions.mjs','three/character/subdivide-hair.mjs',
+  'three/character/facial-contour.mjs','three/character/dentition.mjs',
   'three/character/assets/adult-female-source.glb','three/character/assets/hair-long.glb','three/character/assets/body-joints.json',
   'three/runtime/camera-rig.mjs','three/runtime/motion.mjs',
   'three/vendor/three.module.js','three/vendor/three.core.js','three/vendor/addons/controls/OrbitControls.js',

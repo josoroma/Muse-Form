@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 import { ROOT } from './serve.mjs';
 import { getAnatomyMetadata } from '../three/character/anatomy.mjs';
 
-const common = 'Use the shared adult female character from the licensed CC0 MakeHuman-derived GLB, with its continuous human topology, 53-bone rig, skin weights and embedded textures. Bake one fixed original identity with blonde hair, blue eyes, soft facial contours and a neutral anatomical bodysuit; use exactly the same identity in FORM and MUSE. Keep shoulders, clavicles, waist, hips, limbs, hands and feet organically connected. Use the existing charcoal stage, serif interface, soft studio illumination and mint selection accent. Selected regions reuse the character surface triangles, with translucent feathered overlays and anchors that follow the evaluated skinned surface. Keep the five-second timeline, responsive controls and guided camera; manual orbit interrupts guidance. Restore the exact neutral pose at five seconds. ';
+const common = 'Use the shared adult female character from the licensed CC0 MakeHuman-derived GLB, with its continuous human topology, 53-bone rig, skin weights and embedded textures. Bake one fixed original identity with blonde hair, blue eyes, a softly tapered lower jaw, rounded chin, refined dentition and a neutral anatomical bodysuit; use exactly the same identity in FORM and MUSE. Keep shoulders, clavicles, waist, hips, limbs, hands and feet organically connected. Use the existing charcoal stage, serif interface, soft studio illumination and mint selection accent. Selected regions reuse the character surface triangles, with translucent feathered overlays and anchors that follow the evaluated skinned surface. Keep the five-second timeline, responsive controls and guided camera; manual orbit interrupts guidance. Restore the exact neutral pose at five seconds. ';
 const briefs = {
   body: { references: ['105214','105215','105218','105219'], prompt: 'Frame the complete character in a relaxed standing pose. Animate a controlled reach and return through the clavicle, shoulder, elbow, wrist and fingers, with a small trunk counter-turn and head response. Keep both feet supported. Preserve selectable Pectoralis region, Back and Pelvis surfaces, plus the abdominal wall, shoulder and head. Inspect front, profile, three-quarter and posterior silhouettes; do not add circular chest markings.' },
   arm: { references: ['105215'], prompt: 'Frame the same character’s arm from shoulder through fingertips. Bend the forearm at its anatomical elbow pivot while the shoulder and upper arm remain coherent. Let the attached hand travel with the forearm and soften the fingers into the gesture. Provide selectable deltoid, biceps, triceps, forearm and hand/wrist regions. Keep the source skin continuous at shoulder, elbow and wrist; the selected surface indicates a region rather than isolated internal muscle anatomy.' },
@@ -16,7 +16,7 @@ const studies = Object.entries(briefs).map(([id, brief]) => {
   const model = getAnatomyMetadata(id);
   return { id, title: model.title, action: model.subtitle, duration: 5, view: `index.html#${id}`, source: 'character/anatomy.mjs', model: 'character/assets/adult-female-source.glb', svgReferenceIDs: brief.references, prompt: common + brief.prompt, method, parts: model.parts, beats: model.beats };
 });
-const manifest = { title: 'FORM — Anatomy in motion', renderer: 'Three.js 0.186.1', duration: 5, edition: 3, identity: 'One original adult blonde woman with blue eyes, shared with MUSE.', scope: 'Five views of one licensed skinned character: full body, arm, hand, leg and foot. The accepted SVG corpus remains separate.', assetLicense: 'CC0-1.0', assetProvenance: 'character/assets/README.md', studies };
+const manifest = { title: 'FORM — Anatomy in motion', renderer: 'Three.js 0.186.1', duration: 5, edition: 4, identity: 'One original adult blonde woman with blue eyes, shared with MUSE.', scope: 'Five views of one licensed skinned character: full body, arm, hand, leg and foot. The accepted SVG corpus remains separate.', assetLicense: 'CC0-1.0', assetProvenance: 'character/assets/README.md', studies };
 await writeFile(resolve(ROOT, 'three/manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
 await writeFile(resolve(ROOT, 'three/README.md'), `# FORM — Anatomy in motion
 
@@ -55,6 +55,7 @@ This is an illustrative skinned character, not a body scan or a medically valida
 | --- | --- |
 | [app.mjs](app.mjs) | Rendering, camera ownership, selection, labels and transport |
 | [character/character.mjs](character/character.mjs) | Shared identity, GLB loading, skeleton fitting, cloning and bodysuit |
+| [character/facial-contour.mjs](character/facial-contour.mjs), [character/dentition.mjs](character/dentition.mjs) | Shared lower-face sculpt and refined licensed dental geometry |
 | [character/anatomy.mjs](character/anatomy.mjs) | Five skeletal movement studies and metadata |
 | [character/materials.mjs](character/materials.mjs) | Skin, blue eyes, blonde hair, oral surfaces and clothing |
 | [character/regions.mjs](character/regions.mjs) | Conforming overlays, posed anchors and cached picking surface |

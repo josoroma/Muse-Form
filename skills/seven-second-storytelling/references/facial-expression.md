@@ -22,6 +22,7 @@ Inspect the shared neutral portrait first, then every performance at its stronge
 
 - Eyelids remain attached to the face and follow the eye surface. Their aperture closes over the iris for a blink/wink, with no exposed pupil, bright strip, inverted lid or detached eye corner at closure.
 - Lips retain thickness, joined corners and their connection to the cheeks. Mouth opening reveals a cavity; it does not expose a solid facial sheet, floating teeth, crossed lips or a disconnected chin.
+- Review upper and lower tooth exposure together with the lips. Preserve separate, softly edged crowns and the gum attachment; avoid oversized lower incisors, glaring white strips and unnaturally even blocks. A narrower jaw needs a lateral contour adjustment, not simply a receding chin in profile.
 - Cheek and brow deformation blends into the surrounding face without tears, folds caused by bad topology, normal seams or fixed patches that contradict the action.
 - Neck, ears and hair remain attached through head movement. The same neutral mesh, proportions and material treatment identify the same woman in every tab.
 - Selection anchors follow the posed feature. Highlights do not hide boundary defects. Camera motion yields to manual inspection and frames the complete portrait through all extremes.

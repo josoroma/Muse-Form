@@ -1,32 +1,55 @@
 {
-  "scope": "Actual FORM full-body neutral and MUSE joy neutral compared in Chrome",
+  "scope": "Actual FORM full-body neutral and MUSE joy neutral compared in Chrome after local jaw-contour and dental refinement",
+  "reviewedOn": "2026-10-23",
   "sameBakedIdentity": true,
+  "sameDentition": true,
   "maxPosedDifferenceMetres": 0,
   "views": [
     {
       "bones": 53,
       "identity": "shared-adult-female",
       "mesh": true,
+      "vertices": 14517,
+      "teethVertices": 16068,
+      "bakedGeometrySHA256": "cd533bec7602af5faa7b91140d51e9cbaf0cd251fb21edafa698799d4ea136b6",
+      "dentitionSHA256": "5751d44d5e18ec00d84894e20d6a78850691186575edef1d960bc097bb513299",
+      "view": "three",
       "localAssets": [
         "http://127.0.0.1:4173/three/character/assets/adult-female-source.glb",
         "http://127.0.0.1:4173/three/character/assets/hair-long.glb"
-      ],
-      "view": "three",
-      "vertices": 14517,
-      "bakedGeometrySHA256": "0f941c40b0b6149bc34848ef7f08057720d8603595a8379468492873d7213d86"
+      ]
     },
     {
       "bones": 53,
       "identity": "shared-adult-female",
       "mesh": true,
+      "vertices": 14517,
+      "teethVertices": 16068,
+      "bakedGeometrySHA256": "cd533bec7602af5faa7b91140d51e9cbaf0cd251fb21edafa698799d4ea136b6",
+      "dentitionSHA256": "5751d44d5e18ec00d84894e20d6a78850691186575edef1d960bc097bb513299",
+      "view": "expressions",
       "localAssets": [
         "http://127.0.0.1:4173/three/character/assets/adult-female-source.glb",
         "http://127.0.0.1:4173/three/character/assets/hair-long.glb"
-      ],
-      "view": "expressions",
-      "vertices": 14517,
-      "bakedGeometrySHA256": "0f941c40b0b6149bc34848ef7f08057720d8603595a8379468492873d7213d86"
+      ]
     }
+  ],
+  "sources": {
+    "three/character/character.mjs": "93ac686bba03ec206b7ec68f75c41fdc0649b9593986b9d97a6e0dd241a56407",
+    "three/character/facial-contour.mjs": "ef75bbca2bd43b5d451764f99b7a6ff59f7770a0e022fbcba947e0d3b5029913",
+    "three/character/dentition.mjs": "f7b6ab631c5fa3359b35f208b61ff2850300c6df3b0871776e2beb4de32d3f8e",
+    "three/character/materials.mjs": "e1f9ac1ab8583061629591e69204c03c477990c521169a59bdcd477d97f3f35e",
+    "three/character/assets/adult-female-source.glb": "b0fae3610eef39a6cdc9c56d9c8bccc0cd9bcc1cf346ae1d9bfa121e5a86e1fe",
+    "three/character/assets/hair-long.glb": "d340fff458f920dd16dcc80493a1a33207b00c6bbfb08c4c53aba54704a78818"
+  },
+  "errors": [],
+  "evidence": [
+    "../three/face-refinement/three-neutral-front.png",
+    "../three/face-refinement/three-neutral-side.png",
+    "../three/face-refinement/three-neutral-threequarter.png",
+    "../three/face-refinement/expressions-neutral-front.png",
+    "../three/face-refinement/expressions-neutral-side.png",
+    "../three/face-refinement/expressions-neutral-threequarter.png"
   ],
   "pass": true
 }

@@ -156,9 +156,9 @@ export function tuneCharacterMaterials(scene) {
         material.depthWrite = false;
         material.side = THREE.DoubleSide;
       } else if (name === 'Teeth') {
-        material.color.set('#eee5d4');
-        material.roughness = .36;
-        material.specularIntensity = .3;
+        material.color.set('#d7cdbc');
+        material.roughness = .30;
+        material.specularIntensity = .36;
         material.envMapIntensity = .5;
         // Teeth and gingiva share one source texture. Keep ivory enamel while
         // reducing the bright red gum texels inside the recessed oral cavity.

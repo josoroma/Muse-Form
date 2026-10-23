@@ -5,56 +5,56 @@
     {
       "id": "body",
       "rest": {
-        "hash": 250814842,
+        "hash": 682158840,
         "finite": true,
         "meshCount": 16,
         "skinnedMeshes": 16,
-        "vertices": 80068,
+        "vertices": 91642,
         "posedVertices": 14517,
-        "identityHash": 2705093300,
+        "identityHash": 1843400365,
         "featureHashes": {
           "chest": 2623168569,
           "back": 2115421577,
           "pelvis": 1942283552,
           "abdomen": 623927785,
           "shoulder": 3308448978,
-          "head": 3130316559
+          "head": 1535833591
         },
         "exactNeutralMatch": false
       },
       "peak": {
-        "hash": 1683582614,
+        "hash": 3285481062,
         "finite": true,
         "meshCount": 16,
         "skinnedMeshes": 16,
-        "vertices": 80068,
+        "vertices": 91642,
         "posedVertices": 14517,
-        "identityHash": 2705093300,
+        "identityHash": 1843400365,
         "featureHashes": {
           "chest": 2769547686,
           "back": 2085746795,
           "pelvis": 2238301375,
           "abdomen": 574289613,
           "shoulder": 3202565895,
-          "head": 3426270119
+          "head": 4010593630
         },
         "exactNeutralMatch": false
       },
       "end": {
-        "hash": 250814842,
+        "hash": 682158840,
         "finite": true,
         "meshCount": 16,
         "skinnedMeshes": 16,
-        "vertices": 80068,
+        "vertices": 91642,
         "posedVertices": 14517,
-        "identityHash": 2705093300,
+        "identityHash": 1843400365,
         "featureHashes": {
           "chest": 2623168569,
           "back": 2115421577,
           "pelvis": 1942283552,
           "abdomen": 623927785,
           "shoulder": 3308448978,
-          "head": 3130316559
+          "head": 1535833591
         },
         "exactNeutralMatch": true
       },
@@ -144,8 +144,8 @@
       ],
       "render": {
         "drawCalls": 20,
-        "triangles": 205886,
-        "meanRenderMs": 6.776666669050853
+        "triangles": 227246,
+        "meanRenderMs": 7.294166664779186
       },
       "labels": 6,
       "pass": true
@@ -153,13 +153,13 @@
     {
       "id": "arm",
       "rest": {
-        "hash": 1322004982,
+        "hash": 2725097856,
         "finite": true,
         "meshCount": 14,
         "skinnedMeshes": 14,
-        "vertices": 74042,
+        "vertices": 85616,
         "posedVertices": 14517,
-        "identityHash": 2705093300,
+        "identityHash": 1843400365,
         "featureHashes": {
           "shoulder": 3983865376,
           "forearm": 3694333673,
@@ -169,13 +169,13 @@
         "exactNeutralMatch": false
       },
       "peak": {
-        "hash": 2879287090,
+        "hash": 3633227052,
         "finite": true,
         "meshCount": 14,
         "skinnedMeshes": 14,
-        "vertices": 74042,
+        "vertices": 85616,
         "posedVertices": 14517,
-        "identityHash": 2705093300,
+        "identityHash": 1843400365,
         "featureHashes": {
           "shoulder": 3983865376,
           "forearm": 4194956375,
@@ -185,13 +185,13 @@
         "exactNeutralMatch": false
       },
       "end": {
-        "hash": 1322004982,
+        "hash": 2725097856,
         "finite": true,
         "meshCount": 14,
         "skinnedMeshes": 14,
-        "vertices": 74042,
+        "vertices": 85616,
         "posedVertices": 14517,
-        "identityHash": 2705093300,
+        "identityHash": 1843400365,
         "featureHashes": {
           "shoulder": 3983865376,
           "forearm": 3694333673,
@@ -283,8 +283,8 @@
       ],
       "render": {
         "drawCalls": 19,
-        "triangles": 205095,
-        "meanRenderMs": 6.768333335717519
+        "triangles": 226455,
+        "meanRenderMs": 7.485833330452442
       },
       "labels": 4,
       "pass": true
@@ -292,13 +292,13 @@
     {
       "id": "hand",
       "rest": {
-        "hash": 207432825,
+        "hash": 1594138607,
         "finite": true,
         "meshCount": 17,
         "skinnedMeshes": 17,
-        "vertices": 75041,
+        "vertices": 86615,
         "posedVertices": 14517,
-        "identityHash": 2705093300,
+        "identityHash": 1843400365,
         "featureHashes": {
           "thenar": 3208351483,
           "index": 270383754,
@@ -311,13 +311,13 @@
         "exactNeutralMatch": false
       },
       "peak": {
-        "hash": 659037844,
+        "hash": 3170450070,
         "finite": true,
         "meshCount": 17,
         "skinnedMeshes": 17,
-        "vertices": 75041,
+        "vertices": 86615,
         "posedVertices": 14517,
-        "identityHash": 2705093300,
+        "identityHash": 1843400365,
         "featureHashes": {
           "thenar": 2090970357,
           "index": 296244253,
@@ -330,13 +330,13 @@
         "exactNeutralMatch": false
       },
       "end": {
-        "hash": 207432825,
+        "hash": 1594138607,
         "finite": true,
         "meshCount": 17,
         "skinnedMeshes": 17,
-        "vertices": 75041,
+        "vertices": 86615,
         "posedVertices": 14517,
-        "identityHash": 2705093300,
+        "identityHash": 1843400365,
         "featureHashes": {
           "thenar": 3208351483,
           "index": 270383754,
@@ -435,8 +435,8 @@
       ],
       "render": {
         "drawCalls": 17,
-        "triangles": 205180,
-        "meanRenderMs": 6.679166665673256
+        "triangles": 226540,
+        "meanRenderMs": 7.322499997417132
       },
       "labels": 7,
       "pass": true
@@ -444,13 +444,13 @@
     {
       "id": "leg",
       "rest": {
-        "hash": 3494228100,
+        "hash": 2697315238,
         "finite": true,
         "meshCount": 14,
         "skinnedMeshes": 14,
-        "vertices": 73791,
+        "vertices": 85365,
         "posedVertices": 14517,
-        "identityHash": 2705093300,
+        "identityHash": 1843400365,
         "featureHashes": {
           "leg-quadriceps": 2794109943,
           "leg-knee": 985733211,
@@ -460,13 +460,13 @@
         "exactNeutralMatch": false
       },
       "peak": {
-        "hash": 136206510,
+        "hash": 1371328257,
         "finite": true,
         "meshCount": 14,
         "skinnedMeshes": 14,
-        "vertices": 73791,
+        "vertices": 85365,
         "posedVertices": 14517,
-        "identityHash": 2705093300,
+        "identityHash": 1843400365,
         "featureHashes": {
           "leg-quadriceps": 4002398494,
           "leg-knee": 3567439478,
@@ -476,13 +476,13 @@
         "exactNeutralMatch": false
       },
       "end": {
-        "hash": 3494228100,
+        "hash": 2697315238,
         "finite": true,
         "meshCount": 14,
         "skinnedMeshes": 14,
-        "vertices": 73791,
+        "vertices": 85365,
         "posedVertices": 14517,
-        "identityHash": 2705093300,
+        "identityHash": 1843400365,
         "featureHashes": {
           "leg-quadriceps": 2794109943,
           "leg-knee": 985733211,
@@ -575,8 +575,8 @@
       ],
       "render": {
         "drawCalls": 20,
-        "triangles": 205195,
-        "meanRenderMs": 6.691666666666666
+        "triangles": 226555,
+        "meanRenderMs": 7.365000000596046
       },
       "labels": 4,
       "pass": true
@@ -584,13 +584,13 @@
     {
       "id": "foot",
       "rest": {
-        "hash": 3051690919,
+        "hash": 2660903029,
         "finite": true,
         "meshCount": 14,
         "skinnedMeshes": 14,
-        "vertices": 74476,
+        "vertices": 86050,
         "posedVertices": 14517,
-        "identityHash": 2705093300,
+        "identityHash": 1843400365,
         "featureHashes": {
           "foot-instep": 3190041178,
           "foot-ankle": 1199160689,
@@ -600,13 +600,13 @@
         "exactNeutralMatch": false
       },
       "peak": {
-        "hash": 808966109,
+        "hash": 2521840051,
         "finite": true,
         "meshCount": 14,
         "skinnedMeshes": 14,
-        "vertices": 74476,
+        "vertices": 86050,
         "posedVertices": 14517,
-        "identityHash": 2705093300,
+        "identityHash": 1843400365,
         "featureHashes": {
           "foot-instep": 361356731,
           "foot-ankle": 3506864866,
@@ -616,13 +616,13 @@
         "exactNeutralMatch": false
       },
       "end": {
-        "hash": 3051690919,
+        "hash": 2660903029,
         "finite": true,
         "meshCount": 14,
         "skinnedMeshes": 14,
-        "vertices": 74476,
+        "vertices": 86050,
         "posedVertices": 14517,
-        "identityHash": 2705093300,
+        "identityHash": 1843400365,
         "featureHashes": {
           "foot-instep": 3190041178,
           "foot-ankle": 1199160689,
@@ -715,8 +715,8 @@
       ],
       "render": {
         "drawCalls": 20,
-        "triangles": 205417,
-        "meanRenderMs": 6.730833330750466
+        "triangles": 226777,
+        "meanRenderMs": 7.378333331644535
       },
       "labels": 4,
       "pass": true
@@ -823,18 +823,20 @@
   "sources": {
     "three/app.mjs": "aa6f9c2be90b21409a56417c410ae0f07ad4a59a1b8298c10e4b7ae14a9fcc3f",
     "three/geometry.mjs": "aa62a681ad55d4665ced401459c8aacf55fa72868aa1e09f89c25ab0c57c737d",
-    "three/character/character.mjs": "2aaf55f4cf2d18475817780ba4e4c9114227c31642b1395422743008b336b55b",
+    "three/character/character.mjs": "93ac686bba03ec206b7ec68f75c41fdc0649b9593986b9d97a6e0dd241a56407",
     "three/character/anatomy.mjs": "e3472489a0f5833764de0d74b8233ad079bcaf2ccdacb75836d255f67150844e",
     "three/character/regions.mjs": "4fd014da445966949d867d4f71f18fe19a7f0fef5648dc7643e53459c1fc6139",
-    "three/character/materials.mjs": "ad15581446fbcb0e079f55af4e6b633a298cc60176465b1f571099fd9b30d229",
+    "three/character/materials.mjs": "e1f9ac1ab8583061629591e69204c03c477990c521169a59bdcd477d97f3f35e",
     "three/character/subdivide-hair.mjs": "fd095a33b1700d6abc220e8ff8bb825869f90ec0f3671bfd6d160ef75208c14a",
+    "three/character/facial-contour.mjs": "ef75bbca2bd43b5d451764f99b7a6ff59f7770a0e022fbcba947e0d3b5029913",
+    "three/character/dentition.mjs": "f7b6ab631c5fa3359b35f208b61ff2850300c6df3b0871776e2beb4de32d3f8e",
     "three/runtime/camera-rig.mjs": "1fb02cf51badcd0deb67acec9ea2f0b3bbe37598721e036532c34b497ac01211",
     "three/runtime/motion.mjs": "da2c372951e868a257e1e0764a48f7fa9caa9e70a8ffed70338cfa52662e675e",
     "expressions/studio.mjs": "d34b2e1a1e9561599fe1f9a504b0c2bbf911889a6bd51a1384f3cd88ac048d45"
   },
   "assets": {
     "three/character/assets/CC0-MakeHuman.txt": "f6089cba01cb570a24712b41ab8a586ccd3cc5ef53dc266ca50b95c288956d2c",
-    "three/character/assets/README.md": "e67eb995de0d653bcf5e96431209ad0b5e446d35aee52cd62e2f63c593b1f1e1",
+    "three/character/assets/README.md": "f85c07863a92f6a7009ce337926d7e4119e565d8a4ec008f85604e825b5d7a24",
     "three/character/assets/adult-female-source.glb": "b0fae3610eef39a6cdc9c56d9c8bccc0cd9bcc1cf346ae1d9bfa121e5a86e1fe",
     "three/character/assets/body-joints.json": "47c40fcaeb9f089f0f32ba781e2a0ac7d7a925a47b6db3c46102f0091a53a839",
     "three/character/assets/expression-data-checks.json": "554ad80370ec8a082c1a6aa4206085d34d61404da0f986df349d035432f607a4",

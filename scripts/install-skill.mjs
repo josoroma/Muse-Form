@@ -19,6 +19,8 @@ await mkdir(resolve(source,'assets/quality/character'),{recursive:true});
 await cp(resolve(ROOT,'qa/character/cross-view.json'),resolve(source,'assets/quality/character/cross-view.json'));
 await cp(resolve(ROOT,'qa/character/materials/review.json'),resolve(source,'assets/quality/character/materials-review.json'));
 await cp(resolve(ROOT,'qa/character/subdivision/asset-checks.json'),resolve(source,'assets/quality/character/hair-subdivision.json'));
+await cp(resolve(ROOT,'qa/character/face-refinement/review.json'),resolve(source,'assets/quality/character/face-refinement.json'));
+await cp(resolve(ROOT,'qa/character/dental-refinement/review.json'),resolve(source,'assets/quality/character/dental-refinement.json'));
 await mkdir(resolve(source,'assets/quality/expressions'),{recursive:true});
 for(const file of ['checks.json','playback.json','art-review.json','laughter-front-peak.png','surprise-side-peak.png'])await cp(resolve(ROOT,'qa/expressions',file),resolve(source,'assets/quality/expressions',file));
 const escapeHTML=text=>String(text).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
@@ -31,4 +33,4 @@ for(const edition of ['three','expressions']){
  portableReadme=portableReadme.replace(/(?:Repository maintenance commands[^\n]*\n\n)?~~~sh\nnpm run catalog:[\s\S]*?~~~\n\n/,'The catalog and browser-check commands belong to the source repository. This portable skill includes editable model modules, complete prompts, the local engine and review records.\n\n');
  await writeFile(resolve(source,'assets',edition,'README.md'),portableReadme);
 }
-await mkdir(target,{recursive:true});await cp(source,target,{recursive:true,filter:p=>!p.includes('__pycache__')});await writeFile(resolve(target,'.storytelling-install.json'),JSON.stringify({source,name,edition:8,corpusCount:24,threeStudies:5,expressions:8},null,2)+'\n');console.log(`Installed 24 SVG pairs and five anatomy studies and eight facial expressions at ${target}`);
+await mkdir(target,{recursive:true});await cp(source,target,{recursive:true,filter:p=>!p.includes('__pycache__')});await writeFile(resolve(target,'.storytelling-install.json'),JSON.stringify({source,name,edition:9,corpusCount:24,threeStudies:5,expressions:8},null,2)+'\n');console.log(`Installed 24 SVG pairs and five anatomy studies and eight facial expressions at ${target}`);

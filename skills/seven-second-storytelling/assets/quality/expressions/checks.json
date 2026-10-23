@@ -6,17 +6,17 @@
     {
       "id": "joy",
       "rest": {
-        "hash": 3901948176,
+        "hash": 1031242265,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2762303073,
-          "eyes": 3052434951,
-          "cheeks": 2122793063,
-          "mouth": 1868966996,
-          "jaw": 704119579,
+          "eyes": 1250398669,
+          "cheeks": 172664773,
+          "mouth": 2341931598,
+          "jaw": 2213377436,
           "chest": 2327629426,
           "back": 1326401868,
           "pelvis": 1174751523
@@ -49,17 +49,17 @@
         }
       },
       "peak": {
-        "hash": 1047506421,
+        "hash": 1560314606,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2417811228,
-          "eyes": 3792374668,
-          "cheeks": 2644350459,
-          "mouth": 174615549,
-          "jaw": 1889598292,
+          "eyes": 1665527155,
+          "cheeks": 2109032597,
+          "mouth": 3147214293,
+          "jaw": 4129863466,
           "chest": 2327629426,
           "back": 272620312,
           "pelvis": 1174751523
@@ -92,17 +92,17 @@
         }
       },
       "end": {
-        "hash": 3901948176,
+        "hash": 1031242265,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2762303073,
-          "eyes": 3052434951,
-          "cheeks": 2122793063,
-          "mouth": 1868966996,
-          "jaw": 704119579,
+          "eyes": 1250398669,
+          "cheeks": 172664773,
+          "mouth": 2341931598,
+          "jaw": 2213377436,
           "chest": 2327629426,
           "back": 1326401868,
           "pelvis": 1174751523
@@ -177,17 +177,17 @@
     {
       "id": "sadness",
       "rest": {
-        "hash": 3901948176,
+        "hash": 1031242265,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2762303073,
-          "eyes": 3052434951,
-          "cheeks": 2122793063,
-          "mouth": 1868966996,
-          "jaw": 704119579,
+          "eyes": 1250398669,
+          "cheeks": 172664773,
+          "mouth": 2341931598,
+          "jaw": 2213377436,
           "chest": 2327629426,
           "back": 1326401868,
           "pelvis": 1174751523
@@ -221,17 +221,17 @@
         }
       },
       "peak": {
-        "hash": 3933313819,
+        "hash": 1146217173,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2112692523,
-          "eyes": 444299712,
-          "cheeks": 1919354934,
-          "mouth": 2220656920,
-          "jaw": 3099521850,
+          "eyes": 1243897718,
+          "cheeks": 2349924715,
+          "mouth": 2249071254,
+          "jaw": 3850903935,
           "chest": 2327629426,
           "back": 724169640,
           "pelvis": 1174751523
@@ -265,17 +265,17 @@
         }
       },
       "end": {
-        "hash": 3901948176,
+        "hash": 1031242265,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2762303073,
-          "eyes": 3052434951,
-          "cheeks": 2122793063,
-          "mouth": 1868966996,
-          "jaw": 704119579,
+          "eyes": 1250398669,
+          "cheeks": 172664773,
+          "mouth": 2341931598,
+          "jaw": 2213377436,
           "chest": 2327629426,
           "back": 1326401868,
           "pelvis": 1174751523
@@ -351,17 +351,17 @@
     {
       "id": "anger",
       "rest": {
-        "hash": 3901948176,
+        "hash": 1031242265,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2762303073,
-          "eyes": 3052434951,
-          "cheeks": 2122793063,
-          "mouth": 1868966996,
-          "jaw": 704119579,
+          "eyes": 1250398669,
+          "cheeks": 172664773,
+          "mouth": 2341931598,
+          "jaw": 2213377436,
           "chest": 2327629426,
           "back": 1326401868,
           "pelvis": 1174751523
@@ -395,17 +395,17 @@
         }
       },
       "peak": {
-        "hash": 2867841498,
+        "hash": 427495738,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 4024189835,
-          "eyes": 349799761,
-          "cheeks": 4215131401,
-          "mouth": 4218120856,
-          "jaw": 1437110835,
+          "eyes": 3944259550,
+          "cheeks": 3541185127,
+          "mouth": 3918627380,
+          "jaw": 3462545248,
           "chest": 2327629426,
           "back": 10262332,
           "pelvis": 1174751523
@@ -439,17 +439,17 @@
         }
       },
       "end": {
-        "hash": 3901948176,
+        "hash": 1031242265,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2762303073,
-          "eyes": 3052434951,
-          "cheeks": 2122793063,
-          "mouth": 1868966996,
-          "jaw": 704119579,
+          "eyes": 1250398669,
+          "cheeks": 172664773,
+          "mouth": 2341931598,
+          "jaw": 2213377436,
           "chest": 2327629426,
           "back": 1326401868,
           "pelvis": 1174751523
@@ -525,17 +525,17 @@
     {
       "id": "fear",
       "rest": {
-        "hash": 3901948176,
+        "hash": 1031242265,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2762303073,
-          "eyes": 3052434951,
-          "cheeks": 2122793063,
-          "mouth": 1868966996,
-          "jaw": 704119579,
+          "eyes": 1250398669,
+          "cheeks": 172664773,
+          "mouth": 2341931598,
+          "jaw": 2213377436,
           "chest": 2327629426,
           "back": 1326401868,
           "pelvis": 1174751523
@@ -565,6 +565,9 @@
             "exp_mouthStretchRight": 0,
             "exp_mouthFrownLeft": 0,
             "exp_mouthFrownRight": 0,
+            "exp_mouthUpperUpLeft": 0,
+            "exp_mouthUpperUpRight": 0,
+            "exp_mouthShrugLower": 0,
             "exp_jawOpen": 0
           },
           "time": 0,
@@ -573,17 +576,17 @@
         }
       },
       "peak": {
-        "hash": 1869435981,
+        "hash": 2092270428,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
-          "brow": 1658523102,
-          "eyes": 1675997609,
-          "cheeks": 1588894547,
-          "mouth": 87205830,
-          "jaw": 1339667500,
+          "brow": 2686832002,
+          "eyes": 1277121242,
+          "cheeks": 4119022197,
+          "mouth": 1505409641,
+          "jaw": 469893054,
           "chest": 2327629426,
           "back": 1148943636,
           "pelvis": 1174751523
@@ -593,8 +596,8 @@
           "amount": 1,
           "leftEyeOpen": 1,
           "rightEyeOpen": 1,
-          "leftAperture": 0.011163608409256452,
-          "rightAperture": 0.011158130811495224,
+          "leftAperture": 0.011160611708041787,
+          "rightAperture": 0.011155134110283139,
           "apertureUnits": "metres",
           "leftIrisVisible": true,
           "rightIrisVisible": true,
@@ -609,10 +612,13 @@
             "exp_browDownRight": 0.1,
             "exp_eyeWideLeft": 0.33,
             "exp_eyeWideRight": 0.33,
-            "exp_mouthStretchLeft": 0.25,
-            "exp_mouthStretchRight": 0.25,
-            "exp_mouthFrownLeft": 0.1,
-            "exp_mouthFrownRight": 0.1,
+            "exp_mouthStretchLeft": 0.22,
+            "exp_mouthStretchRight": 0.22,
+            "exp_mouthFrownLeft": 0.06,
+            "exp_mouthFrownRight": 0.06,
+            "exp_mouthUpperUpLeft": 0.25,
+            "exp_mouthUpperUpRight": 0.25,
+            "exp_mouthShrugLower": 0.16,
             "exp_jawOpen": 0.22
           },
           "time": 2.5,
@@ -621,17 +627,17 @@
         }
       },
       "end": {
-        "hash": 3901948176,
+        "hash": 1031242265,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2762303073,
-          "eyes": 3052434951,
-          "cheeks": 2122793063,
-          "mouth": 1868966996,
-          "jaw": 704119579,
+          "eyes": 1250398669,
+          "cheeks": 172664773,
+          "mouth": 2341931598,
+          "jaw": 2213377436,
           "chest": 2327629426,
           "back": 1326401868,
           "pelvis": 1174751523
@@ -661,6 +667,9 @@
             "exp_mouthStretchRight": 0,
             "exp_mouthFrownLeft": 0,
             "exp_mouthFrownRight": 0,
+            "exp_mouthUpperUpLeft": 0,
+            "exp_mouthUpperUpRight": 0,
+            "exp_mouthShrugLower": 0,
             "exp_jawOpen": 0
           },
           "time": 0,
@@ -711,17 +720,17 @@
     {
       "id": "surprise",
       "rest": {
-        "hash": 3901948176,
+        "hash": 1031242265,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2762303073,
-          "eyes": 3052434951,
-          "cheeks": 2122793063,
-          "mouth": 1868966996,
-          "jaw": 704119579,
+          "eyes": 1250398669,
+          "cheeks": 172664773,
+          "mouth": 2341931598,
+          "jaw": 2213377436,
           "chest": 2327629426,
           "back": 1326401868,
           "pelvis": 1174751523
@@ -747,7 +756,10 @@
             "exp_eyeWideRight": 0,
             "exp_jawOpen": 0,
             "exp_mouthFunnel": 0,
-            "exp_mouthPucker": 0
+            "exp_mouthPucker": 0,
+            "exp_mouthUpperUpLeft": 0,
+            "exp_mouthUpperUpRight": 0,
+            "exp_mouthShrugLower": 0
           },
           "time": 0,
           "skinning": true,
@@ -755,17 +767,17 @@
         }
       },
       "peak": {
-        "hash": 942421210,
+        "hash": 2990900069,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
-          "brow": 1012105016,
-          "eyes": 2328272280,
-          "cheeks": 3177906844,
-          "mouth": 427143819,
-          "jaw": 1722558413,
+          "brow": 3072338818,
+          "eyes": 2724703872,
+          "cheeks": 1310029937,
+          "mouth": 136395433,
+          "jaw": 1555164160,
           "chest": 2327629426,
           "back": 1796415276,
           "pelvis": 1174751523
@@ -790,8 +802,11 @@
             "exp_eyeWideLeft": 0.34,
             "exp_eyeWideRight": 0.34,
             "exp_jawOpen": 0.34,
-            "exp_mouthFunnel": 0.28,
-            "exp_mouthPucker": 0.06
+            "exp_mouthFunnel": 0.22,
+            "exp_mouthPucker": 0.025,
+            "exp_mouthUpperUpLeft": 0.18,
+            "exp_mouthUpperUpRight": 0.18,
+            "exp_mouthShrugLower": 0.28
           },
           "time": 2.5,
           "skinning": true,
@@ -799,17 +814,17 @@
         }
       },
       "end": {
-        "hash": 3901948176,
+        "hash": 1031242265,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2762303073,
-          "eyes": 3052434951,
-          "cheeks": 2122793063,
-          "mouth": 1868966996,
-          "jaw": 704119579,
+          "eyes": 1250398669,
+          "cheeks": 172664773,
+          "mouth": 2341931598,
+          "jaw": 2213377436,
           "chest": 2327629426,
           "back": 1326401868,
           "pelvis": 1174751523
@@ -835,7 +850,10 @@
             "exp_eyeWideRight": 0,
             "exp_jawOpen": 0,
             "exp_mouthFunnel": 0,
-            "exp_mouthPucker": 0
+            "exp_mouthPucker": 0,
+            "exp_mouthUpperUpLeft": 0,
+            "exp_mouthUpperUpRight": 0,
+            "exp_mouthShrugLower": 0
           },
           "time": 0,
           "skinning": true,
@@ -885,17 +903,17 @@
     {
       "id": "disgust",
       "rest": {
-        "hash": 3901948176,
+        "hash": 1031242265,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2762303073,
-          "eyes": 3052434951,
-          "cheeks": 2122793063,
-          "mouth": 1868966996,
-          "jaw": 704119579,
+          "eyes": 1250398669,
+          "cheeks": 172664773,
+          "mouth": 2341931598,
+          "jaw": 2213377436,
           "chest": 2327629426,
           "back": 1326401868,
           "pelvis": 1174751523
@@ -931,17 +949,17 @@
         }
       },
       "peak": {
-        "hash": 190479446,
+        "hash": 1879313789,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 3582174878,
-          "eyes": 2800805829,
-          "cheeks": 3390811374,
-          "mouth": 834106320,
-          "jaw": 3910255360,
+          "eyes": 3955822310,
+          "cheeks": 2209609523,
+          "mouth": 614909344,
+          "jaw": 3925753847,
           "chest": 2327629426,
           "back": 2878277666,
           "pelvis": 1174751523
@@ -977,17 +995,17 @@
         }
       },
       "end": {
-        "hash": 3901948176,
+        "hash": 1031242265,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2762303073,
-          "eyes": 3052434951,
-          "cheeks": 2122793063,
-          "mouth": 1868966996,
-          "jaw": 704119579,
+          "eyes": 1250398669,
+          "cheeks": 172664773,
+          "mouth": 2341931598,
+          "jaw": 2213377436,
           "chest": 2327629426,
           "back": 1326401868,
           "pelvis": 1174751523
@@ -1065,17 +1083,17 @@
     {
       "id": "wink",
       "rest": {
-        "hash": 3901948176,
+        "hash": 1031242265,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2762303073,
-          "eyes": 3052434951,
-          "cheeks": 2122793063,
-          "mouth": 1868966996,
-          "jaw": 704119579,
+          "eyes": 1250398669,
+          "cheeks": 172664773,
+          "mouth": 2341931598,
+          "jaw": 2213377436,
           "chest": 2327629426,
           "back": 1326401868,
           "pelvis": 1174751523
@@ -1107,17 +1125,17 @@
         }
       },
       "peak": {
-        "hash": 451124798,
+        "hash": 3043283073,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 546610541,
-          "eyes": 3145419415,
-          "cheeks": 3270080511,
-          "mouth": 2212447190,
-          "jaw": 3548109673,
+          "eyes": 2595678410,
+          "cheeks": 1177347021,
+          "mouth": 3297835315,
+          "jaw": 1852304370,
           "chest": 2327629426,
           "back": 2655039009,
           "pelvis": 1174751523
@@ -1149,17 +1167,17 @@
         }
       },
       "end": {
-        "hash": 3901948176,
+        "hash": 1031242265,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2762303073,
-          "eyes": 3052434951,
-          "cheeks": 2122793063,
-          "mouth": 1868966996,
-          "jaw": 704119579,
+          "eyes": 1250398669,
+          "cheeks": 172664773,
+          "mouth": 2341931598,
+          "jaw": 2213377436,
           "chest": 2327629426,
           "back": 1326401868,
           "pelvis": 1174751523
@@ -1233,17 +1251,17 @@
     {
       "id": "laughter",
       "rest": {
-        "hash": 3901948176,
+        "hash": 1031242265,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2762303073,
-          "eyes": 3052434951,
-          "cheeks": 2122793063,
-          "mouth": 1868966996,
-          "jaw": 704119579,
+          "eyes": 1250398669,
+          "cheeks": 172664773,
+          "mouth": 2341931598,
+          "jaw": 2213377436,
           "chest": 2327629426,
           "back": 1326401868,
           "pelvis": 1174751523
@@ -1280,17 +1298,17 @@
         }
       },
       "peak": {
-        "hash": 999924024,
+        "hash": 3825510327,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2697628212,
-          "eyes": 1531982831,
-          "cheeks": 2872816695,
-          "mouth": 3696905129,
-          "jaw": 2936178078,
+          "eyes": 297137344,
+          "cheeks": 1051727228,
+          "mouth": 3223263321,
+          "jaw": 1174580708,
           "chest": 2327629426,
           "back": 4274985779,
           "pelvis": 1174751523
@@ -1327,17 +1345,17 @@
         }
       },
       "end": {
-        "hash": 3901948176,
+        "hash": 1031242265,
         "finite": true,
         "meshCount": 10,
-        "vertices": 73071,
+        "vertices": 84645,
         "posedVertices": 14517,
         "featureHashes": {
           "brow": 2762303073,
-          "eyes": 3052434951,
-          "cheeks": 2122793063,
-          "mouth": 1868966996,
-          "jaw": 704119579,
+          "eyes": 1250398669,
+          "cheeks": 172664773,
+          "mouth": 2341931598,
+          "jaw": 2213377436,
           "chest": 2327629426,
           "back": 1326401868,
           "pelvis": 1174751523
@@ -1496,14 +1514,16 @@
   "sources": {
     "expressions/index.html": "d7b31a055afc9a09c9f9d2fe3b71758e1ee902e21cb04c974b68763484025114",
     "expressions/app.mjs": "4e0ba671e28bb7e1b1ede5cc48fc06bb5d8d37537ce4fb3617c69fb4a23acd10",
-    "expressions/character-face.mjs": "32c151408c2efad062a7b6732319873435d54eb6ba2010a9ad59c6c1406ec365",
+    "expressions/character-face.mjs": "186449bc9b6ef5b739e13537000b80d473fe0bd7aef49619bc1deaaacb8a7232",
     "expressions/studio.mjs": "d34b2e1a1e9561599fe1f9a504b0c2bbf911889a6bd51a1384f3cd88ac048d45",
     "expressions/style.css": "4186f93ae074519f6c0e244bb81f9feaad176e0304a671713e1b8abc443fac88",
     "three/style.css": "86ef4e8eb7fa244d681f2e9a934760fb6641d8ca2e03b182f3c93dff78112376",
-    "three/character/character.mjs": "2aaf55f4cf2d18475817780ba4e4c9114227c31642b1395422743008b336b55b",
-    "three/character/materials.mjs": "ad15581446fbcb0e079f55af4e6b633a298cc60176465b1f571099fd9b30d229",
+    "three/character/character.mjs": "93ac686bba03ec206b7ec68f75c41fdc0649b9593986b9d97a6e0dd241a56407",
+    "three/character/materials.mjs": "e1f9ac1ab8583061629591e69204c03c477990c521169a59bdcd477d97f3f35e",
     "three/character/regions.mjs": "4fd014da445966949d867d4f71f18fe19a7f0fef5648dc7643e53459c1fc6139",
     "three/character/subdivide-hair.mjs": "fd095a33b1700d6abc220e8ff8bb825869f90ec0f3671bfd6d160ef75208c14a",
+    "three/character/facial-contour.mjs": "ef75bbca2bd43b5d451764f99b7a6ff59f7770a0e022fbcba947e0d3b5029913",
+    "three/character/dentition.mjs": "f7b6ab631c5fa3359b35f208b61ff2850300c6df3b0871776e2beb4de32d3f8e",
     "three/character/assets/adult-female-source.glb": "b0fae3610eef39a6cdc9c56d9c8bccc0cd9bcc1cf346ae1d9bfa121e5a86e1fe",
     "three/character/assets/hair-long.glb": "d340fff458f920dd16dcc80493a1a33207b00c6bbfb08c4c53aba54704a78818",
     "three/character/assets/body-joints.json": "47c40fcaeb9f089f0f32ba781e2a0ac7d7a925a47b6db3c46102f0091a53a839",
@@ -1515,7 +1535,7 @@
     "three/vendor/addons/loaders/GLTFLoader.js": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
     "three/vendor/addons/utils/SkeletonUtils.js": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
     "three/vendor/addons/utils/BufferGeometryUtils.js": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
-    "scripts/check-expressions.mjs": "612dc4e97848eaedea049c3851b2785c6fd51ea3d1d24e3edad79acae9cb2e05"
+    "scripts/check-expressions.mjs": "f588bd308424c7912ea738b8178716a146f2226c60ea48e7925b93b351d0c44f"
   },
   "pass": true
 }

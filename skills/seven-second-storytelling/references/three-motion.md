@@ -14,6 +14,7 @@ MUSE adds eight expressions on one original adult woman: joy, sadness, anger, fe
 - `character/anatomy.mjs`: five body/limb studies and deterministic skeletal poses.
 - `character/regions.mjs`: compact skinned surface overlays, posed collision mesh and barycentric anchors.
 - `character/materials.mjs`: shared PBR skin, blue eyes, blonde hair and neutral clothing.
+- `character/facial-contour.mjs` and `dentition.mjs`: fixed lower-face sculpt and refinement of the licensed dental surface; keep their expression and skin attachments.
 - `character/assets/README.md`: pinned provenance, CC0 evidence and asset limitations.
 - `runtime/motion.mjs`: transport and time-based pose helpers.
 - `runtime/camera-rig.mjs`: directed framing and interruptible OrbitControls.

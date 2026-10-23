@@ -1,0 +1,16 @@
+{
+  "report": {
+    "geometry": {
+      "upperCrowns": 16,
+      "lowerCrowns": 16,
+      "sourceVertices": 4494,
+      "lowerHeightScale": 0.8,
+      "vertices": 16068,
+      "triangles": 28480
+    },
+    "targets": 58,
+    "allTargetCountsMatch": true,
+    "skinWeights": 0
+  },
+  "errors": []
+}

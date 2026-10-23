@@ -3,10 +3,12 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { clone as cloneSkeleton } from 'three/addons/utils/SkeletonUtils.js';
 import { tuneCharacterMaterials, createBodysuitMaterial, cloneCharacterMaterial } from './materials.mjs';
 import { subdivideHairGeometry } from './subdivide-hair.mjs';
+import { refineFacialContour } from './facial-contour.mjs';
+import { refineDentition } from './dentition.mjs';
 
 // One fixed adult identity is shared by the anatomy and facial-acting editions.
 // The base, rig, texture maps and expression targets are licensed CC0; see assets/README.md.
-export const IDENTITY = Object.freeze({gender_female:1,height_tall:.12,proportions_ideal:.18,muscle_min:.12,face_jaw_width_decr:.38,face_chin_decr:.20,face_nose_width_decr:.18,face_nose_length_decr:.20,face_nose_height_decr:.08,face_lips_incr:.30,face_eye_size_incr:.13,face_eye_tilt_incr:.06,face_mouth_width_decr:.04,face_ear_size_decr:.12,face_forehead_decr:.10,face_cheekbones_incr:.06});
+export const IDENTITY = Object.freeze({gender_female:1,height_tall:.12,proportions_ideal:.18,muscle_min:.12,face_jaw_width_decr:.50,face_chin_decr:.26,face_nose_width_decr:.18,face_nose_length_decr:.20,face_nose_height_decr:.08,face_lips_incr:.36,face_eye_size_incr:.13,face_eye_tilt_incr:.06,face_mouth_width_decr:.04,face_ear_size_decr:.12,face_forehead_decr:.10,face_cheekbones_incr:.10});
 let template, loading;
 const asset = name => new URL(`./assets/${name}`,import.meta.url).href;
 function bakeIdentity(scene) {
@@ -91,7 +93,7 @@ export async function loadCharacter(){
   loading=(async()=>{
     const loader=new GLTFLoader();
     const[bodyGLTF,hairGLTF,sidecar]=await Promise.all([loader.loadAsync(asset('adult-female-source.glb')),loader.loadAsync(asset('hair-long.glb')),fetch(asset('body-joints.json')).then(r=>{if(!r.ok)throw Error('Character joint data unavailable');return r.json();})]);
-    const scene=bodyGLTF.scene;bakeIdentity(scene);bakeIdentity(hairGLTF.scene);
+    const scene=bodyGLTF.scene;bakeIdentity(scene);refineFacialContour(scene);refineDentition(scene);bakeIdentity(hairGLTF.scene);
     hairGLTF.scene.traverse(m=>{if(m.isMesh)m.geometry=subdivideHairGeometry(m.geometry,{iterations:2,strength:.65,preserveBoundaries:false});});
     fitSkeleton(scene,sidecar);
     const body=scene.getObjectByName('Body');if(!body?.isSkinnedMesh)throw Error('Licensed character has no body skin');

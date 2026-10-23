@@ -1,0 +1,15 @@
+{
+  "scope": "Final neutral portrait: front, three-quarter and profile",
+  "applied": {
+    "changedVertices": 6869,
+    "maximumOffsetMetres": 0.0058406195768874875,
+    "method": "Fixed lower-face taper and rounded chin; transported morphs and normals"
+  },
+  "sources": {
+    "three/character/character.mjs": "93ac686bba03ec206b7ec68f75c41fdc0649b9593986b9d97a6e0dd241a56407",
+    "three/character/facial-contour.mjs": "ef75bbca2bd43b5d451764f99b7a6ff59f7770a0e022fbcba947e0d3b5029913",
+    "three/character/dentition.mjs": "f7b6ab631c5fa3359b35f208b61ff2850300c6df3b0871776e2beb4de32d3f8e",
+    "three/character/materials.mjs": "e1f9ac1ab8583061629591e69204c03c477990c521169a59bdcd477d97f3f35e"
+  },
+  "errors": []
+}

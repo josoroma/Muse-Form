@@ -1,0 +1,69 @@
+{
+  "result": [
+    {
+      "id": "joy",
+      "endpointMaxError": 0,
+      "peakDisplacementMax": 0.0009774503989849054,
+      "allAttributesFinite": true,
+      "allTargetsFinite": true,
+      "morphCount": 58
+    },
+    {
+      "id": "sadness",
+      "endpointMaxError": 0,
+      "peakDisplacementMax": 0.0023592915831001093,
+      "allAttributesFinite": true,
+      "allTargetsFinite": true,
+      "morphCount": 58
+    },
+    {
+      "id": "anger",
+      "endpointMaxError": 0,
+      "peakDisplacementMax": 0.0011340389536125262,
+      "allAttributesFinite": true,
+      "allTargetsFinite": true,
+      "morphCount": 58
+    },
+    {
+      "id": "fear",
+      "endpointMaxError": 0,
+      "peakDisplacementMax": 0.004732966888046031,
+      "allAttributesFinite": true,
+      "allTargetsFinite": true,
+      "morphCount": 58
+    },
+    {
+      "id": "surprise",
+      "endpointMaxError": 0,
+      "peakDisplacementMax": 0.007389774182379183,
+      "allAttributesFinite": true,
+      "allTargetsFinite": true,
+      "morphCount": 58
+    },
+    {
+      "id": "disgust",
+      "endpointMaxError": 0,
+      "peakDisplacementMax": 0.0030417631943444254,
+      "allAttributesFinite": true,
+      "allTargetsFinite": true,
+      "morphCount": 58
+    },
+    {
+      "id": "wink",
+      "endpointMaxError": 0,
+      "peakDisplacementMax": 0.0013580140462201434,
+      "allAttributesFinite": true,
+      "allTargetsFinite": true,
+      "morphCount": 58
+    },
+    {
+      "id": "laughter",
+      "endpointMaxError": 0,
+      "peakDisplacementMax": 0.005584634225398455,
+      "allAttributesFinite": true,
+      "allTargetsFinite": true,
+      "morphCount": 58
+    }
+  ],
+  "errors": []
+}
