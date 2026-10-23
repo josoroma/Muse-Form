@@ -1,0 +1,4 @@
+interface:
+  display_name: "FORM Motion"
+  short_description: "Extend FORM studies, motion, and anatomy regions"
+  default_prompt: "Use $form-motion to add a new anatomical movement study to FORM while preserving the shared character and five-second interaction model."

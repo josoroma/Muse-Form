@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">MUSE + FORM</title>
+  <desc id="desc">MUSE + FORM. Study expression. Understand movement. An ivory and mint wordmark with a connected M and F monogram.</desc>
+  <rect x="1" y="1" width="1278" height="318" rx="24" fill="#101817" stroke="#33413D" stroke-width="2"/>
+  <g transform="translate(62 91) scale(1.22)">
+    <path d="M24 82V30L48 59L72 30V82" stroke="#F1F0E8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M72 30H92M72 54H87" stroke="#A5DFD1" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <path d="M234 79V241" stroke="#33413D"/>
+  <text x="279" y="99" fill="#A5DFD1" font-family="Arial, Helvetica, sans-serif" font-size="14" letter-spacing="4">INTERACTIVE CHARACTER STUDIES</text>
+  <text x="274" y="185" fill="#F1F0E8" font-family="Georgia, 'Times New Roman', serif" font-size="78" letter-spacing="1">MUSE <tspan fill="#A5DFD1" font-size="54">+</tspan> FORM</text>
+  <text x="279" y="232" fill="#B5C1BC" font-family="Arial, Helvetica, sans-serif" font-size="23" letter-spacing=".3">Study expression. Understand movement.</text>
+</svg>

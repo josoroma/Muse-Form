@@ -1,0 +1,4 @@
+interface:
+  display_name: "MUSE Expression"
+  short_description: "Extend MUSE facial acting and expression studies"
+  default_prompt: "Use $muse-expression to add a new facial-expression study to MUSE while preserving the shared character and deterministic five-second motion."

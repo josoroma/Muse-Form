@@ -1,18 +1,12 @@
 {
-  "name": "seven-second-storytelling",
+  "name": "muse-form",
   "version": "4.0.0",
   "private": true,
   "type": "module",
-  "description": "A native SVG drawing corpus and a Three.js anatomy explorer with five-second movement studies.",
+  "description": "Interactive facial-expression and anatomy studies, sharing one Three.js character.",
   "scripts": {
     "start": "node scripts/serve.mjs",
-    "catalog": "node scripts/catalog.mjs",
-    "check": "node scripts/check.mjs",
-    "playback": "node scripts/playback-check.mjs",
-    "verify": "node scripts/verify.mjs",
-    "install-skill": "node scripts/install-skill.mjs",
-    "compose": "node scripts/compose.mjs",
-    "bundle": "python3 scripts/bundle.py",
+    "build:pages": "node scripts/build-pages.mjs",
     "build:three": "node scripts/build-three.mjs",
     "catalog:three": "node scripts/catalog-three.mjs",
     "check:three": "node scripts/check-three.mjs",
@@ -20,7 +14,9 @@
     "bundle:three": "python3 scripts/bundle-three.py",
     "catalog:expressions": "node scripts/catalog-expressions.mjs",
     "check:expressions": "node scripts/check-expressions.mjs",
-    "playback:expressions": "node scripts/playback-expressions.mjs"
+    "playback:expressions": "node scripts/playback-expressions.mjs",
+    "check:assets": "node scripts/check-hair-subdivision.mjs",
+    "check:project": "node scripts/check-project.mjs"
   },
   "devDependencies": {
     "playwright-core": "1.64.1"

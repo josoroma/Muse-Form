@@ -2,9 +2,9 @@
 
 Five anatomical studies of **one shared adult female character**: full body, arm, hand, leg and foot. The licensed skinned GLB supplies continuous human topology, connected fingers and toes, and embedded skin and eye maps. Local code sets the blonde, blue-eyed identity, materials and five-second movements. [MUSE](../expressions/index.html) uses the same character for facial acting.
 
-[Open FORM](index.html) · [Portable source bundle](../exports/form-and-muse-threejs.zip) · [SVG collection](../index.html) · [Character assets and license](character/assets/README.md)
+[Open FORM](index.html) · [Product home](../index.html) · [Project](../README.md) · [Development story](../README-STUDY.md) · [Character assets and license](character/assets/README.md)
 
-![Hand during the closing gesture](../qa/three/hand-peak.png)
+![FORM anatomy viewer](../docs/product/form.webp)
 
 ## Run locally
 
@@ -25,7 +25,7 @@ Open **http://127.0.0.1:4173/three/**. The included vendor files also allow runn
 - Inspect Pectoralis region, Back and Pelvis in the full-body study. The bodysuit and region overlays follow the body skin.
 - Drag to orbit, right-drag to pan and scroll or use the visible buttons to zoom. Manual gestures interrupt guidance; enable **Guided camera** to resume it.
 - Use Overview, Front, Side or Frame this structure. Canvas keyboard shortcuts are arrows to orbit, +/− to zoom and Home for overview.
-- Reduced motion starts paused. Hidden tabs stop advancing. A WebGL fallback links to the native SVG collection.
+- Reduced motion starts paused. Hidden tabs stop advancing. If WebGL cannot start, the viewer links to product documentation.
 
 This is an illustrative skinned character, not a body scan or a medically validated anatomical simulator. Surface labels indicate approximate regions beneath the skin and clothing. Highlights show selection, not muscle activation; movement percentages describe the authored animation. [Sources and scope](SOURCES.md) explain those limits.
 
@@ -54,13 +54,17 @@ npm run playback:three
 npm run bundle:three
 ~~~
 
-[Browser checks](../qa/three/checks.json) inspect evaluated skinned geometry, exact endpoints, reverse seeking and interactions. [Playback samples](../qa/three/playback.json) inspect unpaused motion. [Visual review](../qa/three/art-review.json) records inspected views and repairs; these checks do not certify anatomical or artistic accuracy. The preceding procedural edition is preserved in [archive/procedural-v3](../archive/procedural-v3).
+[Browser checks](../qa/three/checks.json) inspect evaluated skinned geometry, exact endpoints, reverse seeking and interactions. [Playback samples](../qa/three/playback.json) inspect unpaused motion. [Visual review](../qa/three/art-review.json) records inspected views and repairs; these checks do not certify anatomical or artistic accuracy. See the [development story](../README-STUDY.md) for earlier experiments. Historical source editions are preserved in the repository archive and are not part of the product ZIP.
 
-## Corpus prompts
+The bundle command writes `dist/muse-form.zip`, containing the current viewers, local engine, licensed assets, documentation and development tools. It excludes historical archives and old SVG/skill bundles.
+
+## Study prompts
 
 ### body — A gesture is a whole-body event.
 
-[Open study](index.html#body) · [Movement source](character/anatomy.mjs) · [Character GLB](character/assets/adult-female-source.glb) · SVG reference IDs: 105214, 105215, 105218, 105219.
+[Open study](index.html#body) · [Movement source](character/anatomy.mjs) · [Character GLB](character/assets/adult-female-source.glb)
+
+Historical SVG references (repository only): [105214](../archive/svg-final/corpus/animated/105214.svg), [105215](../archive/svg-final/corpus/animated/105215.svg), [105218](../archive/svg-final/corpus/animated/105218.svg), [105219](../archive/svg-final/corpus/animated/105219.svg).
 
 Use the shared adult female character from the licensed CC0 MakeHuman-derived GLB, with its continuous human topology, 53-bone rig, skin weights and embedded textures. Bake one fixed original identity with blonde hair, blue eyes, a softly tapered lower jaw, rounded chin, refined dentition and a neutral anatomical bodysuit; use exactly the same identity in FORM and MUSE. Keep shoulders, clavicles, waist, hips, limbs, hands and feet organically connected. Use a clean, finely textured complexion with neutral-warm facial illumination. Use the existing charcoal stage, serif interface, soft studio illumination and mint selection accent. Selected regions reuse the character surface triangles, with translucent feathered overlays and anchors that follow the evaluated skinned surface. Keep the five-second timeline, responsive controls and guided camera; manual orbit interrupts guidance. Restore the exact neutral pose at five seconds. Frame the complete character in a relaxed standing pose. Animate a controlled reach and return through the clavicle, shoulder, elbow, wrist and fingers, with a small trunk counter-turn and head response. Keep both feet supported. Preserve selectable Pectoralis region, Back and Pelvis surfaces, plus the abdominal wall, shoulder and head. Inspect front, profile, three-quarter and posterior silhouettes; do not add circular chest markings.
 
@@ -70,7 +74,9 @@ Use the shared adult female character from the licensed CC0 MakeHuman-derived GL
 
 ### arm — The shape of a bend.
 
-[Open study](index.html#arm) · [Movement source](character/anatomy.mjs) · [Character GLB](character/assets/adult-female-source.glb) · SVG reference IDs: 105215.
+[Open study](index.html#arm) · [Movement source](character/anatomy.mjs) · [Character GLB](character/assets/adult-female-source.glb)
+
+Historical SVG references (repository only): [105215](../archive/svg-final/corpus/animated/105215.svg).
 
 Use the shared adult female character from the licensed CC0 MakeHuman-derived GLB, with its continuous human topology, 53-bone rig, skin weights and embedded textures. Bake one fixed original identity with blonde hair, blue eyes, a softly tapered lower jaw, rounded chin, refined dentition and a neutral anatomical bodysuit; use exactly the same identity in FORM and MUSE. Keep shoulders, clavicles, waist, hips, limbs, hands and feet organically connected. Use a clean, finely textured complexion with neutral-warm facial illumination. Use the existing charcoal stage, serif interface, soft studio illumination and mint selection accent. Selected regions reuse the character surface triangles, with translucent feathered overlays and anchors that follow the evaluated skinned surface. Keep the five-second timeline, responsive controls and guided camera; manual orbit interrupts guidance. Restore the exact neutral pose at five seconds. Frame the same character’s arm from shoulder through fingertips. Bend the forearm at its anatomical elbow pivot while the shoulder and upper arm remain coherent. Let the attached hand travel with the forearm and soften the fingers into the gesture. Provide selectable deltoid, biceps, triceps, forearm and hand/wrist regions. Keep the source skin continuous at shoulder, elbow and wrist; the selected surface indicates a region rather than isolated internal muscle anatomy.
 
@@ -80,7 +86,9 @@ Use the shared adult female character from the licensed CC0 MakeHuman-derived GL
 
 ### hand — The hand, in motion.
 
-[Open study](index.html#hand) · [Movement source](character/anatomy.mjs) · [Character GLB](character/assets/adult-female-source.glb) · SVG reference IDs: 105216, 105217.
+[Open study](index.html#hand) · [Movement source](character/anatomy.mjs) · [Character GLB](character/assets/adult-female-source.glb)
+
+Historical SVG references (repository only): [105216](../archive/svg-final/corpus/animated/105216.svg), [105217](../archive/svg-final/corpus/animated/105217.svg).
 
 Use the shared adult female character from the licensed CC0 MakeHuman-derived GLB, with its continuous human topology, 53-bone rig, skin weights and embedded textures. Bake one fixed original identity with blonde hair, blue eyes, a softly tapered lower jaw, rounded chin, refined dentition and a neutral anatomical bodysuit; use exactly the same identity in FORM and MUSE. Keep shoulders, clavicles, waist, hips, limbs, hands and feet organically connected. Use a clean, finely textured complexion with neutral-warm facial illumination. Use the existing charcoal stage, serif interface, soft studio illumination and mint selection accent. Selected regions reuse the character surface triangles, with translucent feathered overlays and anchors that follow the evaluated skinned surface. Keep the five-second timeline, responsive controls and guided camera; manual orbit interrupts guidance. Restore the exact neutral pose at five seconds. Closely frame the same skinned character’s hand, retaining the original palm, finger webs, thumb base, nails and graduated digit proportions. Author an ordered soft closing wave through the knuckles and phalangeal joints, with the ulnar fingers starting slightly earlier and the thumb turning toward the palm. Keep the little finger rooted in the ulnar palm. Avoid intersections and abrupt joint angles. Provide selectable palm, thenar region, thumb and individual fingers, with labels attached to their moving surface.
 
@@ -90,7 +98,9 @@ Use the shared adult female character from the licensed CC0 MakeHuman-derived GL
 
 ### leg — The architecture of support.
 
-[Open study](index.html#leg) · [Movement source](character/anatomy.mjs) · [Character GLB](character/assets/adult-female-source.glb) · SVG reference IDs: 105218, 105219, 105220.
+[Open study](index.html#leg) · [Movement source](character/anatomy.mjs) · [Character GLB](character/assets/adult-female-source.glb)
+
+Historical SVG references (repository only): [105218](../archive/svg-final/corpus/animated/105218.svg), [105219](../archive/svg-final/corpus/animated/105219.svg), [105220](../archive/svg-final/corpus/animated/105220.svg).
 
 Use the shared adult female character from the licensed CC0 MakeHuman-derived GLB, with its continuous human topology, 53-bone rig, skin weights and embedded textures. Bake one fixed original identity with blonde hair, blue eyes, a softly tapered lower jaw, rounded chin, refined dentition and a neutral anatomical bodysuit; use exactly the same identity in FORM and MUSE. Keep shoulders, clavicles, waist, hips, limbs, hands and feet organically connected. Use a clean, finely textured complexion with neutral-warm facial illumination. Use the existing charcoal stage, serif interface, soft studio illumination and mint selection accent. Selected regions reuse the character surface triangles, with translucent feathered overlays and anchors that follow the evaluated skinned surface. Keep the five-second timeline, responsive controls and guided camera; manual orbit interrupts guidance. Restore the exact neutral pose at five seconds. Frame the same character’s thigh, knee, calf and attached foot. Author a shallow supported bend shared across the hip, knee and ankle, then recover. Correct the pelvis position to preserve forefoot support. Keep continuous thigh-to-knee and calf-to-ankle transitions, with selectable anterior thigh, posterior thigh, knee and calf regions. Inspect the supporting contact and the contour throughout the five-second movement.
 
@@ -100,7 +110,9 @@ Use the shared adult female character from the licensed CC0 MakeHuman-derived GL
 
 ### foot — From heel to forefoot.
 
-[Open study](index.html#foot) · [Movement source](character/anatomy.mjs) · [Character GLB](character/assets/adult-female-source.glb) · SVG reference IDs: 105221, 105222, 105223.
+[Open study](index.html#foot) · [Movement source](character/anatomy.mjs) · [Character GLB](character/assets/adult-female-source.glb)
+
+Historical SVG references (repository only): [105221](../archive/svg-final/corpus/animated/105221.svg), [105222](../archive/svg-final/corpus/animated/105222.svg), [105223](../archive/svg-final/corpus/animated/105223.svg).
 
 Use the shared adult female character from the licensed CC0 MakeHuman-derived GLB, with its continuous human topology, 53-bone rig, skin weights and embedded textures. Bake one fixed original identity with blonde hair, blue eyes, a softly tapered lower jaw, rounded chin, refined dentition and a neutral anatomical bodysuit; use exactly the same identity in FORM and MUSE. Keep shoulders, clavicles, waist, hips, limbs, hands and feet organically connected. Use a clean, finely textured complexion with neutral-warm facial illumination. Use the existing charcoal stage, serif interface, soft studio illumination and mint selection accent. Selected regions reuse the character surface triangles, with translucent feathered overlays and anchors that follow the evaluated skinned surface. Keep the five-second timeline, responsive controls and guided camera; manual orbit interrupts guidance. Restore the exact neutral pose at five seconds. Frame the same character’s ankle and complete five-toed foot. Raise the heel through the foot/forefoot joint chain while the forefoot remains supported, hold briefly, and settle. Preserve the continuous arch, heel, instep and toe roots, especially the short lateral little toe. Provide selectable ankle, dorsum, forefoot/toes and heel surfaces. Inspect frontal, medial, lateral, three-quarter and underside views at rest and peak; the toes must remain part of the same connected skin surface.
 

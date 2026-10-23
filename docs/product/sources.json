@@ -1,0 +1,33 @@
+{
+  "baselineCommit": "6b21c15",
+  "captureDate": "2026-10-23",
+  "viewport": [
+    1440,
+    1080
+  ],
+  "images": [
+    {
+      "file": "form.webp",
+      "source": "/three/#body",
+      "time": 0,
+      "method": "Actual native browser viewport capture; resized proportionally and encoded as WebP for documentation. No generated replacement.",
+      "size": [
+        1042,
+        650
+      ],
+      "sha256": "dedc75af724ac53731ec33a0413952269829d84c0cc6cb7567122f54738da0aa"
+    },
+    {
+      "file": "muse.webp",
+      "source": "/expressions/#laughter",
+      "time": 2.5,
+      "method": "Actual native browser viewport capture; resized proportionally and encoded as WebP for documentation. No generated replacement.",
+      "size": [
+        1042,
+        650
+      ],
+      "sha256": "c7b0d1c22e8c71397743b50c3f411537c6e73f0bcbcc4263719cc27577ac9911"
+    }
+  ],
+  "errors": []
+}

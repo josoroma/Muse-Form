@@ -4,7 +4,7 @@ import { resolve, relative, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)));
-const types = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.mp4': 'video/mp4', '.md': 'text/plain' };
+const types = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.gif': 'image/gif', '.webp': 'image/webp', '.glb': 'model/gltf-binary', '.mp4': 'video/mp4', '.md': 'text/plain' };
 export async function startServer(port = 0) {
   const server = http.createServer(async (req, res) => {
     try {
@@ -22,5 +22,5 @@ export async function startServer(port = 0) {
 }
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const { url } = await startServer(Number(process.env.PORT || 4173));
-  console.log(`The moving sketchbook: ${url}`);
+  console.log(`MUSE + FORM: ${url}`);
 }

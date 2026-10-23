@@ -1,0 +1,44 @@
+[
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 1080
+    },
+    "updater": {
+      "updates": 83,
+      "skipped": 70,
+      "meanMs": 0.9650602405329783,
+      "maxMs": 1.5,
+      "vertices": 4273,
+      "triangles": 8138
+    },
+    "totalModelUpdateMeanMs": 8.56416666706403,
+    "heldPoseSkipped": true,
+    "neutralMatchesFORM": true,
+    "independent": true,
+    "neutralRestored": true,
+    "meanRenderMs": 7.300000011920929,
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "updater": {
+      "updates": 83,
+      "skipped": 70,
+      "meanMs": 0.8951807230351919,
+      "maxMs": 1.5999999642372131,
+      "vertices": 4273,
+      "triangles": 8138
+    },
+    "totalModelUpdateMeanMs": 8.570000000298023,
+    "heldPoseSkipped": true,
+    "neutralMatchesFORM": true,
+    "independent": true,
+    "neutralRestored": true,
+    "meanRenderMs": 5.366666654745738,
+    "errors": []
+  }
+]

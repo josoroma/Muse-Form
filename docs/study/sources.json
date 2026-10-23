@@ -1,0 +1,504 @@
+{
+  "schemaVersion": 1,
+  "generated": "2026-10-23",
+  "description": "Documentary collages made only from committed artwork and browser renders. No recoloring or generated replacement images.",
+  "repositoryHead": "6b21c158dd354be59f06c8b61802e2b1d83c1051",
+  "chronologyNote": "The first commit already contains vector-v1, raster-v2 and hairline-v3 archives; their order comes from archive descriptions, not distinct dated commits.",
+  "reproduce": "python docs/study/build-collages.py (Pillow and full Git history required)",
+  "collages": [
+    {
+      "file": "01-medium-experiments.jpg",
+      "number": "01",
+      "title": "Finding a visual language",
+      "subtitle": "Two studies, three media. Archived artwork from the first recorded snapshot.",
+      "tiles": [
+        {
+          "commit": "f31a9f185a0d8b549cb904d938ae16dd79972b7f",
+          "path": "archive/vector-v1/corpus/posters/105232.png",
+          "title": "Native SVG / first pass",
+          "note": "105232 \u00b7 pirate \u00b7 flat color and contour",
+          "crop": null,
+          "commitDate": "2026-10-22T06:13:43-06:00",
+          "sourceSize": [
+            1200,
+            900
+          ],
+          "sha256": "33ac044064e90b0d4f7051ef6a9cf907310666604d5f244e5ceafc922abb7994",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "f31a9f185a0d8b549cb904d938ae16dd79972b7f",
+          "path": "archive/raster-v2/corpus/plates/105232.png",
+          "title": "Raster / realism detour",
+          "note": "105232 \u00b7 pirate \u00b7 generated painted plate",
+          "crop": null,
+          "commitDate": "2026-10-22T06:13:43-06:00",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "sha256": "862a1be2766d3c43848c3a63571890210e55a5f3deb43021f28918a727ca0dd4",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "f31a9f185a0d8b549cb904d938ae16dd79972b7f",
+          "path": "archive/hairline-v3/corpus/posters/105232.png",
+          "title": "Native SVG / Hairline return",
+          "note": "105232 \u00b7 pirate \u00b7 spare contour language",
+          "crop": null,
+          "commitDate": "2026-10-22T06:13:43-06:00",
+          "sourceSize": [
+            1200,
+            900
+          ],
+          "sha256": "8acb48a6d2bd02cbbae7b06187e2b25ebc604c92cd46471a810d6270a053993f",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "f31a9f185a0d8b549cb904d938ae16dd79972b7f",
+          "path": "archive/vector-v1/corpus/posters/105195.png",
+          "title": "Native SVG / first pass",
+          "note": "105195 \u00b7 ear \u00b7 planes and hatching",
+          "crop": null,
+          "commitDate": "2026-10-22T06:13:43-06:00",
+          "sourceSize": [
+            1200,
+            900
+          ],
+          "sha256": "ceec7f70c9255309a69835837acfac59cbd3ca9eaf98d5048e79ea03fdb1dc1a",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "f31a9f185a0d8b549cb904d938ae16dd79972b7f",
+          "path": "archive/raster-v2/corpus/plates/105195.png",
+          "title": "Raster / realism detour",
+          "note": "105195 \u00b7 ear \u00b7 tonal graphite rendering",
+          "crop": null,
+          "commitDate": "2026-10-22T06:13:43-06:00",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "sha256": "0feda1cd4eb2311abdd7993245e476a0d0f0ee7bc8884bcee8e72ccfa3e5e0ca",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "f31a9f185a0d8b549cb904d938ae16dd79972b7f",
+          "path": "archive/hairline-v3/corpus/posters/105195.png",
+          "title": "Native SVG / Hairline return",
+          "note": "105195 \u00b7 ear \u00b7 reduced structural lines",
+          "crop": null,
+          "commitDate": "2026-10-22T06:13:43-06:00",
+          "sourceSize": [
+            1200,
+            900
+          ],
+          "sha256": "0e676d2317825ce9210e9b6b9fc60e336b16d647ba592cf4c79992e9e447320d",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        }
+      ],
+      "outputSize": [
+        1800,
+        1275
+      ],
+      "outputSha256": "afc1793a9c17277a6afcf6f018b23a09b918362a76254e85c561b5c6da401004"
+    },
+    {
+      "file": "02-five-second-motion.jpg",
+      "number": "02",
+      "title": "A drawing has to move",
+      "subtitle": "Authored rest and peak captures from the five-second SVG revision.",
+      "tiles": [
+        {
+          "commit": "d73c45dd4d6341ba0cd1859c8aa995e141c92db2",
+          "path": "qa/motion-five/105196-rest.png",
+          "title": "A quiet smile / rest",
+          "note": "105196 \u00b7 22 Oct 2026",
+          "crop": null,
+          "commitDate": "2026-10-22T22:03:34-06:00",
+          "sourceSize": [
+            1200,
+            900
+          ],
+          "sha256": "701bb48497641a7145809a554c04c87c54393df1429e7929d86978d375a17f75",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "d73c45dd4d6341ba0cd1859c8aa995e141c92db2",
+          "path": "qa/motion-five/105196-peak.png",
+          "title": "A quiet smile / peak",
+          "note": "105196 \u00b7 coordinated facial change",
+          "crop": null,
+          "commitDate": "2026-10-22T22:03:34-06:00",
+          "sourceSize": [
+            1200,
+            900
+          ],
+          "sha256": "8a4dcca410f76e7372f5ab8dd01a1ec3f3dcecad79ca2b3de57ebbfab44adfd6",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "d73c45dd4d6341ba0cd1859c8aa995e141c92db2",
+          "path": "qa/motion-five/105216-rest.png",
+          "title": "The palm opens / rest",
+          "note": "105216 \u00b7 22 Oct 2026",
+          "crop": null,
+          "commitDate": "2026-10-22T22:03:34-06:00",
+          "sourceSize": [
+            1200,
+            900
+          ],
+          "sha256": "71db44f9b0d3b9e3a1e64d6d2f4647d64914ec580ce4f41990b39006b5f578d3",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "d73c45dd4d6341ba0cd1859c8aa995e141c92db2",
+          "path": "qa/motion-five/105216-peak.png",
+          "title": "The palm opens / peak",
+          "note": "105216 \u00b7 articulated finger movement",
+          "crop": null,
+          "commitDate": "2026-10-22T22:03:34-06:00",
+          "sourceSize": [
+            1200,
+            900
+          ],
+          "sha256": "6d773b9c97df0daf76dd1fdac22c701a10e192982c8bd32bd15226a3312552df",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        }
+      ],
+      "outputSize": [
+        1800,
+        1427
+      ],
+      "outputSha256": "1b73cdab14a00e0d888b850e27fb0753c86173850a5da61735e207d0872e7bb7"
+    },
+    {
+      "file": "03-threejs-evolution.jpg",
+      "number": "03",
+      "title": "From constructed parts to one character",
+      "subtitle": "Actual browser captures. FORM studies movement; MUSE studies expression.",
+      "tiles": [
+        {
+          "commit": "03e6a292794509d6c4e2c9a04713fb70b809e48c",
+          "path": "qa/three/body-rest.png",
+          "title": "FORM / procedural anatomy",
+          "note": "03e6a29 \u00b7 22 Oct 2026",
+          "crop": [
+            36,
+            241,
+            969,
+            961
+          ],
+          "commitDate": "2026-10-22T22:47:48-06:00",
+          "sourceSize": [
+            1440,
+            1080
+          ],
+          "sha256": "86a7ac2249d7d2add9a16e011627f05299895e52e3414530d8ca69d85ab7df29",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "6ee937f870dda982155c18ff637ab8fa78d41f81",
+          "path": "qa/expressions/joy-front-rest.png",
+          "title": "MUSE / procedural portrait",
+          "note": "6ee937f \u00b7 23 Oct 2026",
+          "crop": null,
+          "commitDate": "2026-10-23T03:41:07-06:00",
+          "sourceSize": [
+            1042,
+            650
+          ],
+          "sha256": "ba340ce93117db8962e4b24525ea5d67e07c143e96a206dbc31b4650663a9213",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "53763f490779b6a0ea7126453d1024a54cdbc6fd",
+          "path": "qa/three/body-front-rest.png",
+          "title": "FORM / shared skinned mesh",
+          "note": "53763f4 \u00b7 23 Oct 2026",
+          "crop": null,
+          "commitDate": "2026-10-23T06:21:23-06:00",
+          "sourceSize": [
+            1042,
+            650
+          ],
+          "sha256": "81d7f5cdf74c4e1b5decdfe7febf76c63bd7a29549f33568ec2d662057e27994",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "53763f490779b6a0ea7126453d1024a54cdbc6fd",
+          "path": "qa/expressions/joy-front-rest.png",
+          "title": "MUSE / the same adult identity",
+          "note": "53763f4 \u00b7 23 Oct 2026",
+          "crop": null,
+          "commitDate": "2026-10-23T06:21:23-06:00",
+          "sourceSize": [
+            1042,
+            650
+          ],
+          "sha256": "3e14c944d49d3c7b3f48a2e5238261e777afa05a76de4b139eb1ebb2cab3901e",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        }
+      ],
+      "outputSize": [
+        1800,
+        1487
+      ],
+      "outputSha256": "d118e647aa8c93406fd66440d742f5595cd9d20184d7e47213c19d18b20f5058"
+    },
+    {
+      "file": "04-portrait-refinement.jpg",
+      "number": "04",
+      "title": "Review the face at portrait scale",
+      "subtitle": "Same neutral pose and camera. Left: before the complexion repair. Right: final revision.",
+      "tiles": [
+        {
+          "commit": "6b21c158dd354be59f06c8b61802e2b1d83c1051",
+          "path": "qa/character/portrait-v6/before-joy-front.png",
+          "title": "Before / front",
+          "note": "Archived runtime \u00b7 gray albedo patches",
+          "crop": [
+            340,
+            100,
+            1200,
+            850
+          ],
+          "commitDate": "2026-10-23T07:46:51-06:00",
+          "sourceSize": [
+            1563,
+            975
+          ],
+          "sha256": "a4d0950abac1b725e77a01e435e601386bac5e408536fcdfb10dc72f5d9695af",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "6b21c158dd354be59f06c8b61802e2b1d83c1051",
+          "path": "qa/character/portrait-v6/final-joy-front.png",
+          "title": "After / front",
+          "note": "Clean complexion \u00b7 softened facial contour",
+          "crop": [
+            340,
+            100,
+            1200,
+            850
+          ],
+          "commitDate": "2026-10-23T07:46:51-06:00",
+          "sourceSize": [
+            1563,
+            975
+          ],
+          "sha256": "7709917ff8f88a72f3c5ceee9394ae269a7a597f6acc2a836d1de090be0f3e84",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "6b21c158dd354be59f06c8b61802e2b1d83c1051",
+          "path": "qa/character/portrait-v6/before-joy-quarter.png",
+          "title": "Before / three-quarter",
+          "note": "Archived runtime \u00b7 broad cheek and jaw shading",
+          "crop": [
+            340,
+            100,
+            1200,
+            850
+          ],
+          "commitDate": "2026-10-23T07:46:51-06:00",
+          "sourceSize": [
+            1563,
+            975
+          ],
+          "sha256": "52fcafd7934231e51e2735b1d31af6f2830a345508301fc5e43f8f1d2d74e0c1",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "6b21c158dd354be59f06c8b61802e2b1d83c1051",
+          "path": "qa/character/portrait-v6/final-joy-quarter.png",
+          "title": "After / three-quarter",
+          "note": "Warmer fill \u00b7 continuous face-to-neck color",
+          "crop": [
+            340,
+            100,
+            1200,
+            850
+          ],
+          "commitDate": "2026-10-23T07:46:51-06:00",
+          "sourceSize": [
+            1563,
+            975
+          ],
+          "sha256": "b424df9477c9fd41dd2816f5584e30759d6e0fa6d78ab7260fd488fc405c3b48",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "6b21c158dd354be59f06c8b61802e2b1d83c1051",
+          "path": "qa/character/portrait-v6/before-joy-side.png",
+          "title": "Before / profile",
+          "note": "Archived runtime \u00b7 same camera",
+          "crop": [
+            340,
+            100,
+            1200,
+            850
+          ],
+          "commitDate": "2026-10-23T07:46:51-06:00",
+          "sourceSize": [
+            1563,
+            975
+          ],
+          "sha256": "40e485de287d8f1321a9980972c6ef10f4da332c76a606395f526f3a4df1cf4c",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "6b21c158dd354be59f06c8b61802e2b1d83c1051",
+          "path": "qa/character/portrait-v6/final-joy-side.png",
+          "title": "After / profile",
+          "note": "Retained chin projection and lip volume",
+          "crop": [
+            340,
+            100,
+            1200,
+            850
+          ],
+          "commitDate": "2026-10-23T07:46:51-06:00",
+          "sourceSize": [
+            1563,
+            975
+          ],
+          "sha256": "e4a97a8fb32da5876886c649539d7c155b0d2301e9df608026ea7eb637b9eb50",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        }
+      ],
+      "outputSize": [
+        1800,
+        2083
+      ],
+      "outputSha256": "11158de12a529226ef744131cd3a54c498e1bee005d020b44f2d0d0b8024640a"
+    },
+    {
+      "file": "05-mouth-and-normals.jpg",
+      "number": "05",
+      "title": "Fix the cause, then compare the same pose",
+      "subtitle": "Matched crops from browser captures. The last row isolates shading, not expression strength.",
+      "tiles": [
+        {
+          "commit": "6b21c158dd354be59f06c8b61802e2b1d83c1051",
+          "path": "qa/character/portrait-v6/before-surprise-front.png",
+          "title": "Surprise / before",
+          "note": "Tongue fills the opening; lower teeth dominate",
+          "crop": [
+            530,
+            420,
+            1035,
+            775
+          ],
+          "commitDate": "2026-10-23T07:46:51-06:00",
+          "sourceSize": [
+            1563,
+            975
+          ],
+          "sha256": "ab960bc8ee3f9f85761bf6d15ac95598cfea97f619ed59bf5a951c847bc3b3c9",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "6b21c158dd354be59f06c8b61802e2b1d83c1051",
+          "path": "qa/character/portrait-v6/final-surprise-front.png",
+          "title": "Surprise / after",
+          "note": "Upper incisors align; tongue sits deeper",
+          "crop": [
+            530,
+            420,
+            1035,
+            775
+          ],
+          "commitDate": "2026-10-23T07:46:51-06:00",
+          "sourceSize": [
+            1563,
+            975
+          ],
+          "sha256": "b8344be2aa07cf9d95d4bfd71e5e6b0cdf297ae59a0b2fd8071a68389117a1eb",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "6b21c158dd354be59f06c8b61802e2b1d83c1051",
+          "path": "qa/character/portrait-v6/before-laughter-quarter.png",
+          "title": "Laughter / before",
+          "note": "Earlier dental placement and oral shading",
+          "crop": [
+            420,
+            380,
+            1030,
+            780
+          ],
+          "commitDate": "2026-10-23T07:46:51-06:00",
+          "sourceSize": [
+            1563,
+            975
+          ],
+          "sha256": "7298daf29efa3dfdc9bd778cdcee2c91bda2c9d4a352a66d9d93216c5b801f4c",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "6b21c158dd354be59f06c8b61802e2b1d83c1051",
+          "path": "qa/character/portrait-v6/final-laughter-quarter.png",
+          "title": "Laughter / after",
+          "note": "Aligned arches; darker mouth interior",
+          "crop": [
+            420,
+            380,
+            1030,
+            780
+          ],
+          "commitDate": "2026-10-23T07:46:51-06:00",
+          "sourceSize": [
+            1563,
+            975
+          ],
+          "sha256": "bf12b4becda53d71fe8ea0690e00ca5d1b1df3a7001af5d55e4c7b7113129cd0",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "6b21c158dd354be59f06c8b61802e2b1d83c1051",
+          "path": "qa/character/oral-v2/diagnostic-smile-normal-before.png",
+          "title": "Identical smile / additive normals",
+          "note": "Diagnostic baseline \u00b7 same posed vertices",
+          "crop": [
+            230,
+            210,
+            650,
+            530
+          ],
+          "commitDate": "2026-10-23T07:46:51-06:00",
+          "sourceSize": [
+            1042,
+            650
+          ],
+          "sha256": "6e289078020b2f26e1fcff1e3be8cf1e80cf6793889a1456a749a4f2ebcdce45",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        },
+        {
+          "commit": "6b21c158dd354be59f06c8b61802e2b1d83c1051",
+          "path": "qa/character/oral-v2/diagnostic-smile-normal-after.png",
+          "title": "Identical smile / evaluated normals",
+          "note": "Diagnostic correction \u00b7 false cheek wedge removed",
+          "crop": [
+            230,
+            210,
+            650,
+            530
+          ],
+          "commitDate": "2026-10-23T07:46:51-06:00",
+          "sourceSize": [
+            1042,
+            650
+          ],
+          "sha256": "7d745dc738ac7e639e1697e5b2a30c8ef59b46cd524b1f9c1a10b4a193412eb6",
+          "processing": "Crop (if listed), proportional scale, layout and text only. Source colors unchanged."
+        }
+      ],
+      "outputSize": [
+        1800,
+        1813
+      ],
+      "outputSha256": "2eb0137026c271291b326d98d49a28f055bdc07cdae0b33010d537c6ea207287"
+    }
+  ]
+}

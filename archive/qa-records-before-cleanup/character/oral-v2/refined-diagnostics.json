@@ -1,0 +1,27 @@
+{
+  "reports": [
+    {
+      "name": "Teeth",
+      "vertices": 16068,
+      "morphs": 58,
+      "finite": true,
+      "report": {
+        "upperCrowns": 16,
+        "lowerCrowns": 16,
+        "sourceVertices": 4494,
+        "lowerHeightScale": 0.8,
+        "assemblyOffsetY": -0.0035,
+        "vertices": 16068,
+        "triangles": 28480
+      }
+    },
+    {
+      "name": "Tongue",
+      "vertices": 953,
+      "morphs": 58,
+      "finite": true,
+      "report": null
+    }
+  ],
+  "errors": []
+}

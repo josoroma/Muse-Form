@@ -1,0 +1,448 @@
+{
+  "scope": "Documentation GIF decoding, duration, checksum, source links/anchors and sampled visual capture review. No new unpaused application playback or anatomical certification.",
+  "pass": true,
+  "counts": {
+    "current": 13,
+    "procedural": 13,
+    "nativeSvg": 20
+  },
+  "totalGifBytes": 36591481,
+  "localLinksChecked": 302,
+  "headingAnchorsChecked": 42,
+  "gifChecks": [
+    {
+      "key": "current/form-arm",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 18,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "current/form-body",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 18,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "current/form-foot",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 18,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "current/form-hand",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 18,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "current/form-leg",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 18,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "current/muse-anger",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 34,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "current/muse-disgust",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 34,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "current/muse-fear",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 34,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "current/muse-joy",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 34,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "current/muse-laughter",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 34,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "current/muse-sadness",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 34,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "current/muse-surprise",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 34,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "current/muse-wink",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 34,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "procedural/form-arm",
+      "durationMs": 5000,
+      "encodedFrames": 39,
+      "uniqueDecodedFrames": 38,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "procedural/form-body",
+      "durationMs": 5000,
+      "encodedFrames": 39,
+      "uniqueDecodedFrames": 38,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "procedural/form-foot",
+      "durationMs": 5000,
+      "encodedFrames": 36,
+      "uniqueDecodedFrames": 35,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "procedural/form-hand",
+      "durationMs": 5000,
+      "encodedFrames": 38,
+      "uniqueDecodedFrames": 37,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "procedural/form-leg",
+      "durationMs": 5000,
+      "encodedFrames": 36,
+      "uniqueDecodedFrames": 35,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "procedural/muse-anger",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 34,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "procedural/muse-disgust",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 34,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "procedural/muse-fear",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 34,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "procedural/muse-joy",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 34,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "procedural/muse-laughter",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 34,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "procedural/muse-sadness",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 34,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "procedural/muse-surprise",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 34,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "procedural/muse-wink",
+      "durationMs": 5000,
+      "encodedFrames": 35,
+      "uniqueDecodedFrames": 34,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105193",
+      "durationMs": 5000,
+      "encodedFrames": 42,
+      "uniqueDecodedFrames": 42,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105194",
+      "durationMs": 5000,
+      "encodedFrames": 39,
+      "uniqueDecodedFrames": 37,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105195",
+      "durationMs": 5000,
+      "encodedFrames": 31,
+      "uniqueDecodedFrames": 30,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105196",
+      "durationMs": 5000,
+      "encodedFrames": 32,
+      "uniqueDecodedFrames": 31,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105197",
+      "durationMs": 5000,
+      "encodedFrames": 31,
+      "uniqueDecodedFrames": 30,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105198",
+      "durationMs": 5000,
+      "encodedFrames": 31,
+      "uniqueDecodedFrames": 30,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105199",
+      "durationMs": 5000,
+      "encodedFrames": 31,
+      "uniqueDecodedFrames": 30,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105200",
+      "durationMs": 5000,
+      "encodedFrames": 31,
+      "uniqueDecodedFrames": 30,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105202",
+      "durationMs": 5000,
+      "encodedFrames": 22,
+      "uniqueDecodedFrames": 19,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105203",
+      "durationMs": 5000,
+      "encodedFrames": 27,
+      "uniqueDecodedFrames": 20,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105214",
+      "durationMs": 5000,
+      "encodedFrames": 46,
+      "uniqueDecodedFrames": 45,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105215",
+      "durationMs": 5000,
+      "encodedFrames": 46,
+      "uniqueDecodedFrames": 45,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105216",
+      "durationMs": 5000,
+      "encodedFrames": 46,
+      "uniqueDecodedFrames": 45,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105217",
+      "durationMs": 5000,
+      "encodedFrames": 46,
+      "uniqueDecodedFrames": 45,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105218",
+      "durationMs": 5000,
+      "encodedFrames": 46,
+      "uniqueDecodedFrames": 45,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105219",
+      "durationMs": 5000,
+      "encodedFrames": 46,
+      "uniqueDecodedFrames": 45,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105220",
+      "durationMs": 5000,
+      "encodedFrames": 46,
+      "uniqueDecodedFrames": 45,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105221",
+      "durationMs": 5000,
+      "encodedFrames": 46,
+      "uniqueDecodedFrames": 45,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105222",
+      "durationMs": 5000,
+      "encodedFrames": 46,
+      "uniqueDecodedFrames": 45,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    },
+    {
+      "key": "svg/105223",
+      "durationMs": 5000,
+      "encodedFrames": 46,
+      "uniqueDecodedFrames": 45,
+      "loopForever": true,
+      "sourceHashMatches": true,
+      "pass": true
+    }
+  ],
+  "endpointPixelDiagnostic": {
+    "sourceStartAndEndRotationValues": "0 267 174",
+    "diagnosticStartHashMatchesCapture": true,
+    "diagnosticEndHashMatchesCapture": true,
+    "changedPixels": 1,
+    "maximumChannelDelta": 5,
+    "totalPixels": 172800,
+    "observation": "After sampling the full sequence, one edge pixel differs at t=5. A separate direct 0 -> 2.5 -> 5 seek produces identical endpoint pixels. Archived source unchanged."
+  },
+  "visualReview": {
+    "samples": "Rest and 2.5 seconds for all 46 previews; extra 0.5-second samples for SVG wink 105203.",
+    "observations": [
+      "Visible local movement in every study; no blank captures or interface overlays.",
+      "Current arm crop keeps the studied shoulder-to-fingers chain; current foot includes a small opposite-leg edge.",
+      "Historical low contrast and procedural construction are preserved source appearance.",
+      "Current and procedural head framing is complete; eyelid and mouth changes remain visible."
+    ],
+    "limits": "Sampled-frame inspection, not inspection of every decoded frame or real-time performance."
+  },
+  "httpChecks": "Local GIF served as image/gif with valid GIF signature; both study-document routes returned successfully."
+}

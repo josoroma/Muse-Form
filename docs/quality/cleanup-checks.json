@@ -1,0 +1,144 @@
+{
+  "scope": "Post-cleanup project links, imports, all study routes, evaluated pose continuity, selection, local dependencies and home responsiveness.",
+  "links": 425,
+  "imports": 40,
+  "missing": [],
+  "scenes": [
+    {
+      "view": "three",
+      "id": "body",
+      "finite": true,
+      "visibleChange": true,
+      "exactReturn": true,
+      "selected": true,
+      "cameraFinite": true
+    },
+    {
+      "view": "three",
+      "id": "arm",
+      "finite": true,
+      "visibleChange": true,
+      "exactReturn": true,
+      "selected": true,
+      "cameraFinite": true
+    },
+    {
+      "view": "three",
+      "id": "hand",
+      "finite": true,
+      "visibleChange": true,
+      "exactReturn": true,
+      "selected": true,
+      "cameraFinite": true
+    },
+    {
+      "view": "three",
+      "id": "leg",
+      "finite": true,
+      "visibleChange": true,
+      "exactReturn": true,
+      "selected": true,
+      "cameraFinite": true
+    },
+    {
+      "view": "three",
+      "id": "foot",
+      "finite": true,
+      "visibleChange": true,
+      "exactReturn": true,
+      "selected": true,
+      "cameraFinite": true
+    },
+    {
+      "view": "expressions",
+      "id": "joy",
+      "finite": true,
+      "visibleChange": true,
+      "exactReturn": true,
+      "selected": true,
+      "cameraFinite": true
+    },
+    {
+      "view": "expressions",
+      "id": "sadness",
+      "finite": true,
+      "visibleChange": true,
+      "exactReturn": true,
+      "selected": true,
+      "cameraFinite": true
+    },
+    {
+      "view": "expressions",
+      "id": "anger",
+      "finite": true,
+      "visibleChange": true,
+      "exactReturn": true,
+      "selected": true,
+      "cameraFinite": true
+    },
+    {
+      "view": "expressions",
+      "id": "fear",
+      "finite": true,
+      "visibleChange": true,
+      "exactReturn": true,
+      "selected": true,
+      "cameraFinite": true
+    },
+    {
+      "view": "expressions",
+      "id": "surprise",
+      "finite": true,
+      "visibleChange": true,
+      "exactReturn": true,
+      "selected": true,
+      "cameraFinite": true
+    },
+    {
+      "view": "expressions",
+      "id": "disgust",
+      "finite": true,
+      "visibleChange": true,
+      "exactReturn": true,
+      "selected": true,
+      "cameraFinite": true
+    },
+    {
+      "view": "expressions",
+      "id": "wink",
+      "finite": true,
+      "visibleChange": true,
+      "exactReturn": true,
+      "selected": true,
+      "cameraFinite": true
+    },
+    {
+      "view": "expressions",
+      "id": "laughter",
+      "finite": true,
+      "visibleChange": true,
+      "exactReturn": true,
+      "selected": true,
+      "cameraFinite": true
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "retiredRequests": [],
+  "linkScopeNote": "Verbatim upstream license snapshots keep their original relative links; they are not local product documentation.",
+  "home": {
+    "viewers": 2,
+    "imagesLoaded": true,
+    "mobileNoOverflow": true,
+    "mobileImagesLoaded": true
+  },
+  "sources": {
+    "index.html": "1de668fd7d97f878b589ba2a0eebcfdbdc36fb113e24794352f37c2ab1d2ed8e",
+    "three/index.html": "689b230d1b39216918974149287149c078bc9e1b44af65c5480871ff5946dbb9",
+    "expressions/index.html": "e7774eb46434b99386402cd82379483c12be382119a57e86868a759235c53372",
+    "three/geometry.mjs": "e36ab74c6ac5ae04b5696b63cf8c83bc62deb99c79afb7b7bf00b099d508648d",
+    "scripts/browser.mjs": "7befb17fad144ca2f004bc6d42bf094c5196287ae71696765d0cf78dd7c991db",
+    "scripts/check-project.mjs": "2b42c569ec9d9d2dc4c7061d118c10f34bf34a5149129b4040697ed488b817c0"
+  },
+  "pass": true
+}

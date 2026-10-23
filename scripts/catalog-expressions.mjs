@@ -15,13 +15,13 @@ const actions={
 };
 const base='Use the shared licensed CC0 MakeHuman-derived skinned character as the foundation. Choose one original adult female identity with a softly tapered lower jaw, a rounded chin with natural profile projection, softly rounded cheeks, refined nose, full lips, natural eyelid geometry, expressive blue eyes and blonde hair. Use the same face, body proportions, rig and neutral anatomical bodysuit in MUSE and FORM. Retain continuous shoulders, torso, limbs, hands and feet for the Full body view. Preserve the charcoal background, serif interface, mint region overlays and soft studio lighting. Animate the face with the official CC0 facial targets transferred onto the original topology; carry brows, lashes, lips, oral surfaces, teeth and tongue with their corresponding deformations. Use a fine, clean complexion without baked gray or beard-like patches, with soft neutral-warm studio fill and preserved lip/lid definition. Keep the tongue on the recessed oral floor and align both dental arches with the lips. Keep individual teeth naturally proportioned with softly rounded incisal edges, warm ivory enamel and balanced upper/lower exposure through the lips. Keep each animation exactly five seconds with one shared neutral pose, readable preparation, a held expression and smooth recovery. Inspect front, profile and three-quarter views. Selected brow, eye, cheek, mouth, jaw, Pectoralis, Back and Pelvis regions must conform to the evaluated body surface with attached labels. Manual orbit interrupts the guided camera. ';
 const method='Licensed CC0 skinned GLB with one locally selected adult identity; 52 official MakeHuman facial units transferred by source-vertex correspondence with accessory bindings; coordinated authored morph weights and small skeletal head gestures. Facial shading evaluates the combined posed surface and retains the original neutral normals. No generated portrait is used as a flat image plane.';
-const studies=Object.entries(actions).map(([id,a])=>{const m=getExpressionMetadata(id);return{id,title:m.title,duration:5,view:`index.html#${id}`,source:'character-face.mjs',model:'../three/character/assets/adult-female-source.glb',svgReferenceID:a.reference,prompt:base+a.prompt,method,beats:m.beats,parts:m.parts};});
+const studies=Object.entries(actions).map(([id,a])=>{const m=getExpressionMetadata(id);return{id,title:m.title,duration:5,view:`index.html#${id}`,source:'character-face.mjs',model:'../three/character/assets/adult-female-source.glb',svgReferenceID:a.reference,historicalSVGReference:a.reference?`../archive/svg-final/corpus/animated/${a.reference}.svg`:null,prompt:base+a.prompt,method,beats:m.beats,parts:m.parts};});
 await writeFile(resolve(ROOT,'expressions/manifest.json'),JSON.stringify({title:'MUSE — The language of a face',renderer:'Three.js 0.186.1',duration:5,edition:5,identity:'One original adult blonde woman with blue eyes, shared with FORM.',appearanceReferences:['User-supplied paired front/profile laughter and surprise portraits','Subsequent user direction: adult blonde female character with blue eyes, inspired by Sydney Sweeney; original asset-based identity rather than a scan or exact likeness'],assetLicense:'CC0-1.0',assetProvenance:'../three/character/assets/README.md',studies},null,2)+'\n');
 await writeFile(resolve(ROOT,'expressions/README.md'),`# MUSE — The language of a face
 
-**Eight five-second facial-expression studies** of the same adult female character used in [FORM](../three/index.html): joy, sadness, anger, fear, surprise, disgust, wink and laughter. The licensed skinned GLB provides organic human topology; local identity choices give her blonde hair, blue eyes and a neutral anatomical bodysuit. The accepted 48 SVGs remain unchanged.
+**Eight five-second facial-expression studies** of the same adult female character used in [FORM](../three/index.html): joy, sadness, anger, fear, surprise, disgust, wink and laughter. The licensed skinned GLB provides organic human topology; local identity choices give her blonde hair, blue eyes and a neutral anatomical bodysuit.
 
-[Open MUSE](index.html) · [Portable source bundle](../exports/form-and-muse-threejs.zip) · [Character assets and license](../three/character/assets/README.md) · [Facial anatomy notes](SOURCES.md)
+[Open MUSE](index.html) · [Product home](../index.html) · [Project](../README.md) · [Development story](../README-STUDY.md) · [Character assets and license](../three/character/assets/README.md) · [Facial anatomy notes](SOURCES.md)
 
 ## Run locally
 
@@ -59,9 +59,11 @@ npm run playback:expressions
 npm run bundle:three
 ~~~
 
-The preceding procedural portrait and complete earlier bundle are preserved in [archive/procedural-v3](../archive/procedural-v3). Older appearance references inform the art direction; they are not redistributed as scene assets.
+See the [development story](../README-STUDY.md) for earlier experiments. Historical source editions are preserved in the repository archive and are not part of the product ZIP. Older appearance references inform the art direction; they are not redistributed as scene assets.
 
-## Corpus prompts
+The bundle command writes \`dist/muse-form.zip\`, containing the current viewers, local engine, licensed assets, documentation and development tools. It excludes historical archives and old SVG/skill bundles.
 
-${studies.map(s=>`### ${s.id} — ${s.title}\n\n[Open expression](${s.view}) · [Acting source](${s.source}) · [Shared character GLB](${s.model})${s.svgReferenceID?` · [SVG acting reference](../corpus/animated/${s.svgReferenceID}.svg)`:''}\n\n${s.prompt}\n\n**Method:** ${s.method}\n\n**Action:** ${s.beats.map(b=>`${b.label}: ${b.description}`).join(' ')}\n`).join('\n')}`);
+## Study prompts
+
+${studies.map(s=>`### ${s.id} — ${s.title}\n\n[Open expression](${s.view}) · [Acting source](${s.source}) · [Shared character GLB](${s.model})${s.svgReferenceID?`\n\nHistorical SVG reference (repository only): [${s.svgReferenceID}](../archive/svg-final/corpus/animated/${s.svgReferenceID}.svg).`:''}\n\n${s.prompt}\n\n**Method:** ${s.method}\n\n**Action:** ${s.beats.map(b=>`${b.label}: ${b.description}`).join(' ')}\n`).join('\n')}`);
 console.log('Cataloged eight shared-character expression studies from model metadata.');

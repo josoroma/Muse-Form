@@ -2,7 +2,7 @@ import { mkdir, writeFile, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { createHash } from 'node:crypto';
 import { startServer, ROOT } from './serve.mjs';
-import { openBrowser } from '../skills/seven-second-storytelling/scripts/render-svg.mjs';
+import { openBrowser } from './browser.mjs';
 const dir=resolve(ROOT,'qa/expressions');await mkdir(dir,{recursive:true});
 const {server,url}=await startServer(),browser=await openBrowser(),results=[];
 try{

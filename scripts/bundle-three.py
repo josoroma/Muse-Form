@@ -1,35 +1,89 @@
-"""Bundle the offline 3D explorer and its unchanged companion SVG gallery."""
-from pathlib import Path
-import json, zipfile
+"""Package the current MUSE + FORM product, without historical editions."""
+from pathlib import Path, PurePosixPath
+import json
+import posixpath
+import re
+import zipfile
 
-ROOT=Path(__file__).resolve().parents[1]
-out=ROOT/'exports/form-and-muse-threejs.zip'
-out.parent.mkdir(exist_ok=True)
-folders=['three','expressions','corpus/svg','corpus/animated','runtime','skills/seven-second-storytelling','archive/procedural-v3','archive/skinned-v4-before-face-refinement','archive/skinned-v5-before-complexion']
-files=['index.html','gallery.mjs','style.css','corpus/manifest.json','scripts/serve.mjs',
-       'scripts/build-three.mjs','scripts/build-character-expressions.py','scripts/catalog-three.mjs','scripts/check-three.mjs',
-       'scripts/playback-three.mjs','scripts/bundle-three.py','package-lock.json',
-       'scripts/catalog-expressions.mjs','scripts/check-expressions.mjs','scripts/playback-expressions.mjs','scripts/check-hair-subdivision.mjs',
-       'qa/character/cross-view.json','qa/character/materials/review.json','qa/character/subdivision/asset-checks.json','qa/character/subdivision/synthetic-checks.json',
-       'qa/character/face-refinement/review.json','qa/character/dental-refinement/review.json',
-       'qa/character/complexion/review.json','qa/character/oral-v2/review.json','qa/character/portrait-v6/review.json',
-       'qa/three/checks.json','qa/three/playback.json','qa/three/art-review.json','qa/three/hand-peak.png','qa/three/foot-peak.png',
-       'qa/expressions/checks.json','qa/expressions/playback.json','qa/expressions/art-review.json','qa/expressions/laughter-front-peak.png','qa/expressions/surprise-side-peak.png',
-       ]
-package=json.loads((ROOT/'package.json').read_text())
-package['scripts']={k:v for k,v in package['scripts'].items() if k=='start' or k.endswith((':three',':expressions'))}
-with zipfile.ZipFile(out,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as archive:
-    for folder in folders:
-        for p in sorted((ROOT/folder).rglob('*')):
-            if p.is_file() and '__pycache__' not in p.parts:
-                if p in [ROOT/'three/README.md',ROOT/'expressions/README.md']:
-                    archive.writestr(str(p.relative_to(ROOT)),p.read_text().replace(' · [Portable source bundle](../exports/form-and-muse-threejs.zip)',''))
-                else: archive.write(p,p.relative_to(ROOT))
-    for file in files: archive.write(ROOT/file,file)
-    archive.writestr('package.json',json.dumps(package,indent=2)+'\n')
-    archive.writestr('README.md','# FORM + MUSE — Anatomy and expression\n\nRun `npm start` (Node.js 22+) and open http://127.0.0.1:4173/expressions/ for MUSE or http://127.0.0.1:4173/three/ for FORM. All browser dependencies are included locally. The original SVG gallery is available at http://127.0.0.1:4173/.\n\nSee [the anatomy prompts and source](three/README.md), [facial-expression prompts](expressions/README.md), [anatomy review](qa/three/art-review.json), and [portrait review](qa/expressions/art-review.json). No MP4 files are included.\n')
-with zipfile.ZipFile(out) as archive:
-    assert archive.testzip() is None
-    assert not any(n.endswith('.mp4') for n in archive.namelist())
-    assert len([n for n in archive.namelist() if n.startswith('corpus/') and n.endswith('.svg')])==48
-print(f'Packaged {out.name} ({out.stat().st_size:,} bytes); local Three.js plus 48 preserved SVGs.')
+ROOT = Path(__file__).resolve().parents[1]
+OUTPUT = ROOT / 'dist/muse-form.zip'
+
+# Keep one runtime copy. Historical geometry, SVGs and generated skill copies
+# belong to the repository archive, never to the portable application.
+FILES = {
+    'index.html', 'README.md', 'README-STUDY.md', 'README-STUDY-MUSE.md', 'README-STUDY-FORM.md',
+    'AGENTS.md', 'package.json', 'package-lock.json', '.github/workflows/pages.yml',
+    'three/index.html', 'three/app.mjs', 'three/style.css', 'three/geometry.mjs',
+    'three/README.md', 'three/SOURCES.md', 'three/manifest.json',
+    'expressions/index.html', 'expressions/app.mjs', 'expressions/style.css',
+    'expressions/character-face.mjs', 'expressions/facial-normals.mjs',
+    'expressions/studio.mjs', 'expressions/README.md', 'expressions/SOURCES.md',
+    'expressions/manifest.json',
+    'scripts/serve.mjs', 'scripts/browser.mjs', 'scripts/build-three.mjs',
+    'scripts/build-character-expressions.py', 'scripts/check-hair-subdivision.mjs',
+    'scripts/catalog-three.mjs', 'scripts/check-three.mjs', 'scripts/playback-three.mjs',
+    'scripts/catalog-expressions.mjs', 'scripts/check-expressions.mjs',
+    'scripts/playback-expressions.mjs', 'scripts/bundle-three.py',
+    'qa/three/checks.json', 'qa/three/playback.json', 'qa/three/art-review.json',
+    'qa/expressions/checks.json', 'qa/expressions/playback.json',
+    'qa/expressions/art-review.json', 'qa/character/cross-view.json',
+}
+FOLDERS = ('three/character', 'three/runtime', 'three/vendor', 'docs', '.agents/skills')
+RETIRED_SCRIPTS = {
+    'scripts/catalog.mjs', 'scripts/check.mjs', 'scripts/playback-check.mjs',
+    'scripts/verify.mjs', 'scripts/compose.mjs', 'scripts/install-skill.mjs',
+    'scripts/bundle.py',
+}
+
+package = json.loads((ROOT / 'package.json').read_text())
+for command in package.get('scripts', {}).values():
+    for script in re.findall(r'\bscripts/[\w./-]+\.(?:mjs|py)\b', command):
+        if script in RETIRED_SCRIPTS:
+            raise SystemExit(f'Remove the retired product command before bundling: {script}')
+        FILES.add(script)
+for folder in FOLDERS:
+    for path in (ROOT / folder).rglob('*'):
+        if path.is_file() and '__pycache__' not in path.parts and path.name != '.DS_Store':
+            FILES.add(path.relative_to(ROOT).as_posix())
+
+missing = sorted(name for name in FILES if not (ROOT / name).is_file())
+if missing:
+    raise SystemExit('Missing product files: ' + ', '.join(missing))
+
+
+def portable_markdown(name, content):
+    """Keep history readable without links to deliberately excluded files."""
+    def reference(match):
+        label, target = match.group(1), match.group(2)
+        if re.match(r'^(?:[a-z]+:|#|//)', target, re.I):
+            return match.group(0)
+        raw = target.split('#', 1)[0].strip('<>')
+        resolved = posixpath.normpath(posixpath.join(str(PurePosixPath(name).parent), raw))
+        if resolved in FILES or any(item.startswith(resolved.rstrip('/') + '/') for item in FILES):
+            return match.group(0)
+        return f'{label} (repository only: `{raw}`)'
+
+    content = re.sub(r'(?<!!)\[([^\]\n]+)\]\(([^)\n]+)\)', reference, content)
+    if name in ('README.md', 'README-STUDY.md', 'README-STUDY-MUSE.md', 'README-STUDY-FORM.md'):
+        content += '\n> Portable edition: historical source archives and Git history remain in the source repository. The development collages and their source manifest are included. Detailed QA frame sets are repository evidence; run the included browser checks to capture fresh frames locally.\n'
+    return content
+
+
+OUTPUT.parent.mkdir(exist_ok=True)
+with zipfile.ZipFile(OUTPUT, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as bundle:
+    for name in sorted(FILES):
+        path = ROOT / name
+        if path.suffix == '.md':
+            bundle.writestr(name, portable_markdown(name, path.read_text()))
+        else:
+            bundle.write(path, name)
+
+with zipfile.ZipFile(OUTPUT) as bundle:
+    assert bundle.testzip() is None, 'ZIP CRC check failed'
+    names = bundle.namelist()
+    assert not any(n.startswith(('archive/', 'skills/', 'corpus/', 'exports/')) for n in names)
+    assert not any(n.endswith('.mp4') for n in names)
+    assert 'three/character/assets/adult-female-source.glb' in names
+    assert 'three/character/assets/hair-long.glb' in names
+    assert 'scripts/browser.mjs' in names
+print(f'Packaged {OUTPUT.relative_to(ROOT)} ({OUTPUT.stat().st_size:,} bytes): current MUSE + FORM, local assets and documentation.')

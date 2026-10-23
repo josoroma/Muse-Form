@@ -4,7 +4,7 @@
   "duration": 5,
   "edition": 5,
   "identity": "One original adult blonde woman with blue eyes, shared with MUSE.",
-  "scope": "Five views of one licensed skinned character: full body, arm, hand, leg and foot. The accepted SVG corpus remains separate.",
+  "scope": "Five views of one licensed skinned character: full body, arm, hand, leg and foot. Earlier SVG references are preserved in the repository archive.",
   "assetLicense": "CC0-1.0",
   "assetProvenance": "character/assets/README.md",
   "studies": [
@@ -21,6 +21,12 @@
         "105215",
         "105218",
         "105219"
+      ],
+      "historicalSVGReferences": [
+        "../archive/svg-final/corpus/animated/105214.svg",
+        "../archive/svg-final/corpus/animated/105215.svg",
+        "../archive/svg-final/corpus/animated/105218.svg",
+        "../archive/svg-final/corpus/animated/105219.svg"
       ],
       "prompt": "Use the shared adult female character from the licensed CC0 MakeHuman-derived GLB, with its continuous human topology, 53-bone rig, skin weights and embedded textures. Bake one fixed original identity with blonde hair, blue eyes, a softly tapered lower jaw, rounded chin, refined dentition and a neutral anatomical bodysuit; use exactly the same identity in FORM and MUSE. Keep shoulders, clavicles, waist, hips, limbs, hands and feet organically connected. Use a clean, finely textured complexion with neutral-warm facial illumination. Use the existing charcoal stage, serif interface, soft studio illumination and mint selection accent. Selected regions reuse the character surface triangles, with translucent feathered overlays and anchors that follow the evaluated skinned surface. Keep the five-second timeline, responsive controls and guided camera; manual orbit interrupts guidance. Restore the exact neutral pose at five seconds. Frame the complete character in a relaxed standing pose. Animate a controlled reach and return through the clavicle, shoulder, elbow, wrist and fingers, with a small trunk counter-turn and head response. Keep both feet supported. Preserve selectable Pectoralis region, Back and Pelvis surfaces, plus the abdominal wall, shoulder and head. Inspect front, profile, three-quarter and posterior silhouettes; do not add circular chest markings.",
       "method": "Licensed CC0 MakeHuman-derived GLB topology, textures and skinning; one locally selected adult identity; authored deterministic skeletal animation; surface-triangle overlays and posed anchors. The mesh is externally authored asset data, not a new procedural sculpt or scan.",
@@ -90,6 +96,9 @@
       "svgReferenceIDs": [
         "105215"
       ],
+      "historicalSVGReferences": [
+        "../archive/svg-final/corpus/animated/105215.svg"
+      ],
       "prompt": "Use the shared adult female character from the licensed CC0 MakeHuman-derived GLB, with its continuous human topology, 53-bone rig, skin weights and embedded textures. Bake one fixed original identity with blonde hair, blue eyes, a softly tapered lower jaw, rounded chin, refined dentition and a neutral anatomical bodysuit; use exactly the same identity in FORM and MUSE. Keep shoulders, clavicles, waist, hips, limbs, hands and feet organically connected. Use a clean, finely textured complexion with neutral-warm facial illumination. Use the existing charcoal stage, serif interface, soft studio illumination and mint selection accent. Selected regions reuse the character surface triangles, with translucent feathered overlays and anchors that follow the evaluated skinned surface. Keep the five-second timeline, responsive controls and guided camera; manual orbit interrupts guidance. Restore the exact neutral pose at five seconds. Frame the same character’s arm from shoulder through fingertips. Bend the forearm at its anatomical elbow pivot while the shoulder and upper arm remain coherent. Let the attached hand travel with the forearm and soften the fingers into the gesture. Provide selectable deltoid, biceps, triceps, forearm and hand/wrist regions. Keep the source skin continuous at shoulder, elbow and wrist; the selected surface indicates a region rather than isolated internal muscle anatomy.",
       "method": "Licensed CC0 MakeHuman-derived GLB topology, textures and skinning; one locally selected adult identity; authored deterministic skeletal animation; surface-triangle overlays and posed anchors. The mesh is externally authored asset data, not a new procedural sculpt or scan.",
       "parts": [
@@ -153,6 +162,10 @@
       "svgReferenceIDs": [
         "105216",
         "105217"
+      ],
+      "historicalSVGReferences": [
+        "../archive/svg-final/corpus/animated/105216.svg",
+        "../archive/svg-final/corpus/animated/105217.svg"
       ],
       "prompt": "Use the shared adult female character from the licensed CC0 MakeHuman-derived GLB, with its continuous human topology, 53-bone rig, skin weights and embedded textures. Bake one fixed original identity with blonde hair, blue eyes, a softly tapered lower jaw, rounded chin, refined dentition and a neutral anatomical bodysuit; use exactly the same identity in FORM and MUSE. Keep shoulders, clavicles, waist, hips, limbs, hands and feet organically connected. Use a clean, finely textured complexion with neutral-warm facial illumination. Use the existing charcoal stage, serif interface, soft studio illumination and mint selection accent. Selected regions reuse the character surface triangles, with translucent feathered overlays and anchors that follow the evaluated skinned surface. Keep the five-second timeline, responsive controls and guided camera; manual orbit interrupts guidance. Restore the exact neutral pose at five seconds. Closely frame the same skinned character’s hand, retaining the original palm, finger webs, thumb base, nails and graduated digit proportions. Author an ordered soft closing wave through the knuckles and phalangeal joints, with the ulnar fingers starting slightly earlier and the thumb turning toward the palm. Keep the little finger rooted in the ulnar palm. Avoid intersections and abrupt joint angles. Provide selectable palm, thenar region, thumb and individual fingers, with labels attached to their moving surface.",
       "method": "Licensed CC0 MakeHuman-derived GLB topology, textures and skinning; one locally selected adult identity; authored deterministic skeletal animation; surface-triangle overlays and posed anchors. The mesh is externally authored asset data, not a new procedural sculpt or scan.",
@@ -229,6 +242,11 @@
         "105219",
         "105220"
       ],
+      "historicalSVGReferences": [
+        "../archive/svg-final/corpus/animated/105218.svg",
+        "../archive/svg-final/corpus/animated/105219.svg",
+        "../archive/svg-final/corpus/animated/105220.svg"
+      ],
       "prompt": "Use the shared adult female character from the licensed CC0 MakeHuman-derived GLB, with its continuous human topology, 53-bone rig, skin weights and embedded textures. Bake one fixed original identity with blonde hair, blue eyes, a softly tapered lower jaw, rounded chin, refined dentition and a neutral anatomical bodysuit; use exactly the same identity in FORM and MUSE. Keep shoulders, clavicles, waist, hips, limbs, hands and feet organically connected. Use a clean, finely textured complexion with neutral-warm facial illumination. Use the existing charcoal stage, serif interface, soft studio illumination and mint selection accent. Selected regions reuse the character surface triangles, with translucent feathered overlays and anchors that follow the evaluated skinned surface. Keep the five-second timeline, responsive controls and guided camera; manual orbit interrupts guidance. Restore the exact neutral pose at five seconds. Frame the same character’s thigh, knee, calf and attached foot. Author a shallow supported bend shared across the hip, knee and ankle, then recover. Correct the pelvis position to preserve forefoot support. Keep continuous thigh-to-knee and calf-to-ankle transitions, with selectable anterior thigh, posterior thigh, knee and calf regions. Inspect the supporting contact and the contour throughout the five-second movement.",
       "method": "Licensed CC0 MakeHuman-derived GLB topology, textures and skinning; one locally selected adult identity; authored deterministic skeletal animation; surface-triangle overlays and posed anchors. The mesh is externally authored asset data, not a new procedural sculpt or scan.",
       "parts": [
@@ -288,6 +306,11 @@
         "105221",
         "105222",
         "105223"
+      ],
+      "historicalSVGReferences": [
+        "../archive/svg-final/corpus/animated/105221.svg",
+        "../archive/svg-final/corpus/animated/105222.svg",
+        "../archive/svg-final/corpus/animated/105223.svg"
       ],
       "prompt": "Use the shared adult female character from the licensed CC0 MakeHuman-derived GLB, with its continuous human topology, 53-bone rig, skin weights and embedded textures. Bake one fixed original identity with blonde hair, blue eyes, a softly tapered lower jaw, rounded chin, refined dentition and a neutral anatomical bodysuit; use exactly the same identity in FORM and MUSE. Keep shoulders, clavicles, waist, hips, limbs, hands and feet organically connected. Use a clean, finely textured complexion with neutral-warm facial illumination. Use the existing charcoal stage, serif interface, soft studio illumination and mint selection accent. Selected regions reuse the character surface triangles, with translucent feathered overlays and anchors that follow the evaluated skinned surface. Keep the five-second timeline, responsive controls and guided camera; manual orbit interrupts guidance. Restore the exact neutral pose at five seconds. Frame the same character’s ankle and complete five-toed foot. Raise the heel through the foot/forefoot joint chain while the forefoot remains supported, hold briefly, and settle. Preserve the continuous arch, heel, instep and toe roots, especially the short lateral little toe. Provide selectable ankle, dorsum, forefoot/toes and heel surfaces. Inspect frontal, medial, lateral, three-quarter and underside views at rest and peak; the toes must remain part of the same connected skin surface.",
       "method": "Licensed CC0 MakeHuman-derived GLB topology, textures and skinning; one locally selected adult identity; authored deterministic skeletal animation; surface-triangle overlays and posed anchors. The mesh is externally authored asset data, not a new procedural sculpt or scan.",

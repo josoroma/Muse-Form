@@ -14,17 +14,17 @@ const briefs = {
 const method = 'Licensed CC0 MakeHuman-derived GLB topology, textures and skinning; one locally selected adult identity; authored deterministic skeletal animation; surface-triangle overlays and posed anchors. The mesh is externally authored asset data, not a new procedural sculpt or scan.';
 const studies = Object.entries(briefs).map(([id, brief]) => {
   const model = getAnatomyMetadata(id);
-  return { id, title: model.title, action: model.subtitle, duration: 5, view: `index.html#${id}`, source: 'character/anatomy.mjs', model: 'character/assets/adult-female-source.glb', svgReferenceIDs: brief.references, prompt: common + brief.prompt, method, parts: model.parts, beats: model.beats };
+  return { id, title: model.title, action: model.subtitle, duration: 5, view: `index.html#${id}`, source: 'character/anatomy.mjs', model: 'character/assets/adult-female-source.glb', svgReferenceIDs: brief.references, historicalSVGReferences: brief.references.map(id => `../archive/svg-final/corpus/animated/${id}.svg`), prompt: common + brief.prompt, method, parts: model.parts, beats: model.beats };
 });
-const manifest = { title: 'FORM — Anatomy in motion', renderer: 'Three.js 0.186.1', duration: 5, edition: 5, identity: 'One original adult blonde woman with blue eyes, shared with MUSE.', scope: 'Five views of one licensed skinned character: full body, arm, hand, leg and foot. The accepted SVG corpus remains separate.', assetLicense: 'CC0-1.0', assetProvenance: 'character/assets/README.md', studies };
+const manifest = { title: 'FORM — Anatomy in motion', renderer: 'Three.js 0.186.1', duration: 5, edition: 5, identity: 'One original adult blonde woman with blue eyes, shared with MUSE.', scope: 'Five views of one licensed skinned character: full body, arm, hand, leg and foot. Earlier SVG references are preserved in the repository archive.', assetLicense: 'CC0-1.0', assetProvenance: 'character/assets/README.md', studies };
 await writeFile(resolve(ROOT, 'three/manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
 await writeFile(resolve(ROOT, 'three/README.md'), `# FORM — Anatomy in motion
 
 Five anatomical studies of **one shared adult female character**: full body, arm, hand, leg and foot. The licensed skinned GLB supplies continuous human topology, connected fingers and toes, and embedded skin and eye maps. Local code sets the blonde, blue-eyed identity, materials and five-second movements. [MUSE](../expressions/index.html) uses the same character for facial acting.
 
-[Open FORM](index.html) · [Portable source bundle](../exports/form-and-muse-threejs.zip) · [SVG collection](../index.html) · [Character assets and license](character/assets/README.md)
+[Open FORM](index.html) · [Product home](../index.html) · [Project](../README.md) · [Development story](../README-STUDY.md) · [Character assets and license](character/assets/README.md)
 
-![Hand during the closing gesture](../qa/three/hand-peak.png)
+![FORM anatomy viewer](../docs/product/form.webp)
 
 ## Run locally
 
@@ -45,7 +45,7 @@ Open **http://127.0.0.1:4173/three/**. The included vendor files also allow runn
 - Inspect Pectoralis region, Back and Pelvis in the full-body study. The bodysuit and region overlays follow the body skin.
 - Drag to orbit, right-drag to pan and scroll or use the visible buttons to zoom. Manual gestures interrupt guidance; enable **Guided camera** to resume it.
 - Use Overview, Front, Side or Frame this structure. Canvas keyboard shortcuts are arrows to orbit, +/− to zoom and Home for overview.
-- Reduced motion starts paused. Hidden tabs stop advancing. A WebGL fallback links to the native SVG collection.
+- Reduced motion starts paused. Hidden tabs stop advancing. If WebGL cannot start, the viewer links to product documentation.
 
 This is an illustrative skinned character, not a body scan or a medically validated anatomical simulator. Surface labels indicate approximate regions beneath the skin and clothing. Highlights show selection, not muscle activation; movement percentages describe the authored animation. [Sources and scope](SOURCES.md) explain those limits.
 
@@ -74,9 +74,11 @@ npm run playback:three
 npm run bundle:three
 ~~~
 
-[Browser checks](../qa/three/checks.json) inspect evaluated skinned geometry, exact endpoints, reverse seeking and interactions. [Playback samples](../qa/three/playback.json) inspect unpaused motion. [Visual review](../qa/three/art-review.json) records inspected views and repairs; these checks do not certify anatomical or artistic accuracy. The preceding procedural edition is preserved in [archive/procedural-v3](../archive/procedural-v3).
+[Browser checks](../qa/three/checks.json) inspect evaluated skinned geometry, exact endpoints, reverse seeking and interactions. [Playback samples](../qa/three/playback.json) inspect unpaused motion. [Visual review](../qa/three/art-review.json) records inspected views and repairs; these checks do not certify anatomical or artistic accuracy. See the [development story](../README-STUDY.md) for earlier experiments. Historical source editions are preserved in the repository archive and are not part of the product ZIP.
 
-## Corpus prompts
+The bundle command writes \`dist/muse-form.zip\`, containing the current viewers, local engine, licensed assets, documentation and development tools. It excludes historical archives and old SVG/skill bundles.
 
-${studies.map(s => `### ${s.id} — ${s.title}\n\n[Open study](${s.view}) · [Movement source](${s.source}) · [Character GLB](${s.model}) · SVG reference IDs: ${s.svgReferenceIDs.join(', ')}.\n\n${s.prompt}\n\n**Method:** ${s.method}\n\n**Action:** ${s.beats.map(b => `${b.label}: ${b.description}`).join(' ')}\n`).join('\n')}`);
+## Study prompts
+
+${studies.map(s => `### ${s.id} — ${s.title}\n\n[Open study](${s.view}) · [Movement source](${s.source}) · [Character GLB](${s.model})\n\nHistorical SVG references (repository only): ${s.svgReferenceIDs.map(id => `[${id}](../archive/svg-final/corpus/animated/${id}.svg)`).join(', ')}.\n\n${s.prompt}\n\n**Method:** ${s.method}\n\n**Action:** ${s.beats.map(b => `${b.label}: ${b.description}`).join(' ')}\n`).join('\n')}`);
 console.log('Cataloged five shared-character anatomy studies from model metadata.');

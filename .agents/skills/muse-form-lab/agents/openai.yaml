@@ -1,0 +1,4 @@
+interface:
+  display_name: "MUSE + FORM Lab"
+  short_description: "Create new character experiments and study sets"
+  default_prompt: "Use $muse-form-lab to build a new inspectable experiment on the shared MUSE + FORM character."
